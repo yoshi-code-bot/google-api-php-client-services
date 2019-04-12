@@ -71,6 +71,18 @@ class Google_Service_PolyService extends Google_Service
               'path' => 'v1/assets',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'maxComplexity' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'keywords' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -90,18 +102,6 @@ class Google_Service_PolyService extends Google_Service
                 'category' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxComplexity' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -123,14 +123,6 @@ class Google_Service_PolyService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'visibility' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -142,6 +134,14 @@ class Google_Service_PolyService extends Google_Service
                 'format' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
