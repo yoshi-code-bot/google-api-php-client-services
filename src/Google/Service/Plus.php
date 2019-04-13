@@ -39,7 +39,7 @@ class Google_Service_Plus extends Google_Service
   /** View your email address. */
   const USERINFO_EMAIL =
       "https://www.googleapis.com/auth/userinfo.email";
-  /** See your personal info, including any personal info you've made publicly available. */
+  /** See your personal info, including any personal info you've made publically available. */
   const USERINFO_PROFILE =
       "https://www.googleapis.com/auth/userinfo.profile";
 
