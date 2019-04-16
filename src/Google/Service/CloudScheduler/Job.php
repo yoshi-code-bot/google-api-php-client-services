@@ -19,7 +19,6 @@ class Google_Service_CloudScheduler_Job extends Google_Model
 {
   protected $appEngineHttpTargetType = 'Google_Service_CloudScheduler_AppEngineHttpTarget';
   protected $appEngineHttpTargetDataType = '';
-  public $attemptDeadline;
   public $description;
   protected $httpTargetType = 'Google_Service_CloudScheduler_HttpTarget';
   protected $httpTargetDataType = '';
@@ -50,14 +49,6 @@ class Google_Service_CloudScheduler_Job extends Google_Model
   public function getAppEngineHttpTarget()
   {
     return $this->appEngineHttpTarget;
-  }
-  public function setAttemptDeadline($attemptDeadline)
-  {
-    $this->attemptDeadline = $attemptDeadline;
-  }
-  public function getAttemptDeadline()
-  {
-    return $this->attemptDeadline;
   }
   public function setDescription($description)
   {

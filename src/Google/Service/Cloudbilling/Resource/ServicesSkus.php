@@ -41,14 +41,14 @@ class Google_Service_Cloudbilling_Resource_ServicesSkus extends Google_Service_R
    * allowed. The time range has to be within a single calendar month in
    * America/Los_Angeles timezone. Time range as a whole is optional. If not
    * specified, the latest pricing will be returned (up to 12 hours old at most).
+   * @opt_param string pageToken A token identifying a page of results to return.
+   * This should be a `next_page_token` value returned from a previous `ListSkus`
+   * call. If unspecified, the first page of results is returned.
    * @opt_param string startTime Optional inclusive start time of the time range
    * for which the pricing versions will be returned. Timestamps in the future are
    * not allowed. The time range has to be within a single calendar month in
    * America/Los_Angeles timezone. Time range as a whole is optional. If not
    * specified, the latest pricing will be returned (up to 12 hours old at most).
-   * @opt_param string pageToken A token identifying a page of results to return.
-   * This should be a `next_page_token` value returned from a previous `ListSkus`
-   * call. If unspecified, the first page of results is returned.
    * @opt_param int pageSize Requested page size. Defaults to 5000.
    * @return Google_Service_Cloudbilling_ListSkusResponse
    */
