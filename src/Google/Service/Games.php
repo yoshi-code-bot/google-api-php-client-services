@@ -36,7 +36,7 @@ class Google_Service_Games extends Google_Service
   /** Create, edit, and delete your Google Play Games activity. */
   const GAMES =
       "https://www.googleapis.com/auth/games";
-  /** Know who you are on Google. */
+  /** Associate you with your personal info on Google. */
   const PLUS_ME =
       "https://www.googleapis.com/auth/plus.me";
 

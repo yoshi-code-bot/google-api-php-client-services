@@ -45,6 +45,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   protected $replicaConfigurationType = 'Google_Service_SQLAdmin_ReplicaConfiguration';
   protected $replicaConfigurationDataType = '';
   public $replicaNames;
+  public $rootPassword;
   public $selfLink;
   protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
   protected $serverCaCertDataType = '';
@@ -257,6 +258,14 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public function getReplicaNames()
   {
     return $this->replicaNames;
+  }
+  public function setRootPassword($rootPassword)
+  {
+    $this->rootPassword = $rootPassword;
+  }
+  public function getRootPassword()
+  {
+    return $this->rootPassword;
   }
   public function setSelfLink($selfLink)
   {

@@ -83,7 +83,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductSets extends Google
    *
    * Possible errors:
    *
-   * * Returns NOT_FOUND if the ProductSet does not exist. (productSets.delete)
+   * none (productSets.delete)
    *
    * @param string $name Resource name of the ProductSet to delete.
    *
@@ -202,8 +202,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductSets extends Google
    *
    * Possible errors:
    *
-   * * Returns NOT_FOUND If the Product is not found under the ProductSet.
-   * (productSets.removeProduct)
+   * none (productSets.removeProduct)
    *
    * @param string $name The resource name for the ProductSet to modify.
    *

@@ -77,8 +77,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductsReferenceImages ex
    *
    * Possible errors:
    *
-   * * Returns NOT_FOUND if the reference image does not exist.
-   * (referenceImages.delete)
+   * none (referenceImages.delete)
    *
    * @param string $name The resource name of the reference image to delete.
    *
