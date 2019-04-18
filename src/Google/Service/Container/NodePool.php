@@ -28,6 +28,8 @@ class Google_Service_Container_NodePool extends Google_Collection
   public $instanceGroupUrls;
   protected $managementType = 'Google_Service_Container_NodeManagement';
   protected $managementDataType = '';
+  protected $maxPodsConstraintType = 'Google_Service_Container_MaxPodsConstraint';
+  protected $maxPodsConstraintDataType = '';
   public $name;
   public $selfLink;
   public $status;
@@ -105,6 +107,20 @@ class Google_Service_Container_NodePool extends Google_Collection
   public function getManagement()
   {
     return $this->management;
+  }
+  /**
+   * @param Google_Service_Container_MaxPodsConstraint
+   */
+  public function setMaxPodsConstraint(Google_Service_Container_MaxPodsConstraint $maxPodsConstraint)
+  {
+    $this->maxPodsConstraint = $maxPodsConstraint;
+  }
+  /**
+   * @return Google_Service_Container_MaxPodsConstraint
+   */
+  public function getMaxPodsConstraint()
+  {
+    return $this->maxPodsConstraint;
   }
   public function setName($name)
   {

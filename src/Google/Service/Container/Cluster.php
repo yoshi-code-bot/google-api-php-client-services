@@ -27,6 +27,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   public $currentMasterVersion;
   public $currentNodeCount;
   public $currentNodeVersion;
+  protected $defaultMaxPodsConstraintType = 'Google_Service_Container_MaxPodsConstraint';
+  protected $defaultMaxPodsConstraintDataType = '';
   public $description;
   public $enableKubernetesAlpha;
   public $enableTpu;
@@ -139,6 +141,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getCurrentNodeVersion()
   {
     return $this->currentNodeVersion;
+  }
+  /**
+   * @param Google_Service_Container_MaxPodsConstraint
+   */
+  public function setDefaultMaxPodsConstraint(Google_Service_Container_MaxPodsConstraint $defaultMaxPodsConstraint)
+  {
+    $this->defaultMaxPodsConstraint = $defaultMaxPodsConstraint;
+  }
+  /**
+   * @return Google_Service_Container_MaxPodsConstraint
+   */
+  public function getDefaultMaxPodsConstraint()
+  {
+    return $this->defaultMaxPodsConstraint;
   }
   public function setDescription($description)
   {

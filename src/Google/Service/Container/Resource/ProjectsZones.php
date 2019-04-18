@@ -26,7 +26,7 @@
 class Google_Service_Container_Resource_ProjectsZones extends Google_Service_Resource
 {
   /**
-   * Returns configuration info about the Kubernetes Engine service.
+   * Returns configuration info about the Google Kubernetes Engine service.
    * (zones.getServerconfig)
    *
    * @param string $projectId Deprecated. The Google Developers Console [project

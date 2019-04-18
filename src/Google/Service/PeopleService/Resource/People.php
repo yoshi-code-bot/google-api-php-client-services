@@ -159,9 +159,9 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * values are:
    *
    * * addresses * biographies * birthdays * emailAddresses * events * genders *
-   * imClients * interests * locales * names * nicknames * occupations *
-   * organizations * phoneNumbers * relations * residences * sipAddresses * urls *
-   * userDefined
+   * imClients * interests * locales * memberships * names * nicknames *
+   * occupations * organizations * phoneNumbers * relations * residences *
+   * sipAddresses * urls * userDefined
    * @return Google_Service_PeopleService_Person
    */
   public function updateContact($resourceName, Google_Service_PeopleService_Person $postBody, $optParams = array())

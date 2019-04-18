@@ -308,24 +308,6 @@ class Google_Service_PlusDomains extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'listByCircle' => array(
-              'path' => 'circles/{circleId}/people',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'circleId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
             ),
           )
         )

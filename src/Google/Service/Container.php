@@ -35,6 +35,7 @@ class Google_Service_Container extends Google_Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $projects_aggregated_usableSubnetworks;
   public $projects_locations;
   public $projects_locations_clusters;
   public $projects_locations_clusters_nodePools;
@@ -59,6 +60,38 @@ class Google_Service_Container extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'container';
 
+    $this->projects_aggregated_usableSubnetworks = new Google_Service_Container_Resource_ProjectsAggregatedUsableSubnetworks(
+        $this,
+        $this->serviceName,
+        'usableSubnetworks',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'v1/{+parent}/aggregated/usableSubnetworks',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->projects_locations = new Google_Service_Container_Resource_ProjectsLocations(
         $this,
         $this->serviceName,
@@ -74,11 +107,11 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
+                'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'zone' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -334,6 +367,10 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'zone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'clusterId' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -343,10 +380,6 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                 ),
                 'projectId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -360,10 +393,6 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -373,6 +402,10 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                 ),
                 'nodePoolId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -386,15 +419,15 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'clusterId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -520,11 +553,11 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
+                'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'zone' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
