@@ -224,11 +224,11 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sizeBytes' => array(
+                'versionId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'versionId' => array(
+                'sizeBytes' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -286,15 +286,15 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'status' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
