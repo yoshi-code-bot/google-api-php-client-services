@@ -77,6 +77,10 @@ class Google_Service_CloudFilestore extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -84,10 +88,6 @@ class Google_Service_CloudFilestore extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
