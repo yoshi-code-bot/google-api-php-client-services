@@ -32,7 +32,8 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * to resolve them before you can make another call to `AddTenantProject` with
    * the same tag. Operation. (tenancyUnits.addProject)
    *
-   * @param string $parent Name of the tenancy unit.
+   * @param string $parent Name of the tenancy unit. Such as
+   * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
    * @param Google_Service_ServiceConsumerManagement_AddTenantProjectRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ServiceConsumerManagement_Operation
@@ -52,12 +53,15 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * services are activated. No service is deactivated. If specified, new billing
    * configuration is applied. Omit a billing configuration to keep the existing
    * one. A service account in the project is created if previously non existed.
-   * The specified folder is ignored, as moving a tenant project to a different
-   * folder isn't supported. The operation fails if any of the steps fail, but no
+   * Specified labels will be appended to tenant project, note that the value of
+   * existing label key will be updated if the same label key is requested. The
+   * specified folder is ignored, as moving a tenant project to a different folder
+   * isn't supported. The operation fails if any of the steps fail, but no
    * rollback of already applied configuration changes is attempted. Operation.
    * (tenancyUnits.applyProjectConfig)
    *
-   * @param string $name Name of the tenancy unit.
+   * @param string $name Name of the tenancy unit. Such as
+   * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
    * @param Google_Service_ServiceConsumerManagement_ApplyTenantProjectConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ServiceConsumerManagement_Operation
@@ -81,7 +85,8 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * (tenancyUnits.attachProject)
    *
    * @param string $name Name of the tenancy unit that the project will be
-   * attached to.
+   * attached to. Such as
+   * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
    * @param Google_Service_ServiceConsumerManagement_AttachTenantProjectRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ServiceConsumerManagement_Operation
@@ -163,13 +168,13 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * 'service.googleapis.com'.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Filter expression over tenancy resources field.
+   * Optional.
    * @opt_param string pageToken The continuation token, which is used to page
    * through large result sets. To get the next page of results, set this
    * parameter to the value of `nextPageToken` from the previous response.
    * @opt_param int pageSize The maximum number of results returned by this
    * request.
-   * @opt_param string filter Filter expression over tenancy resources field.
-   * Optional.
    * @return Google_Service_ServiceConsumerManagement_ListTenancyUnitsResponse
    */
   public function listServicesTenancyUnits($parent, $optParams = array())
