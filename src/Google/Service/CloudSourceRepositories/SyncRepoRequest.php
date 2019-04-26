@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_TPU_SchedulingConfig extends Google_Model
+class Google_Service_CloudSourceRepositories_SyncRepoRequest extends Google_Model
 {
-  public $preemptible;
-  public $reserved;
-
-  public function setPreemptible($preemptible)
-  {
-    $this->preemptible = $preemptible;
-  }
-  public function getPreemptible()
-  {
-    return $this->preemptible;
-  }
-  public function setReserved($reserved)
-  {
-    $this->reserved = $reserved;
-  }
-  public function getReserved()
-  {
-    return $this->reserved;
-  }
 }

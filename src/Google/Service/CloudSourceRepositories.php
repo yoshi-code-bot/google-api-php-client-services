@@ -175,6 +175,16 @@ class Google_Service_CloudSourceRepositories extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'sync' => array(
+              'path' => 'v1/{+name}:sync',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'testIamPermissions' => array(
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',

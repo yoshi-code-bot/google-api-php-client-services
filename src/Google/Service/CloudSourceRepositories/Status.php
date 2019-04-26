@@ -15,25 +15,35 @@
  * the License.
  */
 
-class Google_Service_TPU_SchedulingConfig extends Google_Model
+class Google_Service_CloudSourceRepositories_Status extends Google_Collection
 {
-  public $preemptible;
-  public $reserved;
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  public function setPreemptible($preemptible)
+  public function setCode($code)
   {
-    $this->preemptible = $preemptible;
+    $this->code = $code;
   }
-  public function getPreemptible()
+  public function getCode()
   {
-    return $this->preemptible;
+    return $this->code;
   }
-  public function setReserved($reserved)
+  public function setDetails($details)
   {
-    $this->reserved = $reserved;
+    $this->details = $details;
   }
-  public function getReserved()
+  public function getDetails()
   {
-    return $this->reserved;
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
 }
