@@ -117,6 +117,20 @@ class Google_Service_CloudTalentSolution_Resource_ProjectsJobs extends Google_Se
    * project".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Required.
+   *
+   * The filter string specifies the jobs to be enumerated.
+   *
+   * Supported operator: =, AND
+   *
+   * The fields eligible for filtering are:
+   *
+   * * `companyName` (Required) * `requisitionId` (Optional)
+   *
+   * Sample Query:
+   *
+   * * companyName = "projects/api-test-project/companies/123" * companyName =
+   * "projects/api-test-project/companies/123" AND requisitionId = "req-1"
    * @opt_param string jobView Optional.
    *
    * The desired job attributes returned for jobs in the search response. Defaults
@@ -132,20 +146,6 @@ class Google_Service_CloudTalentSolution_Resource_ProjectsJobs extends Google_Se
    * is 1000. Otherwise, the maximum allowed page size is 100.
    *
    * Default is 100 if empty or a number < 1 is specified.
-   * @opt_param string filter Required.
-   *
-   * The filter string specifies the jobs to be enumerated.
-   *
-   * Supported operator: =, AND
-   *
-   * The fields eligible for filtering are:
-   *
-   * * `companyName` (Required) * `requisitionId` (Optional)
-   *
-   * Sample Query:
-   *
-   * * companyName = "projects/api-test-project/companies/123" * companyName =
-   * "projects/api-test-project/companies/123" AND requisitionId = "req-1"
    * @return Google_Service_CloudTalentSolution_ListJobsResponse
    */
   public function listProjectsJobs($parent, $optParams = array())

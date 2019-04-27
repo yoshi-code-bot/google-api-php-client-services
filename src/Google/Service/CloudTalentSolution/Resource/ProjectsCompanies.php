@@ -93,9 +93,6 @@ class Google_Service_CloudTalentSolution_Resource_ProjectsCompanies extends Goog
    * project".
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional.
-   *
-   * The starting indicator from which to return results.
    * @opt_param int pageSize Optional.
    *
    * The maximum number of companies to be returned, at most 100. Default is 100
@@ -108,6 +105,9 @@ class Google_Service_CloudTalentSolution_Resource_ProjectsCompanies extends Goog
    *
    * If true, at most page_size of companies are fetched, among which only those
    * with open jobs are returned.
+   * @opt_param string pageToken Optional.
+   *
+   * The starting indicator from which to return results.
    * @return Google_Service_CloudTalentSolution_ListCompaniesResponse
    */
   public function listProjectsCompanies($parent, $optParams = array())
