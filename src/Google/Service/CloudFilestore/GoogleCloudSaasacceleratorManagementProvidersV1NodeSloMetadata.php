@@ -15,14 +15,12 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends Google_Collection
+class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends Google_Collection
 {
-  protected $collection_key = 'nodes';
+  protected $collection_key = 'exclusions';
   protected $exclusionsType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion';
   protected $exclusionsDataType = 'array';
-  protected $nodesType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata';
-  protected $nodesDataType = 'array';
-  public $tier;
+  public $nodeId;
 
   /**
    * @param Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion
@@ -38,26 +36,12 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   {
     return $this->exclusions;
   }
-  /**
-   * @param Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata
-   */
-  public function setNodes($nodes)
+  public function setNodeId($nodeId)
   {
-    $this->nodes = $nodes;
+    $this->nodeId = $nodeId;
   }
-  /**
-   * @return Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata
-   */
-  public function getNodes()
+  public function getNodeId()
   {
-    return $this->nodes;
-  }
-  public function setTier($tier)
-  {
-    $this->tier = $tier;
-  }
-  public function getTier()
-  {
-    return $this->tier;
+    return $this->nodeId;
   }
 }
