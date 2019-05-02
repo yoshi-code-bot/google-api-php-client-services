@@ -31,6 +31,8 @@ class Google_Service_Storage_Resource_ProjectsHmacKeys extends Google_Service_Re
    * @param string $projectId Project ID owning the service account.
    * @param string $serviceAccountEmail Email address of the service account.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string userProject The project to be billed for this request.
    * @return Google_Service_Storage_HmacKey
    */
   public function create($projectId, $serviceAccountEmail, $optParams = array())
@@ -45,6 +47,8 @@ class Google_Service_Storage_Resource_ProjectsHmacKeys extends Google_Service_Re
    * @param string $projectId Project ID owning the requested key
    * @param string $accessId Name of the HMAC key to be deleted.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string userProject The project to be billed for this request.
    */
   public function delete($projectId, $accessId, $optParams = array())
   {
@@ -59,6 +63,8 @@ class Google_Service_Storage_Resource_ProjectsHmacKeys extends Google_Service_Re
    * requested key.
    * @param string $accessId Name of the HMAC key.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string userProject The project to be billed for this request.
    * @return Google_Service_Storage_HmacKeyMetadata
    */
   public function get($projectId, $accessId, $optParams = array())
@@ -74,16 +80,19 @@ class Google_Service_Storage_Resource_ProjectsHmacKeys extends Google_Service_Re
    * @param string $projectId Name of the project in which to look for HMAC keys.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string maxResults Maximum number of items plus prefixes to return
-   * in a single page of responses. Because duplicate prefixes are omitted, fewer
-   * total results may be returned than requested. The service uses this parameter
-   * or 1,000 items, whichever is smaller.
+   * @opt_param string maxResults Maximum number of items to return in a single
+   * page of responses. The service uses this parameter or 250 items, whichever is
+   * smaller. The max number of items per page will also be limited by the number
+   * of distinct service accounts in the response. If the number of service
+   * accounts in a single response is too high, the page will truncated and a next
+   * page token will be returned.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
    * @opt_param string serviceAccountEmail If present, only keys for the given
    * service account are returned.
    * @opt_param bool showDeletedKeys Whether or not to show keys in the DELETED
    * state.
+   * @opt_param string userProject The project to be billed for this request.
    * @return Google_Service_Storage_HmacKeysMetadata
    */
   public function listProjectsHmacKeys($projectId, $optParams = array())
@@ -101,6 +110,8 @@ class Google_Service_Storage_Resource_ProjectsHmacKeys extends Google_Service_Re
    * @param string $accessId Name of the HMAC key being updated.
    * @param Google_Service_Storage_HmacKeyMetadata $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string userProject The project to be billed for this request.
    * @return Google_Service_Storage_HmacKeyMetadata
    */
   public function update($projectId, $accessId, Google_Service_Storage_HmacKeyMetadata $postBody, $optParams = array())

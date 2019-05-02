@@ -15,26 +15,16 @@
  * the License.
  */
 
-class Google_Service_Webmasters_UrlSampleDetails extends Google_Collection
+class Google_Service_Bigquery_LocationMetadata extends Google_Model
 {
-  protected $collection_key = 'linkedFromUrls';
-  public $containingSitemaps;
-  public $linkedFromUrls;
+  public $legacyLocationId;
 
-  public function setContainingSitemaps($containingSitemaps)
+  public function setLegacyLocationId($legacyLocationId)
   {
-    $this->containingSitemaps = $containingSitemaps;
+    $this->legacyLocationId = $legacyLocationId;
   }
-  public function getContainingSitemaps()
+  public function getLegacyLocationId()
   {
-    return $this->containingSitemaps;
-  }
-  public function setLinkedFromUrls($linkedFromUrls)
-  {
-    $this->linkedFromUrls = $linkedFromUrls;
-  }
-  public function getLinkedFromUrls()
-  {
-    return $this->linkedFromUrls;
+    return $this->legacyLocationId;
   }
 }

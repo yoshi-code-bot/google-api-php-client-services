@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Webmasters_UrlCrawlErrorCount extends Google_Model
+class Google_Service_CloudScheduler_OAuthToken extends Google_Model
 {
-  public $count;
-  public $timestamp;
+  public $scope;
+  public $serviceAccountEmail;
 
-  public function setCount($count)
+  public function setScope($scope)
   {
-    $this->count = $count;
+    $this->scope = $scope;
   }
-  public function getCount()
+  public function getScope()
   {
-    return $this->count;
+    return $this->scope;
   }
-  public function setTimestamp($timestamp)
+  public function setServiceAccountEmail($serviceAccountEmail)
   {
-    $this->timestamp = $timestamp;
+    $this->serviceAccountEmail = $serviceAccountEmail;
   }
-  public function getTimestamp()
+  public function getServiceAccountEmail()
   {
-    return $this->timestamp;
+    return $this->serviceAccountEmail;
   }
 }

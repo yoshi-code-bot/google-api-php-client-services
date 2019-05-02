@@ -15,24 +15,25 @@
  * the License.
  */
 
-class Google_Service_Webmasters_UrlCrawlErrorsCountsQueryResponse extends Google_Collection
+class Google_Service_CloudScheduler_OidcToken extends Google_Model
 {
-  protected $collection_key = 'countPerTypes';
-  protected $countPerTypesType = 'Google_Service_Webmasters_UrlCrawlErrorCountsPerType';
-  protected $countPerTypesDataType = 'array';
+  public $audience;
+  public $serviceAccountEmail;
 
-  /**
-   * @param Google_Service_Webmasters_UrlCrawlErrorCountsPerType
-   */
-  public function setCountPerTypes($countPerTypes)
+  public function setAudience($audience)
   {
-    $this->countPerTypes = $countPerTypes;
+    $this->audience = $audience;
   }
-  /**
-   * @return Google_Service_Webmasters_UrlCrawlErrorCountsPerType
-   */
-  public function getCountPerTypes()
+  public function getAudience()
   {
-    return $this->countPerTypes;
+    return $this->audience;
+  }
+  public function setServiceAccountEmail($serviceAccountEmail)
+  {
+    $this->serviceAccountEmail = $serviceAccountEmail;
+  }
+  public function getServiceAccountEmail()
+  {
+    return $this->serviceAccountEmail;
   }
 }
