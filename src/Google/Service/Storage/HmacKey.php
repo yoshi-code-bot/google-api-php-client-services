@@ -18,7 +18,8 @@
 class Google_Service_Storage_HmacKey extends Google_Model
 {
   public $kind;
-  public $metadata;
+  protected $metadataType = 'Google_Service_Storage_HmacKeyMetadata';
+  protected $metadataDataType = '';
   public $secret;
 
   public function setKind($kind)
@@ -29,10 +30,16 @@ class Google_Service_Storage_HmacKey extends Google_Model
   {
     return $this->kind;
   }
-  public function setMetadata($metadata)
+  /**
+   * @param Google_Service_Storage_HmacKeyMetadata
+   */
+  public function setMetadata(Google_Service_Storage_HmacKeyMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
+  /**
+   * @return Google_Service_Storage_HmacKeyMetadata
+   */
   public function getMetadata()
   {
     return $this->metadata;

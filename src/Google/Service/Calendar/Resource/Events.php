@@ -246,14 +246,14 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * should clear its storage and perform a full synchronization without any
    * syncToken. Learn more about incremental synchronization. Optional. The
    * default is to return all entries.
-   * @opt_param string timeMax Upper bound (exclusive) for an event's end time to
-   * filter by. Optional. The default is not to filter by end time. Must be an
-   * RFC3339 timestamp with mandatory time zone offset, for example,
-   * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
-   * but are ignored. If timeMin is set, timeMax must be greater than timeMin.
-   * @opt_param string timeMin Lower bound (inclusive) for an event's start time
+   * @opt_param string timeMax Upper bound (exclusive) for an event's start time
    * to filter by. Optional. The default is not to filter by start time. Must be
    * an RFC3339 timestamp with mandatory time zone offset, for example,
+   * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+   * but are ignored. If timeMin is set, timeMax must be greater than timeMin.
+   * @opt_param string timeMin Lower bound (exclusive) for an event's end time to
+   * filter by. Optional. The default is not to filter by end time. Must be an
+   * RFC3339 timestamp with mandatory time zone offset, for example,
    * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
    * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
    * @opt_param string timeZone Time zone used in the response. Optional. The
@@ -468,14 +468,14 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * should clear its storage and perform a full synchronization without any
    * syncToken. Learn more about incremental synchronization. Optional. The
    * default is to return all entries.
-   * @opt_param string timeMax Upper bound (exclusive) for an event's end time to
-   * filter by. Optional. The default is not to filter by end time. Must be an
-   * RFC3339 timestamp with mandatory time zone offset, for example,
-   * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
-   * but are ignored. If timeMin is set, timeMax must be greater than timeMin.
-   * @opt_param string timeMin Lower bound (inclusive) for an event's start time
+   * @opt_param string timeMax Upper bound (exclusive) for an event's start time
    * to filter by. Optional. The default is not to filter by start time. Must be
    * an RFC3339 timestamp with mandatory time zone offset, for example,
+   * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+   * but are ignored. If timeMin is set, timeMax must be greater than timeMin.
+   * @opt_param string timeMin Lower bound (exclusive) for an event's end time to
+   * filter by. Optional. The default is not to filter by end time. Must be an
+   * RFC3339 timestamp with mandatory time zone offset, for example,
    * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
    * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
    * @opt_param string timeZone Time zone used in the response. Optional. The

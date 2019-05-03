@@ -17,7 +17,7 @@
 
 class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
 {
-  protected $collection_key = 'includedFiles';
+  protected $collection_key = 'tags';
   protected $buildType = 'Google_Service_CloudBuild_Build';
   protected $buildDataType = '';
   public $createTime;
@@ -30,6 +30,7 @@ class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
   public $ignoredFiles;
   public $includedFiles;
   public $substitutions;
+  public $tags;
   protected $triggerTemplateType = 'Google_Service_CloudBuild_RepoSource';
   protected $triggerTemplateDataType = '';
 
@@ -124,6 +125,14 @@ class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
   public function getSubstitutions()
   {
     return $this->substitutions;
+  }
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  public function getTags()
+  {
+    return $this->tags;
   }
   /**
    * @param Google_Service_CloudBuild_RepoSource

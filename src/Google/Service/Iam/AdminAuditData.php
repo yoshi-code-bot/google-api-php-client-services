@@ -15,33 +15,23 @@
  * the License.
  */
 
-class Google_Service_Bigquery_ConfusionMatrix extends Google_Collection
+class Google_Service_Iam_AdminAuditData extends Google_Model
 {
-  protected $collection_key = 'rows';
-  public $confidenceThreshold;
-  protected $rowsType = 'Google_Service_Bigquery_Row';
-  protected $rowsDataType = 'array';
+  protected $permissionDeltaType = 'Google_Service_Iam_PermissionDelta';
+  protected $permissionDeltaDataType = '';
 
-  public function setConfidenceThreshold($confidenceThreshold)
+  /**
+   * @param Google_Service_Iam_PermissionDelta
+   */
+  public function setPermissionDelta(Google_Service_Iam_PermissionDelta $permissionDelta)
   {
-    $this->confidenceThreshold = $confidenceThreshold;
-  }
-  public function getConfidenceThreshold()
-  {
-    return $this->confidenceThreshold;
+    $this->permissionDelta = $permissionDelta;
   }
   /**
-   * @param Google_Service_Bigquery_Row
+   * @return Google_Service_Iam_PermissionDelta
    */
-  public function setRows($rows)
+  public function getPermissionDelta()
   {
-    $this->rows = $rows;
-  }
-  /**
-   * @return Google_Service_Bigquery_Row
-   */
-  public function getRows()
-  {
-    return $this->rows;
+    return $this->permissionDelta;
   }
 }

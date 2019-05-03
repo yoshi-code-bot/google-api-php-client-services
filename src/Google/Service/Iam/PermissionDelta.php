@@ -15,34 +15,26 @@
  * the License.
  */
 
-class Google_Service_Bigquery_ClusterInfo extends Google_Model
+class Google_Service_Iam_PermissionDelta extends Google_Collection
 {
-  public $centroidId;
-  public $clusterRadius;
-  public $clusterSize;
+  protected $collection_key = 'removedPermissions';
+  public $addedPermissions;
+  public $removedPermissions;
 
-  public function setCentroidId($centroidId)
+  public function setAddedPermissions($addedPermissions)
   {
-    $this->centroidId = $centroidId;
+    $this->addedPermissions = $addedPermissions;
   }
-  public function getCentroidId()
+  public function getAddedPermissions()
   {
-    return $this->centroidId;
+    return $this->addedPermissions;
   }
-  public function setClusterRadius($clusterRadius)
+  public function setRemovedPermissions($removedPermissions)
   {
-    $this->clusterRadius = $clusterRadius;
+    $this->removedPermissions = $removedPermissions;
   }
-  public function getClusterRadius()
+  public function getRemovedPermissions()
   {
-    return $this->clusterRadius;
-  }
-  public function setClusterSize($clusterSize)
-  {
-    $this->clusterSize = $clusterSize;
-  }
-  public function getClusterSize()
-  {
-    return $this->clusterSize;
+    return $this->removedPermissions;
   }
 }

@@ -58,7 +58,23 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
     return $this->call('delete', array($params), "Google_Service_Iam_IamEmpty");
   }
   /**
-   * Disables a ServiceAccount. The API is currently in alpha phase.
+   * DisableServiceAccount is currently in the alpha launch stage.
+   *
+   * Disables a ServiceAccount, which immediately prevents the service account
+   * from authenticating and gaining access to APIs.
+   *
+   * Disabled service accounts can be safely restored by using
+   * EnableServiceAccount at any point. Deleted service accounts cannot be
+   * restored using this method.
+   *
+   * Disabling a service account that is bound to VMs, Apps, Functions, or other
+   * jobs will cause those jobs to lose access to resources if they are using the
+   * disabled service account.
+   *
+   * To improve reliability of your services and avoid unexpected outages, it is
+   * recommended to first disable a service account rather than delete it. After
+   * disabling the service account, wait at least 24 hours to verify there are no
+   * unintended consequences, and then delete the service account.
    * (serviceAccounts.disable)
    *
    * @param string $name The resource name of the service account in the following
@@ -77,7 +93,15 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
     return $this->call('disable', array($params), "Google_Service_Iam_IamEmpty");
   }
   /**
-   * Enables a ServiceAccount.  The API is currently in alpha phase.
+   * EnableServiceAccount is currently in the alpha launch stage.
+   *
+   *  Restores a disabled ServiceAccount  that has been manually disabled by using
+   * DisableServiceAccount. Service  accounts that have been disabled by other
+   * means or for other reasons,  such as abuse, cannot be restored using this
+   * method.
+   *
+   *  EnableServiceAccount will have no effect on a service account that is  not
+   * disabled.  Enabling an already enabled service account will have no  effect.
    * (serviceAccounts.enable)
    *
    * @param string $name The resource name of the service account in the following
@@ -146,12 +170,12 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
    * with the service accounts, such as `projects/my-project-123`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional pagination token returned in an earlier
-   * ListServiceAccountsResponse.next_page_token.
    * @opt_param int pageSize Optional limit on the number of service accounts to
    * include in the response. Further accounts can subsequently be obtained by
    * including the ListServiceAccountsResponse.next_page_token in a subsequent
    * request.
+   * @opt_param string pageToken Optional pagination token returned in an earlier
+   * ListServiceAccountsResponse.next_page_token.
    * @return Google_Service_Iam_ListServiceAccountsResponse
    */
   public function listProjectsServiceAccounts($name, $optParams = array())
@@ -310,8 +334,8 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
    *
    * Updates a ServiceAccount.
    *
-   * Currently, only the following fields are updatable: `display_name` . The
-   * `etag` is mandatory. (serviceAccounts.update)
+   * Currently, only the following fields are updatable: `display_name` and
+   * `description`. (serviceAccounts.update)
    *
    * @param string $name The resource name of the service account in the following
    * format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.

@@ -15,33 +15,34 @@
  * the License.
  */
 
-class Google_Service_Bigquery_Row extends Google_Collection
+class Google_Service_Spanner_ReplicaInfo extends Google_Model
 {
-  protected $collection_key = 'entries';
-  public $actualLabel;
-  protected $entriesType = 'Google_Service_Bigquery_Entry';
-  protected $entriesDataType = 'array';
+  public $defaultLeaderLocation;
+  public $location;
+  public $type;
 
-  public function setActualLabel($actualLabel)
+  public function setDefaultLeaderLocation($defaultLeaderLocation)
   {
-    $this->actualLabel = $actualLabel;
+    $this->defaultLeaderLocation = $defaultLeaderLocation;
   }
-  public function getActualLabel()
+  public function getDefaultLeaderLocation()
   {
-    return $this->actualLabel;
+    return $this->defaultLeaderLocation;
   }
-  /**
-   * @param Google_Service_Bigquery_Entry
-   */
-  public function setEntries($entries)
+  public function setLocation($location)
   {
-    $this->entries = $entries;
+    $this->location = $location;
   }
-  /**
-   * @return Google_Service_Bigquery_Entry
-   */
-  public function getEntries()
+  public function getLocation()
   {
-    return $this->entries;
+    return $this->location;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }
