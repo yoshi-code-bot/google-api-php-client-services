@@ -45,6 +45,7 @@ class Google_Service_AndroidPublisher extends Google_Service
   public $edits_testers;
   public $edits_tracks;
   public $inappproducts;
+  public $internalappsharingartifacts;
   public $orders;
   public $purchases_products;
   public $purchases_subscriptions;
@@ -942,6 +943,36 @@ class Google_Service_AndroidPublisher extends Google_Service
                 'autoConvertMissingPrices' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->internalappsharingartifacts = new Google_Service_AndroidPublisher_Resource_Internalappsharingartifacts(
+        $this,
+        $this->serviceName,
+        'internalappsharingartifacts',
+        array(
+          'methods' => array(
+            'uploadapk' => array(
+              'path' => 'internalappsharing/{packageName}/artifacts/apk',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'uploadbundle' => array(
+              'path' => 'internalappsharing/{packageName}/artifacts/bundle',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),

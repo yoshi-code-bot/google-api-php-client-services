@@ -77,13 +77,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * sources provide a source_id of `-`. For example: organizations/123/sources/-
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The value returned by the last
-   * `ListFindingsResponse`; indicates that this is a continuation of a prior
-   * `ListFindings` call, and that the system should return the next page of data.
-   * @opt_param string fieldMask Optional.
-   *
-   * A field mask to specify the Finding fields to be listed in the response. An
-   * empty field mask will list all fields.
    * @opt_param int pageSize The maximum number of results to return in a single
    * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string readTime Time used as a reference point when filtering
@@ -152,6 +145,13 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * security_marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
+   * @opt_param string pageToken The value returned by the last
+   * `ListFindingsResponse`; indicates that this is a continuation of a prior
+   * `ListFindings` call, and that the system should return the next page of data.
+   * @opt_param string fieldMask Optional.
+   *
+   * A field mask to specify the Finding fields to be listed in the response. An
+   * empty field mask will list all fields.
    * @return Google_Service_SecurityCommandCenter_ListFindingsResponse
    */
   public function listOrganizationsSourcesFindings($parent, $optParams = array())
@@ -210,14 +210,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())
