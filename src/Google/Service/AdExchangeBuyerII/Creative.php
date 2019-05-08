@@ -35,8 +35,6 @@ class Google_Service_AdExchangeBuyerII_Creative extends Google_Collection
   public $detectedLanguages;
   public $detectedProductCategories;
   public $detectedSensitiveCategories;
-  protected $filteringStatsType = 'Google_Service_AdExchangeBuyerII_FilteringStats';
-  protected $filteringStatsDataType = '';
   protected $htmlType = 'Google_Service_AdExchangeBuyerII_HtmlContent';
   protected $htmlDataType = '';
   public $impressionTrackingUrls;
@@ -184,20 +182,6 @@ class Google_Service_AdExchangeBuyerII_Creative extends Google_Collection
   public function getDetectedSensitiveCategories()
   {
     return $this->detectedSensitiveCategories;
-  }
-  /**
-   * @param Google_Service_AdExchangeBuyerII_FilteringStats
-   */
-  public function setFilteringStats(Google_Service_AdExchangeBuyerII_FilteringStats $filteringStats)
-  {
-    $this->filteringStats = $filteringStats;
-  }
-  /**
-   * @return Google_Service_AdExchangeBuyerII_FilteringStats
-   */
-  public function getFilteringStats()
-  {
-    return $this->filteringStats;
   }
   /**
    * @param Google_Service_AdExchangeBuyerII_HtmlContent

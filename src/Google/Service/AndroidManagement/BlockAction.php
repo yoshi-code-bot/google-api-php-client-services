@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_AdExchangeBuyerII_Reason extends Google_Model
+class Google_Service_AndroidManagement_BlockAction extends Google_Model
 {
-  public $count;
-  public $status;
+  public $blockAfterDays;
 
-  public function setCount($count)
+  public function setBlockAfterDays($blockAfterDays)
   {
-    $this->count = $count;
+    $this->blockAfterDays = $blockAfterDays;
   }
-  public function getCount()
+  public function getBlockAfterDays()
   {
-    return $this->count;
-  }
-  public function setStatus($status)
-  {
-    $this->status = $status;
-  }
-  public function getStatus()
-  {
-    return $this->status;
+    return $this->blockAfterDays;
   }
 }

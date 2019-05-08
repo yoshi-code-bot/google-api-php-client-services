@@ -35,12 +35,13 @@ class Google_Service_AndroidPublisher_Resource_Internalappsharingartifacts exten
    * @param string $packageName Unique identifier for the Android app; for
    * example, "com.spiffygame".
    * @param array $optParams Optional parameters.
+   * @return Google_Service_AndroidPublisher_InternalAppSharingArtifact
    */
   public function uploadapk($packageName, $optParams = array())
   {
     $params = array('packageName' => $packageName);
     $params = array_merge($params, $optParams);
-    return $this->call('uploadapk', array($params));
+    return $this->call('uploadapk', array($params), "Google_Service_AndroidPublisher_InternalAppSharingArtifact");
   }
   /**
    * Uploads an app bundle to internal app sharing. If you are using the Google
@@ -53,11 +54,12 @@ class Google_Service_AndroidPublisher_Resource_Internalappsharingartifacts exten
    * @param string $packageName Unique identifier for the Android app; for
    * example, "com.spiffygame".
    * @param array $optParams Optional parameters.
+   * @return Google_Service_AndroidPublisher_InternalAppSharingArtifact
    */
   public function uploadbundle($packageName, $optParams = array())
   {
     $params = array('packageName' => $packageName);
     $params = array_merge($params, $optParams);
-    return $this->call('uploadbundle', array($params));
+    return $this->call('uploadbundle', array($params), "Google_Service_AndroidPublisher_InternalAppSharingArtifact");
   }
 }

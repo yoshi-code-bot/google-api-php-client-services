@@ -58,6 +58,7 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   protected $softwareInfoType = 'Google_Service_AndroidManagement_SoftwareInfo';
   protected $softwareInfoDataType = '';
   public $state;
+  public $systemProperties;
   protected $userType = 'Google_Service_AndroidManagement_User';
   protected $userDataType = '';
   public $userName;
@@ -357,6 +358,14 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   public function getState()
   {
     return $this->state;
+  }
+  public function setSystemProperties($systemProperties)
+  {
+    $this->systemProperties = $systemProperties;
+  }
+  public function getSystemProperties()
+  {
+    return $this->systemProperties;
   }
   /**
    * @param Google_Service_AndroidManagement_User

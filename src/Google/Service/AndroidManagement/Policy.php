@@ -59,6 +59,7 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   protected $longSupportMessageType = 'Google_Service_AndroidManagement_UserFacingMessage';
   protected $longSupportMessageDataType = '';
   public $maximumTimeToLock;
+  public $minimumApiLevel;
   public $mobileNetworksConfigDisabled;
   public $modifyAccountsDisabled;
   public $mountPhysicalMediaDisabled;
@@ -79,6 +80,8 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   protected $persistentPreferredActivitiesType = 'Google_Service_AndroidManagement_PersistentPreferredActivity';
   protected $persistentPreferredActivitiesDataType = 'array';
   public $playStoreMode;
+  protected $policyEnforcementRulesType = 'Google_Service_AndroidManagement_PolicyEnforcementRule';
+  protected $policyEnforcementRulesDataType = 'array';
   public $privateKeySelectionEnabled;
   protected $recommendedGlobalProxyType = 'Google_Service_AndroidManagement_ProxyInfo';
   protected $recommendedGlobalProxyDataType = '';
@@ -426,6 +429,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   {
     return $this->maximumTimeToLock;
   }
+  public function setMinimumApiLevel($minimumApiLevel)
+  {
+    $this->minimumApiLevel = $minimumApiLevel;
+  }
+  public function getMinimumApiLevel()
+  {
+    return $this->minimumApiLevel;
+  }
   public function setMobileNetworksConfigDisabled($mobileNetworksConfigDisabled)
   {
     $this->mobileNetworksConfigDisabled = $mobileNetworksConfigDisabled;
@@ -575,6 +586,20 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getPlayStoreMode()
   {
     return $this->playStoreMode;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_PolicyEnforcementRule
+   */
+  public function setPolicyEnforcementRules($policyEnforcementRules)
+  {
+    $this->policyEnforcementRules = $policyEnforcementRules;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_PolicyEnforcementRule
+   */
+  public function getPolicyEnforcementRules()
+  {
+    return $this->policyEnforcementRules;
   }
   public function setPrivateKeySelectionEnabled($privateKeySelectionEnabled)
   {

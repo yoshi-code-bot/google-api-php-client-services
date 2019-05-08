@@ -123,6 +123,10 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * either the Classroom-assigned identifier or an alias.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Maximum number of items to return. Zero or
+   * unspecified indicates that the server may assign a maximum.
+   *
+   * The server may return fewer than the specified number of results.
    * @opt_param string courseWorkStates Restriction on the work status to return.
    * Only courseWork that matches is returned. If unspecified, items with a work
    * status of `PUBLISHED` is returned.
@@ -136,10 +140,6 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
-   * @opt_param int pageSize Maximum number of items to return. Zero or
-   * unspecified indicates that the server may assign a maximum.
-   *
-   * The server may return fewer than the specified number of results.
    * @return Google_Service_Classroom_ListCourseWorkResponse
    */
   public function listCoursesCourseWork($courseId, $optParams = array())
@@ -211,7 +211,7 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * The following fields may be specified by teachers:
    *
    * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points`
-   * * `scheduled_time` * `submission_modification_mode`
+   * * `scheduled_time` * `submission_modification_mode` * `topic_id`
    * @return Google_Service_Classroom_CourseWork
    */
   public function patch($courseId, $id, Google_Service_Classroom_CourseWork $postBody, $optParams = array())
