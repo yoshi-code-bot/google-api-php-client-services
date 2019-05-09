@@ -29,6 +29,8 @@ class Google_Service_AccessApproval_ApprovalRequest extends Google_Model
   protected $requestedReasonType = 'Google_Service_AccessApproval_AccessReason';
   protected $requestedReasonDataType = '';
   public $requestedResourceName;
+  protected $requestedResourcePropertiesType = 'Google_Service_AccessApproval_ResourceProperties';
+  protected $requestedResourcePropertiesDataType = '';
 
   /**
    * @param Google_Service_AccessApproval_ApproveDecision
@@ -117,5 +119,19 @@ class Google_Service_AccessApproval_ApprovalRequest extends Google_Model
   public function getRequestedResourceName()
   {
     return $this->requestedResourceName;
+  }
+  /**
+   * @param Google_Service_AccessApproval_ResourceProperties
+   */
+  public function setRequestedResourceProperties(Google_Service_AccessApproval_ResourceProperties $requestedResourceProperties)
+  {
+    $this->requestedResourceProperties = $requestedResourceProperties;
+  }
+  /**
+   * @return Google_Service_AccessApproval_ResourceProperties
+   */
+  public function getRequestedResourceProperties()
+  {
+    return $this->requestedResourceProperties;
   }
 }

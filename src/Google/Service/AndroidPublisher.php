@@ -1014,7 +1014,27 @@ class Google_Service_AndroidPublisher extends Google_Service
         'products',
         array(
           'methods' => array(
-            'get' => array(
+            'acknowledge' => array(
+              'path' => '{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'productId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
               'path' => '{packageName}/purchases/products/{productId}/tokens/{token}',
               'httpMethod' => 'GET',
               'parameters' => array(
@@ -1044,7 +1064,27 @@ class Google_Service_AndroidPublisher extends Google_Service
         'subscriptions',
         array(
           'methods' => array(
-            'cancel' => array(
+            'acknowledge' => array(
+              'path' => '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'subscriptionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'cancel' => array(
               'path' => '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel',
               'httpMethod' => 'POST',
               'parameters' => array(
