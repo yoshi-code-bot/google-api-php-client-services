@@ -15,16 +15,24 @@
  * the License.
  */
 
-class Google_Service_ServiceConsumerManagement_AuthorizationConfig extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1DominantColorsAnnotation extends Google_Collection
 {
-  public $provider;
+  protected $collection_key = 'colors';
+  protected $colorsType = 'Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo';
+  protected $colorsDataType = 'array';
 
-  public function setProvider($provider)
+  /**
+   * @param Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo
+   */
+  public function setColors($colors)
   {
-    $this->provider = $provider;
+    $this->colors = $colors;
   }
-  public function getProvider()
+  /**
+   * @return Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo
+   */
+  public function getColors()
   {
-    return $this->provider;
+    return $this->colors;
   }
 }

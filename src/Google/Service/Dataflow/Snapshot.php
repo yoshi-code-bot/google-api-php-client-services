@@ -21,6 +21,7 @@ class Google_Service_Dataflow_Snapshot extends Google_Model
   public $id;
   public $projectId;
   public $sourceJobId;
+  public $state;
   public $ttl;
 
   public function setCreationTime($creationTime)
@@ -54,6 +55,14 @@ class Google_Service_Dataflow_Snapshot extends Google_Model
   public function getSourceJobId()
   {
     return $this->sourceJobId;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
   }
   public function setTtl($ttl)
   {

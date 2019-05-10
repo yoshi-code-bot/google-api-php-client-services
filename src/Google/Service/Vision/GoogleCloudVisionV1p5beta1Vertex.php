@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_AuthorizationConfig extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1Vertex extends Google_Model
 {
-  public $provider;
+  public $x;
+  public $y;
 
-  public function setProvider($provider)
+  public function setX($x)
   {
-    $this->provider = $provider;
+    $this->x = $x;
   }
-  public function getProvider()
+  public function getX()
   {
-    return $this->provider;
+    return $this->x;
+  }
+  public function setY($y)
+  {
+    $this->y = $y;
+  }
+  public function getY()
+  {
+    return $this->y;
   }
 }

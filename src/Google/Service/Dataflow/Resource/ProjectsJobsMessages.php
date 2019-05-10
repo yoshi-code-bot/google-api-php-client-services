@@ -39,11 +39,11 @@ class Google_Service_Dataflow_Resource_ProjectsJobsMessages extends Google_Servi
    * @param string $jobId The job to get messages about.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string endTime Return only messages with timestamps < end_time.
+   * The default is now (i.e. return up to the latest messages available).
    * @opt_param string location The [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
    * contains the job specified by job_id.
-   * @opt_param string endTime Return only messages with timestamps < end_time.
-   * The default is now (i.e. return up to the latest messages available).
    * @opt_param string startTime If specified, return only messages with
    * timestamps >= start_time. The default is the job creation time (i.e.
    * beginning of messages).

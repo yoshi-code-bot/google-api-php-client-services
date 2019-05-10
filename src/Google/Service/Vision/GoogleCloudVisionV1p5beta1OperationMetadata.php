@@ -15,23 +15,34 @@
  * the License.
  */
 
-class Google_Service_ServiceNetworking_Experimental extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1OperationMetadata extends Google_Model
 {
-  protected $authorizationType = 'Google_Service_ServiceNetworking_AuthorizationConfig';
-  protected $authorizationDataType = '';
+  public $createTime;
+  public $state;
+  public $updateTime;
 
-  /**
-   * @param Google_Service_ServiceNetworking_AuthorizationConfig
-   */
-  public function setAuthorization(Google_Service_ServiceNetworking_AuthorizationConfig $authorization)
+  public function setCreateTime($createTime)
   {
-    $this->authorization = $authorization;
+    $this->createTime = $createTime;
   }
-  /**
-   * @return Google_Service_ServiceNetworking_AuthorizationConfig
-   */
-  public function getAuthorization()
+  public function getCreateTime()
   {
-    return $this->authorization;
+    return $this->createTime;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }

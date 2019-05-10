@@ -70,7 +70,11 @@ class Google_Service_Vision extends Google_Service
         'files',
         array(
           'methods' => array(
-            'asyncBatchAnnotate' => array(
+            'annotate' => array(
+              'path' => 'v1/files:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'asyncBatchAnnotate' => array(
               'path' => 'v1/files:asyncBatchAnnotate',
               'httpMethod' => 'POST',
               'parameters' => array(),
@@ -86,6 +90,10 @@ class Google_Service_Vision extends Google_Service
           'methods' => array(
             'annotate' => array(
               'path' => 'v1/images:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'asyncBatchAnnotate' => array(
+              'path' => 'v1/images:asyncBatchAnnotate',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
@@ -377,13 +385,13 @@ class Google_Service_Vision extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(

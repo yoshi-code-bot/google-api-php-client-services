@@ -74,10 +74,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductsReferenceImages ex
    * refreshed.
    *
    * The actual image files are not deleted from Google Cloud Storage.
-   *
-   * Possible errors:
-   *
-   * none (referenceImages.delete)
+   * (referenceImages.delete)
    *
    * @param string $name The resource name of the reference image to delete.
    *

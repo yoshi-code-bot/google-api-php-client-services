@@ -58,11 +58,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProducts extends Google_Se
    *
    * Metadata of the product and all its images will be deleted right away, but
    * search queries against ProductSets containing the product may still work
-   * until all related caches are refreshed.
-   *
-   * Possible errors:
-   *
-   * none (products.delete)
+   * until all related caches are refreshed. (products.delete)
    *
    * @param string $name Resource name of product to delete.
    *
@@ -109,10 +105,10 @@ class Google_Service_Vision_Resource_ProjectsLocationsProducts extends Google_Se
    * Format: `projects/PROJECT_ID/locations/LOC_ID`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of items to return. Default 10,
-   * maximum 100.
    * @opt_param string pageToken The next_page_token returned from a previous List
    * request, if any.
+   * @opt_param int pageSize The maximum number of items to return. Default 10,
+   * maximum 100.
    * @return Google_Service_Vision_ListProductsResponse
    */
   public function listProjectsLocationsProducts($parent, $optParams = array())

@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceNetworking_AuthorizationConfig extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1ImageAnnotationContext extends Google_Model
 {
-  public $provider;
+  public $pageNumber;
+  public $uri;
 
-  public function setProvider($provider)
+  public function setPageNumber($pageNumber)
   {
-    $this->provider = $provider;
+    $this->pageNumber = $pageNumber;
   }
-  public function getProvider()
+  public function getPageNumber()
   {
-    return $this->provider;
+    return $this->pageNumber;
+  }
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  public function getUri()
+  {
+    return $this->uri;
   }
 }

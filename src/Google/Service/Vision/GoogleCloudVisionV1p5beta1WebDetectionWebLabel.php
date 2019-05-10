@@ -15,23 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Experimental extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1WebDetectionWebLabel extends Google_Model
 {
-  protected $authorizationType = 'Google_Service_ServiceUsage_AuthorizationConfig';
-  protected $authorizationDataType = '';
+  public $label;
+  public $languageCode;
 
-  /**
-   * @param Google_Service_ServiceUsage_AuthorizationConfig
-   */
-  public function setAuthorization(Google_Service_ServiceUsage_AuthorizationConfig $authorization)
+  public function setLabel($label)
   {
-    $this->authorization = $authorization;
+    $this->label = $label;
   }
-  /**
-   * @return Google_Service_ServiceUsage_AuthorizationConfig
-   */
-  public function getAuthorization()
+  public function getLabel()
   {
-    return $this->authorization;
+    return $this->label;
+  }
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
   }
 }

@@ -80,10 +80,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductSets extends Google
    * ProductSet are not deleted.
    *
    * The actual image files are not deleted from Google Cloud Storage.
-   *
-   * Possible errors:
-   *
-   * none (productSets.delete)
+   * (productSets.delete)
    *
    * @param string $name Resource name of the ProductSet to delete.
    *
@@ -198,11 +195,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductSets extends Google
     return $this->call('patch', array($params), "Google_Service_Vision_ProductSet");
   }
   /**
-   * Removes a Product from the specified ProductSet.
-   *
-   * Possible errors:
-   *
-   * none (productSets.removeProduct)
+   * Removes a Product from the specified ProductSet. (productSets.removeProduct)
    *
    * @param string $name The resource name for the ProductSet to modify.
    *

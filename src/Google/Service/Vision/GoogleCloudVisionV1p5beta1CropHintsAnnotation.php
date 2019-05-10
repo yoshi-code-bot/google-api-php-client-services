@@ -15,23 +15,24 @@
  * the License.
  */
 
-class Google_Service_ServiceConsumerManagement_Experimental extends Google_Model
+class Google_Service_Vision_GoogleCloudVisionV1p5beta1CropHintsAnnotation extends Google_Collection
 {
-  protected $authorizationType = 'Google_Service_ServiceConsumerManagement_AuthorizationConfig';
-  protected $authorizationDataType = '';
+  protected $collection_key = 'cropHints';
+  protected $cropHintsType = 'Google_Service_Vision_GoogleCloudVisionV1p5beta1CropHint';
+  protected $cropHintsDataType = 'array';
 
   /**
-   * @param Google_Service_ServiceConsumerManagement_AuthorizationConfig
+   * @param Google_Service_Vision_GoogleCloudVisionV1p5beta1CropHint
    */
-  public function setAuthorization(Google_Service_ServiceConsumerManagement_AuthorizationConfig $authorization)
+  public function setCropHints($cropHints)
   {
-    $this->authorization = $authorization;
+    $this->cropHints = $cropHints;
   }
   /**
-   * @return Google_Service_ServiceConsumerManagement_AuthorizationConfig
+   * @return Google_Service_Vision_GoogleCloudVisionV1p5beta1CropHint
    */
-  public function getAuthorization()
+  public function getCropHints()
   {
-    return $this->authorization;
+    return $this->cropHints;
   }
 }
