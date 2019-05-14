@@ -24,7 +24,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://sites.google.com/corp/google.com/cloudprivatecatalog" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/private-catalog/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -211,13 +211,13 @@ class Google_Service_CloudPrivateCatalogProducer extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -279,6 +279,10 @@ class Google_Service_CloudPrivateCatalogProducer extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -286,10 +290,6 @@ class Google_Service_CloudPrivateCatalogProducer extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
