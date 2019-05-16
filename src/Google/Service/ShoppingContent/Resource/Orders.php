@@ -223,14 +223,11 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
    * only un-acknowledged orders are returned.
    * @opt_param string maxResults The maximum number of orders to return in the
    * response, used for paging. The default value is 25 orders per page, and the
-   * maximum allowed value is 250 orders per page. Known issue: All List calls
-   * will return all Orders without limit regardless of the value of this field.
-   * @opt_param string orderBy The ordering of the returned list. The only
-   * supported value are placedDate desc and placedDate asc for now, which returns
-   * orders sorted by placement date. "placedDate desc" stands for listing orders
-   * by placement date, from oldest to most recent. "placedDate asc" stands for
-   * listing orders by placement date, from most recent to oldest. In future
-   * releases we'll support other sorting criteria.
+   * maximum allowed value is 250 orders per page.
+   * @opt_param string orderBy Order results by placement date in descending or
+   * ascending order.
+   *
+   * Acceptable values are: - placedDateAsc - placedDateDesc
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string placedDateEnd Obtains orders placed before this date
    * (exclusively), in ISO 8601 format.
@@ -239,7 +236,7 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
    * @opt_param string statuses Obtains orders that match any of the specified
    * statuses. Multiple values can be specified with comma separation.
    * Additionally, please note that active is a shortcut for pendingShipment and
-   * partiallyShipped, and completed is a shortcut for shipped ,
+   * partiallyShipped, and completed is a shortcut for shipped,
    * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
    * @return Google_Service_ShoppingContent_OrdersListResponse
    */
