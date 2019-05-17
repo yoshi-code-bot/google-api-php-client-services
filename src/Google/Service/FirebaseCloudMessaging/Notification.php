@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceManagement_AuthorizationConfig extends Google_Model
+class Google_Service_FirebaseCloudMessaging_Notification extends Google_Model
 {
-  public $provider;
+  public $body;
+  public $title;
 
-  public function setProvider($provider)
+  public function setBody($body)
   {
-    $this->provider = $provider;
+    $this->body = $body;
   }
-  public function getProvider()
+  public function getBody()
   {
-    return $this->provider;
+    return $this->body;
+  }
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+  public function getTitle()
+  {
+    return $this->title;
   }
 }

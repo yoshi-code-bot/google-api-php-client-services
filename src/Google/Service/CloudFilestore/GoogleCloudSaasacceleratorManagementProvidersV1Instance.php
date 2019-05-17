@@ -21,6 +21,8 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public $createTime;
   public $labels;
   public $maintenancePolicyNames;
+  protected $maintenanceSchedulesType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule';
+  protected $maintenanceSchedulesDataType = 'map';
   public $name;
   public $producerMetadata;
   protected $provisionedResourcesType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource';
@@ -57,6 +59,20 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public function getMaintenancePolicyNames()
   {
     return $this->maintenancePolicyNames;
+  }
+  /**
+   * @param Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule
+   */
+  public function setMaintenanceSchedules($maintenanceSchedules)
+  {
+    $this->maintenanceSchedules = $maintenanceSchedules;
+  }
+  /**
+   * @return Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule
+   */
+  public function getMaintenanceSchedules()
+  {
+    return $this->maintenanceSchedules;
   }
   public function setName($name)
   {

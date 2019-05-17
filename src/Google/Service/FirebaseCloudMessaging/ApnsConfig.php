@@ -15,23 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceManagement_Experimental extends Google_Model
+class Google_Service_FirebaseCloudMessaging_ApnsConfig extends Google_Model
 {
-  protected $authorizationType = 'Google_Service_ServiceManagement_AuthorizationConfig';
-  protected $authorizationDataType = '';
+  public $headers;
+  public $payload;
 
-  /**
-   * @param Google_Service_ServiceManagement_AuthorizationConfig
-   */
-  public function setAuthorization(Google_Service_ServiceManagement_AuthorizationConfig $authorization)
+  public function setHeaders($headers)
   {
-    $this->authorization = $authorization;
+    $this->headers = $headers;
   }
-  /**
-   * @return Google_Service_ServiceManagement_AuthorizationConfig
-   */
-  public function getAuthorization()
+  public function getHeaders()
   {
-    return $this->authorization;
+    return $this->headers;
+  }
+  public function setPayload($payload)
+  {
+    $this->payload = $payload;
+  }
+  public function getPayload()
+  {
+    return $this->payload;
   }
 }
