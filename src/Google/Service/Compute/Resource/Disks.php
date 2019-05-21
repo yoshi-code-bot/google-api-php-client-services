@@ -86,7 +86,7 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    * @param Google_Service_Compute_Snapshot $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool guestFlush
+   * @opt_param bool guestFlush Application consistent snapshot (ie. VSS).
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
