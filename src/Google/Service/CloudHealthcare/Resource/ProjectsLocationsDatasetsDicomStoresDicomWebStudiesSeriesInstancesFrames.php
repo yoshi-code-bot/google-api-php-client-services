@@ -29,14 +29,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * RetrieveRenderedFrames returns instances associated with the given study,
    * series, SOP Instance UID and frame numbers in an acceptable Rendered Media
    * Type. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html
-   * #sect_6.5.8. (frames.rendered)
+   * #sect_10.4. (frames.rendered)
    *
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the DICOMweb request, as specified in
    * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}/series/{
-   * series_id}/instance/{instance_id}/frames/{frame_list}/rendered`).
+   * series_id}/instances/{instance_id}/frames/{frame_list}/rendered`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -49,14 +49,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * RetrieveFrames returns instances associated with the given study, series, SOP
    * Instance UID and frame numbers. See http://dicom.nema.org/medical/dicom/curre
-   * nt/output/html/part18.html#sect_6.5.4. (frames.retrieveFrames)
+   * nt/output/html/part18.html#sect_10.4. (frames.retrieveFrames)
    *
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the DICOMweb request, as specified in
    * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}/series/{
-   * series_id}/instance/{instance_id}/frames/{frame_list}`).
+   * series_id}/instances/{instance_id}/frames/{frame_list}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */

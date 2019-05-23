@@ -49,7 +49,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * RetrieveInstanceMetadata returns instance associated with the given study,
    * series, and SOP Instance UID presented as metadata with the bulk data
    * removed. See http://dicom.nema.org/medical/dicom/current/output/html/part18.h
-   * tml#sect_6.5.6. (instances.metadata)
+   * tml#sect_10.4. (instances.metadata)
    *
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
@@ -69,7 +69,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * RetrieveRenderedInstance returns instance associated with the given study,
    * series, and SOP Instance UID in an acceptable Rendered Media Type. See http:/
-   * /dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.8.
+   * /dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
    * (instances.rendered)
    *
    * @param string $parent The name of the DICOM store that is being accessed
@@ -77,7 +77,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * icomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the DICOMweb request, as specified in
    * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-   * `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+   * `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -90,14 +90,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * RetrieveInstance returns instance associated with the given study, series,
    * and SOP Instance UID. See http://dicom.nema.org/medical/dicom/current/output/
-   * html/part18.html#sect_6.5.3. (instances.retrieveInstance)
+   * html/part18.html#sect_10.4. (instances.retrieveInstance)
    *
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the DICOMweb request, as specified in
    * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-   * `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+   * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */

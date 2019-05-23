@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_AlertCenter_MaliciousEntity extends Google_Model
+class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildbotCommandStatus extends Google_Model
 {
-  public $displayName;
-  public $fromHeader;
+  public $code;
+  public $message;
 
-  public function setDisplayName($displayName)
+  public function setCode($code)
   {
-    $this->displayName = $displayName;
+    $this->code = $code;
   }
-  public function getDisplayName()
+  public function getCode()
   {
-    return $this->displayName;
+    return $this->code;
   }
-  public function setFromHeader($fromHeader)
+  public function setMessage($message)
   {
-    $this->fromHeader = $fromHeader;
+    $this->message = $message;
   }
-  public function getFromHeader()
+  public function getMessage()
   {
-    return $this->fromHeader;
+    return $this->message;
   }
 }
