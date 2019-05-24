@@ -61,6 +61,7 @@ class Google_Service_TagManager extends Google_Service
   public $accounts_containers_workspaces_built_in_variables;
   public $accounts_containers_workspaces_folders;
   public $accounts_containers_workspaces_tags;
+  public $accounts_containers_workspaces_templates;
   public $accounts_containers_workspaces_triggers;
   public $accounts_containers_workspaces_variables;
   public $accounts_containers_workspaces_zones;
@@ -748,6 +749,88 @@ class Google_Service_TagManager extends Google_Service
               ),
             ),'list' => array(
               'path' => '{+parent}/tags',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'revert' => array(
+              'path' => '{+path}:revert',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'path' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'fingerprint' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'update' => array(
+              'path' => '{+path}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'path' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'fingerprint' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->accounts_containers_workspaces_templates = new Google_Service_TagManager_Resource_AccountsContainersWorkspacesTemplates(
+        $this,
+        $this->serviceName,
+        'templates',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => '{+parent}/templates',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => '{+path}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'path' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{+path}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'path' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{+parent}/templates',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(

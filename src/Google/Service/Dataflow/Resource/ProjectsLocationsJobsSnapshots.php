@@ -23,38 +23,20 @@
  *   $snapshots = $dataflowService->snapshots;
  *  </code>
  */
-class Google_Service_Dataflow_Resource_ProjectsSnapshots extends Google_Service_Resource
+class Google_Service_Dataflow_Resource_ProjectsLocationsJobsSnapshots extends Google_Service_Resource
 {
   /**
-   * Gets information about a snapshot. (snapshots.get)
-   *
-   * @param string $projectId The ID of the Cloud Platform project that the
-   * snapshot belongs to.
-   * @param string $snapshotId The ID of the snapshot.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string location The location that contains this snapshot.
-   * @return Google_Service_Dataflow_Snapshot
-   */
-  public function get($projectId, $snapshotId, $optParams = array())
-  {
-    $params = array('projectId' => $projectId, 'snapshotId' => $snapshotId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dataflow_Snapshot");
-  }
-  /**
-   * Lists snapshots. (snapshots.listProjectsSnapshots)
+   * Lists snapshots. (snapshots.listProjectsLocationsJobsSnapshots)
    *
    * @param string $projectId The project ID to list snapshots for.
+   * @param string $location The location to list snapshots in.
+   * @param string $jobId If specified, list snapshots created from this job.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string jobId If specified, list snapshots created from this job.
-   * @opt_param string location The location to list snapshots in.
    * @return Google_Service_Dataflow_ListSnapshotsResponse
    */
-  public function listProjectsSnapshots($projectId, $optParams = array())
+  public function listProjectsLocationsJobsSnapshots($projectId, $location, $jobId, $optParams = array())
   {
-    $params = array('projectId' => $projectId);
+    $params = array('projectId' => $projectId, 'location' => $location, 'jobId' => $jobId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Dataflow_ListSnapshotsResponse");
   }

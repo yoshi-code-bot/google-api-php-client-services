@@ -15,16 +15,13 @@
  * the License.
  */
 
-class Google_Service_Reports_ActivityEventsParameters extends Google_Collection
+class Google_Service_Reports_NestedParameter extends Google_Collection
 {
   protected $collection_key = 'multiValue';
   public $boolValue;
   public $intValue;
-  protected $messageValueType = 'Google_Service_Reports_ActivityEventsParametersMessageValue';
-  protected $messageValueDataType = '';
+  public $multiBoolValue;
   public $multiIntValue;
-  protected $multiMessageValueType = 'Google_Service_Reports_ActivityEventsParametersMultiMessageValue';
-  protected $multiMessageValueDataType = 'array';
   public $multiValue;
   public $name;
   public $value;
@@ -45,19 +42,13 @@ class Google_Service_Reports_ActivityEventsParameters extends Google_Collection
   {
     return $this->intValue;
   }
-  /**
-   * @param Google_Service_Reports_ActivityEventsParametersMessageValue
-   */
-  public function setMessageValue(Google_Service_Reports_ActivityEventsParametersMessageValue $messageValue)
+  public function setMultiBoolValue($multiBoolValue)
   {
-    $this->messageValue = $messageValue;
+    $this->multiBoolValue = $multiBoolValue;
   }
-  /**
-   * @return Google_Service_Reports_ActivityEventsParametersMessageValue
-   */
-  public function getMessageValue()
+  public function getMultiBoolValue()
   {
-    return $this->messageValue;
+    return $this->multiBoolValue;
   }
   public function setMultiIntValue($multiIntValue)
   {
@@ -66,20 +57,6 @@ class Google_Service_Reports_ActivityEventsParameters extends Google_Collection
   public function getMultiIntValue()
   {
     return $this->multiIntValue;
-  }
-  /**
-   * @param Google_Service_Reports_ActivityEventsParametersMultiMessageValue
-   */
-  public function setMultiMessageValue($multiMessageValue)
-  {
-    $this->multiMessageValue = $multiMessageValue;
-  }
-  /**
-   * @return Google_Service_Reports_ActivityEventsParametersMultiMessageValue
-   */
-  public function getMultiMessageValue()
-  {
-    return $this->multiMessageValue;
   }
   public function setMultiValue($multiValue)
   {
