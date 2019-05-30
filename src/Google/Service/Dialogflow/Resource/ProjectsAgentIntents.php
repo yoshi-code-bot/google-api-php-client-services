@@ -105,13 +105,13 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
    * `projects//agent/intents/`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string intentView Optional. The resource view to apply to the
+   * returned intent.
    * @opt_param string languageCode Optional. The language to retrieve training
    * phrases, parameters and rich messages for. If not specified, the agent's
    * default language is used. [Many languages](https://cloud.google.com
    * /dialogflow-enterprise/docs/reference/language) are supported. Note:
    * languages must be enabled in the agent before they can be used.
-   * @opt_param string intentView Optional. The resource view to apply to the
-   * returned intent.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent
    */
   public function get($name, $optParams = array())
@@ -156,6 +156,8 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string intentView Optional. The resource view to apply to the
+   * returned intent.
    * @opt_param string languageCode Optional. The language of training phrases,
    * parameters and rich messages defined in `intent`. If not specified, the
    * agent's default language is used. [Many languages](https://cloud.google.com
@@ -163,8 +165,6 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
    * languages must be enabled in the agent before they can be used.
    * @opt_param string updateMask Optional. The mask to control which fields get
    * updated.
-   * @opt_param string intentView Optional. The resource view to apply to the
-   * returned intent.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent
    */
   public function patch($name, Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent $postBody, $optParams = array())
