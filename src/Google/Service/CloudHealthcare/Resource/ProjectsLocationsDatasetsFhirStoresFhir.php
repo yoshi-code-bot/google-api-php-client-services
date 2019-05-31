@@ -75,11 +75,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string end The response includes records prior to the end date. If
-   * no end date is provided, all records subsequent to the start date are in
-   * scope.
    * @opt_param string start The response includes records subsequent to the start
    * date. If no start date is provided, all records prior to the end date are in
+   * scope.
+   * @opt_param string end The response includes records prior to the end date. If
+   * no end date is provided, all records subsequent to the start date are in
    * scope.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -352,6 +352,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $name The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string at Only include resource versions that were current at some
+   * point during the time period specified in the date time value. The date
+   * parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
+   *
+   * Clients may specify any of the following:
+   *
+   * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific
+   * day: `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
    * @opt_param int count The maximum number of search results on a page. Defaults
    * to 1000.
    * @opt_param string since Only include resource versions that were created at
@@ -365,14 +373,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * request, where `link.relation` is "first", "previous", "next" or "last".
    *
    * Omit `page` if no previous request has been made.
-   * @opt_param string at Only include resource versions that were current at some
-   * point during the time period specified in the date time value. The date
-   * parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
-   *
-   * Clients may specify any of the following:
-   *
-   * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific
-   * day: `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function history($name, $optParams = array())
