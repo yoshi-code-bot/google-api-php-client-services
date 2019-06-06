@@ -15,53 +15,20 @@
  * the License.
  */
 
-class Google_Service_AndroidEnterprise_Device extends Google_Model
+class Google_Service_AndroidEnterprise_DeviceReportUpdateEvent extends Google_Model
 {
-  public $androidId;
-  public $kind;
-  public $managementType;
-  protected $policyType = 'Google_Service_AndroidEnterprise_Policy';
-  protected $policyDataType = '';
+  public $deviceId;
   protected $reportType = 'Google_Service_AndroidEnterprise_DeviceReport';
   protected $reportDataType = '';
+  public $userId;
 
-  public function setAndroidId($androidId)
+  public function setDeviceId($deviceId)
   {
-    $this->androidId = $androidId;
+    $this->deviceId = $deviceId;
   }
-  public function getAndroidId()
+  public function getDeviceId()
   {
-    return $this->androidId;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setManagementType($managementType)
-  {
-    $this->managementType = $managementType;
-  }
-  public function getManagementType()
-  {
-    return $this->managementType;
-  }
-  /**
-   * @param Google_Service_AndroidEnterprise_Policy
-   */
-  public function setPolicy(Google_Service_AndroidEnterprise_Policy $policy)
-  {
-    $this->policy = $policy;
-  }
-  /**
-   * @return Google_Service_AndroidEnterprise_Policy
-   */
-  public function getPolicy()
-  {
-    return $this->policy;
+    return $this->deviceId;
   }
   /**
    * @param Google_Service_AndroidEnterprise_DeviceReport
@@ -76,5 +43,13 @@ class Google_Service_AndroidEnterprise_Device extends Google_Model
   public function getReport()
   {
     return $this->report;
+  }
+  public function setUserId($userId)
+  {
+    $this->userId = $userId;
+  }
+  public function getUserId()
+  {
+    return $this->userId;
   }
 }

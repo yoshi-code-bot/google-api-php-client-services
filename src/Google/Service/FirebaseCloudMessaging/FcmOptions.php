@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_FirebaseCloudMessaging_ApnsFcmOptions extends Google_Model
+class Google_Service_FirebaseCloudMessaging_FcmOptions extends Google_Model
 {
   public $analyticsLabel;
 
