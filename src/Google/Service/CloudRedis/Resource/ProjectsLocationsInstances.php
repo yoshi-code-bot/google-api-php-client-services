@@ -76,7 +76,7 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
     return $this->call('delete', array($params), "Google_Service_CloudRedis_Operation");
   }
   /**
-   * Export Redis instance data into a Redis RDB format file in GCS.
+   * Export Redis instance data into a Redis RDB format file in Cloud Storage.
    *
    * Redis will continue serving during this operation.
    *
@@ -130,7 +130,7 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
     return $this->call('get', array($params), "Google_Service_CloudRedis_Instance");
   }
   /**
-   * Import a Redis RDB snapshot file from GCS into a Redis instance.
+   * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
    *
    * Redis may stop serving during this operation. Instance state will be
    * IMPORTING for entire operation. When complete, the instance will contain only
