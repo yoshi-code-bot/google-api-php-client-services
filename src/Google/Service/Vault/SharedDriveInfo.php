@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_Vault_HeldDriveQuery extends Google_Model
+class Google_Service_Vault_SharedDriveInfo extends Google_Collection
 {
-  public $includeSharedDriveFiles;
-  public $includeTeamDriveFiles;
+  protected $collection_key = 'sharedDriveIds';
+  public $sharedDriveIds;
 
-  public function setIncludeSharedDriveFiles($includeSharedDriveFiles)
+  public function setSharedDriveIds($sharedDriveIds)
   {
-    $this->includeSharedDriveFiles = $includeSharedDriveFiles;
+    $this->sharedDriveIds = $sharedDriveIds;
   }
-  public function getIncludeSharedDriveFiles()
+  public function getSharedDriveIds()
   {
-    return $this->includeSharedDriveFiles;
-  }
-  public function setIncludeTeamDriveFiles($includeTeamDriveFiles)
-  {
-    $this->includeTeamDriveFiles = $includeTeamDriveFiles;
-  }
-  public function getIncludeTeamDriveFiles()
-  {
-    return $this->includeTeamDriveFiles;
+    return $this->sharedDriveIds;
   }
 }

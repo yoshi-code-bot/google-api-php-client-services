@@ -29,6 +29,8 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   protected $masterConfigDataType = '';
   protected $secondaryWorkerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
   protected $secondaryWorkerConfigDataType = '';
+  protected $securityConfigType = 'Google_Service_Dataproc_SecurityConfig';
+  protected $securityConfigDataType = '';
   protected $softwareConfigType = 'Google_Service_Dataproc_SoftwareConfig';
   protected $softwareConfigDataType = '';
   protected $workerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
@@ -111,6 +113,20 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   public function getSecondaryWorkerConfig()
   {
     return $this->secondaryWorkerConfig;
+  }
+  /**
+   * @param Google_Service_Dataproc_SecurityConfig
+   */
+  public function setSecurityConfig(Google_Service_Dataproc_SecurityConfig $securityConfig)
+  {
+    $this->securityConfig = $securityConfig;
+  }
+  /**
+   * @return Google_Service_Dataproc_SecurityConfig
+   */
+  public function getSecurityConfig()
+  {
+    return $this->securityConfig;
   }
   /**
    * @param Google_Service_Dataproc_SoftwareConfig

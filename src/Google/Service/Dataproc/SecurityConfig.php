@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_Vault_HeldDriveQuery extends Google_Model
+class Google_Service_Dataproc_SecurityConfig extends Google_Model
 {
-  public $includeSharedDriveFiles;
-  public $includeTeamDriveFiles;
+  protected $kerberosConfigType = 'Google_Service_Dataproc_KerberosConfig';
+  protected $kerberosConfigDataType = '';
 
-  public function setIncludeSharedDriveFiles($includeSharedDriveFiles)
+  /**
+   * @param Google_Service_Dataproc_KerberosConfig
+   */
+  public function setKerberosConfig(Google_Service_Dataproc_KerberosConfig $kerberosConfig)
   {
-    $this->includeSharedDriveFiles = $includeSharedDriveFiles;
+    $this->kerberosConfig = $kerberosConfig;
   }
-  public function getIncludeSharedDriveFiles()
+  /**
+   * @return Google_Service_Dataproc_KerberosConfig
+   */
+  public function getKerberosConfig()
   {
-    return $this->includeSharedDriveFiles;
-  }
-  public function setIncludeTeamDriveFiles($includeTeamDriveFiles)
-  {
-    $this->includeTeamDriveFiles = $includeTeamDriveFiles;
-  }
-  public function getIncludeTeamDriveFiles()
-  {
-    return $this->includeTeamDriveFiles;
+    return $this->kerberosConfig;
   }
 }
