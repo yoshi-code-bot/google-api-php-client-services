@@ -15,26 +15,14 @@
  * the License.
  */
 
-class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1TextDetectionConfig extends Google_Collection
+/**
+ * The "locations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $videointelligenceService = new Google_Service_CloudVideoIntelligence(...);
+ *   $locations = $videointelligenceService->locations;
+ *  </code>
+ */
+class Google_Service_CloudVideoIntelligence_Resource_ProjectsLocations extends Google_Service_Resource
 {
-  protected $collection_key = 'languageHints';
-  public $languageHints;
-  public $model;
-
-  public function setLanguageHints($languageHints)
-  {
-    $this->languageHints = $languageHints;
-  }
-  public function getLanguageHints()
-  {
-    return $this->languageHints;
-  }
-  public function setModel($model)
-  {
-    $this->model = $model;
-  }
-  public function getModel()
-  {
-    return $this->model;
-  }
 }

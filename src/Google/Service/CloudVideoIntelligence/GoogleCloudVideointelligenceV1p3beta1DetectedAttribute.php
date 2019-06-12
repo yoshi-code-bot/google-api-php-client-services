@@ -15,26 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1TextDetectionConfig extends Google_Collection
+class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1DetectedAttribute extends Google_Model
 {
-  protected $collection_key = 'languageHints';
-  public $languageHints;
-  public $model;
+  public $confidence;
+  public $name;
+  public $value;
 
-  public function setLanguageHints($languageHints)
+  public function setConfidence($confidence)
   {
-    $this->languageHints = $languageHints;
+    $this->confidence = $confidence;
   }
-  public function getLanguageHints()
+  public function getConfidence()
   {
-    return $this->languageHints;
+    return $this->confidence;
   }
-  public function setModel($model)
+  public function setName($name)
   {
-    $this->model = $model;
+    $this->name = $name;
   }
-  public function getModel()
+  public function getName()
   {
-    return $this->model;
+    return $this->name;
+  }
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  public function getValue()
+  {
+    return $this->value;
   }
 }

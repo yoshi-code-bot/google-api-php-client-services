@@ -23,7 +23,7 @@
  *   $operations = $videointelligenceService->operations;
  *  </code>
  */
-class Google_Service_CloudVideoIntelligence_Resource_Operations extends Google_Service_Resource
+class Google_Service_CloudVideoIntelligence_Resource_OperationsProjectsLocationsOperations extends Google_Service_Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running operation.  The server

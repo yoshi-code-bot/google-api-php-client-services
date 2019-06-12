@@ -23,7 +23,7 @@
  *   $operations = $videointelligenceService->operations;
  *  </code>
  */
-class Google_Service_CloudVideoIntelligence_Resource_Operations extends Google_Service_Resource
+class Google_Service_CloudVideoIntelligence_Resource_ProjectsLocationsOperations extends Google_Service_Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running operation.  The server
@@ -37,12 +37,13 @@ class Google_Service_CloudVideoIntelligence_Resource_Operations extends Google_S
    * `Code.CANCELLED`. (operations.cancel)
    *
    * @param string $name The name of the operation resource to be cancelled.
+   * @param Google_Service_CloudVideoIntelligence_GoogleLongrunningCancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudVideoIntelligence_GoogleProtobufEmpty
    */
-  public function cancel($name, $optParams = array())
+  public function cancel($name, Google_Service_CloudVideoIntelligence_GoogleLongrunningCancelOperationRequest $postBody, $optParams = array())
   {
-    $params = array('name' => $name);
+    $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('cancel', array($params), "Google_Service_CloudVideoIntelligence_GoogleProtobufEmpty");
   }
@@ -76,5 +77,32 @@ class Google_Service_CloudVideoIntelligence_Resource_Operations extends Google_S
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_CloudVideoIntelligence_GoogleLongrunningOperation");
+  }
+  /**
+   * Lists operations that match the specified filter in the request. If the
+   * server doesn't support this method, it returns `UNIMPLEMENTED`.
+   *
+   * NOTE: the `name` binding allows API services to override the binding to use
+   * different resource name schemes, such as `users/operations`. To override the
+   * binding, API services can add a binding such as
+   * `"/v1/{name=users}/operations"` to their service configuration. For backwards
+   * compatibility, the default name includes the operations collection id,
+   * however overriding users must ensure the name binding is the parent resource,
+   * without the operations collection id.
+   * (operations.listProjectsLocationsOperations)
+   *
+   * @param string $name The name of the operation's parent resource.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string pageToken The standard list page token.
+   * @opt_param int pageSize The standard list page size.
+   * @opt_param string filter The standard list filter.
+   * @return Google_Service_CloudVideoIntelligence_GoogleLongrunningListOperationsResponse
+   */
+  public function listProjectsLocationsOperations($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_CloudVideoIntelligence_GoogleLongrunningListOperationsResponse");
   }
 }
