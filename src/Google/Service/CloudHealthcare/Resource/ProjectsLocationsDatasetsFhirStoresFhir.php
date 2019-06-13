@@ -352,6 +352,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $name The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string at Only include resource versions that were current at some
+   * point during the time period specified in the date time value. The date
+   * parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
+   *
+   * Clients may specify any of the following:
+   *
+   * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific
+   * day: `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
    * @opt_param int count The maximum number of search results on a page. Defaults
    * to 1000.
    * @opt_param string since Only include resource versions that were created at
@@ -365,14 +373,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * request, where `link.relation` is "first", "previous", "next" or "last".
    *
    * Omit `page` if no previous request has been made.
-   * @opt_param string at Only include resource versions that were current at some
-   * point during the time period specified in the date time value. The date
-   * parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
-   *
-   * Clients may specify any of the following:
-   *
-   * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific
-   * day: `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function history($name, $optParams = array())
@@ -462,20 +462,15 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * request cannot be mapped to a valid API method on a FHIR store, a generic GCP
    * error might be returned instead.
    *
-   * # Search Parameters
-   *
    * The server's capability statement, retrieved through capabilities, indicates
    * what search parameters are supported on each FHIR resource. A list of all
    * search parameters defined by the specification can be found in the [FHIR
    * Search Parameter Registry](http://hl7.org/implement/standards/fhir/STU3
    * /searchparameter-registry.html).
    *
-   * # Search Modifiers
-   *
-   * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`
-   * | Yes `:contains` | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes
-   * `:above`    | Yes `:below`    | Yes `:[type]`   | Yes `:not`      | Yes
-   * `:recurse`  | No (fhir.search)
+   * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`,
+   * `:in`, `:not-in`, `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
+   * (fhir.search)
    *
    * @param string $parent Name of the FHIR store to retrieve resources from.
    * @param Google_Service_CloudHealthcare_SearchResourcesRequest $postBody

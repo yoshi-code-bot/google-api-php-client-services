@@ -66,6 +66,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   protected $privateClusterConfigType = 'Google_Service_Container_PrivateClusterConfig';
   protected $privateClusterConfigDataType = '';
   public $resourceLabels;
+  protected $resourceUsageExportConfigType = 'Google_Service_Container_ResourceUsageExportConfig';
+  protected $resourceUsageExportConfigDataType = '';
   public $selfLink;
   public $servicesIpv4Cidr;
   public $status;
@@ -431,6 +433,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getResourceLabels()
   {
     return $this->resourceLabels;
+  }
+  /**
+   * @param Google_Service_Container_ResourceUsageExportConfig
+   */
+  public function setResourceUsageExportConfig(Google_Service_Container_ResourceUsageExportConfig $resourceUsageExportConfig)
+  {
+    $this->resourceUsageExportConfig = $resourceUsageExportConfig;
+  }
+  /**
+   * @return Google_Service_Container_ResourceUsageExportConfig
+   */
+  public function getResourceUsageExportConfig()
+  {
+    return $this->resourceUsageExportConfig;
   }
   public function setSelfLink($selfLink)
   {

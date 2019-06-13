@@ -209,11 +209,11 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
+                'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'zone' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -367,10 +367,6 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'nodePoolId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -380,6 +376,10 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                 ),
                 'clusterId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'nodePoolId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -393,6 +393,10 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'nodePoolId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -402,10 +406,6 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                 ),
                 'clusterId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'nodePoolId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -553,11 +553,11 @@ class Google_Service_Container extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
+                'zone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'zone' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

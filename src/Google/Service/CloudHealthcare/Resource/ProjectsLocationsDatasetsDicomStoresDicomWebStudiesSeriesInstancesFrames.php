@@ -34,9 +34,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}/series/{
-   * series_id}/instances/{instance_id}/frames/{frame_list}/rendered`).
+   * @param string $dicomWebPath The path of the RetrieveRenderedFrames DICOMweb
+   * request (e.g., `studies/{study_id}/series/{series_id}/instances/{instance_id}
+   * /frames/{frame_list}/rendered`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -54,9 +54,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}/series/{
-   * series_id}/instances/{instance_id}/frames/{frame_list}`).
+   * @param string $dicomWebPath The path of the RetrieveFrames DICOMweb request
+   * (e.g., `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/
+   * {frame_list}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */

@@ -76,10 +76,10 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}/items/{item_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
-   * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string connectorName Name of connector making this call. Format:
    * datasources/{source_id}/connectors/{ID}
+   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
+   * help with debugging, set this field. Otherwise, ignore this field.
    * @return Google_Service_CloudSearch_Item
    */
   public function get($name, $optParams = array())
@@ -113,6 +113,8 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
+   * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string connectorName Name of connector making this call. Format:
    * datasources/{source_id}/connectors/{ID}
    * @opt_param bool brief When set to true, the indexing system only populates
@@ -124,8 +126,6 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * @opt_param int pageSize Maximum number of items to fetch in a request. The
    * max value is 1000 when brief is true.  The max value is 10 if brief is false.
    * The default value is 10
-   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
-   * help with debugging, set this field. Otherwise, ignore this field.
    * @return Google_Service_CloudSearch_ListItemsResponse
    */
   public function listIndexingDatasourcesItems($name, $optParams = array())

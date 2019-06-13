@@ -33,8 +33,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}`).
+   * @param string $dicomWebPath The path of the DeleteStudy request (e.g.,
+   * `studies/{study_id}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HealthcareEmpty
    */
@@ -52,9 +52,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-   * `studies/{study_id}/metadata`.
+   * @param string $dicomWebPath The path of the RetrieveStudyMetadata DICOMweb
+   * request (e.g., `studies/{study_id}/metadata`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -72,8 +71,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}`).
+   * @param string $dicomWebPath The path of the RetrieveStudy DICOMweb request
+   * (e.g., `studies/{study_id}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -91,8 +90,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `instances`).
+   * @param string $dicomWebPath The path of the SearchForInstancesRequest
+   * DICOMweb request (e.g., `instances` or `series/{series_uid}/instances` or
+   * `studies/{study_uid}/instances`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -110,8 +110,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `series`).
+   * @param string $dicomWebPath The path of the SearchForSeries DICOMweb
+   * request(e.g., `series` or `studies/{study_uid}/series`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -129,8 +129,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent The name of the DICOM store that is being accessed
    * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
    * icomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DICOMweb request, as specified in
-   * the STOW-RS, WADO-RS, or QIDO-RS standard (e.g., `studies/{study_id}`).
+   * @param string $dicomWebPath The path of the StoreInstances DICOMweb request
+   * (e.g., `studies/[{study_id}]`). Note that the `study_uid` is optional.
    * @param Google_Service_CloudHealthcare_HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody

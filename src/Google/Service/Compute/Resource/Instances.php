@@ -251,6 +251,26 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_Compute_Instance");
   }
   /**
+   * Returns the specified guest attributes entry. (instances.getGuestAttributes)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance Name of the instance scoping this request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string queryPath Specifies the guest attributes path to be
+   * queried.
+   * @opt_param string variableKey Specifies the key for the guest attributes
+   * entry.
+   * @return Google_Service_Compute_GuestAttributes
+   */
+  public function getGuestAttributes($project, $zone, $instance, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
+    $params = array_merge($params, $optParams);
+    return $this->call('getGuestAttributes', array($params), "Google_Service_Compute_GuestAttributes");
+  }
+  /**
    * Gets the access control policy for a resource. May be empty if no such policy
    * or resource exists. (instances.getIamPolicy)
    *
