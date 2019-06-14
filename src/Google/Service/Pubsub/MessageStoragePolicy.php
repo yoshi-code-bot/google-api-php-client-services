@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsRequest extends Google_Model
+class Google_Service_Pubsub_MessageStoragePolicy extends Google_Collection
 {
-  public $filter;
-  public $parent;
+  protected $collection_key = 'allowedPersistenceRegions';
+  public $allowedPersistenceRegions;
 
-  public function setFilter($filter)
+  public function setAllowedPersistenceRegions($allowedPersistenceRegions)
   {
-    $this->filter = $filter;
+    $this->allowedPersistenceRegions = $allowedPersistenceRegions;
   }
-  public function getFilter()
+  public function getAllowedPersistenceRegions()
   {
-    return $this->filter;
-  }
-  public function setParent($parent)
-  {
-    $this->parent = $parent;
-  }
-  public function getParent()
-  {
-    return $this->parent;
+    return $this->allowedPersistenceRegions;
   }
 }
