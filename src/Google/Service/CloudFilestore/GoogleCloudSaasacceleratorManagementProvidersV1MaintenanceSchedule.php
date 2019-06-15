@@ -17,9 +17,18 @@
 
 class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends Google_Model
 {
+  public $canReschedule;
   public $endTime;
   public $startTime;
 
+  public function setCanReschedule($canReschedule)
+  {
+    $this->canReschedule = $canReschedule;
+  }
+  public function getCanReschedule()
+  {
+    return $this->canReschedule;
+  }
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;

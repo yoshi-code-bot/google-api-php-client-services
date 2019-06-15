@@ -51,6 +51,11 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * is "projects/{project_id_or_number}".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize A positive number that is the maximum number of
+   * results to return. If page_size is empty or more than 100,000 results, the
+   * effective page_size is 100,000 results. If view is set to FULL, this is the
+   * maximum number of Points returned. If view is set to HEADERS, this is the
+   * maximum number of TimeSeries returned.
    * @opt_param string orderBy Unsupported: must be left blank. The points in each
    * time series are returned in reverse time order.
    * @opt_param string aggregation.crossSeriesReducer The approach to be used to
@@ -103,11 +108,6 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is
    * specified and does not equal ALIGN_NONE, then this field must be defined;
    * otherwise an error is returned.
-   * @opt_param int pageSize A positive number that is the maximum number of
-   * results to return. If page_size is empty or more than 100,000 results, the
-   * effective page_size is 100,000 results. If view is set to FULL, this is the
-   * maximum number of Points returned. If view is set to HEADERS, this is the
-   * maximum number of TimeSeries returned.
    * @return Google_Service_Monitoring_ListTimeSeriesResponse
    */
   public function listProjectsTimeSeries($name, $optParams = array())
