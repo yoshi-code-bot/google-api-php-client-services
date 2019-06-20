@@ -79,10 +79,6 @@ class Google_Service_RemoteBuildExecution extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'inlineStdout' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'inlineStderr' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -91,6 +87,10 @@ class Google_Service_RemoteBuildExecution extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'inlineStdout' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'update' => array(
