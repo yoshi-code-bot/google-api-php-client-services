@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Compute_ReservationAggregatedListWarningData extends Google_Model
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  public $key;
+  public $value;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setKey($key)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->key = $key;
   }
-  public function getAcceleratorType()
+  public function getKey()
   {
-    return $this->acceleratorType;
+    return $this->key;
   }
-  public function setAmount($amount)
+  public function setValue($value)
   {
-    $this->amount = $amount;
+    $this->value = $value;
   }
-  public function getAmount()
+  public function getValue()
   {
-    return $this->amount;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->value;
   }
 }

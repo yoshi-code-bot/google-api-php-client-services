@@ -90,6 +90,7 @@ class Google_Service_Compute extends Google_Service
   public $regionInstanceGroups;
   public $regionOperations;
   public $regions;
+  public $reservations;
   public $resourcePolicies;
   public $routers;
   public $routes;
@@ -7087,6 +7088,220 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
+    $this->reservations = new Google_Service_Compute_Resource_Reservations(
+        $this,
+        $this->serviceName,
+        'reservations',
+        array(
+          'methods' => array(
+            'aggregatedList' => array(
+              'path' => '{project}/aggregated/reservations',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => '{project}/zones/{zone}/reservations/{reservation}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'reservation' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{project}/zones/{zone}/reservations/{reservation}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'reservation' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getIamPolicy' => array(
+              'path' => '{project}/zones/{zone}/reservations/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'insert' => array(
+              'path' => '{project}/zones/{zone}/reservations',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{project}/zones/{zone}/reservations',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'resize' => array(
+              'path' => '{project}/zones/{zone}/reservations/{reservation}/resize',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'reservation' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => '{project}/zones/{zone}/reservations/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'testIamPermissions' => array(
+              'path' => '{project}/zones/{zone}/reservations/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->resourcePolicies = new Google_Service_Compute_Resource_ResourcePolicies(
         $this,
         $this->serviceName,
@@ -7163,6 +7378,26 @@ class Google_Service_Compute extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'getIamPolicy' => array(
+              'path' => '{project}/regions/{region}/resourcePolicies/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'insert' => array(
               'path' => '{project}/regions/{region}/resourcePolicies',
               'httpMethod' => 'POST',
@@ -7211,6 +7446,26 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => '{project}/regions/{region}/resourcePolicies/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'testIamPermissions' => array(

@@ -123,6 +123,22 @@ class Google_Service_Compute_Resource_ResourcePolicies extends Google_Service_Re
     return $this->call('get', array($params), "Google_Service_Compute_ResourcePolicy");
   }
   /**
+   * Gets the access control policy for a resource. May be empty if no such policy
+   * or resource exists. (resourcePolicies.getIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Policy
+   */
+  public function getIamPolicy($project, $region, $resource, $optParams = array())
+  {
+    $params = array('project' => $project, 'region' => $region, 'resource' => $resource);
+    $params = array_merge($params, $optParams);
+    return $this->call('getIamPolicy', array($params), "Google_Service_Compute_Policy");
+  }
+  /**
    * Creates a new resource policy. (resourcePolicies.insert)
    *
    * @param string $project Project ID for this request.
@@ -203,6 +219,23 @@ class Google_Service_Compute_Resource_ResourcePolicies extends Google_Service_Re
     $params = array('project' => $project, 'region' => $region);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Compute_ResourcePolicyList");
+  }
+  /**
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. (resourcePolicies.setIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param Google_Service_Compute_RegionSetPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Policy
+   */
+  public function setIamPolicy($project, $region, $resource, Google_Service_Compute_RegionSetPolicyRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', array($params), "Google_Service_Compute_Policy");
   }
   /**
    * Returns permissions that a caller has on the specified resource.

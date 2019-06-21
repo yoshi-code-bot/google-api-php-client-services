@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Compute_AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk extends Google_Model
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  public $diskSizeGb;
+  public $interface;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setDiskSizeGb($diskSizeGb)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->diskSizeGb = $diskSizeGb;
   }
-  public function getAcceleratorType()
+  public function getDiskSizeGb()
   {
-    return $this->acceleratorType;
+    return $this->diskSizeGb;
   }
-  public function setAmount($amount)
+  public function setInterface($interface)
   {
-    $this->amount = $amount;
+    $this->interface = $interface;
   }
-  public function getAmount()
+  public function getInterface()
   {
-    return $this->amount;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->interface;
   }
 }

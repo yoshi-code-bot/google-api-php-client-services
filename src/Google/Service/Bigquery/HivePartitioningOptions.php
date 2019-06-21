@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Bigquery_HivePartitioningOptions extends Google_Model
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  public $mode;
+  public $sourceUriPrefix;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setMode($mode)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->mode = $mode;
   }
-  public function getAcceleratorType()
+  public function getMode()
   {
-    return $this->acceleratorType;
+    return $this->mode;
   }
-  public function setAmount($amount)
+  public function setSourceUriPrefix($sourceUriPrefix)
   {
-    $this->amount = $amount;
+    $this->sourceUriPrefix = $sourceUriPrefix;
   }
-  public function getAmount()
+  public function getSourceUriPrefix()
   {
-    return $this->amount;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->sourceUriPrefix;
   }
 }

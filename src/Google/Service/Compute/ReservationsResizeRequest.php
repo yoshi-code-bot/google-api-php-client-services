@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Compute_ReservationsResizeRequest extends Google_Model
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  public $specificSkuCount;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setSpecificSkuCount($specificSkuCount)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->specificSkuCount = $specificSkuCount;
   }
-  public function getAcceleratorType()
+  public function getSpecificSkuCount()
   {
-    return $this->acceleratorType;
-  }
-  public function setAmount($amount)
-  {
-    $this->amount = $amount;
-  }
-  public function getAmount()
-  {
-    return $this->amount;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->specificSkuCount;
   }
 }

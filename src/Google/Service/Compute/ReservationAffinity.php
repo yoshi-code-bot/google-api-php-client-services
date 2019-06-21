@@ -15,34 +15,35 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Compute_ReservationAffinity extends Google_Collection
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  protected $collection_key = 'values';
+  public $consumeReservationType;
+  public $key;
+  public $values;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setConsumeReservationType($consumeReservationType)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->consumeReservationType = $consumeReservationType;
   }
-  public function getAcceleratorType()
+  public function getConsumeReservationType()
   {
-    return $this->acceleratorType;
+    return $this->consumeReservationType;
   }
-  public function setAmount($amount)
+  public function setKey($key)
   {
-    $this->amount = $amount;
+    $this->key = $key;
   }
-  public function getAmount()
+  public function getKey()
   {
-    return $this->amount;
+    return $this->key;
   }
-  public function setType($type)
+  public function setValues($values)
   {
-    $this->type = $type;
+    $this->values = $values;
   }
-  public function getType()
+  public function getValues()
   {
-    return $this->type;
+    return $this->values;
   }
 }

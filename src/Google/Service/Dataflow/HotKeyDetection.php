@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Compute_ResourceCommitment extends Google_Model
+class Google_Service_Dataflow_HotKeyDetection extends Google_Model
 {
-  public $acceleratorType;
-  public $amount;
-  public $type;
+  public $hotKeyAge;
+  public $systemName;
+  public $userStepName;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setHotKeyAge($hotKeyAge)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->hotKeyAge = $hotKeyAge;
   }
-  public function getAcceleratorType()
+  public function getHotKeyAge()
   {
-    return $this->acceleratorType;
+    return $this->hotKeyAge;
   }
-  public function setAmount($amount)
+  public function setSystemName($systemName)
   {
-    $this->amount = $amount;
+    $this->systemName = $systemName;
   }
-  public function getAmount()
+  public function getSystemName()
   {
-    return $this->amount;
+    return $this->systemName;
   }
-  public function setType($type)
+  public function setUserStepName($userStepName)
   {
-    $this->type = $type;
+    $this->userStepName = $userStepName;
   }
-  public function getType()
+  public function getUserStepName()
   {
-    return $this->type;
+    return $this->userStepName;
   }
 }

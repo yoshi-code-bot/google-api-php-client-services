@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_TagManager_Timestamp extends Google_Model
+class Google_Service_Compute_ReservationListWarningData extends Google_Model
 {
-  public $nanos;
-  public $seconds;
+  public $key;
+  public $value;
 
-  public function setNanos($nanos)
+  public function setKey($key)
   {
-    $this->nanos = $nanos;
+    $this->key = $key;
   }
-  public function getNanos()
+  public function getKey()
   {
-    return $this->nanos;
+    return $this->key;
   }
-  public function setSeconds($seconds)
+  public function setValue($value)
   {
-    $this->seconds = $seconds;
+    $this->value = $value;
   }
-  public function getSeconds()
+  public function getValue()
   {
-    return $this->seconds;
+    return $this->value;
   }
 }
