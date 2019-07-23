@@ -46,7 +46,10 @@ class Google_Service_FirebaseManagement_Resource_ProjectsAndroidAppsSha extends 
    * Removes a SHA certificate from the specified AndroidApp. (sha.delete)
    *
    * @param string $name The fully qualified resource name of the `sha-key`, in
-   * the format: projects/projectId/androidApps/appId/sha/shaHash
+   * the format: projects/projectId/androidApps/appId/sha/shaId You can obtain the
+   * full name from the response of
+   * [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+   * [`CreateShaCertificate`](../projects.androidApps.sha/create).
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_FirebaseEmpty
    */

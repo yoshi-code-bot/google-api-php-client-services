@@ -25,6 +25,7 @@ class Google_Service_FirebaseCloudMessaging_AndroidNotification extends Google_C
   public $clickAction;
   public $color;
   public $icon;
+  public $image;
   public $sound;
   public $tag;
   public $title;
@@ -86,6 +87,14 @@ class Google_Service_FirebaseCloudMessaging_AndroidNotification extends Google_C
   public function getIcon()
   {
     return $this->icon;
+  }
+  public function setImage($image)
+  {
+    $this->image = $image;
+  }
+  public function getImage()
+  {
+    return $this->image;
   }
   public function setSound($sound)
   {

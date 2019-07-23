@@ -137,7 +137,8 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
     return $this->call('getIamPolicy', array($params), "Google_Service_Compute_Policy");
   }
   /**
-   * Creates a new reservation. (reservations.insert)
+   * Creates a new reservation. For more information, read Reserving zonal
+   * resources. (reservations.insert)
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.

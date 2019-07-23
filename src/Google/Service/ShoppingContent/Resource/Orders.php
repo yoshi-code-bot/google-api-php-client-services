@@ -234,8 +234,7 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
    * @opt_param string placedDateStart Obtains orders placed after this date
    * (inclusively), in ISO 8601 format.
    * @opt_param string statuses Obtains orders that match any of the specified
-   * statuses. Multiple values can be specified with comma separation.
-   * Additionally, please note that active is a shortcut for pendingShipment and
+   * statuses. Please note that active is a shortcut for pendingShipment and
    * partiallyShipped, and completed is a shortcut for shipped,
    * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
    * @return Google_Service_ShoppingContent_OrdersListResponse

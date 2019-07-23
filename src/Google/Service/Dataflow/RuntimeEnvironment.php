@@ -21,6 +21,7 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public $additionalExperiments;
   public $additionalUserLabels;
   public $bypassTempDirValidation;
+  public $kmsKeyName;
   public $machineType;
   public $maxWorkers;
   public $network;
@@ -53,6 +54,14 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public function getBypassTempDirValidation()
   {
     return $this->bypassTempDirValidation;
+  }
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   public function setMachineType($machineType)
   {

@@ -50,6 +50,8 @@ class Google_Service_FirebaseManagement extends Google_Service
   public $projects;
   public $projects_androidApps;
   public $projects_androidApps_sha;
+  public $projects_availableLocations;
+  public $projects_defaultLocation;
   public $projects_iosApps;
   public $projects_webApps;
   
@@ -296,6 +298,54 @@ class Google_Service_FirebaseManagement extends Google_Service
             ),'list' => array(
               'path' => 'v1beta1/{+parent}/sha',
               'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_availableLocations = new Google_Service_FirebaseManagement_Resource_ProjectsAvailableLocations(
+        $this,
+        $this->serviceName,
+        'availableLocations',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'v1beta1/{+parent}/availableLocations',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_defaultLocation = new Google_Service_FirebaseManagement_Resource_ProjectsDefaultLocation(
+        $this,
+        $this->serviceName,
+        'defaultLocation',
+        array(
+          'methods' => array(
+            'finalize' => array(
+              'path' => 'v1beta1/{+parent}/defaultLocation:finalize',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',

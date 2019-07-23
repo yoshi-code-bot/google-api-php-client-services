@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_IAMCredentials_GenerateIdentityBindingAccessTokenResponse extends Google_Model
+class Google_Service_PeopleService_DeleteContactPhotoResponse extends Google_Model
 {
-  public $accessToken;
-  public $expireTime;
+  protected $personType = 'Google_Service_PeopleService_Person';
+  protected $personDataType = '';
 
-  public function setAccessToken($accessToken)
+  /**
+   * @param Google_Service_PeopleService_Person
+   */
+  public function setPerson(Google_Service_PeopleService_Person $person)
   {
-    $this->accessToken = $accessToken;
+    $this->person = $person;
   }
-  public function getAccessToken()
+  /**
+   * @return Google_Service_PeopleService_Person
+   */
+  public function getPerson()
   {
-    return $this->accessToken;
-  }
-  public function setExpireTime($expireTime)
-  {
-    $this->expireTime = $expireTime;
-  }
-  public function getExpireTime()
-  {
-    return $this->expireTime;
+    return $this->person;
   }
 }

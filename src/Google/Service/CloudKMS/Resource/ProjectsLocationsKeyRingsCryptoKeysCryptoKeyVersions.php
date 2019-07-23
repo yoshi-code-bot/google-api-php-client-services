@@ -128,6 +128,25 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCrypto
     return $this->call('getPublicKey', array($params), "Google_Service_CloudKMS_PublicKey");
   }
   /**
+   * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped
+   * key material provided in the request.
+   *
+   * The version ID will be assigned the next sequential id within the CryptoKey.
+   * (cryptoKeyVersions.import)
+   *
+   * @param string $parent Required. The name of the CryptoKey to be imported
+   * into.
+   * @param Google_Service_CloudKMS_ImportCryptoKeyVersionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CloudKMS_CryptoKeyVersion
+   */
+  public function import($parent, Google_Service_CloudKMS_ImportCryptoKeyVersionRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('import', array($params), "Google_Service_CloudKMS_CryptoKeyVersion");
+  }
+  /**
    * Lists CryptoKeyVersions.
    * (cryptoKeyVersions.listProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions)
    *
@@ -135,7 +154,12 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCrypto
    * in the format `projects/locations/keyRings/cryptoKeys`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view The fields to include in the response.
+   * @opt_param string orderBy Optional. Specify how the results should be sorted.
+   * If not specified, the results will be sorted in the default order
+   * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+   * @opt_param string filter Optional. Only include resources that match the
+   * filter in the response (https://cloud.google.com/kms/docs/sorting-and-
+   * filtering).
    * @opt_param string pageToken Optional pagination token, returned earlier via
    * ListCryptoKeyVersionsResponse.next_page_token.
    * @opt_param int pageSize Optional limit on the number of CryptoKeyVersions to
@@ -143,6 +167,7 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCrypto
    * obtained by including the ListCryptoKeyVersionsResponse.next_page_token in a
    * subsequent request. If unspecified, the server will pick an appropriate
    * default.
+   * @opt_param string view The fields to include in the response.
    * @return Google_Service_CloudKMS_ListCryptoKeyVersionsResponse
    */
   public function listProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions($parent, $optParams = array())

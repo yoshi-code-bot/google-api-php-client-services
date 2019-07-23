@@ -15,14 +15,16 @@
  * the License.
  */
 
-/**
- * The "operations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $speechService = new Google_Service_Speech(...);
- *   $operations = $speechService->operations;
- *  </code>
- */
-class Google_Service_Speech_Resource_ProjectsOperations extends Google_Service_Resource
+class Google_Service_Sheets_DeleteDuplicatesResponse extends Google_Model
 {
+  public $duplicatesRemovedCount;
+
+  public function setDuplicatesRemovedCount($duplicatesRemovedCount)
+  {
+    $this->duplicatesRemovedCount = $duplicatesRemovedCount;
+  }
+  public function getDuplicatesRemovedCount()
+  {
+    return $this->duplicatesRemovedCount;
+  }
 }

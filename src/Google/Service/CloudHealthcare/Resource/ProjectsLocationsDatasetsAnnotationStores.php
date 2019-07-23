@@ -143,7 +143,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsAnnotatio
    * policy.
    *
    * Authorization requires the Google IAM permission
-   * 'healthcare.annotationStores.setIamPolicy' on the specified resource
+   * `healthcare.annotationStores.setIamPolicy` on the specified resource
    * (annotationStores.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being

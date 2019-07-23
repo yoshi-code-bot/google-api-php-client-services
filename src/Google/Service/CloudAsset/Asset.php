@@ -15,12 +15,15 @@
  * the License.
  */
 
-class Google_Service_CloudAsset_Asset extends Google_Model
+class Google_Service_CloudAsset_Asset extends Google_Collection
 {
+  protected $collection_key = 'orgPolicy';
   public $assetType;
   protected $iamPolicyType = 'Google_Service_CloudAsset_Policy';
   protected $iamPolicyDataType = '';
   public $name;
+  protected $orgPolicyType = 'Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy';
+  protected $orgPolicyDataType = 'array';
   protected $resourceType = 'Google_Service_CloudAsset_CloudassetResource';
   protected $resourceDataType = '';
 
@@ -53,6 +56,20 @@ class Google_Service_CloudAsset_Asset extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy
+   */
+  public function setOrgPolicy($orgPolicy)
+  {
+    $this->orgPolicy = $orgPolicy;
+  }
+  /**
+   * @return Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy
+   */
+  public function getOrgPolicy()
+  {
+    return $this->orgPolicy;
   }
   /**
    * @param Google_Service_CloudAsset_CloudassetResource

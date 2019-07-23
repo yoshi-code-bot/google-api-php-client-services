@@ -18,6 +18,9 @@
 class Google_Service_Bigquery_JobStatistics extends Google_Collection
 {
   protected $collection_key = 'reservationUsage';
+  protected $internal_gapi_mappings = array(
+        "reservationId" => "reservation_id",
+  );
   public $completionRatio;
   public $creationTime;
   public $endTime;
@@ -32,6 +35,7 @@ class Google_Service_Bigquery_JobStatistics extends Google_Collection
   public $quotaDeferments;
   protected $reservationUsageType = 'Google_Service_Bigquery_JobStatisticsReservationUsage';
   protected $reservationUsageDataType = 'array';
+  public $reservationId;
   public $startTime;
   public $totalBytesProcessed;
   public $totalSlotMs;
@@ -139,6 +143,14 @@ class Google_Service_Bigquery_JobStatistics extends Google_Collection
   public function getReservationUsage()
   {
     return $this->reservationUsage;
+  }
+  public function setReservationId($reservationId)
+  {
+    $this->reservationId = $reservationId;
+  }
+  public function getReservationId()
+  {
+    return $this->reservationId;
   }
   public function setStartTime($startTime)
   {

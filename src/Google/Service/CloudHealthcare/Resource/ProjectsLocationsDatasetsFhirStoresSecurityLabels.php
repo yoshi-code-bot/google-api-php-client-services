@@ -31,14 +31,18 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * an empty policy if the resource exists but does not have a policy set.
    *
    * Authorization requires the Google IAM permission
-   * 'healthcare.fhirStores.getIamPolicy' for a FHIR store or
-   * 'healthcare.securityLabels.getIamPolicy' for a security label
+   * `healthcare.fhirStores.getIamPolicy` for a FHIR store or
+   * `healthcare.securityLabels.getIamPolicy` for a security label
    * (securityLabels.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
    * field.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param int options.requestedPolicyVersion Optional. The policy format
+   * version to be returned. Acceptable values are 0 and 1. If the value is 0, or
+   * the field is omitted, policy format version 1 will be returned.
    * @return Google_Service_CloudHealthcare_Policy
    */
   public function getIamPolicy($resource, $optParams = array())
@@ -52,8 +56,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * FHIR store. Replaces any existing policy.
    *
    * Authorization requires the Google IAM permission
-   * 'healthcare.fhirStores.setIamPolicy' for a FHIR store or
-   * 'healthcare.securityLabels.setIamPolicy' for a security label
+   * `healthcare.fhirStores.setIamPolicy` for a FHIR store or
+   * `healthcare.securityLabels.setIamPolicy` for a security label
    * (securityLabels.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being

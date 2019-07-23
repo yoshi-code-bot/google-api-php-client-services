@@ -67,6 +67,10 @@ class Google_Service_ServiceBroker extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'setIamPolicy' => array(
               'path' => 'v1/{+resource}:setIamPolicy',

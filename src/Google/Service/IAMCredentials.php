@@ -76,16 +76,6 @@ class Google_Service_IAMCredentials extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'generateIdentityBindingAccessToken' => array(
-              'path' => 'v1/{+name}:generateIdentityBindingAccessToken',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'signBlob' => array(
               'path' => 'v1/{+name}:signBlob',
               'httpMethod' => 'POST',

@@ -24,7 +24,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://gsuite.google.com/products/cloud-search/" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/cloud-search/docs/guides/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -137,6 +137,10 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'debugOptions.enableDebugging' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -144,10 +148,6 @@ class Google_Service_CloudSearch extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'debugOptions.enableDebugging' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -169,6 +169,10 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'debugOptions.enableDebugging' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'groupResourceName' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -184,10 +188,6 @@ class Google_Service_CloudSearch extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'debugOptions.enableDebugging' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -209,10 +209,6 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -224,6 +220,10 @@ class Google_Service_CloudSearch extends Google_Service
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -490,10 +490,6 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/query/sources',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'requestOptions.searchApplicationId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'requestOptions.timeZone' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -507,6 +503,10 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'boolean',
                 ),
                 'requestOptions.languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'requestOptions.searchApplicationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

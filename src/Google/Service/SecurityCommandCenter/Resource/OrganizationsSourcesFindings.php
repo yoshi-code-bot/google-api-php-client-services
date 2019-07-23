@@ -143,10 +143,9 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * security_marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
-   * @opt_param string fieldMask Optional.
-   *
-   * A field mask to specify the Finding fields to be listed in the response. An
-   * empty field mask will list all fields.
+   * @opt_param string fieldMask Optional. A field mask to specify the Finding
+   * fields to be listed in the response. An empty field mask will list all
+   * fields.
    * @opt_param string pageToken The value returned by the last
    * `ListFindingsResponse`; indicates that this is a continuation of a prior
    * `ListFindings` call, and that the system should return the next page of data.

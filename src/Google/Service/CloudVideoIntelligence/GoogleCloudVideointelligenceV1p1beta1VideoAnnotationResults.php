@@ -27,6 +27,8 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
   public $inputUri;
   protected $objectAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1ObjectTrackingAnnotation';
   protected $objectAnnotationsDataType = 'array';
+  protected $segmentType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment';
+  protected $segmentDataType = '';
   protected $segmentLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
   protected $segmentLabelAnnotationsDataType = 'array';
   protected $shotAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment';
@@ -101,6 +103,20 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
   public function getObjectAnnotations()
   {
     return $this->objectAnnotations;
+  }
+  /**
+   * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment
+   */
+  public function setSegment(Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment $segment)
+  {
+    $this->segment = $segment;
+  }
+  /**
+   * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment
+   */
+  public function getSegment()
+  {
+    return $this->segment;
   }
   /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation

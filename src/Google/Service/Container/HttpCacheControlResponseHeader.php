@@ -15,26 +15,34 @@
  * the License.
  */
 
-class Google_Service_IAMCredentials_GenerateIdentityBindingAccessTokenRequest extends Google_Collection
+class Google_Service_Container_HttpCacheControlResponseHeader extends Google_Model
 {
-  protected $collection_key = 'scope';
-  public $jwt;
-  public $scope;
+  public $age;
+  public $directive;
+  public $expires;
 
-  public function setJwt($jwt)
+  public function setAge($age)
   {
-    $this->jwt = $jwt;
+    $this->age = $age;
   }
-  public function getJwt()
+  public function getAge()
   {
-    return $this->jwt;
+    return $this->age;
   }
-  public function setScope($scope)
+  public function setDirective($directive)
   {
-    $this->scope = $scope;
+    $this->directive = $directive;
   }
-  public function getScope()
+  public function getDirective()
   {
-    return $this->scope;
+    return $this->directive;
+  }
+  public function setExpires($expires)
+  {
+    $this->expires = $expires;
+  }
+  public function getExpires()
+  {
+    return $this->expires;
   }
 }

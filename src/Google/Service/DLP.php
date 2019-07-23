@@ -46,6 +46,7 @@ class Google_Service_DLP extends Google_Service
   public $projects_image;
   public $projects_inspectTemplates;
   public $projects_jobTriggers;
+  public $projects_locations_content;
   public $projects_storedInfoTypes;
   
   /**
@@ -662,6 +663,31 @@ class Google_Service_DLP extends Google_Service
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_content = new Google_Service_DLP_Resource_ProjectsLocationsContent(
+        $this,
+        $this->serviceName,
+        'content',
+        array(
+          'methods' => array(
+            'deidentify' => array(
+              'path' => 'v2/{+parent}/locations/{location}/content:deidentify',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'location' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

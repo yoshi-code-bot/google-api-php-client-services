@@ -120,14 +120,18 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * an empty policy if the resource exists but does not have a policy set.
    *
    * Authorization requires the Google IAM permission
-   * 'healthcare.fhirStores.getIamPolicy' for a FHIR store or
-   * 'healthcare.securityLabels.getIamPolicy' for a security label
+   * `healthcare.fhirStores.getIamPolicy` for a FHIR store or
+   * `healthcare.securityLabels.getIamPolicy` for a security label
    * (fhirStores.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
    * field.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param int options.requestedPolicyVersion Optional. The policy format
+   * version to be returned. Acceptable values are 0 and 1. If the value is 0, or
+   * the field is omitted, policy format version 1 will be returned.
    * @return Google_Service_CloudHealthcare_Policy
    */
   public function getIamPolicy($resource, $optParams = array())
@@ -180,14 +184,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Restricts stores returned to those matching a
-   * filter. Syntax:
-   * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-   * Only filtering on labels is supported, for example `labels.key=value`.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @opt_param int pageSize Limit on the number of FHIR stores to return in a
    * single response.  If zero the default page size of 100 is used.
+   * @opt_param string filter Restricts stores returned to those matching a
+   * filter. Syntax:
+   * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+   * Only filtering on labels is supported, for example `labels.key=value`.
    * @return Google_Service_CloudHealthcare_ListFhirStoresResponse
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = array())
@@ -220,8 +224,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * FHIR store. Replaces any existing policy.
    *
    * Authorization requires the Google IAM permission
-   * 'healthcare.fhirStores.setIamPolicy' for a FHIR store or
-   * 'healthcare.securityLabels.setIamPolicy' for a security label
+   * `healthcare.fhirStores.setIamPolicy` for a FHIR store or
+   * `healthcare.securityLabels.setIamPolicy` for a security label
    * (fhirStores.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being

@@ -15,6 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_CheckSuiteFilter extends Google_Model
+class Google_Service_CloudIAP_GetPolicyOptions extends Google_Model
 {
+  public $requestedPolicyVersion;
+
+  public function setRequestedPolicyVersion($requestedPolicyVersion)
+  {
+    $this->requestedPolicyVersion = $requestedPolicyVersion;
+  }
+  public function getRequestedPolicyVersion()
+  {
+    return $this->requestedPolicyVersion;
+  }
 }
