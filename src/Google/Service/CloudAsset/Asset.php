@@ -18,6 +18,10 @@
 class Google_Service_CloudAsset_Asset extends Google_Collection
 {
   protected $collection_key = 'orgPolicy';
+  protected $accessLevelType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessLevel';
+  protected $accessLevelDataType = '';
+  protected $accessPolicyType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessPolicy';
+  protected $accessPolicyDataType = '';
   public $assetType;
   protected $iamPolicyType = 'Google_Service_CloudAsset_Policy';
   protected $iamPolicyDataType = '';
@@ -26,7 +30,37 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   protected $orgPolicyDataType = 'array';
   protected $resourceType = 'Google_Service_CloudAsset_CloudassetResource';
   protected $resourceDataType = '';
+  protected $servicePerimeterType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter';
+  protected $servicePerimeterDataType = '';
 
+  /**
+   * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessLevel
+   */
+  public function setAccessLevel(Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessLevel $accessLevel)
+  {
+    $this->accessLevel = $accessLevel;
+  }
+  /**
+   * @return Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessLevel
+   */
+  public function getAccessLevel()
+  {
+    return $this->accessLevel;
+  }
+  /**
+   * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessPolicy
+   */
+  public function setAccessPolicy(Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessPolicy $accessPolicy)
+  {
+    $this->accessPolicy = $accessPolicy;
+  }
+  /**
+   * @return Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessPolicy
+   */
+  public function getAccessPolicy()
+  {
+    return $this->accessPolicy;
+  }
   public function setAssetType($assetType)
   {
     $this->assetType = $assetType;
@@ -84,5 +118,19 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   public function getResource()
   {
     return $this->resource;
+  }
+  /**
+   * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter
+   */
+  public function setServicePerimeter(Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter $servicePerimeter)
+  {
+    $this->servicePerimeter = $servicePerimeter;
+  }
+  /**
+   * @return Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter
+   */
+  public function getServicePerimeter()
+  {
+    return $this->servicePerimeter;
   }
 }
