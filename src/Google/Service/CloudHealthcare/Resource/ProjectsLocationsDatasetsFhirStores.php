@@ -115,14 +115,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
     return $this->call('get', array($params), "Google_Service_CloudHealthcare_FhirStore");
   }
   /**
-   * Gets the access control policy for a FHIR store or security label within a
-   * FHIR store. Returns NOT_FOUND error if the resource does not exist. Returns
-   * an empty policy if the resource exists but does not have a policy set.
-   *
-   * Authorization requires the Google IAM permission
-   * `healthcare.fhirStores.getIamPolicy` for a FHIR store or
-   * `healthcare.securityLabels.getIamPolicy` for a security label
-   * (fhirStores.getIamPolicy)
+   * Gets the access control policy for a resource. Returns an empty policy if the
+   * resource exists and does not have a policy set. (fhirStores.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
@@ -184,14 +178,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from the
-   * previous List request, if any.
-   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
-   * single response.  If zero the default page size of 100 is used.
    * @opt_param string filter Restricts stores returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported, for example `labels.key=value`.
+   * @opt_param string pageToken The next_page_token value returned from the
+   * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
+   * single response.  If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListFhirStoresResponse
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = array())
@@ -220,13 +214,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
     return $this->call('patch', array($params), "Google_Service_CloudHealthcare_FhirStore");
   }
   /**
-   * Sets the access control policy for a FHIR store or security label within a
-   * FHIR store. Replaces any existing policy.
-   *
-   * Authorization requires the Google IAM permission
-   * `healthcare.fhirStores.setIamPolicy` for a FHIR store or
-   * `healthcare.securityLabels.setIamPolicy` for a security label
-   * (fhirStores.setIamPolicy)
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. (fhirStores.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
@@ -242,12 +231,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
     return $this->call('setIamPolicy', array($params), "Google_Service_CloudHealthcare_Policy");
   }
   /**
-   * Returns permissions that a caller has on the specified resource.  If the
+   * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
    * NOT_FOUND error.
    *
-   * There is no permission required to make this API call.
-   * (fhirStores.testIamPermissions)
+   * Note: This operation is designed to be used for building permission-aware UIs
+   * and command-line tools, not for authorization checking. This operation may
+   * "fail open" without warning. (fhirStores.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See the operation documentation for the appropriate value

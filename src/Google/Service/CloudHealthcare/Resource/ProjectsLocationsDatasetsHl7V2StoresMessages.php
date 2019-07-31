@@ -93,11 +93,16 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
   }
   /**
    * Lists all the messages in the given HL7v2 store with support for filtering.
-   * (messages.listProjectsLocationsDatasetsHl7V2StoresMessages)
+   *
+   * Note: HL7v2 messages are indexed asynchronously, so there might be a slight
+   * delay between the time a message is created and when it can be found through
+   * a filter. (messages.listProjectsLocationsDatasetsHl7V2StoresMessages)
    *
    * @param string $parent Name of the HL7v2 store to retrieve messages from.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Limit on the number of messages to return in a single
+   * response. If zero the default page size of 100 is used.
    * @opt_param string filter Restricts messages returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
@@ -107,10 +112,10 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * *  `message_type`, from the MSH-9 segment; for example `NOT message_type =
    * "ADT"` *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent
    * in the dataset's time_zone, from the MSH-7 segment; for example `send_date <
-   * "2017-01-02"` *  `send_time`, the timestamp of when the message was sent,
-   * using the RFC3339 time format for comparisons, from the MSH-7 segment; for
-   * example `send_time < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the
-   * care center that the message came from, from the MSH-4 segment; for example
+   * "2017-01-02"` *  `send_time`, the timestamp when the message was sent, using
+   * the RFC3339 time format for comparisons, from the MSH-7 segment; for example
+   * `send_time < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center
+   * that the message came from, from the MSH-4 segment; for example
    * `send_facility = "ABC"` *  `HL7RegExp(expr)`, which does regular expression
    * matching of `expr` against the message payload using re2
    * (http://code.google.com/p/re2/) syntax; for example
@@ -146,8 +151,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * Fields available for ordering are:
    *
    * *  `send_time`
-   * @opt_param int pageSize Limit on the number of messages to return in a single
-   * response. If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListMessagesResponse
    */
   public function listProjectsLocationsDatasetsHl7V2StoresMessages($parent, $optParams = array())

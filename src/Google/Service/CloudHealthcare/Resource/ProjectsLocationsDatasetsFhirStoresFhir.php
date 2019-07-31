@@ -75,11 +75,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string start The response includes records subsequent to the start
-   * date. If no start date is provided, all records prior to the end date are in
-   * scope.
    * @opt_param string end The response includes records prior to the end date. If
    * no end date is provided, all records subsequent to the start date are in
+   * scope.
+   * @opt_param string start The response includes records subsequent to the start
+   * date. If no start date is provided, all records prior to the end date are in
    * scope.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -477,7 +477,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * The maximum number of search results returned defaults to 100, which can be
    * overridden by the `_count` parameter up to a maximum limit of 1000. If there
    * are additional results, the returned `Bundle` will contain pagination links.
-   * (fhir.search)
+   *
+   * Resources with a total size larger than 5MB or a field count larger than
+   * 50,000 might not be fully searchable as the server might trim its generated
+   * search index in those cases.
+   *
+   * Note: FHIR resources are indexed asynchronously, so there might be a slight
+   * delay between the time a resource is created or changes and when the change
+   * is reflected in search results. (fhir.search)
    *
    * @param string $parent Name of the FHIR store to retrieve resources from.
    * @param Google_Service_CloudHealthcare_SearchResourcesRequest $postBody
