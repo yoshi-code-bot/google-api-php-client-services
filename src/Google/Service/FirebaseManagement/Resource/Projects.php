@@ -70,6 +70,63 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('addFirebase', array($params), "Google_Service_FirebaseManagement_Operation");
   }
   /**
+   * Links a FirebaseProject with an existing [Google Analytics
+   * account](http://www.google.com/analytics/).
+   *
+   * Using this call, you can either:
+   *
+   * Provision a new Google Analytics property and associate the new property with
+   * your `FirebaseProject`. Associate an existing Google Analytics property with
+   * your `FirebaseProject`.
+   *
+   * Note that when you call `AddGoogleAnalytics`:
+   *
+   * Any Firebase Apps already in your `FirebaseProject` are automatically
+   * provisioned as new data streams in the Google Analytics property. Any data
+   * streams already in the Google Analytics property are automatically associated
+   * with their corresponding Firebase Apps (only applies when an app's
+   * `packageName` or `bundleId` match those for an existing data stream).
+   *
+   * Learn more about the hierarchy and structure of Google Analytics accounts in
+   * the [Analytics
+   * documentation](https://support.google.com/analytics/answer/9303323).
+   *
+   * The result of this call is an [`Operation`](../../v1beta1/operations). Poll
+   * the `Operation` to track the provisioning process by calling GetOperation
+   * until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`.
+   * When `done` is `true`, the `Operation` has either succeeded or failed. If the
+   * `Operation` succeeded, its
+   * [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to an
+   * AnalyticsDetails; if the `Operation` failed, its
+   * [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a
+   * google.rpc.Status.
+   *
+   * To call `AddGoogleAnalytics`, a member must be an Owner for the existing
+   * `FirebaseProject` and have the [`Edit`
+   * permission](https://support.google.com/analytics/answer/2884495) for the
+   * Google Analytics account.
+   *
+   * If a `FirebaseProject` already has Google Analytics enabled, and you call
+   * `AddGoogleAnalytics` using an `analyticsPropertyId` that's different from the
+   * currently associated property, then the call will fail. Analytics may have
+   * already been enabled in the Firebase console or by specifying `timeZone` and
+   * `regionCode` in the call to
+   * [`AddFirebase`](../../v1beta1/projects/addFirebase).
+   * (projects.addGoogleAnalytics)
+   *
+   * @param string $parent The parent `FirebaseProject` to link to an existing
+   * Google Analytics account, in the format: projects/projectId
+   * @param Google_Service_FirebaseManagement_AddGoogleAnalyticsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_FirebaseManagement_Operation
+   */
+  public function addGoogleAnalytics($parent, Google_Service_FirebaseManagement_AddGoogleAnalyticsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('addGoogleAnalytics', array($params), "Google_Service_FirebaseManagement_Operation");
+  }
+  /**
    * Gets the FirebaseProject identified by the specified resource name.
    * (projects.get)
    *
@@ -101,6 +158,25 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('getAdminSdkConfig', array($params), "Google_Service_FirebaseManagement_AdminSdkConfig");
+  }
+  /**
+   * Gets the Google Analytics details currently associated with a
+   * FirebaseProject.
+   *
+   * If the `FirebaseProject` is not yet linked to Google Analytics, then the
+   * response to `GetAnalyticsDetails` is NOT_FOUND.
+   * (projects.getAnalyticsDetails)
+   *
+   * @param string $name The fully qualified resource name, in the format:
+   * projects/projectId/analyticsDetails
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_FirebaseManagement_AnalyticsDetails
+   */
+  public function getAnalyticsDetails($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('getAnalyticsDetails', array($params), "Google_Service_FirebaseManagement_AnalyticsDetails");
   }
   /**
    * Lists each FirebaseProject accessible to the caller.
@@ -160,6 +236,33 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_FirebaseManagement_FirebaseProject");
+  }
+  /**
+   * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+   *
+   * This call removes the association of the specified `FirebaseProject` with its
+   * current Google Analytics property. However, this call does not delete the
+   * Google Analytics resources, such as the Google Analytics property or any data
+   * streams.
+   *
+   * These resources may be re-associated later to the `FirebaseProject` by
+   * calling [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and
+   * specifying the same `analyticsPropertyId`.
+   *
+   * To call `RemoveAnalytics`, a member must be an Owner for the
+   * `FirebaseProject`. (projects.removeAnalytics)
+   *
+   * @param string $parent The parent `FirebaseProject` to unlink from its Google
+   * Analytics account, in the format: projects/projectId
+   * @param Google_Service_FirebaseManagement_RemoveAnalyticsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_FirebaseManagement_FirebaseEmpty
+   */
+  public function removeAnalytics($parent, Google_Service_FirebaseManagement_RemoveAnalyticsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('removeAnalytics', array($params), "Google_Service_FirebaseManagement_FirebaseEmpty");
   }
   /**
    * A convenience method that lists all available Apps for the specified

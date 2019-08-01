@@ -128,6 +128,16 @@ class Google_Service_FirebaseManagement extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'addGoogleAnalytics' => array(
+              'path' => 'v1beta1/{+parent}:addGoogleAnalytics',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'get' => array(
               'path' => 'v1beta1/{+name}',
               'httpMethod' => 'GET',
@@ -139,6 +149,16 @@ class Google_Service_FirebaseManagement extends Google_Service
                 ),
               ),
             ),'getAdminSdkConfig' => array(
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getAnalyticsDetails' => array(
               'path' => 'v1beta1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
@@ -173,6 +193,16 @@ class Google_Service_FirebaseManagement extends Google_Service
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'removeAnalytics' => array(
+              'path' => 'v1beta1/{+parent}:removeAnalytics',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'searchApps' => array(
