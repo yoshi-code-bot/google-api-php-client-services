@@ -25,6 +25,8 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   protected $gceClusterConfigDataType = '';
   protected $initializationActionsType = 'Google_Service_Dataproc_NodeInitializationAction';
   protected $initializationActionsDataType = 'array';
+  protected $lifecycleConfigType = 'Google_Service_Dataproc_LifecycleConfig';
+  protected $lifecycleConfigDataType = '';
   protected $masterConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
   protected $masterConfigDataType = '';
   protected $secondaryWorkerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
@@ -85,6 +87,20 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   public function getInitializationActions()
   {
     return $this->initializationActions;
+  }
+  /**
+   * @param Google_Service_Dataproc_LifecycleConfig
+   */
+  public function setLifecycleConfig(Google_Service_Dataproc_LifecycleConfig $lifecycleConfig)
+  {
+    $this->lifecycleConfig = $lifecycleConfig;
+  }
+  /**
+   * @return Google_Service_Dataproc_LifecycleConfig
+   */
+  public function getLifecycleConfig()
+  {
+    return $this->lifecycleConfig;
   }
   /**
    * @param Google_Service_Dataproc_InstanceGroupConfig

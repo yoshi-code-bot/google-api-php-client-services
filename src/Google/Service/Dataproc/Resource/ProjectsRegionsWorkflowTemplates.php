@@ -105,8 +105,8 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
    * will complete when entire workflow is finished.The running workflow can be
    * aborted via operations.cancel. This will cause any inflight jobs to be
    * cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-   * will be WorkflowMetadata.On successful completion, Operation.response will be
-   * Empty. (workflowTemplates.instantiate)
+   * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
+   * completion, Operation.response will be Empty. (workflowTemplates.instantiate)
    *
    * @param string $name Required. The "resource name" of the workflow template,
    * as described in https://cloud.google.com/apis/design/resource_names of the
@@ -129,8 +129,8 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
    * entire workflow is finished.The running workflow can be aborted via
    * operations.cancel. This will cause any inflight jobs to be cancelled and
    * workflow-owned clusters to be deleted.The Operation.metadata will be
-   * WorkflowMetadata.On successful completion, Operation.response will be Empty.
-   * (workflowTemplates.instantiateInline)
+   * WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
+   * Operation.response will be Empty. (workflowTemplates.instantiateInline)
    *
    * @param string $parent Required. The "resource name" of the workflow template
    * region, as described in https://cloud.google.com/apis/design/resource_names
