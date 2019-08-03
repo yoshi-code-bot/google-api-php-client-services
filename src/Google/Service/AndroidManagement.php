@@ -69,15 +69,15 @@ class Google_Service_AndroidManagement extends Google_Service
               'path' => 'v1/enterprises',
               'httpMethod' => 'POST',
               'parameters' => array(
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'enterpriseToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'signupUrlName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -467,11 +467,11 @@ class Google_Service_AndroidManagement extends Google_Service
               'path' => 'v1/signupUrls',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'callbackUrl' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'projectId' => array(
+                'callbackUrl' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
