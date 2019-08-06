@@ -248,20 +248,20 @@ class Google_Service_Sheets extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'valueRenderOption' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dateTimeRenderOption' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'ranges' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
                 'majorDimension' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'valueRenderOption' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'dateTimeRenderOption' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

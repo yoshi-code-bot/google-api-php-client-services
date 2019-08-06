@@ -15,43 +15,34 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_Image extends Google_Model
+class Google_Service_Sheets_ChartAxisViewWindowOptions extends Google_Model
 {
-  public $id;
-  public $sha1;
-  public $sha256;
-  public $url;
+  public $viewWindowMax;
+  public $viewWindowMin;
+  public $viewWindowMode;
 
-  public function setId($id)
+  public function setViewWindowMax($viewWindowMax)
   {
-    $this->id = $id;
+    $this->viewWindowMax = $viewWindowMax;
   }
-  public function getId()
+  public function getViewWindowMax()
   {
-    return $this->id;
+    return $this->viewWindowMax;
   }
-  public function setSha1($sha1)
+  public function setViewWindowMin($viewWindowMin)
   {
-    $this->sha1 = $sha1;
+    $this->viewWindowMin = $viewWindowMin;
   }
-  public function getSha1()
+  public function getViewWindowMin()
   {
-    return $this->sha1;
+    return $this->viewWindowMin;
   }
-  public function setSha256($sha256)
+  public function setViewWindowMode($viewWindowMode)
   {
-    $this->sha256 = $sha256;
+    $this->viewWindowMode = $viewWindowMode;
   }
-  public function getSha256()
+  public function getViewWindowMode()
   {
-    return $this->sha256;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->viewWindowMode;
   }
 }
