@@ -15,24 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_TextConfig extends Google_Collection
+class Google_Service_ShoppingContent_OrderCustomerLoyaltyInfo extends Google_Model
 {
-  protected $collection_key = 'transformations';
-  protected $transformationsType = 'Google_Service_CloudHealthcare_InfoTypeTransformation';
-  protected $transformationsDataType = 'array';
+  public $loyaltyNumber;
+  public $name;
 
-  /**
-   * @param Google_Service_CloudHealthcare_InfoTypeTransformation
-   */
-  public function setTransformations($transformations)
+  public function setLoyaltyNumber($loyaltyNumber)
   {
-    $this->transformations = $transformations;
+    $this->loyaltyNumber = $loyaltyNumber;
   }
-  /**
-   * @return Google_Service_CloudHealthcare_InfoTypeTransformation
-   */
-  public function getTransformations()
+  public function getLoyaltyNumber()
   {
-    return $this->transformations;
+    return $this->loyaltyNumber;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
 }
