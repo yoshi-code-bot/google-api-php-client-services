@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_SourceCrowdingConfig extends Google_Model
+class Google_Service_ServiceControl_LogEntrySourceLocation extends Google_Model
 {
-  public $numResults;
-  public $numSuggestions;
+  public $file;
+  public $function;
+  public $line;
 
-  public function setNumResults($numResults)
+  public function setFile($file)
   {
-    $this->numResults = $numResults;
+    $this->file = $file;
   }
-  public function getNumResults()
+  public function getFile()
   {
-    return $this->numResults;
+    return $this->file;
   }
-  public function setNumSuggestions($numSuggestions)
+  public function setFunction($function)
   {
-    $this->numSuggestions = $numSuggestions;
+    $this->function = $function;
   }
-  public function getNumSuggestions()
+  public function getFunction()
   {
-    return $this->numSuggestions;
+    return $this->function;
+  }
+  public function setLine($line)
+  {
+    $this->line = $line;
+  }
+  public function getLine()
+  {
+    return $this->line;
   }
 }
