@@ -15,26 +15,24 @@
  * the License.
  */
 
-class Google_Service_SecurityCommandCenter_AuditLogConfig extends Google_Collection
+class Google_Service_Bigquery_CategoricalValue extends Google_Collection
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  protected $collection_key = 'categoryCounts';
+  protected $categoryCountsType = 'Google_Service_Bigquery_CategoryCount';
+  protected $categoryCountsDataType = 'array';
 
-  public function setExemptedMembers($exemptedMembers)
+  /**
+   * @param Google_Service_Bigquery_CategoryCount
+   */
+  public function setCategoryCounts($categoryCounts)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->categoryCounts = $categoryCounts;
   }
-  public function getExemptedMembers()
+  /**
+   * @return Google_Service_Bigquery_CategoryCount
+   */
+  public function getCategoryCounts()
   {
-    return $this->exemptedMembers;
-  }
-  public function setLogType($logType)
-  {
-    $this->logType = $logType;
-  }
-  public function getLogType()
-  {
-    return $this->logType;
+    return $this->categoryCounts;
   }
 }
