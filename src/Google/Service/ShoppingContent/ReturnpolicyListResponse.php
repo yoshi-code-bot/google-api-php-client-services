@@ -15,33 +15,33 @@
  * the License.
  */
 
-class Google_Service_Vision_BatchAnnotateImagesRequest extends Google_Collection
+class Google_Service_ShoppingContent_ReturnpolicyListResponse extends Google_Collection
 {
-  protected $collection_key = 'requests';
-  public $parent;
-  protected $requestsType = 'Google_Service_Vision_AnnotateImageRequest';
-  protected $requestsDataType = 'array';
+  protected $collection_key = 'resources';
+  public $kind;
+  protected $resourcesType = 'Google_Service_ShoppingContent_ReturnPolicy';
+  protected $resourcesDataType = 'array';
 
-  public function setParent($parent)
+  public function setKind($kind)
   {
-    $this->parent = $parent;
+    $this->kind = $kind;
   }
-  public function getParent()
+  public function getKind()
   {
-    return $this->parent;
-  }
-  /**
-   * @param Google_Service_Vision_AnnotateImageRequest
-   */
-  public function setRequests($requests)
-  {
-    $this->requests = $requests;
+    return $this->kind;
   }
   /**
-   * @return Google_Service_Vision_AnnotateImageRequest
+   * @param Google_Service_ShoppingContent_ReturnPolicy
    */
-  public function getRequests()
+  public function setResources($resources)
   {
-    return $this->requests;
+    $this->resources = $resources;
+  }
+  /**
+   * @return Google_Service_ShoppingContent_ReturnPolicy
+   */
+  public function getResources()
+  {
+    return $this->resources;
   }
 }

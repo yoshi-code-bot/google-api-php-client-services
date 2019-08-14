@@ -43,6 +43,10 @@ class Google_Service_Vision extends Google_Service
   public $images;
   public $locations_operations;
   public $operations;
+  public $projects_files;
+  public $projects_images;
+  public $projects_locations_files;
+  public $projects_locations_images;
   public $projects_locations_operations;
   public $projects_locations_productSets;
   public $projects_locations_productSets_products;
@@ -177,6 +181,126 @@ class Google_Service_Vision extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_files = new Google_Service_Vision_Resource_ProjectsFiles(
+        $this,
+        $this->serviceName,
+        'files',
+        array(
+          'methods' => array(
+            'annotate' => array(
+              'path' => 'v1/{+parent}/files:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'asyncBatchAnnotate' => array(
+              'path' => 'v1/{+parent}/files:asyncBatchAnnotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_images = new Google_Service_Vision_Resource_ProjectsImages(
+        $this,
+        $this->serviceName,
+        'images',
+        array(
+          'methods' => array(
+            'annotate' => array(
+              'path' => 'v1/{+parent}/images:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'asyncBatchAnnotate' => array(
+              'path' => 'v1/{+parent}/images:asyncBatchAnnotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_files = new Google_Service_Vision_Resource_ProjectsLocationsFiles(
+        $this,
+        $this->serviceName,
+        'files',
+        array(
+          'methods' => array(
+            'annotate' => array(
+              'path' => 'v1/{+parent}/files:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'asyncBatchAnnotate' => array(
+              'path' => 'v1/{+parent}/files:asyncBatchAnnotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_images = new Google_Service_Vision_Resource_ProjectsLocationsImages(
+        $this,
+        $this->serviceName,
+        'images',
+        array(
+          'methods' => array(
+            'annotate' => array(
+              'path' => 'v1/{+parent}/images:annotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'asyncBatchAnnotate' => array(
+              'path' => 'v1/{+parent}/images:asyncBatchAnnotate',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
@@ -324,13 +448,13 @@ class Google_Service_Vision extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),

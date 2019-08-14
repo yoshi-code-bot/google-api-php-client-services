@@ -15,26 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudAsset_AuditLogConfig extends Google_Collection
+class Google_Service_ShoppingContent_ReturnPolicyPolicy extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $lastReturnDate;
+  public $numberOfDays;
+  public $type;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setLastReturnDate($lastReturnDate)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->lastReturnDate = $lastReturnDate;
   }
-  public function getExemptedMembers()
+  public function getLastReturnDate()
   {
-    return $this->exemptedMembers;
+    return $this->lastReturnDate;
   }
-  public function setLogType($logType)
+  public function setNumberOfDays($numberOfDays)
   {
-    $this->logType = $logType;
+    $this->numberOfDays = $numberOfDays;
   }
-  public function getLogType()
+  public function getNumberOfDays()
   {
-    return $this->logType;
+    return $this->numberOfDays;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }

@@ -15,26 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudAsset_AuditLogConfig extends Google_Collection
+class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RequestLoggingConfig extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $bigqueryTableName;
+  public $samplingPercentage;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setBigqueryTableName($bigqueryTableName)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->bigqueryTableName = $bigqueryTableName;
   }
-  public function getExemptedMembers()
+  public function getBigqueryTableName()
   {
-    return $this->exemptedMembers;
+    return $this->bigqueryTableName;
   }
-  public function setLogType($logType)
+  public function setSamplingPercentage($samplingPercentage)
   {
-    $this->logType = $logType;
+    $this->samplingPercentage = $samplingPercentage;
   }
-  public function getLogType()
+  public function getSamplingPercentage()
   {
-    return $this->logType;
+    return $this->samplingPercentage;
   }
 }
