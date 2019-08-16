@@ -75,7 +75,8 @@ class Google_Service_Directory_Resource_Groups extends Google_Service_Resource
    * @opt_param string domain Name of the domain. Fill this field to get groups
    * from only this domain. To return all groups in a multi-domain fill customer
    * field instead.
-   * @opt_param int maxResults Maximum number of results to return.
+   * @opt_param int maxResults Maximum number of results to return. Max allowed
+   * value is 200.
    * @opt_param string orderBy Column to use for sorting results
    * @opt_param string pageToken Token to specify next page in the list
    * @opt_param string query Query string search. Should be of the form "".

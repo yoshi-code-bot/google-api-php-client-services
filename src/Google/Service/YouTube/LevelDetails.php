@@ -15,26 +15,16 @@
  * the License.
  */
 
-class Google_Service_ContainerAnalysis_AuditLogConfig extends Google_Collection
+class Google_Service_YouTube_LevelDetails extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $displayName;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setDisplayName($displayName)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->displayName = $displayName;
   }
-  public function getExemptedMembers()
+  public function getDisplayName()
   {
-    return $this->exemptedMembers;
-  }
-  public function setLogType($logType)
-  {
-    $this->logType = $logType;
-  }
-  public function getLogType()
-  {
-    return $this->logType;
+    return $this->displayName;
   }
 }

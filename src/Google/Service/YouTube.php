@@ -65,6 +65,8 @@ class Google_Service_YouTube extends Google_Service
   public $liveChatMessages;
   public $liveChatModerators;
   public $liveStreams;
+  public $members;
+  public $membershipsLevels;
   public $playlistItems;
   public $playlists;
   public $search;
@@ -1153,6 +1155,62 @@ class Google_Service_YouTube extends Google_Service
                 'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->members = new Google_Service_YouTube_Resource_Members(
+        $this,
+        $this->serviceName,
+        'members',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'members',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'part' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'hasAccessToLevel' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'mode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->membershipsLevels = new Google_Service_YouTube_Resource_MembershipsLevels(
+        $this,
+        $this->serviceName,
+        'membershipsLevels',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'membershipsLevels',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'part' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
