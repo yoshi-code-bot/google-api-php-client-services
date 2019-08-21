@@ -15,26 +15,43 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_AuditLogConfig extends Google_Collection
+class Google_Service_FirebaseCloudMessaging_Color extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $alpha;
+  public $blue;
+  public $green;
+  public $red;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setAlpha($alpha)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->alpha = $alpha;
   }
-  public function getExemptedMembers()
+  public function getAlpha()
   {
-    return $this->exemptedMembers;
+    return $this->alpha;
   }
-  public function setLogType($logType)
+  public function setBlue($blue)
   {
-    $this->logType = $logType;
+    $this->blue = $blue;
   }
-  public function getLogType()
+  public function getBlue()
   {
-    return $this->logType;
+    return $this->blue;
+  }
+  public function setGreen($green)
+  {
+    $this->green = $green;
+  }
+  public function getGreen()
+  {
+    return $this->green;
+  }
+  public function setRed($red)
+  {
+    $this->red = $red;
+  }
+  public function getRed()
+  {
+    return $this->red;
   }
 }
