@@ -15,23 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudTasks_GetIamPolicyRequest extends Google_Model
+class Google_Service_BigQueryReservation_BigqueryreservationEmpty extends Google_Model
 {
-  protected $optionsType = 'Google_Service_CloudTasks_GetPolicyOptions';
-  protected $optionsDataType = '';
-
-  /**
-   * @param Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_CloudTasks_GetPolicyOptions $options)
-  {
-    $this->options = $options;
-  }
-  /**
-   * @return Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function getOptions()
-  {
-    return $this->options;
-  }
 }

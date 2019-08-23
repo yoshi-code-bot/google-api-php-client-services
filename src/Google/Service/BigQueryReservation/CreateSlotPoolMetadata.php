@@ -15,23 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudTasks_GetIamPolicyRequest extends Google_Model
+class Google_Service_BigQueryReservation_CreateSlotPoolMetadata extends Google_Model
 {
-  protected $optionsType = 'Google_Service_CloudTasks_GetPolicyOptions';
-  protected $optionsDataType = '';
+  public $slotPool;
 
-  /**
-   * @param Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_CloudTasks_GetPolicyOptions $options)
+  public function setSlotPool($slotPool)
   {
-    $this->options = $options;
+    $this->slotPool = $slotPool;
   }
-  /**
-   * @return Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function getOptions()
+  public function getSlotPool()
   {
-    return $this->options;
+    return $this->slotPool;
   }
 }

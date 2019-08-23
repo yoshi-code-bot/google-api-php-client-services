@@ -15,23 +15,35 @@
  * the License.
  */
 
-class Google_Service_CloudTasks_GetIamPolicyRequest extends Google_Model
+class Google_Service_BigQueryReservation_Status extends Google_Collection
 {
-  protected $optionsType = 'Google_Service_CloudTasks_GetPolicyOptions';
-  protected $optionsDataType = '';
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  /**
-   * @param Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_CloudTasks_GetPolicyOptions $options)
+  public function setCode($code)
   {
-    $this->options = $options;
+    $this->code = $code;
   }
-  /**
-   * @return Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function getOptions()
+  public function getCode()
   {
-    return $this->options;
+    return $this->code;
+  }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
 }

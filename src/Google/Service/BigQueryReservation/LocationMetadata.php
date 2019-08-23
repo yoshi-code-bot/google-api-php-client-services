@@ -15,23 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudTasks_GetIamPolicyRequest extends Google_Model
+class Google_Service_BigQueryReservation_LocationMetadata extends Google_Model
 {
-  protected $optionsType = 'Google_Service_CloudTasks_GetPolicyOptions';
-  protected $optionsDataType = '';
+  public $legacyLocationId;
 
-  /**
-   * @param Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_CloudTasks_GetPolicyOptions $options)
+  public function setLegacyLocationId($legacyLocationId)
   {
-    $this->options = $options;
+    $this->legacyLocationId = $legacyLocationId;
   }
-  /**
-   * @return Google_Service_CloudTasks_GetPolicyOptions
-   */
-  public function getOptions()
+  public function getLegacyLocationId()
   {
-    return $this->options;
+    return $this->legacyLocationId;
   }
 }
