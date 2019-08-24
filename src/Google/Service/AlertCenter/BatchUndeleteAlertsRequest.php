@@ -15,23 +15,26 @@
  * the License.
  */
 
-class Google_Service_ContainerAnalysis_SetIamPolicyRequest extends Google_Model
+class Google_Service_AlertCenter_BatchUndeleteAlertsRequest extends Google_Collection
 {
-  protected $policyType = 'Google_Service_ContainerAnalysis_Policy';
-  protected $policyDataType = '';
+  protected $collection_key = 'alertId';
+  public $alertId;
+  public $customerId;
 
-  /**
-   * @param Google_Service_ContainerAnalysis_Policy
-   */
-  public function setPolicy(Google_Service_ContainerAnalysis_Policy $policy)
+  public function setAlertId($alertId)
   {
-    $this->policy = $policy;
+    $this->alertId = $alertId;
   }
-  /**
-   * @return Google_Service_ContainerAnalysis_Policy
-   */
-  public function getPolicy()
+  public function getAlertId()
   {
-    return $this->policy;
+    return $this->alertId;
+  }
+  public function setCustomerId($customerId)
+  {
+    $this->customerId = $customerId;
+  }
+  public function getCustomerId()
+  {
+    return $this->customerId;
   }
 }

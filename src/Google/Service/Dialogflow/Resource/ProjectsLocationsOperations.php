@@ -23,7 +23,7 @@
  *   $operations = $dialogflowService->operations;
  *  </code>
  */
-class Google_Service_Dialogflow_Resource_ProjectsOperations extends Google_Service_Resource
+class Google_Service_Dialogflow_Resource_ProjectsLocationsOperations extends Google_Service_Resource
 {
   /**
    * Gets the latest state of a long-running operation.  Clients can use this
@@ -50,7 +50,8 @@ class Google_Service_Dialogflow_Resource_ProjectsOperations extends Google_Servi
    * `"/v1/{name=users}/operations"` to their service configuration. For backwards
    * compatibility, the default name includes the operations collection id,
    * however overriding users must ensure the name binding is the parent resource,
-   * without the operations collection id. (operations.listProjectsOperations)
+   * without the operations collection id.
+   * (operations.listProjectsLocationsOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
@@ -60,7 +61,7 @@ class Google_Service_Dialogflow_Resource_ProjectsOperations extends Google_Servi
    * @opt_param string filter The standard list filter.
    * @return Google_Service_Dialogflow_GoogleLongrunningListOperationsResponse
    */
-  public function listProjectsOperations($name, $optParams = array())
+  public function listProjectsLocationsOperations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);

@@ -15,23 +15,14 @@
  * the License.
  */
 
-class Google_Service_ContainerAnalysis_SetIamPolicyRequest extends Google_Model
+/**
+ * The "locations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $dialogflowService = new Google_Service_Dialogflow(...);
+ *   $locations = $dialogflowService->locations;
+ *  </code>
+ */
+class Google_Service_Dialogflow_Resource_ProjectsLocations extends Google_Service_Resource
 {
-  protected $policyType = 'Google_Service_ContainerAnalysis_Policy';
-  protected $policyDataType = '';
-
-  /**
-   * @param Google_Service_ContainerAnalysis_Policy
-   */
-  public function setPolicy(Google_Service_ContainerAnalysis_Policy $policy)
-  {
-    $this->policy = $policy;
-  }
-  /**
-   * @return Google_Service_ContainerAnalysis_Policy
-   */
-  public function getPolicy()
-  {
-    return $this->policy;
-  }
 }

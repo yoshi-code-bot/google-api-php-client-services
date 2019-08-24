@@ -15,26 +15,35 @@
  * the License.
  */
 
-class Google_Service_ContainerAnalysis_AuditLogConfig extends Google_Collection
+class Google_Service_AlertCenter_Status extends Google_Collection
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setCode($code)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->code = $code;
   }
-  public function getExemptedMembers()
+  public function getCode()
   {
-    return $this->exemptedMembers;
+    return $this->code;
   }
-  public function setLogType($logType)
+  public function setDetails($details)
   {
-    $this->logType = $logType;
+    $this->details = $details;
   }
-  public function getLogType()
+  public function getDetails()
   {
-    return $this->logType;
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
 }
