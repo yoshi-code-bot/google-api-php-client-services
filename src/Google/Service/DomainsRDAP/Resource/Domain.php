@@ -16,26 +16,26 @@
  */
 
 /**
- * The "violatingSites" collection of methods.
+ * The "domain" collection of methods.
  * Typical usage is:
  *  <code>
- *   $abusiveexperiencereportService = new Google_Service_AbusiveExperienceReport(...);
- *   $violatingSites = $abusiveexperiencereportService->violatingSites;
+ *   $domainsrdapService = new Google_Service_DomainsRDAP(...);
+ *   $domain = $domainsrdapService->domain;
  *  </code>
  */
-class Google_Service_AbusiveExperienceReport_Resource_ViolatingSites extends Google_Service_Resource
+class Google_Service_DomainsRDAP_Resource_Domain extends Google_Service_Resource
 {
   /**
-   * Lists sites with failing Abusive Experience Report statuses.
-   * (violatingSites.listViolatingSites)
+   * Look up RDAP information for a domain by name. (domain.get)
    *
+   * @param string $domainName Full domain name to look up. Example: "example.com"
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AbusiveExperienceReport_ViolatingSitesResponse
+   * @return Google_Service_DomainsRDAP_HttpBody
    */
-  public function listViolatingSites($optParams = array())
+  public function get($domainName, $optParams = array())
   {
-    $params = array();
+    $params = array('domainName' => $domainName);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AbusiveExperienceReport_ViolatingSitesResponse");
+    return $this->call('get', array($params), "Google_Service_DomainsRDAP_HttpBody");
   }
 }

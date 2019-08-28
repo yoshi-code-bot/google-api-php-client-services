@@ -15,25 +15,35 @@
  * the License.
  */
 
-class Google_Service_Dataflow_SnapshotJobRequest extends Google_Model
+class Google_Service_DomainsRDAP_HttpBody extends Google_Collection
 {
-  public $location;
-  public $ttl;
+  protected $collection_key = 'extensions';
+  public $contentType;
+  public $data;
+  public $extensions;
 
-  public function setLocation($location)
+  public function setContentType($contentType)
   {
-    $this->location = $location;
+    $this->contentType = $contentType;
   }
-  public function getLocation()
+  public function getContentType()
   {
-    return $this->location;
+    return $this->contentType;
   }
-  public function setTtl($ttl)
+  public function setData($data)
   {
-    $this->ttl = $ttl;
+    $this->data = $data;
   }
-  public function getTtl()
+  public function getData()
   {
-    return $this->ttl;
+    return $this->data;
+  }
+  public function setExtensions($extensions)
+  {
+    $this->extensions = $extensions;
+  }
+  public function getExtensions()
+  {
+    return $this->extensions;
   }
 }

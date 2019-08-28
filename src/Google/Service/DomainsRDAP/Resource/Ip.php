@@ -16,26 +16,28 @@
  */
 
 /**
- * The "violatingSites" collection of methods.
+ * The "ip" collection of methods.
  * Typical usage is:
  *  <code>
- *   $abusiveexperiencereportService = new Google_Service_AbusiveExperienceReport(...);
- *   $violatingSites = $abusiveexperiencereportService->violatingSites;
+ *   $domainsrdapService = new Google_Service_DomainsRDAP(...);
+ *   $ip = $domainsrdapService->ip;
  *  </code>
  */
-class Google_Service_AbusiveExperienceReport_Resource_ViolatingSites extends Google_Service_Resource
+class Google_Service_DomainsRDAP_Resource_Ip extends Google_Service_Resource
 {
   /**
-   * Lists sites with failing Abusive Experience Report statuses.
-   * (violatingSites.listViolatingSites)
+   * The RDAP API recognizes this command from the RDAP specification but does not
+   * support it. The response is a formatted 501 error. (ip.get)
    *
+   * @param string $ipId
+   * @param string $ipId1
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AbusiveExperienceReport_ViolatingSitesResponse
+   * @return Google_Service_DomainsRDAP_RdapResponse
    */
-  public function listViolatingSites($optParams = array())
+  public function get($ipId, $ipId1, $optParams = array())
   {
-    $params = array();
+    $params = array('ipId' => $ipId, 'ipId1' => $ipId1);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AbusiveExperienceReport_ViolatingSitesResponse");
+    return $this->call('get', array($params), "Google_Service_DomainsRDAP_RdapResponse");
   }
 }
