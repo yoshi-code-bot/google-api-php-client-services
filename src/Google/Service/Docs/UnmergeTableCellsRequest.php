@@ -15,23 +15,23 @@
  * the License.
  */
 
-class Google_Service_BigtableAdmin_GetIamPolicyRequest extends Google_Model
+class Google_Service_Docs_UnmergeTableCellsRequest extends Google_Model
 {
-  protected $optionsType = 'Google_Service_BigtableAdmin_GetPolicyOptions';
-  protected $optionsDataType = '';
+  protected $tableRangeType = 'Google_Service_Docs_TableRange';
+  protected $tableRangeDataType = '';
 
   /**
-   * @param Google_Service_BigtableAdmin_GetPolicyOptions
+   * @param Google_Service_Docs_TableRange
    */
-  public function setOptions(Google_Service_BigtableAdmin_GetPolicyOptions $options)
+  public function setTableRange(Google_Service_Docs_TableRange $tableRange)
   {
-    $this->options = $options;
+    $this->tableRange = $tableRange;
   }
   /**
-   * @return Google_Service_BigtableAdmin_GetPolicyOptions
+   * @return Google_Service_Docs_TableRange
    */
-  public function getOptions()
+  public function getTableRange()
   {
-    return $this->options;
+    return $this->tableRange;
   }
 }
