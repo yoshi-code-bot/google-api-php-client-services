@@ -15,24 +15,16 @@
  * the License.
  */
 
-class Google_Service_Monitoring_ValidateUptimeCheckConfigResponse extends Google_Collection
+class Google_Service_Compute_DisplayDevice extends Google_Model
 {
-  protected $collection_key = 'uptimeCheckResults';
-  protected $uptimeCheckResultsType = 'Google_Service_Monitoring_UptimeCheckResult';
-  protected $uptimeCheckResultsDataType = 'array';
+  public $enableDisplay;
 
-  /**
-   * @param Google_Service_Monitoring_UptimeCheckResult
-   */
-  public function setUptimeCheckResults($uptimeCheckResults)
+  public function setEnableDisplay($enableDisplay)
   {
-    $this->uptimeCheckResults = $uptimeCheckResults;
+    $this->enableDisplay = $enableDisplay;
   }
-  /**
-   * @return Google_Service_Monitoring_UptimeCheckResult
-   */
-  public function getUptimeCheckResults()
+  public function getEnableDisplay()
   {
-    return $this->uptimeCheckResults;
+    return $this->enableDisplay;
   }
 }

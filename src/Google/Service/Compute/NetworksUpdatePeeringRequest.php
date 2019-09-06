@@ -15,14 +15,23 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $monitoringService = new Google_Service_Monitoring(...);
- *   $projects = $monitoringService->projects;
- *  </code>
- */
-class Google_Service_Monitoring_Resource_Projects extends Google_Service_Resource
+class Google_Service_Compute_NetworksUpdatePeeringRequest extends Google_Model
 {
+  protected $networkPeeringType = 'Google_Service_Compute_NetworkPeering';
+  protected $networkPeeringDataType = '';
+
+  /**
+   * @param Google_Service_Compute_NetworkPeering
+   */
+  public function setNetworkPeering(Google_Service_Compute_NetworkPeering $networkPeering)
+  {
+    $this->networkPeering = $networkPeering;
+  }
+  /**
+   * @return Google_Service_Compute_NetworkPeering
+   */
+  public function getNetworkPeering()
+  {
+    return $this->networkPeering;
+  }
 }

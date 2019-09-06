@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $monitoringService = new Google_Service_Monitoring(...);
- *   $projects = $monitoringService->projects;
- *  </code>
- */
-class Google_Service_Monitoring_Resource_Projects extends Google_Service_Resource
+class Google_Service_Compute_ExternalVpnGatewayInterface extends Google_Model
 {
+  public $id;
+  public $ipAddress;
+
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  public function getId()
+  {
+    return $this->id;
+  }
+  public function setIpAddress($ipAddress)
+  {
+    $this->ipAddress = $ipAddress;
+  }
+  public function getIpAddress()
+  {
+    return $this->ipAddress;
+  }
 }

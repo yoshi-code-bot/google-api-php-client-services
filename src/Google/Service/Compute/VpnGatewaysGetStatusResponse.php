@@ -15,14 +15,23 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $monitoringService = new Google_Service_Monitoring(...);
- *   $projects = $monitoringService->projects;
- *  </code>
- */
-class Google_Service_Monitoring_Resource_Projects extends Google_Service_Resource
+class Google_Service_Compute_VpnGatewaysGetStatusResponse extends Google_Model
 {
+  protected $resultType = 'Google_Service_Compute_VpnGatewayStatus';
+  protected $resultDataType = '';
+
+  /**
+   * @param Google_Service_Compute_VpnGatewayStatus
+   */
+  public function setResult(Google_Service_Compute_VpnGatewayStatus $result)
+  {
+    $this->result = $result;
+  }
+  /**
+   * @return Google_Service_Compute_VpnGatewayStatus
+   */
+  public function getResult()
+  {
+    return $this->result;
+  }
 }

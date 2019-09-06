@@ -16,17 +16,17 @@
  */
 
 /**
- * The "reservations" collection of methods.
+ * The "vpnGateways" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google_Service_Compute(...);
- *   $reservations = $computeService->reservations;
+ *   $vpnGateways = $computeService->vpnGateways;
  *  </code>
  */
-class Google_Service_Compute_Resource_Reservations extends Google_Service_Resource
+class Google_Service_Compute_Resource_VpnGateways extends Google_Service_Resource
 {
   /**
-   * Retrieves an aggregated list of reservations. (reservations.aggregatedList)
+   * Retrieves an aggregated list of VPN gateways. (vpnGateways.aggregatedList)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -69,20 +69,20 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_ReservationAggregatedList
+   * @return Google_Service_Compute_VpnGatewayAggregatedList
    */
   public function aggregatedList($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_ReservationAggregatedList");
+    return $this->call('aggregatedList', array($params), "Google_Service_Compute_VpnGatewayAggregatedList");
   }
   /**
-   * Deletes the specified reservation. (reservations.delete)
+   * Deletes the specified VPN gateway. (vpnGateways.delete)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $reservation Name of the reservation to delete.
+   * @param string $region Name of the region for this request.
+   * @param string $vpnGateway Name of the VPN gateway to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -99,50 +99,50 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
    * supported (00000000-0000-0000-0000-000000000000).
    * @return Google_Service_Compute_Operation
    */
-  public function delete($project, $zone, $reservation, $optParams = array())
+  public function delete($project, $region, $vpnGateway, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'reservation' => $reservation);
+    $params = array('project' => $project, 'region' => $region, 'vpnGateway' => $vpnGateway);
     $params = array_merge($params, $optParams);
     return $this->call('delete', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Retrieves information about the specified reservation. (reservations.get)
+   * Returns the specified VPN gateway. Gets a list of available VPN gateways by
+   * making a list() request. (vpnGateways.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $reservation Name of the reservation to retrieve.
+   * @param string $region Name of the region for this request.
+   * @param string $vpnGateway Name of the VPN gateway to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Reservation
+   * @return Google_Service_Compute_VpnGateway
    */
-  public function get($project, $zone, $reservation, $optParams = array())
+  public function get($project, $region, $vpnGateway, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'reservation' => $reservation);
+    $params = array('project' => $project, 'region' => $region, 'vpnGateway' => $vpnGateway);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Reservation");
+    return $this->call('get', array($params), "Google_Service_Compute_VpnGateway");
   }
   /**
-   * Gets the access control policy for a resource. May be empty if no such policy
-   * or resource exists. (reservations.getIamPolicy)
+   * Returns the status for the specified VPN gateway. (vpnGateways.getStatus)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param string $resource Name or id of the resource for this request.
+   * @param string $region Name of the region for this request.
+   * @param string $vpnGateway Name of the VPN gateway to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Policy
+   * @return Google_Service_Compute_VpnGatewaysGetStatusResponse
    */
-  public function getIamPolicy($project, $zone, $resource, $optParams = array())
+  public function getStatus($project, $region, $vpnGateway, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'resource' => $resource);
+    $params = array('project' => $project, 'region' => $region, 'vpnGateway' => $vpnGateway);
     $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', array($params), "Google_Service_Compute_Policy");
+    return $this->call('getStatus', array($params), "Google_Service_Compute_VpnGatewaysGetStatusResponse");
   }
   /**
-   * Creates a new reservation. For more information, read Reserving zonal
-   * resources. (reservations.insert)
+   * Creates a VPN gateway in the specified project and region using the data
+   * included in the request. (vpnGateways.insert)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param Google_Service_Compute_Reservation $postBody
+   * @param string $region Name of the region for this request.
+   * @param Google_Service_Compute_VpnGateway $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -159,18 +159,18 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
    * supported (00000000-0000-0000-0000-000000000000).
    * @return Google_Service_Compute_Operation
    */
-  public function insert($project, $zone, Google_Service_Compute_Reservation $postBody, $optParams = array())
+  public function insert($project, $region, Google_Service_Compute_VpnGateway $postBody, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
+    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('insert', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * A list of all the reservations that have been configured for the specified
-   * project in specified zone. (reservations.listReservations)
+   * Retrieves a list of VPN gateways available to the specified project and
+   * region. (vpnGateways.listVpnGateways)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
+   * @param string $region Name of the region for this request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -211,22 +211,22 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_ReservationList
+   * @return Google_Service_Compute_VpnGatewayList
    */
-  public function listReservations($project, $zone, $optParams = array())
+  public function listVpnGateways($project, $region, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone);
+    $params = array('project' => $project, 'region' => $region);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_ReservationList");
+    return $this->call('list', array($params), "Google_Service_Compute_VpnGatewayList");
   }
   /**
-   * Resizes the reservation (applicable to standalone reservations only). For
-   * more information, read Modifying reservations. (reservations.resize)
+   * Sets the labels on a VpnGateway. To learn more about labels, read the
+   * Labeling Resources documentation. (vpnGateways.setLabels)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $reservation Name of the reservation to update.
-   * @param Google_Service_Compute_ReservationsResizeRequest $postBody
+   * @param string $region The region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param Google_Service_Compute_RegionSetLabelsRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -243,43 +243,26 @@ class Google_Service_Compute_Resource_Reservations extends Google_Service_Resour
    * supported (00000000-0000-0000-0000-000000000000).
    * @return Google_Service_Compute_Operation
    */
-  public function resize($project, $zone, $reservation, Google_Service_Compute_ReservationsResizeRequest $postBody, $optParams = array())
+  public function setLabels($project, $region, $resource, Google_Service_Compute_RegionSetLabelsRequest $postBody, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'reservation' => $reservation, 'postBody' => $postBody);
+    $params = array('project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('resize', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (reservations.setIamPolicy)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param Google_Service_Compute_ZoneSetPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Policy
-   */
-  public function setIamPolicy($project, $zone, $resource, Google_Service_Compute_ZoneSetPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_Compute_Policy");
+    return $this->call('setLabels', array($params), "Google_Service_Compute_Operation");
   }
   /**
    * Returns permissions that a caller has on the specified resource.
-   * (reservations.testIamPermissions)
+   * (vpnGateways.testIamPermissions)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
+   * @param string $region The name of the region for this request.
    * @param string $resource Name or id of the resource for this request.
    * @param Google_Service_Compute_TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_TestPermissionsResponse
    */
-  public function testIamPermissions($project, $zone, $resource, Google_Service_Compute_TestPermissionsRequest $postBody, $optParams = array())
+  public function testIamPermissions($project, $region, $resource, Google_Service_Compute_TestPermissionsRequest $postBody, $optParams = array())
   {
-    $params = array('project' => $project, 'zone' => $zone, 'resource' => $resource, 'postBody' => $postBody);
+    $params = array('project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', array($params), "Google_Service_Compute_TestPermissionsResponse");
   }
