@@ -15,17 +15,34 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_TestIamPermissionsRequest extends Google_Collection
+class Google_Service_BigQueryConnectionService_CloudSqlProperties extends Google_Model
 {
-  protected $collection_key = 'permissions';
-  public $permissions;
+  public $database;
+  public $instanceId;
+  public $type;
 
-  public function setPermissions($permissions)
+  public function setDatabase($database)
   {
-    $this->permissions = $permissions;
+    $this->database = $database;
   }
-  public function getPermissions()
+  public function getDatabase()
   {
-    return $this->permissions;
+    return $this->database;
+  }
+  public function setInstanceId($instanceId)
+  {
+    $this->instanceId = $instanceId;
+  }
+  public function getInstanceId()
+  {
+    return $this->instanceId;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }

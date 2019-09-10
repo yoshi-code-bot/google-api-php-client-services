@@ -30,9 +30,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * search criteria specified as query parameters, grouped by `Observation.code`,
    * sorted from most recent to oldest.
    *
-   * Implements the FHIR extended operation [Observation-
-   * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-
-   * operations.html#lastn).
+   * Implements the FHIR extended operation Observation-lastn
+   * ([STU3](http://hl7.org/implement/standards/fhir/STU3/observation-
+   * operations.html#lastn)).
+   *
+   * DSTU2 doesn't define the Observation-lastn method, but the server supports it
+   * the same way it supports STU3.
    *
    * Search terms are provided as query parameters following the same pattern as
    * the search method. This operation accepts an additional query parameter
@@ -60,9 +63,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * Retrieves all the resources directly referenced by a patient, as well as all
    * of the resources in the patient compartment.
    *
-   * Implements the FHIR extended operation [Patient-
-   * everything](http://hl7.org/implement/standards/fhir/STU3/patient-
-   * operations.html#everything).
+   * Implements the FHIR extended operation Patient-everything
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-
+   * operations.html#everything),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/patient-
+   * operations.html#everything)).
    *
    * On success, the response body will contain a JSON-encoded representation of a
    * `Bundle` resource of type `searchset`, containing the results of the
@@ -75,13 +80,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string start The response includes records subsequent to the start
-   * date. If no start date is provided, all records prior to the end date are in
-   * scope.
-   * @opt_param string end The response includes records prior to the end date. If
-   * no end date is provided, all records subsequent to the start date are in
-   * scope.
-   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @opt_param string pageToken Used to retrieve the next or previous page of
    * results when using pagination. Value should be set to the value of page_token
    * set in next or previous page links' url. Next and previous page are returned
@@ -89,6 +87,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * "next".
    *
    * Omit `page_token` if no previous request has been made.
+   * @opt_param string start The response includes records subsequent to the start
+   * date. If no start date is provided, all records prior to the end date are in
+   * scope.
+   * @opt_param string end The response includes records prior to the end date. If
+   * no end date is provided, all records subsequent to the start date are in
+   * scope.
+   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function PatientEverything($name, $optParams = array())
@@ -115,12 +120,16 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
     return $this->call('Resource-purge', array($params), "Google_Service_CloudHealthcare_HealthcareEmpty");
   }
   /**
-   * Gets the FHIR [capability statement](http://hl7.org/implement/standards/fhir/
-   * STU3/capabilitystatement.html) for the store, which contains a description of
-   * functionality supported by the server.
+   * Gets the FHIR capability statement ([STU3](http://hl7.org/implement/standards
+   * /fhir/STU3/capabilitystatement.html)), or the [conformance
+   * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in
+   * the DSTU2 case for the store, which contains a description of functionality
+   * supported by the server.
    *
-   * Implements the FHIR standard [capabilities interaction](http://hl7.org/implem
-   * ent/standards/fhir/STU3/http.html#capabilities).
+   * Implements the FHIR standard capabilities interaction ([STU3](http://hl7.org/
+   * implement/standards/fhir/STU3/http.html#capabilities)), or the [conformance i
+   * nteraction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conforman
+   * ce) in the DSTU2 case.
    *
    * On success, the response body will contain a JSON-encoded representation of a
    * `CapabilityStatement` resource. (fhir.capabilities)
@@ -138,9 +147,10 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Deletes FHIR resources that match a search query.
    *
-   * Implements the FHIR standard [conditional delete interaction](http://hl7.org/
-   * implement/standards/fhir/STU3/http.html#2.21.0.13.1). If multiple resources
-   * match, all of them will be deleted.
+   * Implements the FHIR standard conditional delete interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1)).
+   * If multiple resources match, all of them will be deleted.
    *
    * Search terms are provided as query parameters following the same pattern as
    * the search method.
@@ -153,8 +163,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    *
    * @param string $parent The name of the FHIR store this resource belongs to.
    * @param string $type The FHIR resource type to delete, such as Patient or
-   * Observation. For a complete list, see the [FHIR Resource
-   * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+   * Observation. For a complete list, see the FHIR Resource Index
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HealthcareEmpty
    */
@@ -169,8 +180,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * parameters, updates part of that resource by applying the operations
    * specified in a [JSON Patch](http://jsonpatch.com/) document.
    *
-   * Implements the FHIR standard [conditional patch
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+   * Implements the FHIR standard conditional patch interaction
+   * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+   *
+   * DSTU2 doesn't define a conditional patch method, but the server supports it
+   * in the same way it supports STU3.
    *
    * Search terms are provided as query parameters following the same pattern as
    * the search method.
@@ -190,8 +204,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    *
    * @param string $parent The name of the FHIR store this resource belongs to.
    * @param string $type The FHIR resource type to update, such as Patient or
-   * Observation. For a complete list, see the [FHIR Resource
-   * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+   * Observation. For a complete list, see the FHIR Resource Index
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
    * @param Google_Service_CloudHealthcare_HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
@@ -206,9 +221,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * If a resource is found based on the search criteria specified in the query
    * parameters, updates the entire contents of that resource.
    *
-   * Implements the FHIR standard [conditional update
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-
-   * update).
+   * Implements the FHIR standard conditional update interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update)).
    *
    * Search terms are provided as query parameters following the same pattern as
    * the search method.
@@ -233,8 +248,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    *
    * @param string $parent The name of the FHIR store this resource belongs to.
    * @param string $type The FHIR resource type to update, such as Patient or
-   * Observation. For a complete list, see the [FHIR Resource
-   * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must
+   * Observation. For a complete list, see the FHIR Resource Index
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must
    * match the resource type in the provided content.
    * @param Google_Service_CloudHealthcare_HttpBody $postBody
    * @param array $optParams Optional parameters.
@@ -249,12 +265,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Creates a FHIR resource.
    *
-   * Implements the FHIR standard [create
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
-   * which creates a new resource with a server-assigned resource ID.
+   * Implements the FHIR standard create interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create)), which
+   * creates a new resource with a server-assigned resource ID.
    *
-   * Also supports the FHIR standard [conditional create
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
+   * Also supports the FHIR standard conditional create interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate)),
    * specified by supplying an `If-None-Exist` header containing a FHIR search
    * query. If no resources match this search query, the server processes the
    * create operation as normal.
@@ -271,8 +289,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    *
    * @param string $parent The name of the FHIR store this resource belongs to.
    * @param string $type The FHIR resource type to create, such as Patient or
-   * Observation. For a complete list, see the [FHIR Resource
-   * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must
+   * Observation. For a complete list, see the FHIR Resource Index
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must
    * match the resource type in the provided content.
    * @param Google_Service_CloudHealthcare_HttpBody $postBody
    * @param array $optParams Optional parameters.
@@ -287,8 +306,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Deletes a FHIR resource.
    *
-   * Implements the FHIR standard [delete
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#delete).
+   * Implements the FHIR standard delete interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete)).
    *
    * Note: Unless resource versioning is disabled by setting the
    * disable_resource_versioning flag on the FHIR store, the deleted resources
@@ -309,15 +329,18 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Executes all the requests in the given Bundle.
    *
-   * Implements the FHIR standard [batch/transaction interaction](http://hl7.org/i
-   * mplement/standards/fhir/STU3/http.html#transaction).
+   * Implements the FHIR standard batch/transaction interaction ([DSTU2](http://hl
+   * 7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction)).
    *
    * Supports all interactions within a bundle, except search. This method accepts
    * Bundles of type `batch` and `transaction`, processing them according to the
-   * [batch processing
-   * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1)
-   * and [transaction processing
-   * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2).
+   * batch processing rules
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1))
+   * and transaction processing rules
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2)).
    *
    * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the
    * request headers must contain `Content-Type: application/fhir+json`.
@@ -347,8 +370,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * Lists all the versions of a resource (including the current version and
    * deleted versions) from the FHIR store.
    *
-   * Implements the per-resource form of the FHIR standard [history
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#history).
+   * Implements the per-resource form of the FHIR standard history interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history)).
    *
    * On success, the response body will contain a JSON-encoded representation of a
    * `Bundle` resource of type `history`, containing the version history sorted
@@ -393,8 +417,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * Updates part of an existing resource by applying the operations specified in
    * a [JSON Patch](http://jsonpatch.com/) document.
    *
-   * Implements the FHIR standard [patch
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+   * Implements the FHIR standard patch interaction
+   * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+   *
+   * DSTU2 doesn't define a patch method, but the server supports it in the same
+   * way it supports STU3.
    *
    * The request body must contain a JSON Patch document, and the request headers
    * must contain `Content-Type: application/json-patch+json`.
@@ -420,11 +447,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Gets the contents of a FHIR resource.
    *
-   * Implements the FHIR standard [read
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#read).
+   * Implements the FHIR standard read interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read)).
    *
-   * Also supports the FHIR standard [conditional read
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cread)
+   * Also supports the FHIR standard conditional read interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread))
    * specified by supplying an `If-Modified-Since` header with a date/time value
    * or an `If-None-Match` header with an ETag value.
    *
@@ -448,10 +477,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * Searches for resources in the given FHIR store according to criteria
    * specified as query parameters.
    *
-   * Implements the FHIR standard [search
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#search)
-   * using the search semantics described in the [FHIR Search
-   * specification](http://hl7.org/implement/standards/fhir/STU3/search.html).
+   * Implements the FHIR standard search interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search)) using
+   * the search semantics described in the FHIR Search specification
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html)).
    *
    * Supports three methods of search defined by the specification:
    *
@@ -472,9 +503,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    *
    * The server's capability statement, retrieved through capabilities, indicates
    * what search parameters are supported on each FHIR resource. A list of all
-   * search parameters defined by the specification can be found in the [FHIR
-   * Search Parameter Registry](http://hl7.org/implement/standards/fhir/STU3
-   * /searchparameter-registry.html).
+   * search parameters defined by the specification can be found in the FHIR
+   * Search Parameter Registry
+   * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-
+   * registry.html)). FHIR search parameters for DSTU2 can be found on each
+   * resource's definition page.
    *
    * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`,
    * `:in`, `:not-in`, `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
@@ -508,8 +541,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
   /**
    * Updates the entire contents of a resource.
    *
-   * Implements the FHIR standard [update
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#update).
+   * Implements the FHIR standard update interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update)).
    *
    * If the specified resource does not exist and the FHIR store has
    * enable_update_create set, creates the resource with the client-specified ID.
@@ -541,8 +575,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * Gets the contents of a version (current or historical) of a FHIR resource by
    * version ID.
    *
-   * Implements the FHIR standard [vread
-   * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
+   * Implements the FHIR standard vread interaction
+   * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
    *
    * On success, the response body will contain a JSON-encoded representation of
    * the resource. Errors generated by the FHIR store will contain a JSON-encoded

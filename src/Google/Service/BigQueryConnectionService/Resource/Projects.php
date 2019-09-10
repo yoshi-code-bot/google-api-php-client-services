@@ -15,23 +15,14 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_SetIamPolicyRequest extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $bigqueryconnectionService = new Google_Service_BigQueryConnectionService(...);
+ *   $projects = $bigqueryconnectionService->projects;
+ *  </code>
+ */
+class Google_Service_BigQueryConnectionService_Resource_Projects extends Google_Service_Resource
 {
-  protected $policyType = 'Google_Service_BinaryAuthorization_IamPolicy';
-  protected $policyDataType = '';
-
-  /**
-   * @param Google_Service_BinaryAuthorization_IamPolicy
-   */
-  public function setPolicy(Google_Service_BinaryAuthorization_IamPolicy $policy)
-  {
-    $this->policy = $policy;
-  }
-  /**
-   * @return Google_Service_BinaryAuthorization_IamPolicy
-   */
-  public function getPolicy()
-  {
-    return $this->policy;
-  }
 }

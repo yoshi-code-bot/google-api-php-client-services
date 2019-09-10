@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_Expr extends Google_Model
+class Google_Service_BigQueryConnectionService_Expr extends Google_Model
 {
   public $description;
   public $expression;

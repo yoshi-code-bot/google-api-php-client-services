@@ -15,17 +15,25 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_TestIamPermissionsResponse extends Google_Collection
+class Google_Service_BigQueryConnectionService_CloudSqlCredential extends Google_Model
 {
-  protected $collection_key = 'permissions';
-  public $permissions;
+  public $password;
+  public $username;
 
-  public function setPermissions($permissions)
+  public function setPassword($password)
   {
-    $this->permissions = $permissions;
+    $this->password = $password;
   }
-  public function getPermissions()
+  public function getPassword()
   {
-    return $this->permissions;
+    return $this->password;
+  }
+  public function setUsername($username)
+  {
+    $this->username = $username;
+  }
+  public function getUsername()
+  {
+    return $this->username;
   }
 }

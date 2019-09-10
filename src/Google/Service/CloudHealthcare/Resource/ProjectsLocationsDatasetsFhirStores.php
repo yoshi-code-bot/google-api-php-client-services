@@ -26,12 +26,16 @@
 class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStores extends Google_Service_Resource
 {
   /**
-   * Gets the FHIR [capability statement](http://hl7.org/implement/standards/fhir/
-   * STU3/capabilitystatement.html) for the store, which contains a description of
-   * functionality supported by the server.
+   * Gets the FHIR capability statement ([STU3](http://hl7.org/implement/standards
+   * /fhir/STU3/capabilitystatement.html)), or the [conformance
+   * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in
+   * the DSTU2 case for the store, which contains a description of functionality
+   * supported by the server.
    *
-   * Implements the FHIR standard [capabilities interaction](http://hl7.org/implem
-   * ent/standards/fhir/STU3/http.html#capabilities).
+   * Implements the FHIR standard capabilities interaction ([STU3](http://hl7.org/
+   * implement/standards/fhir/STU3/http.html#capabilities)), or the [conformance i
+   * nteraction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conforman
+   * ce) in the DSTU2 case.
    *
    * On success, the response body will contain a JSON-encoded representation of a
    * `CapabilityStatement` resource. (fhirStores.capabilities)
@@ -83,10 +87,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * This method returns an Operation that can be used to track the status of the
    * export by calling GetOperation.
    *
-   * Immediate fatal errors appear in the error field. Otherwise, when the
-   * operation finishes, a detailed response of type ExportResourcesResponse is
-   * returned in the response field. The metadata field type for this operation is
-   * OperationMetadata. (fhirStores.export)
+   * Immediate fatal errors appear in the error field, errors are also logged to
+   * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
+   * logging)). Otherwise, when the operation finishes, a detailed response of
+   * type ExportResourcesResponse is returned in the response field. The metadata
+   * field type for this operation is OperationMetadata. (fhirStores.export)
    *
    * @param string $name The name of the FHIR store to export resource from. The
    * name should be in the format of `projects/{project_id}/locations/{location_id
@@ -197,10 +202,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * This method returns an Operation that can be used to track the status of the
    * import by calling GetOperation.
    *
-   * Immediate fatal errors appear in the error field. Otherwise, when the
-   * operation finishes, a detailed response of type ImportResourcesResponse is
-   * returned in the response field. The metadata field type for this operation is
-   * OperationMetadata. (fhirStores.import)
+   * Immediate fatal errors appear in the error field, errors are also logged to
+   * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
+   * logging)). Otherwise, when the operation finishes, a detailed response of
+   * type ImportResourcesResponse is returned in the response field. The metadata
+   * field type for this operation is OperationMetadata. (fhirStores.import)
    *
    * @param string $name The name of the FHIR store to import FHIR resources to.
    * The name should be in the format of `projects/{project_id}/locations/{locatio

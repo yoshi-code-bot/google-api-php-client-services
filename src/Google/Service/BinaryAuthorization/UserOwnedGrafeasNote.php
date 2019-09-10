@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_UserOwnedDrydockNote extends Google_Collection
+class Google_Service_BinaryAuthorization_UserOwnedGrafeasNote extends Google_Collection
 {
   protected $collection_key = 'publicKeys';
   public $delegationServiceAccountEmail;

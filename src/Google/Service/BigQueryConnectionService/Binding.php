@@ -15,23 +15,23 @@
  * the License.
  */
 
-class Google_Service_BinaryAuthorization_Binding extends Google_Collection
+class Google_Service_BigQueryConnectionService_Binding extends Google_Collection
 {
   protected $collection_key = 'members';
-  protected $conditionType = 'Google_Service_BinaryAuthorization_Expr';
+  protected $conditionType = 'Google_Service_BigQueryConnectionService_Expr';
   protected $conditionDataType = '';
   public $members;
   public $role;
 
   /**
-   * @param Google_Service_BinaryAuthorization_Expr
+   * @param Google_Service_BigQueryConnectionService_Expr
    */
-  public function setCondition(Google_Service_BinaryAuthorization_Expr $condition)
+  public function setCondition(Google_Service_BigQueryConnectionService_Expr $condition)
   {
     $this->condition = $condition;
   }
   /**
-   * @return Google_Service_BinaryAuthorization_Expr
+   * @return Google_Service_BigQueryConnectionService_Expr
    */
   public function getCondition()
   {

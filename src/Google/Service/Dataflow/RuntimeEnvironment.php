@@ -29,6 +29,7 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public $serviceAccountEmail;
   public $subnetwork;
   public $tempLocation;
+  public $usePrivateIps;
   public $zone;
 
   public function setAdditionalExperiments($additionalExperiments)
@@ -118,6 +119,14 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public function getTempLocation()
   {
     return $this->tempLocation;
+  }
+  public function setUsePrivateIps($usePrivateIps)
+  {
+    $this->usePrivateIps = $usePrivateIps;
+  }
+  public function getUsePrivateIps()
+  {
+    return $this->usePrivateIps;
   }
   public function setZone($zone)
   {
