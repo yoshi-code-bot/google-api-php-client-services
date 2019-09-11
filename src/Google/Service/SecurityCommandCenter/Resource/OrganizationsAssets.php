@@ -48,8 +48,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * format is "organizations/[organization_id]".
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string orderBy Expression that defines what fields and order to
    * use for sorting. The string value should follow SQL syntax: comma separated
    * list of fields. For example: "name,resource_properties.a_property". The
@@ -142,6 +140,8 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * @opt_param string pageToken The value returned by the last
    * `ListAssetsResponse`; indicates that this is a continuation of a prior
    * `ListAssets` call, and that the system should return the next page of data.
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response. Default is 10, minimum is 1, maximum is 1000.
    * @return Google_Service_SecurityCommandCenter_ListAssetsResponse
    */
   public function listOrganizationsAssets($parent, $optParams = array())
@@ -179,14 +179,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())

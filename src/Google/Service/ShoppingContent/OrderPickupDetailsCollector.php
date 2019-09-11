@@ -15,24 +15,25 @@
  * the License.
  */
 
-class Google_Service_Vision_GoogleCloudVisionV1p5beta1DominantColorsAnnotation extends Google_Collection
+class Google_Service_ShoppingContent_OrderPickupDetailsCollector extends Google_Model
 {
-  protected $collection_key = 'colors';
-  protected $colorsType = 'Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo';
-  protected $colorsDataType = 'array';
+  public $name;
+  public $phoneNumber;
 
-  /**
-   * @param Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo
-   */
-  public function setColors($colors)
+  public function setName($name)
   {
-    $this->colors = $colors;
+    $this->name = $name;
   }
-  /**
-   * @return Google_Service_Vision_GoogleCloudVisionV1p5beta1ColorInfo
-   */
-  public function getColors()
+  public function getName()
   {
-    return $this->colors;
+    return $this->name;
+  }
+  public function setPhoneNumber($phoneNumber)
+  {
+    $this->phoneNumber = $phoneNumber;
+  }
+  public function getPhoneNumber()
+  {
+    return $this->phoneNumber;
   }
 }
