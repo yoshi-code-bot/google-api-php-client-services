@@ -15,17 +15,25 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_Testers extends Google_Collection
+class Google_Service_Dns_PolicyAlternativeNameServerConfigTargetNameServer extends Google_Model
 {
-  protected $collection_key = 'googleGroups';
-  public $googleGroups;
+  public $ipv4Address;
+  public $kind;
 
-  public function setGoogleGroups($googleGroups)
+  public function setIpv4Address($ipv4Address)
   {
-    $this->googleGroups = $googleGroups;
+    $this->ipv4Address = $ipv4Address;
   }
-  public function getGoogleGroups()
+  public function getIpv4Address()
   {
-    return $this->googleGroups;
+    return $this->ipv4Address;
+  }
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+  public function getKind()
+  {
+    return $this->kind;
   }
 }

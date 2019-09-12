@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_AndroidEnterprise_ManagedConfigurationsSettings extends Google_Model
+class Google_Service_Dns_PolicyAlternativeNameServerConfig extends Google_Collection
 {
+  protected $collection_key = 'targetNameServers';
   public $kind;
-  public $lastUpdatedTimestampMillis;
-  public $mcmId;
-  public $name;
+  protected $targetNameServersType = 'Google_Service_Dns_PolicyAlternativeNameServerConfigTargetNameServer';
+  protected $targetNameServersDataType = 'array';
 
   public function setKind($kind)
   {
@@ -30,28 +30,18 @@ class Google_Service_AndroidEnterprise_ManagedConfigurationsSettings extends Goo
   {
     return $this->kind;
   }
-  public function setLastUpdatedTimestampMillis($lastUpdatedTimestampMillis)
+  /**
+   * @param Google_Service_Dns_PolicyAlternativeNameServerConfigTargetNameServer
+   */
+  public function setTargetNameServers($targetNameServers)
   {
-    $this->lastUpdatedTimestampMillis = $lastUpdatedTimestampMillis;
+    $this->targetNameServers = $targetNameServers;
   }
-  public function getLastUpdatedTimestampMillis()
+  /**
+   * @return Google_Service_Dns_PolicyAlternativeNameServerConfigTargetNameServer
+   */
+  public function getTargetNameServers()
   {
-    return $this->lastUpdatedTimestampMillis;
-  }
-  public function setMcmId($mcmId)
-  {
-    $this->mcmId = $mcmId;
-  }
-  public function getMcmId()
-  {
-    return $this->mcmId;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->targetNameServers;
   }
 }

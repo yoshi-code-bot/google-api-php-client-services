@@ -15,17 +15,25 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_Testers extends Google_Collection
+class Google_Service_Dns_PolicyNetwork extends Google_Model
 {
-  protected $collection_key = 'googleGroups';
-  public $googleGroups;
+  public $kind;
+  public $networkUrl;
 
-  public function setGoogleGroups($googleGroups)
+  public function setKind($kind)
   {
-    $this->googleGroups = $googleGroups;
+    $this->kind = $kind;
   }
-  public function getGoogleGroups()
+  public function getKind()
   {
-    return $this->googleGroups;
+    return $this->kind;
+  }
+  public function setNetworkUrl($networkUrl)
+  {
+    $this->networkUrl = $networkUrl;
+  }
+  public function getNetworkUrl()
+  {
+    return $this->networkUrl;
   }
 }
