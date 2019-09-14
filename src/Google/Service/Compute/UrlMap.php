@@ -29,6 +29,7 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   public $name;
   protected $pathMatchersType = 'Google_Service_Compute_PathMatcher';
   protected $pathMatchersDataType = 'array';
+  public $region;
   public $selfLink;
   protected $testsType = 'Google_Service_Compute_UrlMapTest';
   protected $testsDataType = 'array';
@@ -116,6 +117,14 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   public function getPathMatchers()
   {
     return $this->pathMatchers;
+  }
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  public function getRegion()
+  {
+    return $this->region;
   }
   public function setSelfLink($selfLink)
   {

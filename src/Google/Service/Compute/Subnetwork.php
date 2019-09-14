@@ -31,10 +31,13 @@ class Google_Service_Compute_Subnetwork extends Google_Collection
   public $name;
   public $network;
   public $privateIpGoogleAccess;
+  public $purpose;
   public $region;
+  public $role;
   protected $secondaryIpRangesType = 'Google_Service_Compute_SubnetworkSecondaryRange';
   protected $secondaryIpRangesDataType = 'array';
   public $selfLink;
+  public $state;
 
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -138,6 +141,14 @@ class Google_Service_Compute_Subnetwork extends Google_Collection
   {
     return $this->privateIpGoogleAccess;
   }
+  public function setPurpose($purpose)
+  {
+    $this->purpose = $purpose;
+  }
+  public function getPurpose()
+  {
+    return $this->purpose;
+  }
   public function setRegion($region)
   {
     $this->region = $region;
@@ -145,6 +156,14 @@ class Google_Service_Compute_Subnetwork extends Google_Collection
   public function getRegion()
   {
     return $this->region;
+  }
+  public function setRole($role)
+  {
+    $this->role = $role;
+  }
+  public function getRole()
+  {
+    return $this->role;
   }
   /**
    * @param Google_Service_Compute_SubnetworkSecondaryRange
@@ -167,5 +186,13 @@ class Google_Service_Compute_Subnetwork extends Google_Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
   }
 }

@@ -15,9 +15,8 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_FhirStore extends Google_Collection
+class Google_Service_CloudHealthcare_FhirStore extends Google_Model
 {
-  protected $collection_key = 'streamConfigs';
   public $disableReferentialIntegrity;
   public $disableResourceVersioning;
   public $enableHistoryImport;
@@ -26,12 +25,6 @@ class Google_Service_CloudHealthcare_FhirStore extends Google_Collection
   public $name;
   protected $notificationConfigType = 'Google_Service_CloudHealthcare_NotificationConfig';
   protected $notificationConfigDataType = '';
-  protected $streamConfigsType = 'Google_Service_CloudHealthcare_StreamConfig';
-  protected $streamConfigsDataType = 'array';
-  protected $subscriptionConfigType = 'Google_Service_CloudHealthcare_SubscriptionConfig';
-  protected $subscriptionConfigDataType = '';
-  protected $validationConfigType = 'Google_Service_CloudHealthcare_ValidationConfig';
-  protected $validationConfigDataType = '';
 
   public function setDisableReferentialIntegrity($disableReferentialIntegrity)
   {
@@ -94,47 +87,5 @@ class Google_Service_CloudHealthcare_FhirStore extends Google_Collection
   public function getNotificationConfig()
   {
     return $this->notificationConfig;
-  }
-  /**
-   * @param Google_Service_CloudHealthcare_StreamConfig
-   */
-  public function setStreamConfigs($streamConfigs)
-  {
-    $this->streamConfigs = $streamConfigs;
-  }
-  /**
-   * @return Google_Service_CloudHealthcare_StreamConfig
-   */
-  public function getStreamConfigs()
-  {
-    return $this->streamConfigs;
-  }
-  /**
-   * @param Google_Service_CloudHealthcare_SubscriptionConfig
-   */
-  public function setSubscriptionConfig(Google_Service_CloudHealthcare_SubscriptionConfig $subscriptionConfig)
-  {
-    $this->subscriptionConfig = $subscriptionConfig;
-  }
-  /**
-   * @return Google_Service_CloudHealthcare_SubscriptionConfig
-   */
-  public function getSubscriptionConfig()
-  {
-    return $this->subscriptionConfig;
-  }
-  /**
-   * @param Google_Service_CloudHealthcare_ValidationConfig
-   */
-  public function setValidationConfig(Google_Service_CloudHealthcare_ValidationConfig $validationConfig)
-  {
-    $this->validationConfig = $validationConfig;
-  }
-  /**
-   * @return Google_Service_CloudHealthcare_ValidationConfig
-   */
-  public function getValidationConfig()
-  {
-    return $this->validationConfig;
   }
 }

@@ -25,6 +25,8 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ConversationModel ex
   protected $datasetsDataType = 'array';
   public $displayName;
   public $name;
+  protected $smartReplyModelMetadataType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyModelMetadata';
+  protected $smartReplyModelMetadataDataType = '';
   public $state;
 
   /**
@@ -78,6 +80,20 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ConversationModel ex
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyModelMetadata
+   */
+  public function setSmartReplyModelMetadata(Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyModelMetadata $smartReplyModelMetadata)
+  {
+    $this->smartReplyModelMetadata = $smartReplyModelMetadata;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyModelMetadata
+   */
+  public function getSmartReplyModelMetadata()
+  {
+    return $this->smartReplyModelMetadata;
   }
   public function setState($state)
   {

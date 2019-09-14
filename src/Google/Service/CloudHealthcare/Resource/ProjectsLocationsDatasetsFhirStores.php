@@ -26,31 +26,6 @@
 class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStores extends Google_Service_Resource
 {
   /**
-   * Gets the FHIR capability statement ([STU3](http://hl7.org/implement/standards
-   * /fhir/STU3/capabilitystatement.html)), or the [conformance
-   * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in
-   * the DSTU2 case for the store, which contains a description of functionality
-   * supported by the server.
-   *
-   * Implements the FHIR standard capabilities interaction ([STU3](http://hl7.org/
-   * implement/standards/fhir/STU3/http.html#capabilities)), or the [conformance i
-   * nteraction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conforman
-   * ce) in the DSTU2 case.
-   *
-   * On success, the response body will contain a JSON-encoded representation of a
-   * `CapabilityStatement` resource. (fhirStores.capabilities)
-   *
-   * @param string $name Name of the FHIR store to retrieve the capabilities for.
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_CloudHealthcare_HttpBody
-   */
-  public function capabilities($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('capabilities', array($params), "Google_Service_CloudHealthcare_HttpBody");
-  }
-  /**
    * Creates a new FHIR store within the parent dataset. (fhirStores.create)
    *
    * @param string $parent The name of the dataset this FHIR store belongs to.
@@ -228,14 +203,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from the
-   * previous List request, if any.
-   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
-   * single response.  If zero the default page size of 100 is used.
    * @opt_param string filter Restricts stores returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported, for example `labels.key=value`.
+   * @opt_param string pageToken The next_page_token value returned from the
+   * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
+   * single response.  If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListFhirStoresResponse
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = array())
