@@ -17,6 +17,8 @@
 
 class Google_Service_Logging_LogSink extends Google_Model
 {
+  protected $bigqueryOptionsType = 'Google_Service_Logging_BigQueryOptions';
+  protected $bigqueryOptionsDataType = '';
   public $createTime;
   public $destination;
   public $filter;
@@ -26,6 +28,20 @@ class Google_Service_Logging_LogSink extends Google_Model
   public $updateTime;
   public $writerIdentity;
 
+  /**
+   * @param Google_Service_Logging_BigQueryOptions
+   */
+  public function setBigqueryOptions(Google_Service_Logging_BigQueryOptions $bigqueryOptions)
+  {
+    $this->bigqueryOptions = $bigqueryOptions;
+  }
+  /**
+   * @return Google_Service_Logging_BigQueryOptions
+   */
+  public function getBigqueryOptions()
+  {
+    return $this->bigqueryOptions;
+  }
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
