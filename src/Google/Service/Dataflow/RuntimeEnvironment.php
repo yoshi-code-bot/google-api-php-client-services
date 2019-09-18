@@ -21,7 +21,6 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public $additionalExperiments;
   public $additionalUserLabels;
   public $bypassTempDirValidation;
-  public $ipConfiguration;
   public $kmsKeyName;
   public $machineType;
   public $maxWorkers;
@@ -30,8 +29,7 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public $serviceAccountEmail;
   public $subnetwork;
   public $tempLocation;
-  public $workerRegion;
-  public $workerZone;
+  public $usePrivateIps;
   public $zone;
 
   public function setAdditionalExperiments($additionalExperiments)
@@ -57,14 +55,6 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public function getBypassTempDirValidation()
   {
     return $this->bypassTempDirValidation;
-  }
-  public function setIpConfiguration($ipConfiguration)
-  {
-    $this->ipConfiguration = $ipConfiguration;
-  }
-  public function getIpConfiguration()
-  {
-    return $this->ipConfiguration;
   }
   public function setKmsKeyName($kmsKeyName)
   {
@@ -130,21 +120,13 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   {
     return $this->tempLocation;
   }
-  public function setWorkerRegion($workerRegion)
+  public function setUsePrivateIps($usePrivateIps)
   {
-    $this->workerRegion = $workerRegion;
+    $this->usePrivateIps = $usePrivateIps;
   }
-  public function getWorkerRegion()
+  public function getUsePrivateIps()
   {
-    return $this->workerRegion;
-  }
-  public function setWorkerZone($workerZone)
-  {
-    $this->workerZone = $workerZone;
-  }
-  public function getWorkerZone()
-  {
-    return $this->workerZone;
+    return $this->usePrivateIps;
   }
   public function setZone($zone)
   {
