@@ -15,23 +15,23 @@
  * the License.
  */
 
-class Google_Service_Spanner_GetIamPolicyRequest extends Google_Model
+class Google_Service_BinaryAuthorization_SetIamPolicyRequest extends Google_Model
 {
-  protected $optionsType = 'Google_Service_Spanner_GetPolicyOptions';
-  protected $optionsDataType = '';
+  protected $policyType = 'Google_Service_BinaryAuthorization_IamPolicy';
+  protected $policyDataType = '';
 
   /**
-   * @param Google_Service_Spanner_GetPolicyOptions
+   * @param Google_Service_BinaryAuthorization_IamPolicy
    */
-  public function setOptions(Google_Service_Spanner_GetPolicyOptions $options)
+  public function setPolicy(Google_Service_BinaryAuthorization_IamPolicy $policy)
   {
-    $this->options = $options;
+    $this->policy = $policy;
   }
   /**
-   * @return Google_Service_Spanner_GetPolicyOptions
+   * @return Google_Service_BinaryAuthorization_IamPolicy
    */
-  public function getOptions()
+  public function getPolicy()
   {
-    return $this->options;
+    return $this->policy;
   }
 }

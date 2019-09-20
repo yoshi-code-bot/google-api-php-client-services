@@ -15,23 +15,16 @@
  * the License.
  */
 
-class Google_Service_Spanner_GetIamPolicyRequest extends Google_Model
+class Google_Service_Spanner_GetPolicyOptions extends Google_Model
 {
-  protected $optionsType = 'Google_Service_Spanner_GetPolicyOptions';
-  protected $optionsDataType = '';
+  public $requestedPolicyVersion;
 
-  /**
-   * @param Google_Service_Spanner_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_Spanner_GetPolicyOptions $options)
+  public function setRequestedPolicyVersion($requestedPolicyVersion)
   {
-    $this->options = $options;
+    $this->requestedPolicyVersion = $requestedPolicyVersion;
   }
-  /**
-   * @return Google_Service_Spanner_GetPolicyOptions
-   */
-  public function getOptions()
+  public function getRequestedPolicyVersion()
   {
-    return $this->options;
+    return $this->requestedPolicyVersion;
   }
 }

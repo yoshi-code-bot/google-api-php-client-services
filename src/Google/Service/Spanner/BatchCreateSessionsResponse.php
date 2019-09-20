@@ -15,23 +15,24 @@
  * the License.
  */
 
-class Google_Service_Spanner_GetIamPolicyRequest extends Google_Model
+class Google_Service_Spanner_BatchCreateSessionsResponse extends Google_Collection
 {
-  protected $optionsType = 'Google_Service_Spanner_GetPolicyOptions';
-  protected $optionsDataType = '';
+  protected $collection_key = 'session';
+  protected $sessionType = 'Google_Service_Spanner_Session';
+  protected $sessionDataType = 'array';
 
   /**
-   * @param Google_Service_Spanner_GetPolicyOptions
+   * @param Google_Service_Spanner_Session
    */
-  public function setOptions(Google_Service_Spanner_GetPolicyOptions $options)
+  public function setSession($session)
   {
-    $this->options = $options;
+    $this->session = $session;
   }
   /**
-   * @return Google_Service_Spanner_GetPolicyOptions
+   * @return Google_Service_Spanner_Session
    */
-  public function getOptions()
+  public function getSession()
   {
-    return $this->options;
+    return $this->session;
   }
 }

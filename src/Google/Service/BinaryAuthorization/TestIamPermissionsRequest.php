@@ -15,23 +15,17 @@
  * the License.
  */
 
-class Google_Service_Spanner_GetIamPolicyRequest extends Google_Model
+class Google_Service_BinaryAuthorization_TestIamPermissionsRequest extends Google_Collection
 {
-  protected $optionsType = 'Google_Service_Spanner_GetPolicyOptions';
-  protected $optionsDataType = '';
+  protected $collection_key = 'permissions';
+  public $permissions;
 
-  /**
-   * @param Google_Service_Spanner_GetPolicyOptions
-   */
-  public function setOptions(Google_Service_Spanner_GetPolicyOptions $options)
+  public function setPermissions($permissions)
   {
-    $this->options = $options;
+    $this->permissions = $permissions;
   }
-  /**
-   * @return Google_Service_Spanner_GetPolicyOptions
-   */
-  public function getOptions()
+  public function getPermissions()
   {
-    return $this->options;
+    return $this->permissions;
   }
 }
