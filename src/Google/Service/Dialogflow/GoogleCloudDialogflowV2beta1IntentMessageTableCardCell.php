@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1InputDataset extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageTableCardCell extends Google_Model
 {
-  public $dataset;
+  public $text;
 
-  public function setDataset($dataset)
+  public function setText($text)
   {
-    $this->dataset = $dataset;
+    $this->text = $text;
   }
-  public function getDataset()
+  public function getText()
   {
-    return $this->dataset;
+    return $this->text;
   }
 }

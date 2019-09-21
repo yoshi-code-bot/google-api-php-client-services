@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyModelMetadata extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageColumnProperties extends Google_Model
 {
-  public $modelType;
+  public $header;
+  public $horizontalAlignment;
 
-  public function setModelType($modelType)
+  public function setHeader($header)
   {
-    $this->modelType = $modelType;
+    $this->header = $header;
   }
-  public function getModelType()
+  public function getHeader()
   {
-    return $this->modelType;
+    return $this->header;
+  }
+  public function setHorizontalAlignment($horizontalAlignment)
+  {
+    $this->horizontalAlignment = $horizontalAlignment;
+  }
+  public function getHorizontalAlignment()
+  {
+    return $this->horizontalAlignment;
   }
 }

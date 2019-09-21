@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ArticleSuggestionModelMetadata extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction extends Google_Model
 {
-  public $modelType;
+  public $url;
+  public $urlTypeHint;
 
-  public function setModelType($modelType)
+  public function setUrl($url)
   {
-    $this->modelType = $modelType;
+    $this->url = $url;
   }
-  public function getModelType()
+  public function getUrl()
   {
-    return $this->modelType;
+    return $this->url;
+  }
+  public function setUrlTypeHint($urlTypeHint)
+  {
+    $this->urlTypeHint = $urlTypeHint;
+  }
+  public function getUrlTypeHint()
+  {
+    return $this->urlTypeHint;
   }
 }

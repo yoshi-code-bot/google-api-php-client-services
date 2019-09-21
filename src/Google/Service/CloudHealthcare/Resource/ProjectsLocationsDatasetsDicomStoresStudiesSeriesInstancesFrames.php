@@ -30,12 +30,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * Instance UID and frame numbers. See http://dicom.nema.org/medical/dicom/curre
    * nt/output/html/part18.html#sect_10.4. (frames.retrieveFrames)
    *
-   * @param string $parent The name of the DICOM store that is being accessed
-   * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
-   * icomStores/{dicom_store_id}`).
+   * @param string $parent The name of the DICOM store that is being accessed (for
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /dicomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the RetrieveFrames DICOMweb request
-   * (e.g., `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/
-   * {frame_list}`).
+   * (for example, `studies/{study_uid}/series/{series_uid}/instances/{instance_ui
+   * d}/frames/{frame_list}`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -51,12 +51,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * Type. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html
    * #sect_10.4. (frames.retrieveRendered)
    *
-   * @param string $parent The name of the DICOM store that is being accessed
-   * (e.g., `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/d
-   * icomStores/{dicom_store_id}`).
+   * @param string $parent The name of the DICOM store that is being accessed (for
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /dicomStores/{dicom_store_id}`).
    * @param string $dicomWebPath The path of the RetrieveRenderedFrames DICOMweb
-   * request (e.g., `studies/{study_id}/series/{series_id}/instances/{instance_id}
-   * /frames/{frame_list}/rendered`).
+   * request (for example, `studies/{study_uid}/series/{series_uid}/instances/{ins
+   * tance_uid}/frames/{frame_list}/rendered`).
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
