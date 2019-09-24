@@ -48,12 +48,12 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
    * {namespace_id} with the project ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @opt_param string propagationPolicy Specifies the propagation policy of
    * delete. Cloud Run currently ignores this setting, and deletes in the
    * background. Please see kubernetes.io/docs/concepts/workloads/controllers
    * /garbage-collection/ for more information.
    * @opt_param string kind Cloud Run currently ignores this parameter.
+   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status
    */
   public function delete($name, $optParams = array())

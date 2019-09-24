@@ -19,6 +19,7 @@ class Google_Service_CloudRun_SecretEnvSource extends Google_Model
 {
   protected $localObjectReferenceType = 'Google_Service_CloudRun_LocalObjectReference';
   protected $localObjectReferenceDataType = '';
+  public $name;
   public $optional;
 
   /**
@@ -34,6 +35,14 @@ class Google_Service_CloudRun_SecretEnvSource extends Google_Model
   public function getLocalObjectReference()
   {
     return $this->localObjectReference;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
   public function setOptional($optional)
   {

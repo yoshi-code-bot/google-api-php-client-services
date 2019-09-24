@@ -20,6 +20,7 @@ class Google_Service_CloudRun_ConfigMapKeySelector extends Google_Model
   public $key;
   protected $localObjectReferenceType = 'Google_Service_CloudRun_LocalObjectReference';
   protected $localObjectReferenceDataType = '';
+  public $name;
   public $optional;
 
   public function setKey($key)
@@ -43,6 +44,14 @@ class Google_Service_CloudRun_ConfigMapKeySelector extends Google_Model
   public function getLocalObjectReference()
   {
     return $this->localObjectReference;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
   public function setOptional($optional)
   {

@@ -15,34 +15,26 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_StreamMapping extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleIamV1AuditLogConfig extends Google_Collection
 {
-  public $app;
-  public $measurementId;
-  public $streamId;
+  protected $collection_key = 'exemptedMembers';
+  public $exemptedMembers;
+  public $logType;
 
-  public function setApp($app)
+  public function setExemptedMembers($exemptedMembers)
   {
-    $this->app = $app;
+    $this->exemptedMembers = $exemptedMembers;
   }
-  public function getApp()
+  public function getExemptedMembers()
   {
-    return $this->app;
+    return $this->exemptedMembers;
   }
-  public function setMeasurementId($measurementId)
+  public function setLogType($logType)
   {
-    $this->measurementId = $measurementId;
+    $this->logType = $logType;
   }
-  public function getMeasurementId()
+  public function getLogType()
   {
-    return $this->measurementId;
-  }
-  public function setStreamId($streamId)
-  {
-    $this->streamId = $streamId;
-  }
-  public function getStreamId()
-  {
-    return $this->streamId;
+    return $this->logType;
   }
 }

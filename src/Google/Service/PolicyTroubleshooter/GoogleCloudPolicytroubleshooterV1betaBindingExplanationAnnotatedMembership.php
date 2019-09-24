@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_StreamMapping extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership extends Google_Model
 {
-  public $app;
-  public $measurementId;
-  public $streamId;
+  public $membership;
+  public $relevance;
 
-  public function setApp($app)
+  public function setMembership($membership)
   {
-    $this->app = $app;
+    $this->membership = $membership;
   }
-  public function getApp()
+  public function getMembership()
   {
-    return $this->app;
+    return $this->membership;
   }
-  public function setMeasurementId($measurementId)
+  public function setRelevance($relevance)
   {
-    $this->measurementId = $measurementId;
+    $this->relevance = $relevance;
   }
-  public function getMeasurementId()
+  public function getRelevance()
   {
-    return $this->measurementId;
-  }
-  public function setStreamId($streamId)
-  {
-    $this->streamId = $streamId;
-  }
-  public function getStreamId()
-  {
-    return $this->streamId;
+    return $this->relevance;
   }
 }

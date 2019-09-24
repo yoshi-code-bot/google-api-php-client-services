@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_StreamMapping extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple extends Google_Model
 {
-  public $app;
-  public $measurementId;
-  public $streamId;
+  public $fullResourceName;
+  public $permission;
+  public $principal;
 
-  public function setApp($app)
+  public function setFullResourceName($fullResourceName)
   {
-    $this->app = $app;
+    $this->fullResourceName = $fullResourceName;
   }
-  public function getApp()
+  public function getFullResourceName()
   {
-    return $this->app;
+    return $this->fullResourceName;
   }
-  public function setMeasurementId($measurementId)
+  public function setPermission($permission)
   {
-    $this->measurementId = $measurementId;
+    $this->permission = $permission;
   }
-  public function getMeasurementId()
+  public function getPermission()
   {
-    return $this->measurementId;
+    return $this->permission;
   }
-  public function setStreamId($streamId)
+  public function setPrincipal($principal)
   {
-    $this->streamId = $streamId;
+    $this->principal = $principal;
   }
-  public function getStreamId()
+  public function getPrincipal()
   {
-    return $this->streamId;
+    return $this->principal;
   }
 }
