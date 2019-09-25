@@ -75,10 +75,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string end The response includes records prior to the end date. If
-   * no end date is provided, all records subsequent to the start date are in
-   * scope.
-   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @opt_param string pageToken Used to retrieve the next or previous page of
    * results when using pagination. Value should be set to the value of page_token
    * set in next or previous page links' urls. Next and previous page are returned
@@ -89,6 +85,10 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @opt_param string start The response includes records subsequent to the start
    * date. If no start date is provided, all records prior to the end date are in
    * scope.
+   * @opt_param string end The response includes records prior to the end date. If
+   * no end date is provided, all records subsequent to the start date are in
+   * scope.
+   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function PatientEverything($name, $optParams = array())

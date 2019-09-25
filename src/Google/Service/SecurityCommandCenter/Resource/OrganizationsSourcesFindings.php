@@ -29,14 +29,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * Creates a finding. The corresponding source must exist for finding creation
    * to succeed. (findings.create)
    *
-   * @param string $parent Resource name of the new finding's parent. Its format
-   * should be "organizations/[organization_id]/sources/[source_id]".
+   * @param string $parent Required. Resource name of the new finding's parent.
+   * Its format should be "organizations/[organization_id]/sources/[source_id]".
    * @param Google_Service_SecurityCommandCenter_Finding $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string findingId Unique identifier provided by the client within
-   * the parent scope. It must be alphanumeric and less than or equal to 32
-   * characters and greater than 0 characters in length.
+   * @opt_param string findingId Required. Unique identifier provided by the
+   * client within the parent scope. It must be alphanumeric and less than or
+   * equal to 32 characters and greater than 0 characters in length.
    * @return Google_Service_SecurityCommandCenter_Finding
    */
   public function create($parent, Google_Service_SecurityCommandCenter_Finding $postBody, $optParams = array())
@@ -52,7 +52,7 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * To group across all sources provide a `-` as the source id. Example:
    * /v1/organizations/123/sources/-/findings (findings.group)
    *
-   * @param string $parent Name of the source to groupBy. Its format is
+   * @param string $parent Required. Name of the source to groupBy. Its format is
    * "organizations/[organization_id]/sources/[source_id]". To groupBy across all
    * sources provide a source_id of `-`. For example: organizations/123/sources/-
    * @param Google_Service_SecurityCommandCenter_GroupFindingsRequest $postBody
@@ -72,11 +72,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * /v1/organizations/123/sources/-/findings
    * (findings.listOrganizationsSourcesFindings)
    *
-   * @param string $parent Name of the source the findings belong to. Its format
-   * is "organizations/[organization_id]/sources/[source_id]". To list across all
-   * sources provide a source_id of `-`. For example: organizations/123/sources/-
+   * @param string $parent Required. Name of the source the findings belong to.
+   * Its format is "organizations/[organization_id]/sources/[source_id]". To list
+   * across all sources provide a source_id of `-`. For example:
+   * organizations/123/sources/-
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string orderBy Expression that defines what fields and order to
    * use for sorting. The string value should follow SQL syntax: comma separated
    * list of fields. For example: "name,resource_properties.a_property". The
@@ -155,8 +158,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * @opt_param string pageToken The value returned by the last
    * `ListFindingsResponse`; indicates that this is a continuation of a prior
    * `ListFindings` call, and that the system should return the next page of data.
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
    * @return Google_Service_SecurityCommandCenter_ListFindingsResponse
    */
   public function listOrganizationsSourcesFindings($parent, $optParams = array())
@@ -192,7 +193,7 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
   /**
    * Updates the state of a finding. (findings.setState)
    *
-   * @param string $name The relative resource name of the finding. See:
+   * @param string $name Required. The relative resource name of the finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name
    * Example: "organizations/123/sources/456/finding/789".
    * @param Google_Service_SecurityCommandCenter_SetFindingStateRequest $postBody
