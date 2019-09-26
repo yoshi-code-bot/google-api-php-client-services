@@ -15,25 +15,20 @@
  * the License.
  */
 
-class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDirectoryNode extends Google_Model
+class Google_Service_Compute_HttpQueryParameterMatch extends Google_Model
 {
-  protected $digestType = 'Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDigest';
-  protected $digestDataType = '';
+  public $exactMatch;
   public $name;
+  public $presentMatch;
+  public $regexMatch;
 
-  /**
-   * @param Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDigest
-   */
-  public function setDigest(Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDigest $digest)
+  public function setExactMatch($exactMatch)
   {
-    $this->digest = $digest;
+    $this->exactMatch = $exactMatch;
   }
-  /**
-   * @return Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDigest
-   */
-  public function getDigest()
+  public function getExactMatch()
   {
-    return $this->digest;
+    return $this->exactMatch;
   }
   public function setName($name)
   {
@@ -42,5 +37,21 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDir
   public function getName()
   {
     return $this->name;
+  }
+  public function setPresentMatch($presentMatch)
+  {
+    $this->presentMatch = $presentMatch;
+  }
+  public function getPresentMatch()
+  {
+    return $this->presentMatch;
+  }
+  public function setRegexMatch($regexMatch)
+  {
+    $this->regexMatch = $regexMatch;
+  }
+  public function getRegexMatch()
+  {
+    return $this->regexMatch;
   }
 }

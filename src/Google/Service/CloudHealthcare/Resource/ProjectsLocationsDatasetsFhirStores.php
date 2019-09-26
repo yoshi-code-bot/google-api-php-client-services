@@ -104,8 +104,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param array $optParams Optional parameters.
    *
    * @opt_param int options.requestedPolicyVersion Optional. The policy format
-   * version to be returned. Acceptable values are 0, 1, and 3. If the value is 0,
-   * or the field is omitted, policy format version 1 will be returned.
+   * version to be returned.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be
+   * rejected.
+   *
+   * Requests for policies with any conditional bindings must specify version 3.
+   * Policies without any conditional bindings may specify any valid value or
+   * leave the field unset.
    * @return Google_Service_CloudHealthcare_Policy
    */
   public function getIamPolicy($resource, $optParams = array())
@@ -156,7 +162,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * The location and format of the input data is specified by the parameters
    * below. Note that if no format is specified, this method assumes the `BUNDLE`
    * format. When using the `BUNDLE` format this method ignores the `Bundle.type`
-   * field, except for the special case of `history`, and does not apply any of
+   * field, except that `history` bundles are rejected, and does not apply any of
    * the bundle processing semantics for batch or transaction bundles. Unlike in
    * ExecuteBundle, transaction bundles are not executed as a single transaction
    * and bundle-internal references are not rewritten. The bundle is treated as a
@@ -164,15 +170,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * ignoring `Bundle.entry.request`. As an example, this allows the import of
    * `searchset` bundles produced by a FHIR search or Patient-everything
    * operation.
-   *
-   * If history imports are enabled by setting enable_history_import in the FHIR
-   * store's configuration, this method can import historical versions of a
-   * resource by supplying a bundle of type `history` and using the `BUNDLE`
-   * format. The historical versions in the bundle must have `lastUpdated`
-   * timestamps, and the resulting resource history on the server will appear as
-   * if the versions had been created at those timestamps. If a current or
-   * historical version with the supplied resource ID already exists, the bundle
-   * is rejected to avoid creating an inconsistent sequence of resource versions.
    *
    * This method returns an Operation that can be used to track the status of the
    * import by calling GetOperation.
@@ -203,14 +200,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from the
-   * previous List request, if any.
-   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
-   * single response.  If zero the default page size of 100 is used.
    * @opt_param string filter Restricts stores returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported, for example `labels.key=value`.
+   * @opt_param string pageToken The next_page_token value returned from the
+   * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
+   * single response.  If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListFhirStoresResponse
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = array())

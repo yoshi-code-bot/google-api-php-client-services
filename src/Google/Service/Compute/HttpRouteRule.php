@@ -15,23 +15,46 @@
  * the License.
  */
 
-class Google_Service_Compute_PathRule extends Google_Collection
+class Google_Service_Compute_HttpRouteRule extends Google_Collection
 {
-  protected $collection_key = 'paths';
-  public $paths;
+  protected $collection_key = 'matchRules';
+  protected $headerActionType = 'Google_Service_Compute_HttpHeaderAction';
+  protected $headerActionDataType = '';
+  protected $matchRulesType = 'Google_Service_Compute_HttpRouteRuleMatch';
+  protected $matchRulesDataType = 'array';
   protected $routeActionType = 'Google_Service_Compute_HttpRouteAction';
   protected $routeActionDataType = '';
   public $service;
   protected $urlRedirectType = 'Google_Service_Compute_HttpRedirectAction';
   protected $urlRedirectDataType = '';
 
-  public function setPaths($paths)
+  /**
+   * @param Google_Service_Compute_HttpHeaderAction
+   */
+  public function setHeaderAction(Google_Service_Compute_HttpHeaderAction $headerAction)
   {
-    $this->paths = $paths;
+    $this->headerAction = $headerAction;
   }
-  public function getPaths()
+  /**
+   * @return Google_Service_Compute_HttpHeaderAction
+   */
+  public function getHeaderAction()
   {
-    return $this->paths;
+    return $this->headerAction;
+  }
+  /**
+   * @param Google_Service_Compute_HttpRouteRuleMatch
+   */
+  public function setMatchRules($matchRules)
+  {
+    $this->matchRules = $matchRules;
+  }
+  /**
+   * @return Google_Service_Compute_HttpRouteRuleMatch
+   */
+  public function getMatchRules()
+  {
+    return $this->matchRules;
   }
   /**
    * @param Google_Service_Compute_HttpRouteAction

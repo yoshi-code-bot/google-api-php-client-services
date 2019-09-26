@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testCommandEnvironmentVariable extends Google_Model
+class Google_Service_Compute_RequestMirrorPolicy extends Google_Model
 {
-  public $name;
-  public $value;
+  public $backendService;
 
-  public function setName($name)
+  public function setBackendService($backendService)
   {
-    $this->name = $name;
+    $this->backendService = $backendService;
   }
-  public function getName()
+  public function getBackendService()
   {
-    return $this->name;
-  }
-  public function setValue($value)
-  {
-    $this->value = $value;
-  }
-  public function getValue()
-  {
-    return $this->value;
+    return $this->backendService;
   }
 }

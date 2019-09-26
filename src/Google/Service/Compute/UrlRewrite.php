@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testToolDetails extends Google_Model
+class Google_Service_Compute_UrlRewrite extends Google_Model
 {
-  public $toolName;
-  public $toolVersion;
+  public $hostRewrite;
+  public $pathPrefixRewrite;
 
-  public function setToolName($toolName)
+  public function setHostRewrite($hostRewrite)
   {
-    $this->toolName = $toolName;
+    $this->hostRewrite = $hostRewrite;
   }
-  public function getToolName()
+  public function getHostRewrite()
   {
-    return $this->toolName;
+    return $this->hostRewrite;
   }
-  public function setToolVersion($toolVersion)
+  public function setPathPrefixRewrite($pathPrefixRewrite)
   {
-    $this->toolVersion = $toolVersion;
+    $this->pathPrefixRewrite = $pathPrefixRewrite;
   }
-  public function getToolVersion()
+  public function getPathPrefixRewrite()
   {
-    return $this->toolVersion;
+    return $this->pathPrefixRewrite;
   }
 }

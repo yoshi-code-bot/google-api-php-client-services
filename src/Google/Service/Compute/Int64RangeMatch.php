@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteexecutionV1testDigest extends Google_Model
+class Google_Service_Compute_Int64RangeMatch extends Google_Model
 {
-  public $hash;
-  public $sizeBytes;
+  public $rangeEnd;
+  public $rangeStart;
 
-  public function setHash($hash)
+  public function setRangeEnd($rangeEnd)
   {
-    $this->hash = $hash;
+    $this->rangeEnd = $rangeEnd;
   }
-  public function getHash()
+  public function getRangeEnd()
   {
-    return $this->hash;
+    return $this->rangeEnd;
   }
-  public function setSizeBytes($sizeBytes)
+  public function setRangeStart($rangeStart)
   {
-    $this->sizeBytes = $sizeBytes;
+    $this->rangeStart = $rangeStart;
   }
-  public function getSizeBytes()
+  public function getRangeStart()
   {
-    return $this->sizeBytes;
+    return $this->rangeStart;
   }
 }

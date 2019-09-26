@@ -19,9 +19,15 @@ class Google_Service_Compute_UrlMap extends Google_Collection
 {
   protected $collection_key = 'tests';
   public $creationTimestamp;
+  protected $defaultRouteActionType = 'Google_Service_Compute_HttpRouteAction';
+  protected $defaultRouteActionDataType = '';
   public $defaultService;
+  protected $defaultUrlRedirectType = 'Google_Service_Compute_HttpRedirectAction';
+  protected $defaultUrlRedirectDataType = '';
   public $description;
   public $fingerprint;
+  protected $headerActionType = 'Google_Service_Compute_HttpHeaderAction';
+  protected $headerActionDataType = '';
   protected $hostRulesType = 'Google_Service_Compute_HostRule';
   protected $hostRulesDataType = 'array';
   public $id;
@@ -42,6 +48,20 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   {
     return $this->creationTimestamp;
   }
+  /**
+   * @param Google_Service_Compute_HttpRouteAction
+   */
+  public function setDefaultRouteAction(Google_Service_Compute_HttpRouteAction $defaultRouteAction)
+  {
+    $this->defaultRouteAction = $defaultRouteAction;
+  }
+  /**
+   * @return Google_Service_Compute_HttpRouteAction
+   */
+  public function getDefaultRouteAction()
+  {
+    return $this->defaultRouteAction;
+  }
   public function setDefaultService($defaultService)
   {
     $this->defaultService = $defaultService;
@@ -49,6 +69,20 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   public function getDefaultService()
   {
     return $this->defaultService;
+  }
+  /**
+   * @param Google_Service_Compute_HttpRedirectAction
+   */
+  public function setDefaultUrlRedirect(Google_Service_Compute_HttpRedirectAction $defaultUrlRedirect)
+  {
+    $this->defaultUrlRedirect = $defaultUrlRedirect;
+  }
+  /**
+   * @return Google_Service_Compute_HttpRedirectAction
+   */
+  public function getDefaultUrlRedirect()
+  {
+    return $this->defaultUrlRedirect;
   }
   public function setDescription($description)
   {
@@ -65,6 +99,20 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   public function getFingerprint()
   {
     return $this->fingerprint;
+  }
+  /**
+   * @param Google_Service_Compute_HttpHeaderAction
+   */
+  public function setHeaderAction(Google_Service_Compute_HttpHeaderAction $headerAction)
+  {
+    $this->headerAction = $headerAction;
+  }
+  /**
+   * @return Google_Service_Compute_HttpHeaderAction
+   */
+  public function getHeaderAction()
+  {
+    return $this->headerAction;
   }
   /**
    * @param Google_Service_Compute_HostRule

@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_BigQueryReservation_CreateSlotPoolMetadata extends Google_Model
+class Google_Service_Compute_Duration extends Google_Model
 {
-  public $slotPool;
+  public $nanos;
+  public $seconds;
 
-  public function setSlotPool($slotPool)
+  public function setNanos($nanos)
   {
-    $this->slotPool = $slotPool;
+    $this->nanos = $nanos;
   }
-  public function getSlotPool()
+  public function getNanos()
   {
-    return $this->slotPool;
+    return $this->nanos;
+  }
+  public function setSeconds($seconds)
+  {
+    $this->seconds = $seconds;
+  }
+  public function getSeconds()
+  {
+    return $this->seconds;
   }
 }
