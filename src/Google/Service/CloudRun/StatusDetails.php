@@ -15,10 +15,10 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails extends Google_Collection
+class Google_Service_CloudRun_StatusDetails extends Google_Collection
 {
   protected $collection_key = 'causes';
-  protected $causesType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusCause';
+  protected $causesType = 'Google_Service_CloudRun_StatusCause';
   protected $causesDataType = 'array';
   public $group;
   public $kind;
@@ -27,14 +27,14 @@ class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails extend
   public $uid;
 
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusCause
+   * @param Google_Service_CloudRun_StatusCause
    */
   public function setCauses($causes)
   {
     $this->causes = $causes;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusCause
+   * @return Google_Service_CloudRun_StatusCause
    */
   public function getCauses()
   {

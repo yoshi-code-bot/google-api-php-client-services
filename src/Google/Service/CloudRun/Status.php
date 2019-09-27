@@ -15,13 +15,13 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status extends Google_Model
+class Google_Service_CloudRun_Status extends Google_Model
 {
   public $code;
-  protected $detailsType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails';
+  protected $detailsType = 'Google_Service_CloudRun_StatusDetails';
   protected $detailsDataType = '';
   public $message;
-  protected $metadataType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta';
+  protected $metadataType = 'Google_Service_CloudRun_ListMeta';
   protected $metadataDataType = '';
   public $reason;
   public $status;
@@ -35,14 +35,14 @@ class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status extends Googl
     return $this->code;
   }
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails
+   * @param Google_Service_CloudRun_StatusDetails
    */
-  public function setDetails(Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails $details)
+  public function setDetails(Google_Service_CloudRun_StatusDetails $details)
   {
     $this->details = $details;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusDetails
+   * @return Google_Service_CloudRun_StatusDetails
    */
   public function getDetails()
   {
@@ -57,14 +57,14 @@ class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status extends Googl
     return $this->message;
   }
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta
+   * @param Google_Service_CloudRun_ListMeta
    */
-  public function setMetadata(Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta $metadata)
+  public function setMetadata(Google_Service_CloudRun_ListMeta $metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta
+   * @return Google_Service_CloudRun_ListMeta
    */
   public function getMetadata()
   {

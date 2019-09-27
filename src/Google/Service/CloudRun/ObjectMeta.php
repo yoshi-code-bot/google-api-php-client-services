@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta extends Google_Collection
+class Google_Service_CloudRun_ObjectMeta extends Google_Collection
 {
   protected $collection_key = 'ownerReferences';
   public $annotations;
@@ -29,7 +29,7 @@ class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta extends G
   public $labels;
   public $name;
   public $namespace;
-  protected $ownerReferencesType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1OwnerReference';
+  protected $ownerReferencesType = 'Google_Service_CloudRun_OwnerReference';
   protected $ownerReferencesDataType = 'array';
   public $resourceVersion;
   public $selfLink;
@@ -124,14 +124,14 @@ class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta extends G
     return $this->namespace;
   }
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1OwnerReference
+   * @param Google_Service_CloudRun_OwnerReference
    */
   public function setOwnerReferences($ownerReferences)
   {
     $this->ownerReferences = $ownerReferences;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1OwnerReference
+   * @return Google_Service_CloudRun_OwnerReference
    */
   public function getOwnerReferences()
   {

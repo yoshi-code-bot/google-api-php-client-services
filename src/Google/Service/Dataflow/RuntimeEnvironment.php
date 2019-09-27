@@ -30,6 +30,8 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public $subnetwork;
   public $tempLocation;
   public $usePrivateIps;
+  public $workerRegion;
+  public $workerZone;
   public $zone;
 
   public function setAdditionalExperiments($additionalExperiments)
@@ -127,6 +129,22 @@ class Google_Service_Dataflow_RuntimeEnvironment extends Google_Collection
   public function getUsePrivateIps()
   {
     return $this->usePrivateIps;
+  }
+  public function setWorkerRegion($workerRegion)
+  {
+    $this->workerRegion = $workerRegion;
+  }
+  public function getWorkerRegion()
+  {
+    return $this->workerRegion;
+  }
+  public function setWorkerZone($workerZone)
+  {
+    $this->workerZone = $workerZone;
+  }
+  public function getWorkerZone()
+  {
+    return $this->workerZone;
   }
   public function setZone($zone)
   {

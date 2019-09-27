@@ -19,7 +19,7 @@ class Google_Service_CloudRun_Revision extends Google_Model
 {
   public $apiVersion;
   public $kind;
-  protected $metadataType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta';
+  protected $metadataType = 'Google_Service_CloudRun_ObjectMeta';
   protected $metadataDataType = '';
   protected $specType = 'Google_Service_CloudRun_RevisionSpec';
   protected $specDataType = '';
@@ -43,14 +43,14 @@ class Google_Service_CloudRun_Revision extends Google_Model
     return $this->kind;
   }
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta
+   * @param Google_Service_CloudRun_ObjectMeta
    */
-  public function setMetadata(Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta $metadata)
+  public function setMetadata(Google_Service_CloudRun_ObjectMeta $metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta
+   * @return Google_Service_CloudRun_ObjectMeta
    */
   public function getMetadata()
   {

@@ -15,23 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudRun_RegionDetails extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1beta1OperationGroup extends Google_Collection
 {
-  protected $errorType = 'Google_Service_CloudRun_GoogleRpcStatus';
-  protected $errorDataType = '';
+  protected $collection_key = 'operations';
+  protected $operationsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation';
+  protected $operationsDataType = 'array';
 
   /**
-   * @param Google_Service_CloudRun_GoogleRpcStatus
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation
    */
-  public function setError(Google_Service_CloudRun_GoogleRpcStatus $error)
+  public function setOperations($operations)
   {
-    $this->error = $error;
+    $this->operations = $operations;
   }
   /**
-   * @return Google_Service_CloudRun_GoogleRpcStatus
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation
    */
-  public function getError()
+  public function getOperations()
   {
-    return $this->error;
+    return $this->operations;
   }
 }

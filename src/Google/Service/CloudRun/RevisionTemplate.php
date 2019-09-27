@@ -17,20 +17,20 @@
 
 class Google_Service_CloudRun_RevisionTemplate extends Google_Model
 {
-  protected $metadataType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta';
+  protected $metadataType = 'Google_Service_CloudRun_ObjectMeta';
   protected $metadataDataType = '';
   protected $specType = 'Google_Service_CloudRun_RevisionSpec';
   protected $specDataType = '';
 
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta
+   * @param Google_Service_CloudRun_ObjectMeta
    */
-  public function setMetadata(Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta $metadata)
+  public function setMetadata(Google_Service_CloudRun_ObjectMeta $metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ObjectMeta
+   * @return Google_Service_CloudRun_ObjectMeta
    */
   public function getMetadata()
   {

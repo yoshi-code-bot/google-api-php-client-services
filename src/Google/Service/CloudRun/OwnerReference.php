@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1OwnerReference extends Google_Model
+class Google_Service_CloudRun_OwnerReference extends Google_Model
 {
   public $apiVersion;
   public $blockOwnerDeletion;

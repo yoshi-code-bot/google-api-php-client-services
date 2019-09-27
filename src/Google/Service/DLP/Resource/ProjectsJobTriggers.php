@@ -97,8 +97,6 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * project-id`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional size of the page, can be limited by a
-   * server.
    * @opt_param string filter Optional. Allows filtering.
    *
    * Supported syntax:
@@ -138,6 +136,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`:
    * corresponds to JobTrigger's name. - `display_name`: corresponds to
    * JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
+   * @opt_param int pageSize Optional size of the page, can be limited by a
+   * server.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListJobTriggersResponse
    */
   public function listProjectsJobTriggers($parent, $optParams = array())

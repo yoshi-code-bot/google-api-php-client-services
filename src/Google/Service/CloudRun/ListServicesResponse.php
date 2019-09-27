@@ -22,10 +22,8 @@ class Google_Service_CloudRun_ListServicesResponse extends Google_Collection
   protected $itemsType = 'Google_Service_CloudRun_Service';
   protected $itemsDataType = 'array';
   public $kind;
-  protected $metadataType = 'Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta';
+  protected $metadataType = 'Google_Service_CloudRun_ListMeta';
   protected $metadataDataType = '';
-  protected $regionDetailsType = 'Google_Service_CloudRun_RegionDetails';
-  protected $regionDetailsDataType = 'map';
   public $unreachable;
 
   public function setApiVersion($apiVersion)
@@ -59,32 +57,18 @@ class Google_Service_CloudRun_ListServicesResponse extends Google_Collection
     return $this->kind;
   }
   /**
-   * @param Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta
+   * @param Google_Service_CloudRun_ListMeta
    */
-  public function setMetadata(Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta $metadata)
+  public function setMetadata(Google_Service_CloudRun_ListMeta $metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta
+   * @return Google_Service_CloudRun_ListMeta
    */
   public function getMetadata()
   {
     return $this->metadata;
-  }
-  /**
-   * @param Google_Service_CloudRun_RegionDetails
-   */
-  public function setRegionDetails($regionDetails)
-  {
-    $this->regionDetails = $regionDetails;
-  }
-  /**
-   * @return Google_Service_CloudRun_RegionDetails
-   */
-  public function getRegionDetails()
-  {
-    return $this->regionDetails;
   }
   public function setUnreachable($unreachable)
   {

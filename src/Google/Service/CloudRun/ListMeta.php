@@ -15,35 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudRun_GoogleRpcStatus extends Google_Collection
+class Google_Service_CloudRun_ListMeta extends Google_Model
 {
-  protected $collection_key = 'details';
-  public $code;
-  public $details;
-  public $message;
+  public $continue;
+  public $resourceVersion;
+  public $selfLink;
 
-  public function setCode($code)
+  public function setContinue($continue)
   {
-    $this->code = $code;
+    $this->continue = $continue;
   }
-  public function getCode()
+  public function getContinue()
   {
-    return $this->code;
+    return $this->continue;
   }
-  public function setDetails($details)
+  public function setResourceVersion($resourceVersion)
   {
-    $this->details = $details;
+    $this->resourceVersion = $resourceVersion;
   }
-  public function getDetails()
+  public function getResourceVersion()
   {
-    return $this->details;
+    return $this->resourceVersion;
   }
-  public function setMessage($message)
+  public function setSelfLink($selfLink)
   {
-    $this->message = $message;
+    $this->selfLink = $selfLink;
   }
-  public function getMessage()
+  public function getSelfLink()
   {
-    return $this->message;
+    return $this->selfLink;
   }
 }

@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1ListMeta extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkRecommendationClaimedRequest extends Google_Model
 {
-  public $continue;
-  public $resourceVersion;
-  public $selfLink;
+  public $etag;
+  public $stateMetadata;
 
-  public function setContinue($continue)
+  public function setEtag($etag)
   {
-    $this->continue = $continue;
+    $this->etag = $etag;
   }
-  public function getContinue()
+  public function getEtag()
   {
-    return $this->continue;
+    return $this->etag;
   }
-  public function setResourceVersion($resourceVersion)
+  public function setStateMetadata($stateMetadata)
   {
-    $this->resourceVersion = $resourceVersion;
+    $this->stateMetadata = $stateMetadata;
   }
-  public function getResourceVersion()
+  public function getStateMetadata()
   {
-    return $this->resourceVersion;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
+    return $this->stateMetadata;
   }
 }

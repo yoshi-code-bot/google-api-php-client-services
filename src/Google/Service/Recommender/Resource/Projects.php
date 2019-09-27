@@ -15,34 +15,14 @@
  * the License.
  */
 
-class Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1StatusCause extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $recommenderService = new Google_Service_Recommender(...);
+ *   $projects = $recommenderService->projects;
+ *  </code>
+ */
+class Google_Service_Recommender_Resource_Projects extends Google_Service_Resource
 {
-  public $field;
-  public $message;
-  public $reason;
-
-  public function setField($field)
-  {
-    $this->field = $field;
-  }
-  public function getField()
-  {
-    return $this->field;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setReason($reason)
-  {
-    $this->reason = $reason;
-  }
-  public function getReason()
-  {
-    return $this->reason;
-  }
 }

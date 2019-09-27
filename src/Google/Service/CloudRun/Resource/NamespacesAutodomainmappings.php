@@ -53,13 +53,13 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * /garbage-collection/ for more information.
    * @opt_param string kind Cloud Run currently ignores this parameter.
    * @opt_param string apiVersion Cloud Run currently ignores this parameter.
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status
+   * @return Google_Service_CloudRun_Status
    */
   public function delete($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status");
+    return $this->call('delete', array($params), "Google_Service_CloudRun_Status");
   }
   /**
    * Get information about an auto domain mapping. (autodomainmappings.get)
@@ -83,8 +83,6 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * domain mappings should be listed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string labelSelector Allows to filter resources based on a label.
-   * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string resourceVersion The baseline resource version from which
    * the list or watch operation should start. Not currently used by Cloud Run.
    * @opt_param bool includeUninitialized Not currently used by Cloud Run.
@@ -95,6 +93,8 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * @opt_param int limit The maximum number of records that should be returned.
    * @opt_param bool watch Flag that indicates that the client expects to watch
    * this resource as well. Not currently used by Cloud Run.
+   * @opt_param string labelSelector Allows to filter resources based on a label.
+   * Supported operations are =, !=, exists, in, and notIn.
    * @return Google_Service_CloudRun_ListAutoDomainMappingsResponse
    */
   public function listNamespacesAutodomainmappings($parent, $optParams = array())

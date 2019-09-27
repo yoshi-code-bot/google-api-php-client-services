@@ -47,19 +47,19 @@ class Google_Service_CloudRun_Resource_NamespacesDomainmappings extends Google_S
    * replace {namespace_id} with the project ID.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @opt_param string propagationPolicy Specifies the propagation policy of
    * delete. Cloud Run currently ignores this setting, and deletes in the
    * background. Please see kubernetes.io/docs/concepts/workloads/controllers
    * /garbage-collection/ for more information.
    * @opt_param string kind Cloud Run currently ignores this parameter.
-   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
-   * @return Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status
+   * @return Google_Service_CloudRun_Status
    */
   public function delete($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudRun_K8sIoApimachineryPkgApisMetaV1Status");
+    return $this->call('delete', array($params), "Google_Service_CloudRun_Status");
   }
   /**
    * Get information about a domain mapping. (domainmappings.get)
@@ -82,9 +82,6 @@ class Google_Service_CloudRun_Resource_NamespacesDomainmappings extends Google_S
    * mappings should be listed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int limit The maximum number of records that should be returned.
-   * @opt_param bool watch Flag that indicates that the client expects to watch
-   * this resource as well. Not currently used by Cloud Run.
    * @opt_param string labelSelector Allows to filter resources based on a label.
    * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string resourceVersion The baseline resource version from which
@@ -94,6 +91,9 @@ class Google_Service_CloudRun_Resource_NamespacesDomainmappings extends Google_S
    * specific value for a field name. Send this in a query string format. i.e.
    * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
    * @opt_param string continue Optional encoded string to continue paging.
+   * @opt_param int limit The maximum number of records that should be returned.
+   * @opt_param bool watch Flag that indicates that the client expects to watch
+   * this resource as well. Not currently used by Cloud Run.
    * @return Google_Service_CloudRun_ListDomainMappingsResponse
    */
   public function listNamespacesDomainmappings($parent, $optParams = array())
