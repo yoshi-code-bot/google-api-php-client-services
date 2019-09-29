@@ -20,6 +20,10 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   protected $collection_key = 'desiredLocations';
   protected $desiredAddonsConfigType = 'Google_Service_Container_AddonsConfig';
   protected $desiredAddonsConfigDataType = '';
+  protected $desiredBinaryAuthorizationType = 'Google_Service_Container_BinaryAuthorization';
+  protected $desiredBinaryAuthorizationDataType = '';
+  protected $desiredDatabaseEncryptionType = 'Google_Service_Container_DatabaseEncryption';
+  protected $desiredDatabaseEncryptionDataType = '';
   public $desiredImageType;
   protected $desiredIntraNodeVisibilityConfigType = 'Google_Service_Container_IntraNodeVisibilityConfig';
   protected $desiredIntraNodeVisibilityConfigDataType = '';
@@ -49,6 +53,34 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public function getDesiredAddonsConfig()
   {
     return $this->desiredAddonsConfig;
+  }
+  /**
+   * @param Google_Service_Container_BinaryAuthorization
+   */
+  public function setDesiredBinaryAuthorization(Google_Service_Container_BinaryAuthorization $desiredBinaryAuthorization)
+  {
+    $this->desiredBinaryAuthorization = $desiredBinaryAuthorization;
+  }
+  /**
+   * @return Google_Service_Container_BinaryAuthorization
+   */
+  public function getDesiredBinaryAuthorization()
+  {
+    return $this->desiredBinaryAuthorization;
+  }
+  /**
+   * @param Google_Service_Container_DatabaseEncryption
+   */
+  public function setDesiredDatabaseEncryption(Google_Service_Container_DatabaseEncryption $desiredDatabaseEncryption)
+  {
+    $this->desiredDatabaseEncryption = $desiredDatabaseEncryption;
+  }
+  /**
+   * @return Google_Service_Container_DatabaseEncryption
+   */
+  public function getDesiredDatabaseEncryption()
+  {
+    return $this->desiredDatabaseEncryption;
   }
   public function setDesiredImageType($desiredImageType)
   {

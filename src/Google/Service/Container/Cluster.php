@@ -20,6 +20,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   protected $collection_key = 'nodePools';
   protected $addonsConfigType = 'Google_Service_Container_AddonsConfig';
   protected $addonsConfigDataType = '';
+  protected $binaryAuthorizationType = 'Google_Service_Container_BinaryAuthorization';
+  protected $binaryAuthorizationDataType = '';
   public $clusterIpv4Cidr;
   protected $conditionsType = 'Google_Service_Container_StatusCondition';
   protected $conditionsDataType = 'array';
@@ -27,6 +29,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   public $currentMasterVersion;
   public $currentNodeCount;
   public $currentNodeVersion;
+  protected $databaseEncryptionType = 'Google_Service_Container_DatabaseEncryption';
+  protected $databaseEncryptionDataType = '';
   protected $defaultMaxPodsConstraintType = 'Google_Service_Container_MaxPodsConstraint';
   protected $defaultMaxPodsConstraintDataType = '';
   public $description;
@@ -90,6 +94,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   {
     return $this->addonsConfig;
   }
+  /**
+   * @param Google_Service_Container_BinaryAuthorization
+   */
+  public function setBinaryAuthorization(Google_Service_Container_BinaryAuthorization $binaryAuthorization)
+  {
+    $this->binaryAuthorization = $binaryAuthorization;
+  }
+  /**
+   * @return Google_Service_Container_BinaryAuthorization
+   */
+  public function getBinaryAuthorization()
+  {
+    return $this->binaryAuthorization;
+  }
   public function setClusterIpv4Cidr($clusterIpv4Cidr)
   {
     $this->clusterIpv4Cidr = $clusterIpv4Cidr;
@@ -143,6 +161,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getCurrentNodeVersion()
   {
     return $this->currentNodeVersion;
+  }
+  /**
+   * @param Google_Service_Container_DatabaseEncryption
+   */
+  public function setDatabaseEncryption(Google_Service_Container_DatabaseEncryption $databaseEncryption)
+  {
+    $this->databaseEncryption = $databaseEncryption;
+  }
+  /**
+   * @return Google_Service_Container_DatabaseEncryption
+   */
+  public function getDatabaseEncryption()
+  {
+    return $this->databaseEncryption;
   }
   /**
    * @param Google_Service_Container_MaxPodsConstraint
