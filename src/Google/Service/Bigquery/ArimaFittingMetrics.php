@@ -15,16 +15,34 @@
  * the License.
  */
 
-class Google_Service_Vision_GoogleCloudVisionV1p4beta1ImageQuality extends Google_Model
+class Google_Service_Bigquery_ArimaFittingMetrics extends Google_Model
 {
-  public $qualityScore;
+  public $aic;
+  public $logLikelihood;
+  public $variance;
 
-  public function setQualityScore($qualityScore)
+  public function setAic($aic)
   {
-    $this->qualityScore = $qualityScore;
+    $this->aic = $aic;
   }
-  public function getQualityScore()
+  public function getAic()
   {
-    return $this->qualityScore;
+    return $this->aic;
+  }
+  public function setLogLikelihood($logLikelihood)
+  {
+    $this->logLikelihood = $logLikelihood;
+  }
+  public function getLogLikelihood()
+  {
+    return $this->logLikelihood;
+  }
+  public function setVariance($variance)
+  {
+    $this->variance = $variance;
+  }
+  public function getVariance()
+  {
+    return $this->variance;
   }
 }

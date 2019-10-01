@@ -88,7 +88,7 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * Returns metadata for a given CryptoKey, as well as its primary
    * CryptoKeyVersion. (cryptoKeys.get)
    *
-   * @param string $name The name of the CryptoKey to get.
+   * @param string $name Required. The name of the CryptoKey to get.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudKMS_CryptoKey
    */
@@ -131,21 +131,21 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * the format `projects/locations/keyRings`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Only include resources that match the
-   * filter in the response. For more information, see [Sorting and filtering list
-   * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
-   * @opt_param string pageToken Optional pagination token, returned earlier via
-   * ListCryptoKeysResponse.next_page_token.
-   * @opt_param int pageSize Optional limit on the number of CryptoKeys to include
-   * in the response.  Further CryptoKeys can subsequently be obtained by
-   * including the ListCryptoKeysResponse.next_page_token in a subsequent request.
-   * If unspecified, the server will pick an appropriate default.
+   * @opt_param string pageToken Optional. Optional pagination token, returned
+   * earlier via ListCryptoKeysResponse.next_page_token.
+   * @opt_param int pageSize Optional. Optional limit on the number of CryptoKeys
+   * to include in the response.  Further CryptoKeys can subsequently be obtained
+   * by including the ListCryptoKeysResponse.next_page_token in a subsequent
+   * request.  If unspecified, the server will pick an appropriate default.
    * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * If not specified, the results will be sorted in the default order. For more
    * information, see [Sorting and filtering list
    * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
    * @opt_param string versionView The fields of the primary version to include in
    * the response.
+   * @opt_param string filter Optional. Only include resources that match the
+   * filter in the response. For more information, see [Sorting and filtering list
+   * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
    * @return Google_Service_CloudKMS_ListCryptoKeysResponse
    */
   public function listProjectsLocationsKeyRingsCryptoKeys($parent, $optParams = array())
@@ -162,7 +162,7 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * @param Google_Service_CloudKMS_CryptoKey $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required list of fields to be updated in this
+   * @opt_param string updateMask Required. List of fields to be updated in this
    * request.
    * @return Google_Service_CloudKMS_CryptoKey
    */
@@ -217,7 +217,7 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * Returns an error if called on an asymmetric key.
    * (cryptoKeys.updatePrimaryVersion)
    *
-   * @param string $name The resource name of the CryptoKey to update.
+   * @param string $name Required. The resource name of the CryptoKey to update.
    * @param Google_Service_CloudKMS_UpdateCryptoKeyPrimaryVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudKMS_CryptoKey

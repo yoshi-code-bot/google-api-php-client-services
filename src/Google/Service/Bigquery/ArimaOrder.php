@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Vision_GoogleCloudVisionV1p4beta1QualityOptimizationResult extends Google_Model
+class Google_Service_Bigquery_ArimaOrder extends Google_Model
 {
-  public $image;
-  public $mimeType;
-  public $qualityOptimizationType;
+  public $d;
+  public $p;
+  public $q;
 
-  public function setImage($image)
+  public function setD($d)
   {
-    $this->image = $image;
+    $this->d = $d;
   }
-  public function getImage()
+  public function getD()
   {
-    return $this->image;
+    return $this->d;
   }
-  public function setMimeType($mimeType)
+  public function setP($p)
   {
-    $this->mimeType = $mimeType;
+    $this->p = $p;
   }
-  public function getMimeType()
+  public function getP()
   {
-    return $this->mimeType;
+    return $this->p;
   }
-  public function setQualityOptimizationType($qualityOptimizationType)
+  public function setQ($q)
   {
-    $this->qualityOptimizationType = $qualityOptimizationType;
+    $this->q = $q;
   }
-  public function getQualityOptimizationType()
+  public function getQ()
   {
-    return $this->qualityOptimizationType;
+    return $this->q;
   }
 }
