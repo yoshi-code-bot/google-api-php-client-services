@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_QueryInterpretationOptions extends Google_Model
+class Google_Service_CloudSearch_QueryCountByStatus extends Google_Model
 {
-  public $disableNlInterpretation;
-  public $enableVerbatimMode;
+  public $count;
+  public $statusCode;
 
-  public function setDisableNlInterpretation($disableNlInterpretation)
+  public function setCount($count)
   {
-    $this->disableNlInterpretation = $disableNlInterpretation;
+    $this->count = $count;
   }
-  public function getDisableNlInterpretation()
+  public function getCount()
   {
-    return $this->disableNlInterpretation;
+    return $this->count;
   }
-  public function setEnableVerbatimMode($enableVerbatimMode)
+  public function setStatusCode($statusCode)
   {
-    $this->enableVerbatimMode = $enableVerbatimMode;
+    $this->statusCode = $statusCode;
   }
-  public function getEnableVerbatimMode()
+  public function getStatusCode()
   {
-    return $this->enableVerbatimMode;
+    return $this->statusCode;
   }
 }

@@ -15,25 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_QueryInterpretationOptions extends Google_Model
+class Google_Service_CloudSearch_GetSearchApplicationUserStatsResponse extends Google_Collection
 {
-  public $disableNlInterpretation;
-  public $enableVerbatimMode;
+  protected $collection_key = 'stats';
+  protected $statsType = 'Google_Service_CloudSearch_SearchApplicationUserStats';
+  protected $statsDataType = 'array';
 
-  public function setDisableNlInterpretation($disableNlInterpretation)
+  /**
+   * @param Google_Service_CloudSearch_SearchApplicationUserStats
+   */
+  public function setStats($stats)
   {
-    $this->disableNlInterpretation = $disableNlInterpretation;
+    $this->stats = $stats;
   }
-  public function getDisableNlInterpretation()
+  /**
+   * @return Google_Service_CloudSearch_SearchApplicationUserStats
+   */
+  public function getStats()
   {
-    return $this->disableNlInterpretation;
-  }
-  public function setEnableVerbatimMode($enableVerbatimMode)
-  {
-    $this->enableVerbatimMode = $enableVerbatimMode;
-  }
-  public function getEnableVerbatimMode()
-  {
-    return $this->enableVerbatimMode;
+    return $this->stats;
   }
 }

@@ -31,6 +31,14 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestOptions.languageCode The BCP-47 language code, such
+   * as "en-US" or "sr-Latn". For more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For
+   * translations.
+   *
+   * When specified, the documents in search results are biased towards the
+   * specified language. Suggest API does not use this parameter. It autocompletes
+   * only based on characters in the query.
    * @opt_param string requestOptions.searchApplicationId Id of the application
    * created using SearchApplicationsService.
    * @opt_param string requestOptions.timeZone Current user's time zone id, such
@@ -44,14 +52,6 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    * @opt_param bool requestOptions.debugOptions.enableDebugging If you are asked
    * by Google to help with debugging, set this field. Otherwise, ignore this
    * field.
-   * @opt_param string requestOptions.languageCode The BCP-47 language code, such
-   * as "en-US" or "sr-Latn". For more information, see
-   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For
-   * translations.
-   *
-   * When specified, the documents in search results are biased towards the
-   * specified language. Suggest API does not use this parameter. It autocompletes
-   * only based on characters in the query.
    * @return Google_Service_CloudSearch_ListQuerySourcesResponse
    */
   public function listQuerySources($optParams = array())

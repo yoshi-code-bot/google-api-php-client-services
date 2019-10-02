@@ -15,25 +15,14 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_QueryInterpretationOptions extends Google_Model
+/**
+ * The "session" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $cloudsearchService = new Google_Service_CloudSearch(...);
+ *   $session = $cloudsearchService->session;
+ *  </code>
+ */
+class Google_Service_CloudSearch_Resource_StatsSession extends Google_Service_Resource
 {
-  public $disableNlInterpretation;
-  public $enableVerbatimMode;
-
-  public function setDisableNlInterpretation($disableNlInterpretation)
-  {
-    $this->disableNlInterpretation = $disableNlInterpretation;
-  }
-  public function getDisableNlInterpretation()
-  {
-    return $this->disableNlInterpretation;
-  }
-  public function setEnableVerbatimMode($enableVerbatimMode)
-  {
-    $this->enableVerbatimMode = $enableVerbatimMode;
-  }
-  public function getEnableVerbatimMode()
-  {
-    return $this->enableVerbatimMode;
-  }
 }
