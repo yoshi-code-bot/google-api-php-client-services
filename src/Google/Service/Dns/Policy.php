@@ -22,6 +22,7 @@ class Google_Service_Dns_Policy extends Google_Collection
   protected $alternativeNameServerConfigDataType = '';
   public $description;
   public $enableInboundForwarding;
+  public $enableLogging;
   public $id;
   public $kind;
   public $name;
@@ -57,6 +58,14 @@ class Google_Service_Dns_Policy extends Google_Collection
   public function getEnableInboundForwarding()
   {
     return $this->enableInboundForwarding;
+  }
+  public function setEnableLogging($enableLogging)
+  {
+    $this->enableLogging = $enableLogging;
+  }
+  public function getEnableLogging()
+  {
+    return $this->enableLogging;
   }
   public function setId($id)
   {
