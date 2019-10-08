@@ -15,26 +15,25 @@
  * the License.
  */
 
-class Google_Service_Cloudbilling_AuditLogConfig extends Google_Collection
+class Google_Service_DataFusion_CustomField extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $name;
+  public $value;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setName($name)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->name = $name;
   }
-  public function getExemptedMembers()
+  public function getName()
   {
-    return $this->exemptedMembers;
+    return $this->name;
   }
-  public function setLogType($logType)
+  public function setValue($value)
   {
-    $this->logType = $logType;
+    $this->value = $value;
   }
-  public function getLogType()
+  public function getValue()
   {
-    return $this->logType;
+    return $this->value;
   }
 }
