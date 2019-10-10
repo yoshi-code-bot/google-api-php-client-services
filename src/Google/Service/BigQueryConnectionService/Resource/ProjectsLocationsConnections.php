@@ -128,7 +128,10 @@ class Google_Service_BigQueryConnectionService_Resource_ProjectsLocationsConnect
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (connections.setIamPolicy)
+   * existing policy.
+   *
+   * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+   * (connections.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
