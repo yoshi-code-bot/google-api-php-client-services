@@ -112,7 +112,10 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRings extends Google_
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (keyRings.setIamPolicy)
+   * existing policy.
+   *
+   * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+   * (keyRings.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this

@@ -114,7 +114,10 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsImportJobs exten
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (importJobs.setIamPolicy)
+   * existing policy.
+   *
+   * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+   * (importJobs.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this

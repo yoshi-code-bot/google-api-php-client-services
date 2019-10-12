@@ -131,6 +131,9 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * the format `projects/locations/keyRings`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Only include resources that match the
+   * filter in the response. For more information, see [Sorting and filtering list
+   * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
    * @opt_param string pageToken Optional. Optional pagination token, returned
    * earlier via ListCryptoKeysResponse.next_page_token.
    * @opt_param int pageSize Optional. Optional limit on the number of CryptoKeys
@@ -143,9 +146,6 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
    * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
    * @opt_param string versionView The fields of the primary version to include in
    * the response.
-   * @opt_param string filter Optional. Only include resources that match the
-   * filter in the response. For more information, see [Sorting and filtering list
-   * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
    * @return Google_Service_CloudKMS_ListCryptoKeysResponse
    */
   public function listProjectsLocationsKeyRingsCryptoKeys($parent, $optParams = array())
@@ -174,7 +174,10 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys exten
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (cryptoKeys.setIamPolicy)
+   * existing policy.
+   *
+   * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+   * (cryptoKeys.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
