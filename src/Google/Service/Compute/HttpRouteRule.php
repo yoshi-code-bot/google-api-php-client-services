@@ -18,16 +18,26 @@
 class Google_Service_Compute_HttpRouteRule extends Google_Collection
 {
   protected $collection_key = 'matchRules';
+  public $description;
   protected $headerActionType = 'Google_Service_Compute_HttpHeaderAction';
   protected $headerActionDataType = '';
   protected $matchRulesType = 'Google_Service_Compute_HttpRouteRuleMatch';
   protected $matchRulesDataType = 'array';
+  public $priority;
   protected $routeActionType = 'Google_Service_Compute_HttpRouteAction';
   protected $routeActionDataType = '';
   public $service;
   protected $urlRedirectType = 'Google_Service_Compute_HttpRedirectAction';
   protected $urlRedirectDataType = '';
 
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  public function getDescription()
+  {
+    return $this->description;
+  }
   /**
    * @param Google_Service_Compute_HttpHeaderAction
    */
@@ -55,6 +65,14 @@ class Google_Service_Compute_HttpRouteRule extends Google_Collection
   public function getMatchRules()
   {
     return $this->matchRules;
+  }
+  public function setPriority($priority)
+  {
+    $this->priority = $priority;
+  }
+  public function getPriority()
+  {
+    return $this->priority;
   }
   /**
    * @param Google_Service_Compute_HttpRouteAction

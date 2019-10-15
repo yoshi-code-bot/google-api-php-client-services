@@ -28,8 +28,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRevisions extends Google
   /**
    * Delete a revision. (revisions.delete)
    *
-   * @param string $name The name of the revision being deleted. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the revision to delete. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string apiVersion Cloud Run currently ignores this parameter.
@@ -49,8 +49,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRevisions extends Google
   /**
    * Get information about a revision. (revisions.get)
    *
-   * @param string $name The name of the revision being retrieved. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the revision to retrieve. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Revision
    */
@@ -63,12 +63,11 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRevisions extends Google
   /**
    * List revisions. (revisions.listProjectsLocationsRevisions)
    *
-   * @param string $parent The project ID or project number from which the
-   * revisions should be listed.
+   * @param string $parent The namespace from which the revisions should be
+   * listed. For Cloud Run (fully managed), replace {namespace_id} with the
+   * project ID or number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool watch Flag that indicates that the client expects to watch
-   * this resource as well. Not currently used by Cloud Run.
    * @opt_param string labelSelector Allows to filter resources based on a label.
    * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string resourceVersion The baseline resource version from which
@@ -79,6 +78,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRevisions extends Google
    * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
    * @opt_param string continue Optional encoded string to continue paging.
    * @opt_param int limit The maximum number of records that should be returned.
+   * @opt_param bool watch Flag that indicates that the client expects to watch
+   * this resource as well. Not currently used by Cloud Run.
    * @return Google_Service_CloudRun_ListRevisionsResponse
    */
   public function listProjectsLocationsRevisions($parent, $optParams = array())

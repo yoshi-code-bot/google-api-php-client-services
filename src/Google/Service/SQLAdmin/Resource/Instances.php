@@ -19,8 +19,8 @@
  * The "instances" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
- *   $instances = $sqladminService->instances;
+ *   $sqlService = new Google_Service_SQLAdmin(...);
+ *   $instances = $sqlService->instances;
  *  </code>
  */
 class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
@@ -145,7 +145,7 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_SQLAdmin_DatabaseInstance");
   }
   /**
-   * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud
+   * Imports data into a Cloud SQL instance from a SQL dump  or CSV file in Cloud
    * Storage. (instances.import)
    *
    * @param string $project Project ID of the project that contains the instance.
@@ -184,12 +184,12 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * instances.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter An expression for filtering the results of the
-   * request, such as by name or label.
-   * @opt_param string maxResults The maximum number of results to return per
-   * response.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
+   * @opt_param string maxResults The maximum number of results to return per
+   * response.
+   * @opt_param string filter An expression for filtering the results of the
+   * request, such as by name or label.
    * @return Google_Service_SQLAdmin_InstancesListResponse
    */
   public function listInstances($project, $optParams = array())
@@ -218,9 +218,7 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
     return $this->call('listServerCas', array($params), "Google_Service_SQLAdmin_InstancesListServerCasResponse");
   }
   /**
-   * Updates settings of a Cloud SQL instance. Caution: This is not a partial
-   * update, so you must include values for all the settings that you want to
-   * retain. For partial updates, use patch.. This method supports patch
+   * Updates settings of a Cloud SQL instance. This method supports patch
    * semantics. (instances.patch)
    *
    * @param string $project Project ID of the project that contains the instance.

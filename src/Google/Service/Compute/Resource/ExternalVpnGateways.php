@@ -26,7 +26,8 @@
 class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service_Resource
 {
   /**
-   * Deletes the specified externalVpnGateway. (externalVpnGateways.delete)
+   * Deletes the specified externalVpnGateway. (== suppress_warning http-rest-
+   * shadowed ==) (externalVpnGateways.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $externalVpnGateway Name of the externalVpnGateways to delete.
@@ -54,7 +55,8 @@ class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service
   }
   /**
    * Returns the specified externalVpnGateway. Get a list of available
-   * externalVpnGateways by making a list() request. (externalVpnGateways.get)
+   * externalVpnGateways by making a list() request. (== suppress_warning http-
+   * rest-shadowed ==) (externalVpnGateways.get)
    *
    * @param string $project Project ID for this request.
    * @param string $externalVpnGateway Name of the externalVpnGateway to return.
@@ -69,7 +71,8 @@ class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service
   }
   /**
    * Creates a ExternalVpnGateway in the specified project using the data included
-   * in the request. (externalVpnGateways.insert)
+   * in the request. (== suppress_warning http-rest-shadowed ==)
+   * (externalVpnGateways.insert)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_ExternalVpnGateway $postBody
@@ -97,6 +100,7 @@ class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service
   }
   /**
    * Retrieves the list of ExternalVpnGateway available to the specified project.
+   * (== suppress_warning http-rest-shadowed ==)
    * (externalVpnGateways.listExternalVpnGateways)
    *
    * @param string $project Project ID for this request.
@@ -150,7 +154,8 @@ class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service
   }
   /**
    * Sets the labels on an ExternalVpnGateway. To learn more about labels, read
-   * the Labeling Resources documentation. (externalVpnGateways.setLabels)
+   * the Labeling Resources documentation. (== suppress_warning http-rest-shadowed
+   * ==) (externalVpnGateways.setLabels)
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name or id of the resource for this request.
@@ -165,7 +170,8 @@ class Google_Service_Compute_Resource_ExternalVpnGateways extends Google_Service
     return $this->call('setLabels', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Returns permissions that a caller has on the specified resource.
+   * Returns permissions that a caller has on the specified resource. (==
+   * suppress_warning http-rest-shadowed ==)
    * (externalVpnGateways.testIamPermissions)
    *
    * @param string $project Project ID for this request.

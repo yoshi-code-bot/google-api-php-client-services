@@ -27,7 +27,8 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
 {
   /**
    * Retrieves the list of all SslCertificate resources, regional and global,
-   * available to the specified project. (sslCertificates.aggregatedList)
+   * available to the specified project. (== suppress_warning http-rest-shadowed
+   * ==) (sslCertificates.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.
    * @param array $optParams Optional parameters.
@@ -79,7 +80,8 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
     return $this->call('aggregatedList', array($params), "Google_Service_Compute_SslCertificateAggregatedList");
   }
   /**
-   * Deletes the specified SslCertificate resource. (sslCertificates.delete)
+   * Deletes the specified SslCertificate resource. (== suppress_warning http-
+   * rest-shadowed ==) (sslCertificates.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $sslCertificate Name of the SslCertificate resource to delete.
@@ -107,7 +109,8 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
   }
   /**
    * Returns the specified SslCertificate resource. Gets a list of available SSL
-   * certificates by making a list() request. (sslCertificates.get)
+   * certificates by making a list() request. (== suppress_warning http-rest-
+   * shadowed ==) (sslCertificates.get)
    *
    * @param string $project Project ID for this request.
    * @param string $sslCertificate Name of the SslCertificate resource to return.
@@ -122,7 +125,8 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
   }
   /**
    * Creates a SslCertificate resource in the specified project using the data
-   * included in the request. (sslCertificates.insert)
+   * included in the request. (== suppress_warning http-rest-shadowed ==)
+   * (sslCertificates.insert)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_SslCertificate $postBody
@@ -150,7 +154,8 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
   }
   /**
    * Retrieves the list of SslCertificate resources available to the specified
-   * project. (sslCertificates.listSslCertificates)
+   * project. (== suppress_warning http-rest-shadowed ==)
+   * (sslCertificates.listSslCertificates)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.

@@ -22,6 +22,7 @@ class Google_Service_AndroidPublisher_ProductPurchase extends Google_Model
   public $developerPayload;
   public $kind;
   public $orderId;
+  public $productId;
   public $purchaseState;
   public $purchaseTimeMillis;
   public $purchaseToken;
@@ -66,6 +67,14 @@ class Google_Service_AndroidPublisher_ProductPurchase extends Google_Model
   public function getOrderId()
   {
     return $this->orderId;
+  }
+  public function setProductId($productId)
+  {
+    $this->productId = $productId;
+  }
+  public function getProductId()
+  {
+    return $this->productId;
   }
   public function setPurchaseState($purchaseState)
   {

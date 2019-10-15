@@ -28,8 +28,9 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsDomainmappings extends G
   /**
    * Create a new domain mapping. (domainmappings.create)
    *
-   * @param string $parent The project ID or project number in which this domain
-   * mapping should be created.
+   * @param string $parent The namespace in which the domain mapping should be
+   * created. For Cloud Run (fully managed), replace {namespace_id} with the
+   * project ID or number.
    * @param Google_Service_CloudRun_DomainMapping $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_DomainMapping
@@ -43,8 +44,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsDomainmappings extends G
   /**
    * Delete a domain mapping. (domainmappings.delete)
    *
-   * @param string $name The name of the domain mapping being deleted. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the domain mapping to delete. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string apiVersion Cloud Run currently ignores this parameter.
@@ -64,8 +65,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsDomainmappings extends G
   /**
    * Get information about a domain mapping. (domainmappings.get)
    *
-   * @param string $name The name of the domain mapping being retrieved. If
-   * needed, replace {namespace_id} with the project ID.
+   * @param string $name The name of the domain mapping to retrieve. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_DomainMapping
    */
@@ -78,22 +79,23 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsDomainmappings extends G
   /**
    * List domain mappings. (domainmappings.listProjectsLocationsDomainmappings)
    *
-   * @param string $parent The project ID or project number from which the domain
-   * mappings should be listed.
+   * @param string $parent The namespace from which the domain mappings should be
+   * listed. For Cloud Run (fully managed), replace {namespace_id} with the
+   * project ID or number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string labelSelector Allows to filter resources based on a label.
-   * Supported operations are =, !=, exists, in, and notIn.
+   * @opt_param string resourceVersion The baseline resource version from which
+   * the list or watch operation should start. Not currently used by Cloud Run.
+   * @opt_param bool includeUninitialized Not currently used by Cloud Run.
    * @opt_param string fieldSelector Allows to filter resources based on a
    * specific value for a field name. Send this in a query string format. i.e.
    * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-   * @opt_param bool includeUninitialized Not currently used by Cloud Run.
-   * @opt_param string resourceVersion The baseline resource version from which
-   * the list or watch operation should start. Not currently used by Cloud Run.
    * @opt_param string continue Optional encoded string to continue paging.
    * @opt_param int limit The maximum number of records that should be returned.
    * @opt_param bool watch Flag that indicates that the client expects to watch
    * this resource as well. Not currently used by Cloud Run.
+   * @opt_param string labelSelector Allows to filter resources based on a label.
+   * Supported operations are =, !=, exists, in, and notIn.
    * @return Google_Service_CloudRun_ListDomainMappingsResponse
    */
   public function listProjectsLocationsDomainmappings($parent, $optParams = array())
@@ -112,8 +114,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsDomainmappings extends G
    * May provide metadata.resourceVersion to enforce update from last read for
    * optimistic concurrency control. (domainmappings.replaceDomainMapping)
    *
-   * @param string $name The name of the domain mapping being retrieved. If
-   * needed, replace {namespace_id} with the project ID.
+   * @param string $name The name of the domain mapping being retrieved. For Cloud
+   * Run (fully managed), replace {namespace_id} with the project ID or number.
    * @param Google_Service_CloudRun_DomainMapping $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_DomainMapping

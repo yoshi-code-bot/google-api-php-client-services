@@ -28,8 +28,9 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
   /**
    * Create a route. (routes.create)
    *
-   * @param string $parent The project ID or project number in which this route
-   * should be created.
+   * @param string $parent The namespace in which the route should be created. For
+   * Cloud Run (fully managed), replace {namespace_id} with the project ID or
+   * number.
    * @param Google_Service_CloudRun_Route $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Route
@@ -44,16 +45,16 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
    * Delete a route. This will cause the route to stop serving traffic.
    * (routes.delete)
    *
-   * @param string $name The name of the route being deleted. If needed, replace
-   * {namespace_id} with the project ID.
+   * @param string $name The name of the route to delete. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @opt_param string propagationPolicy Specifies the propagation policy of
    * delete. Cloud Run currently ignores this setting, and deletes in the
    * background. Please see kubernetes.io/docs/concepts/workloads/controllers
    * /garbage-collection/ for more information.
    * @opt_param string kind Cloud Run currently ignores this parameter.
+   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @return Google_Service_CloudRun_Status
    */
   public function delete($name, $optParams = array())
@@ -65,8 +66,8 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
   /**
    * Get information about a route. (routes.get)
    *
-   * @param string $name The name of the route being retrieved. If needed, replace
-   * {namespace_id} with the project ID.
+   * @param string $name The name of the route to retrieve. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Route
    */
@@ -79,22 +80,23 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
   /**
    * List routes. (routes.listNamespacesRoutes)
    *
-   * @param string $parent The project ID or project number from which the routes
-   * should be listed.
+   * @param string $parent The namespace from which the routes should be listed.
+   * For Cloud Run (fully managed), replace {namespace_id} with the project ID or
+   * number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int limit The maximum number of records that should be returned.
-   * @opt_param bool watch Flag that indicates that the client expects to watch
-   * this resource as well. Not currently used by Cloud Run.
    * @opt_param string labelSelector Allows to filter resources based on a label.
    * Supported operations are =, !=, exists, in, and notIn.
-   * @opt_param string fieldSelector Allows to filter resources based on a
-   * specific value for a field name. Send this in a query string format. i.e.
-   * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
    * @opt_param string resourceVersion The baseline resource version from which
    * the list or watch operation should start. Not currently used by Cloud Run.
    * @opt_param bool includeUninitialized Not currently used by Cloud Run.
+   * @opt_param string fieldSelector Allows to filter resources based on a
+   * specific value for a field name. Send this in a query string format. i.e.
+   * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
    * @opt_param string continue Optional encoded string to continue paging.
+   * @opt_param int limit The maximum number of records that should be returned.
+   * @opt_param bool watch Flag that indicates that the client expects to watch
+   * this resource as well. Not currently used by Cloud Run.
    * @return Google_Service_CloudRun_ListRoutesResponse
    */
   public function listNamespacesRoutes($parent, $optParams = array())
@@ -113,8 +115,8 @@ class Google_Service_CloudRun_Resource_NamespacesRoutes extends Google_Service_R
    * May provide metadata.resourceVersion to enforce update from last read for
    * optimistic concurrency control. (routes.replaceRoute)
    *
-   * @param string $name The name of the route being replaced. If needed, replace
-   * {namespace_id} with the project ID.
+   * @param string $name The name of the route being replaced. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param Google_Service_CloudRun_Route $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Route

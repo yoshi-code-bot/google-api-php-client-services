@@ -27,7 +27,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
 {
   /**
    * Retrieves the list of all HealthCheck resources, regional and global,
-   * available to the specified project. (healthChecks.aggregatedList)
+   * available to the specified project. (== suppress_warning http-rest-shadowed
+   * ==) (healthChecks.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.
    * @param array $optParams Optional parameters.
@@ -79,7 +80,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
     return $this->call('aggregatedList', array($params), "Google_Service_Compute_HealthChecksAggregatedList");
   }
   /**
-   * Deletes the specified HealthCheck resource. (healthChecks.delete)
+   * Deletes the specified HealthCheck resource. (== suppress_warning http-rest-
+   * shadowed ==) (healthChecks.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $healthCheck Name of the HealthCheck resource to delete.
@@ -107,7 +109,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
   }
   /**
    * Returns the specified HealthCheck resource. Gets a list of available health
-   * checks by making a list() request. (healthChecks.get)
+   * checks by making a list() request. (== suppress_warning http-rest-shadowed
+   * ==) (healthChecks.get)
    *
    * @param string $project Project ID for this request.
    * @param string $healthCheck Name of the HealthCheck resource to return.
@@ -122,7 +125,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
   }
   /**
    * Creates a HealthCheck resource in the specified project using the data
-   * included in the request. (healthChecks.insert)
+   * included in the request. (== suppress_warning http-rest-shadowed ==)
+   * (healthChecks.insert)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_HealthCheck $postBody
@@ -150,7 +154,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
   }
   /**
    * Retrieves the list of HealthCheck resources available to the specified
-   * project. (healthChecks.listHealthChecks)
+   * project. (== suppress_warning http-rest-shadowed ==)
+   * (healthChecks.listHealthChecks)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -204,7 +209,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
   /**
    * Updates a HealthCheck resource in the specified project using the data
    * included in the request. This method supports PATCH semantics and uses the
-   * JSON merge patch format and processing rules. (healthChecks.patch)
+   * JSON merge patch format and processing rules. (== suppress_warning http-rest-
+   * shadowed ==) (healthChecks.patch)
    *
    * @param string $project Project ID for this request.
    * @param string $healthCheck Name of the HealthCheck resource to patch.
@@ -233,7 +239,8 @@ class Google_Service_Compute_Resource_HealthChecks extends Google_Service_Resour
   }
   /**
    * Updates a HealthCheck resource in the specified project using the data
-   * included in the request. (healthChecks.update)
+   * included in the request. (== suppress_warning http-rest-shadowed ==)
+   * (healthChecks.update)
    *
    * @param string $project Project ID for this request.
    * @param string $healthCheck Name of the HealthCheck resource to update.

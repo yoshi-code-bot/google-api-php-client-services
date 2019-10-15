@@ -28,8 +28,8 @@ class Google_Service_CloudRun_Resource_NamespacesRevisions extends Google_Servic
   /**
    * Delete a revision. (revisions.delete)
    *
-   * @param string $name The name of the revision being deleted. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the revision to delete. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string apiVersion Cloud Run currently ignores this parameter.
@@ -49,8 +49,8 @@ class Google_Service_CloudRun_Resource_NamespacesRevisions extends Google_Servic
   /**
    * Get information about a revision. (revisions.get)
    *
-   * @param string $name The name of the revision being retrieved. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the revision to retrieve. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Revision
    */
@@ -63,8 +63,9 @@ class Google_Service_CloudRun_Resource_NamespacesRevisions extends Google_Servic
   /**
    * List revisions. (revisions.listNamespacesRevisions)
    *
-   * @param string $parent The project ID or project number from which the
-   * revisions should be listed.
+   * @param string $parent The namespace from which the revisions should be
+   * listed. For Cloud Run (fully managed), replace {namespace_id} with the
+   * project ID or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string labelSelector Allows to filter resources based on a label.

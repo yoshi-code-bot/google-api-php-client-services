@@ -28,8 +28,9 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
   /**
    * Create a service. (services.create)
    *
-   * @param string $parent The project ID or project number in which this service
-   * should be created.
+   * @param string $parent The namespace in which the service should be created.
+   * For Cloud Run (fully managed), replace {namespace_id} with the project ID or
+   * number.
    * @param Google_Service_CloudRun_Service $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Service
@@ -45,8 +46,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
    * will delete the child entities like Routes, Configurations and Revisions.
    * (services.delete)
    *
-   * @param string $name The name of the service being deleted. If needed, replace
-   * {namespace_id} with the project ID.
+   * @param string $name The name of the service to delete. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string apiVersion Cloud Run currently ignores this parameter.
@@ -66,8 +67,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
   /**
    * Get information about a service. (services.get)
    *
-   * @param string $name The name of the service being retrieved. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the service to retrieve. For Cloud Run (fully
+   * managed), replace {namespace_id} with the project ID or number.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Service
    */
@@ -107,12 +108,11 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
   /**
    * List services. (services.listProjectsLocationsServices)
    *
-   * @param string $parent The project ID or project number from which the
-   * services should be listed.
+   * @param string $parent The namespace from which the services should be listed.
+   * For Cloud Run (fully managed), replace {namespace_id} with the project ID or
+   * number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string labelSelector Allows to filter resources based on a label.
-   * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string resourceVersion The baseline resource version from which
    * the list or watch operation should start. Not currently used by Cloud Run.
    * @opt_param bool includeUninitialized Not currently used by Cloud Run.
@@ -123,6 +123,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
    * @opt_param int limit The maximum number of records that should be returned.
    * @opt_param bool watch Flag that indicates that the client expects to watch
    * this resource as well. Not currently used by Cloud Run.
+   * @opt_param string labelSelector Allows to filter resources based on a label.
+   * Supported operations are =, !=, exists, in, and notIn.
    * @return Google_Service_CloudRun_ListServicesResponse
    */
   public function listProjectsLocationsServices($parent, $optParams = array())
@@ -141,8 +143,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsServices extends Google_
    * May provide metadata.resourceVersion to enforce update from last read for
    * optimistic concurrency control. (services.replaceService)
    *
-   * @param string $name The name of the service being replaced. If needed,
-   * replace {namespace_id} with the project ID.
+   * @param string $name The name of the service being replaced. For Cloud Run
+   * (fully managed), replace {namespace_id} with the project ID or number.
    * @param Google_Service_CloudRun_Service $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRun_Service

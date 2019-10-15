@@ -26,8 +26,8 @@
 class Google_Service_Compute_Resource_RegionSslCertificates extends Google_Service_Resource
 {
   /**
-   * Deletes the specified SslCertificate resource in the region.
-   * (regionSslCertificates.delete)
+   * Deletes the specified SslCertificate resource in the region. (==
+   * suppress_warning http-rest-shadowed ==) (regionSslCertificates.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -56,8 +56,8 @@ class Google_Service_Compute_Resource_RegionSslCertificates extends Google_Servi
   }
   /**
    * Returns the specified SslCertificate resource in the specified region. Get a
-   * list of available SSL certificates by making a list() request.
-   * (regionSslCertificates.get)
+   * list of available SSL certificates by making a list() request. (==
+   * suppress_warning http-rest-shadowed ==) (regionSslCertificates.get)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -73,7 +73,8 @@ class Google_Service_Compute_Resource_RegionSslCertificates extends Google_Servi
   }
   /**
    * Creates a SslCertificate resource in the specified project and region using
-   * the data included in the request (regionSslCertificates.insert)
+   * the data included in the request (== suppress_warning http-rest-shadowed ==)
+   * (regionSslCertificates.insert)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -102,7 +103,7 @@ class Google_Service_Compute_Resource_RegionSslCertificates extends Google_Servi
   }
   /**
    * Retrieves the list of SslCertificate resources available to the specified
-   * project in the specified region.
+   * project in the specified region. (== suppress_warning http-rest-shadowed ==)
    * (regionSslCertificates.listRegionSslCertificates)
    *
    * @param string $project Project ID for this request.

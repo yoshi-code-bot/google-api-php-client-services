@@ -27,7 +27,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
 {
   /**
    * Retrieves the list of all TargetHttpsProxy resources, regional and global,
-   * available to the specified project. (targetHttpsProxies.aggregatedList)
+   * available to the specified project. (== suppress_warning http-rest-shadowed
+   * ==) (targetHttpsProxies.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.
    * @param array $optParams Optional parameters.
@@ -79,7 +80,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
     return $this->call('aggregatedList', array($params), "Google_Service_Compute_TargetHttpsProxyAggregatedList");
   }
   /**
-   * Deletes the specified TargetHttpsProxy resource. (targetHttpsProxies.delete)
+   * Deletes the specified TargetHttpsProxy resource. (== suppress_warning http-
+   * rest-shadowed ==) (targetHttpsProxies.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to
@@ -108,7 +110,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
   }
   /**
    * Returns the specified TargetHttpsProxy resource. Gets a list of available
-   * target HTTPS proxies by making a list() request. (targetHttpsProxies.get)
+   * target HTTPS proxies by making a list() request. (== suppress_warning http-
+   * rest-shadowed ==) (targetHttpsProxies.get)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to
@@ -124,7 +127,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
   }
   /**
    * Creates a TargetHttpsProxy resource in the specified project using the data
-   * included in the request. (targetHttpsProxies.insert)
+   * included in the request. (== suppress_warning http-rest-shadowed ==)
+   * (targetHttpsProxies.insert)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_TargetHttpsProxy $postBody
@@ -152,7 +156,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
   }
   /**
    * Retrieves the list of TargetHttpsProxy resources available to the specified
-   * project. (targetHttpsProxies.listTargetHttpsProxies)
+   * project. (== suppress_warning http-rest-shadowed ==)
+   * (targetHttpsProxies.listTargetHttpsProxies)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -204,8 +209,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
     return $this->call('list', array($params), "Google_Service_Compute_TargetHttpsProxyList");
   }
   /**
-   * Sets the QUIC override policy for TargetHttpsProxy.
-   * (targetHttpsProxies.setQuicOverride)
+   * Sets the QUIC override policy for TargetHttpsProxy. (== suppress_warning
+   * http-rest-shadowed ==) (targetHttpsProxies.setQuicOverride)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to set
@@ -234,8 +239,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
     return $this->call('setQuicOverride', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Replaces SslCertificates for TargetHttpsProxy.
-   * (targetHttpsProxies.setSslCertificates)
+   * Replaces SslCertificates for TargetHttpsProxy. (== suppress_warning http-
+   * rest-shadowed ==) (targetHttpsProxies.setSslCertificates)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to set
@@ -267,7 +272,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    * Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
    * server-side support for SSL features. This affects connections between
    * clients and the HTTPS proxy load balancer. They do not affect the connection
-   * between the load balancer and the backends. (targetHttpsProxies.setSslPolicy)
+   * between the load balancer and the backends. (== suppress_warning http-rest-
+   * shadowed ==) (targetHttpsProxies.setSslPolicy)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource whose
@@ -297,7 +303,8 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
     return $this->call('setSslPolicy', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Changes the URL map for TargetHttpsProxy. (targetHttpsProxies.setUrlMap)
+   * Changes the URL map for TargetHttpsProxy. (== suppress_warning http-rest-
+   * shadowed ==) (targetHttpsProxies.setUrlMap)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource whose

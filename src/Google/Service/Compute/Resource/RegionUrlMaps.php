@@ -26,7 +26,8 @@
 class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resource
 {
   /**
-   * Deletes the specified UrlMap resource. (regionUrlMaps.delete)
+   * Deletes the specified UrlMap resource. (== suppress_warning http-rest-
+   * shadowed ==) (regionUrlMaps.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -45,7 +46,8 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   }
   /**
    * Returns the specified UrlMap resource. Gets a list of available URL maps by
-   * making a list() request. (regionUrlMaps.get)
+   * making a list() request. (== suppress_warning http-rest-shadowed ==)
+   * (regionUrlMaps.get)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -61,7 +63,8 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   }
   /**
    * Creates a UrlMap resource in the specified project using the data included in
-   * the request. (regionUrlMaps.insert)
+   * the request. (== suppress_warning http-rest-shadowed ==)
+   * (regionUrlMaps.insert)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -80,7 +83,8 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   }
   /**
    * Retrieves the list of UrlMap resources available to the specified project in
-   * the specified region. (regionUrlMaps.listRegionUrlMaps)
+   * the specified region. (== suppress_warning http-rest-shadowed ==)
+   * (regionUrlMaps.listRegionUrlMaps)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -135,7 +139,8 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   /**
    * Patches the specified UrlMap resource with the data included in the request.
    * This method supports PATCH semantics and uses JSON merge patch format and
-   * processing rules. (regionUrlMaps.patch)
+   * processing rules. (== suppress_warning http-rest-shadowed ==)
+   * (regionUrlMaps.patch)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -155,7 +160,7 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   }
   /**
    * Updates the specified UrlMap resource with the data included in the request.
-   * (regionUrlMaps.update)
+   * (== suppress_warning http-rest-shadowed ==) (regionUrlMaps.update)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -176,7 +181,7 @@ class Google_Service_Compute_Resource_RegionUrlMaps extends Google_Service_Resou
   /**
    * Runs static validation for the UrlMap. In particular, the tests of the
    * provided UrlMap will be run. Calling this method does NOT create the UrlMap.
-   * (regionUrlMaps.validate)
+   * (== suppress_warning http-rest-shadowed ==) (regionUrlMaps.validate)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
