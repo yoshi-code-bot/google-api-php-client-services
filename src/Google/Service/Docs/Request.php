@@ -51,6 +51,8 @@ class Google_Service_Docs_Request extends Google_Model
   protected $replaceAllTextDataType = '';
   protected $replaceImageType = 'Google_Service_Docs_ReplaceImageRequest';
   protected $replaceImageDataType = '';
+  protected $replaceNamedRangeContentType = 'Google_Service_Docs_ReplaceNamedRangeContentRequest';
+  protected $replaceNamedRangeContentDataType = '';
   protected $unmergeTableCellsType = 'Google_Service_Docs_UnmergeTableCellsRequest';
   protected $unmergeTableCellsDataType = '';
   protected $updateDocumentStyleType = 'Google_Service_Docs_UpdateDocumentStyleRequest';
@@ -303,6 +305,20 @@ class Google_Service_Docs_Request extends Google_Model
   public function getReplaceImage()
   {
     return $this->replaceImage;
+  }
+  /**
+   * @param Google_Service_Docs_ReplaceNamedRangeContentRequest
+   */
+  public function setReplaceNamedRangeContent(Google_Service_Docs_ReplaceNamedRangeContentRequest $replaceNamedRangeContent)
+  {
+    $this->replaceNamedRangeContent = $replaceNamedRangeContent;
+  }
+  /**
+   * @return Google_Service_Docs_ReplaceNamedRangeContentRequest
+   */
+  public function getReplaceNamedRangeContent()
+  {
+    return $this->replaceNamedRangeContent;
   }
   /**
    * @param Google_Service_Docs_UnmergeTableCellsRequest

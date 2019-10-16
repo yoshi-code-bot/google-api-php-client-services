@@ -50,8 +50,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasets extends 
   /**
    * Creates a new dataset containing de-identified data from the source dataset.
    * The metadata field type is OperationMetadata. If the request is successful,
-   * the response field type is DeidentifySummary. If errors occur, details field
-   * type is DeidentifyErrorDetails. Errors are also logged to Stackdriver
+   * the response field type is DeidentifySummary. If errors occur, error details
+   * field type is DeidentifyErrorDetails. Errors are also logged to Stackdriver
    * Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos
    * /stackdriver-logging). (datasets.deidentify)
    *

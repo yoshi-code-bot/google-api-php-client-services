@@ -97,7 +97,7 @@ class Google_Service_BigQueryConnectionService_Resource_ProjectsLocationsConnect
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Page token.
-   * @opt_param string maxResults Maximum number of results to return.
+   * @opt_param string maxResults Maximum number of results per page.
    * @return Google_Service_BigQueryConnectionService_ListConnectionsResponse
    */
   public function listProjectsLocationsConnections($parent, $optParams = array())

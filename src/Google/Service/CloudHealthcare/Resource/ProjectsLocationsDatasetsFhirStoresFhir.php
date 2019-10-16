@@ -35,9 +35,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * operations.html#lastn).
    *
    * Search terms are provided as query parameters following the same pattern as
-   * the search method. This operation accepts an additional query parameter
-   * `max`, which specifies N, the maximum number of Observations to return from
-   * each group, with a default of 1.
+   * the search method. The following search parameters must be provided     -
+   * `subject` or `patient` to specify a subject for the Observation.     -
+   * `code`, `category` or any of the composite parameters that include
+   * `code`. Any other valid Observation search parameters can also be provided.
+   * This operation accepts an additional query parameter `max`, which specifies
+   * N, the maximum number of Observations to return from each group, with a
+   * default of 1.
    *
    * On success, the response body will contain a JSON-encoded representation of a
    * `Bundle` resource of type `searchset`, containing the results of the
@@ -75,10 +79,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string end The response includes records prior to the end date. If
-   * no end date is provided, all records subsequent to the start date are in
-   * scope.
-   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @opt_param string pageToken Used to retrieve the next or previous page of
    * results when using pagination. Value should be set to the value of page_token
    * set in next or previous page links' urls. Next and previous page are returned
@@ -89,6 +89,10 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @opt_param string start The response includes records subsequent to the start
    * date. If no start date is provided, all records prior to the end date are in
    * scope.
+   * @opt_param string end The response includes records prior to the end date. If
+   * no end date is provided, all records subsequent to the start date are in
+   * scope.
+   * @opt_param int _count Maximum number of resources in a page. Defaults to 100.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function PatientEverything($name, $optParams = array())
@@ -360,6 +364,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $name The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string _page_token Same as `page`. Please use either `page` or
+   * `_page_token`.
+   * @opt_param string since Only include resource versions that were created at
+   * or after the given instant in time. The instant in time uses the format YYYY-
+   * MM-DDThh:mm:ss.sss+zz:zz (for example 2015-02-07T13:28:17.239+02:00 or
+   * 2017-01-01T00:00:00Z). The time must be specified to the second and include a
+   * time zone.
    * @opt_param string at Only include resource versions that were current at some
    * point during the time period specified in the date time value. The date
    * parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
@@ -377,13 +388,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is "previous" or "next".
    *
    * Omit `page` if no previous request has been made.
-   * @opt_param string _page_token Same as `page`. Please use either `page` or
-   * `_page_token`.
-   * @opt_param string since Only include resource versions that were created at
-   * or after the given instant in time. The instant in time uses the format YYYY-
-   * MM-DDThh:mm:ss.sss+zz:zz (for example 2015-02-07T13:28:17.239+02:00 or
-   * 2017-01-01T00:00:00Z). The time must be specified to the second and include a
-   * time zone.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
   public function history($name, $optParams = array())

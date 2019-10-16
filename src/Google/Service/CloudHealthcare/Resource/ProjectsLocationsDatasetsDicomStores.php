@@ -43,6 +43,27 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
     return $this->call('create', array($params), "Google_Service_CloudHealthcare_DicomStore");
   }
   /**
+   * Creates a new DICOM store containing de-identified data from the source
+   * store. The metadata field type is OperationMetadata. If the request is
+   * successful, the response field type is DeidentifyDicomStoreSummary. If errors
+   * occur, error details field type is DeidentifyErrorDetails. Errors are also
+   * logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos
+   * /stackdriver-logging)). (dicomStores.deidentify)
+   *
+   * @param string $sourceStore Source DICOM store resource name. For example, `pr
+   * ojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores
+   * /{dicom_store_id}`.
+   * @param Google_Service_CloudHealthcare_DeidentifyDicomStoreRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CloudHealthcare_Operation
+   */
+  public function deidentify($sourceStore, Google_Service_CloudHealthcare_DeidentifyDicomStoreRequest $postBody, $optParams = array())
+  {
+    $params = array('sourceStore' => $sourceStore, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('deidentify', array($params), "Google_Service_CloudHealthcare_Operation");
+  }
+  /**
    * Deletes the specified DICOM store and removes all images that are contained
    * within it. (dicomStores.delete)
    *
@@ -140,14 +161,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Restricts stores returned to those matching a
-   * filter. Syntax:
-   * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-   * Only filtering on labels is supported. For example, `labels.key=value`.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @opt_param int pageSize Limit on the number of DICOM stores to return in a
    * single response. If zero the default page size of 100 is used.
+   * @opt_param string filter Restricts stores returned to those matching a
+   * filter. Syntax:
+   * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+   * Only filtering on labels is supported. For example, `labels.key=value`.
    * @return Google_Service_CloudHealthcare_ListDicomStoresResponse
    */
   public function listProjectsLocationsDatasetsDicomStores($parent, $optParams = array())

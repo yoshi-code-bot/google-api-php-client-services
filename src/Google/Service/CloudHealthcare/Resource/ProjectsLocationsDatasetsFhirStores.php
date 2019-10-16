@@ -43,6 +43,27 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
     return $this->call('create', array($params), "Google_Service_CloudHealthcare_FhirStore");
   }
   /**
+   * Creates a new FHIR store containing de-identified data from the source store.
+   * The metadata field type is OperationMetadata. If the request is successful,
+   * the response field type is DeidentifyFhirStoreSummary. If errors occur, error
+   * details field type is DeidentifyErrorDetails. Errors are also logged to
+   * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
+   * logging)). (fhirStores.deidentify)
+   *
+   * @param string $sourceStore Source FHIR store resource name. For example, `pro
+   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{
+   * fhir_store_id}`.
+   * @param Google_Service_CloudHealthcare_DeidentifyFhirStoreRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CloudHealthcare_Operation
+   */
+  public function deidentify($sourceStore, Google_Service_CloudHealthcare_DeidentifyFhirStoreRequest $postBody, $optParams = array())
+  {
+    $params = array('sourceStore' => $sourceStore, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('deidentify', array($params), "Google_Service_CloudHealthcare_Operation");
+  }
+  /**
    * Deletes the specified FHIR store and removes all resources within it.
    * (fhirStores.delete)
    *
