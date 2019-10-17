@@ -36,8 +36,14 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For
    * translations.
    *
+   * Set this field using the language set in browser or for the page. In the
+   * event that the user's language preference is known, set this field to the
+   * known user language.
+   *
    * When specified, the documents in search results are biased towards the
-   * specified language. Suggest API does not use this parameter. It autocompletes
+   * specified language.
+   *
+   * The suggest API does not use this parameter. Instead, suggest autocompletes
    * only based on characters in the query.
    * @opt_param string requestOptions.searchApplicationId Id of the application
    * created using SearchApplicationsService.
