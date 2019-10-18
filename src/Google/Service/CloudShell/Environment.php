@@ -23,10 +23,12 @@ class Google_Service_CloudShell_Environment extends Google_Collection
   public $name;
   protected $publicKeysType = 'Google_Service_CloudShell_PublicKey';
   protected $publicKeysDataType = 'array';
+  public $size;
   public $sshHost;
   public $sshPort;
   public $sshUsername;
   public $state;
+  public $vmSizeExpireTime;
   public $webHost;
 
   public function setDockerImage($dockerImage)
@@ -67,6 +69,14 @@ class Google_Service_CloudShell_Environment extends Google_Collection
   {
     return $this->publicKeys;
   }
+  public function setSize($size)
+  {
+    $this->size = $size;
+  }
+  public function getSize()
+  {
+    return $this->size;
+  }
   public function setSshHost($sshHost)
   {
     $this->sshHost = $sshHost;
@@ -98,6 +108,14 @@ class Google_Service_CloudShell_Environment extends Google_Collection
   public function getState()
   {
     return $this->state;
+  }
+  public function setVmSizeExpireTime($vmSizeExpireTime)
+  {
+    $this->vmSizeExpireTime = $vmSizeExpireTime;
+  }
+  public function getVmSizeExpireTime()
+  {
+    return $this->vmSizeExpireTime;
   }
   public function setWebHost($webHost)
   {
