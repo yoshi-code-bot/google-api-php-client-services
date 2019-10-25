@@ -51,6 +51,9 @@ class Google_Service_SQLAdmin_Resource_BackupRuns extends Google_Service_Resourc
    * project ID.
    * @param string $id The ID of this Backup Run.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string resourceName Name of the resource backupRun. Format: projec
+   * ts/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
    * @return Google_Service_SQLAdmin_BackupRun
    */
   public function get($project, $instance, $id, $optParams = array())
@@ -68,6 +71,10 @@ class Google_Service_SQLAdmin_Resource_BackupRuns extends Google_Service_Resourc
    * project ID.
    * @param Google_Service_SQLAdmin_BackupRun $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string parent The parent resource where Cloud SQL should create
+   * this backupRun. Format:
+   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function insert($project, $instance, Google_Service_SQLAdmin_BackupRun $postBody, $optParams = array())
@@ -86,6 +93,9 @@ class Google_Service_SQLAdmin_Resource_BackupRuns extends Google_Service_Resourc
    * project ID.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string parent The parent, which owns this collection of
+   * backupRuns. Format:
+   * projects/{project}/locations/{location}/instances/{instance}
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
    * @opt_param int maxResults Maximum number of backup runs per response.
