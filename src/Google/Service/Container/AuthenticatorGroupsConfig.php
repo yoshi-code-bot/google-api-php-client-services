@@ -15,21 +15,11 @@
  * the License.
  */
 
-class Google_Service_Container_NodePoolAutoscaling extends Google_Model
+class Google_Service_Container_AuthenticatorGroupsConfig extends Google_Model
 {
-  public $autoprovisioned;
   public $enabled;
-  public $maxNodeCount;
-  public $minNodeCount;
+  public $securityGroup;
 
-  public function setAutoprovisioned($autoprovisioned)
-  {
-    $this->autoprovisioned = $autoprovisioned;
-  }
-  public function getAutoprovisioned()
-  {
-    return $this->autoprovisioned;
-  }
   public function setEnabled($enabled)
   {
     $this->enabled = $enabled;
@@ -38,20 +28,12 @@ class Google_Service_Container_NodePoolAutoscaling extends Google_Model
   {
     return $this->enabled;
   }
-  public function setMaxNodeCount($maxNodeCount)
+  public function setSecurityGroup($securityGroup)
   {
-    $this->maxNodeCount = $maxNodeCount;
+    $this->securityGroup = $securityGroup;
   }
-  public function getMaxNodeCount()
+  public function getSecurityGroup()
   {
-    return $this->maxNodeCount;
-  }
-  public function setMinNodeCount($minNodeCount)
-  {
-    $this->minNodeCount = $minNodeCount;
-  }
-  public function getMinNodeCount()
-  {
-    return $this->minNodeCount;
+    return $this->securityGroup;
   }
 }
