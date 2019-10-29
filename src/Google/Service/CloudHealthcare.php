@@ -877,19 +877,19 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'end' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 '_count' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'start' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'end' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1003,6 +1003,14 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'since' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'at' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'count' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1012,14 +1020,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                 ),
                 '_page_token' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'since' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'at' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

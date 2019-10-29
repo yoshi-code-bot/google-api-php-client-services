@@ -30,11 +30,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * equivalent to the GET requests specified in the WADO-RS standard.
    * (studies.delete)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the DeleteStudy request (for example,
-   * `studies/{study_uid}`).
+   * @param string $parent
+   * @param string $dicomWebPath The path of the DeleteStudy request. For example,
+   * `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HealthcareEmpty
    */
@@ -50,11 +48,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * edical/dicom/current/output/html/part18.html#sect_10.4.
    * (studies.retrieveMetadata)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
+   * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
+   * /dicomStores/{dicom_store_id}`.
    * @param string $dicomWebPath The path of the RetrieveStudyMetadata DICOMweb
-   * request (for example, `studies/{study_uid}/metadata`).
+   * request. For example, `studies/{study_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -69,11 +67,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
    * (studies.retrieveStudy)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
+   * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the RetrieveStudy DICOMweb request
-   * (for example, `studies/{study_uid}`).
+   * /dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath The path of the RetrieveStudy DICOMweb request.
+   * For example, `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -88,12 +86,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * a.org/medical/dicom/current/output/html/part18.html#sect_10.6.
    * (studies.searchForInstances)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
+   * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
+   * /dicomStores/{dicom_store_id}`.
    * @param string $dicomWebPath The path of the SearchForInstancesRequest
-   * DICOMweb request (for example, `instances` or `series/{series_uid}/instances`
-   * or `studies/{study_uid}/instances`).
+   * DICOMweb request. For example, `instances`, `series/{series_uid}/instances`,
+   * or `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -108,11 +106,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * medical/dicom/current/output/html/part18.html#sect_10.6.
    * (studies.searchForSeries)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
+   * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the SearchForSeries DICOMweb
-   * request(for example, `series` or `studies/{study_uid}/series`).
+   * /dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath The path of the SearchForSeries DICOMweb request.
+   * For example, `series` or `studies/{study_uid}/series`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
    */
@@ -127,12 +125,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * identifiers (SUID). See http://dicom.nema.org/medical/dicom/current/output/ht
    * ml/part18.html#sect_10.5. (studies.storeInstances)
    *
-   * @param string $parent The name of the DICOM store that is being accessed (for
+   * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`).
-   * @param string $dicomWebPath The path of the StoreInstances DICOMweb request
-   * (for example, `studies/[{study_uid}]`). Note that the `study_uid` is
-   * optional.
+   * /dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath The path of the StoreInstances DICOMweb request.
+   * For example, `studies/[{study_uid}]`. Note that the `study_uid` is optional.
    * @param Google_Service_CloudHealthcare_HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudHealthcare_HttpBody
