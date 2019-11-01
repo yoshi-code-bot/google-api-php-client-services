@@ -51,13 +51,13 @@ class Google_Service_CloudTalentSolution_Resource_Projects extends Google_Servic
    * or companies having open jobs with the same language_codes are returned.
    *
    * The maximum number of allowed characters is 255.
+   * @opt_param string scope Optional. The scope of the completion. The defaults
+   * is CompletionScope.PUBLIC.
    * @opt_param string companyName Optional. If provided, restricts completion to
    * specified company.
    *
    * The format is "projects/{project_id}/companies/{company_id}", for example,
    * "projects/api-test-project/companies/foo".
-   * @opt_param string scope Optional. The scope of the completion. The defaults
-   * is CompletionScope.PUBLIC.
    * @opt_param int pageSize Required. Completion result count.
    *
    * The maximum allowed page size is 10.

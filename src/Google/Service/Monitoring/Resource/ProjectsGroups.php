@@ -82,8 +82,6 @@ class Google_Service_Monitoring_Resource_ProjectsGroups extends Google_Service_R
    * "projects/{project_id_or_number}".
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize A positive number that is the maximum number of
-   * results to return.
    * @opt_param string ancestorsOfGroup A group name:
    * "projects/{project_id_or_number}/groups/{group_id}". Returns groups that are
    * ancestors of the specified group. The groups are returned in order, starting
@@ -101,6 +99,8 @@ class Google_Service_Monitoring_Resource_ProjectsGroups extends Google_Service_R
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous
    * method call.
+   * @opt_param int pageSize A positive number that is the maximum number of
+   * results to return.
    * @return Google_Service_Monitoring_ListGroupsResponse
    */
   public function listProjectsGroups($name, $optParams = array())

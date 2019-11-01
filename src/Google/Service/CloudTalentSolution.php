@@ -78,11 +78,11 @@ class Google_Service_CloudTalentSolution extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'companyName' => array(
+                'scope' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'scope' => array(
+                'companyName' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
