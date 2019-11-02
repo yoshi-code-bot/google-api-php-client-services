@@ -19,8 +19,8 @@
  * The "instances" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqlService = new Google_Service_SQLAdmin(...);
- *   $instances = $sqlService->instances;
+ *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $instances = $sqladminService->instances;
  *  </code>
  */
 class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
@@ -36,10 +36,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL should add this
-   * server CA. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function addServerCa($project, $instance, $optParams = array())
@@ -58,10 +54,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * (source). This does not include the project ID.
    * @param Google_Service_SQLAdmin_InstancesCloneRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL should clone
-   * this instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function cloneInstances($project, $instance, Google_Service_SQLAdmin_InstancesCloneRequest $postBody, $optParams = array())
@@ -94,10 +86,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Cloud SQL instance name.
    * @param Google_Service_SQLAdmin_InstancesDemoteMasterRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL demotes this
-   * master database instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function demoteMaster($project, $instance, Google_Service_SQLAdmin_InstancesDemoteMasterRequest $postBody, $optParams = array())
@@ -116,10 +104,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesExportRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL exports this
-   * database instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function export($project, $instance, Google_Service_SQLAdmin_InstancesExportRequest $postBody, $optParams = array())
@@ -136,10 +120,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesFailoverRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL sends this
-   * database instance during a failover. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function failover($project, $instance, Google_Service_SQLAdmin_InstancesFailoverRequest $postBody, $optParams = array())
@@ -156,9 +136,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string resourceName Name of the resource database instance.
-   * Format: projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_DatabaseInstance
    */
   public function get($project, $instance, $optParams = array())
@@ -168,7 +145,7 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_SQLAdmin_DatabaseInstance");
   }
   /**
-   * Imports data into a Cloud SQL instance from a SQL dump  or CSV file in Cloud
+   * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud
    * Storage. (instances.import)
    *
    * @param string $project Project ID of the project that contains the instance.
@@ -176,10 +153,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesImportRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL imports this
-   * database instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function import($project, $instance, Google_Service_SQLAdmin_InstancesImportRequest $postBody, $optParams = array())
@@ -195,9 +168,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * Cloud SQL instances should belong.
    * @param Google_Service_SQLAdmin_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL creates this
-   * database instance. Format: projects/{project}/locations/{location}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function insert($project, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
@@ -214,12 +184,12 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * instances.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A previously-returned page token representing
-   * part of the larger set of results to view.
-   * @opt_param string maxResults The maximum number of results to return per
-   * response.
    * @opt_param string filter An expression for filtering the results of the
    * request, such as by name or label.
+   * @opt_param string maxResults The maximum number of results to return per
+   * response.
+   * @opt_param string pageToken A previously-returned page token representing
+   * part of the larger set of results to view.
    * @return Google_Service_SQLAdmin_InstancesListResponse
    */
   public function listInstances($project, $optParams = array())
@@ -239,9 +209,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent, which owns this collection of server
-   * CAs. Format: projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_InstancesListServerCasResponse
    */
   public function listServerCas($project, $instance, $optParams = array())
@@ -251,7 +218,9 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
     return $this->call('listServerCas', array($params), "Google_Service_SQLAdmin_InstancesListServerCasResponse");
   }
   /**
-   * Updates settings of a Cloud SQL instance. This method supports patch
+   * Updates settings of a Cloud SQL instance. Caution: This is not a partial
+   * update, so you must include values for all the settings that you want to
+   * retain. For partial updates, use patch.. This method supports patch
    * semantics. (instances.patch)
    *
    * @param string $project Project ID of the project that contains the instance.
@@ -274,9 +243,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL promotes this
-   * replica database instance. Format: projects/{project}/locations/{location}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function promoteReplica($project, $instance, $optParams = array())
@@ -293,9 +259,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL resets this SSL
-   * config. Format: projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function resetSslConfig($project, $instance, $optParams = array())
@@ -312,10 +275,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL restarts this
-   * database instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function restart($project, $instance, $optParams = array())
@@ -332,10 +291,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesRestoreBackupRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL restores this
-   * database instance from backup. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function restoreBackup($project, $instance, Google_Service_SQLAdmin_InstancesRestoreBackupRequest $postBody, $optParams = array())
@@ -354,10 +309,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesRotateServerCaRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL rotates these
-   * server CAs. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function rotateServerCa($project, $instance, Google_Service_SQLAdmin_InstancesRotateServerCaRequest $postBody, $optParams = array())
@@ -372,10 +323,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL starts this
-   * database instance replication. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function startReplica($project, $instance, $optParams = array())
@@ -390,10 +337,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL stops this
-   * database instance replication. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function stopReplica($project, $instance, $optParams = array())
@@ -410,9 +353,6 @@ class Google_Service_SQLAdmin_Resource_Instances extends Google_Service_Resource
    * project ID.
    * @param Google_Service_SQLAdmin_InstancesTruncateLogRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL truncates this
-   * log. Format: projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function truncateLog($project, $instance, Google_Service_SQLAdmin_InstancesTruncateLogRequest $postBody, $optParams = array())

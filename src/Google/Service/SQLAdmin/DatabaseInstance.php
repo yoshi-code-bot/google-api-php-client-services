@@ -46,8 +46,6 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   protected $replicaConfigurationDataType = '';
   public $replicaNames;
   public $rootPassword;
-  protected $scheduledMaintenanceType = 'Google_Service_SQLAdmin_SqlScheduledMaintenance';
-  protected $scheduledMaintenanceDataType = '';
   public $selfLink;
   protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
   protected $serverCaCertDataType = '';
@@ -268,20 +266,6 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public function getRootPassword()
   {
     return $this->rootPassword;
-  }
-  /**
-   * @param Google_Service_SQLAdmin_SqlScheduledMaintenance
-   */
-  public function setScheduledMaintenance(Google_Service_SQLAdmin_SqlScheduledMaintenance $scheduledMaintenance)
-  {
-    $this->scheduledMaintenance = $scheduledMaintenance;
-  }
-  /**
-   * @return Google_Service_SQLAdmin_SqlScheduledMaintenance
-   */
-  public function getScheduledMaintenance()
-  {
-    return $this->scheduledMaintenance;
   }
   public function setSelfLink($selfLink)
   {

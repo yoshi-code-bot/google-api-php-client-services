@@ -9488,6 +9488,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'drainTimeoutSeconds' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',

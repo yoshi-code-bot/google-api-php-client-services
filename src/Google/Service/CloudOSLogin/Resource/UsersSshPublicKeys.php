@@ -43,9 +43,9 @@ class Google_Service_CloudOSLogin_Resource_UsersSshPublicKeys extends Google_Ser
   /**
    * Retrieves an SSH public key. (sshPublicKeys.get)
    *
-   * @param string $name The fingerprint of the public key to retrieve. Public
-   * keys are identified by their SHA-256 fingerprint. The fingerprint of the
-   * public key is in format `users/{user}/sshPublicKeys/{fingerprint}`.
+   * @param string $name Required. The fingerprint of the public key to retrieve.
+   * Public keys are identified by their SHA-256 fingerprint. The fingerprint of
+   * the public key is in format `users/{user}/sshPublicKeys/{fingerprint}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudOSLogin_SshPublicKey
    */
