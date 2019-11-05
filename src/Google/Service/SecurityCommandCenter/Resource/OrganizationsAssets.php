@@ -48,6 +48,51 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * to. Its format is "organizations/[organization_id]".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Expression that defines the filter to apply across
+   * assets. The expression is a list of zero or more restrictions combined via
+   * logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
+   * higher precedence than `AND`.
+   *
+   * Restrictions have the form `  ` and may have a `-` character in front of them
+   * to indicate negation. The fields map to those defined in the Asset resource.
+   * Examples include:
+   *
+   * * name * security_center_properties.resource_name *
+   * resource_properties.a_property * security_marks.marks.marka
+   *
+   * The supported operators are:
+   *
+   * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`,
+   * meaning substring matching, for strings.
+   *
+   * The supported value types are:
+   *
+   * * string literals in quotes. * integer literals without quotes. * boolean
+   * literals `true` and `false` without quotes.
+   *
+   * The following are the allowed field and operator combinations:
+   *
+   * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.
+   * Examples:     "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time
+   * = 1560208038000"
+   *
+   * * create_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.
+   * Examples:     "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time
+   * = 1560208038000"
+   *
+   * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`,
+   * `>=`, `<=` * security_marks.marks: `=`, `:` *
+   * security_center_properties.resource_name: `=`, `:` *
+   * security_center_properties.resource_type: `=`, `:` *
+   * security_center_properties.resource_parent: `=`, `:` *
+   * security_center_properties.resource_project: `=`, `:` *
+   * security_center_properties.resource_owners: `=`, `:`
+   *
+   * For example, `resource_properties.size = 100` is a valid filter string.
    * @opt_param string pageToken The value returned by the last
    * `ListAssetsResponse`; indicates that this is a continuation of a prior
    * `ListAssets` call, and that the system should return the next page of data.
@@ -97,51 +142,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * If compare_duration is not specified, then the only possible state_change is
    * "UNUSED",  which will be the state_change set for all assets present at
    * read_time.
-   * @opt_param string filter Expression that defines the filter to apply across
-   * assets. The expression is a list of zero or more restrictions combined via
-   * logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
-   * higher precedence than `AND`.
-   *
-   * Restrictions have the form `  ` and may have a `-` character in front of them
-   * to indicate negation. The fields map to those defined in the Asset resource.
-   * Examples include:
-   *
-   * * name * security_center_properties.resource_name *
-   * resource_properties.a_property * security_marks.marks.marka
-   *
-   * The supported operators are:
-   *
-   * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`,
-   * meaning substring matching, for strings.
-   *
-   * The supported value types are:
-   *
-   * * string literals in quotes. * integer literals without quotes. * boolean
-   * literals `true` and `false` without quotes.
-   *
-   * The following are the allowed field and operator combinations:
-   *
-   * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
-   *
-   *   Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples:     "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time
-   * = 1560208038000"
-   *
-   * * create_time: `=`, `>`, `<`, `>=`, `<=`
-   *
-   *   Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples:     "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time
-   * = 1560208038000"
-   *
-   * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`,
-   * `>=`, `<=` * security_marks.marks: `=`, `:` *
-   * security_center_properties.resource_name: `=`, `:` *
-   * security_center_properties.resource_type: `=`, `:` *
-   * security_center_properties.resource_parent: `=`, `:` *
-   * security_center_properties.resource_project: `=`, `:` *
-   * security_center_properties.resource_owners: `=`, `:`
-   *
-   * For example, `resource_properties.size = 100` is a valid filter string.
    * @return Google_Service_SecurityCommandCenter_ListAssetsResponse
    */
   public function listOrganizationsAssets($parent, $optParams = array())
@@ -174,19 +174,20 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    *
    * @param string $name The relative resource name of the SecurityMarks. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name
-   * Examples: "organizations/123/assets/456/securityMarks"
-   * "organizations/123/sources/456/findings/789/securityMarks".
+   * Examples: "organizations/{organization_id}/assets/{asset_id}/securityMarks" "
+   * organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/sec
+   * urityMarks".
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())
