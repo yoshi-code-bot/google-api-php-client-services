@@ -29,8 +29,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * Activate a job trigger. Causes the immediate execute of a trigger instead of
    * waiting on the trigger event to occur. (jobTriggers.activate)
    *
-   * @param string $name Resource name of the trigger to activate, for example
-   * `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param string $name Required. Resource name of the trigger to activate, for
+   * example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param Google_Service_DLP_GooglePrivacyDlpV2ActivateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DlpJob
@@ -47,8 +47,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
    * (jobTriggers.create)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger
@@ -63,8 +63,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-
    * triggers to learn more. (jobTriggers.delete)
    *
-   * @param string $name Resource name of the project and the triggeredJob, for
-   * example `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param string $name Required. Resource name of the project and the
+   * triggeredJob, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GoogleProtobufEmpty
    */
@@ -78,8 +78,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-
    * triggers to learn more. (jobTriggers.get)
    *
-   * @param string $name Resource name of the project and the triggeredJob, for
-   * example `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param string $name Required. Resource name of the project and the
+   * triggeredJob, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger
    */
@@ -93,8 +93,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-
    * triggers to learn more. (jobTriggers.listProjectsJobTriggers)
    *
-   * @param string $parent The parent resource name, for example `projects/my-
-   * project-id`.
+   * @param string $parent Required. The parent resource name, for example
+   * `projects/my-project-id`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional page token to continue retrieval. Comes
@@ -150,8 +150,8 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-
    * triggers to learn more. (jobTriggers.patch)
    *
-   * @param string $name Resource name of the project and the triggeredJob, for
-   * example `projects/dlp-test-project/jobTriggers/53234423`.
+   * @param string $name Required. Resource name of the project and the
+   * triggeredJob, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param Google_Service_DLP_GooglePrivacyDlpV2UpdateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger

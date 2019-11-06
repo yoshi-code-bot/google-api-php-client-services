@@ -32,7 +32,8 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
    * (dlpJobs.cancel)
    *
-   * @param string $name The name of the DlpJob resource to be cancelled.
+   * @param string $name Required. The name of the DlpJob resource to be
+   * cancelled.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CancelDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GoogleProtobufEmpty
@@ -53,8 +54,8 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * be all types, but may change over time as detectors are updated.
    * (dlpJobs.create)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DlpJob
@@ -72,7 +73,7 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
    * (dlpJobs.delete)
    *
-   * @param string $name The name of the DlpJob resource to be deleted.
+   * @param string $name Required. The name of the DlpJob resource to be deleted.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GoogleProtobufEmpty
    */
@@ -88,7 +89,7 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
    * (dlpJobs.get)
    *
-   * @param string $name The name of the DlpJob resource.
+   * @param string $name Required. The name of the DlpJob resource.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DlpJob
    */
@@ -104,8 +105,8 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
    * (dlpJobs.listProjectsDlpJobs)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Optional comma separated list of fields to order

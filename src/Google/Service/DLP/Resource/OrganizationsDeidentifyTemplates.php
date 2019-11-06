@@ -31,8 +31,8 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
    * (deidentifyTemplates.create)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id or organizations/my-org-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id or organizations/my-org-id.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateDeidentifyTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DeidentifyTemplate
@@ -47,8 +47,8 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-
    * templates-deid to learn more. (deidentifyTemplates.delete)
    *
-   * @param string $name Resource name of the organization and deidentify template
-   * to be deleted, for example
+   * @param string $name Required. Resource name of the organization and
+   * deidentify template to be deleted, for example
    * `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
    * id/deidentifyTemplates/432452342.
    * @param array $optParams Optional parameters.
@@ -64,8 +64,8 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-
    * templates-deid to learn more. (deidentifyTemplates.get)
    *
-   * @param string $name Resource name of the organization and deidentify template
-   * to be read, for example
+   * @param string $name Required. Resource name of the organization and
+   * deidentify template to be read, for example
    * `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
    * id/deidentifyTemplates/432452342.
    * @param array $optParams Optional parameters.
@@ -82,8 +82,8 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * templates-deid to learn more.
    * (deidentifyTemplates.listOrganizationsDeidentifyTemplates)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id or organizations/my-org-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id or organizations/my-org-id.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional page token to continue retrieval. Comes
@@ -115,8 +115,8 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs
    * /creating-templates-deid to learn more. (deidentifyTemplates.patch)
    *
-   * @param string $name Resource name of organization and deidentify template to
-   * be updated, for example
+   * @param string $name Required. Resource name of organization and deidentify
+   * template to be updated, for example
    * `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
    * id/deidentifyTemplates/432452342.
    * @param Google_Service_DLP_GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest $postBody

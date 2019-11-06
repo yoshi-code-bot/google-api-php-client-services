@@ -79,7 +79,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsContent extends Google_Servic
    * https://cloud.google.com/dlp/docs/pseudonymization#re-
    * identification_in_free_text_code_example to learn more. (content.reidentify)
    *
-   * @param string $parent The parent resource name.
+   * @param string $parent Required. The parent resource name.
    * @param string $location The geographic location to process content
    * reidentification.  Reserved for future extensions.
    * @param Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentRequest $postBody

@@ -30,8 +30,8 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
    * (storedInfoTypes.create)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id or organizations/my-org-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id or organizations/my-org-id.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
@@ -46,9 +46,10 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-
    * stored-infotypes to learn more. (storedInfoTypes.delete)
    *
-   * @param string $name Resource name of the organization and storedInfoType to
-   * be deleted, for example `organizations/433245324/storedInfoTypes/432452342`
-   * or projects/project-id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of the organization and
+   * storedInfoType to be deleted, for example
+   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
+   * id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GoogleProtobufEmpty
    */
@@ -62,9 +63,10 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-
    * stored-infotypes to learn more. (storedInfoTypes.get)
    *
-   * @param string $name Resource name of the organization and storedInfoType to
-   * be read, for example `organizations/433245324/storedInfoTypes/432452342` or
-   * projects/project-id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of the organization and
+   * storedInfoType to be read, for example
+   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
+   * id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
    */
@@ -79,8 +81,8 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * stored-infotypes to learn more.
    * (storedInfoTypes.listOrganizationsStoredInfoTypes)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id or organizations/my-org-id.
+   * @param string $parent Required. The parent resource name, for example
+   * projects/my-project-id or organizations/my-org-id.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional page token to continue retrieval. Comes
@@ -114,9 +116,10 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
    * (storedInfoTypes.patch)
    *
-   * @param string $name Resource name of organization and storedInfoType to be
-   * updated, for example `organizations/433245324/storedInfoTypes/432452342` or
-   * projects/project-id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of organization and
+   * storedInfoType to be updated, for example
+   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
+   * id/storedInfoTypes/432452342.
    * @param Google_Service_DLP_GooglePrivacyDlpV2UpdateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
