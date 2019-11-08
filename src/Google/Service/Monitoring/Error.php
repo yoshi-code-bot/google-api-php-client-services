@@ -15,16 +15,32 @@
  * the License.
  */
 
-class Google_Service_BigQueryReservation_CreateCapacityCommitmentMetadata extends Google_Model
+class Google_Service_Monitoring_Error extends Google_Model
 {
-  public $capacityCommitment;
+  public $pointCount;
+  protected $statusType = 'Google_Service_Monitoring_Status';
+  protected $statusDataType = '';
 
-  public function setCapacityCommitment($capacityCommitment)
+  public function setPointCount($pointCount)
   {
-    $this->capacityCommitment = $capacityCommitment;
+    $this->pointCount = $pointCount;
   }
-  public function getCapacityCommitment()
+  public function getPointCount()
   {
-    return $this->capacityCommitment;
+    return $this->pointCount;
+  }
+  /**
+   * @param Google_Service_Monitoring_Status
+   */
+  public function setStatus(Google_Service_Monitoring_Status $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return Google_Service_Monitoring_Status
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
 }
