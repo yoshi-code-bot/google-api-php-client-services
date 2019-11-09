@@ -48,12 +48,12 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * number.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @opt_param string propagationPolicy Specifies the propagation policy of
    * delete. Cloud Run currently ignores this setting, and deletes in the
    * background. Please see kubernetes.io/docs/concepts/workloads/controllers
    * /garbage-collection/ for more information.
    * @opt_param string kind Cloud Run currently ignores this parameter.
-   * @opt_param string apiVersion Cloud Run currently ignores this parameter.
    * @return Google_Service_CloudRun_Status
    */
   public function delete($name, $optParams = array())
@@ -85,6 +85,7 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * domain mappings should be listed.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string continue Optional encoded string to continue paging.
    * @opt_param int limit The maximum number of records that should be returned.
    * @opt_param bool watch Flag that indicates that the client expects to watch
    * this resource as well. Not currently used by Cloud Run.
@@ -96,7 +97,6 @@ class Google_Service_CloudRun_Resource_NamespacesAutodomainmappings extends Goog
    * @opt_param string fieldSelector Allows to filter resources based on a
    * specific value for a field name. Send this in a query string format. i.e.
    * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-   * @opt_param string continue Optional encoded string to continue paging.
    * @return Google_Service_CloudRun_ListAutoDomainMappingsResponse
    */
   public function listNamespacesAutodomainmappings($parent, $optParams = array())
