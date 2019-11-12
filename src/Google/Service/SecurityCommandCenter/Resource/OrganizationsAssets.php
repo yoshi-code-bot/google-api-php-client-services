@@ -48,6 +48,29 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * to. Its format is "organizations/[organization_id]".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string compareDuration When compare_duration is set, the
+   * ListAssetsResult's "state_change" attribute is updated to indicate whether
+   * the asset was added, removed, or remained present during the compare_duration
+   * period of time that precedes the read_time. This is the time between
+   * (read_time - compare_duration) and read_time.
+   *
+   * The state_change value is derived based on the presence of the asset at the
+   * two points in time. Intermediate state changes between the two times don't
+   * affect the result. For example, the results aren't affected if the asset is
+   * removed and re-created again.
+   *
+   * Possible "state_change" values when compare_duration is specified:
+   *
+   * * "ADDED":   indicates that the asset was not present at the start of
+   * compare_duration, but present at read_time. * "REMOVED": indicates that the
+   * asset was present at the start of                compare_duration, but not
+   * present at read_time. * "ACTIVE":  indicates that the asset was present at
+   * both the                start and the end of the time period defined by
+   * compare_duration and read_time.
+   *
+   * If compare_duration is not specified, then the only possible state_change is
+   * "UNUSED",  which will be the state_change set for all assets present at
+   * read_time.
    * @opt_param string filter Expression that defines the filter to apply across
    * assets. The expression is a list of zero or more restrictions combined via
    * logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
@@ -119,29 +142,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * security_center_properties.resource_parent
    * security_center_properties.resource_project
    * security_center_properties.resource_type
-   * @opt_param string compareDuration When compare_duration is set, the
-   * ListAssetsResult's "state_change" attribute is updated to indicate whether
-   * the asset was added, removed, or remained present during the compare_duration
-   * period of time that precedes the read_time. This is the time between
-   * (read_time - compare_duration) and read_time.
-   *
-   * The state_change value is derived based on the presence of the asset at the
-   * two points in time. Intermediate state changes between the two times don't
-   * affect the result. For example, the results aren't affected if the asset is
-   * removed and re-created again.
-   *
-   * Possible "state_change" values when compare_duration is specified:
-   *
-   * * "ADDED":   indicates that the asset was not present at the start of
-   * compare_duration, but present at read_time. * "REMOVED": indicates that the
-   * asset was present at the start of                compare_duration, but not
-   * present at read_time. * "ACTIVE":  indicates that the asset was present at
-   * both the                start and the end of the time period defined by
-   * compare_duration and read_time.
-   *
-   * If compare_duration is not specified, then the only possible state_change is
-   * "UNUSED",  which will be the state_change set for all assets present at
-   * read_time.
    * @return Google_Service_SecurityCommandCenter_ListAssetsResponse
    */
   public function listOrganizationsAssets($parent, $optParams = array())
@@ -180,14 +180,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())
