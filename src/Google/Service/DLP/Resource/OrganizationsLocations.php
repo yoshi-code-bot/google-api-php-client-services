@@ -15,25 +15,14 @@
  * the License.
  */
 
-class Google_Service_FirebaseCloudMessaging_WebpushFcmOptions extends Google_Model
+/**
+ * The "locations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $dlpService = new Google_Service_DLP(...);
+ *   $locations = $dlpService->locations;
+ *  </code>
+ */
+class Google_Service_DLP_Resource_OrganizationsLocations extends Google_Service_Resource
 {
-  public $analyticsLabel;
-  public $link;
-
-  public function setAnalyticsLabel($analyticsLabel)
-  {
-    $this->analyticsLabel = $analyticsLabel;
-  }
-  public function getAnalyticsLabel()
-  {
-    return $this->analyticsLabel;
-  }
-  public function setLink($link)
-  {
-    $this->link = $link;
-  }
-  public function getLink()
-  {
-    return $this->link;
-  }
 }

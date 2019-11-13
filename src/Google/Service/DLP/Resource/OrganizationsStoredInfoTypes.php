@@ -102,6 +102,9 @@ class Google_Service_DLP_Resource_OrganizationsStoredInfoTypes extends Google_Se
    * display name.
    * @opt_param int pageSize Optional size of the page, can be limited by server.
    * If zero server returns a page of max size 100.
+   * @opt_param string locationId The geographic location where stored infoTypes
+   * will be retrieved from. Use `-` for all locations. Reserved for future
+   * extensions.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListStoredInfoTypesResponse
    */
   public function listOrganizationsStoredInfoTypes($parent, $optParams = array())

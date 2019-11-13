@@ -23,7 +23,7 @@
  *   $storedInfoTypes = $dlpService->storedInfoTypes;
  *  </code>
  */
-class Google_Service_DLP_Resource_ProjectsStoredInfoTypes extends Google_Service_Resource
+class Google_Service_DLP_Resource_OrganizationsLocationsStoredInfoTypes extends Google_Service_Resource
 {
   /**
    * Creates a pre-built stored infoType to be used for inspection. See
@@ -32,13 +32,15 @@ class Google_Service_DLP_Resource_ProjectsStoredInfoTypes extends Google_Service
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id or organizations/my-org-id.
+   * @param string $locationId The geographic location to store the stored
+   * infoType. Reserved for future extensions.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
    */
-  public function create($parent, Google_Service_DLP_GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody, $optParams = array())
+  public function create($parent, $locationId, Google_Service_DLP_GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'locationId' => $locationId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('create', array($params), "Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType");
   }
@@ -78,10 +80,13 @@ class Google_Service_DLP_Resource_ProjectsStoredInfoTypes extends Google_Service
   }
   /**
    * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-
-   * stored-infotypes to learn more. (storedInfoTypes.listProjectsStoredInfoTypes)
+   * stored-infotypes to learn more.
+   * (storedInfoTypes.listOrganizationsLocationsStoredInfoTypes)
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id or organizations/my-org-id.
+   * @param string $locationId The geographic location where stored infoTypes will
+   * be retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional page token to continue retrieval. Comes
@@ -101,14 +106,11 @@ class Google_Service_DLP_Resource_ProjectsStoredInfoTypes extends Google_Service
    * display name.
    * @opt_param int pageSize Optional size of the page, can be limited by server.
    * If zero server returns a page of max size 100.
-   * @opt_param string locationId The geographic location where stored infoTypes
-   * will be retrieved from. Use `-` for all locations. Reserved for future
-   * extensions.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListStoredInfoTypesResponse
    */
-  public function listProjectsStoredInfoTypes($parent, $optParams = array())
+  public function listOrganizationsLocationsStoredInfoTypes($parent, $locationId, $optParams = array())
   {
-    $params = array('parent' => $parent);
+    $params = array('parent' => $parent, 'locationId' => $locationId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ListStoredInfoTypesResponse");
   }

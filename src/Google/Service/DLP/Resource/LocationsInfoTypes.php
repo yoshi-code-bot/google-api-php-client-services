@@ -30,8 +30,8 @@ class Google_Service_DLP_Resource_LocationsInfoTypes extends Google_Service_Reso
    * See https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
    * (infoTypes.listLocationsInfoTypes)
    *
-   * @param string $location The geographic location to list info types. Reserved
-   * for future extensions.
+   * @param string $locationId The geographic location to list info types.
+   * Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string languageCode Optional BCP-47 language code for localized
@@ -41,9 +41,9 @@ class Google_Service_DLP_Resource_LocationsInfoTypes extends Google_Service_Reso
    * by certain parts of the API. Defaults to supported_by=INSPECT.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInfoTypesResponse
    */
-  public function listLocationsInfoTypes($location, $optParams = array())
+  public function listLocationsInfoTypes($locationId, $optParams = array())
   {
-    $params = array('location' => $location);
+    $params = array('locationId' => $locationId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ListInfoTypesResponse");
   }

@@ -23,7 +23,7 @@
  *   $inspectTemplates = $dlpService->inspectTemplates;
  *  </code>
  */
-class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Service_Resource
+class Google_Service_DLP_Resource_OrganizationsLocationsInspectTemplates extends Google_Service_Resource
 {
   /**
    * Creates an InspectTemplate for re-using frequently used configuration for
@@ -33,13 +33,15 @@ class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Servic
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id or organizations/my-org-id.
+   * @param string $locationId The geographic location to store the inspection
+   * template. Reserved for future extensions.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateInspectTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2InspectTemplate
    */
-  public function create($parent, Google_Service_DLP_GooglePrivacyDlpV2CreateInspectTemplateRequest $postBody, $optParams = array())
+  public function create($parent, $locationId, Google_Service_DLP_GooglePrivacyDlpV2CreateInspectTemplateRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'locationId' => $locationId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('create', array($params), "Google_Service_DLP_GooglePrivacyDlpV2InspectTemplate");
   }
@@ -79,10 +81,14 @@ class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Servic
   }
   /**
    * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-
-   * templates to learn more. (inspectTemplates.listProjectsInspectTemplates)
+   * templates to learn more.
+   * (inspectTemplates.listOrganizationsLocationsInspectTemplates)
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id or organizations/my-org-id.
+   * @param string $locationId The geographic location where inspection templates
+   * will be retrieved from. Use `-` for all locations. Reserved for future
+   * extensions.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional page token to continue retrieval. Comes
@@ -102,14 +108,11 @@ class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Servic
    * display name.
    * @opt_param int pageSize Optional size of the page, can be limited by server.
    * If zero server returns a page of max size 100.
-   * @opt_param string locationId The geographic location where inspection
-   * templates will be retrieved from. Use `-` for all locations. Reserved for
-   * future extensions.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInspectTemplatesResponse
    */
-  public function listProjectsInspectTemplates($parent, $optParams = array())
+  public function listOrganizationsLocationsInspectTemplates($parent, $locationId, $optParams = array())
   {
-    $params = array('parent' => $parent);
+    $params = array('parent' => $parent, 'locationId' => $locationId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ListInspectTemplatesResponse");
   }

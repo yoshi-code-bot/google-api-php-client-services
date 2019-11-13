@@ -23,7 +23,7 @@
  *   $dlpJobs = $dlpService->dlpJobs;
  *  </code>
  */
-class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resource
+class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Service_Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running DlpJob. The server makes a
@@ -56,13 +56,15 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id.
+   * @param string $locationId The geographic location to store and process the
+   * job. Reserved for future extensions.
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DlpJob
    */
-  public function create($parent, Google_Service_DLP_GooglePrivacyDlpV2CreateDlpJobRequest $postBody, $optParams = array())
+  public function create($parent, $locationId, Google_Service_DLP_GooglePrivacyDlpV2CreateDlpJobRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'locationId' => $locationId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('create', array($params), "Google_Service_DLP_GooglePrivacyDlpV2DlpJob");
   }
@@ -103,12 +105,16 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * Lists DlpJobs that match the specified filter in the request. See
    * https://cloud.google.com/dlp/docs/inspecting-storage and
    * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-   * (dlpJobs.listProjectsDlpJobs)
+   * (dlpJobs.listProjectsLocationsDlpJobs)
    *
    * @param string $parent Required. The parent resource name, for example
    * projects/my-project-id.
+   * @param string $locationId The geographic location where jobs will be
+   * retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken The standard list page token.
+   * @opt_param int pageSize The standard list page size.
    * @opt_param string orderBy Optional comma separated list of fields to order
    * by, followed by `asc` or `desc` postfix. This list is case-insensitive,
    * default sorting order is ascending, redundant space characters are
@@ -147,15 +153,11 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    * \"2017-12-12T00:00:00+00:00\"
    *
    * The length of this field should be no more than 500 characters.
-   * @opt_param string pageToken The standard list page token.
-   * @opt_param string locationId The geographic location where jobs will be
-   * retrieved from. Use `-` for all locations. Reserved for future extensions.
-   * @opt_param int pageSize The standard list page size.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse
    */
-  public function listProjectsDlpJobs($parent, $optParams = array())
+  public function listProjectsLocationsDlpJobs($parent, $locationId, $optParams = array())
   {
-    $params = array('parent' => $parent);
+    $params = array('parent' => $parent, 'locationId' => $locationId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse");
   }

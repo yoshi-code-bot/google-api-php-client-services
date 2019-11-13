@@ -102,6 +102,9 @@ class Google_Service_DLP_Resource_OrganizationsInspectTemplates extends Google_S
    * display name.
    * @opt_param int pageSize Optional size of the page, can be limited by server.
    * If zero server returns a page of max size 100.
+   * @opt_param string locationId The geographic location where inspection
+   * templates will be retrieved from. Use `-` for all locations. Reserved for
+   * future extensions.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInspectTemplatesResponse
    */
   public function listOrganizationsInspectTemplates($parent, $optParams = array())
