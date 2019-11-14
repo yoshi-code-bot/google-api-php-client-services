@@ -26,7 +26,10 @@
 class Google_Service_CloudSearch_Resource_StatsQuerySearchapplications extends Google_Service_Resource
 {
   /**
-   * Get the query statistics for search application (searchapplications.get)
+   * Get the query statistics for search application.
+   *
+   * **Note:** This API requires a standard end user account to execute.
+   * (searchapplications.get)
    *
    * @param string $name The resource id of the search application query stats, in
    * the following format: searchapplications/{application_id}

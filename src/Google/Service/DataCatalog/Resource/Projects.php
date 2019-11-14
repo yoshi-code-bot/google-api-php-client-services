@@ -15,16 +15,14 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_GmailActionRestrict extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $datacatalogService = new Google_Service_DataCatalog(...);
+ *   $projects = $datacatalogService->projects;
+ *  </code>
+ */
+class Google_Service_DataCatalog_Resource_Projects extends Google_Service_Resource
 {
-  public $type;
-
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
 }

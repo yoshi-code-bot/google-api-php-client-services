@@ -27,6 +27,8 @@ class Google_Service_CloudSearch_Resource_DebugIdentitysourcesItems extends Goog
 {
   /**
    * Lists names of items associated with an unmapped identity.
+   *
+   * **Note:** This API requires an admin account to execute.
    * (items.listForunmappedidentity)
    *
    * @param string $parent The name of the identity source, in the following

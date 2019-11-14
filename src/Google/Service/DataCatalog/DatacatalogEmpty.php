@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_GmailFolderRestrict extends Google_Model
+class Google_Service_DataCatalog_DatacatalogEmpty extends Google_Model
 {
-  public $type;
-
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
 }

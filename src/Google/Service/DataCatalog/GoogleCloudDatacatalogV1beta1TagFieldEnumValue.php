@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_GmailAttachmentRestrict extends Google_Model
+class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagFieldEnumValue extends Google_Model
 {
-  public $type;
+  public $displayName;
 
-  public function setType($type)
+  public function setDisplayName($displayName)
   {
-    $this->type = $type;
+    $this->displayName = $displayName;
   }
-  public function getType()
+  public function getDisplayName()
   {
-    return $this->type;
+    return $this->displayName;
   }
 }

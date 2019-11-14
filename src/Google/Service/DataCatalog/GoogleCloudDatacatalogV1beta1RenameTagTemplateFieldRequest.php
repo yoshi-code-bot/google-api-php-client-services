@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudSearch_GmailTimeRestrict extends Google_Model
+class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldRequest extends Google_Model
 {
-  public $type;
+  public $newTagTemplateFieldId;
 
-  public function setType($type)
+  public function setNewTagTemplateFieldId($newTagTemplateFieldId)
   {
-    $this->type = $type;
+    $this->newTagTemplateFieldId = $newTagTemplateFieldId;
   }
-  public function getType()
+  public function getNewTagTemplateFieldId()
   {
-    return $this->type;
+    return $this->newTagTemplateFieldId;
   }
 }
