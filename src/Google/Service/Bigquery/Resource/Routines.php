@@ -47,9 +47,6 @@ class Google_Service_Bigquery_Resource_Routines extends Google_Service_Resource
    * @param string $datasetId Required. Dataset ID of the requested routine
    * @param string $routineId Required. Routine ID of the requested routine
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string fieldMask If set, only the Routine fields in the field mask
-   * are returned in the response. If unset, all Routine fields are returned.
    * @return Google_Service_Bigquery_Routine
    */
   public function get($projectId, $datasetId, $routineId, $optParams = array())

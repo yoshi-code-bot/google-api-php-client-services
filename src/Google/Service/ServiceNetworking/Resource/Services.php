@@ -74,4 +74,24 @@ class Google_Service_ServiceNetworking_Resource_Services extends Google_Service_
     $params = array_merge($params, $optParams);
     return $this->call('searchRange', array($params), "Google_Service_ServiceNetworking_Operation");
   }
+  /**
+   * Service producers use this method to validate if the consumer provided
+   * network, project and the requested range is valid. This allows them to use a
+   * fail-fast mechanism for consumer requests, and not have to wait for
+   * AddSubnetwork operation completion to determine if user request is invalid.
+   * (services.validate)
+   *
+   * @param string $parent Required. This is in a form services/{service} where
+   * {service} is the name of the private access management service. For example
+   * 'service-peering.example.com'.
+   * @param Google_Service_ServiceNetworking_ValidateConsumerConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ServiceNetworking_ValidateConsumerConfigResponse
+   */
+  public function validate($parent, Google_Service_ServiceNetworking_ValidateConsumerConfigRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('validate', array($params), "Google_Service_ServiceNetworking_ValidateConsumerConfigResponse");
+  }
 }
