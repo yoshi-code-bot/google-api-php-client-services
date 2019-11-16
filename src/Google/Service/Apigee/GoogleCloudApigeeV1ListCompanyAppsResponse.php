@@ -15,17 +15,24 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_LivegraphBacktraceRecordInfoExpInfo extends Google_Collection
+class Google_Service_Apigee_GoogleCloudApigeeV1ListCompanyAppsResponse extends Google_Collection
 {
-  protected $collection_key = 'deletedIns';
-  public $deletedIns;
+  protected $collection_key = 'app';
+  protected $appType = 'Google_Service_Apigee_GoogleCloudApigeeV1CompanyApp';
+  protected $appDataType = 'array';
 
-  public function setDeletedIns($deletedIns)
+  /**
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1CompanyApp
+   */
+  public function setApp($app)
   {
-    $this->deletedIns = $deletedIns;
+    $this->app = $app;
   }
-  public function getDeletedIns()
+  /**
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1CompanyApp
+   */
+  public function getApp()
   {
-    return $this->deletedIns;
+    return $this->app;
   }
 }

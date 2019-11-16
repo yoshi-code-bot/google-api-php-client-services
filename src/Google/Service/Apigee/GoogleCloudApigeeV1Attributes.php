@@ -15,23 +15,24 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_MessageSet extends Google_Model
+class Google_Service_Apigee_GoogleCloudApigeeV1Attributes extends Google_Collection
 {
-  protected $recordMessageSetExtType = 'Google_Service_CivicInfo_LivegraphBacktraceRecordInfo';
-  protected $recordMessageSetExtDataType = '';
+  protected $collection_key = 'attribute';
+  protected $attributeType = 'Google_Service_Apigee_GoogleCloudApigeeV1Attribute';
+  protected $attributeDataType = 'array';
 
   /**
-   * @param Google_Service_CivicInfo_LivegraphBacktraceRecordInfo
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1Attribute
    */
-  public function setRecordMessageSetExt(Google_Service_CivicInfo_LivegraphBacktraceRecordInfo $recordMessageSetExt)
+  public function setAttribute($attribute)
   {
-    $this->recordMessageSetExt = $recordMessageSetExt;
+    $this->attribute = $attribute;
   }
   /**
-   * @return Google_Service_CivicInfo_LivegraphBacktraceRecordInfo
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1Attribute
    */
-  public function getRecordMessageSetExt()
+  public function getAttribute()
   {
-    return $this->recordMessageSetExt;
+    return $this->attribute;
   }
 }
