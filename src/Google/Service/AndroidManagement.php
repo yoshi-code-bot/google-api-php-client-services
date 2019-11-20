@@ -257,10 +257,6 @@ class Google_Service_AndroidManagement extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -268,6 +264,10 @@ class Google_Service_AndroidManagement extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -468,11 +468,11 @@ class Google_Service_AndroidManagement extends Google_Service
               'path' => 'v1/signupUrls',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'projectId' => array(
+                'callbackUrl' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'callbackUrl' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
