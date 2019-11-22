@@ -114,10 +114,10 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesAppProfiles extends
    * @param Google_Service_BigtableAdmin_AppProfile $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The subset of app profile fields which should be
-   * replaced. If unset, all fields will be replaced.
    * @opt_param bool ignoreWarnings If true, ignore safety checks when updating
    * the app profile.
+   * @opt_param string updateMask The subset of app profile fields which should be
+   * replaced. If unset, all fields will be replaced.
    * @return Google_Service_BigtableAdmin_Operation
    */
   public function patch($name, Google_Service_BigtableAdmin_AppProfile $postBody, $optParams = array())

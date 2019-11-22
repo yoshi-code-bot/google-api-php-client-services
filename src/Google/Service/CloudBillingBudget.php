@@ -16,32 +16,29 @@
  */
 
 /**
- * Service definition for BigQueryConnectionService (v1beta1).
+ * Service definition for CloudBillingBudget (v1beta1).
  *
  * <p>
- * Allows users to manage BigQuery connections to external data sources.</p>
+ * The Cloud Billing Budget API stores Cloud Billing budgets, which define a
+ * budget plan and the rules to execute as spend is tracked against that plan.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/bigquery/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/billing/docs/how-to/budget-api-overview" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_BigQueryConnectionService extends Google_Service
+class Google_Service_CloudBillingBudget extends Google_Service
 {
-  /** View and manage your data in Google BigQuery. */
-  const BIGQUERY =
-      "https://www.googleapis.com/auth/bigquery";
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects_locations_connections;
+  public $billingAccounts_budgets;
   
   /**
-   * Constructs the internal representation of the BigQueryConnectionService
-   * service.
+   * Constructs the internal representation of the CloudBillingBudget service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -49,30 +46,26 @@ class Google_Service_BigQueryConnectionService extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://bigqueryconnection.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://billingbudgets.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1beta1';
-    $this->serviceName = 'bigqueryconnection';
+    $this->serviceName = 'billingbudgets';
 
-    $this->projects_locations_connections = new Google_Service_BigQueryConnectionService_Resource_ProjectsLocationsConnections(
+    $this->billingAccounts_budgets = new Google_Service_CloudBillingBudget_Resource_BillingAccountsBudgets(
         $this,
         $this->serviceName,
-        'connections',
+        'budgets',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/connections',
+              'path' => 'v1beta1/{+parent}/budgets',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'connectionId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'delete' => array(
@@ -95,18 +88,8 @@ class Google_Service_BigQueryConnectionService extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/connections',
+              'path' => 'v1beta1/{+parent}/budgets',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -114,50 +97,16 @@ class Google_Service_BigQueryConnectionService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'updateMask' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'updateCredential' => array(
               'path' => 'v1beta1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(

@@ -15,27 +15,26 @@
  * the License.
  */
 
-class Google_Service_CloudFunctions_ListFunctionsResponse extends Google_Collection
+class Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse extends Google_Collection
 {
-  protected $collection_key = 'unreachable';
-  protected $functionsType = 'Google_Service_CloudFunctions_CloudFunction';
-  protected $functionsDataType = 'array';
+  protected $collection_key = 'budgets';
+  protected $budgetsType = 'Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1Budget';
+  protected $budgetsDataType = 'array';
   public $nextPageToken;
-  public $unreachable;
 
   /**
-   * @param Google_Service_CloudFunctions_CloudFunction
+   * @param Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1Budget
    */
-  public function setFunctions($functions)
+  public function setBudgets($budgets)
   {
-    $this->functions = $functions;
+    $this->budgets = $budgets;
   }
   /**
-   * @return Google_Service_CloudFunctions_CloudFunction
+   * @return Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1Budget
    */
-  public function getFunctions()
+  public function getBudgets()
   {
-    return $this->functions;
+    return $this->budgets;
   }
   public function setNextPageToken($nextPageToken)
   {
@@ -44,13 +43,5 @@ class Google_Service_CloudFunctions_ListFunctionsResponse extends Google_Collect
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  public function setUnreachable($unreachable)
-  {
-    $this->unreachable = $unreachable;
-  }
-  public function getUnreachable()
-  {
-    return $this->unreachable;
   }
 }
