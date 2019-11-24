@@ -23,7 +23,7 @@
  *   $operations = $spannerService->operations;
  *  </code>
  */
-class Google_Service_Spanner_Resource_ProjectsInstancesDatabasesOperations extends Google_Service_Resource
+class Google_Service_Spanner_Resource_ProjectsInstancesBackupsOperations extends Google_Service_Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running operation.  The server
@@ -88,17 +88,17 @@ class Google_Service_Spanner_Resource_ProjectsInstancesDatabasesOperations exten
    * compatibility, the default name includes the operations collection id,
    * however overriding users must ensure the name binding is the parent resource,
    * without the operations collection id.
-   * (operations.listProjectsInstancesDatabasesOperations)
+   * (operations.listProjectsInstancesBackupsOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @opt_param string filter The standard list filter.
    * @return Google_Service_Spanner_ListOperationsResponse
    */
-  public function listProjectsInstancesDatabasesOperations($name, $optParams = array())
+  public function listProjectsInstancesBackupsOperations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
