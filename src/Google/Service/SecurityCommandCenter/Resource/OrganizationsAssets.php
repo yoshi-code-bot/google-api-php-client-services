@@ -180,14 +180,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())

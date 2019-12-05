@@ -54,6 +54,23 @@ class Google_Service_ServiceNetworking_Resource_Services extends Google_Service_
     return $this->call('addSubnetwork', array($params), "Google_Service_ServiceNetworking_Operation");
   }
   /**
+   * Enables VPC service controls for a connection.
+   * (services.enableVpcServiceControls)
+   *
+   * @param string $parent The service that is managing peering connectivity for a
+   * service producer's organization. For Google services that support this
+   * functionality, this value is `services/servicenetworking.googleapis.com`.
+   * @param Google_Service_ServiceNetworking_EnableVpcServiceControlsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ServiceNetworking_Operation
+   */
+  public function enableVpcServiceControls($parent, Google_Service_ServiceNetworking_EnableVpcServiceControlsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('enableVpcServiceControls', array($params), "Google_Service_ServiceNetworking_Operation");
+  }
+  /**
    * Service producers can use this method to find a currently unused range within
    * consumer allocated ranges.   This returned range is not reserved, and not
    * guaranteed to remain unused. It will validate previously provided allocated

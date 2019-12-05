@@ -15,35 +15,32 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_Location extends Google_Collection
+class Google_Service_Container_RecurringTimeWindow extends Google_Model
 {
-  protected $collection_key = 'features';
-  public $features;
-  public $locationId;
-  public $type;
+  public $recurrence;
+  protected $windowType = 'Google_Service_Container_TimeWindow';
+  protected $windowDataType = '';
 
-  public function setFeatures($features)
+  public function setRecurrence($recurrence)
   {
-    $this->features = $features;
+    $this->recurrence = $recurrence;
   }
-  public function getFeatures()
+  public function getRecurrence()
   {
-    return $this->features;
+    return $this->recurrence;
   }
-  public function setLocationId($locationId)
+  /**
+   * @param Google_Service_Container_TimeWindow
+   */
+  public function setWindow(Google_Service_Container_TimeWindow $window)
   {
-    $this->locationId = $locationId;
+    $this->window = $window;
   }
-  public function getLocationId()
+  /**
+   * @return Google_Service_Container_TimeWindow
+   */
+  public function getWindow()
   {
-    return $this->locationId;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->window;
   }
 }

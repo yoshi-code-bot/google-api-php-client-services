@@ -15,35 +15,16 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_Location extends Google_Collection
+class Google_Service_Container_CloudRunConfig extends Google_Model
 {
-  protected $collection_key = 'features';
-  public $features;
-  public $locationId;
-  public $type;
+  public $disabled;
 
-  public function setFeatures($features)
+  public function setDisabled($disabled)
   {
-    $this->features = $features;
+    $this->disabled = $disabled;
   }
-  public function getFeatures()
+  public function getDisabled()
   {
-    return $this->features;
-  }
-  public function setLocationId($locationId)
-  {
-    $this->locationId = $locationId;
-  }
-  public function getLocationId()
-  {
-    return $this->locationId;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->disabled;
   }
 }

@@ -164,11 +164,11 @@ class Google_Service_SecurityCommandCenter extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'startTime' => array(
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'updateMask' => array(
+                'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -222,10 +222,6 @@ class Google_Service_SecurityCommandCenter extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -233,6 +229,10 @@ class Google_Service_SecurityCommandCenter extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -370,11 +370,11 @@ class Google_Service_SecurityCommandCenter extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'fieldMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'fieldMask' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -382,11 +382,11 @@ class Google_Service_SecurityCommandCenter extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'readTime' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
+                'readTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

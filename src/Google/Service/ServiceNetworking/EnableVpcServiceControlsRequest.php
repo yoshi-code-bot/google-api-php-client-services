@@ -15,35 +15,16 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_Location extends Google_Collection
+class Google_Service_ServiceNetworking_EnableVpcServiceControlsRequest extends Google_Model
 {
-  protected $collection_key = 'features';
-  public $features;
-  public $locationId;
-  public $type;
+  public $consumerNetwork;
 
-  public function setFeatures($features)
+  public function setConsumerNetwork($consumerNetwork)
   {
-    $this->features = $features;
+    $this->consumerNetwork = $consumerNetwork;
   }
-  public function getFeatures()
+  public function getConsumerNetwork()
   {
-    return $this->features;
-  }
-  public function setLocationId($locationId)
-  {
-    $this->locationId = $locationId;
-  }
-  public function getLocationId()
-  {
-    return $this->locationId;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->consumerNetwork;
   }
 }

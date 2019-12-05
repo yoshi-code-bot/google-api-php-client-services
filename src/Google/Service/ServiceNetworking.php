@@ -102,10 +102,6 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -113,6 +109,10 @@ class Google_Service_ServiceNetworking extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -128,6 +128,16 @@ class Google_Service_ServiceNetworking extends Google_Service
             'addSubnetwork' => array(
               'path' => 'v1/{+parent}:addSubnetwork',
               'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'enableVpcServiceControls' => array(
+              'path' => 'v1/{+parent}:enableVpcServiceControls',
+              'httpMethod' => 'PATCH',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',

@@ -15,35 +15,25 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_Location extends Google_Collection
+class Google_Service_Container_TimeWindow extends Google_Model
 {
-  protected $collection_key = 'features';
-  public $features;
-  public $locationId;
-  public $type;
+  public $endTime;
+  public $startTime;
 
-  public function setFeatures($features)
+  public function setEndTime($endTime)
   {
-    $this->features = $features;
+    $this->endTime = $endTime;
   }
-  public function getFeatures()
+  public function getEndTime()
   {
-    return $this->features;
+    return $this->endTime;
   }
-  public function setLocationId($locationId)
+  public function setStartTime($startTime)
   {
-    $this->locationId = $locationId;
+    $this->startTime = $startTime;
   }
-  public function getLocationId()
+  public function getStartTime()
   {
-    return $this->locationId;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->startTime;
   }
 }
