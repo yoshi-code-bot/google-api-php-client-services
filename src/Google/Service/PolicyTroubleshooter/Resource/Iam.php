@@ -26,9 +26,9 @@
 class Google_Service_PolicyTroubleshooter_Resource_Iam extends Google_Service_Resource
 {
   /**
-   * Perform a check on whether a member is granted a permission on a resource and
-   * how that grant/deny is determined accordinga to the resource's effective IAM
-   * policy interpretation. (iam.troubleshoot)
+   * Checks whether a member has a specific permission for a specific resource,
+   * and explains why the member does or does not have that permission.
+   * (iam.troubleshoot)
    *
    * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
