@@ -179,6 +179,13 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string gracefulDecommissionTimeout Optional. Timeout for graceful
+   * YARN decomissioning. Graceful decommissioning allows removing nodes from the
+   * cluster without interrupting jobs in progress. Timeout specifies how long to
+   * wait for jobs in progress to finish before forcefully removing nodes (and
+   * potentially interrupting jobs). Default timeout is 0 (for forceful
+   * decommission), and the maximum allowed timeout is 1 day.Only supported on
+   * Dataproc image versions 1.2 and higher.
    * @opt_param string requestId Optional. A unique id used to identify the
    * request. If the server receives two UpdateClusterRequest requests with the
    * same id, then the second request will be ignored and the first
@@ -202,13 +209,6 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * config.secondary_worker_config.num_instances  Resize secondary worker group
    * config.autoscaling_config.policy_uriUse, stop using, or  change autoscaling
    * policies
-   * @opt_param string gracefulDecommissionTimeout Optional. Timeout for graceful
-   * YARN decomissioning. Graceful decommissioning allows removing nodes from the
-   * cluster without interrupting jobs in progress. Timeout specifies how long to
-   * wait for jobs in progress to finish before forcefully removing nodes (and
-   * potentially interrupting jobs). Default timeout is 0 (for forceful
-   * decommission), and the maximum allowed timeout is 1 day.Only supported on
-   * Dataproc image versions 1.2 and higher.
    * @return Google_Service_Dataproc_Operation
    */
   public function patch($projectId, $region, $clusterName, Google_Service_Dataproc_Cluster $postBody, $optParams = array())
