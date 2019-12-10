@@ -135,6 +135,16 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'disableVpcServiceControls' => array(
+              'path' => 'v1/{+parent}:disableVpcServiceControls',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'enableVpcServiceControls' => array(
               'path' => 'v1/{+parent}:enableVpcServiceControls',
               'httpMethod' => 'PATCH',

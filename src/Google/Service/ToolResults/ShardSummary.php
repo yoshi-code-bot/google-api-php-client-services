@@ -15,34 +15,23 @@
  * the License.
  */
 
-class Google_Service_Dfareporting_CustomVariables extends Google_Model
+class Google_Service_ToolResults_ShardSummary extends Google_Model
 {
-  public $index;
-  public $kind;
-  public $value;
+  protected $shardResultType = 'Google_Service_ToolResults_MergedResult';
+  protected $shardResultDataType = '';
 
-  public function setIndex($index)
+  /**
+   * @param Google_Service_ToolResults_MergedResult
+   */
+  public function setShardResult(Google_Service_ToolResults_MergedResult $shardResult)
   {
-    $this->index = $index;
+    $this->shardResult = $shardResult;
   }
-  public function getIndex()
+  /**
+   * @return Google_Service_ToolResults_MergedResult
+   */
+  public function getShardResult()
   {
-    return $this->index;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setValue($value)
-  {
-    $this->value = $value;
-  }
-  public function getValue()
-  {
-    return $this->value;
+    return $this->shardResult;
   }
 }

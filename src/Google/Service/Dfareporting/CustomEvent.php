@@ -18,41 +18,41 @@
 class Google_Service_Dfareporting_CustomEvent extends Google_Collection
 {
   protected $collection_key = 'customVariables';
-  protected $annotateClickEventType = 'Google_Service_Dfareporting_AnnotateClickEvent';
+  protected $annotateClickEventType = 'Google_Service_Dfareporting_CustomEventClickAnnotation';
   protected $annotateClickEventDataType = '';
-  protected $customVariablesType = 'Google_Service_Dfareporting_CustomVariables';
+  protected $customVariablesType = 'Google_Service_Dfareporting_CustomVariable';
   protected $customVariablesDataType = 'array';
   public $eventType;
   public $floodlightConfigurationId;
-  protected $insertEventType = 'Google_Service_Dfareporting_InsertEvent';
+  protected $insertEventType = 'Google_Service_Dfareporting_CustomEventInsert';
   protected $insertEventDataType = '';
   public $kind;
   public $ordinal;
   public $timestampMicros;
 
   /**
-   * @param Google_Service_Dfareporting_AnnotateClickEvent
+   * @param Google_Service_Dfareporting_CustomEventClickAnnotation
    */
-  public function setAnnotateClickEvent(Google_Service_Dfareporting_AnnotateClickEvent $annotateClickEvent)
+  public function setAnnotateClickEvent(Google_Service_Dfareporting_CustomEventClickAnnotation $annotateClickEvent)
   {
     $this->annotateClickEvent = $annotateClickEvent;
   }
   /**
-   * @return Google_Service_Dfareporting_AnnotateClickEvent
+   * @return Google_Service_Dfareporting_CustomEventClickAnnotation
    */
   public function getAnnotateClickEvent()
   {
     return $this->annotateClickEvent;
   }
   /**
-   * @param Google_Service_Dfareporting_CustomVariables
+   * @param Google_Service_Dfareporting_CustomVariable
    */
   public function setCustomVariables($customVariables)
   {
     $this->customVariables = $customVariables;
   }
   /**
-   * @return Google_Service_Dfareporting_CustomVariables
+   * @return Google_Service_Dfareporting_CustomVariable
    */
   public function getCustomVariables()
   {
@@ -75,14 +75,14 @@ class Google_Service_Dfareporting_CustomEvent extends Google_Collection
     return $this->floodlightConfigurationId;
   }
   /**
-   * @param Google_Service_Dfareporting_InsertEvent
+   * @param Google_Service_Dfareporting_CustomEventInsert
    */
-  public function setInsertEvent(Google_Service_Dfareporting_InsertEvent $insertEvent)
+  public function setInsertEvent(Google_Service_Dfareporting_CustomEventInsert $insertEvent)
   {
     $this->insertEvent = $insertEvent;
   }
   /**
-   * @return Google_Service_Dfareporting_InsertEvent
+   * @return Google_Service_Dfareporting_CustomEventInsert
    */
   public function getInsertEvent()
   {

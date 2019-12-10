@@ -94,10 +94,6 @@ class Google_Service_Cloudbilling extends Google_Service
               'path' => 'v1/billingAccounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -105,6 +101,10 @@ class Google_Service_Cloudbilling extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(

@@ -38,6 +38,7 @@ class Google_Service_ToolResults extends Google_Service
   public $projects_histories;
   public $projects_histories_executions;
   public $projects_histories_executions_clusters;
+  public $projects_histories_executions_environments;
   public $projects_histories_executions_steps;
   public $projects_histories_executions_steps_perfMetricsSummary;
   public $projects_histories_executions_steps_perfSampleSeries;
@@ -296,6 +297,69 @@ class Google_Service_ToolResults extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_histories_executions_environments = new Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsEnvironments(
+        $this,
+        $this->serviceName,
+        'environments',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => '{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'historyId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'executionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'environmentId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{projectId}/histories/{historyId}/executions/{executionId}/environments',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'historyId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'executionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

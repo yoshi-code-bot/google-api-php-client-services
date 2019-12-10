@@ -54,6 +54,23 @@ class Google_Service_ServiceNetworking_Resource_Services extends Google_Service_
     return $this->call('addSubnetwork', array($params), "Google_Service_ServiceNetworking_Operation");
   }
   /**
+   * Disables VPC service controls for a connection.
+   * (services.disableVpcServiceControls)
+   *
+   * @param string $parent The service that is managing peering connectivity for a
+   * service producer's organization. For Google services that support this
+   * functionality, this value is `services/servicenetworking.googleapis.com`.
+   * @param Google_Service_ServiceNetworking_DisableVpcServiceControlsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ServiceNetworking_Operation
+   */
+  public function disableVpcServiceControls($parent, Google_Service_ServiceNetworking_DisableVpcServiceControlsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('disableVpcServiceControls', array($params), "Google_Service_ServiceNetworking_Operation");
+  }
+  /**
    * Enables VPC service controls for a connection.
    * (services.enableVpcServiceControls)
    *

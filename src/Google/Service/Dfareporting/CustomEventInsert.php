@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Dfareporting_InsertEvent extends Google_Model
+class Google_Service_Dfareporting_CustomEventInsert extends Google_Model
 {
   protected $cmDimensionsType = 'Google_Service_Dfareporting_CampaignManagerIds';
   protected $cmDimensionsDataType = '';

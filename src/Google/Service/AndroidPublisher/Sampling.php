@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_MendelSampling extends Google_Collection
+class Google_Service_AndroidPublisher_Sampling extends Google_Collection
 {
   protected $collection_key = 'modRanges';
   protected $modRangesType = 'Google_Service_AndroidPublisher_ModRange';

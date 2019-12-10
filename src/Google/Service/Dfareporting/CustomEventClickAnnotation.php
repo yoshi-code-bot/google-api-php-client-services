@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Dfareporting_AnnotateClickEvent extends Google_Model
+class Google_Service_Dfareporting_CustomEventClickAnnotation extends Google_Model
 {
   public $gclid;
   public $kind;

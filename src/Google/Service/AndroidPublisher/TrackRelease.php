@@ -25,7 +25,7 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
   public $name;
   protected $releaseNotesType = 'Google_Service_AndroidPublisher_LocalizedText';
   protected $releaseNotesDataType = 'array';
-  protected $samplingType = 'Google_Service_AndroidPublisher_MendelSampling';
+  protected $samplingType = 'Google_Service_AndroidPublisher_Sampling';
   protected $samplingDataType = '';
   public $status;
   public $userFraction;
@@ -82,14 +82,14 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
     return $this->releaseNotes;
   }
   /**
-   * @param Google_Service_AndroidPublisher_MendelSampling
+   * @param Google_Service_AndroidPublisher_Sampling
    */
-  public function setSampling(Google_Service_AndroidPublisher_MendelSampling $sampling)
+  public function setSampling(Google_Service_AndroidPublisher_Sampling $sampling)
   {
     $this->sampling = $sampling;
   }
   /**
-   * @return Google_Service_AndroidPublisher_MendelSampling
+   * @return Google_Service_AndroidPublisher_Sampling
    */
   public function getSampling()
   {
