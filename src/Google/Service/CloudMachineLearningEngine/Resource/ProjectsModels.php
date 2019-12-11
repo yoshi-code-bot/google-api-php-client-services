@@ -29,8 +29,8 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels extends 
    * Creates a model which will later contain one or more versions.
    *
    * You must add at least one version before you can request predictions from the
-   * model. Add versions by calling [projects.models.versions.create](/ml-
-   * engine/reference/rest/v1/projects.models.versions/create). (models.create)
+   * model. Add versions by calling projects.models.versions.create.
+   * (models.create)
    *
    * @param string $parent Required. The project name.
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Model $postBody
@@ -47,8 +47,7 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels extends 
    * Deletes a model.
    *
    * You can only delete a model if there are no versions in it. You can delete
-   * versions by calling [projects.models.versions.delete](/ml-
-   * engine/reference/rest/v1/projects.models.versions/delete). (models.delete)
+   * versions by calling projects.models.versions.delete. (models.delete)
    *
    * @param string $name Required. The name of the model.
    * @param array $optParams Optional parameters.
@@ -114,8 +113,6 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels extends 
    * be listed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Specifies the subset of models to
-   * retrieve.
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results.
    *
@@ -126,6 +123,8 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels extends 
    * response message will contain a valid value in the `next_page_token` field.
    *
    * The default value is 20, and the maximum page size is 100.
+   * @opt_param string filter Optional. Specifies the subset of models to
+   * retrieve.
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListModelsResponse
    */
   public function listProjectsModels($parent, $optParams = array())

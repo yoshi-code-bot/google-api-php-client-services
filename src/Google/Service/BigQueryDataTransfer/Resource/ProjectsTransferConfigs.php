@@ -30,9 +30,9 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    *
    * @param string $parent Required. The BigQuery project id where the transfer
    * configuration should be created. Must be in the format
-   * projects/{project_id}/locations/{location_id} If specified location and
-   * location of the destination bigquery dataset do not match - the request will
-   * fail.
+   * projects/{project_id}/locations/{location_id} or projects/{project_id}. If
+   * specified location and location of the destination bigquery dataset do not
+   * match - the request will fail.
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
    * @param array $optParams Optional parameters.
    *
@@ -75,6 +75,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    *
    * @param string $name Required. The field will contain name of the resource
    * requested, for example: `projects/{project_id}/transferConfigs/{config_id}`
+   * or
+   * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_BigquerydatatransferEmpty
    */
@@ -89,6 +91,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    *
    * @param string $name Required. The field will contain name of the resource
    * requested, for example: `projects/{project_id}/transferConfigs/{config_id}`
+   * or
+   * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_TransferConfig
    */
@@ -103,7 +107,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * (transferConfigs.listProjectsTransferConfigs)
    *
    * @param string $parent Required. The BigQuery project id for which data
-   * sources should be returned: `projects/{project_id}`.
+   * sources should be returned: `projects/{project_id}` or
+   * `projects/{project_id}/locations/{location_id}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Pagination token, which can be used to request a
@@ -180,7 +185,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * (transferConfigs.scheduleRuns)
    *
    * @param string $parent Required. Transfer configuration name in the form:
-   * `projects/{project_id}/transferConfigs/{config_id}`.
+   * `projects/{project_id}/transferConfigs/{config_id}` or
+   * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
    * @param Google_Service_BigQueryDataTransfer_ScheduleTransferRunsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_ScheduleTransferRunsResponse
@@ -198,7 +204,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * specific run_time. (transferConfigs.startManualRuns)
    *
    * @param string $parent Transfer configuration name in the form:
-   * `projects/{project_id}/transferConfigs/{config_id}`.
+   * `projects/{project_id}/transferConfigs/{config_id}` or
+   * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
    * @param Google_Service_BigQueryDataTransfer_StartManualTransferRunsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_StartManualTransferRunsResponse
