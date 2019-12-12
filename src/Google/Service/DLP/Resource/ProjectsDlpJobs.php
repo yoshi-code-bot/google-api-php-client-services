@@ -148,9 +148,9 @@ class Google_Service_DLP_Resource_ProjectsDlpJobs extends Google_Service_Resourc
    *
    * The length of this field should be no more than 500 characters.
    * @opt_param string pageToken The standard list page token.
-   * @opt_param int pageSize The standard list page size.
    * @opt_param string locationId The geographic location where jobs will be
    * retrieved from. Use `-` for all locations. Reserved for future extensions.
+   * @opt_param int pageSize The standard list page size.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse
    */
   public function listProjectsDlpJobs($parent, $optParams = array())

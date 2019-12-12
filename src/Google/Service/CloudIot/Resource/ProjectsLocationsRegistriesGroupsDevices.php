@@ -33,13 +33,6 @@ class Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesGroupsDevices 
    * example, `projects/my-project/locations/us-central1/registries/my-registry`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string deviceNumIds A list of device numeric IDs. If empty, this
-   * field is ignored. Maximum IDs: 10,000.
-   * @opt_param string gatewayListOptions.associationsDeviceId If set, returns
-   * only the gateways with which the specified device is associated. The device
-   * ID can be numeric (`num_id`) or the user-defined string (`id`). For example,
-   * if `456` is specified, returns only the gateways to which the device with
-   * `num_id` 456 is bound.
    * @opt_param string gatewayListOptions.gatewayType If `GATEWAY` is specified,
    * only gateways are returned. If `NON_GATEWAY` is specified, only non-gateway
    * devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified, all devices
@@ -62,6 +55,13 @@ class Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesGroupsDevices 
    * @opt_param string deviceIds A list of device string IDs. For example,
    * `['device0', 'device12']`. If empty, this field is ignored. Maximum IDs:
    * 10,000
+   * @opt_param string deviceNumIds A list of device numeric IDs. If empty, this
+   * field is ignored. Maximum IDs: 10,000.
+   * @opt_param string gatewayListOptions.associationsDeviceId If set, returns
+   * only the gateways with which the specified device is associated. The device
+   * ID can be numeric (`num_id`) or the user-defined string (`id`). For example,
+   * if `456` is specified, returns only the gateways to which the device with
+   * `num_id` 456 is bound.
    * @return Google_Service_CloudIot_ListDevicesResponse
    */
   public function listProjectsLocationsRegistriesGroupsDevices($parent, $optParams = array())

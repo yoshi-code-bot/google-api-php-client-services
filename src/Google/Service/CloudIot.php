@@ -231,14 +231,6 @@ class Google_Service_CloudIot extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'gatewayListOptions.gatewayType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'gatewayListOptions.associationsGatewayId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'fieldMask' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -264,6 +256,14 @@ class Google_Service_CloudIot extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'gatewayListOptions.gatewayType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'gatewayListOptions.associationsGatewayId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'modifyCloudToDeviceConfig' => array(
@@ -407,15 +407,6 @@ class Google_Service_CloudIot extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'deviceNumIds' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'gatewayListOptions.associationsDeviceId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'gatewayListOptions.gatewayType' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -440,6 +431,15 @@ class Google_Service_CloudIot extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'deviceNumIds' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'gatewayListOptions.associationsDeviceId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
