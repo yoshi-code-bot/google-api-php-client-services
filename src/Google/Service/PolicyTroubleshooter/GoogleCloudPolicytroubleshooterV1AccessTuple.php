@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1AccessTuple extends Google_Model
 {
   public $fullResourceName;
   public $permission;

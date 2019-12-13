@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership extends Google_Model
+class Google_Service_CloudAsset_PubsubDestination extends Google_Model
 {
-  public $membership;
-  public $relevance;
+  public $topic;
 
-  public function setMembership($membership)
+  public function setTopic($topic)
   {
-    $this->membership = $membership;
+    $this->topic = $topic;
   }
-  public function getMembership()
+  public function getTopic()
   {
-    return $this->membership;
-  }
-  public function setRelevance($relevance)
-  {
-    $this->relevance = $relevance;
-  }
-  public function getRelevance()
-  {
-    return $this->relevance;
+    return $this->topic;
   }
 }

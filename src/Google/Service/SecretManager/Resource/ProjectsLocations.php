@@ -19,24 +19,24 @@
  * The "locations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $cloudkmsService = new Google_Service_CloudKMS(...);
- *   $locations = $cloudkmsService->locations;
+ *   $secretmanagerService = new Google_Service_SecretManager(...);
+ *   $locations = $secretmanagerService->locations;
  *  </code>
  */
-class Google_Service_CloudKMS_Resource_ProjectsLocations extends Google_Service_Resource
+class Google_Service_SecretManager_Resource_ProjectsLocations extends Google_Service_Resource
 {
   /**
    * Gets information about a location. (locations.get)
    *
    * @param string $name Resource name for the location.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_CloudKMS_Location
+   * @return Google_Service_SecretManager_Location
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudKMS_Location");
+    return $this->call('get', array($params), "Google_Service_SecretManager_Location");
   }
   /**
    * Lists information about the supported locations for this service.
@@ -46,15 +46,15 @@ class Google_Service_CloudKMS_Resource_ProjectsLocations extends Google_Service_
    * applicable.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @opt_param string filter The standard list filter.
-   * @return Google_Service_CloudKMS_ListLocationsResponse
+   * @return Google_Service_SecretManager_ListLocationsResponse
    */
   public function listProjectsLocations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudKMS_ListLocationsResponse");
+    return $this->call('list', array($params), "Google_Service_SecretManager_ListLocationsResponse");
   }
 }

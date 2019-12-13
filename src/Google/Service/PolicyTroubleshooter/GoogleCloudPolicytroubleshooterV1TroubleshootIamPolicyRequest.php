@@ -15,20 +15,20 @@
  * the License.
  */
 
-class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest extends Google_Model
 {
-  protected $accessTupleType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple';
+  protected $accessTupleType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1AccessTuple';
   protected $accessTupleDataType = '';
 
   /**
-   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple
+   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1AccessTuple
    */
-  public function setAccessTuple(Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple $accessTuple)
+  public function setAccessTuple(Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1AccessTuple $accessTuple)
   {
     $this->accessTuple = $accessTuple;
   }
   /**
-   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaAccessTuple
+   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1AccessTuple
    */
   public function getAccessTuple()
   {

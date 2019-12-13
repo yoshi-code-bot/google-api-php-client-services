@@ -15,11 +15,11 @@
  * the License.
  */
 
-class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse extends Google_Collection
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse extends Google_Collection
 {
   protected $collection_key = 'explainedPolicies';
   public $access;
-  protected $explainedPoliciesType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaExplainedPolicy';
+  protected $explainedPoliciesType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1ExplainedPolicy';
   protected $explainedPoliciesDataType = 'array';
 
   public function setAccess($access)
@@ -31,14 +31,14 @@ class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaT
     return $this->access;
   }
   /**
-   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaExplainedPolicy
+   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1ExplainedPolicy
    */
   public function setExplainedPolicies($explainedPolicies)
   {
     $this->explainedPolicies = $explainedPolicies;
   }
   /**
-   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaExplainedPolicy
+   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1ExplainedPolicy
    */
   public function getExplainedPolicies()
   {

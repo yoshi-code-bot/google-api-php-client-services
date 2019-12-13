@@ -30,14 +30,14 @@ class Google_Service_PolicyTroubleshooter_Resource_Iam extends Google_Service_Re
    * and explains why the member does or does not have that permission.
    * (iam.troubleshoot)
    *
-   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest $postBody
+   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse
+   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse
    */
-  public function troubleshoot(Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest $postBody, $optParams = array())
+  public function troubleshoot(Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('troubleshoot', array($params), "Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse");
+    return $this->call('troubleshoot', array($params), "Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse");
   }
 }

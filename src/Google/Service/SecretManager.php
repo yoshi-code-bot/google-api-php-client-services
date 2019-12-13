@@ -16,37 +16,30 @@
  */
 
 /**
- * Service definition for FirebaseRules (v1).
+ * Service definition for SecretManager (v1beta1).
  *
  * <p>
- * Creates and manages rules that determine when a Firebase Rules-enabled
- * service should permit a request.</p>
+ * Stores, manages, and secures access to application secrets.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://firebase.google.com/docs/storage/security" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/secret-manager/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_FirebaseRules extends Google_Service
+class Google_Service_SecretManager extends Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View and administer all your Firebase data and settings. */
-  const FIREBASE =
-      "https://www.googleapis.com/auth/firebase";
-  /** View all your Firebase data and settings. */
-  const FIREBASE_READONLY =
-      "https://www.googleapis.com/auth/firebase.readonly";
 
-  public $projects;
-  public $projects_releases;
-  public $projects_rulesets;
+  public $projects_locations;
+  public $projects_secrets;
+  public $projects_secrets_versions;
   
   /**
-   * Constructs the internal representation of the FirebaseRules service.
+   * Constructs the internal representation of the SecretManager service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -54,84 +47,30 @@ class Google_Service_FirebaseRules extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://firebaserules.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://secretmanager.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
-    $this->serviceName = 'firebaserules';
+    $this->version = 'v1beta1';
+    $this->serviceName = 'secretmanager';
 
-    $this->projects = new Google_Service_FirebaseRules_Resource_Projects(
+    $this->projects_locations = new Google_Service_SecretManager_Resource_ProjectsLocations(
         $this,
         $this->serviceName,
-        'projects',
+        'locations',
         array(
           'methods' => array(
-            'test' => array(
-              'path' => 'v1/{+name}:test',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->projects_releases = new Google_Service_FirebaseRules_Resource_ProjectsReleases(
-        $this,
-        $this->serviceName,
-        'releases',
-        array(
-          'methods' => array(
-            'create' => array(
-              'path' => 'v1/{+name}/releases',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'get' => array(
-              'path' => 'v1/{+name}',
+            'get' => array(
+              'path' => 'v1beta1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),'getExecutable' => array(
-              'path' => 'v1/{+name}:getExecutable',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'executableVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}/releases',
+              'path' => 'v1beta1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -142,6 +81,92 @@ class Google_Service_FirebaseRules extends Google_Service
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_secrets = new Google_Service_SecretManager_Resource_ProjectsSecrets(
+        $this,
+        $this->serviceName,
+        'secrets',
+        array(
+          'methods' => array(
+            'addVersion' => array(
+              'path' => 'v1beta1/{+parent}:addVersion',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
+              'path' => 'v1beta1/{+parent}/secrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'secretId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getIamPolicy' => array(
+              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1beta1/{+parent}/secrets',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -153,10 +178,34 @@ class Google_Service_FirebaseRules extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v1beta1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'testIamPermissions' => array(
+              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -166,14 +215,24 @@ class Google_Service_FirebaseRules extends Google_Service
           )
         )
     );
-    $this->projects_rulesets = new Google_Service_FirebaseRules_Resource_ProjectsRulesets(
+    $this->projects_secrets_versions = new Google_Service_SecretManager_Resource_ProjectsSecretsVersions(
         $this,
         $this->serviceName,
-        'rulesets',
+        'versions',
         array(
           'methods' => array(
-            'create' => array(
-              'path' => 'v1/{+name}/rulesets',
+            'access' => array(
+              'path' => 'v1beta1/{+name}:access',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'destroy' => array(
+              'path' => 'v1beta1/{+name}:destroy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -182,9 +241,19 @@ class Google_Service_FirebaseRules extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
+            ),'disable' => array(
+              'path' => 'v1beta1/{+name}:disable',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'enable' => array(
+              'path' => 'v1beta1/{+name}:enable',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -193,7 +262,7 @@ class Google_Service_FirebaseRules extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v1beta1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -203,10 +272,10 @@ class Google_Service_FirebaseRules extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}/rulesets',
+              'path' => 'v1beta1/{+parent}/versions',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'name' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -218,10 +287,6 @@ class Google_Service_FirebaseRules extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),

@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanation extends Google_Model
+class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1BindingExplanation extends Google_Model
 {
   public $access;
   protected $conditionType = 'Google_Service_PolicyTroubleshooter_GoogleTypeExpr';
   protected $conditionDataType = '';
-  protected $membershipsType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership';
+  protected $membershipsType = 'Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership';
   protected $membershipsDataType = 'map';
   public $relevance;
   public $role;
@@ -50,14 +50,14 @@ class Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaB
     return $this->condition;
   }
   /**
-   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership
+   * @param Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership
    */
   public function setMemberships($memberships)
   {
     $this->memberships = $memberships;
   }
   /**
-   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership
+   * @return Google_Service_PolicyTroubleshooter_GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership
    */
   public function getMemberships()
   {
