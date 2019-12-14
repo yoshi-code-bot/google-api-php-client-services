@@ -127,9 +127,8 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesTables extends Goog
     return $this->call('get', array($params), "Google_Service_BigtableAdmin_Table");
   }
   /**
-   * Gets the access control policy for an instance resource. Returns an empty
-   * policy if an table exists but does not have a policy set.
-   * (tables.getIamPolicy)
+   * Gets the access control policy for a table resource. Returns an empty policy
+   * if an table exists but does not have a policy set. (tables.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
