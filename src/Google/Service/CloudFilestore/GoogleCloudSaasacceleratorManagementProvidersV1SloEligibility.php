@@ -15,20 +15,18 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion extends Google_Model
+class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility extends Google_Model
 {
-  public $duration;
+  public $eligible;
   public $reason;
-  public $sliName;
-  public $startTime;
 
-  public function setDuration($duration)
+  public function setEligible($eligible)
   {
-    $this->duration = $duration;
+    $this->eligible = $eligible;
   }
-  public function getDuration()
+  public function getEligible()
   {
-    return $this->duration;
+    return $this->eligible;
   }
   public function setReason($reason)
   {
@@ -37,21 +35,5 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public function getReason()
   {
     return $this->reason;
-  }
-  public function setSliName($sliName)
-  {
-    $this->sliName = $sliName;
-  }
-  public function getSliName()
-  {
-    return $this->sliName;
-  }
-  public function setStartTime($startTime)
-  {
-    $this->startTime = $startTime;
-  }
-  public function getStartTime()
-  {
-    return $this->startTime;
   }
 }
