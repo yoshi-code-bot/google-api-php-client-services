@@ -41,6 +41,8 @@ class Google_Service_Docs_Request extends Google_Model
   protected $insertInlineImageDataType = '';
   protected $insertPageBreakType = 'Google_Service_Docs_InsertPageBreakRequest';
   protected $insertPageBreakDataType = '';
+  protected $insertSectionBreakType = 'Google_Service_Docs_InsertSectionBreakRequest';
+  protected $insertSectionBreakDataType = '';
   protected $insertTableType = 'Google_Service_Docs_InsertTableRequest';
   protected $insertTableDataType = '';
   protected $insertTableColumnType = 'Google_Service_Docs_InsertTableColumnRequest';
@@ -63,6 +65,8 @@ class Google_Service_Docs_Request extends Google_Model
   protected $updateDocumentStyleDataType = '';
   protected $updateParagraphStyleType = 'Google_Service_Docs_UpdateParagraphStyleRequest';
   protected $updateParagraphStyleDataType = '';
+  protected $updateSectionStyleType = 'Google_Service_Docs_UpdateSectionStyleRequest';
+  protected $updateSectionStyleDataType = '';
   protected $updateTableCellStyleType = 'Google_Service_Docs_UpdateTableCellStyleRequest';
   protected $updateTableCellStyleDataType = '';
   protected $updateTableColumnPropertiesType = 'Google_Service_Docs_UpdateTableColumnPropertiesRequest';
@@ -241,6 +245,20 @@ class Google_Service_Docs_Request extends Google_Model
     return $this->insertPageBreak;
   }
   /**
+   * @param Google_Service_Docs_InsertSectionBreakRequest
+   */
+  public function setInsertSectionBreak(Google_Service_Docs_InsertSectionBreakRequest $insertSectionBreak)
+  {
+    $this->insertSectionBreak = $insertSectionBreak;
+  }
+  /**
+   * @return Google_Service_Docs_InsertSectionBreakRequest
+   */
+  public function getInsertSectionBreak()
+  {
+    return $this->insertSectionBreak;
+  }
+  /**
    * @param Google_Service_Docs_InsertTableRequest
    */
   public function setInsertTable(Google_Service_Docs_InsertTableRequest $insertTable)
@@ -393,6 +411,20 @@ class Google_Service_Docs_Request extends Google_Model
   public function getUpdateParagraphStyle()
   {
     return $this->updateParagraphStyle;
+  }
+  /**
+   * @param Google_Service_Docs_UpdateSectionStyleRequest
+   */
+  public function setUpdateSectionStyle(Google_Service_Docs_UpdateSectionStyleRequest $updateSectionStyle)
+  {
+    $this->updateSectionStyle = $updateSectionStyle;
+  }
+  /**
+   * @return Google_Service_Docs_UpdateSectionStyleRequest
+   */
+  public function getUpdateSectionStyle()
+  {
+    return $this->updateSectionStyle;
   }
   /**
    * @param Google_Service_Docs_UpdateTableCellStyleRequest

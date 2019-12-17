@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_SqlScheduledMaintenance extends Google_Model
+class Google_Service_SQLAdmin_Reschedule extends Google_Model
 {
-  public $canDefer;
-  public $canReschedule;
-  public $startTime;
+  public $rescheduleType;
+  public $scheduleTime;
 
-  public function setCanDefer($canDefer)
+  public function setRescheduleType($rescheduleType)
   {
-    $this->canDefer = $canDefer;
+    $this->rescheduleType = $rescheduleType;
   }
-  public function getCanDefer()
+  public function getRescheduleType()
   {
-    return $this->canDefer;
+    return $this->rescheduleType;
   }
-  public function setCanReschedule($canReschedule)
+  public function setScheduleTime($scheduleTime)
   {
-    $this->canReschedule = $canReschedule;
+    $this->scheduleTime = $scheduleTime;
   }
-  public function getCanReschedule()
+  public function getScheduleTime()
   {
-    return $this->canReschedule;
-  }
-  public function setStartTime($startTime)
-  {
-    $this->startTime = $startTime;
-  }
-  public function getStartTime()
-  {
-    return $this->startTime;
+    return $this->scheduleTime;
   }
 }

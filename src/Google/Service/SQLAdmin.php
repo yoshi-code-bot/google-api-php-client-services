@@ -42,6 +42,8 @@ class Google_Service_SQLAdmin extends Google_Service
   public $flags;
   public $instances;
   public $operations;
+  public $projects_instances;
+  public $projects_locations_instances;
   public $sslCerts;
   public $tiers;
   public $users;
@@ -148,10 +150,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -159,6 +157,10 @@ class Google_Service_SQLAdmin extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'parent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -509,10 +511,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -520,6 +518,10 @@ class Google_Service_SQLAdmin extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'listServerCas' => array(
@@ -765,6 +767,14 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'parent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'instance' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -773,11 +783,60 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_instances = new Google_Service_SQLAdmin_Resource_ProjectsInstances(
+        $this,
+        $this->serviceName,
+        'instances',
+        array(
+          'methods' => array(
+            'rescheduleMaintenance' => array(
+              'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
                 'parent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_instances = new Google_Service_SQLAdmin_Resource_ProjectsLocationsInstances(
+        $this,
+        $this->serviceName,
+        'instances',
+        array(
+          'methods' => array(
+            'rescheduleMaintenance' => array(
+              'path' => 'sql/v1beta4/{+parent}/rescheduleMaintenance',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'project' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -941,15 +1000,15 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'host' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'name' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'resourceName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'host' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
