@@ -15,32 +15,32 @@
  * the License.
  */
 
-class Google_Service_Iam_LintPolicyRequest extends Google_Model
+class Google_Service_Sheets_ColorStyle extends Google_Model
 {
-  protected $conditionType = 'Google_Service_Iam_Expr';
-  protected $conditionDataType = '';
-  public $fullResourceName;
+  protected $rgbColorType = 'Google_Service_Sheets_Color';
+  protected $rgbColorDataType = '';
+  public $themeColor;
 
   /**
-   * @param Google_Service_Iam_Expr
+   * @param Google_Service_Sheets_Color
    */
-  public function setCondition(Google_Service_Iam_Expr $condition)
+  public function setRgbColor(Google_Service_Sheets_Color $rgbColor)
   {
-    $this->condition = $condition;
+    $this->rgbColor = $rgbColor;
   }
   /**
-   * @return Google_Service_Iam_Expr
+   * @return Google_Service_Sheets_Color
    */
-  public function getCondition()
+  public function getRgbColor()
   {
-    return $this->condition;
+    return $this->rgbColor;
   }
-  public function setFullResourceName($fullResourceName)
+  public function setThemeColor($themeColor)
   {
-    $this->fullResourceName = $fullResourceName;
+    $this->themeColor = $themeColor;
   }
-  public function getFullResourceName()
+  public function getThemeColor()
   {
-    return $this->fullResourceName;
+    return $this->themeColor;
   }
 }

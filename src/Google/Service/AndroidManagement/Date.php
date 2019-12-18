@@ -15,32 +15,34 @@
  * the License.
  */
 
-class Google_Service_Iam_LintPolicyRequest extends Google_Model
+class Google_Service_AndroidManagement_Date extends Google_Model
 {
-  protected $conditionType = 'Google_Service_Iam_Expr';
-  protected $conditionDataType = '';
-  public $fullResourceName;
+  public $day;
+  public $month;
+  public $year;
 
-  /**
-   * @param Google_Service_Iam_Expr
-   */
-  public function setCondition(Google_Service_Iam_Expr $condition)
+  public function setDay($day)
   {
-    $this->condition = $condition;
+    $this->day = $day;
   }
-  /**
-   * @return Google_Service_Iam_Expr
-   */
-  public function getCondition()
+  public function getDay()
   {
-    return $this->condition;
+    return $this->day;
   }
-  public function setFullResourceName($fullResourceName)
+  public function setMonth($month)
   {
-    $this->fullResourceName = $fullResourceName;
+    $this->month = $month;
   }
-  public function getFullResourceName()
+  public function getMonth()
   {
-    return $this->fullResourceName;
+    return $this->month;
+  }
+  public function setYear($year)
+  {
+    $this->year = $year;
+  }
+  public function getYear()
+  {
+    return $this->year;
   }
 }
