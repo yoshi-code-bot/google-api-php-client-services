@@ -62,6 +62,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
    * @param string $name Required. The name of the entry group. For example,
    * `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Optional. If true, deletes all entries in the entry
+   * group.
    * @return Google_Service_DataCatalog_DatacatalogEmpty
    */
   public function delete($name, $optParams = array())

@@ -126,6 +126,10 @@ class Google_Service_DataCatalog extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'force' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => 'v1beta1/{+name}',

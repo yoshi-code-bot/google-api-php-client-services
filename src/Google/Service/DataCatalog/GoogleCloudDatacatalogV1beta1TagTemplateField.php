@@ -18,6 +18,7 @@
 class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplateField extends Google_Model
 {
   public $displayName;
+  public $isRequired;
   public $name;
   protected $typeType = 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1FieldType';
   protected $typeDataType = '';
@@ -29,6 +30,14 @@ class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplateField e
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  public function setIsRequired($isRequired)
+  {
+    $this->isRequired = $isRequired;
+  }
+  public function getIsRequired()
+  {
+    return $this->isRequired;
   }
   public function setName($name)
   {
