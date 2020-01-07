@@ -79,30 +79,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * organizations/{organization_id}/sources/-
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string compareDuration When compare_duration is set, the
-   * ListFindingsResult's "state_change" attribute is updated to indicate whether
-   * the finding had its state changed, the finding's state remained unchanged, or
-   * if the finding was added in any state during the compare_duration period of
-   * time that precedes the read_time. This is the time between (read_time -
-   * compare_duration) and read_time.
-   *
-   * The state_change value is derived based on the presence and state of the
-   * finding at the two points in time. Intermediate state changes between the two
-   * times don't affect the result. For example, the results aren't affected if
-   * the finding is made inactive and then active again.
-   *
-   * Possible "state_change" values when compare_duration is specified:
-   *
-   * * "CHANGED":   indicates that the finding was present at the start of
-   * compare_duration, but changed its state at read_time. * "UNCHANGED":
-   * indicates that the finding was present at the start of
-   * compare_duration and did not change state at read_time. * "ADDED":
-   * indicates that the finding was not present at the start                  of
-   * compare_duration, but was present at read_time.
-   *
-   * If compare_duration is not specified, then the only possible state_change is
-   * "UNUSED", which will be the state_change set for all findings present at
-   * read_time.
    * @opt_param string filter Expression that defines the filter to apply across
    * findings. The expression is a list of one or more restrictions combined via
    * logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
@@ -159,6 +135,30 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    *
    * The following fields are supported: name parent state category resource_name
    * event_time source_properties security_marks.marks
+   * @opt_param string compareDuration When compare_duration is set, the
+   * ListFindingsResult's "state_change" attribute is updated to indicate whether
+   * the finding had its state changed, the finding's state remained unchanged, or
+   * if the finding was added in any state during the compare_duration period of
+   * time that precedes the read_time. This is the time between (read_time -
+   * compare_duration) and read_time.
+   *
+   * The state_change value is derived based on the presence and state of the
+   * finding at the two points in time. Intermediate state changes between the two
+   * times don't affect the result. For example, the results aren't affected if
+   * the finding is made inactive and then active again.
+   *
+   * Possible "state_change" values when compare_duration is specified:
+   *
+   * * "CHANGED":   indicates that the finding was present at the start of
+   * compare_duration, but changed its state at read_time. * "UNCHANGED":
+   * indicates that the finding was present at the start of
+   * compare_duration and did not change state at read_time. * "ADDED":
+   * indicates that the finding was not present at the start                  of
+   * compare_duration, but was present at read_time.
+   *
+   * If compare_duration is not specified, then the only possible state_change is
+   * "UNUSED", which will be the state_change set for all findings present at
+   * read_time.
    * @return Google_Service_SecurityCommandCenter_ListFindingsResponse
    */
   public function listOrganizationsSourcesFindings($parent, $optParams = array())
@@ -220,14 +220,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())

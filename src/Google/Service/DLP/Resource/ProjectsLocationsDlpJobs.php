@@ -113,18 +113,30 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Allows filtering.
+   * @opt_param string orderBy Comma separated list of fields to order by,
+   * followed by `asc` or `desc` postfix. This list is case-insensitive, default
+   * sorting order is ascending, redundant space characters are insignificant.
+   *
+   * Example: `name asc, end_time asc, create_time desc`
+   *
+   * Supported fields are:
+   *
+   * - `create_time`: corresponds to time the job was created. - `end_time`:
+   * corresponds to time the job ended. - `name`: corresponds to job's name. -
+   * `state`: corresponds to `state`
+   * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
+   * @opt_param string filter Allows filtering.
    *
    * Supported syntax:
    *
    * * Filter expressions are made up of one or more restrictions. * Restrictions
    * can be combined by `AND` or `OR` logical operators. A sequence of
-   * restrictions implicitly uses `AND`. * A restriction has the form of `  `. *
-   * Supported fields/values for inspect jobs:     - `state` -
-   * PENDING|RUNNING|CANCELED|FINISHED|FAILED     - `inspected_storage` -
-   * DATASTORE|CLOUD_STORAGE|BIGQUERY     - `trigger_name` - The resource name of
-   * the trigger that created job.     - 'end_time` - Corresponds to time the job
-   * finished.     - 'start_time` - Corresponds to time the job finished. *
+   * restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+   * {operator} {value}`. * Supported fields/values for inspect jobs:     -
+   * `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED     - `inspected_storage`
+   * - DATASTORE|CLOUD_STORAGE|BIGQUERY     - `trigger_name` - The resource name
+   * of the trigger that created job.     - 'end_time` - Corresponds to time the
+   * job finished.     - 'start_time` - Corresponds to time the job finished. *
    * Supported fields for risk analysis jobs:     - `state` -
    * RUNNING|CANCELED|FINISHED|FAILED     - 'end_time` - Corresponds to time the
    * job finished.     - 'start_time` - Corresponds to time the job finished. *
@@ -140,19 +152,6 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * The length of this field should be no more than 500 characters.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @opt_param string orderBy Optional comma separated list of fields to order
-   * by, followed by `asc` or `desc` postfix. This list is case-insensitive,
-   * default sorting order is ascending, redundant space characters are
-   * insignificant.
-   *
-   * Example: `name asc, end_time asc, create_time desc`
-   *
-   * Supported fields are:
-   *
-   * - `create_time`: corresponds to time the job was created. - `end_time`:
-   * corresponds to time the job ended. - `name`: corresponds to job's name. -
-   * `state`: corresponds to `state`
-   * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse
    */
   public function listProjectsLocationsDlpJobs($parent, $locationId, $optParams = array())

@@ -101,15 +101,10 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional page token to continue retrieval. Comes
-   * from previous call to ListJobTriggers. `order_by` field must not change for
-   * subsequent calls.
-   * @opt_param int pageSize Optional size of the page, can be limited by a
-   * server.
-   * @opt_param string orderBy Optional comma separated list of triggeredJob
-   * fields to order by, followed by `asc` or `desc` postfix. This list is case-
-   * insensitive, default sorting order is ascending, redundant space characters
-   * are insignificant.
+   * @opt_param string orderBy Comma separated list of triggeredJob fields to
+   * order by, followed by `asc` or `desc` postfix. This list is case-insensitive,
+   * default sorting order is ascending, redundant space characters are
+   * insignificant.
    *
    * Example: `name asc,update_time, create_time desc`
    *
@@ -120,15 +115,15 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`:
    * corresponds to JobTrigger's name. - `display_name`: corresponds to
    * JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
-   * @opt_param string filter Optional. Allows filtering.
+   * @opt_param string filter Allows filtering.
    *
    * Supported syntax:
    *
    * * Filter expressions are made up of one or more restrictions. * Restrictions
    * can be combined by `AND` or `OR` logical operators. A sequence of
-   * restrictions implicitly uses `AND`. * A restriction has the form of `  `. *
-   * Supported fields/values for inspect jobs:     - `status` -
-   * HEALTHY|PAUSED|CANCELLED     - `inspected_storage` -
+   * restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+   * {operator} {value}`. * Supported fields/values for inspect jobs:     -
+   * `status` - HEALTHY|PAUSED|CANCELLED     - `inspected_storage` -
    * DATASTORE|CLOUD_STORAGE|BIGQUERY     - 'last_run_time` - RFC 3339 formatted
    * timestamp, surrounded by     quotation marks. Nanoseconds are ignored.     -
    * 'error_count' - Number of errors that have occurred while running. * The
@@ -142,6 +137,10 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * \"2017-12-12T00:00:00+00:00\"
    *
    * The length of this field should be no more than 500 characters.
+   * @opt_param string pageToken Page token to continue retrieval. Comes from
+   * previous call to ListJobTriggers. `order_by` field must not change for
+   * subsequent calls.
+   * @opt_param int pageSize Size of the page, can be limited by a server.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListJobTriggersResponse
    */
   public function listProjectsLocationsJobTriggers($parent, $locationId, $optParams = array())
