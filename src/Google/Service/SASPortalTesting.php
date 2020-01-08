@@ -110,7 +110,17 @@ class Google_Service_SASPortalTesting extends Google_Service
         'devices',
         array(
           'methods' => array(
-            'create' => array(
+            'bulk' => array(
+              'path' => 'v1alpha1/{+parent}/devices:bulk',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
               'path' => 'v1alpha1/{+parent}/devices',
               'httpMethod' => 'POST',
               'parameters' => array(
@@ -326,7 +336,17 @@ class Google_Service_SASPortalTesting extends Google_Service
         'devices',
         array(
           'methods' => array(
-            'create' => array(
+            'bulk' => array(
+              'path' => 'v1alpha1/{+parent}/devices:bulk',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
               'path' => 'v1alpha1/{+parent}/devices',
               'httpMethod' => 'POST',
               'parameters' => array(
@@ -375,10 +395,6 @@ class Google_Service_SASPortalTesting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -386,6 +402,10 @@ class Google_Service_SASPortalTesting extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'move' => array(
