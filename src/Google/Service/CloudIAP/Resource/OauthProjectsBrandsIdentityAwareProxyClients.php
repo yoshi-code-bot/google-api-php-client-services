@@ -26,9 +26,9 @@
 class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClients extends Google_Service_Resource
 {
   /**
-   * Creates an Identity Aware Proxy (IAP) OAuth client, the client is owned by
+   * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by
    * IAP. Requires that the brand for the project exists and that it is set for
-   * internal only use. (identityAwareProxyClients.create)
+   * internal-only use. (identityAwareProxyClients.create)
    *
    * @param string $parent Required. Path to create the client in. In the
    * following format: projects/{project_number/id}/brands/{brand}. The project
@@ -44,8 +44,9 @@ class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClie
     return $this->call('create', array($params), "Google_Service_CloudIAP_IdentityAwareProxyClient");
   }
   /**
-   * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful if the secret was
-   * compromised. Requires that the client is owned by IAP.
+   * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful for removing
+   * obsolete clients, managing the number of clients in a given project, and
+   * cleaning up after tests. Requires that the client is owned by IAP.
    * (identityAwareProxyClients.delete)
    *
    * @param string $name Required. Name of the Identity Aware Proxy client to be
@@ -104,9 +105,8 @@ class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClie
     return $this->call('list', array($params), "Google_Service_CloudIAP_ListIdentityAwareProxyClientsResponse");
   }
   /**
-   * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful for removing
-   * obsolete clients, managing the number of clients in a given project, and
-   * cleaning up after tests. Requires that the client is owned by IAP.
+   * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the
+   * secret was compromised. Requires that the client is owned by IAP.
    * (identityAwareProxyClients.resetSecret)
    *
    * @param string $name Required. Name of the Identity Aware Proxy client to that
