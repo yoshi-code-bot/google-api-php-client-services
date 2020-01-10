@@ -15,12 +15,10 @@
  * the License.
  */
 
-class Google_Service_AlertCenter_MaliciousEntity extends Google_Model
+class Google_Service_AlertCenter_User extends Google_Model
 {
   public $displayName;
-  protected $entityType = 'Google_Service_AlertCenter_User';
-  protected $entityDataType = '';
-  public $fromHeader;
+  public $emailAddress;
 
   public function setDisplayName($displayName)
   {
@@ -30,26 +28,12 @@ class Google_Service_AlertCenter_MaliciousEntity extends Google_Model
   {
     return $this->displayName;
   }
-  /**
-   * @param Google_Service_AlertCenter_User
-   */
-  public function setEntity(Google_Service_AlertCenter_User $entity)
+  public function setEmailAddress($emailAddress)
   {
-    $this->entity = $entity;
+    $this->emailAddress = $emailAddress;
   }
-  /**
-   * @return Google_Service_AlertCenter_User
-   */
-  public function getEntity()
+  public function getEmailAddress()
   {
-    return $this->entity;
-  }
-  public function setFromHeader($fromHeader)
-  {
-    $this->fromHeader = $fromHeader;
-  }
-  public function getFromHeader()
-  {
-    return $this->fromHeader;
+    return $this->emailAddress;
   }
 }

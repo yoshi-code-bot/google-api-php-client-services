@@ -19,6 +19,8 @@ class Google_Service_Docs_Request extends Google_Model
 {
   protected $createFooterType = 'Google_Service_Docs_CreateFooterRequest';
   protected $createFooterDataType = '';
+  protected $createFootnoteType = 'Google_Service_Docs_CreateFootnoteRequest';
+  protected $createFootnoteDataType = '';
   protected $createHeaderType = 'Google_Service_Docs_CreateHeaderRequest';
   protected $createHeaderDataType = '';
   protected $createNamedRangeType = 'Google_Service_Docs_CreateNamedRangeRequest';
@@ -89,6 +91,20 @@ class Google_Service_Docs_Request extends Google_Model
   public function getCreateFooter()
   {
     return $this->createFooter;
+  }
+  /**
+   * @param Google_Service_Docs_CreateFootnoteRequest
+   */
+  public function setCreateFootnote(Google_Service_Docs_CreateFootnoteRequest $createFootnote)
+  {
+    $this->createFootnote = $createFootnote;
+  }
+  /**
+   * @return Google_Service_Docs_CreateFootnoteRequest
+   */
+  public function getCreateFootnote()
+  {
+    return $this->createFootnote;
   }
   /**
    * @param Google_Service_Docs_CreateHeaderRequest

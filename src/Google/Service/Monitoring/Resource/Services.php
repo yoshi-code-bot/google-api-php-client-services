@@ -47,7 +47,7 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * Soft delete this Service. (services.delete)
    *
    * @param string $name Resource name of the Service to delete. Of the form
-   * projects/{project_id}/service/{service_id}.
+   * projects/{project_id}/services/{service_id}.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */

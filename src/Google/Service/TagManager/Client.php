@@ -15,18 +15,20 @@
  * the License.
  */
 
-class Google_Service_TagManager_CustomTemplate extends Google_Model
+class Google_Service_TagManager_Client extends Google_Collection
 {
+  protected $collection_key = 'parameter';
   public $accountId;
+  public $clientId;
   public $containerId;
   public $fingerprint;
-  protected $galleryReferenceType = 'Google_Service_TagManager_GalleryReference';
-  protected $galleryReferenceDataType = '';
   public $name;
+  protected $parameterType = 'Google_Service_TagManager_Parameter';
+  protected $parameterDataType = 'array';
   public $path;
+  public $priority;
   public $tagManagerUrl;
-  public $templateData;
-  public $templateId;
+  public $type;
   public $workspaceId;
 
   public function setAccountId($accountId)
@@ -36,6 +38,14 @@ class Google_Service_TagManager_CustomTemplate extends Google_Model
   public function getAccountId()
   {
     return $this->accountId;
+  }
+  public function setClientId($clientId)
+  {
+    $this->clientId = $clientId;
+  }
+  public function getClientId()
+  {
+    return $this->clientId;
   }
   public function setContainerId($containerId)
   {
@@ -53,20 +63,6 @@ class Google_Service_TagManager_CustomTemplate extends Google_Model
   {
     return $this->fingerprint;
   }
-  /**
-   * @param Google_Service_TagManager_GalleryReference
-   */
-  public function setGalleryReference(Google_Service_TagManager_GalleryReference $galleryReference)
-  {
-    $this->galleryReference = $galleryReference;
-  }
-  /**
-   * @return Google_Service_TagManager_GalleryReference
-   */
-  public function getGalleryReference()
-  {
-    return $this->galleryReference;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -74,6 +70,20 @@ class Google_Service_TagManager_CustomTemplate extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Google_Service_TagManager_Parameter
+   */
+  public function setParameter($parameter)
+  {
+    $this->parameter = $parameter;
+  }
+  /**
+   * @return Google_Service_TagManager_Parameter
+   */
+  public function getParameter()
+  {
+    return $this->parameter;
   }
   public function setPath($path)
   {
@@ -83,6 +93,14 @@ class Google_Service_TagManager_CustomTemplate extends Google_Model
   {
     return $this->path;
   }
+  public function setPriority($priority)
+  {
+    $this->priority = $priority;
+  }
+  public function getPriority()
+  {
+    return $this->priority;
+  }
   public function setTagManagerUrl($tagManagerUrl)
   {
     $this->tagManagerUrl = $tagManagerUrl;
@@ -91,21 +109,13 @@ class Google_Service_TagManager_CustomTemplate extends Google_Model
   {
     return $this->tagManagerUrl;
   }
-  public function setTemplateData($templateData)
+  public function setType($type)
   {
-    $this->templateData = $templateData;
+    $this->type = $type;
   }
-  public function getTemplateData()
+  public function getType()
   {
-    return $this->templateData;
-  }
-  public function setTemplateId($templateId)
-  {
-    $this->templateId = $templateId;
-  }
-  public function getTemplateId()
-  {
-    return $this->templateId;
+    return $this->type;
   }
   public function setWorkspaceId($workspaceId)
   {

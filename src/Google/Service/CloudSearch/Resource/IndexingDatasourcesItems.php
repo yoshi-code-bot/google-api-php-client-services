@@ -34,6 +34,8 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}/items/{item_id}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string connectorName Name of connector making this call. Format:
+   * datasources/{source_id}/connectors/{ID}
    * @opt_param string version Required. The incremented version of the item to
    * delete from the index. The indexing system stores the version from the
    * datasource as a byte string and compares the Item version in the index to the
@@ -45,8 +47,6 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
    * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string mode Required. The RequestMode for this request.
-   * @opt_param string connectorName Name of connector making this call. Format:
-   * datasources/{source_id}/connectors/{ID}
    * @return Google_Service_CloudSearch_Operation
    */
   public function delete($name, $optParams = array())
@@ -129,8 +129,6 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string connectorName Name of connector making this call. Format:
-   * datasources/{source_id}/connectors/{ID}
    * @opt_param bool brief When set to true, the indexing system only populates
    * the following fields: name, version, queue. metadata.hash, metadata.title,
    * metadata.sourceRepositoryURL, metadata.objectType, metadata.createTime,
@@ -145,6 +143,8 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * The default value is 10
    * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
    * help with debugging, set this field. Otherwise, ignore this field.
+   * @opt_param string connectorName Name of connector making this call. Format:
+   * datasources/{source_id}/connectors/{ID}
    * @return Google_Service_CloudSearch_ListItemsResponse
    */
   public function listIndexingDatasourcesItems($name, $optParams = array())
