@@ -15,24 +15,25 @@
  * the License.
  */
 
-class Google_Service_Translate_DetectionsListResponse extends Google_Collection
+class Google_Service_Translate_DetectedLanguage extends Google_Model
 {
-  protected $collection_key = 'detections';
-  protected $detectionsType = 'Google_Service_Translate_DetectionsResourceItems';
-  protected $detectionsDataType = 'array';
+  public $confidence;
+  public $languageCode;
 
-  /**
-   * @param Google_Service_Translate_DetectionsResourceItems
-   */
-  public function setDetections($detections)
+  public function setConfidence($confidence)
   {
-    $this->detections = $detections;
+    $this->confidence = $confidence;
   }
-  /**
-   * @return Google_Service_Translate_DetectionsResourceItems
-   */
-  public function getDetections()
+  public function getConfidence()
   {
-    return $this->detections;
+    return $this->confidence;
+  }
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
   }
 }

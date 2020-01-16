@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_DataFusion_CustomField extends Google_Model
+class Google_Service_AccessContextManager_CustomLevel extends Google_Model
 {
-  public $name;
-  public $value;
+  protected $exprType = 'Google_Service_AccessContextManager_Expr';
+  protected $exprDataType = '';
 
-  public function setName($name)
+  /**
+   * @param Google_Service_AccessContextManager_Expr
+   */
+  public function setExpr(Google_Service_AccessContextManager_Expr $expr)
   {
-    $this->name = $name;
+    $this->expr = $expr;
   }
-  public function getName()
+  /**
+   * @return Google_Service_AccessContextManager_Expr
+   */
+  public function getExpr()
   {
-    return $this->name;
-  }
-  public function setValue($value)
-  {
-    $this->value = $value;
-  }
-  public function getValue()
-  {
-    return $this->value;
+    return $this->expr;
   }
 }

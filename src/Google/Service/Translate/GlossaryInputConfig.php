@@ -15,16 +15,23 @@
  * the License.
  */
 
-class Google_Service_Translate_GetSupportedLanguagesRequest extends Google_Model
+class Google_Service_Translate_GlossaryInputConfig extends Google_Model
 {
-  public $target;
+  protected $gcsSourceType = 'Google_Service_Translate_GcsSource';
+  protected $gcsSourceDataType = '';
 
-  public function setTarget($target)
+  /**
+   * @param Google_Service_Translate_GcsSource
+   */
+  public function setGcsSource(Google_Service_Translate_GcsSource $gcsSource)
   {
-    $this->target = $target;
+    $this->gcsSource = $gcsSource;
   }
-  public function getTarget()
+  /**
+   * @return Google_Service_Translate_GcsSource
+   */
+  public function getGcsSource()
   {
-    return $this->target;
+    return $this->gcsSource;
   }
 }

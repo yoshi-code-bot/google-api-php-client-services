@@ -15,26 +15,24 @@
  * the License.
  */
 
-class Google_Service_DataFusion_AuditLogConfig extends Google_Collection
+class Google_Service_Translate_DetectLanguageResponse extends Google_Collection
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  protected $collection_key = 'languages';
+  protected $languagesType = 'Google_Service_Translate_DetectedLanguage';
+  protected $languagesDataType = 'array';
 
-  public function setExemptedMembers($exemptedMembers)
+  /**
+   * @param Google_Service_Translate_DetectedLanguage
+   */
+  public function setLanguages($languages)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->languages = $languages;
   }
-  public function getExemptedMembers()
+  /**
+   * @return Google_Service_Translate_DetectedLanguage
+   */
+  public function getLanguages()
   {
-    return $this->exemptedMembers;
-  }
-  public function setLogType($logType)
-  {
-    $this->logType = $logType;
-  }
-  public function getLogType()
-  {
-    return $this->logType;
+    return $this->languages;
   }
 }

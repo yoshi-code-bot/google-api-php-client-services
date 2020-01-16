@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_Translate_DetectionsResourceItems extends Google_Model
+class Google_Service_Translate_GcsDestination extends Google_Model
 {
-  public $confidence;
-  public $isReliable;
-  public $language;
+  public $outputUriPrefix;
 
-  public function setConfidence($confidence)
+  public function setOutputUriPrefix($outputUriPrefix)
   {
-    $this->confidence = $confidence;
+    $this->outputUriPrefix = $outputUriPrefix;
   }
-  public function getConfidence()
+  public function getOutputUriPrefix()
   {
-    return $this->confidence;
-  }
-  public function setIsReliable($isReliable)
-  {
-    $this->isReliable = $isReliable;
-  }
-  public function getIsReliable()
-  {
-    return $this->isReliable;
-  }
-  public function setLanguage($language)
-  {
-    $this->language = $language;
-  }
-  public function getLanguage()
-  {
-    return $this->language;
+    return $this->outputUriPrefix;
   }
 }

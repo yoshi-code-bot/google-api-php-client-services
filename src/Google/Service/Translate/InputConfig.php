@@ -15,26 +15,32 @@
  * the License.
  */
 
-class Google_Service_DataFusion_AuditLogConfig extends Google_Collection
+class Google_Service_Translate_InputConfig extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  protected $gcsSourceType = 'Google_Service_Translate_GcsSource';
+  protected $gcsSourceDataType = '';
+  public $mimeType;
 
-  public function setExemptedMembers($exemptedMembers)
+  /**
+   * @param Google_Service_Translate_GcsSource
+   */
+  public function setGcsSource(Google_Service_Translate_GcsSource $gcsSource)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->gcsSource = $gcsSource;
   }
-  public function getExemptedMembers()
+  /**
+   * @return Google_Service_Translate_GcsSource
+   */
+  public function getGcsSource()
   {
-    return $this->exemptedMembers;
+    return $this->gcsSource;
   }
-  public function setLogType($logType)
+  public function setMimeType($mimeType)
   {
-    $this->logType = $logType;
+    $this->mimeType = $mimeType;
   }
-  public function getLogType()
+  public function getMimeType()
   {
-    return $this->logType;
+    return $this->mimeType;
   }
 }

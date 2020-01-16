@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Translate_LanguagesResource extends Google_Model
+class Google_Service_Translate_WaitOperationRequest extends Google_Model
 {
-  public $language;
-  public $name;
+  public $timeout;
 
-  public function setLanguage($language)
+  public function setTimeout($timeout)
   {
-    $this->language = $language;
+    $this->timeout = $timeout;
   }
-  public function getLanguage()
+  public function getTimeout()
   {
-    return $this->language;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->timeout;
   }
 }

@@ -15,24 +15,23 @@
  * the License.
  */
 
-class Google_Service_Translate_LanguagesListResponse extends Google_Collection
+class Google_Service_Translate_OutputConfig extends Google_Model
 {
-  protected $collection_key = 'languages';
-  protected $languagesType = 'Google_Service_Translate_LanguagesResource';
-  protected $languagesDataType = 'array';
+  protected $gcsDestinationType = 'Google_Service_Translate_GcsDestination';
+  protected $gcsDestinationDataType = '';
 
   /**
-   * @param Google_Service_Translate_LanguagesResource
+   * @param Google_Service_Translate_GcsDestination
    */
-  public function setLanguages($languages)
+  public function setGcsDestination(Google_Service_Translate_GcsDestination $gcsDestination)
   {
-    $this->languages = $languages;
+    $this->gcsDestination = $gcsDestination;
   }
   /**
-   * @return Google_Service_Translate_LanguagesResource
+   * @return Google_Service_Translate_GcsDestination
    */
-  public function getLanguages()
+  public function getGcsDestination()
   {
-    return $this->languages;
+    return $this->gcsDestination;
   }
 }

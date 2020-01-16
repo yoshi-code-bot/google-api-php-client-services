@@ -15,26 +15,25 @@
  * the License.
  */
 
-class Google_Service_DataFusion_AuditLogConfig extends Google_Collection
+class Google_Service_Translate_TranslateTextGlossaryConfig extends Google_Model
 {
-  protected $collection_key = 'exemptedMembers';
-  public $exemptedMembers;
-  public $logType;
+  public $glossary;
+  public $ignoreCase;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setGlossary($glossary)
   {
-    $this->exemptedMembers = $exemptedMembers;
+    $this->glossary = $glossary;
   }
-  public function getExemptedMembers()
+  public function getGlossary()
   {
-    return $this->exemptedMembers;
+    return $this->glossary;
   }
-  public function setLogType($logType)
+  public function setIgnoreCase($ignoreCase)
   {
-    $this->logType = $logType;
+    $this->ignoreCase = $ignoreCase;
   }
-  public function getLogType()
+  public function getIgnoreCase()
   {
-    return $this->logType;
+    return $this->ignoreCase;
   }
 }

@@ -19,11 +19,11 @@
  * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $serviceconsumermanagementService = new Google_Service_ServiceConsumerManagement(...);
- *   $operations = $serviceconsumermanagementService->operations;
+ *   $translateService = new Google_Service_Translate(...);
+ *   $operations = $translateService->operations;
  *  </code>
  */
-class Google_Service_ServiceConsumerManagement_Resource_Operations extends Google_Service_Resource
+class Google_Service_Translate_Resource_ProjectsLocationsOperations extends Google_Service_Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running operation.  The server
@@ -37,15 +37,15 @@ class Google_Service_ServiceConsumerManagement_Resource_Operations extends Googl
    * `Code.CANCELLED`. (operations.cancel)
    *
    * @param string $name The name of the operation resource to be cancelled.
-   * @param Google_Service_ServiceConsumerManagement_CancelOperationRequest $postBody
+   * @param Google_Service_Translate_CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ServiceConsumerManagement_ServiceconsumermanagementEmpty
+   * @return Google_Service_Translate_TranslateEmpty
    */
-  public function cancel($name, Google_Service_ServiceConsumerManagement_CancelOperationRequest $postBody, $optParams = array())
+  public function cancel($name, Google_Service_Translate_CancelOperationRequest $postBody, $optParams = array())
   {
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('cancel', array($params), "Google_Service_ServiceConsumerManagement_ServiceconsumermanagementEmpty");
+    return $this->call('cancel', array($params), "Google_Service_Translate_TranslateEmpty");
   }
   /**
    * Deletes a long-running operation. This method indicates that the client is no
@@ -55,13 +55,13 @@ class Google_Service_ServiceConsumerManagement_Resource_Operations extends Googl
    *
    * @param string $name The name of the operation resource to be deleted.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ServiceConsumerManagement_ServiceconsumermanagementEmpty
+   * @return Google_Service_Translate_TranslateEmpty
    */
   public function delete($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_ServiceConsumerManagement_ServiceconsumermanagementEmpty");
+    return $this->call('delete', array($params), "Google_Service_Translate_TranslateEmpty");
   }
   /**
    * Gets the latest state of a long-running operation.  Clients can use this
@@ -70,13 +70,13 @@ class Google_Service_ServiceConsumerManagement_Resource_Operations extends Googl
    *
    * @param string $name The name of the operation resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ServiceConsumerManagement_Operation
+   * @return Google_Service_Translate_Operation
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ServiceConsumerManagement_Operation");
+    return $this->call('get', array($params), "Google_Service_Translate_Operation");
   }
   /**
    * Lists operations that match the specified filter in the request. If the
@@ -88,20 +88,43 @@ class Google_Service_ServiceConsumerManagement_Resource_Operations extends Googl
    * `"/v1/{name=users}/operations"` to their service configuration. For backwards
    * compatibility, the default name includes the operations collection id,
    * however overriding users must ensure the name binding is the parent resource,
-   * without the operations collection id. (operations.listOperations)
+   * without the operations collection id.
+   * (operations.listProjectsLocationsOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The standard list page size.
    * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
-   * @return Google_Service_ServiceConsumerManagement_ListOperationsResponse
+   * @opt_param int pageSize The standard list page size.
+   * @return Google_Service_Translate_ListOperationsResponse
    */
-  public function listOperations($name, $optParams = array())
+  public function listProjectsLocationsOperations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ServiceConsumerManagement_ListOperationsResponse");
+    return $this->call('list', array($params), "Google_Service_Translate_ListOperationsResponse");
+  }
+  /**
+   * Waits for the specified long-running operation until it is done or reaches at
+   * most a specified timeout, returning the latest state.  If the operation is
+   * already done, the latest state is immediately returned.  If the timeout
+   * specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout
+   * is used.  If the server does not support this method, it returns
+   * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort
+   * basis.  It may return the latest state before the specified timeout
+   * (including immediately), meaning even an immediate response is no guarantee
+   * that the operation is done. (operations.wait)
+   *
+   * @param string $name The name of the operation resource to wait on.
+   * @param Google_Service_Translate_WaitOperationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Translate_Operation
+   */
+  public function wait($name, Google_Service_Translate_WaitOperationRequest $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('wait', array($params), "Google_Service_Translate_Operation");
   }
 }

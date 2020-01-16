@@ -15,24 +15,6 @@
  * the License.
  */
 
-class Google_Service_Translate_TranslationsListResponse extends Google_Collection
+class Google_Service_Translate_TranslateEmpty extends Google_Model
 {
-  protected $collection_key = 'translations';
-  protected $translationsType = 'Google_Service_Translate_TranslationsResource';
-  protected $translationsDataType = 'array';
-
-  /**
-   * @param Google_Service_Translate_TranslationsResource
-   */
-  public function setTranslations($translations)
-  {
-    $this->translations = $translations;
-  }
-  /**
-   * @return Google_Service_Translate_TranslationsResource
-   */
-  public function getTranslations()
-  {
-    return $this->translations;
-  }
 }

@@ -15,16 +15,35 @@
  * the License.
  */
 
-class Google_Service_DataFusion_AuthorizationLoggingOptions extends Google_Model
+class Google_Service_Translate_Status extends Google_Collection
 {
-  public $permissionType;
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  public function setPermissionType($permissionType)
+  public function setCode($code)
   {
-    $this->permissionType = $permissionType;
+    $this->code = $code;
   }
-  public function getPermissionType()
+  public function getCode()
   {
-    return $this->permissionType;
+    return $this->code;
+  }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
 }

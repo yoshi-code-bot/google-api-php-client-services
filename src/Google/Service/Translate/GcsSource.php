@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_DataFusion_DataAccessOptions extends Google_Model
+class Google_Service_Translate_GcsSource extends Google_Model
 {
-  public $logMode;
+  public $inputUri;
 
-  public function setLogMode($logMode)
+  public function setInputUri($inputUri)
   {
-    $this->logMode = $logMode;
+    $this->inputUri = $inputUri;
   }
-  public function getLogMode()
+  public function getInputUri()
   {
-    return $this->logMode;
+    return $this->inputUri;
   }
 }

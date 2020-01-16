@@ -15,20 +15,21 @@
  * the License.
  */
 
-class Google_Service_Translate_DetectLanguageRequest extends Google_Model
+class Google_Service_Translate_Location extends Google_Model
 {
-  public $content;
+  public $displayName;
   public $labels;
-  public $mimeType;
-  public $model;
+  public $locationId;
+  public $metadata;
+  public $name;
 
-  public function setContent($content)
+  public function setDisplayName($displayName)
   {
-    $this->content = $content;
+    $this->displayName = $displayName;
   }
-  public function getContent()
+  public function getDisplayName()
   {
-    return $this->content;
+    return $this->displayName;
   }
   public function setLabels($labels)
   {
@@ -38,20 +39,28 @@ class Google_Service_Translate_DetectLanguageRequest extends Google_Model
   {
     return $this->labels;
   }
-  public function setMimeType($mimeType)
+  public function setLocationId($locationId)
   {
-    $this->mimeType = $mimeType;
+    $this->locationId = $locationId;
   }
-  public function getMimeType()
+  public function getLocationId()
   {
-    return $this->mimeType;
+    return $this->locationId;
   }
-  public function setModel($model)
+  public function setMetadata($metadata)
   {
-    $this->model = $model;
+    $this->metadata = $metadata;
   }
-  public function getModel()
+  public function getMetadata()
   {
-    return $this->model;
+    return $this->metadata;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
 }
