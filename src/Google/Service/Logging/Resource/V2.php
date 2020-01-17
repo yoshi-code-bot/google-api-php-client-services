@@ -16,21 +16,21 @@
  */
 
 /**
- * The "organizations" collection of methods.
+ * The "v2" collection of methods.
  * Typical usage is:
  *  <code>
  *   $loggingService = new Google_Service_Logging(...);
- *   $organizations = $loggingService->organizations;
+ *   $v2 = $loggingService->v2;
  *  </code>
  */
-class Google_Service_Logging_Resource_Organizations extends Google_Service_Resource
+class Google_Service_Logging_Resource_V2 extends Google_Service_Resource
 {
   /**
    * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the
    * Logs Router can currently only be configured for GCP organizations. Once
    * configured, it applies to all projects and folders in the GCP
    * organization.See Enabling CMEK for Logs Router for more information.
-   * (organizations.getCmekSettings)
+   * (v2.getCmekSettings)
    *
    * @param string $name Required. The resource for which to retrieve CMEK
    * settings. "projects/[PROJECT_ID]/cmekSettings"
@@ -57,7 +57,7 @@ class Google_Service_Logging_Resource_Organizations extends Google_Service_Resou
    * 2) the associated service account does not have the required
    * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3)
    * access to the key is disabled.See Enabling CMEK for Logs Router for more
-   * information. (organizations.updateCmekSettings)
+   * information. (v2.updateCmekSettings)
    *
    * @param string $name Required. The resource name for the CMEK settings to
    * update. "projects/[PROJECT_ID]/cmekSettings"
