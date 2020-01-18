@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_MonthDay extends Google_Model
+class Google_Service_DoubleClickBidManager_Options extends Google_Model
 {
-  public $day;
-  public $month;
+  public $includeOnlyTargetedUserLists;
 
-  public function setDay($day)
+  public function setIncludeOnlyTargetedUserLists($includeOnlyTargetedUserLists)
   {
-    $this->day = $day;
+    $this->includeOnlyTargetedUserLists = $includeOnlyTargetedUserLists;
   }
-  public function getDay()
+  public function getIncludeOnlyTargetedUserLists()
   {
-    return $this->day;
-  }
-  public function setMonth($month)
-  {
-    $this->month = $month;
-  }
-  public function getMonth()
-  {
-    return $this->month;
+    return $this->includeOnlyTargetedUserLists;
   }
 }
