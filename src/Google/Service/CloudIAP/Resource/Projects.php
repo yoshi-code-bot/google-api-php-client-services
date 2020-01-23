@@ -23,6 +23,6 @@
  *   $projects = $iapService->projects;
  *  </code>
  */
-class Google_Service_CloudIAP_Resource_OauthProjects extends Google_Service_Resource
+class Google_Service_CloudIAP_Resource_Projects extends Google_Service_Resource
 {
 }
