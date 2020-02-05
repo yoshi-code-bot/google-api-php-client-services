@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudKMS_LocationMetadata extends Google_Model
+class Google_Service_AlertCenter_RuleInfo extends Google_Model
 {
-  public $ekmAvailable;
-  public $hsmAvailable;
+  public $displayName;
+  public $resourceName;
 
-  public function setEkmAvailable($ekmAvailable)
+  public function setDisplayName($displayName)
   {
-    $this->ekmAvailable = $ekmAvailable;
+    $this->displayName = $displayName;
   }
-  public function getEkmAvailable()
+  public function getDisplayName()
   {
-    return $this->ekmAvailable;
+    return $this->displayName;
   }
-  public function setHsmAvailable($hsmAvailable)
+  public function setResourceName($resourceName)
   {
-    $this->hsmAvailable = $hsmAvailable;
+    $this->resourceName = $resourceName;
   }
-  public function getHsmAvailable()
+  public function getResourceName()
   {
-    return $this->hsmAvailable;
+    return $this->resourceName;
   }
 }

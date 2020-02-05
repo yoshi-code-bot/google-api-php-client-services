@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_CloudKMS_LocationMetadata extends Google_Model
+class Google_Service_AlertCenter_DlpRuleViolation extends Google_Model
 {
-  public $ekmAvailable;
-  public $hsmAvailable;
+  protected $ruleViolationInfoType = 'Google_Service_AlertCenter_RuleViolationInfo';
+  protected $ruleViolationInfoDataType = '';
 
-  public function setEkmAvailable($ekmAvailable)
+  /**
+   * @param Google_Service_AlertCenter_RuleViolationInfo
+   */
+  public function setRuleViolationInfo(Google_Service_AlertCenter_RuleViolationInfo $ruleViolationInfo)
   {
-    $this->ekmAvailable = $ekmAvailable;
+    $this->ruleViolationInfo = $ruleViolationInfo;
   }
-  public function getEkmAvailable()
+  /**
+   * @return Google_Service_AlertCenter_RuleViolationInfo
+   */
+  public function getRuleViolationInfo()
   {
-    return $this->ekmAvailable;
-  }
-  public function setHsmAvailable($hsmAvailable)
-  {
-    $this->hsmAvailable = $hsmAvailable;
-  }
-  public function getHsmAvailable()
-  {
-    return $this->hsmAvailable;
+    return $this->ruleViolationInfo;
   }
 }

@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudKMS_LocationMetadata extends Google_Model
+class Google_Service_AlertCenter_PredefinedDetectorInfo extends Google_Model
 {
-  public $ekmAvailable;
-  public $hsmAvailable;
+  public $detectorName;
 
-  public function setEkmAvailable($ekmAvailable)
+  public function setDetectorName($detectorName)
   {
-    $this->ekmAvailable = $ekmAvailable;
+    $this->detectorName = $detectorName;
   }
-  public function getEkmAvailable()
+  public function getDetectorName()
   {
-    return $this->ekmAvailable;
-  }
-  public function setHsmAvailable($hsmAvailable)
-  {
-    $this->hsmAvailable = $hsmAvailable;
-  }
-  public function getHsmAvailable()
-  {
-    return $this->hsmAvailable;
+    return $this->detectorName;
   }
 }
