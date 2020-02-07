@@ -28,8 +28,8 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
   /**
    * Create a Service. (services.create)
    *
-   * @param string $parent Resource name of the parent workspace. Of the form
-   * projects/{project_id}.
+   * @param string $parent Required. Resource name of the parent workspace. Of the
+   * form projects/{project_id}.
    * @param Google_Service_Monitoring_Service $postBody
    * @param array $optParams Optional parameters.
    *
@@ -46,8 +46,8 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
   /**
    * Soft delete this Service. (services.delete)
    *
-   * @param string $name Resource name of the Service to delete. Of the form
-   * projects/{project_id}/services/{service_id}.
+   * @param string $name Required. Resource name of the Service to delete. Of the
+   * form projects/{project_id}/services/{service_id}.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */
@@ -60,7 +60,7 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
   /**
    * Get the named Service. (services.get)
    *
-   * @param string $name Resource name of the Service. Of the form
+   * @param string $name Required. Resource name of the Service. Of the form
    * projects/{project_id}/services/{service_id}.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_Service
@@ -74,16 +74,11 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
   /**
    * List Services for this workspace. (services.listServices)
    *
-   * @param string $parent Resource name of the parent Workspace. Of the form
-   * projects/{project_id}.
+   * @param string $parent Required. Resource name of the parent containing the
+   * listed services, either a project or Stackdriver Account (workspace).One of
+   * the forms: "projects/{project_id}" "workspaces/{host_project_id}"
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return additional results from the previous
-   * method call.
-   * @opt_param int pageSize A non-negative number that is the maximum number of
-   * results to return. When 0, use default page size.
    * @opt_param string filter A filter specifying what Services to return. The
    * filter currently supports the following fields: - `identifier_case` -
    * `app_engine.module_id` - `cloud_endpoints.service` - `cluster_istio.location`
@@ -92,6 +87,12 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * identifier oneof is populated. For example, the filter identifier_case =
    * "CUSTOM" would match all services with a value for the custom field. Valid
    * options are "CUSTOM", "APP_ENGINE", "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+   * @opt_param string pageToken If this field is not empty then it must contain
+   * the nextPageToken value returned by a previous call to this method. Using
+   * this field causes the method to return additional results from the previous
+   * method call.
+   * @opt_param int pageSize A non-negative number that is the maximum number of
+   * results to return. When 0, use default page size.
    * @return Google_Service_Monitoring_ListServicesResponse
    */
   public function listServices($parent, $optParams = array())

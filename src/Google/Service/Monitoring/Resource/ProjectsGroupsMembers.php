@@ -29,8 +29,8 @@ class Google_Service_Monitoring_Resource_ProjectsGroupsMembers extends Google_Se
    * Lists the monitored resources that are members of a group.
    * (members.listProjectsGroupsMembers)
    *
-   * @param string $name The group whose members are listed. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}".
+   * @param string $name Required. The group whose members are listed. The format
+   * is "projects/{project_id_or_number}/groups/{group_id}".
    * @param array $optParams Optional parameters.
    *
    * @opt_param string interval.endTime Required. The end of the time interval.
