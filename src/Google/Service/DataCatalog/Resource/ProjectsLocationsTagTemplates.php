@@ -31,13 +31,13 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
    * Project](/data-catalog/docs/concepts/resource-project) for more information).
    * (tagTemplates.create)
    *
-   * @param string $parent Required. The name of the project and the location this
-   * template is in. Example:
+   * @param string $parent Required. The name of the project and the template
+   * location [region](/compute/docs/regions-zones/#available). NOTE: Currently,
+   * only the `us-central1 region` is supported.
    *
-   * * projects/{project_id}/locations/{location}
+   * Example:
    *
-   * TagTemplate and its child resources may not actually be stored in the
-   * location in this name.
+   * * projects/{project_id}/locations/us-central1
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplate $postBody
    * @param array $optParams Optional parameters.
    *
