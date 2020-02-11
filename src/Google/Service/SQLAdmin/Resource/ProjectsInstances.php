@@ -46,4 +46,47 @@ class Google_Service_SQLAdmin_Resource_ProjectsInstances extends Google_Service_
     $params = array_merge($params, $optParams);
     return $this->call('rescheduleMaintenance', array($params), "Google_Service_SQLAdmin_Operation");
   }
+  /**
+   * Start External master migration. (instances.startExternalSync)
+   *
+   * @param string $project ID of the project that contains the first generation
+   * instance.
+   * @param string $instance Cloud SQL instance ID. This does not include the
+   * project ID.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string syncMode External sync mode
+   * @opt_param string parent The parent resource where Cloud SQL starts this
+   * database instance external sync. Format:
+   * projects/{project}/locations/{location}/instances/{instance}
+   * @return Google_Service_SQLAdmin_Operation
+   */
+  public function startExternalSync($project, $instance, $optParams = array())
+  {
+    $params = array('project' => $project, 'instance' => $instance);
+    $params = array_merge($params, $optParams);
+    return $this->call('startExternalSync', array($params), "Google_Service_SQLAdmin_Operation");
+  }
+  /**
+   * Verify External master external sync settings.
+   * (instances.verifyExternalSyncSettings)
+   *
+   * @param string $project Project ID of the project that contains the instance.
+   * @param string $instance Cloud SQL instance ID. This does not include the
+   * project ID.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string syncMode External sync mode
+   * @opt_param string parent The parent resource where Cloud SQL verifies this
+   * database instance external sync settings. Format:
+   * projects/{project}/locations/{location}/instances/{instance}
+   * @opt_param bool verifyConnectionOnly Flag to enable verifying connection only
+   * @return Google_Service_SQLAdmin_SqlInstancesVerifyExternalSyncSettingsResponse
+   */
+  public function verifyExternalSyncSettings($project, $instance, $optParams = array())
+  {
+    $params = array('project' => $project, 'instance' => $instance);
+    $params = array_merge($params, $optParams);
+    return $this->call('verifyExternalSyncSettings', array($params), "Google_Service_SQLAdmin_SqlInstancesVerifyExternalSyncSettingsResponse");
+  }
 }

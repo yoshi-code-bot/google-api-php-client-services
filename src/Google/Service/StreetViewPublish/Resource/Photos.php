@@ -110,8 +110,6 @@ class Google_Service_StreetViewPublish_Resource_Photos extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The nextPageToken value returned from a previous
-   * ListPhotos request, if any.
    * @opt_param int pageSize The maximum number of photos to return. `pageSize`
    * must be non-negative. If `pageSize` is zero or is not provided, the default
    * page size of 100 is used. The number of photos returned in the response may
@@ -128,6 +126,8 @@ class Google_Service_StreetViewPublish_Resource_Photos extends Google_Service_Re
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If
    * language_code is unspecified, the user's language preference for Google
    * services is used.
+   * @opt_param string pageToken The nextPageToken value returned from a previous
+   * ListPhotos request, if any.
    * @return Google_Service_StreetViewPublish_ListPhotosResponse
    */
   public function listPhotos($optParams = array())

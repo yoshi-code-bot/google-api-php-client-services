@@ -150,10 +150,6 @@ class Google_Service_StreetViewPublish extends Google_Service
               'path' => 'v1/photos',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -167,6 +163,10 @@ class Google_Service_StreetViewPublish extends Google_Service
                   'type' => 'string',
                 ),
                 'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
