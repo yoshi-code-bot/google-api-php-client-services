@@ -23,6 +23,7 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Model
   protected $notificationConfigDataType = '';
   protected $parserConfigType = 'Google_Service_CloudHealthcare_ParserConfig';
   protected $parserConfigDataType = '';
+  public $rejectDuplicateMessage;
 
   public function setLabels($labels)
   {
@@ -67,5 +68,13 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Model
   public function getParserConfig()
   {
     return $this->parserConfig;
+  }
+  public function setRejectDuplicateMessage($rejectDuplicateMessage)
+  {
+    $this->rejectDuplicateMessage = $rejectDuplicateMessage;
+  }
+  public function getRejectDuplicateMessage()
+  {
+    return $this->rejectDuplicateMessage;
   }
 }

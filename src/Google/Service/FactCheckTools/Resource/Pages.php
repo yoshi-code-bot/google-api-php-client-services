@@ -72,10 +72,6 @@ class Google_Service_FactCheckTools_Resource_Pages extends Google_Service_Resour
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string url The URL from which to get `ClaimReview` markup. There
-   * will be at most one result. If markup is associated with a more canonical
-   * version of the URL provided, we will return that URL instead. Cannot be
-   * specified along with an organization.
    * @opt_param int offset An integer that specifies the current offset (that is,
    * starting result location) in search results. This field is only considered if
    * `page_token` is unset, and if the request is not for a specific URL. For
@@ -89,6 +85,10 @@ class Google_Service_FactCheckTools_Resource_Pages extends Google_Service_Resour
    * markups for. For instance, "site.com". Cannot be specified along with an URL.
    * @opt_param int pageSize The pagination size. We will return up to that many
    * results. Defaults to 10 if not set. Has no effect if a URL is requested.
+   * @opt_param string url The URL from which to get `ClaimReview` markup. There
+   * will be at most one result. If markup is associated with a more canonical
+   * version of the URL provided, we will return that URL instead. Cannot be
+   * specified along with an organization.
    * @return Google_Service_FactCheckTools_GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse
    */
   public function listPages($optParams = array())

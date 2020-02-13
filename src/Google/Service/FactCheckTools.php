@@ -62,6 +62,10 @@ class Google_Service_FactCheckTools extends Google_Service
               'path' => 'v1alpha1/claims:search',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'maxAgeDays' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'offset' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -85,10 +89,6 @@ class Google_Service_FactCheckTools extends Google_Service
                 'languageCode' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxAgeDays' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -129,10 +129,6 @@ class Google_Service_FactCheckTools extends Google_Service
               'path' => 'v1alpha1/pages',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'url' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'offset' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -148,6 +144,10 @@ class Google_Service_FactCheckTools extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'url' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(

@@ -30,6 +30,9 @@ class Google_Service_FactCheckTools_Resource_Claims extends Google_Service_Resou
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int maxAgeDays The maximum age of the returned search results, in
+   * days. Age is determined by either claim date or review date, whichever is
+   * newer.
    * @opt_param int offset An integer that specifies the current offset (that is,
    * starting result location) in search results. This field is only considered if
    * `page_token` is unset. For example, 0 means to return results starting from
@@ -47,9 +50,6 @@ class Google_Service_FactCheckTools_Resource_Claims extends Google_Service_Resou
    * @opt_param string languageCode The BCP-47 language code, such as "en-US" or
    * "sr-Latn". Can be used to restrict results by language, though we do not
    * currently consider the region.
-   * @opt_param int maxAgeDays The maximum age of the returned search results, in
-   * days. Age is determined by either claim date or review date, whichever is
-   * newer.
    * @return Google_Service_FactCheckTools_GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse
    */
   public function search($optParams = array())

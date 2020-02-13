@@ -134,6 +134,10 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * labels."tag1":* AND message_type = "ADT"`.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of messages to return in a single
+   * response. If zero the default page size of 100 is used.
+   * @opt_param string view Specifies the parts of the Message to return in the
+   * response. When unspecified, equivalent to BASIC.
    * @opt_param string orderBy Orders messages returned by the specified order_by
    * clause. Syntax:
    * https://cloud.google.com/apis/design/design_patterns#sorting_order
@@ -141,8 +145,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * Fields available for ordering are:
    *
    * *  `send_time`
-   * @opt_param int pageSize Limit on the number of messages to return in a single
-   * response. If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListMessagesResponse
    */
   public function listProjectsLocationsDatasetsHl7V2StoresMessages($parent, $optParams = array())
