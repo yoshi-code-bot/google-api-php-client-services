@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudIAP_OAuthSettings extends Google_Model
+class Google_Service_Monitoring_MeshIstio extends Google_Model
 {
-  public $clientId;
-  public $loginHint;
+  public $meshUid;
+  public $serviceName;
+  public $serviceNamespace;
 
-  public function setClientId($clientId)
+  public function setMeshUid($meshUid)
   {
-    $this->clientId = $clientId;
+    $this->meshUid = $meshUid;
   }
-  public function getClientId()
+  public function getMeshUid()
   {
-    return $this->clientId;
+    return $this->meshUid;
   }
-  public function setLoginHint($loginHint)
+  public function setServiceName($serviceName)
   {
-    $this->loginHint = $loginHint;
+    $this->serviceName = $serviceName;
   }
-  public function getLoginHint()
+  public function getServiceName()
   {
-    return $this->loginHint;
+    return $this->serviceName;
+  }
+  public function setServiceNamespace($serviceNamespace)
+  {
+    $this->serviceNamespace = $serviceNamespace;
+  }
+  public function getServiceNamespace()
+  {
+    return $this->serviceNamespace;
   }
 }

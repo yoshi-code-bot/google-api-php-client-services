@@ -30,7 +30,7 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * custom metrics. (metricDescriptors.create)
    *
    * @param string $name Required. The project on which to execute the request.
-   * The format is "projects/{project_id_or_number}".
+   * The format is: projects/[PROJECT_ID_OR_NUMBER]
    * @param Google_Service_Monitoring_MetricDescriptor $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MetricDescriptor
@@ -46,9 +46,9 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * (metricDescriptors.delete)
    *
    * @param string $name Required. The metric descriptor on which to execute the
-   * request. The format is
-   * "projects/{project_id_or_number}/metricDescriptors/{metric_id}". An example
-   * of {metric_id} is: "custom.googleapis.com/my_test_metric".
+   * request. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example of
+   * [METRIC_ID] is: "custom.googleapis.com/my_test_metric".
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */
@@ -63,9 +63,9 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * account. (metricDescriptors.get)
    *
    * @param string $name Required. The metric descriptor on which to execute the
-   * request. The format is
-   * "projects/{project_id_or_number}/metricDescriptors/{metric_id}". An example
-   * value of {metric_id} is
+   * request. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example
+   * value of [METRIC_ID] is
    * "compute.googleapis.com/instance/disk/read_bytes_count".
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MetricDescriptor
@@ -81,13 +81,9 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * Stackdriver account. (metricDescriptors.listProjectsMetricDescriptors)
    *
    * @param string $name Required. The project on which to execute the request.
-   * The format is "projects/{project_id_or_number}".
+   * The format is: projects/[PROJECT_ID_OR_NUMBER]
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return additional results from the previous
-   * method call.
    * @opt_param int pageSize A positive number that is the maximum number of
    * results to return.
    * @opt_param string filter If this field is empty, all custom and system-
@@ -95,6 +91,10 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * which metric descriptors are to be returned. For example, the following
    * filter matches all custom metrics: metric.type =
    * starts_with("custom.googleapis.com/")
+   * @opt_param string pageToken If this field is not empty then it must contain
+   * the nextPageToken value returned by a previous call to this method. Using
+   * this field causes the method to return additional results from the previous
+   * method call.
    * @return Google_Service_Monitoring_ListMetricDescriptorsResponse
    */
   public function listProjectsMetricDescriptors($name, $optParams = array())
