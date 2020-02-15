@@ -101,6 +101,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Size of the page, can be limited by a server.
    * @opt_param string orderBy Comma separated list of triggeredJob fields to
    * order by, followed by `asc` or `desc` postfix. This list is case-insensitive,
    * default sorting order is ascending, redundant space characters are
@@ -140,7 +141,6 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * @opt_param string pageToken Page token to continue retrieval. Comes from
    * previous call to ListJobTriggers. `order_by` field must not change for
    * subsequent calls.
-   * @opt_param int pageSize Size of the page, can be limited by a server.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListJobTriggersResponse
    */
   public function listProjectsLocationsJobTriggers($parent, $locationId, $optParams = array())
