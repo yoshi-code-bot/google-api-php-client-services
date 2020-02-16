@@ -2679,6 +2679,26 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'applyUpdatesToInstances' => array(
+              'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'createInstances' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/createInstances',
               'httpMethod' => 'POST',
@@ -7197,6 +7217,26 @@ class Google_Service_Compute extends Google_Service
                 'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'applyUpdatesToInstances' => array(
+              'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'createInstances' => array(

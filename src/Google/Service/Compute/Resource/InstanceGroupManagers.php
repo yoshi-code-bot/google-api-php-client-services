@@ -123,6 +123,26 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
     return $this->call('aggregatedList', array($params), "Google_Service_Compute_InstanceGroupManagerAggregatedList");
   }
   /**
+   * Apply changes to selected instances on the managed instance group. This
+   * method can be used to apply new overrides and/or new versions.
+   * (instanceGroupManagers.applyUpdatesToInstances)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone where the managed instance group is
+   * located. Should conform to RFC1035.
+   * @param string $instanceGroupManager The name of the managed instance group,
+   * should conform to RFC1035.
+   * @param Google_Service_Compute_InstanceGroupManagersApplyUpdatesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Operation
+   */
+  public function applyUpdatesToInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersApplyUpdatesRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('applyUpdatesToInstances', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Creates instances with per-instance configs in this managed instance group.
    * Instances are created using the current instance template. The create
    * instances operation is marked DONE if the createInstances request is
