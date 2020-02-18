@@ -256,11 +256,11 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sizeBytes' => array(
+                'versionId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'versionId' => array(
+                'sizeBytes' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

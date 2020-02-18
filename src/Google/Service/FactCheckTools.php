@@ -129,10 +129,6 @@ class Google_Service_FactCheckTools extends Google_Service
               'path' => 'v1alpha1/pages',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'offset' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -148,6 +144,10 @@ class Google_Service_FactCheckTools extends Google_Service
                 'url' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'offset' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'update' => array(
