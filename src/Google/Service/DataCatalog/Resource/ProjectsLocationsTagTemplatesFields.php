@@ -55,7 +55,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplatesFields ex
     return $this->call('create', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplateField");
   }
   /**
-   * Deletes a field in a tag template and all uses of that field. The user should
+   * Deletes a field in a tag template and all uses of that field. Users should
    * enable the Data Catalog API in the project identified by the `name` parameter
    * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
    * project) for more information). (fields.delete)
@@ -80,7 +80,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplatesFields ex
   }
   /**
    * Updates a field in a tag template. This method cannot be used to update the
-   * field type. The user should enable the Data Catalog API in the project
+   * field type. Users should enable the Data Catalog API in the project
    * identified by the `name` parameter (see [Data Catalog Resource Project]
    * (/data-catalog/docs/concepts/resource-project) for more information).
    * (fields.patch)

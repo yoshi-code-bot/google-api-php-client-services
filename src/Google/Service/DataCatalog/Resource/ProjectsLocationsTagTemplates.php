@@ -52,9 +52,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
     return $this->call('create', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplate");
   }
   /**
-   * Deletes a tag template and all tags using the template. The user should
-   * enable the Data Catalog API in the project identified by the `name` parameter
-   * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
+   * Deletes a tag template and all tags using the template. Users should enable
+   * the Data Catalog API in the project identified by the `name` parameter (see
+   * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
    * project) for more information). (tagTemplates.delete)
    *
    * @param string $name Required. The name of the tag template to delete.
@@ -121,8 +121,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
   /**
    * Updates a tag template. This method cannot be used to update the fields of a
    * template. The tag template fields are represented as separate resources and
-   * should be updated using their own create/update/delete methods. The user
-   * should enable the Data Catalog API in the project identified by the
+   * should be updated using their own create/update/delete methods. Users should
+   * enable the Data Catalog API in the project identified by the
    * `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
    * catalog/docs/concepts/resource-project) for more information).
    * (tagTemplates.patch)

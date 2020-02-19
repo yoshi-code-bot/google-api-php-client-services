@@ -29,7 +29,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
    * Creates an entry. Only entries of 'FILESET' type or user-specified type can
    * be created.
    *
-   * The user should enable the Data Catalog API in the project identified by the
+   * Users should enable the Data Catalog API in the project identified by the
    * `parent` parameter (see [Data Catalog Resource Project] (/data-
    * catalog/docs/concepts/resource-project) for more information).
    *
@@ -56,7 +56,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
   }
   /**
    * Deletes an existing entry. Only entries created through CreateEntry method
-   * can be deleted. The user should enable the Data Catalog API in the project
+   * can be deleted. Users should enable the Data Catalog API in the project
    * identified by the `name` parameter (see [Data Catalog Resource Project]
    * (/data-catalog/docs/concepts/resource-project) for more information).
    * (entries.delete)
@@ -81,11 +81,6 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
    *
    * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/ent
    * ries/{entry_id}
-   *
-   * Entry groups are logical groupings of entries. Currently, users cannot
-   * create/modify entry groups. They are created by Data Catalog; they include
-   * `@bigquery` for all BigQuery entries, and `@pubsub` for all Cloud Pub/Sub
-   * entries.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry
    */
@@ -133,14 +128,14 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
    * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token that specifies which page is requested. If
-   * empty, the first page is returned.
-   * @opt_param int pageSize The maximum number of items to return. Default is 10.
-   * Max limit is 1000. Throws an invalid argument for `page_size > 1000`.
    * @opt_param string readMask The fields to return for each Entry. If not set or
    * empty, all fields are returned. For example, setting read_mask to contain
    * only one path "name" will cause ListEntries to return a list of Entries with
    * only "name" field.
+   * @opt_param string pageToken Token that specifies which page is requested. If
+   * empty, the first page is returned.
+   * @opt_param int pageSize The maximum number of items to return. Default is 10.
+   * Max limit is 1000. Throws an invalid argument for `page_size > 1000`.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntriesResponse
    */
   public function listProjectsLocationsEntryGroupsEntries($parent, $optParams = array())
@@ -150,7 +145,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
     return $this->call('list', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntriesResponse");
   }
   /**
-   * Updates an existing entry. The user should enable the Data Catalog API in the
+   * Updates an existing entry. Users should enable the Data Catalog API in the
    * project identified by the `entry.name` parameter (see [Data Catalog Resource
    * Project] (/data-catalog/docs/concepts/resource-project) for more
    * information). (entries.patch)
@@ -172,7 +167,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
    * The following fields are modifiable: * For entries with type `DATA_STREAM`:
    * * `schema` * For entries with type `FILESET`    * `schema`    *
    * `display_name`    * `description`    * `gcs_fileset_spec`    *
-   * `gcs_fileset_spec.file_patterns`
+   * `gcs_fileset_spec.file_patterns` * For entries with `user_specified_type`
+   * * `schema`    * `display_name`    * `description`    * user_specified_type
+   * * user_specified_system    * linked_resource    * source_system_timestamps
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry
    */
   public function patch($name, Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry $postBody, $optParams = array())

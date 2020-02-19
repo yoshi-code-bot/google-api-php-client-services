@@ -26,14 +26,13 @@
 class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends Google_Service_Resource
 {
   /**
-   * Creates an EntryGroup.
+   * A maximum of 10,000 entry groups may be created per organization across all
+   * locations.
    *
-   * The user should enable the Data Catalog API in the project identified by the
+   * Users should enable the Data Catalog API in the project identified by the
    * `parent` parameter (see [Data Catalog Resource Project] (/data-
    * catalog/docs/concepts/resource-project) for more information).
-   *
-   * A maximum of 10,000 entry groups may be created per organization across all
-   * locations. (entryGroups.create)
+   * (entryGroups.create)
    *
    * @param string $parent Required. The name of the project this entry group is
    * in. Example:
@@ -58,9 +57,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
   }
   /**
    * Deletes an EntryGroup. Only entry groups that do not contain entries can be
-   * deleted. The user should enable the Data Catalog API in the project
-   * identified by the `name` parameter (see [Data Catalog Resource Project]
-   * (/data-catalog/docs/concepts/resource-project) for more information).
+   * deleted. Users should enable the Data Catalog API in the project identified
+   * by the `name` parameter (see [Data Catalog Resource Project] (/data-
+   * catalog/docs/concepts/resource-project) for more information).
    * (entryGroups.delete)
    *
    * @param string $name Required. The name of the entry group. For example,

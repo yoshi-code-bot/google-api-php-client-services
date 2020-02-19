@@ -23,7 +23,7 @@
  *   $tags = $datacatalogService->tags;
  *  </code>
  */
-class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntriesTags extends Google_Service_Resource
+class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsTags extends Google_Service_Resource
 {
   /**
    * Creates a tag on an Entry. Note: The project identified by the `parent`
@@ -69,8 +69,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntriesTag
     return $this->call('delete', array($params), "Google_Service_DataCatalog_DatacatalogEmpty");
   }
   /**
-   * Lists the tags on an Entry.
-   * (tags.listProjectsLocationsEntryGroupsEntriesTags)
+   * Lists the tags on an Entry. (tags.listProjectsLocationsEntryGroupsTags)
    *
    * @param string $parent Required. The name of the Data Catalog resource to list
    * the tags of. The resource could be an Entry or an EntryGroup.
@@ -82,13 +81,13 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntriesTag
    * s/{entry_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of tags to return. Default is 10.
-   * Max limit is 1000.
    * @opt_param string pageToken Token that specifies which page is requested. If
    * empty, the first page is returned.
+   * @opt_param int pageSize The maximum number of tags to return. Default is 10.
+   * Max limit is 1000.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListTagsResponse
    */
-  public function listProjectsLocationsEntryGroupsEntriesTags($parent, $optParams = array())
+  public function listProjectsLocationsEntryGroupsTags($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
