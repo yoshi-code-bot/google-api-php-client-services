@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1AndroidAttributes extends Google_Collection
+class Google_Service_CloudIdentity_AndroidAttributes extends Google_Collection
 {
   protected $collection_key = 'otherAccounts';
   public $basebandVersion;

@@ -101,7 +101,7 @@ class Google_Service_CloudFilestore_Resource_ProjectsLocationsInstances extends 
    * Updates the settings of a specific instance. (instances.patch)
    *
    * @param string $name Output only. The resource name of the instance, in the
-   * format projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * format projects/{project}/locations/{location}/instances/{instance}.
    * @param Google_Service_CloudFilestore_Instance $postBody
    * @param array $optParams Optional parameters.
    *

@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1DeviceUser extends Google_Model
+class Google_Service_CloudIdentity_DeviceUser extends Google_Model
 {
   public $compromisedState;
   public $firstSyncTime;

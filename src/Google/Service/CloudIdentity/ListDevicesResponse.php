@@ -15,26 +15,26 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1ListDeviceUsersResponse extends Google_Collection
+class Google_Service_CloudIdentity_ListDevicesResponse extends Google_Collection
 {
-  protected $collection_key = 'deviceUsers';
-  protected $deviceUsersType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1DeviceUser';
-  protected $deviceUsersDataType = 'array';
+  protected $collection_key = 'devices';
+  protected $devicesType = 'Google_Service_CloudIdentity_Device';
+  protected $devicesDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1DeviceUser
+   * @param Google_Service_CloudIdentity_Device
    */
-  public function setDeviceUsers($deviceUsers)
+  public function setDevices($devices)
   {
-    $this->deviceUsers = $deviceUsers;
+    $this->devices = $devices;
   }
   /**
-   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1DeviceUser
+   * @return Google_Service_CloudIdentity_Device
    */
-  public function getDeviceUsers()
+  public function getDevices()
   {
-    return $this->deviceUsers;
+    return $this->devices;
   }
   public function setNextPageToken($nextPageToken)
   {

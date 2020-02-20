@@ -15,10 +15,10 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1Device extends Google_Collection
+class Google_Service_CloudIdentity_Device extends Google_Collection
 {
   protected $collection_key = 'wifiMacAddresses';
-  protected $androidSpecificAttributesType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1AndroidAttributes';
+  protected $androidSpecificAttributesType = 'Google_Service_CloudIdentity_AndroidAttributes';
   protected $androidSpecificAttributesDataType = '';
   public $assetTag;
   public $brand;
@@ -40,14 +40,14 @@ class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1Device 
   public $wifiMacAddresses;
 
   /**
-   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1AndroidAttributes
+   * @param Google_Service_CloudIdentity_AndroidAttributes
    */
-  public function setAndroidSpecificAttributes(Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1AndroidAttributes $androidSpecificAttributes)
+  public function setAndroidSpecificAttributes(Google_Service_CloudIdentity_AndroidAttributes $androidSpecificAttributes)
   {
     $this->androidSpecificAttributes = $androidSpecificAttributes;
   }
   /**
-   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1AndroidAttributes
+   * @return Google_Service_CloudIdentity_AndroidAttributes
    */
   public function getAndroidSpecificAttributes()
   {

@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1EndpointApp extends Google_Collection
+class Google_Service_CloudIdentity_EndpointApp extends Google_Collection
 {
   protected $collection_key = 'permissions';
   public $displayName;

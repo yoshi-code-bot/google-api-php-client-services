@@ -15,22 +15,22 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1ListEndpointAppsResponse extends Google_Collection
+class Google_Service_CloudIdentity_ListEndpointAppsResponse extends Google_Collection
 {
   protected $collection_key = 'endpointApps';
-  protected $endpointAppsType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1EndpointApp';
+  protected $endpointAppsType = 'Google_Service_CloudIdentity_EndpointApp';
   protected $endpointAppsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1EndpointApp
+   * @param Google_Service_CloudIdentity_EndpointApp
    */
   public function setEndpointApps($endpointApps)
   {
     $this->endpointApps = $endpointApps;
   }
   /**
-   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1alpha1EndpointApp
+   * @return Google_Service_CloudIdentity_EndpointApp
    */
   public function getEndpointApps()
   {
