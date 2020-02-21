@@ -30,6 +30,8 @@ class Google_Service_Dataproc_Job extends Google_Collection
   protected $pigJobDataType = '';
   protected $placementType = 'Google_Service_Dataproc_JobPlacement';
   protected $placementDataType = '';
+  protected $prestoJobType = 'Google_Service_Dataproc_PrestoJob';
+  protected $prestoJobDataType = '';
   protected $pysparkJobType = 'Google_Service_Dataproc_PySparkJob';
   protected $pysparkJobDataType = '';
   protected $referenceType = 'Google_Service_Dataproc_JobReference';
@@ -136,6 +138,20 @@ class Google_Service_Dataproc_Job extends Google_Collection
   public function getPlacement()
   {
     return $this->placement;
+  }
+  /**
+   * @param Google_Service_Dataproc_PrestoJob
+   */
+  public function setPrestoJob(Google_Service_Dataproc_PrestoJob $prestoJob)
+  {
+    $this->prestoJob = $prestoJob;
+  }
+  /**
+   * @return Google_Service_Dataproc_PrestoJob
+   */
+  public function getPrestoJob()
+  {
+    return $this->prestoJob;
   }
   /**
    * @param Google_Service_Dataproc_PySparkJob
