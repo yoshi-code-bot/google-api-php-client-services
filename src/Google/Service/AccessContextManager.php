@@ -89,10 +89,6 @@ class Google_Service_AccessContextManager extends Google_Service
               'path' => 'v1/accessPolicies',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -100,6 +96,10 @@ class Google_Service_AccessContextManager extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -196,6 +196,16 @@ class Google_Service_AccessContextManager extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'replaceAll' => array(
+              'path' => 'v1/{+parent}/accessLevels:replaceAll',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )
@@ -206,7 +216,17 @@ class Google_Service_AccessContextManager extends Google_Service
         'servicePerimeters',
         array(
           'methods' => array(
-            'create' => array(
+            'commit' => array(
+              'path' => 'v1/{+parent}/servicePerimeters:commit',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
               'path' => 'v1/{+parent}/servicePerimeters',
               'httpMethod' => 'POST',
               'parameters' => array(
@@ -268,6 +288,16 @@ class Google_Service_AccessContextManager extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'replaceAll' => array(
+              'path' => 'v1/{+parent}/servicePerimeters:replaceAll',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )
@@ -317,10 +347,6 @@ class Google_Service_AccessContextManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -328,6 +354,10 @@ class Google_Service_AccessContextManager extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

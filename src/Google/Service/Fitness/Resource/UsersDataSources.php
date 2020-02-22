@@ -49,7 +49,7 @@ class Google_Service_Fitness_Resource_UsersDataSources extends Google_Service_Re
    * and has a specific order. If it doesn't match, the request will fail with an
    * error.
    *
-   * In addition to the data source fields reflected into the data source ID, the
+   * In addition to the data source fields included in the data source ID, the
    * developer project number that is authenticated when creating the data source
    * is included. This developer project number is obfuscated when read by any
    * other developer reading public data types. (dataSources.create)

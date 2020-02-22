@@ -26,6 +26,33 @@
 class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimeters extends Google_Service_Resource
 {
   /**
+   * Commit the dry-run spec for all the Service Perimeters in an Access Policy. A
+   * commit operation on a Service Perimeter involves copying its `spec` field to
+   * that Service Perimeter's `status` field. Only Service Perimeters with
+   * `use_explicit_dry_run_spec` field set to true are affected by a commit
+   * operation. The longrunning operation from this RPC will have a successful
+   * status once the dry-run specs for all the Service Perimeters have been
+   * committed. If a commit fails, it will cause the longrunning operation to
+   * return an error response and the entire commit operation will be cancelled.
+   * When successful, Operation.response field will contain
+   * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will be
+   * cleared after a successful commit operation. (servicePerimeters.commit)
+   *
+   * @param string $parent Required. Resource name for the parent Access Policy
+   * which owns all Service Perimeters in scope for the commit operation.
+   *
+   * Format: `accessPolicies/{policy_id}`
+   * @param Google_Service_AccessContextManager_CommitServicePerimetersRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AccessContextManager_Operation
+   */
+  public function commit($parent, Google_Service_AccessContextManager_CommitServicePerimetersRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('commit', array($params), "Google_Service_AccessContextManager_Operation");
+  }
+  /**
    * Create an Service Perimeter. The longrunning operation from this RPC will
    * have a successful status once the Service Perimeter has propagated to long-
    * lasting storage. Service Perimeters containing errors will result in an error
@@ -122,5 +149,28 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_AccessContextManager_Operation");
+  }
+  /**
+   * Replace all existing Service Perimeters in an Access Policy with the Service
+   * Perimeters provided. This is done within one transaction. The longrunning
+   * operation from this RPC will have a successful status once all replacements
+   * have propagated to long-lasting storage. Replacements containing errors will
+   * result in an error response for the first error encountered and the
+   * transaction will be cancelled. Operation.response field will contain
+   * ReplaceServicePerimetersResponse. (servicePerimeters.replaceAll)
+   *
+   * @param string $parent Required. Resource name for the access policy which
+   * owns these Service Perimeters.
+   *
+   * Format: `accessPolicies/{policy_id}`
+   * @param Google_Service_AccessContextManager_ReplaceServicePerimetersRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AccessContextManager_Operation
+   */
+  public function replaceAll($parent, Google_Service_AccessContextManager_ReplaceServicePerimetersRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('replaceAll', array($params), "Google_Service_AccessContextManager_Operation");
   }
 }

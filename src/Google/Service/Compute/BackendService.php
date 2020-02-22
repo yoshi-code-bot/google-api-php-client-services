@@ -41,7 +41,10 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public $kind;
   public $loadBalancingScheme;
   public $localityLbPolicy;
+  protected $logConfigType = 'Google_Service_Compute_BackendServiceLogConfig';
+  protected $logConfigDataType = '';
   public $name;
+  public $network;
   protected $outlierDetectionType = 'Google_Service_Compute_OutlierDetection';
   protected $outlierDetectionDataType = '';
   public $port;
@@ -225,6 +228,20 @@ class Google_Service_Compute_BackendService extends Google_Collection
   {
     return $this->localityLbPolicy;
   }
+  /**
+   * @param Google_Service_Compute_BackendServiceLogConfig
+   */
+  public function setLogConfig(Google_Service_Compute_BackendServiceLogConfig $logConfig)
+  {
+    $this->logConfig = $logConfig;
+  }
+  /**
+   * @return Google_Service_Compute_BackendServiceLogConfig
+   */
+  public function getLogConfig()
+  {
+    return $this->logConfig;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -232,6 +249,14 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  public function getNetwork()
+  {
+    return $this->network;
   }
   /**
    * @param Google_Service_Compute_OutlierDetection

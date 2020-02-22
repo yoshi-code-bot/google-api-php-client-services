@@ -132,4 +132,28 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesAccessLevels ex
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_AccessContextManager_Operation");
   }
+  /**
+   * Replace all existing Access Levels in an Access Policy with the Access Levels
+   * provided. This is done within one transaction. The longrunning operation from
+   * this RPC will have a successful status once all replacements have propagated
+   * to long-lasting storage. Replacements containing errors will result in an
+   * error response for the first error encountered and the transaction will be
+   * cancelled. Operation.response field will contain ReplaceAccessLevelsResponse.
+   * Removing Access Levels contained in existing Service Perimeters will result
+   * in error. (accessLevels.replaceAll)
+   *
+   * @param string $parent Required. Resource name for the access policy which
+   * owns these Access Levels.
+   *
+   * Format: `accessPolicies/{policy_id}`
+   * @param Google_Service_AccessContextManager_ReplaceAccessLevelsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AccessContextManager_Operation
+   */
+  public function replaceAll($parent, Google_Service_AccessContextManager_ReplaceAccessLevelsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('replaceAll', array($params), "Google_Service_AccessContextManager_Operation");
+  }
 }
