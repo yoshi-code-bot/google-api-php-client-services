@@ -123,28 +123,6 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
     return $this->call('getIamPolicy', array($params), "Google_Service_DataCatalog_Policy");
   }
   /**
-   * Lists entry groups. (entryGroups.listProjectsLocationsEntryGroups)
-   *
-   * @param string $parent Required. The name of the location that contains the
-   * entry groups, which can be provided in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string pageToken Optional. Token that specifies which page is
-   * requested. If empty, the first page is returned.
-   * @opt_param int pageSize Optional. The maximum number of items to return.
-   * Default is 10. Max limit is 1000. Throws an invalid argument for `page_size >
-   * 1000`.
-   * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntryGroupsResponse
-   */
-  public function listProjectsLocationsEntryGroups($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntryGroupsResponse");
-  }
-  /**
    * Updates an EntryGroup. The user should enable the Data Catalog API in the
    * project identified by the `entry_group.name` parameter (see [Data Catalog
    * Resource Project] (/data-catalog/docs/concepts/resource-project) for more
