@@ -15,14 +15,13 @@
  * the License.
  */
 
-class Google_Service_AndroidPublisher_Control extends Google_Collection
+class Google_Service_AndroidPublisher_StratifiedSampling extends Google_Collection
 {
-  protected $collection_key = 'versionCodes';
+  protected $collection_key = 'modRanges';
   protected $modRangesType = 'Google_Service_AndroidPublisher_ModRange';
   protected $modRangesDataType = 'array';
-  protected $stratifiedSamplingsType = 'Google_Service_AndroidPublisher_StratifiedSampling';
-  protected $stratifiedSamplingsDataType = 'array';
-  public $versionCodes;
+  protected $stratumType = 'Google_Service_AndroidPublisher_Stratum';
+  protected $stratumDataType = '';
 
   /**
    * @param Google_Service_AndroidPublisher_ModRange
@@ -39,25 +38,17 @@ class Google_Service_AndroidPublisher_Control extends Google_Collection
     return $this->modRanges;
   }
   /**
-   * @param Google_Service_AndroidPublisher_StratifiedSampling
+   * @param Google_Service_AndroidPublisher_Stratum
    */
-  public function setStratifiedSamplings($stratifiedSamplings)
+  public function setStratum(Google_Service_AndroidPublisher_Stratum $stratum)
   {
-    $this->stratifiedSamplings = $stratifiedSamplings;
+    $this->stratum = $stratum;
   }
   /**
-   * @return Google_Service_AndroidPublisher_StratifiedSampling
+   * @return Google_Service_AndroidPublisher_Stratum
    */
-  public function getStratifiedSamplings()
+  public function getStratum()
   {
-    return $this->stratifiedSamplings;
-  }
-  public function setVersionCodes($versionCodes)
-  {
-    $this->versionCodes = $versionCodes;
-  }
-  public function getVersionCodes()
-  {
-    return $this->versionCodes;
+    return $this->stratum;
   }
 }

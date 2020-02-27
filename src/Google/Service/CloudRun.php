@@ -35,6 +35,7 @@ class Google_Service_CloudRun extends Google_Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $api_v1_namespaces_secrets;
   public $namespaces_authorizeddomains;
   public $namespaces_configurations;
   public $namespaces_domainmappings;
@@ -47,6 +48,7 @@ class Google_Service_CloudRun extends Google_Service
   public $projects_locations_domainmappings;
   public $projects_locations_revisions;
   public $projects_locations_routes;
+  public $projects_locations_secrets;
   public $projects_locations_services;
   
   /**
@@ -64,6 +66,46 @@ class Google_Service_CloudRun extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'run';
 
+    $this->api_v1_namespaces_secrets = new Google_Service_CloudRun_Resource_ApiV1NamespacesSecrets(
+        $this,
+        $this->serviceName,
+        'secrets',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'api/v1/{+parent}/secrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'api/v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'replaceSecret' => array(
+              'path' => 'api/v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->namespaces_authorizeddomains = new Google_Service_CloudRun_Resource_NamespacesAuthorizeddomains(
         $this,
         $this->serviceName,
@@ -117,10 +159,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'watch' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'labelSelector' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -144,6 +182,10 @@ class Google_Service_CloudRun extends Google_Service
                 'limit' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'watch' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -207,10 +249,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'continue' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'limit' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -223,6 +261,10 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'fieldSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'resourceVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -231,7 +273,7 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'fieldSelector' => array(
+                'continue' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -287,10 +329,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'labelSelector' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'resourceVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -314,6 +352,10 @@ class Google_Service_CloudRun extends Google_Service
                 'watch' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'labelSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -345,10 +387,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'continue' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'limit' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -370,6 +408,10 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'boolean',
                 ),
                 'fieldSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'continue' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -435,10 +477,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'watch' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'labelSelector' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -462,6 +500,10 @@ class Google_Service_CloudRun extends Google_Service
                 'limit' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'watch' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'replaceService' => array(
@@ -563,26 +605,6 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'labelSelector' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'fieldSelector' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'includeUninitialized' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'resourceVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'continue' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'limit' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -590,6 +612,26 @@ class Google_Service_CloudRun extends Google_Service
                 'watch' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'labelSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'resourceVersion' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'includeUninitialized' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'fieldSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'continue' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -669,6 +711,10 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'fieldSelector' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'resourceVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -676,10 +722,6 @@ class Google_Service_CloudRun extends Google_Service
                 'includeUninitialized' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'fieldSelector' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -791,11 +833,15 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'watch' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'labelSelector' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'resourceVersion' => array(
+                'fieldSelector' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -803,7 +849,7 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'fieldSelector' => array(
+                'resourceVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -815,9 +861,45 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'watch' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_secrets = new Google_Service_CloudRun_Resource_ProjectsLocationsSecrets(
+        $this,
+        $this->serviceName,
+        'secrets',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/{+parent}/secrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'replaceSecret' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
@@ -849,15 +931,15 @@ class Google_Service_CloudRun extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'apiVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'propagationPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'kind' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'apiVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -899,7 +981,7 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'fieldSelector' => array(
+                'resourceVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -907,7 +989,7 @@ class Google_Service_CloudRun extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'resourceVersion' => array(
+                'fieldSelector' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
