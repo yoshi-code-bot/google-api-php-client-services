@@ -19,8 +19,8 @@
  * Service definition for SecretManager (v1).
  *
  * <p>
- * Stores and manages access to application secrets. Provides convenience while
- * improving security.</p>
+ * Stores API keys, passwords, certificates, and other sensitive data. Provides
+ * convenience while improving security.</p>
  *
  * <p>
  * For more information about this service, see the API

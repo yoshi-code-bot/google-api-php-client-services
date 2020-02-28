@@ -69,6 +69,9 @@ class Google_Service_CloudDebugger_Resource_DebuggerDebuggeesBreakpoints extends
    * list.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool stripResults This field is deprecated. The following fields
+   * are always stripped out of the result: `stack_frames`,
+   * `evaluated_expressions` and `variable_table`.
    * @opt_param string waitToken A wait token that, if specified, blocks the call
    * until the breakpoints list has changed, or a server selected timeout has
    * expired.  The value should be set from the last response. The error code
@@ -84,9 +87,6 @@ class Google_Service_CloudDebugger_Resource_DebuggerDebuggeesBreakpoints extends
    * @opt_param bool includeAllUsers When set to `true`, the response includes the
    * list of breakpoints set by any user. Otherwise, it includes only breakpoints
    * set by the caller.
-   * @opt_param bool stripResults This field is deprecated. The following fields
-   * are always stripped out of the result: `stack_frames`,
-   * `evaluated_expressions` and `variable_table`.
    * @return Google_Service_CloudDebugger_ListBreakpointsResponse
    */
   public function listDebuggerDebuggeesBreakpoints($debuggeeId, $optParams = array())

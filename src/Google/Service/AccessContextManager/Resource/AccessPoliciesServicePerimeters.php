@@ -152,12 +152,13 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
   }
   /**
    * Replace all existing Service Perimeters in an Access Policy with the Service
-   * Perimeters provided. This is done within one transaction. The longrunning
-   * operation from this RPC will have a successful status once all replacements
-   * have propagated to long-lasting storage. Replacements containing errors will
-   * result in an error response for the first error encountered and the
-   * transaction will be cancelled. Operation.response field will contain
-   * ReplaceServicePerimetersResponse. (servicePerimeters.replaceAll)
+   * Perimeters provided. This is done atomically. The longrunning operation from
+   * this RPC will have a successful status once all replacements have propagated
+   * to long-lasting storage. Replacements containing errors will result in an
+   * error response for the first error encountered. Replacement will be cancelled
+   * on error, existing Service Perimeters will not be affected.
+   * Operation.response field will contain ReplaceServicePerimetersResponse.
+   * (servicePerimeters.replaceAll)
    *
    * @param string $parent Required. Resource name for the access policy which
    * owns these Service Perimeters.
