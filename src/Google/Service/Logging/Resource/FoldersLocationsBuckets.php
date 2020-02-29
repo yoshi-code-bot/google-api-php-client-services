@@ -51,17 +51,17 @@ class Google_Service_Logging_Resource_FoldersLocationsBuckets extends Google_Ser
    * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
    * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of
-   * the resource is required, but supplying the character - in place of
+   * the resource must be specified, but supplying the character - in place of
    * LOCATION_ID will return all buckets.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Optional. The maximum number of results to return
+   * from this request. Non-positive values are ignored. The presence of
+   * nextPageToken in the response indicates that more results might be available.
    * @opt_param string pageToken Optional. If present, then retrieve the next
    * batch of results from the preceding call to this method. pageToken must be
    * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
-   * @opt_param int pageSize Optional. The maximum number of results to return
-   * from this request. Non-positive values are ignored. The presence of
-   * nextPageToken in the response indicates that more results might be available.
    * @return Google_Service_Logging_ListBucketsResponse
    */
   public function listFoldersLocationsBuckets($parent, $optParams = array())

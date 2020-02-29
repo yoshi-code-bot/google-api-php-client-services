@@ -51,7 +51,7 @@ class Google_Service_Logging_Resource_OrganizationsLocationsBuckets extends Goog
    * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
    * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of
-   * the resource is required, but supplying the character - in place of
+   * the resource must be specified, but supplying the character - in place of
    * LOCATION_ID will return all buckets.
    * @param array $optParams Optional parameters.
    *
