@@ -170,11 +170,11 @@ class Google_Service_ServiceManagement extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'configId' => array(
+                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'view' => array(
+                'configId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
