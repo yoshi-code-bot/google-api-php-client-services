@@ -108,12 +108,16 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    *
    * Possible "state_change" values when compare_duration is specified:
    *
-   * * "CHANGED":   indicates that the finding was present at the start of
-   * compare_duration, but changed its state at read_time. * "UNCHANGED":
-   * indicates that the finding was present at the start of
-   * compare_duration and did not change state at read_time. * "ADDED":
-   * indicates that the finding was not present at the start                  of
-   * compare_duration, but was present at read_time.
+   * * "CHANGED":   indicates that the finding was present and matched the given
+   * filter at the start of compare_duration, but changed its
+   * state at read_time. * "UNCHANGED": indicates that the finding was present and
+   * matched the given                  filter at the start of compare_duration
+   * and did not change                  state at read_time. * "ADDED":
+   * indicates that the finding did not match the given filter or
+   * was not present at the start of compare_duration, but was
+   * present at read_time. * "REMOVED":   indicates that the finding was present
+   * and matched the                  filter at the start of compare_duration, but
+   * did not match                  the filter at read_time.
    *
    * If compare_duration is not specified, then the only possible state_change is
    * "UNUSED", which will be the state_change set for all findings present at
@@ -220,14 +224,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * @param Google_Service_SecurityCommandCenter_SecurityMarks $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string startTime The time at which the updated SecurityMarks take
-   * effect. If not set uses current server time.  Updates will be applied to the
-   * SecurityMarks that are active immediately preceding this time.
    * @opt_param string updateMask The FieldMask to use when updating the security
    * marks resource.
    *
    * The field mask must not contain duplicate fields. If empty or set to "marks",
    * all marks will be replaced.  Individual marks can be updated using "marks.".
+   * @opt_param string startTime The time at which the updated SecurityMarks take
+   * effect. If not set uses current server time.  Updates will be applied to the
+   * SecurityMarks that are active immediately preceding this time.
    * @return Google_Service_SecurityCommandCenter_SecurityMarks
    */
   public function updateSecurityMarks($name, Google_Service_SecurityCommandCenter_SecurityMarks $postBody, $optParams = array())

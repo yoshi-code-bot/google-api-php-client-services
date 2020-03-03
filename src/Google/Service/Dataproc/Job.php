@@ -18,6 +18,7 @@
 class Google_Service_Dataproc_Job extends Google_Collection
 {
   protected $collection_key = 'yarnApplications';
+  public $done;
   public $driverControlFilesUri;
   public $driverOutputResourceUri;
   protected $hadoopJobType = 'Google_Service_Dataproc_HadoopJob';
@@ -51,6 +52,14 @@ class Google_Service_Dataproc_Job extends Google_Collection
   protected $yarnApplicationsType = 'Google_Service_Dataproc_YarnApplication';
   protected $yarnApplicationsDataType = 'array';
 
+  public function setDone($done)
+  {
+    $this->done = $done;
+  }
+  public function getDone()
+  {
+    return $this->done;
+  }
   public function setDriverControlFilesUri($driverControlFilesUri)
   {
     $this->driverControlFilesUri = $driverControlFilesUri;
