@@ -19,6 +19,8 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
 {
   protected $collection_key = 'packageUris';
   public $args;
+  protected $encryptionConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EncryptionConfig';
+  protected $encryptionConfigDataType = '';
   protected $hyperparametersType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterSpec';
   protected $hyperparametersDataType = '';
   public $jobDir;
@@ -50,6 +52,20 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public function getArgs()
   {
     return $this->args;
+  }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EncryptionConfig
+   */
+  public function setEncryptionConfig(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EncryptionConfig $encryptionConfig)
+  {
+    $this->encryptionConfig = $encryptionConfig;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EncryptionConfig
+   */
+  public function getEncryptionConfig()
+  {
+    return $this->encryptionConfig;
   }
   /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterSpec
