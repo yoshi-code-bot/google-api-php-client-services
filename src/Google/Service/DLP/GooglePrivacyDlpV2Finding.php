@@ -22,6 +22,7 @@ class Google_Service_DLP_GooglePrivacyDlpV2Finding extends Google_Model
   protected $infoTypeDataType = '';
   public $jobCreateTime;
   public $jobName;
+  public $labels;
   public $likelihood;
   protected $locationType = 'Google_Service_DLP_GooglePrivacyDlpV2Location';
   protected $locationDataType = '';
@@ -69,6 +70,14 @@ class Google_Service_DLP_GooglePrivacyDlpV2Finding extends Google_Model
   public function getJobName()
   {
     return $this->jobName;
+  }
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
   }
   public function setLikelihood($likelihood)
   {
