@@ -23,7 +23,7 @@
  *   $namespaces = $runService->namespaces;
  *  </code>
  */
-class Google_Service_CloudRun_Resource_ApiV1Namespaces extends Google_Service_Resource
+class Google_Service_CloudRun_Resource_ProjectsLocationsNamespaces extends Google_Service_Resource
 {
   /**
    * Rpc to get information about a namespace. (namespaces.get)

@@ -47,8 +47,6 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRoutes extends Google_Se
    * number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool watch Flag that indicates that the client expects to watch
-   * this resource as well. Not currently used by Cloud Run.
    * @opt_param string labelSelector Allows to filter resources based on a label.
    * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string fieldSelector Allows to filter resources based on a
@@ -59,6 +57,8 @@ class Google_Service_CloudRun_Resource_ProjectsLocationsRoutes extends Google_Se
    * the list or watch operation should start. Not currently used by Cloud Run.
    * @opt_param string continue Optional encoded string to continue paging.
    * @opt_param int limit The maximum number of records that should be returned.
+   * @opt_param bool watch Flag that indicates that the client expects to watch
+   * this resource as well. Not currently used by Cloud Run.
    * @return Google_Service_CloudRun_ListRoutesResponse
    */
   public function listProjectsLocationsRoutes($parent, $optParams = array())

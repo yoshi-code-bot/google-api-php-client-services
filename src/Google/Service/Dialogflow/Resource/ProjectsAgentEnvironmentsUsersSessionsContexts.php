@@ -23,7 +23,7 @@
  *   $contexts = $dialogflowService->contexts;
  *  </code>
  */
-class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsContexts extends Google_Service_Resource
+class Google_Service_Dialogflow_Resource_ProjectsAgentEnvironmentsUsersSessionsContexts extends Google_Service_Resource
 {
   /**
    * Creates a context.
@@ -82,7 +82,7 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsContexts extends G
   }
   /**
    * Returns the list of all contexts in the specified session.
-   * (contexts.listProjectsAgentSessionsContexts)
+   * (contexts.listProjectsAgentEnvironmentsUsersSessionsContexts)
    *
    * @param string $parent Required. The session to list all contexts from.
    * Format: `projects//agent/sessions/` or
@@ -91,13 +91,13 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsContexts extends G
    * specified, we assume default '-' user.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. The maximum number of items to return in a
-   * single page. By default 100 and at most 1000.
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous list request.
+   * @opt_param int pageSize Optional. The maximum number of items to return in a
+   * single page. By default 100 and at most 1000.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2ListContextsResponse
    */
-  public function listProjectsAgentSessionsContexts($parent, $optParams = array())
+  public function listProjectsAgentEnvironmentsUsersSessionsContexts($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

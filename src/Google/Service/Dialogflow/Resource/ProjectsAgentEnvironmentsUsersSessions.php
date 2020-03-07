@@ -23,7 +23,7 @@
  *   $sessions = $dialogflowService->sessions;
  *  </code>
  */
-class Google_Service_Dialogflow_Resource_ProjectsAgentSessions extends Google_Service_Resource
+class Google_Service_Dialogflow_Resource_ProjectsAgentEnvironmentsUsersSessions extends Google_Service_Resource
 {
   /**
    * Deletes all active contexts in the specified session.

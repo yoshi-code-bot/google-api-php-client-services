@@ -118,7 +118,8 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesAccessLevels ex
    *
    * @param string $name Required. Resource name for the Access Level. The
    * `short_name` component must begin with a letter and only include alphanumeric
-   * and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`
+   * and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The
+   * maximum length of the `short_name` component is 50 characters.
    * @param Google_Service_AccessContextManager_AccessLevel $postBody
    * @param array $optParams Optional parameters.
    *

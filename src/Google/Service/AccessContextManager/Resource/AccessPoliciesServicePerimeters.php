@@ -53,9 +53,9 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
     return $this->call('commit', array($params), "Google_Service_AccessContextManager_Operation");
   }
   /**
-   * Create an Service Perimeter. The longrunning operation from this RPC will
-   * have a successful status once the Service Perimeter has propagated to long-
-   * lasting storage. Service Perimeters containing errors will result in an error
+   * Create a Service Perimeter. The longrunning operation from this RPC will have
+   * a successful status once the Service Perimeter has propagated to long-lasting
+   * storage. Service Perimeters containing errors will result in an error
    * response for the first error encountered. (servicePerimeters.create)
    *
    * @param string $parent Required. Resource name for the access policy which
@@ -73,7 +73,7 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
     return $this->call('create', array($params), "Google_Service_AccessContextManager_Operation");
   }
   /**
-   * Delete an Service Perimeter by resource name. The longrunning operation from
+   * Delete a Service Perimeter by resource name. The longrunning operation from
    * this RPC will have a successful status once the Service Perimeter has been
    * removed from long-lasting storage. (servicePerimeters.delete)
    *
@@ -90,7 +90,7 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
     return $this->call('delete', array($params), "Google_Service_AccessContextManager_Operation");
   }
   /**
-   * Get an Service Perimeter by resource name. (servicePerimeters.get)
+   * Get a Service Perimeter by resource name. (servicePerimeters.get)
    *
    * @param string $name Required. Resource name for the Service Perimeter.
    *
@@ -128,11 +128,10 @@ class Google_Service_AccessContextManager_Resource_AccessPoliciesServicePerimete
     return $this->call('list', array($params), "Google_Service_AccessContextManager_ListServicePerimetersResponse");
   }
   /**
-   * Update an Service Perimeter. The longrunning operation from this RPC will
-   * have a successful status once the changes to the Service Perimeter have
-   * propagated to long-lasting storage. Service Perimeter containing errors will
-   * result in an error response for the first error encountered.
-   * (servicePerimeters.patch)
+   * Update a Service Perimeter. The longrunning operation from this RPC will have
+   * a successful status once the changes to the Service Perimeter have propagated
+   * to long-lasting storage. Service Perimeter containing errors will result in
+   * an error response for the first error encountered. (servicePerimeters.patch)
    *
    * @param string $name Required. Resource name for the ServicePerimeter.  The
    * `short_name` component must begin with a letter and only include alphanumeric

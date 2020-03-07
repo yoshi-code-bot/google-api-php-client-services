@@ -23,7 +23,7 @@
  *   $entityTypes = $dialogflowService->entityTypes;
  *  </code>
  */
-class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsEntityTypes extends Google_Service_Resource
+class Google_Service_Dialogflow_Resource_ProjectsAgentEnvironmentsUsersSessionsEntityTypes extends Google_Service_Resource
 {
   /**
    * Creates a session entity type.
@@ -97,7 +97,8 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsEntityTypes extend
    *
    * This method doesn't work with Google Assistant integration. Contact
    * Dialogflow support if you need to use session entities with Google Assistant
-   * integration. (entityTypes.listProjectsAgentSessionsEntityTypes)
+   * integration.
+   * (entityTypes.listProjectsAgentEnvironmentsUsersSessionsEntityTypes)
    *
    * @param string $parent Required. The session to list all session entity types
    * from. Format: `projects//agent/sessions/` or
@@ -112,7 +113,7 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentSessionsEntityTypes extend
    * single page. By default 100 and at most 1000.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2ListSessionEntityTypesResponse
    */
-  public function listProjectsAgentSessionsEntityTypes($parent, $optParams = array())
+  public function listProjectsAgentEnvironmentsUsersSessionsEntityTypes($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
