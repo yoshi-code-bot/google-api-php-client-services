@@ -48,6 +48,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $pos;
   public $products;
   public $productstatuses;
+  public $pubsubnotificationsettings;
   public $regionalinventory;
   public $returnaddress;
   public $returnpolicy;
@@ -1407,6 +1408,36 @@ class Google_Service_ShoppingContent extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->pubsubnotificationsettings = new Google_Service_ShoppingContent_Resource_Pubsubnotificationsettings(
+        $this,
+        $this->serviceName,
+        'pubsubnotificationsettings',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => '{merchantId}/pubsubnotificationsettings',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'update' => array(
+              'path' => '{merchantId}/pubsubnotificationsettings',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
