@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_PushFilter extends Google_Model
+class Google_Service_SecurityCommandCenter_StreamingConfig extends Google_Model
 {
-  public $branch;
-  public $invertRegex;
-  public $tag;
+  public $filter;
 
-  public function setBranch($branch)
+  public function setFilter($filter)
   {
-    $this->branch = $branch;
+    $this->filter = $filter;
   }
-  public function getBranch()
+  public function getFilter()
   {
-    return $this->branch;
-  }
-  public function setInvertRegex($invertRegex)
-  {
-    $this->invertRegex = $invertRegex;
-  }
-  public function getInvertRegex()
-  {
-    return $this->invertRegex;
-  }
-  public function setTag($tag)
-  {
-    $this->tag = $tag;
-  }
-  public function getTag()
-  {
-    return $this->tag;
+    return $this->filter;
   }
 }
