@@ -15,24 +15,16 @@
  * the License.
  */
 
-class Google_Service_AlertCenter_DriveFileWarning extends Google_Collection
+class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1XraiAttribution extends Google_Model
 {
-  protected $collection_key = 'files';
-  protected $filesType = 'Google_Service_AlertCenter_DriveFile';
-  protected $filesDataType = 'array';
+  public $numIntegralSteps;
 
-  /**
-   * @param Google_Service_AlertCenter_DriveFile
-   */
-  public function setFiles($files)
+  public function setNumIntegralSteps($numIntegralSteps)
   {
-    $this->files = $files;
+    $this->numIntegralSteps = $numIntegralSteps;
   }
-  /**
-   * @return Google_Service_AlertCenter_DriveFile
-   */
-  public function getFiles()
+  public function getNumIntegralSteps()
   {
-    return $this->files;
+    return $this->numIntegralSteps;
   }
 }

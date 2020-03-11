@@ -15,18 +15,18 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_FormInput extends Google_Model
+class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1MeasurementMetric extends Google_Model
 {
-  public $name;
+  public $metric;
   public $value;
 
-  public function setName($name)
+  public function setMetric($metric)
   {
-    $this->name = $name;
+    $this->metric = $metric;
   }
-  public function getName()
+  public function getMetric()
   {
-    return $this->name;
+    return $this->metric;
   }
   public function setValue($value)
   {

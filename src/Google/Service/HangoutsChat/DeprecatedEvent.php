@@ -15,17 +15,12 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_DeprecatedEvent extends Google_Collection
+class Google_Service_HangoutsChat_DeprecatedEvent extends Google_Model
 {
-  protected $collection_key = 'formInputs';
   protected $actionType = 'Google_Service_HangoutsChat_FormAction';
   protected $actionDataType = '';
   public $configCompleteRedirectUrl;
-  public $dialogEventType;
   public $eventTime;
-  protected $formInputsType = 'Google_Service_HangoutsChat_FormInput';
-  protected $formInputsDataType = 'array';
-  public $isDialogEvent;
   protected $messageType = 'Google_Service_HangoutsChat_Message';
   protected $messageDataType = '';
   protected $spaceType = 'Google_Service_HangoutsChat_Space';
@@ -58,14 +53,6 @@ class Google_Service_HangoutsChat_DeprecatedEvent extends Google_Collection
   {
     return $this->configCompleteRedirectUrl;
   }
-  public function setDialogEventType($dialogEventType)
-  {
-    $this->dialogEventType = $dialogEventType;
-  }
-  public function getDialogEventType()
-  {
-    return $this->dialogEventType;
-  }
   public function setEventTime($eventTime)
   {
     $this->eventTime = $eventTime;
@@ -73,28 +60,6 @@ class Google_Service_HangoutsChat_DeprecatedEvent extends Google_Collection
   public function getEventTime()
   {
     return $this->eventTime;
-  }
-  /**
-   * @param Google_Service_HangoutsChat_FormInput
-   */
-  public function setFormInputs($formInputs)
-  {
-    $this->formInputs = $formInputs;
-  }
-  /**
-   * @return Google_Service_HangoutsChat_FormInput
-   */
-  public function getFormInputs()
-  {
-    return $this->formInputs;
-  }
-  public function setIsDialogEvent($isDialogEvent)
-  {
-    $this->isDialogEvent = $isDialogEvent;
-  }
-  public function getIsDialogEvent()
-  {
-    return $this->isDialogEvent;
   }
   /**
    * @param Google_Service_HangoutsChat_Message
