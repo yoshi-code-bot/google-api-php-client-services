@@ -17,10 +17,9 @@
 
 class Google_Service_CloudHealthcare_ListMessagesResponse extends Google_Collection
 {
-  protected $collection_key = 'messages';
+  protected $collection_key = 'hl7V2Messages';
   protected $hl7V2MessagesType = 'Google_Service_CloudHealthcare_Message';
   protected $hl7V2MessagesDataType = 'array';
-  public $messages;
   public $nextPageToken;
 
   /**
@@ -36,14 +35,6 @@ class Google_Service_CloudHealthcare_ListMessagesResponse extends Google_Collect
   public function getHl7V2Messages()
   {
     return $this->hl7V2Messages;
-  }
-  public function setMessages($messages)
-  {
-    $this->messages = $messages;
-  }
-  public function getMessages()
-  {
-    return $this->messages;
   }
   public function setNextPageToken($nextPageToken)
   {

@@ -112,7 +112,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    *
    * Fields/functions available for filtering are:
    *
-   * *  `message_type`, from the MSH-9 segment. For example, `NOT message_type =
+   * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type =
    * "ADT"`. *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was
    * sent in the dataset's time_zone, from the MSH-7 segment. For example,
    * `send_date < "2017-01-02"`. *  `send_time`, the timestamp when the message
