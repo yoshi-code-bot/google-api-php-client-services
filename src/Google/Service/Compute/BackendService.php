@@ -33,6 +33,8 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public $customRequestHeaders;
   public $description;
   public $enableCDN;
+  protected $failoverPolicyType = 'Google_Service_Compute_BackendServiceFailoverPolicy';
+  protected $failoverPolicyDataType = '';
   public $fingerprint;
   public $healthChecks;
   protected $iapType = 'Google_Service_Compute_BackendServiceIAP';
@@ -165,6 +167,20 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public function getEnableCDN()
   {
     return $this->enableCDN;
+  }
+  /**
+   * @param Google_Service_Compute_BackendServiceFailoverPolicy
+   */
+  public function setFailoverPolicy(Google_Service_Compute_BackendServiceFailoverPolicy $failoverPolicy)
+  {
+    $this->failoverPolicy = $failoverPolicy;
+  }
+  /**
+   * @return Google_Service_Compute_BackendServiceFailoverPolicy
+   */
+  public function getFailoverPolicy()
+  {
+    return $this->failoverPolicy;
   }
   public function setFingerprint($fingerprint)
   {

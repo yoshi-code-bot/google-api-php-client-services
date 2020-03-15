@@ -1252,6 +1252,10 @@ class Google_Service_Storage extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'endOffset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeTrailingDelimiter' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1273,6 +1277,10 @@ class Google_Service_Storage extends Google_Service
                   'type' => 'string',
                 ),
                 'provisionalUserProject' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startOffset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1549,6 +1557,10 @@ class Google_Service_Storage extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'endOffset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeTrailingDelimiter' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1570,6 +1582,10 @@ class Google_Service_Storage extends Google_Service
                   'type' => 'string',
                 ),
                 'provisionalUserProject' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startOffset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

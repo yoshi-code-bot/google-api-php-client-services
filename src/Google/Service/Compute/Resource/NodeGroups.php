@@ -81,6 +81,13 @@ class Google_Service_Compute_Resource_NodeGroups extends Google_Service_Resource
    * you can include AND and OR expressions explicitly. For example, (cpuPlatform
    * = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
    * (scheduling.automaticRestart = true).
+   * @opt_param bool includeAllScopes Indicates whether every visible scope for
+   * each scope type (zone, region, global) should be included in the response.
+   * For new resource types added after this field, the flag has no effect as new
+   * resource types will always include every visible scope for each scope type in
+   * response. For resource types which predate this field, if this flag is
+   * omitted or false, only scopes of the scope types where the resource type is
+   * expected to be found will be included.
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
    * maxResults, Compute Engine returns a nextPageToken that can be used to get
@@ -337,6 +344,35 @@ class Google_Service_Compute_Resource_NodeGroups extends Google_Service_Resource
     $params = array('project' => $project, 'zone' => $zone, 'nodeGroup' => $nodeGroup);
     $params = array_merge($params, $optParams);
     return $this->call('listNodes', array($params), "Google_Service_Compute_NodeGroupsListNodes");
+  }
+  /**
+   * Patch the node group. (nodeGroups.patch)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $nodeGroup Name of the NodeGroup resource to update.
+   * @param Google_Service_Compute_NodeGroup $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function patch($project, $zone, $nodeGroup, Google_Service_Compute_NodeGroup $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'nodeGroup' => $nodeGroup, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

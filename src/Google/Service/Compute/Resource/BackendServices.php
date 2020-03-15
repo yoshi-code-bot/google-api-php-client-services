@@ -82,6 +82,13 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
    * you can include AND and OR expressions explicitly. For example, (cpuPlatform
    * = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
    * (scheduling.automaticRestart = true).
+   * @opt_param bool includeAllScopes Indicates whether every visible scope for
+   * each scope type (zone, region, global) should be included in the response.
+   * For new resource types added after this field, the flag has no effect as new
+   * resource types will always include every visible scope for each scope type in
+   * response. For resource types which predate this field, if this flag is
+   * omitted or false, only scopes of the scope types where the resource type is
+   * expected to be found will be included.
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
    * maxResults, Compute Engine returns a nextPageToken that can be used to get
@@ -200,8 +207,8 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
   /**
    * Creates a BackendService resource in the specified project using the data
    * included in the request. There are several restrictions and guidelines to
-   * keep in mind when creating a backend service. Read  Restrictions and
-   * Guidelines for more information. (backendServices.insert)
+   * keep in mind when creating a backend service. Read  Understanding backend
+   * services for more information. (backendServices.insert)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_BackendService $postBody
@@ -282,10 +289,10 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
   }
   /**
    * Patches the specified BackendService resource with the data included in the
-   * request. There are several restrictions and guidelines to keep in mind when
-   * updating a backend service. Read  Restrictions and Guidelines for more
-   * information. This method supports PATCH semantics and uses the JSON merge
-   * patch format and processing rules. (backendServices.patch)
+   * request. There are several Understanding backend services to keep in mind
+   * when updating a backend service. Read  Understanding backend services for
+   * more information. This method supports PATCH semantics and uses the JSON
+   * merge patch format and processing rules. (backendServices.patch)
    *
    * @param string $project Project ID for this request.
    * @param string $backendService Name of the BackendService resource to patch.
@@ -344,9 +351,9 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
   }
   /**
    * Updates the specified BackendService resource with the data included in the
-   * request. There are several restrictions and guidelines to keep in mind when
-   * updating a backend service. Read  Restrictions and Guidelines for more
-   * information. (backendServices.update)
+   * request. There are several Understanding backend services to keep in mind
+   * when updating a backend service. Read  Understanding backend services for
+   * more information. (backendServices.update)
    *
    * @param string $project Project ID for this request.
    * @param string $backendService Name of the BackendService resource to update.

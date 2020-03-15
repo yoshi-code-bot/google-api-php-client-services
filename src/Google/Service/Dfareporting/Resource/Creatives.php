@@ -102,7 +102,7 @@ class Google_Service_Dfareporting_Resource_Creatives extends Google_Service_Reso
    * (creatives.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Creative ID.
+   * @param string $id
    * @param Google_Service_Dfareporting_Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Creative

@@ -60,4 +60,21 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups ext
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', array($params), "Google_Service_BigtableAdmin_Policy");
   }
+  /**
+   * Returns permissions that the caller has on the specified table resource.
+   * (backups.testIamPermissions)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy detail is
+   * being requested. See the operation documentation for the appropriate value
+   * for this field.
+   * @param Google_Service_BigtableAdmin_TestIamPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_BigtableAdmin_TestIamPermissionsResponse
+   */
+  public function testIamPermissions($resource, Google_Service_BigtableAdmin_TestIamPermissionsRequest $postBody, $optParams = array())
+  {
+    $params = array('resource' => $resource, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', array($params), "Google_Service_BigtableAdmin_TestIamPermissionsResponse");
+  }
 }

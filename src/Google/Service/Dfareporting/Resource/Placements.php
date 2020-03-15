@@ -146,7 +146,7 @@ class Google_Service_Dfareporting_Resource_Placements extends Google_Service_Res
    * (placements.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Placement ID.
+   * @param string $id
    * @param Google_Service_Dfareporting_Placement $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Placement

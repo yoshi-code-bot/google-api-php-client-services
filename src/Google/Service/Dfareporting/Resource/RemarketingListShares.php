@@ -45,7 +45,7 @@ class Google_Service_Dfareporting_Resource_RemarketingListShares extends Google_
    * semantics. (remarketingListShares.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $remarketingListId Remarketing list ID.
+   * @param string $remarketingListId
    * @param Google_Service_Dfareporting_RemarketingListShare $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingListShare

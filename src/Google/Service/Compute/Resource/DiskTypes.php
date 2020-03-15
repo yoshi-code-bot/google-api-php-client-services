@@ -51,6 +51,13 @@ class Google_Service_Compute_Resource_DiskTypes extends Google_Service_Resource
    * you can include AND and OR expressions explicitly. For example, (cpuPlatform
    * = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
    * (scheduling.automaticRestart = true).
+   * @opt_param bool includeAllScopes Indicates whether every visible scope for
+   * each scope type (zone, region, global) should be included in the response.
+   * For new resource types added after this field, the flag has no effect as new
+   * resource types will always include every visible scope for each scope type in
+   * response. For resource types which predate this field, if this flag is
+   * omitted or false, only scopes of the scope types where the resource type is
+   * expected to be found will be included.
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
    * maxResults, Compute Engine returns a nextPageToken that can be used to get

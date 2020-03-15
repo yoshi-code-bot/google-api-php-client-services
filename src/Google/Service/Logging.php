@@ -22,7 +22,7 @@
  * Writes log entries and manages your Cloud Logging configuration. The table
  * entries below are presented in alphabetical order, not in order of common
  * use. For explanations of the concepts found in the table entries, read the
- * Cloud Logging documentation.</p>
+ * documentation at https://cloud.google.com/logging/docs.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -1215,13 +1215,13 @@ class Google_Service_Logging extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(

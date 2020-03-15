@@ -444,6 +444,16 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'testIamPermissions' => array(
+              'path' => 'v2/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )

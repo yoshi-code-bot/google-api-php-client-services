@@ -27,6 +27,7 @@ class Google_Service_Compute_Instance extends Google_Collection
   protected $disksDataType = 'array';
   protected $displayDeviceType = 'Google_Service_Compute_DisplayDevice';
   protected $displayDeviceDataType = '';
+  public $fingerprint;
   protected $guestAcceleratorsType = 'Google_Service_Compute_AcceleratorConfig';
   protected $guestAcceleratorsDataType = 'array';
   public $hostname;
@@ -126,6 +127,14 @@ class Google_Service_Compute_Instance extends Google_Collection
   public function getDisplayDevice()
   {
     return $this->displayDevice;
+  }
+  public function setFingerprint($fingerprint)
+  {
+    $this->fingerprint = $fingerprint;
+  }
+  public function getFingerprint()
+  {
+    return $this->fingerprint;
   }
   /**
    * @param Google_Service_Compute_AcceleratorConfig
