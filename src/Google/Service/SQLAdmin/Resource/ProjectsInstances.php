@@ -34,10 +34,6 @@ class Google_Service_SQLAdmin_Resource_ProjectsInstances extends Google_Service_
    * project ID.
    * @param Google_Service_SQLAdmin_SqlInstancesRescheduleMaintenanceRequestBody $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where Cloud SQL reshedule this
-   * database instance's maintenance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function rescheduleMaintenance($project, $instance, Google_Service_SQLAdmin_SqlInstancesRescheduleMaintenanceRequestBody $postBody, $optParams = array())
@@ -56,9 +52,6 @@ class Google_Service_SQLAdmin_Resource_ProjectsInstances extends Google_Service_
    * @param array $optParams Optional parameters.
    *
    * @opt_param string syncMode External sync mode
-   * @opt_param string parent The parent resource where Cloud SQL starts this
-   * database instance external sync. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @return Google_Service_SQLAdmin_Operation
    */
   public function startExternalSync($project, $instance, $optParams = array())
@@ -76,11 +69,8 @@ class Google_Service_SQLAdmin_Resource_ProjectsInstances extends Google_Service_
    * project ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string syncMode External sync mode
-   * @opt_param string parent The parent resource where Cloud SQL verifies this
-   * database instance external sync settings. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
    * @opt_param bool verifyConnectionOnly Flag to enable verifying connection only
+   * @opt_param string syncMode External sync mode
    * @return Google_Service_SQLAdmin_SqlInstancesVerifyExternalSyncSettingsResponse
    */
   public function verifyExternalSyncSettings($project, $instance, $optParams = array())

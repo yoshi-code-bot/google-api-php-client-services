@@ -96,14 +96,14 @@ class Google_Service_CloudIdentity_Resource_Groups extends Google_Service_Resour
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string groupKey.id The ID of the entity within the given
-   * namespace. The ID must be unique within its namespace.
    * @opt_param string groupKey.namespace Namespaces provide isolation for IDs, so
    * an ID only needs to be unique within its namespace.
    *
    * Namespaces are currently only created as part of IdentitySource creation from
    * Admin Console. A namespace `"identitysources/{identity_source_id}"` is
    * created corresponding to every Identity Source `identity_source_id`.
+   * @opt_param string groupKey.id The ID of the entity within the given
+   * namespace. The ID must be unique within its namespace.
    * @return Google_Service_CloudIdentity_LookupGroupNameResponse
    */
   public function lookup($optParams = array())

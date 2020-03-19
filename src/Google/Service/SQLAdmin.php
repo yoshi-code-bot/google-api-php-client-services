@@ -43,7 +43,6 @@ class Google_Service_SQLAdmin extends Google_Service
   public $instances;
   public $operations;
   public $projects_instances;
-  public $projects_locations_instances;
   public $sslCerts;
   public $tiers;
   public $users;
@@ -88,10 +87,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'get' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}',
@@ -112,10 +107,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'insert' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/backupRuns',
@@ -130,10 +121,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
@@ -150,17 +137,13 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -192,10 +175,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'get' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}',
@@ -216,10 +195,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'insert' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/databases',
@@ -235,10 +210,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'list' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/databases',
@@ -253,10 +224,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -278,10 +245,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'update' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}',
@@ -301,10 +264,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -350,10 +309,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'clone' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/clone',
@@ -368,10 +323,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'delete' => array(
@@ -388,10 +339,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'demoteMaster' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster',
@@ -406,10 +353,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'export' => array(
@@ -426,10 +369,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'failover' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/failover',
@@ -444,10 +383,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'get' => array(
@@ -464,10 +399,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'import' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/import',
@@ -483,10 +414,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'insert' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances',
@@ -496,10 +423,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
@@ -518,10 +441,6 @@ class Google_Service_SQLAdmin extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'filter' => array(
                   'location' => 'query',
@@ -542,10 +461,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'patch' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}',
@@ -560,10 +475,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'promoteReplica' => array(
@@ -580,10 +491,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'resetSslConfig' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig',
@@ -598,10 +505,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'restart' => array(
@@ -618,10 +521,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'restoreBackup' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup',
@@ -636,10 +535,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'rotateServerCa' => array(
@@ -656,10 +551,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'startReplica' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/startReplica',
@@ -674,10 +565,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'stopReplica' => array(
@@ -694,10 +581,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'truncateLog' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/truncateLog',
@@ -713,10 +596,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'update' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}',
@@ -731,10 +610,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -761,10 +636,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'list' => array(
               'path' => 'sql/v1beta4/projects/{project}/operations',
@@ -775,14 +646,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'instance' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -790,6 +653,10 @@ class Google_Service_SQLAdmin extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -816,10 +683,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'startExternalSync' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync',
@@ -839,10 +702,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'verifyExternalSyncSettings' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings',
@@ -858,89 +717,9 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'syncMode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'verifyConnectionOnly' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->projects_locations_instances = new Google_Service_SQLAdmin_Resource_ProjectsLocationsInstances(
-        $this,
-        $this->serviceName,
-        'instances',
-        array(
-          'methods' => array(
-            'rescheduleMaintenance' => array(
-              'path' => 'sql/v1beta4/{+parent}/rescheduleMaintenance',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'instance' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'project' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),'startExternalSync' => array(
-              'path' => 'sql/v1beta4/{+parent}/startExternalSync',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'project' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'syncMode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'instance' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),'verifyExternalSyncSettings' => array(
-              'path' => 'sql/v1beta4/{+parent}/verifyExternalSyncSettings',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'verifyConnectionOnly' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'instance' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'project' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'syncMode' => array(
                   'location' => 'query',
@@ -971,10 +750,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'delete' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}',
@@ -994,10 +769,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'get' => array(
@@ -1019,10 +790,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'insert' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/sslCerts',
@@ -1038,10 +805,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'list' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/sslCerts',
@@ -1056,10 +819,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -1110,10 +869,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'resourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'host' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1133,10 +888,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'list' => array(
               'path' => 'sql/v1beta4/projects/{project}/instances/{instance}/users',
@@ -1151,10 +902,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -1172,10 +919,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'required' => true,
                 ),
                 'name' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'resourceName' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
