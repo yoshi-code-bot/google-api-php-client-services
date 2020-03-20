@@ -18,6 +18,7 @@
 class Google_Service_CloudHealthcare_OperationMetadata extends Google_Model
 {
   public $apiMethodName;
+  public $cancelRequested;
   protected $counterType = 'Google_Service_CloudHealthcare_ProgressCounter';
   protected $counterDataType = '';
   public $createTime;
@@ -30,6 +31,14 @@ class Google_Service_CloudHealthcare_OperationMetadata extends Google_Model
   public function getApiMethodName()
   {
     return $this->apiMethodName;
+  }
+  public function setCancelRequested($cancelRequested)
+  {
+    $this->cancelRequested = $cancelRequested;
+  }
+  public function getCancelRequested()
+  {
+    return $this->cancelRequested;
   }
   /**
    * @param Google_Service_CloudHealthcare_ProgressCounter

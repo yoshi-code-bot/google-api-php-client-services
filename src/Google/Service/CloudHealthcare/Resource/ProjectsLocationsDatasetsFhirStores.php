@@ -160,6 +160,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * some resources fail to be imported, the FHIR store might be left in a state
    * that violates referential integrity.
    *
+   * The import process does not trigger PubSub notification or BigQuery streaming
+   * update, regardless of how those are configured on the FHIR store.
+   *
    * If a resource with the specified ID already exists, the most recent version
    * of the resource is overwritten without creating a new historical version,
    * regardless of the disable_resource_versioning setting on the FHIR store. If

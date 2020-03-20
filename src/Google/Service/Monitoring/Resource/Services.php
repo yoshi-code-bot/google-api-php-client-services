@@ -76,8 +76,8 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * List Services for this workspace. (services.listServices)
    *
    * @param string $parent Required. Resource name of the parent containing the
-   * listed services, either a project or Stackdriver Account (workspace). The
-   * formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID]
+   * listed services, either a project or a Monitoring Workspace. The formats are:
+   * projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID]
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter specifying what Services to return. The
@@ -106,7 +106,7 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * Update this Service. (services.patch)
    *
    * @param string $name Resource name for this Service. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @param Google_Service_Monitoring_Service $postBody
    * @param array $optParams Optional parameters.
    *

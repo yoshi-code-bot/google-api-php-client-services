@@ -27,7 +27,7 @@ class Google_Service_Monitoring_Resource_ProjectsMonitoredResourceDescriptors ex
 {
   /**
    * Gets a single monitored resource descriptor. This method does not require a
-   * Stackdriver account. (monitoredResourceDescriptors.get)
+   * Workspace. (monitoredResourceDescriptors.get)
    *
    * @param string $name Required. The monitored resource descriptor to get. The
    * format is:
@@ -44,7 +44,7 @@ class Google_Service_Monitoring_Resource_ProjectsMonitoredResourceDescriptors ex
   }
   /**
    * Lists monitored resource descriptors that match a filter. This method does
-   * not require a Stackdriver account.
+   * not require a Workspace.
    * (monitoredResourceDescriptors.listProjectsMonitoredResourceDescriptors)
    *
    * @param string $name Required. The project on which to execute the request.

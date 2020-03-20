@@ -84,10 +84,14 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * List the ServiceLevelObjectives for the given Service.
    * (serviceLevelObjectives.listServicesServiceLevelObjectives)
    *
-   * @param string $parent Required. Resource name of the parent Service. The
-   * format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+   * @param string $parent Required. Resource name of the parent containing the
+   * listed SLOs, either a project or a Monitoring Workspace. The formats are:
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+   * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter A filter specifying what ServiceLevelObjectives to
+   * return.
    * @opt_param string pageToken If this field is not empty then it must contain
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous
@@ -98,8 +102,6 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * DEFAULT, return each ServiceLevelObjective as originally defined. If EXPLICIT
    * and the ServiceLevelObjective is defined in terms of a BasicSli, replace the
    * BasicSli with a RequestBasedSli spelling out how the SLI is computed.
-   * @opt_param string filter A filter specifying what ServiceLevelObjectives to
-   * return.
    * @return Google_Service_Monitoring_ListServiceLevelObjectivesResponse
    */
   public function listServicesServiceLevelObjectives($parent, $optParams = array())
