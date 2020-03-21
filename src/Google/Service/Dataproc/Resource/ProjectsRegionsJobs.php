@@ -192,6 +192,23 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsJobs extends Google_Servic
     return $this->call('submit', array($params), "Google_Service_Dataproc_Job");
   }
   /**
+   * Submits job to a cluster. (jobs.submitAsOperation)
+   *
+   * @param string $projectId Required. The ID of the Google Cloud Platform
+   * project that the job belongs to.
+   * @param string $region Required. The Dataproc region in which to handle the
+   * request.
+   * @param Google_Service_Dataproc_SubmitJobRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Dataproc_Operation
+   */
+  public function submitAsOperation($projectId, $region, Google_Service_Dataproc_SubmitJobRequest $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'region' => $region, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('submitAsOperation', array($params), "Google_Service_Dataproc_Operation");
+  }
+  /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
    * NOT_FOUND error.Note: This operation is designed to be used for building
