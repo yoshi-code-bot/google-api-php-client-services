@@ -15,26 +15,25 @@
  * the License.
  */
 
-/**
- * The "me" collection of methods.
- * Typical usage is:
- *  <code>
- *   $oauth2Service = new Google_Service_Oauth2(...);
- *   $me = $oauth2Service->me;
- *  </code>
- */
-class Google_Service_Oauth2_Resource_UserinfoV2Me extends Google_Service_Resource
+class Google_Service_ServiceNetworking_PolicyBinding extends Google_Model
 {
-  /**
-   * (me.get)
-   *
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Oauth2_Userinfo
-   */
-  public function get($optParams = array())
+  public $member;
+  public $role;
+
+  public function setMember($member)
   {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Oauth2_Userinfo");
+    $this->member = $member;
+  }
+  public function getMember()
+  {
+    return $this->member;
+  }
+  public function setRole($role)
+  {
+    $this->role = $role;
+  }
+  public function getRole()
+  {
+    return $this->role;
   }
 }

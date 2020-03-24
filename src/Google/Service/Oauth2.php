@@ -30,15 +30,15 @@
  */
 class Google_Service_Oauth2 extends Google_Service
 {
-  /** Associate you with your personal info on Google. */
-  const PLUS_ME =
-      "https://www.googleapis.com/auth/plus.me";
   /** View your email address. */
   const USERINFO_EMAIL =
       "https://www.googleapis.com/auth/userinfo.email";
   /** See your personal info, including any personal info you've made publicly available. */
   const USERINFO_PROFILE =
       "https://www.googleapis.com/auth/userinfo.profile";
+  /** Associate you with your personal info on Google. */
+  const OPENID =
+      "openid";
 
   public $userinfo;
   public $userinfo_v2_me;
@@ -104,10 +104,6 @@ class Google_Service_Oauth2 extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'token_handle' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),
           )
@@ -121,7 +117,6 @@ class Google_Service_Oauth2 extends Google_Service
    *
    * @opt_param string access_token
    * @opt_param string id_token
-   * @opt_param string token_handle
    * @return Google_Service_Oauth2_Tokeninfo
    */
   public function tokeninfo($optParams = array())

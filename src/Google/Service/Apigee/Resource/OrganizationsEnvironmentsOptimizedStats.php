@@ -40,13 +40,6 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsOptimizedStats ext
    * `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool sonar This parameter routes the query to api monitoring
-   * service for last hour
-   * @opt_param bool realtime Legacy field: not used anymore
-   * @opt_param string tzo This parameters contains the timezone offset value
-   * @opt_param string sortby Comma separated list of columns to sort the final
-   * result.
-   * @opt_param string filter Enables drill-down on specific dimension values
    * @opt_param string timeUnit A value of second, minute, hour, day, week, month.
    * Time Unit specifies the granularity of metrics returned.
    * @opt_param string aggTable If customers want to query custom aggregate
@@ -71,6 +64,13 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsOptimizedStats ext
    * results. For example, to display results 11-20, set limit to '10' and offset
    * to '10'.
    * @opt_param string accuracy Legacy field. not used anymore
+   * @opt_param bool sonar This parameter routes the query to api monitoring
+   * service for last hour
+   * @opt_param bool realtime Legacy field: not used anymore
+   * @opt_param string tzo This parameters contains the timezone offset value
+   * @opt_param string sortby Comma separated list of columns to sort the final
+   * result.
+   * @opt_param string filter Enables drill-down on specific dimension values
    * @return Google_Service_Apigee_GoogleCloudApigeeV1OptimizedStats
    */
   public function get($name, $optParams = array())

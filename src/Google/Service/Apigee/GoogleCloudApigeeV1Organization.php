@@ -29,6 +29,7 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public $name;
   protected $propertiesType = 'Google_Service_Apigee_GoogleCloudApigeeV1Properties';
   protected $propertiesDataType = '';
+  public $subscriptionType;
   public $type;
 
   public function setAnalyticsRegion($analyticsRegion)
@@ -116,6 +117,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public function getProperties()
   {
     return $this->properties;
+  }
+  public function setSubscriptionType($subscriptionType)
+  {
+    $this->subscriptionType = $subscriptionType;
+  }
+  public function getSubscriptionType()
+  {
+    return $this->subscriptionType;
   }
   public function setType($type)
   {

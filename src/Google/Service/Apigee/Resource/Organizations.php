@@ -79,8 +79,8 @@ class Google_Service_Apigee_Resource_Organizations extends Google_Service_Resour
    * following structure in your request:   `organizations/{org}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string domain
    * @opt_param string zmsId
+   * @opt_param string domain
    * @return Google_Service_Apigee_GoogleCloudApigeeV1SiteListResponse
    */
   public function getSites($parent, $optParams = array())

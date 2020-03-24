@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Oauth2_Userinfoplus extends Google_Model
+class Google_Service_Oauth2_Userinfo extends Google_Model
 {
   protected $internal_gapi_mappings = array(
         "familyName" => "family_name",
