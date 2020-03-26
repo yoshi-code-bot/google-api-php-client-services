@@ -58,6 +58,37 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     return $this->call('addAccessConfig', array($params), "Google_Service_Compute_Operation");
   }
   /**
+   * Adds existing resource policies to an instance. You can only add one policy
+   * right now which will be applied to this instance for scheduling live
+   * migrations. (instances.addResourcePolicies)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance The instance name for this request.
+   * @param Google_Service_Compute_InstancesAddResourcePoliciesRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function addResourcePolicies($project, $zone, $instance, Google_Service_Compute_InstancesAddResourcePoliciesRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('addResourcePolicies', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Retrieves aggregated list of all of the instances in your project across all
    * regions and zones. (instances.aggregatedList)
    *
@@ -479,6 +510,36 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
     $params = array_merge($params, $optParams);
     return $this->call('listReferrers', array($params), "Google_Service_Compute_InstanceListReferrers");
+  }
+  /**
+   * Removes resource policies from an instance.
+   * (instances.removeResourcePolicies)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance The instance name for this request.
+   * @param Google_Service_Compute_InstancesRemoveResourcePoliciesRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function removeResourcePolicies($project, $zone, $instance, Google_Service_Compute_InstancesRemoveResourcePoliciesRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('removeResourcePolicies', array($params), "Google_Service_Compute_Operation");
   }
   /**
    * Performs a reset on the instance. This is a hard reset the VM does not do a
@@ -989,7 +1050,10 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     return $this->call('testIamPermissions', array($params), "Google_Service_Compute_TestPermissionsResponse");
   }
   /**
-   * Updates an instance. (instances.update)
+   * Updates an instance only if the necessary resources are available. This
+   * method can update only a specific set of instance properties. See  Updating a
+   * running instance for a list of updatable instance properties.
+   * (instances.update)
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
@@ -997,13 +1061,15 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
    * @param Google_Service_Compute_Instance $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string minimalAction If specified, this action or higher level
-   * action is performed on the instance irrespective of what action is required
-   * for the update to take effect. If not specified, then Compute Engine acts
-   * based on the minimum action required.
-   * @opt_param string mostDisruptiveAllowedAction If specified, Compute Engine
-   * returns an error if the update requires a higher action to be applied to the
-   * instance. If not specified, the default will be REFRESH.
+   * @opt_param string minimalAction Specifies the action to take when updating an
+   * instance even if the updated properties do not require it. If not specified,
+   * then Compute Engine acts based on the minimum action that the updated
+   * properties require.
+   * @opt_param string mostDisruptiveAllowedAction Specifies the most disruptive
+   * action that can be taken on the instance as part of the update. Compute
+   * Engine returns an error if the instance properties require a more disruptive
+   * action as part of the instance update. Valid options from lowest to highest
+   * are NO_EFFECT, REFRESH, and RESTART.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
