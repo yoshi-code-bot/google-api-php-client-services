@@ -87,7 +87,7 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * @param string $parent Required. Resource name of the parent containing the
    * listed SLOs, either a project or a Monitoring Workspace. The formats are:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-   * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+   * workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter specifying what ServiceLevelObjectives to

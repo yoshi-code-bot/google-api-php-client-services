@@ -77,9 +77,11 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    *
    * @param string $parent Required. Resource name of the parent containing the
    * listed services, either a project or a Monitoring Workspace. The formats are:
-   * projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID]
+   * projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize A non-negative number that is the maximum number of
+   * results to return. When 0, use default page size.
    * @opt_param string filter A filter specifying what Services to return. The
    * filter currently supports the following fields: - `identifier_case` -
    * `app_engine.module_id` - `cloud_endpoints.service` - `cluster_istio.location`
@@ -92,8 +94,6 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous
    * method call.
-   * @opt_param int pageSize A non-negative number that is the maximum number of
-   * results to return. When 0, use default page size.
    * @return Google_Service_Monitoring_ListServicesResponse
    */
   public function listServices($parent, $optParams = array())
