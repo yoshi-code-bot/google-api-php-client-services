@@ -98,7 +98,7 @@ class Google_Service_Dfareporting_Resource_Sites extends Google_Service_Resource
    * Updates an existing site. This method supports patch semantics. (sites.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id
+   * @param string $id Site ID.
    * @param Google_Service_Dfareporting_Site $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Site

@@ -99,7 +99,7 @@ class Google_Service_Dfareporting_Resource_Campaigns extends Google_Service_Reso
    * (campaigns.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id
+   * @param string $id Campaign ID.
    * @param Google_Service_Dfareporting_Campaign $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Campaign

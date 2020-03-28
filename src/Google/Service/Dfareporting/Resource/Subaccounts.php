@@ -86,7 +86,7 @@ class Google_Service_Dfareporting_Resource_Subaccounts extends Google_Service_Re
    * (subaccounts.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id
+   * @param string $id Subaccount ID.
    * @param Google_Service_Dfareporting_Subaccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Subaccount

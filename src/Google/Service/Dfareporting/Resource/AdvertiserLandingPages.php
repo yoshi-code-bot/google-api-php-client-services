@@ -94,7 +94,7 @@ class Google_Service_Dfareporting_Resource_AdvertiserLandingPages extends Google
    * (advertiserLandingPages.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id
+   * @param string $id Landing page ID.
    * @param Google_Service_Dfareporting_LandingPage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_LandingPage

@@ -97,7 +97,7 @@ class Google_Service_Dfareporting_Resource_Advertisers extends Google_Service_Re
    * (advertisers.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id
+   * @param string $id Advertiser ID.
    * @param Google_Service_Dfareporting_Advertiser $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Advertiser

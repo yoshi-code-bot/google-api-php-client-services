@@ -98,13 +98,13 @@ class Google_Service_Dfareporting_Resource_CreativeFieldValues extends Google_Se
     return $this->call('list', array($params), "Google_Service_Dfareporting_CreativeFieldValuesListResponse");
   }
   /**
-   * Updates an existing creative field. This method supports patch semantics.
-   * (creativeFieldValues.patch)
+   * Updates an existing creative field value. This method supports patch
+   * semantics. (creativeFieldValues.patch)
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $creativeFieldId Creative field ID for this creative field
    * value.
-   * @param string $id
+   * @param string $id Creative Field Value ID
    * @param Google_Service_Dfareporting_CreativeFieldValue $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeFieldValue
