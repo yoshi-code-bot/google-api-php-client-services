@@ -29,6 +29,7 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public $name;
   protected $propertiesType = 'Google_Service_Apigee_GoogleCloudApigeeV1Properties';
   protected $propertiesDataType = '';
+  public $runtimeType;
   public $subscriptionType;
   public $type;
 
@@ -117,6 +118,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public function getProperties()
   {
     return $this->properties;
+  }
+  public function setRuntimeType($runtimeType)
+  {
+    $this->runtimeType = $runtimeType;
+  }
+  public function getRuntimeType()
+  {
+    return $this->runtimeType;
   }
   public function setSubscriptionType($subscriptionType)
   {

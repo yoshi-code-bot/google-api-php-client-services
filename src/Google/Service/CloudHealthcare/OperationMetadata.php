@@ -23,6 +23,7 @@ class Google_Service_CloudHealthcare_OperationMetadata extends Google_Model
   protected $counterDataType = '';
   public $createTime;
   public $endTime;
+  public $logsUrl;
 
   public function setApiMethodName($apiMethodName)
   {
@@ -69,5 +70,13 @@ class Google_Service_CloudHealthcare_OperationMetadata extends Google_Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  public function setLogsUrl($logsUrl)
+  {
+    $this->logsUrl = $logsUrl;
+  }
+  public function getLogsUrl()
+  {
+    return $this->logsUrl;
   }
 }

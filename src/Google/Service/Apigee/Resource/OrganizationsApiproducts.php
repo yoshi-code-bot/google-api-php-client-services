@@ -151,8 +151,8 @@ class Google_Service_Apigee_Resource_OrganizationsApiproducts extends Google_Ser
    * products at a time (using the `count` query parameter), you can view products
    * 50-99 by entering the name of the 50th API product in the first API (without
    * using `startKey`). Product name is case sensitive.
-   * @opt_param bool expand Set to `true` to get expanded details about each API.
    * @opt_param string attributevalue The value of the attribute.
+   * @opt_param bool expand Set to `true` to get expanded details about each API.
    * @opt_param string attributename The name of the attribute to search.
    * @opt_param string count Enter the number of API products you want returned in
    * the API call. The limit is 1000.
