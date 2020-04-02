@@ -15,30 +15,11 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_QuotaOverride extends Google_Model
+class Google_Service_GameServices_CustomField extends Google_Model
 {
-  public $dimensions;
-  public $metric;
   public $name;
-  public $overrideValue;
-  public $unit;
+  public $value;
 
-  public function setDimensions($dimensions)
-  {
-    $this->dimensions = $dimensions;
-  }
-  public function getDimensions()
-  {
-    return $this->dimensions;
-  }
-  public function setMetric($metric)
-  {
-    $this->metric = $metric;
-  }
-  public function getMetric()
-  {
-    return $this->metric;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -47,20 +28,12 @@ class Google_Service_ServiceUsage_QuotaOverride extends Google_Model
   {
     return $this->name;
   }
-  public function setOverrideValue($overrideValue)
+  public function setValue($value)
   {
-    $this->overrideValue = $overrideValue;
+    $this->value = $value;
   }
-  public function getOverrideValue()
+  public function getValue()
   {
-    return $this->overrideValue;
-  }
-  public function setUnit($unit)
-  {
-    $this->unit = $unit;
-  }
-  public function getUnit()
-  {
-    return $this->unit;
+    return $this->value;
   }
 }

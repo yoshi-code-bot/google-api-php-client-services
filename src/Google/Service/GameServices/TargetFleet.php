@@ -15,30 +15,12 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_QuotaOverride extends Google_Model
+class Google_Service_GameServices_TargetFleet extends Google_Model
 {
-  public $dimensions;
-  public $metric;
   public $name;
-  public $overrideValue;
-  public $unit;
+  protected $specSourceType = 'Google_Service_GameServices_SpecSource';
+  protected $specSourceDataType = '';
 
-  public function setDimensions($dimensions)
-  {
-    $this->dimensions = $dimensions;
-  }
-  public function getDimensions()
-  {
-    return $this->dimensions;
-  }
-  public function setMetric($metric)
-  {
-    $this->metric = $metric;
-  }
-  public function getMetric()
-  {
-    return $this->metric;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -47,20 +29,18 @@ class Google_Service_ServiceUsage_QuotaOverride extends Google_Model
   {
     return $this->name;
   }
-  public function setOverrideValue($overrideValue)
+  /**
+   * @param Google_Service_GameServices_SpecSource
+   */
+  public function setSpecSource(Google_Service_GameServices_SpecSource $specSource)
   {
-    $this->overrideValue = $overrideValue;
+    $this->specSource = $specSource;
   }
-  public function getOverrideValue()
+  /**
+   * @return Google_Service_GameServices_SpecSource
+   */
+  public function getSpecSource()
   {
-    return $this->overrideValue;
-  }
-  public function setUnit($unit)
-  {
-    $this->unit = $unit;
-  }
-  public function getUnit()
-  {
-    return $this->unit;
+    return $this->specSource;
   }
 }

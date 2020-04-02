@@ -18,6 +18,8 @@
 class Google_Service_Dfareporting_ObaIcon extends Google_Model
 {
   public $iconClickThroughUrl;
+  public $iconClickTrackingUrl;
+  public $iconViewTrackingUrl;
   public $program;
   public $resourceUrl;
   protected $sizeType = 'Google_Service_Dfareporting_Size';
@@ -32,6 +34,22 @@ class Google_Service_Dfareporting_ObaIcon extends Google_Model
   public function getIconClickThroughUrl()
   {
     return $this->iconClickThroughUrl;
+  }
+  public function setIconClickTrackingUrl($iconClickTrackingUrl)
+  {
+    $this->iconClickTrackingUrl = $iconClickTrackingUrl;
+  }
+  public function getIconClickTrackingUrl()
+  {
+    return $this->iconClickTrackingUrl;
+  }
+  public function setIconViewTrackingUrl($iconViewTrackingUrl)
+  {
+    $this->iconViewTrackingUrl = $iconViewTrackingUrl;
+  }
+  public function getIconViewTrackingUrl()
+  {
+    return $this->iconViewTrackingUrl;
   }
   public function setProgram($program)
   {

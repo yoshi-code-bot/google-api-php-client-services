@@ -19,43 +19,44 @@
  * The "locations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $appengineService = new Google_Service_Appengine(...);
- *   $locations = $appengineService->locations;
+ *   $gameservicesService = new Google_Service_GameServices(...);
+ *   $locations = $gameservicesService->locations;
  *  </code>
  */
-class Google_Service_Appengine_Resource_AppsLocations extends Google_Service_Resource
+class Google_Service_GameServices_Resource_ProjectsLocations extends Google_Service_Resource
 {
   /**
    * Gets information about a location. (locations.get)
    *
-   * @param string $appsId Part of `name`. Resource name for the location.
-   * @param string $locationsId Part of `name`. See documentation of `appsId`.
+   * @param string $name Resource name for the location.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Appengine_Location
+   * @return Google_Service_GameServices_Location
    */
-  public function get($appsId, $locationsId, $optParams = array())
+  public function get($name, $optParams = array())
   {
-    $params = array('appsId' => $appsId, 'locationsId' => $locationsId);
+    $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Appengine_Location");
+    return $this->call('get', array($params), "Google_Service_GameServices_Location");
   }
   /**
    * Lists information about the supported locations for this service.
-   * (locations.listAppsLocations)
+   * (locations.listProjectsLocations)
    *
-   * @param string $appsId Part of `name`. The resource that owns the locations
-   * collection, if applicable.
+   * @param string $name The resource that owns the locations collection, if
+   * applicable.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter The standard list filter.
+   * @opt_param bool includeUnrevealedLocations If true, the returned list will
+   * include locations which are not yet revealed.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @opt_param string filter The standard list filter.
-   * @return Google_Service_Appengine_ListLocationsResponse
+   * @return Google_Service_GameServices_ListLocationsResponse
    */
-  public function listAppsLocations($appsId, $optParams = array())
+  public function listProjectsLocations($name, $optParams = array())
   {
-    $params = array('appsId' => $appsId);
+    $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Appengine_ListLocationsResponse");
+    return $this->call('list', array($params), "Google_Service_GameServices_ListLocationsResponse");
   }
 }
