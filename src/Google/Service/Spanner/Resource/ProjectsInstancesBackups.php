@@ -112,33 +112,35 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
    * are of the form `projects//instances/`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A filter expression that filters backups listed in
-   * the response. The expression must specify the field name, a comparison
-   * operator, and the value that you want to use for filtering. The value must be
-   * a string, a number, or a boolean. The comparison operator must be <, >, <=,
-   * >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is roughly
-   * synonymous with equality. Filter rules are case insensitive.
+   * @opt_param string filter An expression that filters the list of returned
+   * backups.
    *
-   * The fields eligible for filtering are:   * `name`   * `database`   * `state`
-   * * `create_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)   *
-   * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)   *
-   * `size_bytes`
+   * A filter expression consists of a field name, a comparison operator, and a
+   * value for filtering. The value must be a string, a number, or a boolean. The
+   * comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`.
+   * Colon `:` is the contains operator. Filter rules are not case sensitive.
    *
-   * To filter on multiple expressions, provide each separate expression within
-   * parentheses. By default, each expression is an AND expression. However, you
-   * can include AND, OR, and NOT expressions explicitly.
+   * The following fields in the Backup are eligible for filtering:
    *
-   * Some examples of using filters are:
+   *   * `name`   * `database`   * `state`   * `create_time` (and values are of
+   * the format YYYY-MM-DDTHH:MM:SSZ)   * `expire_time` (and values are of the
+   * format YYYY-MM-DDTHH:MM:SSZ)   * `size_bytes`
    *
-   *   * `name:Howl` --> The backup's name contains the string "howl".   *
-   * `database:prod`          --> The database's name contains the string "prod".
-   * * `state:CREATING` --> The backup is pending creation.   * `state:READY` -->
-   * The backup is fully created and ready for use.   * `(name:howl) AND
-   * (create_time < \"2018-03-28T14:50:00Z\")`          --> The backup name
-   * contains the string "howl" and `create_time`              of the backup is
-   * before 2018-03-28T14:50:00Z.   * `expire_time < \"2018-03-28T14:50:00Z\"`
-   * --> The backup `expire_time` is before 2018-03-28T14:50:00Z.   * `size_bytes
-   * > 10000000000` --> The backup's size is greater than 10GB
+   * You can combine multiple expressions by enclosing each expression in
+   * parentheses. By default, expressions are combined with AND logic, but you can
+   * specify AND, OR, and NOT logic explicitly.
+   *
+   * Here are a few examples:
+   *
+   *   * `name:Howl` - The backup's name contains the string "howl".   *
+   * `database:prod`          - The database's name contains the string "prod".
+   * * `state:CREATING` - The backup is pending creation.   * `state:READY` - The
+   * backup is fully created and ready for use.   * `(name:howl) AND (create_time
+   * < \"2018-03-28T14:50:00Z\")`          - The backup name contains the string
+   * "howl" and `create_time`              of the backup is before
+   * 2018-03-28T14:50:00Z.   * `expire_time < \"2018-03-28T14:50:00Z\"`          -
+   * The backup `expire_time` is before 2018-03-28T14:50:00Z.   * `size_bytes >
+   * 10000000000` - The backup's size is greater than 10GB
    * @opt_param string pageToken If non-empty, `page_token` should contain a
    * next_page_token from a previous ListBackupsResponse to the same `parent` and
    * with the same `filter`.
@@ -155,9 +157,8 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
   /**
    * Updates a pending or completed Backup. (backups.patch)
    *
-   * @param string $name Output only for the
-   * CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for the
-   * UpdateBackup operation.
+   * @param string $name Output only for the CreateBackup operation. Required for
+   * the UpdateBackup operation.
    *
    * A globally unique identifier for the backup which cannot be changed. Values
    * are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment
