@@ -21,6 +21,10 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public $args;
   protected $encryptionConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EncryptionConfig';
   protected $encryptionConfigDataType = '';
+  protected $evaluatorConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig';
+  protected $evaluatorConfigDataType = '';
+  public $evaluatorCount;
+  public $evaluatorType;
   protected $hyperparametersType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterSpec';
   protected $hyperparametersDataType = '';
   public $jobDir;
@@ -66,6 +70,36 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public function getEncryptionConfig()
   {
     return $this->encryptionConfig;
+  }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig
+   */
+  public function setEvaluatorConfig(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig $evaluatorConfig)
+  {
+    $this->evaluatorConfig = $evaluatorConfig;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig
+   */
+  public function getEvaluatorConfig()
+  {
+    return $this->evaluatorConfig;
+  }
+  public function setEvaluatorCount($evaluatorCount)
+  {
+    $this->evaluatorCount = $evaluatorCount;
+  }
+  public function getEvaluatorCount()
+  {
+    return $this->evaluatorCount;
+  }
+  public function setEvaluatorType($evaluatorType)
+  {
+    $this->evaluatorType = $evaluatorType;
+  }
+  public function getEvaluatorType()
+  {
+    return $this->evaluatorType;
   }
   /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterSpec

@@ -15,33 +15,23 @@
  * the License.
  */
 
-class Google_Service_Customsearch_Context extends Google_Collection
+class Google_Service_Compute_SecurityPoliciesWafConfig extends Google_Model
 {
-  protected $collection_key = 'facets';
-  protected $facetsType = 'Google_Service_Customsearch_ContextFacets';
-  protected $facetsDataType = 'array';
-  public $title;
+  protected $wafRulesType = 'Google_Service_Compute_PreconfiguredWafSet';
+  protected $wafRulesDataType = '';
 
   /**
-   * @param Google_Service_Customsearch_ContextFacets
+   * @param Google_Service_Compute_PreconfiguredWafSet
    */
-  public function setFacets($facets)
+  public function setWafRules(Google_Service_Compute_PreconfiguredWafSet $wafRules)
   {
-    $this->facets = $facets;
+    $this->wafRules = $wafRules;
   }
   /**
-   * @return Google_Service_Customsearch_ContextFacets
+   * @return Google_Service_Compute_PreconfiguredWafSet
    */
-  public function getFacets()
+  public function getWafRules()
   {
-    return $this->facets;
-  }
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  public function getTitle()
-  {
-    return $this->title;
+    return $this->wafRules;
   }
 }

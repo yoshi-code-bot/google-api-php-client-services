@@ -9653,6 +9653,32 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'listPreconfiguredExpressionSets' => array(
+              'path' => '{project}/global/securityPolicies/listPreconfiguredExpressionSets',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'patch' => array(
               'path' => '{project}/global/securityPolicies/{securityPolicy}',
               'httpMethod' => 'PATCH',

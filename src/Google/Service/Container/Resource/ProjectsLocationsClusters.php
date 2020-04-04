@@ -81,8 +81,6 @@ class Google_Service_Container_Resource_ProjectsLocationsClusters extends Google
    * delete. Specified in the format 'projects/locations/clusters'.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string clusterId Deprecated. The name of the cluster to delete.
-   * This field has been deprecated and replaced by the name field.
    * @opt_param string projectId Deprecated. The Google Developers Console
    * [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been
@@ -90,6 +88,8 @@ class Google_Service_Container_Resource_ProjectsLocationsClusters extends Google
    * @opt_param string zone Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster resides. This
    * field has been deprecated and replaced by the name field.
+   * @opt_param string clusterId Deprecated. The name of the cluster to delete.
+   * This field has been deprecated and replaced by the name field.
    * @return Google_Service_Container_Operation
    */
   public function delete($name, $optParams = array())
@@ -197,7 +197,7 @@ class Google_Service_Container_Resource_ProjectsLocationsClusters extends Google
   /**
    * Sets the locations for a specific cluster. Deprecated. Use
    * [projects.locations.clusters.update](/kubernetes-
-   * engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
+   * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
    * (clusters.setLocations)
    *
    * @param string $name The name (project, location, cluster) of the cluster to

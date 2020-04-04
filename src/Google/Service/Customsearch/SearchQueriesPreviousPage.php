@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Customsearch_Query extends Google_Model
+class Google_Service_Customsearch_SearchQueriesPreviousPage extends Google_Model
 {
   public $count;
   public $cr;
