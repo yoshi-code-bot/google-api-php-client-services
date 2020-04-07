@@ -15,24 +15,16 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders extends Google_Collection
+class Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData extends Google_Model
 {
-  protected $collection_key = 'providers';
-  protected $providersType = 'Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider';
-  protected $providersDataType = 'array';
+  public $message;
 
-  /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
-   */
-  public function setProviders($providers)
+  public function setMessage($message)
   {
-    $this->providers = $providers;
+    $this->message = $message;
   }
-  /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
-   */
-  public function getProviders()
+  public function getMessage()
   {
-    return $this->providers;
+    return $this->message;
   }
 }
