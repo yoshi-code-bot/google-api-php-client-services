@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1FhirRestExportResourcesResponse extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DeidentifyDeidentifyDicomStoreSummary extends Google_Model
 {
-  public $fhirStore;
-  public $resourceCount;
-
-  public function setFhirStore($fhirStore)
-  {
-    $this->fhirStore = $fhirStore;
-  }
-  public function getFhirStore()
-  {
-    return $this->fhirStore;
-  }
-  public function setResourceCount($resourceCount)
-  {
-    $this->resourceCount = $resourceCount;
-  }
-  public function getResourceCount()
-  {
-    return $this->resourceCount;
-  }
 }

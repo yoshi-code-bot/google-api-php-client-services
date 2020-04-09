@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DeidentifyDeidentifyFhirStoreSummary extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomBigQueryDestination extends Google_Model
 {
-  public $successResourceCount;
+  public $force;
+  public $tableUri;
 
-  public function setSuccessResourceCount($successResourceCount)
+  public function setForce($force)
   {
-    $this->successResourceCount = $successResourceCount;
+    $this->force = $force;
   }
-  public function getSuccessResourceCount()
+  public function getForce()
   {
-    return $this->successResourceCount;
+    return $this->force;
+  }
+  public function setTableUri($tableUri)
+  {
+    $this->tableUri = $tableUri;
+  }
+  public function getTableUri()
+  {
+    return $this->tableUri;
   }
 }

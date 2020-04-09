@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_VersionSource extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DeidentifyDeidentifyFhirStoreSummary extends Google_Model
 {
-  public $mshField;
-  public $value;
-
-  public function setMshField($mshField)
-  {
-    $this->mshField = $mshField;
-  }
-  public function getMshField()
-  {
-    return $this->mshField;
-  }
-  public function setValue($value)
-  {
-    $this->value = $value;
-  }
-  public function getValue()
-  {
-    return $this->value;
-  }
 }

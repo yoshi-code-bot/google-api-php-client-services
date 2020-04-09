@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DicomGcsSource extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomGcsSource extends Google_Model
 {
   public $uri;
 

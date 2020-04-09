@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirGcsDestination extends Google_Model
 {
-  public $fhirStore;
-  public $inputSize;
+  public $uriPrefix;
 
-  public function setFhirStore($fhirStore)
+  public function setUriPrefix($uriPrefix)
   {
-    $this->fhirStore = $fhirStore;
+    $this->uriPrefix = $uriPrefix;
   }
-  public function getFhirStore()
+  public function getUriPrefix()
   {
-    return $this->fhirStore;
-  }
-  public function setInputSize($inputSize)
-  {
-    $this->inputSize = $inputSize;
-  }
-  public function getInputSize()
-  {
-    return $this->inputSize;
+    return $this->uriPrefix;
   }
 }

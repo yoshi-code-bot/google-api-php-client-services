@@ -46,9 +46,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * De-identifies data from the source store and writes it to the destination
    * store. The metadata field type is OperationMetadata. If the request is
    * successful, the response field type is DeidentifyFhirStoreSummary. If errors
-   * occur, error details field type is DeidentifyErrorDetails. Errors are also
-   * logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos
-   * /stackdriver-logging)). (fhirStores.deidentify)
+   * occur, error is set. Error details are also logged to Stackdriver (see
+   * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
+   * (fhirStores.deidentify)
    *
    * @param string $sourceStore Source FHIR store resource name. For example, `pro
    * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{
@@ -224,14 +224,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from the
-   * previous List request, if any.
-   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
-   * single response.  If zero the default page size of 100 is used.
    * @opt_param string filter Restricts stores returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported, for example `labels.key=value`.
+   * @opt_param string pageToken The next_page_token value returned from the
+   * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of FHIR stores to return in a
+   * single response.  If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListFhirStoresResponse
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = array())
