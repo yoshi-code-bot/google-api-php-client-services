@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1Sesssion extends Google_Model
+class Google_Service_Apigee_GoogleCloudApigeeV1Session extends Google_Model
 {
   public $id;
   public $timestampMs;
