@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Monitoring_TimeSeriesQueryLanguageCondition extends Google_Model
+class Google_Service_ShoppingContent_SettlementTransactionTransaction extends Google_Model
 {
-  public $query;
-  public $summary;
+  public $postDate;
+  public $type;
 
-  public function setQuery($query)
+  public function setPostDate($postDate)
   {
-    $this->query = $query;
+    $this->postDate = $postDate;
   }
-  public function getQuery()
+  public function getPostDate()
   {
-    return $this->query;
+    return $this->postDate;
   }
-  public function setSummary($summary)
+  public function setType($type)
   {
-    $this->summary = $summary;
+    $this->type = $type;
   }
-  public function getSummary()
+  public function getType()
   {
-    return $this->summary;
+    return $this->type;
   }
 }
