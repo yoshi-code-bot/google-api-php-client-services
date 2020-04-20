@@ -37,9 +37,8 @@ class Google_Service_DataCatalog_Resource_Entries extends Google_Service_Resourc
    *
    * Examples:
    *
-   *   * `cloud_pubsub.project_id.topic_id`   *
-   * ``pubsub.project_id.`topic.id.with.dots` ``   *
-   * `bigquery.table.project_id.dataset_id.table_id`   *
+   *   * `pubsub.project_id.topic_id`   * ``pubsub.project_id.`topic.id.with.dots`
+   * ``   * `bigquery.table.project_id.dataset_id.table_id`   *
    * `bigquery.dataset.project_id.dataset_id`   *
    * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
    *
