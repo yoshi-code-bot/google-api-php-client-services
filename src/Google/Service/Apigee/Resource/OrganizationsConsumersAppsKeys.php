@@ -26,8 +26,7 @@
 class Google_Service_Apigee_Resource_OrganizationsConsumersAppsKeys extends Google_Service_Resource
 {
   /**
-   * Approves or revokes an API key for an app. Not a recognized rest pattern
-   * (keys.approveRevokeConsumerAppKey)
+   * Approves or revokes an API key for an app. (keys.approveRevokeConsumerAppKey)
    *
    * @param string $name Required. Name of the API key. Use the following
    * structure in your request:

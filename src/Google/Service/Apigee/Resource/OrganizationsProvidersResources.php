@@ -26,8 +26,7 @@
 class Google_Service_Apigee_Resource_OrganizationsProvidersResources extends Google_Service_Resource
 {
   /**
-   * Creates a resource ID for the resource path. Not a recognized rest pattern
-   * (resources.createResource)
+   * Creates a resource ID for the resource path. (resources.createResource)
    *
    * @param string $name Required. Name of the resource. Use the following
    * structure in your request:

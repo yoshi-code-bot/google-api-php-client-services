@@ -69,24 +69,6 @@ class Google_Service_Apigee_Resource_OrganizationsZones extends Google_Service_R
     return $this->call('list', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1ListZonesResponse");
   }
   /**
-   * ** Note**: This feature is not available to Apigee hybrid at this time.
-   *
-   * Sends a test email to verify the SMTP settings for an identity provider.
-   * Sends the email to the requester's email using the token. (zones.testemail)
-   *
-   * @param string $parent Required. Name of the zone. Use the following structure
-   * in your request:   `organizations/{org}/zones/{zone}`
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1TestEmail $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1ApiResponseWrapper
-   */
-  public function testemail($parent, Google_Service_Apigee_GoogleCloudApigeeV1TestEmail $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('testemail', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1ApiResponseWrapper");
-  }
-  /**
    * Updates a zone. (zones.update)
    *
    * @param string $name Required. Name of the zone. Use the following structure

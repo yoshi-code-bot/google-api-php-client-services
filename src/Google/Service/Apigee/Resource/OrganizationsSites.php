@@ -41,21 +41,6 @@ class Google_Service_Apigee_Resource_OrganizationsSites extends Google_Service_R
     return $this->call('create', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1Site");
   }
   /**
-   * Retrieves the audience feature flag setting for a portal.
-   * (sites.getAudiencesenabled)
-   *
-   * @param string $parent Required. Name of the portal. Use the following
-   * structure in your request:   `organizations/{org}/sites/{site}`
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1ZoneAudienceEnabledResponse
-   */
-  public function getAudiencesenabled($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('getAudiencesenabled', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1ZoneAudienceEnabledResponse");
-  }
-  /**
    * Gets the portal configuration. (sites.getConfig)
    *
    * @param string $parent Required. Name of the Apigee organization. Use the

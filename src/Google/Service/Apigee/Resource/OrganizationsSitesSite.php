@@ -90,21 +90,6 @@ class Google_Service_Apigee_Resource_OrganizationsSitesSite extends Google_Servi
     return $this->call('defaultanonallowed', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1ApiResponseWrapper");
   }
   /**
-   * Enables or updates the custom domain for a portal. (site.domains)
-   *
-   * @param string $parent Required. Name of the portal. Use the following
-   * structure in your request:   `organizations/{org}/sites/{site}`
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfigData $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfig
-   */
-  public function domains($parent, Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfigData $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('domains', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfig");
-  }
-  /**
    * Gets the `defaultAnonAllowed` flag setting for a portal. This flag defines
    * the default visibility for pages and API products that are published on the
    * portal. (site.getDefaultanonallowed)
@@ -119,20 +104,6 @@ class Google_Service_Apigee_Resource_OrganizationsSitesSite extends Google_Servi
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
     return $this->call('getDefaultanonallowed', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1StringResponse");
-  }
-  /**
-   * Gets the custom domain configuration for a portal. (site.getDomains)
-   *
-   * @param string $parent Required. Name of the portal. Use the following
-   * structure in your request:   `organizations/{org}/sites/{site}`
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfig
-   */
-  public function getDomains($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('getDomains', array($params), "Google_Service_Apigee_GoogleCloudApigeeV1CustomDomainConfig");
   }
   /**
    * Regenerates the secret key for a portal. (site.key)

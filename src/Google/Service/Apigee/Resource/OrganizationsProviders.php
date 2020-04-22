@@ -26,8 +26,7 @@
 class Google_Service_Apigee_Resource_OrganizationsProviders extends Google_Service_Resource
 {
   /**
-   * Clears the scope of an identity provider. Not a recognized rest pattern
-   * (providers.clearScope)
+   * Clears the scope of an identity provider. (providers.clearScope)
    *
    * @param string $name Required. Name of the identity provider. Use the
    * following structure in your request:

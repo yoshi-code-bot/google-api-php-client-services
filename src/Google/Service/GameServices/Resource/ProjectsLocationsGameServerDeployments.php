@@ -149,6 +149,7 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
    * `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. The filter to apply to list results.
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous List request, if any.
    * @opt_param string orderBy Optional. Specifies the ordering of results
@@ -158,7 +159,6 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
    * unspecified, server will pick an appropriate default. Server may return fewer
    * items than requested. A caller should only rely on response's next_page_token
    * to determine if there are more GameServerDeployments left to be queried.
-   * @opt_param string filter Optional. The filter to apply to list results.
    * @return Google_Service_GameServices_ListGameServerDeploymentsResponse
    */
   public function listProjectsLocationsGameServerDeployments($parent, $optParams = array())
@@ -209,13 +209,13 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
    * @param Google_Service_GameServices_GameServerDeploymentRollout $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string previewTime Optional. The target timestamp to compute the
+   * preview. Defaults to the immediately after the proposed Rollout completes.
    * @opt_param string updateMask Optional. Mask of fields to update. At least one
    * path must be supplied in this field. For the `FieldMask` definition, see
    *
    * https: //developers.google.com/protocol-buffers //
    * /docs/reference/google.protobuf#fieldmask
-   * @opt_param string previewTime Optional. The target timestamp to compute the
-   * preview. Defaults to the immediately after the proposed Rollout completes.
    * @return Google_Service_GameServices_PreviewGameServerDeploymentRolloutResponse
    */
   public function previewRollout($name, Google_Service_GameServices_GameServerDeploymentRollout $postBody, $optParams = array())
@@ -228,7 +228,7 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy.
    *
-   * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+   * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
    * (gameServerDeployments.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
@@ -247,7 +247,7 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
   /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
-   * NOT_FOUND error.
+   * `NOT_FOUND` error.
    *
    * Note: This operation is designed to be used for building permission-aware UIs
    * and command-line tools, not for authorization checking. This operation may
