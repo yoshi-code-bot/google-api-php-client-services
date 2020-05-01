@@ -23,7 +23,7 @@
  *   $executions = $toolresultsService->executions;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutions extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_Executions extends Google_Service_Resource
 {
   /**
    * Creates an Execution.
@@ -95,8 +95,7 @@ class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutions extends Go
    *
    * - PERMISSION_DENIED - if the user is not authorized to read project -
    * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
-   * containing History does not exist
-   * (executions.listProjectsHistoriesExecutions)
+   * containing History does not exist (executions.listExecutions)
    *
    * @param string $projectId A Project id.
    *
@@ -106,19 +105,19 @@ class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutions extends Go
    * Required.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken A continuation token to resume the query at the
+   * next item.
+   *
+   * Optional.
    * @opt_param int pageSize The maximum number of Executions to fetch.
    *
    * Default value: 25. The server will use this default if the field is not set
    * or has a value of 0.
    *
    * Optional.
-   * @opt_param string pageToken A continuation token to resume the query at the
-   * next item.
-   *
-   * Optional.
    * @return Google_Service_ToolResults_ListExecutionsResponse
    */
-  public function listProjectsHistoriesExecutions($projectId, $historyId, $optParams = array())
+  public function listExecutions($projectId, $historyId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId);
     $params = array_merge($params, $optParams);

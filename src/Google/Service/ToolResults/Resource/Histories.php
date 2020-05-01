@@ -23,7 +23,7 @@
  *   $histories = $toolresultsService->histories;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_ProjectsHistories extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_Histories extends Google_Service_Resource
 {
   /**
    * Creates a History.
@@ -89,15 +89,15 @@ class Google_Service_ToolResults_Resource_ProjectsHistories extends Google_Servi
    *
    * - PERMISSION_DENIED - if the user is not authorized to read project -
    * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History
-   * does not exist (histories.listProjectsHistories)
+   * does not exist (histories.listHistories)
    *
    * @param string $projectId A Project id.
    *
    * Required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filterByName If set, only return histories with the given
-   * name.
+   * @opt_param string pageToken A continuation token to resume the query at the
+   * next item.
    *
    * Optional.
    * @opt_param int pageSize The maximum number of Histories to fetch.
@@ -106,13 +106,13 @@ class Google_Service_ToolResults_Resource_ProjectsHistories extends Google_Servi
    * or has a value of 0. Any value greater than 100 will be treated as 100.
    *
    * Optional.
-   * @opt_param string pageToken A continuation token to resume the query at the
-   * next item.
+   * @opt_param string filterByName If set, only return histories with the given
+   * name.
    *
    * Optional.
    * @return Google_Service_ToolResults_ListHistoriesResponse
    */
-  public function listProjectsHistories($projectId, $optParams = array())
+  public function listHistories($projectId, $optParams = array())
   {
     $params = array('projectId' => $projectId);
     $params = array_merge($params, $optParams);

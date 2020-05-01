@@ -23,7 +23,7 @@
  *   $perfSampleSeries = $toolresultsService->perfSampleSeries;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsPerfSampleSeries extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_PerfSampleSeries extends Google_Service_Resource
 {
   /**
    * Creates a PerfSampleSeries.
@@ -74,8 +74,7 @@ class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsPerfSa
    * PerfSampleSeries are sorted by ids.
    *
    * May return any of the following canonical error codes: - NOT_FOUND - The
-   * containing Step does not exist
-   * (perfSampleSeries.listProjectsHistoriesExecutionsStepsPerfSampleSeries)
+   * containing Step does not exist (perfSampleSeries.listPerfSampleSeries)
    *
    * @param string $projectId The cloud project
    * @param string $historyId A tool results history ID.
@@ -87,7 +86,7 @@ class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsPerfSa
    * CPU to filter the result
    * @return Google_Service_ToolResults_ListPerfSampleSeriesResponse
    */
-  public function listProjectsHistoriesExecutionsStepsPerfSampleSeries($projectId, $historyId, $executionId, $stepId, $optParams = array())
+  public function listPerfSampleSeries($projectId, $historyId, $executionId, $stepId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId, 'stepId' => $stepId);
     $params = array_merge($params, $optParams);

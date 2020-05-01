@@ -23,7 +23,7 @@
  *   $perfMetricsSummary = $toolresultsService->perfMetricsSummary;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsPerfMetricsSummary extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_PerfMetricsSummary extends Google_Service_Resource
 {
   /**
    * Creates a PerfMetricsSummary resource. Returns the existing one if it has
