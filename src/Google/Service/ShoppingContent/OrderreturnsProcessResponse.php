@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_AccountGoogleMyBusinessLink extends Google_Model
+class Google_Service_ShoppingContent_OrderreturnsProcessResponse extends Google_Model
 {
-  public $gmbAccountId;
-  public $gmbEmail;
-  public $status;
+  public $executionStatus;
+  public $kind;
 
-  public function setGmbAccountId($gmbAccountId)
+  public function setExecutionStatus($executionStatus)
   {
-    $this->gmbAccountId = $gmbAccountId;
+    $this->executionStatus = $executionStatus;
   }
-  public function getGmbAccountId()
+  public function getExecutionStatus()
   {
-    return $this->gmbAccountId;
+    return $this->executionStatus;
   }
-  public function setGmbEmail($gmbEmail)
+  public function setKind($kind)
   {
-    $this->gmbEmail = $gmbEmail;
+    $this->kind = $kind;
   }
-  public function getGmbEmail()
+  public function getKind()
   {
-    return $this->gmbEmail;
-  }
-  public function setStatus($status)
-  {
-    $this->status = $status;
-  }
-  public function getStatus()
-  {
-    return $this->status;
+    return $this->kind;
   }
 }

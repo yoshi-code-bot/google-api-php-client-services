@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_AccountGoogleMyBusinessLink extends Google_Model
+class Google_Service_ShoppingContent_MerchantRejectionReason extends Google_Model
 {
-  public $gmbAccountId;
-  public $gmbEmail;
-  public $status;
+  public $description;
+  public $reasonCode;
 
-  public function setGmbAccountId($gmbAccountId)
+  public function setDescription($description)
   {
-    $this->gmbAccountId = $gmbAccountId;
+    $this->description = $description;
   }
-  public function getGmbAccountId()
+  public function getDescription()
   {
-    return $this->gmbAccountId;
+    return $this->description;
   }
-  public function setGmbEmail($gmbEmail)
+  public function setReasonCode($reasonCode)
   {
-    $this->gmbEmail = $gmbEmail;
+    $this->reasonCode = $reasonCode;
   }
-  public function getGmbEmail()
+  public function getReasonCode()
   {
-    return $this->gmbEmail;
-  }
-  public function setStatus($status)
-  {
-    $this->status = $status;
-  }
-  public function getStatus()
-  {
-    return $this->status;
+    return $this->reasonCode;
   }
 }
