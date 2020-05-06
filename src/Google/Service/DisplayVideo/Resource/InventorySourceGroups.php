@@ -32,15 +32,15 @@ class Google_Service_DisplayVideo_Resource_InventorySourceGroups extends Google_
    * source group to fetch.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string partnerId The ID of the partner that has access to the
-   * inventory source group.
-   *
-   * A partner cannot access an advertiser-owned inventory source group.
    * @opt_param string advertiserId The ID of the advertiser that has access to
    * the inventory source group.
    *
    * If an inventory source group is partner-owned, only advertisers to which the
    * group is explicitly shared can access the group.
+   * @opt_param string partnerId The ID of the partner that has access to the
+   * inventory source group.
+   *
+   * A partner cannot access an advertiser-owned inventory source group.
    * @return Google_Service_DisplayVideo_InventorySourceGroup
    */
   public function get($inventorySourceGroupId, $optParams = array())

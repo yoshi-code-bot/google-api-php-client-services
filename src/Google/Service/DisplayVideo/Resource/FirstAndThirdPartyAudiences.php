@@ -52,13 +52,6 @@ class Google_Service_DisplayVideo_Resource_FirstAndThirdPartyAudiences extends G
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of next_page_token returned from
-   * the previous call to `ListFirstAndThirdPartyAudiences` method. If not
-   * specified, the first page of results will be returned.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @opt_param string advertiserId The ID of the advertiser that has access to
    * the fetched first and third party audiences.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
@@ -87,6 +80,13 @@ class Google_Service_DisplayVideo_Resource_FirstAndThirdPartyAudiences extends G
    * "Google": `displayName : "Google"`.
    *
    * The length of this field should be no more than 500 characters.
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return. Typically, this is the value of next_page_token returned from
+   * the previous call to `ListFirstAndThirdPartyAudiences` method. If not
+   * specified, the first page of results will be returned.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListFirstAndThirdPartyAudiencesResponse
    */
   public function listFirstAndThirdPartyAudiences($optParams = array())

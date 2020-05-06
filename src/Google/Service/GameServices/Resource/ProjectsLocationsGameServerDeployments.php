@@ -209,13 +209,13 @@ class Google_Service_GameServices_Resource_ProjectsLocationsGameServerDeployment
    * @param Google_Service_GameServices_GameServerDeploymentRollout $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string previewTime Optional. The target timestamp to compute the
-   * preview. Defaults to the immediately after the proposed Rollout completes.
    * @opt_param string updateMask Optional. Mask of fields to update. At least one
    * path must be supplied in this field. For the `FieldMask` definition, see
    *
    * https: //developers.google.com/protocol-buffers //
    * /docs/reference/google.protobuf#fieldmask
+   * @opt_param string previewTime Optional. The target timestamp to compute the
+   * preview. Defaults to the immediately after the proposed Rollout completes.
    * @return Google_Service_GameServices_PreviewGameServerDeploymentRolloutResponse
    */
   public function previewRollout($name, Google_Service_GameServices_GameServerDeploymentRollout $postBody, $optParams = array())
