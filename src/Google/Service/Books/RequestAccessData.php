@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Books_RequestAccess extends Google_Model
+class Google_Service_Books_RequestAccessData extends Google_Model
 {
   protected $concurrentAccessType = 'Google_Service_Books_ConcurrentAccessRestriction';
   protected $concurrentAccessDataType = '';

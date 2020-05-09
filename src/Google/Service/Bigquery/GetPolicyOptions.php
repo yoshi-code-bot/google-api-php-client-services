@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Books_GeolayerdataGeoBoundary extends Google_Model
+class Google_Service_Bigquery_GetPolicyOptions extends Google_Model
 {
-  public $latitude;
-  public $longitude;
+  public $requestedPolicyVersion;
 
-  public function setLatitude($latitude)
+  public function setRequestedPolicyVersion($requestedPolicyVersion)
   {
-    $this->latitude = $latitude;
+    $this->requestedPolicyVersion = $requestedPolicyVersion;
   }
-  public function getLatitude()
+  public function getRequestedPolicyVersion()
   {
-    return $this->latitude;
-  }
-  public function setLongitude($longitude)
-  {
-    $this->longitude = $longitude;
-  }
-  public function getLongitude()
-  {
-    return $this->longitude;
+    return $this->requestedPolicyVersion;
   }
 }

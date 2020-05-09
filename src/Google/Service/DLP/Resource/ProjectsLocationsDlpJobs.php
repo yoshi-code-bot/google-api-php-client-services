@@ -151,8 +151,6 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * retrieved from. Use `-` for all locations. Reserved for future extensions.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The standard list page token.
-   * @opt_param int pageSize The standard list page size.
    * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
    * @opt_param string filter Allows filtering.
    *
@@ -190,6 +188,8 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * - `create_time`: corresponds to time the job was created. - `end_time`:
    * corresponds to time the job ended. - `name`: corresponds to job's name. -
    * `state`: corresponds to `state`
+   * @opt_param string pageToken The standard list page token.
+   * @opt_param int pageSize The standard list page size.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse
    */
   public function listProjectsLocationsDlpJobs($parent, $locationId, $optParams = array())

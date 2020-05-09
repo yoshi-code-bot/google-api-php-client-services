@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_Books_BooksSubscriptionReleaseInfo extends Google_Model
+class Google_Service_Books_SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo extends Google_Model
 {
   public $amountInMicros;
   public $currencyCode;
   public $releaseNumber;
-  public $releaseTimestampUs;
+  public $releaseTime;
 
   public function setAmountInMicros($amountInMicros)
   {
@@ -46,12 +46,12 @@ class Google_Service_Books_BooksSubscriptionReleaseInfo extends Google_Model
   {
     return $this->releaseNumber;
   }
-  public function setReleaseTimestampUs($releaseTimestampUs)
+  public function setReleaseTime($releaseTime)
   {
-    $this->releaseTimestampUs = $releaseTimestampUs;
+    $this->releaseTime = $releaseTime;
   }
-  public function getReleaseTimestampUs()
+  public function getReleaseTime()
   {
-    return $this->releaseTimestampUs;
+    return $this->releaseTime;
   }
 }

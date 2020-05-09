@@ -86,6 +86,9 @@ class Google_Service_DLP_Resource_ProjectsDeidentifyTemplates extends Google_Ser
    * projects/my-project-id or organizations/my-org-id.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string locationId The geographic location where deidentifications
+   * templates will be retrieved from. Use `-` for all locations. Reserved for
+   * future extensions.
    * @opt_param int pageSize Size of the page, can be limited by server. If zero
    * server returns a page of max size 100.
    * @opt_param string orderBy Comma separated list of fields to order by,
@@ -102,9 +105,6 @@ class Google_Service_DLP_Resource_ProjectsDeidentifyTemplates extends Google_Ser
    * display name.
    * @opt_param string pageToken Page token to continue retrieval. Comes from
    * previous call to `ListDeidentifyTemplates`.
-   * @opt_param string locationId The geographic location where deidentifications
-   * templates will be retrieved from. Use `-` for all locations. Reserved for
-   * future extensions.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDeidentifyTemplatesResponse
    */
   public function listProjectsDeidentifyTemplates($parent, $optParams = array())

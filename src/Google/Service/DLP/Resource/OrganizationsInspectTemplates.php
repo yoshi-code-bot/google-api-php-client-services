@@ -85,6 +85,8 @@ class Google_Service_DLP_Resource_OrganizationsInspectTemplates extends Google_S
    * projects/my-project-id or organizations/my-org-id.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Page token to continue retrieval. Comes from
+   * previous call to `ListInspectTemplates`.
    * @opt_param string locationId The geographic location where inspection
    * templates will be retrieved from. Use `-` for all locations. Reserved for
    * future extensions.
@@ -102,8 +104,6 @@ class Google_Service_DLP_Resource_OrganizationsInspectTemplates extends Google_S
    * `update_time`: corresponds to time the template was last updated. - `name`:
    * corresponds to template's name. - `display_name`: corresponds to template's
    * display name.
-   * @opt_param string pageToken Page token to continue retrieval. Comes from
-   * previous call to `ListInspectTemplates`.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInspectTemplatesResponse
    */
   public function listOrganizationsInspectTemplates($parent, $optParams = array())

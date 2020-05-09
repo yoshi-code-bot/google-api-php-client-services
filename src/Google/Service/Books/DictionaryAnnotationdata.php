@@ -15,13 +15,11 @@
  * the License.
  */
 
-class Google_Service_Books_Annotationdata extends Google_Model
+class Google_Service_Books_DictionaryAnnotationdata extends Google_Model
 {
-  protected $internal_gapi_mappings = array(
-        "encodedData" => "encoded_data",
-  );
   public $annotationType;
-  public $data;
+  protected $dataType = 'Google_Service_Books_Dictlayerdata';
+  protected $dataDataType = '';
   public $encodedData;
   public $id;
   public $kind;
@@ -38,10 +36,16 @@ class Google_Service_Books_Annotationdata extends Google_Model
   {
     return $this->annotationType;
   }
-  public function setData($data)
+  /**
+   * @param Google_Service_Books_Dictlayerdata
+   */
+  public function setData(Google_Service_Books_Dictlayerdata $data)
   {
     $this->data = $data;
   }
+  /**
+   * @return Google_Service_Books_Dictlayerdata
+   */
   public function getData()
   {
     return $this->data;
