@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudRun_TCPSocketAction extends Google_Model
+class Google_Service_ToolResults_IosAppInfo extends Google_Model
 {
-  public $host;
-  public $port;
+  public $name;
 
-  public function setHost($host)
+  public function setName($name)
   {
-    $this->host = $host;
+    $this->name = $name;
   }
-  public function getHost()
+  public function getName()
   {
-    return $this->host;
-  }
-  public function setPort($port)
-  {
-    $this->port = $port;
-  }
-  public function getPort()
-  {
-    return $this->port;
+    return $this->name;
   }
 }

@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudRun_IntOrString extends Google_Model
+class Google_Service_ToolResults_IosXcTest extends Google_Model
 {
-  public $intVal;
-  public $strVal;
-  public $type;
+  public $bundleId;
+  public $xcodeVersion;
 
-  public function setIntVal($intVal)
+  public function setBundleId($bundleId)
   {
-    $this->intVal = $intVal;
+    $this->bundleId = $bundleId;
   }
-  public function getIntVal()
+  public function getBundleId()
   {
-    return $this->intVal;
+    return $this->bundleId;
   }
-  public function setStrVal($strVal)
+  public function setXcodeVersion($xcodeVersion)
   {
-    $this->strVal = $strVal;
+    $this->xcodeVersion = $xcodeVersion;
   }
-  public function getStrVal()
+  public function getXcodeVersion()
   {
-    return $this->strVal;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->xcodeVersion;
   }
 }
