@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_Compute_MachineTypeAccelerators extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $guestAcceleratorCount;
+  public $guestAcceleratorType;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setGuestAcceleratorCount($guestAcceleratorCount)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->guestAcceleratorCount = $guestAcceleratorCount;
   }
-  public function getMaxRunningTime()
+  public function getGuestAcceleratorCount()
   {
-    return $this->maxRunningTime;
+    return $this->guestAcceleratorCount;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setGuestAcceleratorType($guestAcceleratorType)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->guestAcceleratorType = $guestAcceleratorType;
   }
-  public function getMaxWaitTime()
+  public function getGuestAcceleratorType()
   {
-    return $this->maxWaitTime;
+    return $this->guestAcceleratorType;
   }
 }

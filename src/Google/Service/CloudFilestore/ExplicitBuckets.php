@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_ExplicitBuckets extends Google_Collection
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  protected $collection_key = 'bounds';
+  public $bounds;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setBounds($bounds)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->bounds = $bounds;
   }
-  public function getMaxRunningTime()
+  public function getBounds()
   {
-    return $this->maxRunningTime;
-  }
-  public function setMaxWaitTime($maxWaitTime)
-  {
-    $this->maxWaitTime = $maxWaitTime;
-  }
-  public function getMaxWaitTime()
-  {
-    return $this->maxWaitTime;
+    return $this->bounds;
   }
 }

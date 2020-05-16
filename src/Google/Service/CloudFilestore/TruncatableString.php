@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_TruncatableString extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $truncatedByteCount;
+  public $value;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setTruncatedByteCount($truncatedByteCount)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->truncatedByteCount = $truncatedByteCount;
   }
-  public function getMaxRunningTime()
+  public function getTruncatedByteCount()
   {
-    return $this->maxRunningTime;
+    return $this->truncatedByteCount;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setValue($value)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->value = $value;
   }
-  public function getMaxWaitTime()
+  public function getValue()
   {
-    return $this->maxWaitTime;
+    return $this->value;
   }
 }

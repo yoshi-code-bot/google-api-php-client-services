@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_LinearBuckets extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $numFiniteBuckets;
+  public $offset;
+  public $width;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setNumFiniteBuckets($numFiniteBuckets)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->numFiniteBuckets = $numFiniteBuckets;
   }
-  public function getMaxRunningTime()
+  public function getNumFiniteBuckets()
   {
-    return $this->maxRunningTime;
+    return $this->numFiniteBuckets;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setOffset($offset)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->offset = $offset;
   }
-  public function getMaxWaitTime()
+  public function getOffset()
   {
-    return $this->maxWaitTime;
+    return $this->offset;
+  }
+  public function setWidth($width)
+  {
+    $this->width = $width;
+  }
+  public function getWidth()
+  {
+    return $this->width;
   }
 }

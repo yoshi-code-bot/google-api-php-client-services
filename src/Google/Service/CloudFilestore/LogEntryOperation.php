@@ -15,25 +15,43 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_LogEntryOperation extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $first;
+  public $id;
+  public $last;
+  public $producer;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setFirst($first)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->first = $first;
   }
-  public function getMaxRunningTime()
+  public function getFirst()
   {
-    return $this->maxRunningTime;
+    return $this->first;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setId($id)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->id = $id;
   }
-  public function getMaxWaitTime()
+  public function getId()
   {
-    return $this->maxWaitTime;
+    return $this->id;
+  }
+  public function setLast($last)
+  {
+    $this->last = $last;
+  }
+  public function getLast()
+  {
+    return $this->last;
+  }
+  public function setProducer($producer)
+  {
+    $this->producer = $producer;
+  }
+  public function getProducer()
+  {
+    return $this->producer;
   }
 }

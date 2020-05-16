@@ -15,25 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_BillingView extends Google_Collection
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  protected $collection_key = 'reportRequests';
+  protected $reportRequestsType = 'Google_Service_CloudFilestore_ReportRequest';
+  protected $reportRequestsDataType = 'array';
 
-  public function setMaxRunningTime($maxRunningTime)
+  /**
+   * @param Google_Service_CloudFilestore_ReportRequest
+   */
+  public function setReportRequests($reportRequests)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->reportRequests = $reportRequests;
   }
-  public function getMaxRunningTime()
+  /**
+   * @return Google_Service_CloudFilestore_ReportRequest
+   */
+  public function getReportRequests()
   {
-    return $this->maxRunningTime;
-  }
-  public function setMaxWaitTime($maxWaitTime)
-  {
-    $this->maxWaitTime = $maxWaitTime;
-  }
-  public function getMaxWaitTime()
-  {
-    return $this->maxWaitTime;
+    return $this->reportRequests;
   }
 }

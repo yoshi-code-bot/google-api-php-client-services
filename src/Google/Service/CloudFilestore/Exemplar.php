@@ -15,25 +15,35 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_Exemplar extends Google_Collection
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  protected $collection_key = 'attachments';
+  public $attachments;
+  public $timestamp;
+  public $value;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setAttachments($attachments)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->attachments = $attachments;
   }
-  public function getMaxRunningTime()
+  public function getAttachments()
   {
-    return $this->maxRunningTime;
+    return $this->attachments;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setTimestamp($timestamp)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->timestamp = $timestamp;
   }
-  public function getMaxWaitTime()
+  public function getTimestamp()
   {
-    return $this->maxWaitTime;
+    return $this->timestamp;
+  }
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  public function getValue()
+  {
+    return $this->value;
   }
 }

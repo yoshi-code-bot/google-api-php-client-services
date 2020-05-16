@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_Money extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $currencyCode;
+  public $nanos;
+  public $units;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setCurrencyCode($currencyCode)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->currencyCode = $currencyCode;
   }
-  public function getMaxRunningTime()
+  public function getCurrencyCode()
   {
-    return $this->maxRunningTime;
+    return $this->currencyCode;
   }
-  public function setMaxWaitTime($maxWaitTime)
+  public function setNanos($nanos)
   {
-    $this->maxWaitTime = $maxWaitTime;
+    $this->nanos = $nanos;
   }
-  public function getMaxWaitTime()
+  public function getNanos()
   {
-    return $this->maxWaitTime;
+    return $this->nanos;
+  }
+  public function setUnits($units)
+  {
+    $this->units = $units;
+  }
+  public function getUnits()
+  {
+    return $this->units;
   }
 }

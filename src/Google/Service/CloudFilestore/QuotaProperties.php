@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Scheduling extends Google_Model
+class Google_Service_CloudFilestore_QuotaProperties extends Google_Model
 {
-  public $maxRunningTime;
-  public $maxWaitTime;
+  public $quotaMode;
 
-  public function setMaxRunningTime($maxRunningTime)
+  public function setQuotaMode($quotaMode)
   {
-    $this->maxRunningTime = $maxRunningTime;
+    $this->quotaMode = $quotaMode;
   }
-  public function getMaxRunningTime()
+  public function getQuotaMode()
   {
-    return $this->maxRunningTime;
-  }
-  public function setMaxWaitTime($maxWaitTime)
-  {
-    $this->maxWaitTime = $maxWaitTime;
-  }
-  public function getMaxWaitTime()
-  {
-    return $this->maxWaitTime;
+    return $this->quotaMode;
   }
 }
