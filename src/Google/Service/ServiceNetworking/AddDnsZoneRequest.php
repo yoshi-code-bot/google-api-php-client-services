@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_YouTube_LiveChatPollItem extends Google_Model
+class Google_Service_ServiceNetworking_AddDnsZoneRequest extends Google_Model
 {
-  public $description;
-  public $itemId;
+  public $consumerNetwork;
+  public $dnsSuffix;
+  public $name;
 
-  public function setDescription($description)
+  public function setConsumerNetwork($consumerNetwork)
   {
-    $this->description = $description;
+    $this->consumerNetwork = $consumerNetwork;
   }
-  public function getDescription()
+  public function getConsumerNetwork()
   {
-    return $this->description;
+    return $this->consumerNetwork;
   }
-  public function setItemId($itemId)
+  public function setDnsSuffix($dnsSuffix)
   {
-    $this->itemId = $itemId;
+    $this->dnsSuffix = $dnsSuffix;
   }
-  public function getItemId()
+  public function getDnsSuffix()
   {
-    return $this->itemId;
+    return $this->dnsSuffix;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
 }

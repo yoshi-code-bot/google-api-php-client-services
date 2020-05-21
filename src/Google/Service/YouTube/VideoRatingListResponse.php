@@ -15,42 +15,60 @@
  * the License.
  */
 
-class Google_Service_YouTube_LiveChatPollOpenedDetails extends Google_Collection
+class Google_Service_YouTube_VideoRatingListResponse extends Google_Collection
 {
   protected $collection_key = 'items';
-  public $id;
-  protected $itemsType = 'Google_Service_YouTube_LiveChatPollItem';
+  public $etag;
+  public $eventId;
+  protected $itemsType = 'Google_Service_YouTube_VideoRating';
   protected $itemsDataType = 'array';
-  public $prompt;
+  public $kind;
+  public $visitorId;
 
-  public function setId($id)
+  public function setEtag($etag)
   {
-    $this->id = $id;
+    $this->etag = $etag;
   }
-  public function getId()
+  public function getEtag()
   {
-    return $this->id;
+    return $this->etag;
+  }
+  public function setEventId($eventId)
+  {
+    $this->eventId = $eventId;
+  }
+  public function getEventId()
+  {
+    return $this->eventId;
   }
   /**
-   * @param Google_Service_YouTube_LiveChatPollItem
+   * @param Google_Service_YouTube_VideoRating
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_YouTube_LiveChatPollItem
+   * @return Google_Service_YouTube_VideoRating
    */
   public function getItems()
   {
     return $this->items;
   }
-  public function setPrompt($prompt)
+  public function setKind($kind)
   {
-    $this->prompt = $prompt;
+    $this->kind = $kind;
   }
-  public function getPrompt()
+  public function getKind()
   {
-    return $this->prompt;
+    return $this->kind;
+  }
+  public function setVisitorId($visitorId)
+  {
+    $this->visitorId = $visitorId;
+  }
+  public function getVisitorId()
+  {
+    return $this->visitorId;
   }
 }

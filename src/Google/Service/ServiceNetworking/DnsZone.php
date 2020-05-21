@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_YouTube_NonprofitId extends Google_Model
+class Google_Service_ServiceNetworking_DnsZone extends Google_Model
 {
-  public $value;
+  public $dnsSuffix;
+  public $name;
 
-  public function setValue($value)
+  public function setDnsSuffix($dnsSuffix)
   {
-    $this->value = $value;
+    $this->dnsSuffix = $dnsSuffix;
   }
-  public function getValue()
+  public function getDnsSuffix()
   {
-    return $this->value;
+    return $this->dnsSuffix;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
 }

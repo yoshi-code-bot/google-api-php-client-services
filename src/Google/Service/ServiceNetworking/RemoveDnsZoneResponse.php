@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_YouTube_LiveChatPollVotedDetails extends Google_Model
+class Google_Service_ServiceNetworking_RemoveDnsZoneResponse extends Google_Model
 {
-  public $itemId;
-  public $pollId;
-
-  public function setItemId($itemId)
-  {
-    $this->itemId = $itemId;
-  }
-  public function getItemId()
-  {
-    return $this->itemId;
-  }
-  public function setPollId($pollId)
-  {
-    $this->pollId = $pollId;
-  }
-  public function getPollId()
-  {
-    return $this->pollId;
-  }
 }
