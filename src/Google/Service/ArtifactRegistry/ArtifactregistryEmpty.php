@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_FirebaseML_TfLiteModel extends Google_Model
+class Google_Service_ArtifactRegistry_ArtifactregistryEmpty extends Google_Model
 {
-  public $gcsTfliteUri;
-  public $sizeBytes;
-
-  public function setGcsTfliteUri($gcsTfliteUri)
-  {
-    $this->gcsTfliteUri = $gcsTfliteUri;
-  }
-  public function getGcsTfliteUri()
-  {
-    return $this->gcsTfliteUri;
-  }
-  public function setSizeBytes($sizeBytes)
-  {
-    $this->sizeBytes = $sizeBytes;
-  }
-  public function getSizeBytes()
-  {
-    return $this->sizeBytes;
-  }
 }

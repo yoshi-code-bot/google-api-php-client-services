@@ -15,27 +15,13 @@
  * the License.
  */
 
-class Google_Service_FirebaseML_ListModelsResponse extends Google_Collection
+class Google_Service_ArtifactRegistry_ListVersionsResponse extends Google_Collection
 {
-  protected $collection_key = 'models';
-  protected $modelsType = 'Google_Service_FirebaseML_Model';
-  protected $modelsDataType = 'array';
+  protected $collection_key = 'versions';
   public $nextPageToken;
+  protected $versionsType = 'Google_Service_ArtifactRegistry_Version';
+  protected $versionsDataType = 'array';
 
-  /**
-   * @param Google_Service_FirebaseML_Model
-   */
-  public function setModels($models)
-  {
-    $this->models = $models;
-  }
-  /**
-   * @return Google_Service_FirebaseML_Model
-   */
-  public function getModels()
-  {
-    return $this->models;
-  }
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
@@ -43,5 +29,19 @@ class Google_Service_FirebaseML_ListModelsResponse extends Google_Collection
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * @param Google_Service_ArtifactRegistry_Version
+   */
+  public function setVersions($versions)
+  {
+    $this->versions = $versions;
+  }
+  /**
+   * @return Google_Service_ArtifactRegistry_Version
+   */
+  public function getVersions()
+  {
+    return $this->versions;
   }
 }

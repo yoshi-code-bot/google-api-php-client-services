@@ -15,14 +15,35 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $firebasemlService = new Google_Service_FirebaseML(...);
- *   $projects = $firebasemlService->projects;
- *  </code>
- */
-class Google_Service_FirebaseML_Resource_Projects extends Google_Service_Resource
+class Google_Service_ArtifactRegistry_Status extends Google_Collection
 {
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
+
+  public function setCode($code)
+  {
+    $this->code = $code;
+  }
+  public function getCode()
+  {
+    return $this->code;
+  }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
+  }
 }

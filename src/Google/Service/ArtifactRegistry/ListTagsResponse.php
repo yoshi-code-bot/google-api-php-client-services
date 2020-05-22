@@ -15,32 +15,33 @@
  * the License.
  */
 
-class Google_Service_FirebaseML_ModelState extends Google_Model
+class Google_Service_ArtifactRegistry_ListTagsResponse extends Google_Collection
 {
-  public $published;
-  protected $validationErrorType = 'Google_Service_FirebaseML_Status';
-  protected $validationErrorDataType = '';
+  protected $collection_key = 'tags';
+  public $nextPageToken;
+  protected $tagsType = 'Google_Service_ArtifactRegistry_Tag';
+  protected $tagsDataType = 'array';
 
-  public function setPublished($published)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->published = $published;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getPublished()
+  public function getNextPageToken()
   {
-    return $this->published;
-  }
-  /**
-   * @param Google_Service_FirebaseML_Status
-   */
-  public function setValidationError(Google_Service_FirebaseML_Status $validationError)
-  {
-    $this->validationError = $validationError;
+    return $this->nextPageToken;
   }
   /**
-   * @return Google_Service_FirebaseML_Status
+   * @param Google_Service_ArtifactRegistry_Tag
    */
-  public function getValidationError()
+  public function setTags($tags)
   {
-    return $this->validationError;
+    $this->tags = $tags;
+  }
+  /**
+   * @return Google_Service_ArtifactRegistry_Tag
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
 }

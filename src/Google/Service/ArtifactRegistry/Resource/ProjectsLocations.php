@@ -19,24 +19,24 @@
  * The "locations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $networkmanagementService = new Google_Service_NetworkManagement(...);
- *   $locations = $networkmanagementService->locations;
+ *   $artifactregistryService = new Google_Service_ArtifactRegistry(...);
+ *   $locations = $artifactregistryService->locations;
  *  </code>
  */
-class Google_Service_NetworkManagement_Resource_ProjectsLocations extends Google_Service_Resource
+class Google_Service_ArtifactRegistry_Resource_ProjectsLocations extends Google_Service_Resource
 {
   /**
    * Gets information about a location. (locations.get)
    *
    * @param string $name Resource name for the location.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_NetworkManagement_Location
+   * @return Google_Service_ArtifactRegistry_Location
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_NetworkManagement_Location");
+    return $this->call('get', array($params), "Google_Service_ArtifactRegistry_Location");
   }
   /**
    * Lists information about the supported locations for this service.
@@ -49,12 +49,12 @@ class Google_Service_NetworkManagement_Resource_ProjectsLocations extends Google
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string filter The standard list filter.
-   * @return Google_Service_NetworkManagement_ListLocationsResponse
+   * @return Google_Service_ArtifactRegistry_ListLocationsResponse
    */
   public function listProjectsLocations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_NetworkManagement_ListLocationsResponse");
+    return $this->call('list', array($params), "Google_Service_ArtifactRegistry_ListLocationsResponse");
   }
 }
