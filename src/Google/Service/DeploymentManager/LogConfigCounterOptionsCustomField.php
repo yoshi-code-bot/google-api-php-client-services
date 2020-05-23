@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dns_PolicyAlternativeNameServerConfigTargetNameServer extends Google_Model
+class Google_Service_DeploymentManager_LogConfigCounterOptionsCustomField extends Google_Model
 {
-  public $forwardingPath;
-  public $ipv4Address;
-  public $kind;
+  public $name;
+  public $value;
 
-  public function setForwardingPath($forwardingPath)
+  public function setName($name)
   {
-    $this->forwardingPath = $forwardingPath;
+    $this->name = $name;
   }
-  public function getForwardingPath()
+  public function getName()
   {
-    return $this->forwardingPath;
+    return $this->name;
   }
-  public function setIpv4Address($ipv4Address)
+  public function setValue($value)
   {
-    $this->ipv4Address = $ipv4Address;
+    $this->value = $value;
   }
-  public function getIpv4Address()
+  public function getValue()
   {
-    return $this->ipv4Address;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->value;
   }
 }
