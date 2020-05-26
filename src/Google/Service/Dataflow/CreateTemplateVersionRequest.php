@@ -15,32 +15,23 @@
  * the License.
  */
 
-class Google_Service_Dataflow_ValidateResponse extends Google_Model
+class Google_Service_Dataflow_CreateTemplateVersionRequest extends Google_Model
 {
-  public $errorMessage;
-  protected $queryInfoType = 'Google_Service_Dataflow_QueryInfo';
-  protected $queryInfoDataType = '';
+  protected $templateVersionType = 'Google_Service_Dataflow_TemplateVersion';
+  protected $templateVersionDataType = '';
 
-  public function setErrorMessage($errorMessage)
+  /**
+   * @param Google_Service_Dataflow_TemplateVersion
+   */
+  public function setTemplateVersion(Google_Service_Dataflow_TemplateVersion $templateVersion)
   {
-    $this->errorMessage = $errorMessage;
-  }
-  public function getErrorMessage()
-  {
-    return $this->errorMessage;
+    $this->templateVersion = $templateVersion;
   }
   /**
-   * @param Google_Service_Dataflow_QueryInfo
+   * @return Google_Service_Dataflow_TemplateVersion
    */
-  public function setQueryInfo(Google_Service_Dataflow_QueryInfo $queryInfo)
+  public function getTemplateVersion()
   {
-    $this->queryInfo = $queryInfo;
-  }
-  /**
-   * @return Google_Service_Dataflow_QueryInfo
-   */
-  public function getQueryInfo()
-  {
-    return $this->queryInfo;
+    return $this->templateVersion;
   }
 }
