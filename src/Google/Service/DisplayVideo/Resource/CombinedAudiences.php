@@ -32,10 +32,10 @@ class Google_Service_DisplayVideo_Resource_CombinedAudiences extends Google_Serv
    * to fetch.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string partnerId The ID of the partner that has access to the
-   * fetched combined audience.
    * @opt_param string advertiserId The ID of the advertiser that has access to
    * the fetched combined audience.
+   * @opt_param string partnerId The ID of the partner that has access to the
+   * fetched combined audience.
    * @return Google_Service_DisplayVideo_CombinedAudience
    */
   public function get($combinedAudienceId, $optParams = array())
@@ -52,16 +52,6 @@ class Google_Service_DisplayVideo_Resource_CombinedAudiences extends Google_Serv
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are:
-   *
-   * * `combinedAudienceId` (default) * `displayName`
-   *
-   * The default sorting order is ascending. To specify descending order for a
-   * field, a suffix "desc" should be added to the field name. Example:
-   * `displayName desc`.
-   * @opt_param string partnerId The ID of the partner that has access to the
-   * fetched combined audiences.
    * @opt_param string filter Allows filtering by combined audience fields.
    *
    * Supported syntax:
@@ -86,6 +76,16 @@ class Google_Service_DisplayVideo_Resource_CombinedAudiences extends Google_Serv
    * if an invalid value is specified.
    * @opt_param string advertiserId The ID of the advertiser that has access to
    * the fetched combined audiences.
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are:
+   *
+   * * `combinedAudienceId` (default) * `displayName`
+   *
+   * The default sorting order is ascending. To specify descending order for a
+   * field, a suffix "desc" should be added to the field name. Example:
+   * `displayName desc`.
+   * @opt_param string partnerId The ID of the partner that has access to the
+   * fetched combined audiences.
    * @return Google_Service_DisplayVideo_ListCombinedAudiencesResponse
    */
   public function listCombinedAudiences($optParams = array())
