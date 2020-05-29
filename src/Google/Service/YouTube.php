@@ -93,7 +93,7 @@ class Google_Service_YouTube extends Google_Service
     parent::__construct($client);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/youtube/v3';
+    $this->batchPath = 'batch/youtube';
     $this->version = 'v3';
     $this->serviceName = 'youtube';
 
@@ -113,19 +113,19 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'regionCode' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'channelId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'home' => array(
+                'mine' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'regionCode' => array(
+                'publishedBefore' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -133,17 +133,17 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'publishedBefore' => array(
+                'home' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'boolean',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'publishedAfter' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'mine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -165,11 +165,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'onBehalfOf' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOf' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -183,11 +183,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOf' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'tfmt' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -195,7 +195,7 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOf' => array(
+                'tfmt' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -214,13 +214,13 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sync' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'onBehalfOfContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
@@ -238,7 +238,7 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOf' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -247,7 +247,7 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'onBehalfOf' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -262,15 +262,15 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOf' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sync' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
                 'onBehalfOfContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'onBehalfOf' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -336,11 +336,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -355,6 +355,10 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'mine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'id' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -364,15 +368,11 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'mine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'hl' => array(
+                'channelId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'channelId' => array(
+                'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -412,30 +412,6 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'mine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'categoryId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'onBehalfOfContentOwner' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'managedByMe' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'mySubscribers' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'forUsername' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -445,6 +421,22 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
+                'forUsername' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'mySubscribers' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'mine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'managedByMe' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -452,6 +444,14 @@ class Google_Service_YouTube extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'categoryId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'onBehalfOfContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -500,7 +500,7 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'textFormat' => array(
+                'channelId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -508,7 +508,11 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'order' => array(
+                'searchTerms' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'textFormat' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -520,15 +524,7 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'videoId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'allThreadsRelatedToChannelId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'searchTerms' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -537,7 +533,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'channelId' => array(
+                'order' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -594,6 +594,15 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -605,15 +614,6 @@ class Google_Service_YouTube extends Google_Service
                 'textFormat' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),'markAsSpam' => array(
@@ -678,6 +678,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -685,11 +690,6 @@ class Google_Service_YouTube extends Google_Service
                 'regionCode' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),
@@ -767,15 +767,15 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'streamId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'onBehalfOfContentOwnerChannel' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'streamId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -795,21 +795,21 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'offsetTimeMs' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'displaySlate' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'offsetTimeMs' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'displaySlate' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'walltime' => array(
                   'location' => 'query',
@@ -825,11 +825,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -863,20 +863,12 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'broadcastType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'id' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'broadcastStatus' => array(
+                'broadcastType' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -884,17 +876,25 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'mine' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
                 ),
                 'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'broadcastStatus' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'mine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'transition' => array(
@@ -917,11 +917,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -936,11 +936,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1022,6 +1022,14 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'hl' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'profileImageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1029,14 +1037,6 @@ class Google_Service_YouTube extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'hl' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -1113,11 +1113,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1132,11 +1132,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1156,11 +1156,11 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'maxResults' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1168,11 +1168,11 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'maxResults' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
-                'pageToken' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1220,7 +1220,7 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'mode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1232,7 +1232,7 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'mode' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1307,19 +1307,6 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'videoId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'onBehalfOfContentOwner' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1331,6 +1318,19 @@ class Google_Service_YouTube extends Google_Service
                 'playlistId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'onBehalfOfContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
               ),
             ),'update' => array(
@@ -1382,11 +1382,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwnerChannel' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1401,6 +1401,19 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'mine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'hl' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1413,20 +1426,7 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'mine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
                 'onBehalfOfContentOwnerChannel' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1470,67 +1470,11 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'videoDuration' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'regionCode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'relevanceLanguage' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'videoCaption' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'order' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'forContentOwner' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'channelType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'videoLicense' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'videoDefinition' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'publishedAfter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'location' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'relatedToVideoId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'videoSyndicated' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'safeSearch' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'channelId' => array(
+                'q' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1539,31 +1483,7 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'eventType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'forMine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'topicId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'videoType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'forDeveloper' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'q' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'locationRadius' => array(
+                'publishedAfter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1571,7 +1491,15 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'videoDimension' => array(
+                'videoCaption' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoLicense' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'topicId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1579,17 +1507,89 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'location' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'channelType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoDimension' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'order' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'safeSearch' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'forMine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'onBehalfOfContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'regionCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'channelId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'relevanceLanguage' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'publishedBefore' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'forContentOwner' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'relatedToVideoId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoDuration' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'eventType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'locationRadius' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'videoDefinition' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'videoEmbeddable' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'forDeveloper' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -1612,15 +1612,15 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1666,11 +1666,32 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'mySubscribers' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'mine' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'order' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'channelId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1682,34 +1703,13 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'channelId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'mySubscribers' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
                 'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'mine' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -1732,10 +1732,6 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1743,6 +1739,10 @@ class Google_Service_YouTube extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -1814,18 +1814,18 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'hl' => array(
+                'id' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'repeated' => true,
                 ),
                 'regionCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'id' => array(
+                'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),
@@ -1885,10 +1885,6 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'autoLevels' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'onBehalfOfContentOwnerChannel' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1896,6 +1892,10 @@ class Google_Service_YouTube extends Google_Service
                 'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'autoLevels' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'list' => array(
@@ -1908,9 +1908,18 @@ class Google_Service_YouTube extends Google_Service
                   'repeated' => true,
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'regionCode' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
+                ),
+                'id' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'videoCategoryId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'chart' => array(
                   'location' => 'query',
@@ -1920,23 +1929,15 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'onBehalfOfContentOwner' => array(
+                'maxResults' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'myRating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'videoCategoryId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'regionCode' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1944,18 +1945,17 @@ class Google_Service_YouTube extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'id' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
-                ),
-                'maxWidth' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
                 'hl' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxWidth' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'rate' => array(
