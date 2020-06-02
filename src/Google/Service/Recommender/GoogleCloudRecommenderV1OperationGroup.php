@@ -15,16 +15,24 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1InsightRecommendationReference extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1OperationGroup extends Google_Collection
 {
-  public $recommendation;
+  protected $collection_key = 'operations';
+  protected $operationsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1Operation';
+  protected $operationsDataType = 'array';
 
-  public function setRecommendation($recommendation)
+  /**
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1Operation
+   */
+  public function setOperations($operations)
   {
-    $this->recommendation = $recommendation;
+    $this->operations = $operations;
   }
-  public function getRecommendation()
+  /**
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1Operation
+   */
+  public function getOperations()
   {
-    return $this->recommendation;
+    return $this->operations;
   }
 }

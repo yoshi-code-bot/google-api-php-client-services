@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "insightTypes" collection of methods.
- * Typical usage is:
- *  <code>
- *   $recommenderService = new Google_Service_Recommender(...);
- *   $insightTypes = $recommenderService->insightTypes;
- *  </code>
- */
-class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypes extends Google_Service_Resource
+class Google_Service_Recommender_GoogleCloudRecommenderV1MarkRecommendationFailedRequest extends Google_Model
 {
+  public $etag;
+  public $stateMetadata;
+
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
+  }
+  public function setStateMetadata($stateMetadata)
+  {
+    $this->stateMetadata = $stateMetadata;
+  }
+  public function getStateMetadata()
+  {
+    return $this->stateMetadata;
+  }
 }

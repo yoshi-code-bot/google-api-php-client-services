@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_AndroidEnterprise_UserToken extends Google_Model
+class Google_Service_DisplayVideo_AssignedLocation extends Google_Model
 {
-  public $kind;
-  public $token;
-  public $userId;
+  public $assignedLocationId;
+  public $name;
+  public $targetingOptionId;
 
-  public function setKind($kind)
+  public function setAssignedLocationId($assignedLocationId)
   {
-    $this->kind = $kind;
+    $this->assignedLocationId = $assignedLocationId;
   }
-  public function getKind()
+  public function getAssignedLocationId()
   {
-    return $this->kind;
+    return $this->assignedLocationId;
   }
-  public function setToken($token)
+  public function setName($name)
   {
-    $this->token = $token;
+    $this->name = $name;
   }
-  public function getToken()
+  public function getName()
   {
-    return $this->token;
+    return $this->name;
   }
-  public function setUserId($userId)
+  public function setTargetingOptionId($targetingOptionId)
   {
-    $this->userId = $userId;
+    $this->targetingOptionId = $targetingOptionId;
   }
-  public function getUserId()
+  public function getTargetingOptionId()
   {
-    return $this->userId;
+    return $this->targetingOptionId;
   }
 }

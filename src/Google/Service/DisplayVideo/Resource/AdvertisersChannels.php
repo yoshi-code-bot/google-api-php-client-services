@@ -88,4 +88,27 @@ class Google_Service_DisplayVideo_Resource_AdvertisersChannels extends Google_Se
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DisplayVideo_ListChannelsResponse");
   }
+  /**
+   * Updates a channel. Returns the updated channel if successful.
+   * (channels.patch)
+   *
+   * @param string $advertiserId The ID of the advertiser that owns the created
+   * channel.
+   * @param string $channelId Output only. The unique ID of the channel. Assigned
+   * by the system.
+   * @param Google_Service_DisplayVideo_Channel $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The mask to control which fields to
+   * update.
+   * @opt_param string partnerId The ID of the partner that owns the created
+   * channel.
+   * @return Google_Service_DisplayVideo_Channel
+   */
+  public function patch($advertiserId, $channelId, Google_Service_DisplayVideo_Channel $postBody, $optParams = array())
+  {
+    $params = array('advertiserId' => $advertiserId, 'channelId' => $channelId, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_DisplayVideo_Channel");
+  }
 }

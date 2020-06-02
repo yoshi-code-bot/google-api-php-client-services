@@ -15,27 +15,13 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListInsightsResponse extends Google_Collection
+class Google_Service_Recommender_GoogleCloudRecommenderV1ListRecommendationsResponse extends Google_Collection
 {
-  protected $collection_key = 'insights';
-  protected $insightsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight';
-  protected $insightsDataType = 'array';
+  protected $collection_key = 'recommendations';
   public $nextPageToken;
+  protected $recommendationsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1Recommendation';
+  protected $recommendationsDataType = 'array';
 
-  /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight
-   */
-  public function setInsights($insights)
-  {
-    $this->insights = $insights;
-  }
-  /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight
-   */
-  public function getInsights()
-  {
-    return $this->insights;
-  }
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
@@ -43,5 +29,19 @@ class Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListInsightsRespon
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1Recommendation
+   */
+  public function setRecommendations($recommendations)
+  {
+    $this->recommendations = $recommendations;
+  }
+  /**
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1Recommendation
+   */
+  public function getRecommendations()
+  {
+    return $this->recommendations;
   }
 }

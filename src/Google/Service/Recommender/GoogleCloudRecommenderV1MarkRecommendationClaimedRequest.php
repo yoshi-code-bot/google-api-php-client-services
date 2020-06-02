@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkRecommendationClaimedRequest extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1MarkRecommendationClaimedRequest extends Google_Model
 {
   public $etag;
   public $stateMetadata;

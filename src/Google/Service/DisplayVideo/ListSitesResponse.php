@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListRecommendationsResponse extends Google_Collection
+class Google_Service_DisplayVideo_ListSitesResponse extends Google_Collection
 {
-  protected $collection_key = 'recommendations';
+  protected $collection_key = 'sites';
   public $nextPageToken;
-  protected $recommendationsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1Recommendation';
-  protected $recommendationsDataType = 'array';
+  protected $sitesType = 'Google_Service_DisplayVideo_Site';
+  protected $sitesDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
   {
@@ -31,17 +31,17 @@ class Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListRecommendation
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1Recommendation
+   * @param Google_Service_DisplayVideo_Site
    */
-  public function setRecommendations($recommendations)
+  public function setSites($sites)
   {
-    $this->recommendations = $recommendations;
+    $this->sites = $sites;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Recommendation
+   * @return Google_Service_DisplayVideo_Site
    */
-  public function getRecommendations()
+  public function getSites()
   {
-    return $this->recommendations;
+    return $this->sites;
   }
 }

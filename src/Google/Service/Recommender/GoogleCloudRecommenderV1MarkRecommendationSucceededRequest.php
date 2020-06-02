@@ -15,18 +15,18 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1RecommendationStateInfo extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1MarkRecommendationSucceededRequest extends Google_Model
 {
-  public $state;
+  public $etag;
   public $stateMetadata;
 
-  public function setState($state)
+  public function setEtag($etag)
   {
-    $this->state = $state;
+    $this->etag = $etag;
   }
-  public function getState()
+  public function getEtag()
   {
-    return $this->state;
+    return $this->etag;
   }
   public function setStateMetadata($stateMetadata)
   {

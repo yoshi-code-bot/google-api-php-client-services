@@ -15,19 +15,19 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1Operation extends Google_Model
 {
   public $action;
   public $path;
   public $pathFilters;
-  protected $pathValueMatchersType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher';
+  protected $pathValueMatchersType = 'Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher';
   protected $pathValueMatchersDataType = 'map';
   public $resource;
   public $resourceType;
   public $sourcePath;
   public $sourceResource;
   public $value;
-  protected $valueMatcherType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher';
+  protected $valueMatcherType = 'Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher';
   protected $valueMatcherDataType = '';
 
   public function setAction($action)
@@ -55,14 +55,14 @@ class Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation extends 
     return $this->pathFilters;
   }
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher
    */
   public function setPathValueMatchers($pathValueMatchers)
   {
     $this->pathValueMatchers = $pathValueMatchers;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher
    */
   public function getPathValueMatchers()
   {
@@ -109,14 +109,14 @@ class Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation extends 
     return $this->value;
   }
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher
    */
-  public function setValueMatcher(Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher $valueMatcher)
+  public function setValueMatcher(Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher $valueMatcher)
   {
     $this->valueMatcher = $valueMatcher;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher
    */
   public function getValueMatcher()
   {

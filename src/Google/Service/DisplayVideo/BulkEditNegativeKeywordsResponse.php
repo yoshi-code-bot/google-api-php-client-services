@@ -15,25 +15,24 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkInsightAcceptedRequest extends Google_Model
+class Google_Service_DisplayVideo_BulkEditNegativeKeywordsResponse extends Google_Collection
 {
-  public $etag;
-  public $stateMetadata;
+  protected $collection_key = 'negativeKeywords';
+  protected $negativeKeywordsType = 'Google_Service_DisplayVideo_NegativeKeyword';
+  protected $negativeKeywordsDataType = 'array';
 
-  public function setEtag($etag)
+  /**
+   * @param Google_Service_DisplayVideo_NegativeKeyword
+   */
+  public function setNegativeKeywords($negativeKeywords)
   {
-    $this->etag = $etag;
+    $this->negativeKeywords = $negativeKeywords;
   }
-  public function getEtag()
+  /**
+   * @return Google_Service_DisplayVideo_NegativeKeyword
+   */
+  public function getNegativeKeywords()
   {
-    return $this->etag;
-  }
-  public function setStateMetadata($stateMetadata)
-  {
-    $this->stateMetadata = $stateMetadata;
-  }
-  public function getStateMetadata()
-  {
-    return $this->stateMetadata;
+    return $this->negativeKeywords;
   }
 }

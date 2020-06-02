@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1RecommendationInsightReference extends Google_Model
+class Google_Service_DisplayVideo_NegativeKeyword extends Google_Model
 {
-  public $insight;
+  public $keywordValue;
+  public $name;
 
-  public function setInsight($insight)
+  public function setKeywordValue($keywordValue)
   {
-    $this->insight = $insight;
+    $this->keywordValue = $keywordValue;
   }
-  public function getInsight()
+  public function getKeywordValue()
   {
-    return $this->insight;
+    return $this->keywordValue;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
 }

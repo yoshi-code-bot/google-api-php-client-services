@@ -15,21 +15,21 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1RecommendationContent extends Google_Collection
+class Google_Service_Recommender_GoogleCloudRecommenderV1RecommendationContent extends Google_Collection
 {
   protected $collection_key = 'operationGroups';
-  protected $operationGroupsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1OperationGroup';
+  protected $operationGroupsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1OperationGroup';
   protected $operationGroupsDataType = 'array';
 
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1OperationGroup
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1OperationGroup
    */
   public function setOperationGroups($operationGroups)
   {
     $this->operationGroups = $operationGroups;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1OperationGroup
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1OperationGroup
    */
   public function getOperationGroups()
   {

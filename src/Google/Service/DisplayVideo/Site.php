@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest extends Google_Model
+class Google_Service_DisplayVideo_Site extends Google_Model
 {
-  public $etag;
-  public $stateMetadata;
+  public $name;
+  public $urlOrAppId;
 
-  public function setEtag($etag)
+  public function setName($name)
   {
-    $this->etag = $etag;
+    $this->name = $name;
   }
-  public function getEtag()
+  public function getName()
   {
-    return $this->etag;
+    return $this->name;
   }
-  public function setStateMetadata($stateMetadata)
+  public function setUrlOrAppId($urlOrAppId)
   {
-    $this->stateMetadata = $stateMetadata;
+    $this->urlOrAppId = $urlOrAppId;
   }
-  public function getStateMetadata()
+  public function getUrlOrAppId()
   {
-    return $this->stateMetadata;
+    return $this->urlOrAppId;
   }
 }

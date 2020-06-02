@@ -15,25 +15,24 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1InsightStateInfo extends Google_Model
+class Google_Service_DisplayVideo_BulkEditSitesResponse extends Google_Collection
 {
-  public $state;
-  public $stateMetadata;
+  protected $collection_key = 'sites';
+  protected $sitesType = 'Google_Service_DisplayVideo_Site';
+  protected $sitesDataType = 'array';
 
-  public function setState($state)
+  /**
+   * @param Google_Service_DisplayVideo_Site
+   */
+  public function setSites($sites)
   {
-    $this->state = $state;
+    $this->sites = $sites;
   }
-  public function getState()
+  /**
+   * @return Google_Service_DisplayVideo_Site
+   */
+  public function getSites()
   {
-    return $this->state;
-  }
-  public function setStateMetadata($stateMetadata)
-  {
-    $this->stateMetadata = $stateMetadata;
-  }
-  public function getStateMetadata()
-  {
-    return $this->stateMetadata;
+    return $this->sites;
   }
 }

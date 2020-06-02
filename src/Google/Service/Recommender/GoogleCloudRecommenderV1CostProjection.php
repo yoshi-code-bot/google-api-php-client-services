@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1CostProjection extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1CostProjection extends Google_Model
 {
   protected $costType = 'Google_Service_Recommender_GoogleTypeMoney';
   protected $costDataType = '';

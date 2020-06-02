@@ -15,24 +15,24 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1OperationGroup extends Google_Collection
+class Google_Service_DisplayVideo_BulkEditAssignedLocationsResponse extends Google_Collection
 {
-  protected $collection_key = 'operations';
-  protected $operationsType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation';
-  protected $operationsDataType = 'array';
+  protected $collection_key = 'assignedLocations';
+  protected $assignedLocationsType = 'Google_Service_DisplayVideo_AssignedLocation';
+  protected $assignedLocationsDataType = 'array';
 
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation
+   * @param Google_Service_DisplayVideo_AssignedLocation
    */
-  public function setOperations($operations)
+  public function setAssignedLocations($assignedLocations)
   {
-    $this->operations = $operations;
+    $this->assignedLocations = $assignedLocations;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Operation
+   * @return Google_Service_DisplayVideo_AssignedLocation
    */
-  public function getOperations()
+  public function getAssignedLocations()
   {
-    return $this->operations;
+    return $this->assignedLocations;
   }
 }

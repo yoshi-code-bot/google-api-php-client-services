@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1ValueMatcher extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1ValueMatcher extends Google_Model
 {
   public $matchesPattern;
 

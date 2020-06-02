@@ -15,10 +15,10 @@
  * the License.
  */
 
-class Google_Service_Recommender_GoogleCloudRecommenderV1beta1Impact extends Google_Model
+class Google_Service_Recommender_GoogleCloudRecommenderV1Impact extends Google_Model
 {
   public $category;
-  protected $costProjectionType = 'Google_Service_Recommender_GoogleCloudRecommenderV1beta1CostProjection';
+  protected $costProjectionType = 'Google_Service_Recommender_GoogleCloudRecommenderV1CostProjection';
   protected $costProjectionDataType = '';
 
   public function setCategory($category)
@@ -30,14 +30,14 @@ class Google_Service_Recommender_GoogleCloudRecommenderV1beta1Impact extends Goo
     return $this->category;
   }
   /**
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1CostProjection
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1CostProjection
    */
-  public function setCostProjection(Google_Service_Recommender_GoogleCloudRecommenderV1beta1CostProjection $costProjection)
+  public function setCostProjection(Google_Service_Recommender_GoogleCloudRecommenderV1CostProjection $costProjection)
   {
     $this->costProjection = $costProjection;
   }
   /**
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1CostProjection
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1CostProjection
    */
   public function getCostProjection()
   {
