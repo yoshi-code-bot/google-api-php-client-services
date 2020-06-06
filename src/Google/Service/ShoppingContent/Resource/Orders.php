@@ -248,6 +248,38 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
     return $this->call('list', array($params), "Google_Service_ShoppingContent_OrdersListResponse");
   }
   /**
+   * Issues a partial or total refund for items and shipment. (orders.refunditem)
+   *
+   * @param string $merchantId The ID of the account that manages the order. This
+   * cannot be a multi-client account.
+   * @param string $orderId The ID of the order to refund.
+   * @param Google_Service_ShoppingContent_OrdersRefundItemRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ShoppingContent_OrdersRefundItemResponse
+   */
+  public function refunditem($merchantId, $orderId, Google_Service_ShoppingContent_OrdersRefundItemRequest $postBody, $optParams = array())
+  {
+    $params = array('merchantId' => $merchantId, 'orderId' => $orderId, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('refunditem', array($params), "Google_Service_ShoppingContent_OrdersRefundItemResponse");
+  }
+  /**
+   * Issues a partial or total refund for an order. (orders.refundorder)
+   *
+   * @param string $merchantId The ID of the account that manages the order. This
+   * cannot be a multi-client account.
+   * @param string $orderId The ID of the order to refund.
+   * @param Google_Service_ShoppingContent_OrdersRefundOrderRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ShoppingContent_OrdersRefundOrderResponse
+   */
+  public function refundorder($merchantId, $orderId, Google_Service_ShoppingContent_OrdersRefundOrderRequest $postBody, $optParams = array())
+  {
+    $params = array('merchantId' => $merchantId, 'orderId' => $orderId, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('refundorder', array($params), "Google_Service_ShoppingContent_OrdersRefundOrderResponse");
+  }
+  /**
    * Rejects return on an line item. (orders.rejectreturnlineitem)
    *
    * @param string $merchantId The ID of the account that manages the order. This
