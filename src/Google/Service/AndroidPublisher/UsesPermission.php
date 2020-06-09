@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "systemapks" collection of methods.
- * Typical usage is:
- *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
- *   $systemapks = $androidpublisherService->systemapks;
- *  </code>
- */
-class Google_Service_AndroidPublisher_Resource_Systemapks extends Google_Service_Resource
+class Google_Service_AndroidPublisher_UsesPermission extends Google_Model
 {
+  public $maxSdkVersion;
+  public $name;
+
+  public function setMaxSdkVersion($maxSdkVersion)
+  {
+    $this->maxSdkVersion = $maxSdkVersion;
+  }
+  public function getMaxSdkVersion()
+  {
+    return $this->maxSdkVersion;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
+  }
 }

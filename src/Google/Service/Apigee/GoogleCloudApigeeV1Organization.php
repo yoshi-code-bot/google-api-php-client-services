@@ -27,6 +27,7 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public $environments;
   public $lastModifiedAt;
   public $name;
+  public $projectId;
   protected $propertiesType = 'Google_Service_Apigee_GoogleCloudApigeeV1Properties';
   protected $propertiesDataType = '';
   public $runtimeType;
@@ -104,6 +105,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public function getName()
   {
     return $this->name;
+  }
+  public function setProjectId($projectId)
+  {
+    $this->projectId = $projectId;
+  }
+  public function getProjectId()
+  {
+    return $this->projectId;
   }
   /**
    * @param Google_Service_Apigee_GoogleCloudApigeeV1Properties
