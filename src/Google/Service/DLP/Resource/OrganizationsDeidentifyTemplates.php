@@ -31,8 +31,10 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
    * (deidentifyTemplates.create)
    *
-   * @param string $parent Required. The parent resource name, for example
-   * projects/my-project-id or organizations/my-org-id.
+   * @param string $parent Required. Parent resource name. - Format:projects
+   * /[PROJECT-ID] - Format:organizations/[ORGANIZATION-ID] - Format:projects
+   * /[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations/[ORGANIZATION-
+   * ID]/locations/[LOCATION-ID]
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateDeidentifyTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DeidentifyTemplate
@@ -82,8 +84,10 @@ class Google_Service_DLP_Resource_OrganizationsDeidentifyTemplates extends Googl
    * templates-deid to learn more.
    * (deidentifyTemplates.listOrganizationsDeidentifyTemplates)
    *
-   * @param string $parent Required. The parent resource name, for example
-   * projects/my-project-id or organizations/my-org-id.
+   * @param string $parent Required. Parent resource name. - Format:projects
+   * /[PROJECT-ID] - Format:organizations/[ORGANIZATION-ID] - Format:projects
+   * /[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations/[ORGANIZATION-
+   * ID]/locations/[LOCATION-ID]
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Size of the page, can be limited by server. If zero

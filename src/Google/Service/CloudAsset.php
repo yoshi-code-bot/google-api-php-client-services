@@ -148,7 +148,7 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'contentType' => array(
+                'readTimeWindow.startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -156,14 +156,14 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'readTimeWindow.startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'assetNames' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'contentType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'exportAssets' => array(
@@ -174,59 +174,6 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),'searchAllIamPolicies' => array(
-              'path' => 'v1/{+scope}:searchAllIamPolicies',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'scope' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),'searchAllResources' => array(
-              'path' => 'v1/{+scope}:searchAllResources',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'scope' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'assetTypes' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),

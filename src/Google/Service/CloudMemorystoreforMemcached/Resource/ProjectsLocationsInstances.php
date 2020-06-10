@@ -133,10 +133,6 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous List request, if any.
-   * @opt_param string filter List filter. For example, exclude all Memcached
-   * instances with name as my-instance by specifying "name != my-instance".
    * @opt_param int pageSize The maximum number of items to return.
    *
    * If not specified, a default value of 1000 will be used by the service.
@@ -145,6 +141,10 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    * there are more instances left to be queried.
    * @opt_param string orderBy Sort results. Supported values are "name", "name
    * desc" or "" (unsorted).
+   * @opt_param string pageToken The next_page_token value returned from a
+   * previous List request, if any.
+   * @opt_param string filter List filter. For example, exclude all Memcached
+   * instances with name as my-instance by specifying "name != my-instance".
    * @return Google_Service_CloudMemorystoreforMemcached_ListInstancesResponse
    */
   public function listProjectsLocationsInstances($parent, $optParams = array())

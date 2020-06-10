@@ -31,6 +31,19 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    *
    * @param Google_Service_PeopleService_Person $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string sources Optional. A mask of what source types to return.
+   * Defaults to ReadSourceType.CONTACT and ReadSourceType.PROFILE if not set.
+   * @opt_param string personFields Required. A field mask to restrict which
+   * fields on each person are returned. Multiple fields can be specified by
+   * separating them with commas. Defaults to all fields if not set. Valid values
+   * are:
+   *
+   * * addresses * ageRanges * biographies * birthdays * coverPhotos *
+   * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations *
+   * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls
+   * * userDefined
    * @return Google_Service_PeopleService_Person
    */
   public function createContact(Google_Service_PeopleService_Person $postBody, $optParams = array())
@@ -61,6 +74,8 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * photo will be deleted.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string sources Optional. A mask of what source types to return.
+   * Defaults to ReadSourceType.CONTACT and ReadSourceType.PROFILE if not set.
    * @opt_param string personFields Optional. A field mask to restrict which
    * fields on the person are returned. Multiple fields can be specified by
    * separating them with commas. Defaults to empty if not set, which will skip
@@ -96,6 +111,9 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestMask.includeField Required. Comma-separated list of
+   * person fields to be included in the response. Each path should start with
+   * `person.`: for example, `person.names` or `person.photos`.
    * @opt_param string personFields Required. A field mask to restrict which
    * fields on the person are returned. Multiple fields can be specified by
    * separating them with commas. Valid values are:
@@ -105,9 +123,8 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * memberships * metadata * names * nicknames * occupations * organizations *
    * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls
    * * userDefined
-   * @opt_param string requestMask.includeField Required. Comma-separated list of
-   * person fields to be included in the response. Each path should start with
-   * `person.`: for example, `person.names` or `person.photos`.
+   * @opt_param string sources Optional. A mask of what source types to return.
+   * Defaults to ReadSourceType.PROFILE and ReadSourceType.CONTACT if not set.
    * @return Google_Service_PeopleService_Person
    */
   public function get($resourceName, $optParams = array())
@@ -125,6 +142,8 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string sources Optional. A mask of what source types to return.
+   * Defaults to ReadSourceType.CONTACT and ReadSourceType.PROFILE if not set.
    * @opt_param string personFields Required. A field mask to restrict which
    * fields on each person are returned. Multiple fields can be specified by
    * separating them with commas. Valid values are:
@@ -176,6 +195,18 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * @param Google_Service_PeopleService_Person $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string personFields Optional. A field mask to restrict which
+   * fields on each person are returned. Multiple fields can be specified by
+   * separating them with commas. Defaults to all fields if not set. Valid values
+   * are:
+   *
+   * * addresses * ageRanges * biographies * birthdays * coverPhotos *
+   * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations *
+   * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls
+   * * userDefined
+   * @opt_param string sources Optional. A mask of what source types to return.
+   * Defaults to ReadSourceType.CONTACT and ReadSourceType.PROFILE if not set.
    * @opt_param string updatePersonFields Required. A field mask to restrict which
    * fields on the person are updated. Multiple fields can be specified by
    * separating them with commas. All updated fields will be replaced. Valid
