@@ -30,9 +30,9 @@ class Google_Service_Books_Resource_SeriesMembership extends Google_Service_Reso
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string series_id String that identifies the series
    * @opt_param string page_size Number of maximum results per page to be included
    * in the response.
-   * @opt_param string series_id String that identifies the series
    * @opt_param string page_token The value of the nextToken from the previous
    * page.
    * @return Google_Service_Books_Seriesmembership

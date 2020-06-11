@@ -15,25 +15,32 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Version extends Google_Model
+class Google_Service_PeopleService_FileAs extends Google_Model
 {
-  public $defaultVersion;
-  public $versionNumber;
+  protected $metadataType = 'Google_Service_PeopleService_FieldMetadata';
+  protected $metadataDataType = '';
+  public $value;
 
-  public function setDefaultVersion($defaultVersion)
+  /**
+   * @param Google_Service_PeopleService_FieldMetadata
+   */
+  public function setMetadata(Google_Service_PeopleService_FieldMetadata $metadata)
   {
-    $this->defaultVersion = $defaultVersion;
+    $this->metadata = $metadata;
   }
-  public function getDefaultVersion()
+  /**
+   * @return Google_Service_PeopleService_FieldMetadata
+   */
+  public function getMetadata()
   {
-    return $this->defaultVersion;
+    return $this->metadata;
   }
-  public function setVersionNumber($versionNumber)
+  public function setValue($value)
   {
-    $this->versionNumber = $versionNumber;
+    $this->value = $value;
   }
-  public function getVersionNumber()
+  public function getValue()
   {
-    return $this->versionNumber;
+    return $this->value;
   }
 }
