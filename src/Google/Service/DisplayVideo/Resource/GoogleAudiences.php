@@ -56,8 +56,9 @@ class Google_Service_DisplayVideo_Resource_GoogleAudiences extends Google_Servic
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListGoogleAudiences` method. If not specified, the
    * first page of results will be returned.
-   * @opt_param string advertiserId The ID of the advertiser that has access to
-   * the fetched Google audiences.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @opt_param string filter Allows filtering by Google audience fields.
    *
    * Supported syntax:
@@ -81,11 +82,10 @@ class Google_Service_DisplayVideo_Resource_GoogleAudiences extends Google_Servic
    * The default sorting order is ascending. To specify descending order for a
    * field, a suffix "desc" should be added to the field name. Example:
    * `displayName desc`.
+   * @opt_param string advertiserId The ID of the advertiser that has access to
+   * the fetched Google audiences.
    * @opt_param string partnerId The ID of the partner that has access to the
    * fetched Google audiences.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListGoogleAudiencesResponse
    */
   public function listGoogleAudiences($optParams = array())

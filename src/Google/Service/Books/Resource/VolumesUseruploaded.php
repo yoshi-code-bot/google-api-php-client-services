@@ -35,12 +35,12 @@ class Google_Service_Books_Resource_VolumesUseruploaded extends Google_Service_R
    * 0)
    * @opt_param string locale ISO-639-1 language and ISO-3166-1 country code. Ex:
    * 'en_US'. Used for generating recommendations.
+   * @opt_param string maxResults Maximum number of results to return.
    * @opt_param string volumeId The ids of the volumes to be returned. If not
    * specified all that match the processingState are returned.
+   * @opt_param string source String to identify the originator of this request.
    * @opt_param string processingState The processing state of the user uploaded
    * volumes to be returned.
-   * @opt_param string source String to identify the originator of this request.
-   * @opt_param string maxResults Maximum number of results to return.
    * @return Google_Service_Books_Volumes
    */
   public function listVolumesUseruploaded($optParams = array())
