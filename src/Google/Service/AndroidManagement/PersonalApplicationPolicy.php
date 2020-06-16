@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_AndroidManagement_BlockAction extends Google_Model
+class Google_Service_AndroidManagement_PersonalApplicationPolicy extends Google_Model
 {
-  public $blockAfterDays;
-  public $blockScope;
+  public $installType;
+  public $packageName;
 
-  public function setBlockAfterDays($blockAfterDays)
+  public function setInstallType($installType)
   {
-    $this->blockAfterDays = $blockAfterDays;
+    $this->installType = $installType;
   }
-  public function getBlockAfterDays()
+  public function getInstallType()
   {
-    return $this->blockAfterDays;
+    return $this->installType;
   }
-  public function setBlockScope($blockScope)
+  public function setPackageName($packageName)
   {
-    $this->blockScope = $blockScope;
+    $this->packageName = $packageName;
   }
-  public function getBlockScope()
+  public function getPackageName()
   {
-    return $this->blockScope;
+    return $this->packageName;
   }
 }

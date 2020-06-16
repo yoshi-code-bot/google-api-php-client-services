@@ -48,6 +48,10 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * to. Its format is "organizations/[organization_id]".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string readTime Time used as a reference point when filtering
+   * assets. The filter is limited to assets existing at the supplied time and
+   * their values are those at that specific time. Absence of this field will
+   * default to the API's version of NOW.
    * @opt_param string compareDuration When compare_duration is set, the
    * ListAssetsResult's "state_change" attribute is updated to indicate whether
    * the asset was added, removed, or remained present during the compare_duration
@@ -71,8 +75,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * If compare_duration is not specified, then the only possible state_change is
    * "UNUSED",  which will be the state_change set for all assets present at
    * read_time.
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string filter Expression that defines the filter to apply across
    * assets. The expression is a list of zero or more restrictions combined via
    * logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
@@ -100,14 +102,14 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples:     "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time
-   * = 1560208038000"
+   * Examples:     `update_time = "2019-06-10T16:07:18-07:00"`     `update_time =
+   * 1560208038000`
    *
    * * create_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples:     "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time
-   * = 1560208038000"
+   * Examples:     `create_time = "2019-06-10T16:07:18-07:00"`     `create_time =
+   * 1560208038000`
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`,
    * `>=`, `<=` * security_marks.marks: `=`, `:` *
@@ -123,10 +125,13 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * For example, `resource_properties.size = 100` is a valid filter string.
    *
    * Use a partial match on the empty string to filter based on a property
-   * existing: "resource_properties.my_property : \"\""
+   * existing: `resource_properties.my_property : ""`
    *
    * Use a negated partial match on the empty string to filter based on a property
-   * not existing: "-resource_properties.my_property : \"\""
+   * not existing: `-resource_properties.my_property : ""`
+   * @opt_param string pageToken The value returned by the last
+   * `ListAssetsResponse`; indicates that this is a continuation of a prior
+   * `ListAssets` call, and that the system should return the next page of data.
    * @opt_param string orderBy Expression that defines what fields and order to
    * use for sorting. The string value should follow SQL syntax: comma separated
    * list of fields. For example: "name,resource_properties.a_property". The
@@ -144,13 +149,8 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * security_center_properties.resource_project
    * security_center_properties.resource_project_display_name
    * security_center_properties.resource_type
-   * @opt_param string readTime Time used as a reference point when filtering
-   * assets. The filter is limited to assets existing at the supplied time and
-   * their values are those at that specific time. Absence of this field will
-   * default to the API's version of NOW.
-   * @opt_param string pageToken The value returned by the last
-   * `ListAssetsResponse`; indicates that this is a continuation of a prior
-   * `ListAssets` call, and that the system should return the next page of data.
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string fieldMask Optional. A field mask to specify the
    * ListAssetsResult fields to be listed in the response. An empty field mask
    * will list all fields.
