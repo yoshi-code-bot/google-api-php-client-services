@@ -198,8 +198,6 @@ class Google_Service_ServiceManagement_Resource_Services extends Google_Service_
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token identifying which result to start with;
-   * returned by a previous list call.
    * @opt_param string producerProjectId Include services produced by the
    * specified project.
    * @opt_param int pageSize The max number of items to include in the response
@@ -209,6 +207,8 @@ class Google_Service_ServiceManagement_Resource_Services extends Google_Service_
    *
    * The Google Service Management implementation accepts the following forms: -
    * project:
+   * @opt_param string pageToken Token identifying which result to start with;
+   * returned by a previous list call.
    * @return Google_Service_ServiceManagement_ListServicesResponse
    */
   public function listServices($optParams = array())

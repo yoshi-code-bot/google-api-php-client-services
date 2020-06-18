@@ -151,6 +151,7 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * request.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Optional. The standard List page size.
    * @opt_param string pageToken Optional. The standard List page token.
    * @opt_param string filter Optional. A filter constraining the clusters to
    * list. Filters are case-sensitive and have the following syntax:field = value
@@ -163,7 +164,6 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * Only the logical AND operator is supported; space-separated items are treated
    * as having an implicit AND operator.Example filter:status.state = ACTIVE AND
    * clusterName = mycluster AND labels.env = staging AND labels.starred = *
-   * @opt_param int pageSize Optional. The standard List page size.
    * @return Google_Service_Dataproc_ListClustersResponse
    */
   public function listProjectsRegionsClusters($projectId, $region, $optParams = array())

@@ -40,9 +40,6 @@ class Google_Service_FirebaseManagement_Resource_AvailableProjects extends Googl
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token returned from a previous call to
-   * `ListAvailableProjects` indicating where in the set of GCP `Projects` to
-   * resume listing.
    * @opt_param int pageSize The maximum number of GCP `Projects` to return in the
    * response.
    *
@@ -51,6 +48,9 @@ class Google_Service_FirebaseManagement_Resource_AvailableProjects extends Googl
    * limit.
    *
    * This value cannot be negative.
+   * @opt_param string pageToken Token returned from a previous call to
+   * `ListAvailableProjects` indicating where in the set of GCP `Projects` to
+   * resume listing.
    * @return Google_Service_FirebaseManagement_ListAvailableProjectsResponse
    */
   public function listAvailableProjects($optParams = array())
