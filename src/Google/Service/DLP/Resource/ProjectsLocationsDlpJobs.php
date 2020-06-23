@@ -147,7 +147,6 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * /[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string orderBy Comma separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case-insensitive, default
    * sorting order is ascending, redundant space characters are insignificant.
@@ -185,6 +184,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * \"2017-12-12T00:00:00+00:00\"
    *
    * The length of this field should be no more than 500 characters.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse
