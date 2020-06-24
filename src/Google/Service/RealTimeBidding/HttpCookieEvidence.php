@@ -15,14 +15,26 @@
  * the License.
  */
 
-/**
- * The "vbeta1" collection of methods.
- * Typical usage is:
- *  <code>
- *   $cloudbuildService = new Google_Service_CloudBuild(...);
- *   $vbeta1 = $cloudbuildService->vbeta1;
- *  </code>
- */
-class Google_Service_CloudBuild_Resource_Vbeta1 extends Google_Service_Resource
+class Google_Service_RealTimeBidding_HttpCookieEvidence extends Google_Collection
 {
+  protected $collection_key = 'cookieNames';
+  public $cookieNames;
+  public $maxCookieCount;
+
+  public function setCookieNames($cookieNames)
+  {
+    $this->cookieNames = $cookieNames;
+  }
+  public function getCookieNames()
+  {
+    return $this->cookieNames;
+  }
+  public function setMaxCookieCount($maxCookieCount)
+  {
+    $this->maxCookieCount = $maxCookieCount;
+  }
+  public function getMaxCookieCount()
+  {
+    return $this->maxCookieCount;
+  }
 }

@@ -97,12 +97,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersNegativeKeywordListsNegati
    * keyword list to which the requested negative keywords belong.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return.
-   *
-   * Typically, this is the value of next_page_token returned from the previous
-   * call to `ListNegativeKeywords` method. If not specified, the first page of
-   * results will be returned.
    * @opt_param string filter Allows filtering by negative keyword fields.
    *
    * Supported syntax:
@@ -116,6 +110,12 @@ class Google_Service_DisplayVideo_Resource_AdvertisersNegativeKeywordListsNegati
    *
    * * All negative keywords for which the keyword value contains "google":
    * `keywordValue : "google"`
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return.
+   *
+   * Typically, this is the value of next_page_token returned from the previous
+   * call to `ListNegativeKeywords` method. If not specified, the first page of
+   * results will be returned.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *

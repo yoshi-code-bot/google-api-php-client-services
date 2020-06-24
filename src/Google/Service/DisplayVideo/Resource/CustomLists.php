@@ -48,9 +48,6 @@ class Google_Service_DisplayVideo_Resource_CustomLists extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @opt_param string filter Allows filtering by custom list fields.
    *
    * Supported syntax:
@@ -79,6 +76,9 @@ class Google_Service_DisplayVideo_Resource_CustomLists extends Google_Service_Re
    * page of results will be returned.
    * @opt_param string advertiserId The ID of the DV360 advertiser that has access
    * to the fetched custom lists.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListCustomListsResponse
    */
   public function listCustomLists($optParams = array())

@@ -15,14 +15,16 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $cloudbuildService = new Google_Service_CloudBuild(...);
- *   $projects = $cloudbuildService->projects;
- *  </code>
- */
-class Google_Service_CloudBuild_Resource_Vbeta1Projects extends Google_Service_Resource
+class Google_Service_PlayableLocations_GoogleMapsPlayablelocationsV3SampleAreaFilter extends Google_Model
 {
+  public $s2CellId;
+
+  public function setS2CellId($s2CellId)
+  {
+    $this->s2CellId = $s2CellId;
+  }
+  public function getS2CellId()
+  {
+    return $this->s2CellId;
+  }
 }

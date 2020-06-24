@@ -15,14 +15,34 @@
  * the License.
  */
 
-/**
- * The "locations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $cloudbuildService = new Google_Service_CloudBuild(...);
- *   $locations = $cloudbuildService->locations;
- *  </code>
- */
-class Google_Service_CloudBuild_Resource_Vbeta1ProjectsLocations extends Google_Service_Resource
+class Google_Service_RealTimeBidding_Date extends Google_Model
 {
+  public $day;
+  public $month;
+  public $year;
+
+  public function setDay($day)
+  {
+    $this->day = $day;
+  }
+  public function getDay()
+  {
+    return $this->day;
+  }
+  public function setMonth($month)
+  {
+    $this->month = $month;
+  }
+  public function getMonth()
+  {
+    return $this->month;
+  }
+  public function setYear($year)
+  {
+    $this->year = $year;
+  }
+  public function getYear()
+  {
+    return $this->year;
+  }
 }
