@@ -66,8 +66,6 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocations extends Goog
    * `projects/myproject/locations/US`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous List request, if any.
    * @opt_param int pageSize The maximum number of items to return per page.
    * @opt_param string query Please specify resource name as assignee in the
    * query.
@@ -76,6 +74,8 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocations extends Goog
    *
    * * `assignee=projects/myproject` * `assignee=folders/123` *
    * `assignee=organizations/456`
+   * @opt_param string pageToken The next_page_token value returned from a
+   * previous List request, if any.
    * @return Google_Service_BigQueryReservation_SearchAssignmentsResponse
    */
   public function searchAssignments($parent, $optParams = array())

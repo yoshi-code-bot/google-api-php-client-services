@@ -80,6 +80,11 @@ class Google_Service_RemoteBuildExecution extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'inlineOutputFiles' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'inlineStdout' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -87,11 +92,6 @@ class Google_Service_RemoteBuildExecution extends Google_Service
                 'inlineStderr' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'inlineOutputFiles' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),'update' => array(
@@ -197,13 +197,13 @@ class Google_Service_RemoteBuildExecution extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
