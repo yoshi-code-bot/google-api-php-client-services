@@ -99,11 +99,11 @@ class Google_Service_Doubleclicksearch extends Google_Service
                   'type' => 'integer',
                   'required' => true,
                 ),
-                'adId' => array(
+                'adGroupId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'adGroupId' => array(
+                'criterionId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -111,7 +111,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'criterionId' => array(
+                'adId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

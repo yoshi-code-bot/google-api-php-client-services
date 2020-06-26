@@ -56,6 +56,11 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    * @opt_param int pageSize Optional. The number of "Other contacts" to include
    * in the response. Valid values are between 1 and 1000, inclusive. Defaults to
    * 100 if not set or set to 0.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListOtherContacts` call. Provide this to retrieve the subsequent page.
+   *
+   * When paginating, all other parameters provided to `ListOtherContacts` must
+   * match the call that provided the page token.
    * @opt_param string syncToken Optional. A sync token, received from a previous
    * `ListOtherContacts` call. Provide this to retrieve only the resources changed
    * since the last request. Sync requests that specify `sync_token` have an
@@ -68,11 +73,6 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    * last request. For subsequent sync requests use the `sync_token` param
    * instead. Initial sync requests that specify `request_sync_token` have an
    * additional rate limit.
-   * @opt_param string pageToken Optional. A page token, received from a previous
-   * `ListOtherContacts` call. Provide this to retrieve the subsequent page.
-   *
-   * When paginating, all other parameters provided to `ListOtherContacts` must
-   * match the call that provided the page token.
    * @return Google_Service_PeopleService_ListOtherContactsResponse
    */
   public function listOtherContacts($optParams = array())
