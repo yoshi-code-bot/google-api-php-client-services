@@ -15,23 +15,16 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_DivisionRepresentativeInfoRequest extends Google_Model
+class Google_Service_Compute_HealthCheckServiceReference extends Google_Model
 {
-  protected $contextParamsType = 'Google_Service_CivicInfo_ContextParams';
-  protected $contextParamsDataType = '';
+  public $healthCheckService;
 
-  /**
-   * @param Google_Service_CivicInfo_ContextParams
-   */
-  public function setContextParams(Google_Service_CivicInfo_ContextParams $contextParams)
+  public function setHealthCheckService($healthCheckService)
   {
-    $this->contextParams = $contextParams;
+    $this->healthCheckService = $healthCheckService;
   }
-  /**
-   * @return Google_Service_CivicInfo_ContextParams
-   */
-  public function getContextParams()
+  public function getHealthCheckService()
   {
-    return $this->contextParams;
+    return $this->healthCheckService;
   }
 }

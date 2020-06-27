@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_InternalSourceSummaryProto extends Google_Model
+class Google_Service_Compute_NotificationEndpointListWarningData extends Google_Model
 {
-  public $dataset;
-  public $provider;
+  public $key;
+  public $value;
 
-  public function setDataset($dataset)
+  public function setKey($key)
   {
-    $this->dataset = $dataset;
+    $this->key = $key;
   }
-  public function getDataset()
+  public function getKey()
   {
-    return $this->dataset;
+    return $this->key;
   }
-  public function setProvider($provider)
+  public function setValue($value)
   {
-    $this->provider = $provider;
+    $this->value = $value;
   }
-  public function getProvider()
+  public function getValue()
   {
-    return $this->provider;
+    return $this->value;
   }
 }

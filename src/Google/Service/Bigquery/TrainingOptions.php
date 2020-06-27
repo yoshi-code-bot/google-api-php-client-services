@@ -46,6 +46,7 @@ class Google_Service_Bigquery_TrainingOptions extends Google_Collection
   public $numClusters;
   public $numFactors;
   public $optimizationStrategy;
+  public $preserveInputStructs;
   public $subsample;
   public $userColumn;
   public $walsAlpha;
@@ -274,6 +275,14 @@ class Google_Service_Bigquery_TrainingOptions extends Google_Collection
   public function getOptimizationStrategy()
   {
     return $this->optimizationStrategy;
+  }
+  public function setPreserveInputStructs($preserveInputStructs)
+  {
+    $this->preserveInputStructs = $preserveInputStructs;
+  }
+  public function getPreserveInputStructs()
+  {
+    return $this->preserveInputStructs;
   }
   public function setSubsample($subsample)
   {

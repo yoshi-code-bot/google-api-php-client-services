@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_ContextParams extends Google_Model
+class Google_Service_ShoppingContent_TestOrderPickupDetailsPickupPerson extends Google_Model
 {
-  public $clientProfile;
+  public $name;
+  public $phoneNumber;
 
-  public function setClientProfile($clientProfile)
+  public function setName($name)
   {
-    $this->clientProfile = $clientProfile;
+    $this->name = $name;
   }
-  public function getClientProfile()
+  public function getName()
   {
-    return $this->clientProfile;
+    return $this->name;
+  }
+  public function setPhoneNumber($phoneNumber)
+  {
+    $this->phoneNumber = $phoneNumber;
+  }
+  public function getPhoneNumber()
+  {
+    return $this->phoneNumber;
   }
 }

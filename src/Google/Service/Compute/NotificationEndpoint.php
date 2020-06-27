@@ -15,30 +15,18 @@
  * the License.
  */
 
-class Google_Service_Compute_NetworkEndpointGroup extends Google_Model
+class Google_Service_Compute_NotificationEndpoint extends Google_Model
 {
-  public $annotations;
   public $creationTimestamp;
-  public $defaultPort;
   public $description;
+  protected $grpcSettingsType = 'Google_Service_Compute_NotificationEndpointGrpcSettings';
+  protected $grpcSettingsDataType = '';
   public $id;
   public $kind;
   public $name;
-  public $network;
-  public $networkEndpointType;
+  public $region;
   public $selfLink;
-  public $size;
-  public $subnetwork;
-  public $zone;
 
-  public function setAnnotations($annotations)
-  {
-    $this->annotations = $annotations;
-  }
-  public function getAnnotations()
-  {
-    return $this->annotations;
-  }
   public function setCreationTimestamp($creationTimestamp)
   {
     $this->creationTimestamp = $creationTimestamp;
@@ -47,14 +35,6 @@ class Google_Service_Compute_NetworkEndpointGroup extends Google_Model
   {
     return $this->creationTimestamp;
   }
-  public function setDefaultPort($defaultPort)
-  {
-    $this->defaultPort = $defaultPort;
-  }
-  public function getDefaultPort()
-  {
-    return $this->defaultPort;
-  }
   public function setDescription($description)
   {
     $this->description = $description;
@@ -62,6 +42,20 @@ class Google_Service_Compute_NetworkEndpointGroup extends Google_Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param Google_Service_Compute_NotificationEndpointGrpcSettings
+   */
+  public function setGrpcSettings(Google_Service_Compute_NotificationEndpointGrpcSettings $grpcSettings)
+  {
+    $this->grpcSettings = $grpcSettings;
+  }
+  /**
+   * @return Google_Service_Compute_NotificationEndpointGrpcSettings
+   */
+  public function getGrpcSettings()
+  {
+    return $this->grpcSettings;
   }
   public function setId($id)
   {
@@ -87,21 +81,13 @@ class Google_Service_Compute_NetworkEndpointGroup extends Google_Model
   {
     return $this->name;
   }
-  public function setNetwork($network)
+  public function setRegion($region)
   {
-    $this->network = $network;
+    $this->region = $region;
   }
-  public function getNetwork()
+  public function getRegion()
   {
-    return $this->network;
-  }
-  public function setNetworkEndpointType($networkEndpointType)
-  {
-    $this->networkEndpointType = $networkEndpointType;
-  }
-  public function getNetworkEndpointType()
-  {
-    return $this->networkEndpointType;
+    return $this->region;
   }
   public function setSelfLink($selfLink)
   {
@@ -110,29 +96,5 @@ class Google_Service_Compute_NetworkEndpointGroup extends Google_Model
   public function getSelfLink()
   {
     return $this->selfLink;
-  }
-  public function setSize($size)
-  {
-    $this->size = $size;
-  }
-  public function getSize()
-  {
-    return $this->size;
-  }
-  public function setSubnetwork($subnetwork)
-  {
-    $this->subnetwork = $subnetwork;
-  }
-  public function getSubnetwork()
-  {
-    return $this->subnetwork;
-  }
-  public function setZone($zone)
-  {
-    $this->zone = $zone;
-  }
-  public function getZone()
-  {
-    return $this->zone;
   }
 }

@@ -15,23 +15,25 @@
  * the License.
  */
 
-class Google_Service_CivicInfo_ElectionsQueryRequest extends Google_Model
+class Google_Service_Compute_HealthCheckServicesListWarningData extends Google_Model
 {
-  protected $contextParamsType = 'Google_Service_CivicInfo_ContextParams';
-  protected $contextParamsDataType = '';
+  public $key;
+  public $value;
 
-  /**
-   * @param Google_Service_CivicInfo_ContextParams
-   */
-  public function setContextParams(Google_Service_CivicInfo_ContextParams $contextParams)
+  public function setKey($key)
   {
-    $this->contextParams = $contextParams;
+    $this->key = $key;
   }
-  /**
-   * @return Google_Service_CivicInfo_ContextParams
-   */
-  public function getContextParams()
+  public function getKey()
   {
-    return $this->contextParams;
+    return $this->key;
+  }
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  public function getValue()
+  {
+    return $this->value;
   }
 }
