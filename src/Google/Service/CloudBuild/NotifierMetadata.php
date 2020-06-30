@@ -15,17 +15,25 @@
  * the License.
  */
 
-class Google_Service_GameServices_RealmSelector extends Google_Collection
+class Google_Service_CloudBuild_NotifierMetadata extends Google_Model
 {
-  protected $collection_key = 'realms';
-  public $realms;
+  public $name;
+  public $notifier;
 
-  public function setRealms($realms)
+  public function setName($name)
   {
-    $this->realms = $realms;
+    $this->name = $name;
   }
-  public function getRealms()
+  public function getName()
   {
-    return $this->realms;
+    return $this->name;
+  }
+  public function setNotifier($notifier)
+  {
+    $this->notifier = $notifier;
+  }
+  public function getNotifier()
+  {
+    return $this->notifier;
   }
 }

@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_GameServices_GkeClusterReference extends Google_Model
+class Google_Service_CloudBuild_HTTPDelivery extends Google_Model
 {
-  public $cluster;
+  public $uri;
 
-  public function setCluster($cluster)
+  public function setUri($uri)
   {
-    $this->cluster = $cluster;
+    $this->uri = $uri;
   }
-  public function getCluster()
+  public function getUri()
   {
-    return $this->cluster;
+    return $this->uri;
   }
 }

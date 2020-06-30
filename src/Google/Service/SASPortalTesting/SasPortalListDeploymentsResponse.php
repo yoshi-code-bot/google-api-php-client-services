@@ -15,27 +15,26 @@
  * the License.
  */
 
-class Google_Service_GameServices_ListGameServerConfigsResponse extends Google_Collection
+class Google_Service_SASPortalTesting_SasPortalListDeploymentsResponse extends Google_Collection
 {
-  protected $collection_key = 'unreachable';
-  protected $gameServerConfigsType = 'Google_Service_GameServices_GameServerConfig';
-  protected $gameServerConfigsDataType = 'array';
+  protected $collection_key = 'deployments';
+  protected $deploymentsType = 'Google_Service_SASPortalTesting_SasPortalDeployment';
+  protected $deploymentsDataType = 'array';
   public $nextPageToken;
-  public $unreachable;
 
   /**
-   * @param Google_Service_GameServices_GameServerConfig
+   * @param Google_Service_SASPortalTesting_SasPortalDeployment
    */
-  public function setGameServerConfigs($gameServerConfigs)
+  public function setDeployments($deployments)
   {
-    $this->gameServerConfigs = $gameServerConfigs;
+    $this->deployments = $deployments;
   }
   /**
-   * @return Google_Service_GameServices_GameServerConfig
+   * @return Google_Service_SASPortalTesting_SasPortalDeployment
    */
-  public function getGameServerConfigs()
+  public function getDeployments()
   {
-    return $this->gameServerConfigs;
+    return $this->deployments;
   }
   public function setNextPageToken($nextPageToken)
   {
@@ -44,13 +43,5 @@ class Google_Service_GameServices_ListGameServerConfigsResponse extends Google_C
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  public function setUnreachable($unreachable)
-  {
-    $this->unreachable = $unreachable;
-  }
-  public function getUnreachable()
-  {
-    return $this->unreachable;
   }
 }

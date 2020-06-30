@@ -15,32 +15,23 @@
  * the License.
  */
 
-class Google_Service_GameServices_TargetFleetAutoscaler extends Google_Model
+class Google_Service_CloudBuild_SlackDelivery extends Google_Model
 {
-  public $name;
-  protected $specSourceType = 'Google_Service_GameServices_SpecSource';
-  protected $specSourceDataType = '';
+  protected $webhookUriType = 'Google_Service_CloudBuild_NotifierSecretRef';
+  protected $webhookUriDataType = '';
 
-  public function setName($name)
+  /**
+   * @param Google_Service_CloudBuild_NotifierSecretRef
+   */
+  public function setWebhookUri(Google_Service_CloudBuild_NotifierSecretRef $webhookUri)
   {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    $this->webhookUri = $webhookUri;
   }
   /**
-   * @param Google_Service_GameServices_SpecSource
+   * @return Google_Service_CloudBuild_NotifierSecretRef
    */
-  public function setSpecSource(Google_Service_GameServices_SpecSource $specSource)
+  public function getWebhookUri()
   {
-    $this->specSource = $specSource;
-  }
-  /**
-   * @return Google_Service_GameServices_SpecSource
-   */
-  public function getSpecSource()
-  {
-    return $this->specSource;
+    return $this->webhookUri;
   }
 }

@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_GameServices_FleetConfig extends Google_Model
+class Google_Service_CloudBuild_NotifierSecretRef extends Google_Model
 {
-  public $fleetSpec;
-  public $name;
+  public $secretRef;
 
-  public function setFleetSpec($fleetSpec)
+  public function setSecretRef($secretRef)
   {
-    $this->fleetSpec = $fleetSpec;
+    $this->secretRef = $secretRef;
   }
-  public function getFleetSpec()
+  public function getSecretRef()
   {
-    return $this->fleetSpec;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->secretRef;
   }
 }

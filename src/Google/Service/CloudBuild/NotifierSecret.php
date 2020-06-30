@@ -15,11 +15,10 @@
  * the License.
  */
 
-class Google_Service_GameServices_TargetFleet extends Google_Model
+class Google_Service_CloudBuild_NotifierSecret extends Google_Model
 {
   public $name;
-  protected $specSourceType = 'Google_Service_GameServices_SpecSource';
-  protected $specSourceDataType = '';
+  public $value;
 
   public function setName($name)
   {
@@ -29,18 +28,12 @@ class Google_Service_GameServices_TargetFleet extends Google_Model
   {
     return $this->name;
   }
-  /**
-   * @param Google_Service_GameServices_SpecSource
-   */
-  public function setSpecSource(Google_Service_GameServices_SpecSource $specSource)
+  public function setValue($value)
   {
-    $this->specSource = $specSource;
+    $this->value = $value;
   }
-  /**
-   * @return Google_Service_GameServices_SpecSource
-   */
-  public function getSpecSource()
+  public function getValue()
   {
-    return $this->specSource;
+    return $this->value;
   }
 }
