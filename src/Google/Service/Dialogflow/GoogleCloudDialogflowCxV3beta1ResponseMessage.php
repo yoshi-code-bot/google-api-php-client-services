@@ -27,6 +27,8 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessage ex
   protected $liveAgentHandoffDataType = '';
   protected $mixedAudioType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudio';
   protected $mixedAudioDataType = '';
+  protected $outputAudioTextType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText';
+  protected $outputAudioTextDataType = '';
   public $payload;
   protected $playAudioType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudio';
   protected $playAudioDataType = '';
@@ -102,6 +104,20 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessage ex
   public function getMixedAudio()
   {
     return $this->mixedAudio;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText
+   */
+  public function setOutputAudioText(Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText $outputAudioText)
+  {
+    $this->outputAudioText = $outputAudioText;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText
+   */
+  public function getOutputAudioText()
+  {
+    return $this->outputAudioText;
   }
   public function setPayload($payload)
   {
