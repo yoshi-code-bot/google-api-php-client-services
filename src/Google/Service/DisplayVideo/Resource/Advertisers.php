@@ -52,9 +52,6 @@ class Google_Service_DisplayVideo_Resource_Advertisers extends Google_Service_Re
    * belongs to.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Requested page size. The size must be an integer
-   * between `1` and `5000`. If unspecified, the default is '5000'. Returns error
-   * code `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string pageToken A token that lets the client fetch the next page
    * of results. Typically, this is the value of next_page_token returned from the
    * previous call to `BulkListAdvertiserAssignedTargetingOptions` method. If not
@@ -73,6 +70,9 @@ class Google_Service_DisplayVideo_Resource_Advertisers extends Google_Service_Re
    * `targetingType="TARGETING_TYPE_CHANNEL"`
    *
    * The length of this field should be no more than 500 characters.
+   * @opt_param int pageSize Requested page size. The size must be an integer
+   * between `1` and `5000`. If unspecified, the default is '5000'. Returns error
+   * code `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *
@@ -141,6 +141,11 @@ class Google_Service_DisplayVideo_Resource_Advertisers extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string partnerId Required. The ID of the partner that the fetched
+   * advertisers should all belong to. The system only supports listing
+   * advertisers for one partner at a time.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`.
    * @opt_param string filter Allows filtering by advertiser properties.
    *
    * Supported syntax:
@@ -157,11 +162,6 @@ class Google_Service_DisplayVideo_Resource_Advertisers extends Google_Service_Re
    * `entityStatus="ENTITY_STATUS_ACTIVE"`
    *
    * The length of this field should be no more than 500 characters.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`.
-   * @opt_param string partnerId Required. The ID of the partner that the fetched
-   * advertisers should all belong to. The system only supports listing
-   * advertisers for one partner at a time.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *

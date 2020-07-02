@@ -15,25 +15,14 @@
  * the License.
  */
 
-class Google_Service_Games_RoomAutoMatchStatus extends Google_Model
+/**
+ * The "systemapks" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $systemapks = $androidpublisherService->systemapks;
+ *  </code>
+ */
+class Google_Service_AndroidPublisher_Resource_Systemapks extends Google_Service_Resource
 {
-  public $kind;
-  public $waitEstimateSeconds;
-
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setWaitEstimateSeconds($waitEstimateSeconds)
-  {
-    $this->waitEstimateSeconds = $waitEstimateSeconds;
-  }
-  public function getWaitEstimateSeconds()
-  {
-    return $this->waitEstimateSeconds;
-  }
 }

@@ -15,32 +15,32 @@
  * the License.
  */
 
-class Google_Service_Games_PushTokenId extends Google_Model
+class Google_Service_AndroidPublisher_Variant extends Google_Model
 {
-  protected $iosType = 'Google_Service_Games_PushTokenIdIos';
-  protected $iosDataType = '';
-  public $kind;
+  protected $deviceSpecType = 'Google_Service_AndroidPublisher_DeviceSpec';
+  protected $deviceSpecDataType = '';
+  public $variantId;
 
   /**
-   * @param Google_Service_Games_PushTokenIdIos
+   * @param Google_Service_AndroidPublisher_DeviceSpec
    */
-  public function setIos(Google_Service_Games_PushTokenIdIos $ios)
+  public function setDeviceSpec(Google_Service_AndroidPublisher_DeviceSpec $deviceSpec)
   {
-    $this->ios = $ios;
+    $this->deviceSpec = $deviceSpec;
   }
   /**
-   * @return Google_Service_Games_PushTokenIdIos
+   * @return Google_Service_AndroidPublisher_DeviceSpec
    */
-  public function getIos()
+  public function getDeviceSpec()
   {
-    return $this->ios;
+    return $this->deviceSpec;
   }
-  public function setKind($kind)
+  public function setVariantId($variantId)
   {
-    $this->kind = $kind;
+    $this->variantId = $variantId;
   }
-  public function getKind()
+  public function getVariantId()
   {
-    return $this->kind;
+    return $this->variantId;
   }
 }

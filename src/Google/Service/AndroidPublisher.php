@@ -51,6 +51,7 @@ class Google_Service_AndroidPublisher extends Google_Service
   public $purchases_subscriptions;
   public $purchases_voidedpurchases;
   public $reviews;
+  public $systemapks_variants;
   
   /**
    * Constructs the internal representation of the AndroidPublisher service.
@@ -63,7 +64,7 @@ class Google_Service_AndroidPublisher extends Google_Service
     parent::__construct($client);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/androidpublisher';
+    $this->batchPath = 'batch/androidpublisher/v3';
     $this->version = 'v3';
     $this->serviceName = 'androidpublisher';
 
@@ -895,6 +896,10 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'startIndex' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -902,10 +907,6 @@ class Google_Service_AndroidPublisher extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'token' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -1204,15 +1205,7 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'token' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'endTime' => array(
+                'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1220,11 +1213,19 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'type' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'startTime' => array(
+                'startIndex' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'token' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1267,21 +1268,21 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'translationLanguage' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'startIndex' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'token' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'translationLanguage' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'reply' => array(
@@ -1294,6 +1295,86 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'required' => true,
                 ),
                 'reviewId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->systemapks_variants = new Google_Service_AndroidPublisher_Resource_SystemapksVariants(
+        $this,
+        $this->serviceName,
+        'variants',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'download' => array(
+              'path' => 'androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'variantId' => array(
+                  'location' => 'path',
+                  'type' => 'integer',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'variantId' => array(
+                  'location' => 'path',
+                  'type' => 'integer',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

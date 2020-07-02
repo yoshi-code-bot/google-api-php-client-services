@@ -15,34 +15,24 @@
  * the License.
  */
 
-class Google_Service_Games_AnonymousPlayer extends Google_Model
+class Google_Service_AndroidPublisher_SystemApksListResponse extends Google_Collection
 {
-  public $avatarImageUrl;
-  public $displayName;
-  public $kind;
+  protected $collection_key = 'variants';
+  protected $variantsType = 'Google_Service_AndroidPublisher_Variant';
+  protected $variantsDataType = 'array';
 
-  public function setAvatarImageUrl($avatarImageUrl)
+  /**
+   * @param Google_Service_AndroidPublisher_Variant
+   */
+  public function setVariants($variants)
   {
-    $this->avatarImageUrl = $avatarImageUrl;
+    $this->variants = $variants;
   }
-  public function getAvatarImageUrl()
+  /**
+   * @return Google_Service_AndroidPublisher_Variant
+   */
+  public function getVariants()
   {
-    return $this->avatarImageUrl;
-  }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->variants;
   }
 }
