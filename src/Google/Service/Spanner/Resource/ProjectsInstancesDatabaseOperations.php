@@ -72,11 +72,11 @@ class Google_Service_Spanner_Resource_ProjectsInstancesDatabaseOperations extend
    * "backup_howl".     * The restored database's name contains "restored_howl".
    * * The operation started before 2018-03-28T14:50:00Z.     * The operation
    * resulted in an error.
+   * @opt_param int pageSize Number of operations to be returned in the response.
+   * If 0 or less, defaults to the server's maximum allowed page size.
    * @opt_param string pageToken If non-empty, `page_token` should contain a
    * next_page_token from a previous ListDatabaseOperationsResponse to the same
    * `parent` and with the same `filter`.
-   * @opt_param int pageSize Number of operations to be returned in the response.
-   * If 0 or less, defaults to the server's maximum allowed page size.
    * @return Google_Service_Spanner_ListDatabaseOperationsResponse
    */
   public function listProjectsInstancesDatabaseOperations($parent, $optParams = array())
