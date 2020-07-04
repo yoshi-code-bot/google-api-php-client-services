@@ -65,9 +65,9 @@ class Google_Service_ArtifactRegistry_Resource_ProjectsLocationsRepositoriesPack
    * listed.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string view The view that should be returned in the response.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request, if any.
-   * @opt_param string view The view that should be returned in the response.
    * @opt_param int pageSize The maximum number of versions to return.
    * @return Google_Service_ArtifactRegistry_ListVersionsResponse
    */
