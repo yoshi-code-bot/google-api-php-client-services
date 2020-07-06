@@ -25,6 +25,8 @@ class Google_Service_Games_Player extends Google_Model
   protected $experienceInfoDataType = '';
   public $friendStatus;
   public $kind;
+  protected $lastPlayedWithType = 'Google_Service_Games_Played';
+  protected $lastPlayedWithDataType = '';
   protected $nameType = 'Google_Service_Games_PlayerName';
   protected $nameDataType = '';
   public $originalPlayerId;
@@ -94,6 +96,20 @@ class Google_Service_Games_Player extends Google_Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param Google_Service_Games_Played
+   */
+  public function setLastPlayedWith(Google_Service_Games_Played $lastPlayedWith)
+  {
+    $this->lastPlayedWith = $lastPlayedWith;
+  }
+  /**
+   * @return Google_Service_Games_Played
+   */
+  public function getLastPlayedWith()
+  {
+    return $this->lastPlayedWith;
   }
   /**
    * @param Google_Service_Games_PlayerName
