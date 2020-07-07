@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_Games_TurnBasedMatchDataRequest extends Google_Model
+class Google_Service_YouTube_RelatedEntity extends Google_Model
 {
-  public $data;
-  public $kind;
+  protected $entityType = 'Google_Service_YouTube_Entity';
+  protected $entityDataType = '';
 
-  public function setData($data)
+  /**
+   * @param Google_Service_YouTube_Entity
+   */
+  public function setEntity(Google_Service_YouTube_Entity $entity)
   {
-    $this->data = $data;
+    $this->entity = $entity;
   }
-  public function getData()
+  /**
+   * @return Google_Service_YouTube_Entity
+   */
+  public function getEntity()
   {
-    return $this->data;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->entity;
   }
 }

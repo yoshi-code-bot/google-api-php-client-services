@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_Games_AnonymousPlayer extends Google_Model
+class Google_Service_YouTube_ThirdPartyLinkStatus extends Google_Model
 {
-  public $avatarImageUrl;
-  public $displayName;
-  public $kind;
+  public $linkStatus;
 
-  public function setAvatarImageUrl($avatarImageUrl)
+  public function setLinkStatus($linkStatus)
   {
-    $this->avatarImageUrl = $avatarImageUrl;
+    $this->linkStatus = $linkStatus;
   }
-  public function getAvatarImageUrl()
+  public function getLinkStatus()
   {
-    return $this->avatarImageUrl;
-  }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->linkStatus;
   }
 }

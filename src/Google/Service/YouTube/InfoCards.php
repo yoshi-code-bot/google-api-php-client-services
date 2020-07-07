@@ -15,42 +15,24 @@
  * the License.
  */
 
-class Google_Service_Games_RoomList extends Google_Collection
+class Google_Service_YouTube_InfoCards extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_Games_Room';
+  protected $itemsType = 'Google_Service_YouTube_InfoCard';
   protected $itemsDataType = 'array';
-  public $kind;
-  public $nextPageToken;
 
   /**
-   * @param Google_Service_Games_Room
+   * @param Google_Service_YouTube_InfoCard
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_Games_Room
+   * @return Google_Service_YouTube_InfoCard
    */
   public function getItems()
   {
     return $this->items;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setNextPageToken($nextPageToken)
-  {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken()
-  {
-    return $this->nextPageToken;
   }
 }

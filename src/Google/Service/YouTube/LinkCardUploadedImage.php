@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Games_TurnBasedMatchData extends Google_Model
+class Google_Service_YouTube_LinkCardUploadedImage extends Google_Model
 {
-  public $data;
-  public $dataAvailable;
-  public $kind;
+  public $imageFile;
+  public $version;
 
-  public function setData($data)
+  public function setImageFile($imageFile)
   {
-    $this->data = $data;
+    $this->imageFile = $imageFile;
   }
-  public function getData()
+  public function getImageFile()
   {
-    return $this->data;
+    return $this->imageFile;
   }
-  public function setDataAvailable($dataAvailable)
+  public function setVersion($version)
   {
-    $this->dataAvailable = $dataAvailable;
+    $this->version = $version;
   }
-  public function getDataAvailable()
+  public function getVersion()
   {
-    return $this->dataAvailable;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->version;
   }
 }

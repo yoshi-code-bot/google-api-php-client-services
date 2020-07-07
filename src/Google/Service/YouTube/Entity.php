@@ -15,32 +15,34 @@
  * the License.
  */
 
-class Google_Service_Games_PushTokenId extends Google_Model
+class Google_Service_YouTube_Entity extends Google_Model
 {
-  protected $iosType = 'Google_Service_Games_PushTokenIdIos';
-  protected $iosDataType = '';
-  public $kind;
+  public $id;
+  public $typeId;
+  public $url;
 
-  /**
-   * @param Google_Service_Games_PushTokenIdIos
-   */
-  public function setIos(Google_Service_Games_PushTokenIdIos $ios)
+  public function setId($id)
   {
-    $this->ios = $ios;
+    $this->id = $id;
   }
-  /**
-   * @return Google_Service_Games_PushTokenIdIos
-   */
-  public function getIos()
+  public function getId()
   {
-    return $this->ios;
+    return $this->id;
   }
-  public function setKind($kind)
+  public function setTypeId($typeId)
   {
-    $this->kind = $kind;
+    $this->typeId = $typeId;
   }
-  public function getKind()
+  public function getTypeId()
   {
-    return $this->kind;
+    return $this->typeId;
+  }
+  public function setUrl($url)
+  {
+    $this->url = $url;
+  }
+  public function getUrl()
+  {
+    return $this->url;
   }
 }

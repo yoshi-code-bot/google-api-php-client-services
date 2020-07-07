@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Games_RoomModification extends Google_Model
+class Google_Service_YouTube_VideoCard extends Google_Model
 {
-  public $kind;
-  public $modifiedTimestampMillis;
-  public $participantId;
+  public $customMessage;
+  public $playbackStartOffset;
+  public $videoId;
 
-  public function setKind($kind)
+  public function setCustomMessage($customMessage)
   {
-    $this->kind = $kind;
+    $this->customMessage = $customMessage;
   }
-  public function getKind()
+  public function getCustomMessage()
   {
-    return $this->kind;
+    return $this->customMessage;
   }
-  public function setModifiedTimestampMillis($modifiedTimestampMillis)
+  public function setPlaybackStartOffset($playbackStartOffset)
   {
-    $this->modifiedTimestampMillis = $modifiedTimestampMillis;
+    $this->playbackStartOffset = $playbackStartOffset;
   }
-  public function getModifiedTimestampMillis()
+  public function getPlaybackStartOffset()
   {
-    return $this->modifiedTimestampMillis;
+    return $this->playbackStartOffset;
   }
-  public function setParticipantId($participantId)
+  public function setVideoId($videoId)
   {
-    $this->participantId = $participantId;
+    $this->videoId = $videoId;
   }
-  public function getParticipantId()
+  public function getVideoId()
   {
-    return $this->participantId;
+    return $this->videoId;
   }
 }

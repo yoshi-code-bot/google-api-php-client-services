@@ -16,34 +16,29 @@
  */
 
 /**
- * The "videoCategories" collection of methods.
+ * The "infocards" collection of methods.
  * Typical usage is:
  *  <code>
  *   $youtubeService = new Google_Service_YouTube(...);
- *   $videoCategories = $youtubeService->videoCategories;
+ *   $infocards = $youtubeService->infocards;
  *  </code>
  */
-class Google_Service_YouTube_Resource_VideoCategories extends Google_Service_Resource
+class Google_Service_YouTube_Resource_YoutubeV3Infocards extends Google_Service_Resource
 {
   /**
-   * Retrieves a list of resources, possibly filtered.
-   * (videoCategories.listVideoCategories)
+   * Retrieves all infocards for a given video. (infocards.listYoutubeV3Infocards)
    *
-   * @param string|array $part The part parameter specifies the videoCategory
-   * resource properties that the API response will include. Set the parameter
-   * value to snippet.
+   * @param string|array $part The properties to return.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string hl
-   * @opt_param string id Returns the video categories with the given IDs for
-   * Stubby or Apiary.
-   * @opt_param string regionCode
-   * @return Google_Service_YouTube_VideoCategoryListResponse
+   * @opt_param string videoId Encrypted id of the video.
+   * @opt_param string onBehalfOfContentOwner Content owner of the video.
+   * @return Google_Service_YouTube_InfocardListResponse
    */
-  public function listVideoCategories($part, $optParams = array())
+  public function listYoutubeV3Infocards($part, $optParams = array())
   {
     $params = array('part' => $part);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_YouTube_VideoCategoryListResponse");
+    return $this->call('list', array($params), "Google_Service_YouTube_InfocardListResponse");
   }
 }

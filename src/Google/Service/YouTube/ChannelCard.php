@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Games_RoomClientAddress extends Google_Model
+class Google_Service_YouTube_ChannelCard extends Google_Model
 {
-  public $kind;
-  public $xmppAddress;
+  public $channelId;
+  public $customMessage;
 
-  public function setKind($kind)
+  public function setChannelId($channelId)
   {
-    $this->kind = $kind;
+    $this->channelId = $channelId;
   }
-  public function getKind()
+  public function getChannelId()
   {
-    return $this->kind;
+    return $this->channelId;
   }
-  public function setXmppAddress($xmppAddress)
+  public function setCustomMessage($customMessage)
   {
-    $this->xmppAddress = $xmppAddress;
+    $this->customMessage = $customMessage;
   }
-  public function getXmppAddress()
+  public function getCustomMessage()
   {
-    return $this->xmppAddress;
+    return $this->customMessage;
   }
 }

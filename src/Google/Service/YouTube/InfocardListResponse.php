@@ -15,24 +15,31 @@
  * the License.
  */
 
-class Google_Service_Games_TurnBasedMatchSync extends Google_Collection
+class Google_Service_YouTube_InfocardListResponse extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_Games_TurnBasedMatch';
+  public $etag;
+  protected $itemsType = 'Google_Service_YouTube_InfoCard';
   protected $itemsDataType = 'array';
   public $kind;
-  public $moreAvailable;
-  public $nextPageToken;
 
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
+  }
   /**
-   * @param Google_Service_Games_TurnBasedMatch
+   * @param Google_Service_YouTube_InfoCard
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_Games_TurnBasedMatch
+   * @return Google_Service_YouTube_InfoCard
    */
   public function getItems()
   {
@@ -45,21 +52,5 @@ class Google_Service_Games_TurnBasedMatchSync extends Google_Collection
   public function getKind()
   {
     return $this->kind;
-  }
-  public function setMoreAvailable($moreAvailable)
-  {
-    $this->moreAvailable = $moreAvailable;
-  }
-  public function getMoreAvailable()
-  {
-    return $this->moreAvailable;
-  }
-  public function setNextPageToken($nextPageToken)
-  {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken()
-  {
-    return $this->nextPageToken;
   }
 }

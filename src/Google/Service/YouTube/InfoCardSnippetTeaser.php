@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Games_Played extends Google_Model
+class Google_Service_YouTube_InfoCardSnippetTeaser extends Google_Model
 {
-  public $autoMatched;
-  public $kind;
-  public $timeMillis;
+  public $teaserStartOffset;
+  public $teaserText;
 
-  public function setAutoMatched($autoMatched)
+  public function setTeaserStartOffset($teaserStartOffset)
   {
-    $this->autoMatched = $autoMatched;
+    $this->teaserStartOffset = $teaserStartOffset;
   }
-  public function getAutoMatched()
+  public function getTeaserStartOffset()
   {
-    return $this->autoMatched;
+    return $this->teaserStartOffset;
   }
-  public function setKind($kind)
+  public function setTeaserText($teaserText)
   {
-    $this->kind = $kind;
+    $this->teaserText = $teaserText;
   }
-  public function getKind()
+  public function getTeaserText()
   {
-    return $this->kind;
-  }
-  public function setTimeMillis($timeMillis)
-  {
-    $this->timeMillis = $timeMillis;
-  }
-  public function getTimeMillis()
-  {
-    return $this->timeMillis;
+    return $this->teaserText;
   }
 }

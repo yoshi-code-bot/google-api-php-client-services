@@ -15,29 +15,34 @@
  * the License.
  */
 
-class Google_Service_Games_PushTokenIdIos extends Google_Model
+class Google_Service_YouTube_PlaylistCard extends Google_Model
 {
-  protected $internal_gapi_mappings = array(
-        "apnsDeviceToken" => "apns_device_token",
-        "apnsEnvironment" => "apns_environment",
-  );
-  public $apnsDeviceToken;
-  public $apnsEnvironment;
+  public $customMessage;
+  public $playlistId;
+  public $startVideoId;
 
-  public function setApnsDeviceToken($apnsDeviceToken)
+  public function setCustomMessage($customMessage)
   {
-    $this->apnsDeviceToken = $apnsDeviceToken;
+    $this->customMessage = $customMessage;
   }
-  public function getApnsDeviceToken()
+  public function getCustomMessage()
   {
-    return $this->apnsDeviceToken;
+    return $this->customMessage;
   }
-  public function setApnsEnvironment($apnsEnvironment)
+  public function setPlaylistId($playlistId)
   {
-    $this->apnsEnvironment = $apnsEnvironment;
+    $this->playlistId = $playlistId;
   }
-  public function getApnsEnvironment()
+  public function getPlaylistId()
   {
-    return $this->apnsEnvironment;
+    return $this->playlistId;
+  }
+  public function setStartVideoId($startVideoId)
+  {
+    $this->startVideoId = $startVideoId;
+  }
+  public function getStartVideoId()
+  {
+    return $this->startVideoId;
   }
 }

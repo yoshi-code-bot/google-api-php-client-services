@@ -15,33 +15,16 @@
  * the License.
  */
 
-class Google_Service_Games_RoomP2PStatuses extends Google_Collection
+class Google_Service_YouTube_AbuseType extends Google_Model
 {
-  protected $collection_key = 'updates';
-  public $kind;
-  protected $updatesType = 'Google_Service_Games_RoomP2PStatus';
-  protected $updatesDataType = 'array';
+  public $id;
 
-  public function setKind($kind)
+  public function setId($id)
   {
-    $this->kind = $kind;
+    $this->id = $id;
   }
-  public function getKind()
+  public function getId()
   {
-    return $this->kind;
-  }
-  /**
-   * @param Google_Service_Games_RoomP2PStatus
-   */
-  public function setUpdates($updates)
-  {
-    $this->updates = $updates;
-  }
-  /**
-   * @return Google_Service_Games_RoomP2PStatus
-   */
-  public function getUpdates()
-  {
-    return $this->updates;
+    return $this->id;
   }
 }

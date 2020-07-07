@@ -15,11 +15,30 @@
  * the License.
  */
 
-class Google_Service_Games_RoomAutoMatchStatus extends Google_Model
+class Google_Service_YouTube_InfoCard extends Google_Model
 {
+  public $etag;
+  public $id;
   public $kind;
-  public $waitEstimateSeconds;
+  protected $snippetType = 'Google_Service_YouTube_InfoCardSnippet';
+  protected $snippetDataType = '';
 
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
+  }
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  public function getId()
+  {
+    return $this->id;
+  }
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -28,12 +47,18 @@ class Google_Service_Games_RoomAutoMatchStatus extends Google_Model
   {
     return $this->kind;
   }
-  public function setWaitEstimateSeconds($waitEstimateSeconds)
+  /**
+   * @param Google_Service_YouTube_InfoCardSnippet
+   */
+  public function setSnippet(Google_Service_YouTube_InfoCardSnippet $snippet)
   {
-    $this->waitEstimateSeconds = $waitEstimateSeconds;
+    $this->snippet = $snippet;
   }
-  public function getWaitEstimateSeconds()
+  /**
+   * @return Google_Service_YouTube_InfoCardSnippet
+   */
+  public function getSnippet()
   {
-    return $this->waitEstimateSeconds;
+    return $this->snippet;
   }
 }
