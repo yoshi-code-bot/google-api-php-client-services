@@ -214,11 +214,11 @@ class Google_Service_AndroidEnterprise extends Google_Service
               'path' => 'androidenterprise/v1/enterprises/completeSignup',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'completionToken' => array(
+                'enterpriseToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'enterpriseToken' => array(
+                'completionToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -948,10 +948,6 @@ class Google_Service_AndroidEnterprise extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -961,6 +957,10 @@ class Google_Service_AndroidEnterprise extends Google_Service
                   'type' => 'string',
                 ),
                 'language' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'query' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
