@@ -59,6 +59,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    *
    * @opt_param string tfmt Convert the captions into this format. Supported
    * options are sbv, srt, and vtt.
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is be on behalf of
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -71,8 +73,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * specified YouTube content owner.
    * @opt_param string tlang tlang is the language code; machine translate the
    * captions into this language.
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is be on behalf of
    */
   public function download($id, $optParams = array())
   {
@@ -90,6 +90,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    *
    * @opt_param bool sync Extra parameter to allow automatically syncing the
    * uploaded caption/transcript with the audio.
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is be on behalf of
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -100,8 +102,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * having to provide authentication credentials for each individual channel. The
    * actual CMS account that the user authenticates with must be linked to the
    * specified YouTube content owner.
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is be on behalf of
    * @return Google_Service_YouTube_Caption
    */
   public function insert($part, Google_Service_YouTube_Caption $postBody, $optParams = array())
@@ -119,6 +119,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * part names that you can include in the parameter value are id and snippet.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string id Returns the captions with the given IDs for Stubby or
+   * Apiary.
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -131,8 +133,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * specified YouTube content owner.
    * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
    * request is on behalf of.
-   * @opt_param string id Returns the captions with the given IDs for Stubby or
-   * Apiary.
    * @return Google_Service_YouTube_CaptionListResponse
    */
   public function listCaptions($videoId, $part, $optParams = array())

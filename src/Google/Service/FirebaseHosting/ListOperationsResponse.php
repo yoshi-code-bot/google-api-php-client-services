@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_FirebaseHosting_ListVersionsResponse extends Google_Collection
+class Google_Service_FirebaseHosting_ListOperationsResponse extends Google_Collection
 {
-  protected $collection_key = 'versions';
+  protected $collection_key = 'operations';
   public $nextPageToken;
-  protected $versionsType = 'Google_Service_FirebaseHosting_Version';
-  protected $versionsDataType = 'array';
+  protected $operationsType = 'Google_Service_FirebaseHosting_Operation';
+  protected $operationsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
   {
@@ -31,17 +31,17 @@ class Google_Service_FirebaseHosting_ListVersionsResponse extends Google_Collect
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_FirebaseHosting_Version
+   * @param Google_Service_FirebaseHosting_Operation
    */
-  public function setVersions($versions)
+  public function setOperations($operations)
   {
-    $this->versions = $versions;
+    $this->operations = $operations;
   }
   /**
-   * @return Google_Service_FirebaseHosting_Version
+   * @return Google_Service_FirebaseHosting_Operation
    */
-  public function getVersions()
+  public function getOperations()
   {
-    return $this->versions;
+    return $this->operations;
   }
 }

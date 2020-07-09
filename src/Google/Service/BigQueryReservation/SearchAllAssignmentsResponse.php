@@ -15,26 +15,26 @@
  * the License.
  */
 
-class Google_Service_FirebaseHosting_ListDomainsResponse extends Google_Collection
+class Google_Service_BigQueryReservation_SearchAllAssignmentsResponse extends Google_Collection
 {
-  protected $collection_key = 'domains';
-  protected $domainsType = 'Google_Service_FirebaseHosting_Domain';
-  protected $domainsDataType = 'array';
+  protected $collection_key = 'assignments';
+  protected $assignmentsType = 'Google_Service_BigQueryReservation_Assignment';
+  protected $assignmentsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_FirebaseHosting_Domain
+   * @param Google_Service_BigQueryReservation_Assignment
    */
-  public function setDomains($domains)
+  public function setAssignments($assignments)
   {
-    $this->domains = $domains;
+    $this->assignments = $assignments;
   }
   /**
-   * @return Google_Service_FirebaseHosting_Domain
+   * @return Google_Service_BigQueryReservation_Assignment
    */
-  public function getDomains()
+  public function getAssignments()
   {
-    return $this->domains;
+    return $this->assignments;
   }
   public function setNextPageToken($nextPageToken)
   {

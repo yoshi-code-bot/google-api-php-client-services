@@ -95,9 +95,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersChannelsSites extends Goog
    * requested sites belong.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *
@@ -126,6 +123,9 @@ class Google_Service_DisplayVideo_Resource_AdvertisersChannelsSites extends Goog
    *
    * * All sites for which the URL or app ID contains "google": `urlOrAppId :
    * "google"`
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListSitesResponse
    */
   public function listAdvertisersChannelsSites($advertiserId, $channelId, $optParams = array())

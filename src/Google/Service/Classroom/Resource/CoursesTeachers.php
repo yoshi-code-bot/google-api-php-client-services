@@ -122,8 +122,8 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
-   * @opt_param int pageSize Maximum number of items to return. Zero means no
-   * maximum.
+   * @opt_param int pageSize Maximum number of items to return. The default is 30
+   * if unspecified or `0`.
    *
    * The server may return fewer than the specified number of results.
    * @return Google_Service_Classroom_ListTeachersResponse

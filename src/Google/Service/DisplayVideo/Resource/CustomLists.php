@@ -50,6 +50,9 @@ class Google_Service_DisplayVideo_Resource_CustomLists extends Google_Service_Re
    *
    * @opt_param string advertiserId The ID of the DV360 advertiser that has access
    * to the fetched custom lists.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @opt_param string filter Allows filtering by custom list fields.
    *
    * Supported syntax:
@@ -64,9 +67,6 @@ class Google_Service_DisplayVideo_Resource_CustomLists extends Google_Service_Re
    * : "Google"`.
    *
    * The length of this field should be no more than 500 characters.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListCustomLists` method. If not specified, the first

@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_FirebaseHosting_ActingUser extends Google_Model
+class Google_Service_FirebaseHosting_CancelOperationRequest extends Google_Model
 {
-  public $email;
-  public $imageUrl;
-
-  public function setEmail($email)
-  {
-    $this->email = $email;
-  }
-  public function getEmail()
-  {
-    return $this->email;
-  }
-  public function setImageUrl($imageUrl)
-  {
-    $this->imageUrl = $imageUrl;
-  }
-  public function getImageUrl()
-  {
-    return $this->imageUrl;
-  }
 }
