@@ -88,12 +88,15 @@ class Google_Service_Monitoring_Resource_Services extends Google_Service_Resourc
    * results to return. When 0, use default page size.
    * @opt_param string filter A filter specifying what Services to return. The
    * filter currently supports the following fields: - `identifier_case` -
-   * `app_engine.module_id` - `cloud_endpoints.service` - `cluster_istio.location`
-   * - `cluster_istio.cluster_name` - `cluster_istio.service_namespace` -
-   * `cluster_istio.service_name` identifier_case refers to which option in the
-   * identifier oneof is populated. For example, the filter identifier_case =
-   * "CUSTOM" would match all services with a value for the custom field. Valid
-   * options are "CUSTOM", "APP_ENGINE", "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+   * `app_engine.module_id` - `cloud_endpoints.service` - `mesh_istio.mesh_uid` -
+   * `mesh_istio.service_namespace` - `mesh_istio.service_name` -
+   * `cluster_istio.location` (deprecated) - `cluster_istio.cluster_name`
+   * (deprecated) - `cluster_istio.service_namespace` (deprecated) -
+   * `cluster_istio.service_name` (deprecated) identifier_case refers to which
+   * option in the identifier oneof is populated. For example, the filter
+   * identifier_case = "CUSTOM" would match all services with a value for the
+   * custom field. Valid options are "CUSTOM", "APP_ENGINE", "CLOUD_ENDPOINTS",
+   * "MESH_ISTIO", and "CLUSTER_ISTIO" (deprecated),
    * @return Google_Service_Monitoring_ListServicesResponse
    */
   public function listServices($parent, $optParams = array())
