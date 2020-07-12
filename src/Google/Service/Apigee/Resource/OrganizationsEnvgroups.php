@@ -28,8 +28,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroups extends Google_Servi
   /**
    * Creates a new environment group. (envgroups.create)
    *
-   * @param string $parent Name of the organization in which to create the
-   * environment group in the following format: `organizations/{org}`.
+   * @param string $parent Required. Name of the organization in which to create
+   * the environment group in the following format: `organizations/{org}`.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroup $postBody
    * @param array $optParams Optional parameters.
    *
@@ -46,8 +46,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroups extends Google_Servi
   /**
    * Deletes an environment group. (envgroups.delete)
    *
-   * @param string $name Name of the environment group in the following format:
-   * `organizations/{org}/envgroups/{envgroup}`.
+   * @param string $name Required. Name of the environment group in the following
+   * format: `organizations/{org}/envgroups/{envgroup}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleLongrunningOperation
    */
@@ -60,8 +60,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroups extends Google_Servi
   /**
    * Gets an environment group. (envgroups.get)
    *
-   * @param string $name Name of the environment group in the following format:
-   * `organizations/{org}/envgroups/{envgroup}`.
+   * @param string $name Required. Name of the environment group in the following
+   * format: `organizations/{org}/envgroups/{envgroup}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroup
    */
@@ -74,8 +74,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroups extends Google_Servi
   /**
    * Lists all environment groups. (envgroups.listOrganizationsEnvgroups)
    *
-   * @param string $parent Name of the organization for which to list environment
-   * groups in the following format: `organizations/{org}`.
+   * @param string $parent Required. Name of the organization for which to list
+   * environment groups in the following format: `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of environment groups to return. The
@@ -93,8 +93,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroups extends Google_Servi
   /**
    * Updates an environment group. (envgroups.patch)
    *
-   * @param string $name Name of the environment group to update in the format:
-   * `organizations/{org}/envgroups/{envgroup}.
+   * @param string $name Required. Name of the environment group to update in the
+   * format: `organizations/{org}/envgroups/{envgroup}.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroup $postBody
    * @param array $optParams Optional parameters.
    *

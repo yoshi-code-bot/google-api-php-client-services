@@ -57,8 +57,8 @@ class Google_Service_Apigee_Resource_OrganizationsOperations extends Google_Serv
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The standard list page size.
-   * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
+   * @opt_param string filter The standard list filter.
    * @return Google_Service_Apigee_GoogleLongrunningListOperationsResponse
    */
   public function listOrganizationsOperations($name, $optParams = array())

@@ -29,8 +29,9 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroupsAttachments extends G
    * Creates a new attachment of an environment to an environment group.
    * (attachments.create)
    *
-   * @param string $parent EnvironmentGroup under which to create the attachment
-   * in the following format: `organizations/{org}/envgroups/{envgroup}`.
+   * @param string $parent Required. EnvironmentGroup under which to create the
+   * attachment in the following format:
+   * `organizations/{org}/envgroups/{envgroup}`.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroupAttachment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleLongrunningOperation
@@ -44,8 +45,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroupsAttachments extends G
   /**
    * Deletes an environment group attachment. (attachments.delete)
    *
-   * @param string $name Name of the environment group attachment to delete in the
-   * following format:
+   * @param string $name Required. Name of the environment group attachment to
+   * delete in the following format:
    * `organizations/{org}/envgroups/{envgroup}/attachments/{attachment}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleLongrunningOperation
@@ -59,8 +60,9 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroupsAttachments extends G
   /**
    * Gets an environment group attachment. (attachments.get)
    *
-   * @param string $name Name of the environment group attachment in the following
-   * format: `organizations/{org}/envgroups/{envgroup}/attachments/{attachment}`
+   * @param string $name Required. Name of the environment group attachment in the
+   * following format:
+   * `organizations/{org}/envgroups/{envgroup}/attachments/{attachment}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroupAttachment
    */
@@ -74,8 +76,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvgroupsAttachments extends G
    * Lists all attachments of an environment group.
    * (attachments.listOrganizationsEnvgroupsAttachments)
    *
-   * @param string $parent Name of the organization in the following format:
-   * `organizations/{org}`.
+   * @param string $parent Required. Name of the organization in the following
+   * format: `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of environment group attachments to

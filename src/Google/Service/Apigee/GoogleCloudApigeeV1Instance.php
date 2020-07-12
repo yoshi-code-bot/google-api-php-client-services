@@ -23,9 +23,9 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Instance extends Google_Model
   public $displayName;
   public $host;
   public $lastModifiedAt;
+  public $location;
   public $name;
   public $port;
-  public $region;
 
   public function setCreatedAt($createdAt)
   {
@@ -75,6 +75,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Instance extends Google_Model
   {
     return $this->lastModifiedAt;
   }
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  public function getLocation()
+  {
+    return $this->location;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -90,13 +98,5 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Instance extends Google_Model
   public function getPort()
   {
     return $this->port;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
   }
 }
