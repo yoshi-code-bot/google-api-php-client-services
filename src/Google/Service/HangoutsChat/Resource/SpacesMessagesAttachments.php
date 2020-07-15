@@ -19,26 +19,25 @@
  * The "attachments" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
- *   $attachments = $gmailService->attachments;
+ *   $chatService = new Google_Service_HangoutsChat(...);
+ *   $attachments = $chatService->attachments;
  *  </code>
  */
-class Google_Service_Gmail_Resource_UsersMessagesAttachments extends Google_Service_Resource
+class Google_Service_HangoutsChat_Resource_SpacesMessagesAttachments extends Google_Service_Resource
 {
   /**
-   * Gets the specified message attachment. (attachments.get)
+   * Gets the metadata of a message attachment. The attachment data is fetched
+   * using the media API. (attachments.get)
    *
-   * @param string $userId The user's email address. The special value `me` can be
-   * used to indicate the authenticated user.
-   * @param string $messageId The ID of the message containing the attachment.
-   * @param string $id The ID of the attachment.
+   * @param string $name Resource name of the attachment, in the form
+   * "spaces/messages/attachments".
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_MessagePartBody
+   * @return Google_Service_HangoutsChat_Attachment
    */
-  public function get($userId, $messageId, $id, $optParams = array())
+  public function get($name, $optParams = array())
   {
-    $params = array('userId' => $userId, 'messageId' => $messageId, 'id' => $id);
+    $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_MessagePartBody");
+    return $this->call('get', array($params), "Google_Service_HangoutsChat_Attachment");
   }
 }

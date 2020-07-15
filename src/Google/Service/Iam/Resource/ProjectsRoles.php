@@ -172,12 +172,12 @@ class Google_Service_Iam_Resource_ProjectsRoles extends Google_Service_Resource
    * or organization ID.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Optional pagination token returned in an earlier
+   * ListRolesResponse.
    * @opt_param int pageSize Optional limit on the number of roles to include in
    * the response.
    *
    * The default is 300, and the maximum is 1,000.
-   * @opt_param string pageToken Optional pagination token returned in an earlier
-   * ListRolesResponse.
    * @opt_param string view Optional view for the returned Role objects. When
    * `FULL` is specified, the `includedPermissions` field is returned, which
    * includes a list of all permissions in the role. The default value is `BASIC`,

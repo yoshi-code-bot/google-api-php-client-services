@@ -133,11 +133,11 @@ class Google_Service_Gmail_Resource_UsersSettings extends Google_Service_Resourc
   /**
    * Updates language settings.
    *
-   * If successful, the return object contains the displayLanguage that was saved
-   * for the user, which may differ from the value passed into the request. This
-   * is because the requested displayLanguage may not be directly supported by
-   * Gmail but have a close variant that is, and so the variant may be chosen and
-   * saved instead. (settings.updateLanguage)
+   * If successful, the return object contains the `displayLanguage` that was
+   * saved for the user, which may differ from the value passed into the request.
+   * This is because the requested `displayLanguage` may not be directly supported
+   * by Gmail but have a close variant that is, and so the variant may be chosen
+   * and saved instead. (settings.updateLanguage)
    *
    * @param string $userId User's email address.  The special value "me" can be
    * used to indicate the authenticated user.

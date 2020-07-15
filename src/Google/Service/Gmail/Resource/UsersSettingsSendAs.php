@@ -30,8 +30,8 @@ class Google_Service_Gmail_Resource_UsersSettingsSendAs extends Google_Service_R
    * will attempt to connect to the SMTP service to validate the configuration
    * before creating the alias.  If ownership verification is required for the
    * alias, a message will be sent to the email address and the resource's
-   * verification status will be set to pending; otherwise, the resource will be
-   * created with verification status set to accepted.  If a signature is
+   * verification status will be set to `pending`; otherwise, the resource will be
+   * created with verification status set to `accepted`.  If a signature is
    * provided, Gmail will sanitize the HTML before saving it with the alias.
    *
    * This method is only available to service account clients that have been
@@ -138,7 +138,7 @@ class Google_Service_Gmail_Resource_UsersSettingsSendAs extends Google_Service_R
   }
   /**
    * Sends a verification email to the specified send-as alias address. The
-   * verification status must be pending.
+   * verification status must be `pending`.
    *
    * This method is only available to service account clients that have been
    * delegated domain-wide authority. (sendAs.verify)

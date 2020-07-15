@@ -191,14 +191,14 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
    * with the service accounts, such as `projects/my-project-123`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional pagination token returned in an earlier
-   * ListServiceAccountsResponse.next_page_token.
    * @opt_param int pageSize Optional limit on the number of service accounts to
    * include in the response. Further accounts can subsequently be obtained by
    * including the ListServiceAccountsResponse.next_page_token in a subsequent
    * request.
    *
    * The default is 20, and the maximum is 100.
+   * @opt_param string pageToken Optional pagination token returned in an earlier
+   * ListServiceAccountsResponse.next_page_token.
    * @return Google_Service_Iam_ListServiceAccountsResponse
    */
   public function listProjectsServiceAccounts($name, $optParams = array())
@@ -271,19 +271,23 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
     return $this->call('setIamPolicy', array($params), "Google_Service_Iam_Policy");
   }
   /**
-   * **Note:** We are in the process of deprecating this method. Use the
-   * [`signBlob`](https://cloud.google.com/iam/help/rest-
+   * **Note:** This method is deprecated and will stop working on July 1, 2021.
+   * Use the [`signBlob`](https://cloud.google.com/iam/help/rest-
    * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service
-   * Account Credentials API instead.
+   * Account Credentials API instead. If you currently use this method, see the
+   * [migration guide](https://cloud.google.com/iam/help/credentials/migrate-api)
+   * for instructions.
    *
    * Signs a blob using the system-managed private key for a ServiceAccount.
    * (serviceAccounts.signBlob)
    *
-   * @param string $name Required. The resource name of the service account in the
-   * following format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using
-   * `-` as a wildcard for the `PROJECT_ID` will infer the project from the
-   * account. The `ACCOUNT` value can be the `email` address or the `unique_id` of
-   * the service account.
+   * @param string $name Required. Deprecated. [Migrate to Service Account
+   * Credentials API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The resource name of the service account in the following format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard
+   * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT`
+   * value can be the `email` address or the `unique_id` of the service account.
    * @param Google_Service_Iam_SignBlobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_SignBlobResponse
@@ -295,19 +299,23 @@ class Google_Service_Iam_Resource_ProjectsServiceAccounts extends Google_Service
     return $this->call('signBlob', array($params), "Google_Service_Iam_SignBlobResponse");
   }
   /**
-   * **Note:** We are in the process of deprecating this method. Use the
-   * [`signJwt`](https://cloud.google.com/iam/help/rest-
+   * **Note:** This method is deprecated and will stop working on July 1, 2021.
+   * Use the [`signJwt`](https://cloud.google.com/iam/help/rest-
    * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service
-   * Account Credentials API instead.
+   * Account Credentials API instead. If you currently use this method, see the
+   * [migration guide](https://cloud.google.com/iam/help/credentials/migrate-api)
+   * for instructions.
    *
    * Signs a JSON Web Token (JWT) using the system-managed private key for a
    * ServiceAccount. (serviceAccounts.signJwt)
    *
-   * @param string $name Required. The resource name of the service account in the
-   * following format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using
-   * `-` as a wildcard for the `PROJECT_ID` will infer the project from the
-   * account. The `ACCOUNT` value can be the `email` address or the `unique_id` of
-   * the service account.
+   * @param string $name Required. Deprecated. [Migrate to Service Account
+   * Credentials API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The resource name of the service account in the following format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard
+   * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT`
+   * value can be the `email` address or the `unique_id` of the service account.
    * @param Google_Service_Iam_SignJwtRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_SignJwtResponse

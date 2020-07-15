@@ -89,7 +89,6 @@ class Google_Service_DLP_Resource_OrganizationsLocationsStoredInfoTypes extends 
    * ID]/locations/[LOCATION-ID]
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string orderBy Comma separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case-insensitive, default
    * sorting order is ascending, redundant space characters are insignificant.
@@ -106,6 +105,7 @@ class Google_Service_DLP_Resource_OrganizationsLocationsStoredInfoTypes extends 
    * server returns a page of max size 100.
    * @opt_param string pageToken Page token to continue retrieval. Comes from
    * previous call to `ListStoredInfoTypes`.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListStoredInfoTypesResponse
    */
   public function listOrganizationsLocationsStoredInfoTypes($parent, $optParams = array())

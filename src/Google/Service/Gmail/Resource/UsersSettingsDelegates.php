@@ -26,7 +26,7 @@
 class Google_Service_Gmail_Resource_UsersSettingsDelegates extends Google_Service_Resource
 {
   /**
-   * Adds a delegate with its verification status set directly to accepted,
+   * Adds a delegate with its verification status set directly to `accepted`,
    * without sending any verification email.  The delegate user must be a member
    * of the same G Suite organization as the delegator user.
    *

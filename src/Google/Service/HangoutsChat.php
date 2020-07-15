@@ -35,6 +35,7 @@ class Google_Service_HangoutsChat extends Google_Service
   public $spaces;
   public $spaces_members;
   public $spaces_messages;
+  public $spaces_messages_attachments;
   
   /**
    * Constructs the internal representation of the HangoutsChat service.
@@ -109,13 +110,13 @@ class Google_Service_HangoutsChat extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -174,6 +175,26 @@ class Google_Service_HangoutsChat extends Google_Service
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->spaces_messages_attachments = new Google_Service_HangoutsChat_Resource_SpacesMessagesAttachments(
+        $this,
+        $this->serviceName,
+        'attachments',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
