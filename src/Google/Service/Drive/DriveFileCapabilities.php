@@ -30,6 +30,7 @@ class Google_Service_Drive_DriveFileCapabilities extends Google_Model
   public $canEdit;
   public $canListChildren;
   public $canModifyContent;
+  public $canModifyContentRestriction;
   public $canMoveChildrenOutOfDrive;
   public $canMoveChildrenOutOfTeamDrive;
   public $canMoveChildrenWithinDrive;
@@ -154,6 +155,14 @@ class Google_Service_Drive_DriveFileCapabilities extends Google_Model
   public function getCanModifyContent()
   {
     return $this->canModifyContent;
+  }
+  public function setCanModifyContentRestriction($canModifyContentRestriction)
+  {
+    $this->canModifyContentRestriction = $canModifyContentRestriction;
+  }
+  public function getCanModifyContentRestriction()
+  {
+    return $this->canModifyContentRestriction;
   }
   public function setCanMoveChildrenOutOfDrive($canMoveChildrenOutOfDrive)
   {

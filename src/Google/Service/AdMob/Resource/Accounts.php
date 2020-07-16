@@ -28,8 +28,8 @@ class Google_Service_AdMob_Resource_Accounts extends Google_Service_Resource
   /**
    * Gets information about the specified AdMob publisher account. (accounts.get)
    *
-   * @param string $name Required. Resource name of the publisher account to
-   * retrieve. Example: accounts/pub-9876543210987654
+   * @param string $name Resource name of the publisher account to retrieve.
+   * Example: accounts/pub-9876543210987654
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdMob_PublisherAccount
    */

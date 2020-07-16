@@ -35,8 +35,8 @@ class Google_Service_YouTube_Resource_YoutubeV3 extends Google_Service_Resource
    * @param Google_Service_YouTube_InfoCards $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string videoId Encrypted id of the video.
    * @opt_param string onBehalfOfContentOwner Content owner of the video.
+   * @opt_param string videoId Encrypted id of the video.
    * @return Google_Service_YouTube_InfoCards
    */
   public function infocards($part, Google_Service_YouTube_InfoCards $postBody, $optParams = array())
