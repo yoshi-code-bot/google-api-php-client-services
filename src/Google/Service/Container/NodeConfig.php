@@ -29,6 +29,7 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public $machineType;
   public $metadata;
   public $minCpuPlatform;
+  public $nodeGroup;
   public $oauthScopes;
   public $preemptible;
   protected $reservationAffinityType = 'Google_Service_Container_ReservationAffinity';
@@ -129,6 +130,14 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public function getMinCpuPlatform()
   {
     return $this->minCpuPlatform;
+  }
+  public function setNodeGroup($nodeGroup)
+  {
+    $this->nodeGroup = $nodeGroup;
+  }
+  public function getNodeGroup()
+  {
+    return $this->nodeGroup;
   }
   public function setOauthScopes($oauthScopes)
   {
