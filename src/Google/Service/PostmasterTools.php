@@ -32,7 +32,9 @@
  */
 class Google_Service_PostmasterTools extends Google_Service
 {
-
+  /** See email traffic metrics for the domains you have registered in Gmail Postmaster Tools. */
+  const POSTMASTER_READONLY =
+      "https://www.googleapis.com/auth/postmaster.readonly";
 
   public $domains;
   public $domains_trafficStats;
@@ -110,27 +112,7 @@ class Google_Service_PostmasterTools extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'startDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'startDate.day' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'startDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'endDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'endDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -138,9 +120,29 @@ class Google_Service_PostmasterTools extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'endDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'startDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),

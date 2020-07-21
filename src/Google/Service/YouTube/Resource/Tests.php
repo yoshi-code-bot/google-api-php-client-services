@@ -23,21 +23,20 @@
  *   $tests = $youtubeService->tests;
  *  </code>
  */
-class Google_Service_YouTube_Resource_YoutubeV3Tests extends Google_Service_Resource
+class Google_Service_YouTube_Resource_Tests extends Google_Service_Resource
 {
   /**
-   * POST method. (tests.create)
+   * POST method. (tests.insert)
    *
+   * @param string|array $part
    * @param Google_Service_YouTube_TestItem $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string part
    * @return Google_Service_YouTube_TestItem
    */
-  public function create(Google_Service_YouTube_TestItem $postBody, $optParams = array())
+  public function insert($part, Google_Service_YouTube_TestItem $postBody, $optParams = array())
   {
-    $params = array('postBody' => $postBody);
+    $params = array('part' => $part, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_YouTube_TestItem");
+    return $this->call('insert', array($params), "Google_Service_YouTube_TestItem");
   }
 }
