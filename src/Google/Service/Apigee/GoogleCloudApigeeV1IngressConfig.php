@@ -18,22 +18,13 @@
 class Google_Service_Apigee_GoogleCloudApigeeV1IngressConfig extends Google_Collection
 {
   protected $collection_key = 'environmentGroups';
-  public $createTime;
   protected $environmentGroupsType = 'Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroupConfig';
   protected $environmentGroupsDataType = 'array';
   public $name;
+  public $revisionCreateTime;
   public $revisionId;
-  public $sequenceNumber;
   public $uid;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
   /**
    * @param Google_Service_Apigee_GoogleCloudApigeeV1EnvironmentGroupConfig
    */
@@ -56,6 +47,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1IngressConfig extends Google_Coll
   {
     return $this->name;
   }
+  public function setRevisionCreateTime($revisionCreateTime)
+  {
+    $this->revisionCreateTime = $revisionCreateTime;
+  }
+  public function getRevisionCreateTime()
+  {
+    return $this->revisionCreateTime;
+  }
   public function setRevisionId($revisionId)
   {
     $this->revisionId = $revisionId;
@@ -63,14 +62,6 @@ class Google_Service_Apigee_GoogleCloudApigeeV1IngressConfig extends Google_Coll
   public function getRevisionId()
   {
     return $this->revisionId;
-  }
-  public function setSequenceNumber($sequenceNumber)
-  {
-    $this->sequenceNumber = $sequenceNumber;
-  }
-  public function getSequenceNumber()
-  {
-    return $this->sequenceNumber;
   }
   public function setUid($uid)
   {

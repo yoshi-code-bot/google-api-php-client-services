@@ -49,8 +49,8 @@ class Google_Service_Apigee_Resource_OrganizationsInstances extends Google_Servi
    *
    * **Note:** Not supported for Apigee hybrid. (instances.delete)
    *
-   * @param string $name Name of the instance. Use the following structure in your
-   * request:   `organizations/{org}/instance/{instance}`.
+   * @param string $name Required. Name of the instance. Use the following
+   * structure in your request:   `organizations/{org}/instance/{instance}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleLongrunningOperation
    */
@@ -65,8 +65,8 @@ class Google_Service_Apigee_Resource_OrganizationsInstances extends Google_Servi
    *
    * **Note:** Not supported for Apigee hybrid. (instances.get)
    *
-   * @param string $name Name of the instance. Use the following structure in your
-   * request:   `organizations/{org}/instances/{instance}`.
+   * @param string $name Required. Name of the instance. Use the following
+   * structure in your request:   `organizations/{org}/instances/{instance}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1Instance
    */
@@ -82,8 +82,8 @@ class Google_Service_Apigee_Resource_OrganizationsInstances extends Google_Servi
    * **Note:** Not supported for Apigee hybrid.
    * (instances.listOrganizationsInstances)
    *
-   * @param string $parent Name of the organization. Use the following structure
-   * in your request:   `organizations/{org}`.
+   * @param string $parent Required. Name of the organization. Use the following
+   * structure in your request:   `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Page token, returned from a previous

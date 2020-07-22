@@ -137,21 +137,21 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'showPreorders' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'startIndex' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'maxResults' => array(
+                'source' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -172,15 +172,15 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'upload_client_token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'drive_document_id' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'mime_type' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'upload_client_token' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -240,15 +240,15 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/familysharing/share',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'docId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'volumeId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'docId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -312,21 +312,21 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'source' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'contentVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -358,7 +358,11 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'contentVersion' => array(
+                'h' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -374,15 +378,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'contentVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'scale' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'h' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -401,7 +401,23 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'contentVersion' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'w' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'h' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -410,15 +426,15 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
+                'locale' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'updatedMin' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'w' => array(
+                'scale' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -426,25 +442,9 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'contentVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'scale' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -499,6 +499,38 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'endPosition' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'locale' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startOffset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'updatedMin' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'volumeAnnotationsVersion' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startPosition' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'updatedMax' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -507,35 +539,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startOffset' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'endPosition' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'contentVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startPosition' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'volumeAnnotationsVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'updatedMin' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -543,13 +547,9 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'contentVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -597,15 +597,15 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/myconfig/requestAccess',
               'httpMethod' => 'POST',
               'parameters' => array(
+                'cpksver' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'volumeId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'licenseTypes' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'nonce' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -613,11 +613,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'cpksver' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'volumeId' => array(
+                'nonce' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -630,9 +630,21 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'showPreorders' => array(
+                'cpksver' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'includeNonComicsSeries' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'nonce' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'features' => array(
                   'location' => 'query',
@@ -644,19 +656,7 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'nonce' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'cpksver' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'includeNonComicsSeries' => array(
+                'showPreorders' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -693,10 +693,6 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/mylibrary/annotations',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'annotationId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'source' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -704,6 +700,10 @@ class Google_Service_Books extends Google_Service
                 'showOnlySummaryInResponse' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'annotationId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'country' => array(
                   'location' => 'query',
@@ -714,7 +714,7 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/mylibrary/annotations',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'volumeId' => array(
+                'layerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -722,15 +722,23 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'updatedMin' => array(
+                'updatedMax' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'updatedMax' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'updatedMin' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -739,19 +747,11 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
+                'volumeId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'contentVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'layerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -760,14 +760,14 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/mylibrary/annotations/summary',
               'httpMethod' => 'POST',
               'parameters' => array(
+                'volumeId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'layerIds' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ),
-                'volumeId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -803,7 +803,7 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'volumeId' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -811,7 +811,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'volumeId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -866,11 +866,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'volumeId' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'volumeId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -884,7 +884,7 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'volumeId' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -892,7 +892,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'volumeId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -920,15 +920,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'q' => array(
+                'country' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'projection' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -936,11 +932,15 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'projection' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'country' => array(
+                'startIndex' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'q' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -982,19 +982,7 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'source' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'contentVersion' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timestamp' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'position' => array(
+                'deviceCookie' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1002,7 +990,19 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'deviceCookie' => array(
+                'position' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timestamp' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'contentVersion' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1025,11 +1025,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'notification_id' => array(
+                'locale' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'locale' => array(
+                'notification_id' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1057,26 +1057,26 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/onboarding/listCategoryVolumes',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'locale' => array(
+                'maxAllowedMaturityRating' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'categoryId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxAllowedMaturityRating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'categoryId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'locale' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -1093,7 +1093,7 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/personalizedstream/get',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'source' => array(
+                'maxAllowedMaturityRating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1101,7 +1101,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxAllowedMaturityRating' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1120,19 +1120,11 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/promooffer/accept',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'product' => array(
+                'serial' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'volumeId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'androidId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'device' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1148,7 +1140,15 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'serial' => array(
+                'androidId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'device' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'product' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1157,19 +1157,7 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/promooffer/dismiss',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'manufacturer' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'model' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'serial' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'device' => array(
+                'product' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1177,11 +1165,23 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'device' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'androidId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'product' => array(
+                'serial' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'manufacturer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'model' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1190,6 +1190,14 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/promooffer/get',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'device' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'serial' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'product' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1202,15 +1210,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'device' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'model' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'serial' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1249,10 +1249,6 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/series/membership/get',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'page_size' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'page_token' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1260,6 +1256,10 @@ class Google_Service_Books extends Google_Service
                 'series_id' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'page_size' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -1285,10 +1285,6 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'user_library_consistent_read' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'projection' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1297,20 +1293,24 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'includeNonComicsSeries' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'country' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'user_library_consistent_read' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'includeNonComicsSeries' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'list' => array(
               'path' => 'books/v1/volumes',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'partner' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1318,19 +1318,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'libraryRestrict' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'startIndex' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'showPreorders' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'filter' => array(
+                'download' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1338,7 +1330,11 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'partner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1346,23 +1342,27 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'libraryRestrict' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'q' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'showPreorders' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'printType' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'download' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1386,11 +1386,11 @@ class Google_Service_Books extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxAllowedMaturityRating' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'locale' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1398,7 +1398,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'locale' => array(
+                'maxAllowedMaturityRating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1417,28 +1417,16 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/volumes/mybooks',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'country' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'processingState' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'locale' => array(
+                'country' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'source' => array(
+                'locale' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1446,6 +1434,18 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'source' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startIndex' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -1462,7 +1462,7 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/volumes/recommended',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'source' => array(
+                'maxAllowedMaturityRating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1470,7 +1470,7 @@ class Google_Service_Books extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxAllowedMaturityRating' => array(
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1479,15 +1479,15 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/volumes/recommended/rate',
               'httpMethod' => 'POST',
               'parameters' => array(
+                'rating' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'source' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'volumeId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'rating' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1510,31 +1510,31 @@ class Google_Service_Books extends Google_Service
               'path' => 'books/v1/volumes/useruploaded',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'source' => array(
+                'processingState' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'volumeId' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'processingState' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'source' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
                 ),
                 'startIndex' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'locale' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

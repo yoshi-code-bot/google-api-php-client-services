@@ -63,8 +63,9 @@ class Google_Service_Apigee_Resource_Organizations extends Google_Service_Resour
    * Gets the deployed ingress configuration for an organization.
    * (organizations.getDeployedIngressConfig)
    *
-   * @param string $name Name of the deployed configuration for the organization
-   * in the following format: 'organizations/{org}/deployedIngressConfig'.
+   * @param string $name Required. Name of the deployed configuration for the
+   * organization in the following format:
+   * 'organizations/{org}/deployedIngressConfig'.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1IngressConfig
    */
