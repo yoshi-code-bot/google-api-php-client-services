@@ -23,7 +23,7 @@
  *   $clusters = $toolresultsService->clusters;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_Clusters extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsClusters extends Google_Service_Resource
 {
   /**
    * Retrieves a single screenshot cluster by its ID (clusters.get)
@@ -57,7 +57,7 @@ class Google_Service_ToolResults_Resource_Clusters extends Google_Service_Resour
    * created from a set of screenshots. Between any two screenshots, a matching
    * score is calculated based off their metadata that determines how similar they
    * are. Screenshots are placed in the cluster that has screens which have the
-   * highest matching scores. (clusters.listClusters)
+   * highest matching scores. (clusters.listProjectsHistoriesExecutionsClusters)
    *
    * @param string $projectId A Project id.
    *
@@ -71,7 +71,7 @@ class Google_Service_ToolResults_Resource_Clusters extends Google_Service_Resour
    * @param array $optParams Optional parameters.
    * @return Google_Service_ToolResults_ListScreenshotClustersResponse
    */
-  public function listClusters($projectId, $historyId, $executionId, $optParams = array())
+  public function listProjectsHistoriesExecutionsClusters($projectId, $historyId, $executionId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId);
     $params = array_merge($params, $optParams);

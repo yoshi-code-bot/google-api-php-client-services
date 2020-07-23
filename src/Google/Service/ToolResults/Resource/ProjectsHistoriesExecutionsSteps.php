@@ -23,7 +23,7 @@
  *   $steps = $toolresultsService->steps;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_Steps extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsSteps extends Google_Service_Resource
 {
   /**
    * Lists accessibility clusters for a given Step
@@ -149,7 +149,7 @@ class Google_Service_ToolResults_Resource_Steps extends Google_Service_Resource
    * argument in the request happens to be                         invalid; e.g.
    * if an attempt is made to list the                         children of a
    * nonexistent Step - NOT_FOUND - if the containing Execution does not exist
-   * (steps.listSteps)
+   * (steps.listProjectsHistoriesExecutionsSteps)
    *
    * @param string $projectId A Project id.
    *
@@ -162,19 +162,19 @@ class Google_Service_ToolResults_Resource_Steps extends Google_Service_Resource
    * Required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A continuation token to resume the query at the
-   * next item.
-   *
-   * Optional.
    * @opt_param int pageSize The maximum number of Steps to fetch.
    *
    * Default value: 25. The server will use this default if the field is not set
    * or has a value of 0.
    *
    * Optional.
+   * @opt_param string pageToken A continuation token to resume the query at the
+   * next item.
+   *
+   * Optional.
    * @return Google_Service_ToolResults_ListStepsResponse
    */
-  public function listSteps($projectId, $historyId, $executionId, $optParams = array())
+  public function listProjectsHistoriesExecutionsSteps($projectId, $historyId, $executionId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId);
     $params = array_merge($params, $optParams);

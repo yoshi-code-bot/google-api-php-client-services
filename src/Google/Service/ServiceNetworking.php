@@ -105,17 +105,17 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
+                'filter' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
               ),
             ),

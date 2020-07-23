@@ -23,7 +23,7 @@
  *   $testCases = $toolresultsService->testCases;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_TestCases extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsTestCases extends Google_Service_Resource
 {
   /**
    * Gets details of a Test Case for a Step. Experimental test cases API. Still in
@@ -68,7 +68,8 @@ class Google_Service_ToolResults_Resource_TestCases extends Google_Service_Resou
    *
    * - PERMISSION_DENIED - if the user is not authorized to write to project -
    * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
-   * containing Step does not exist (testCases.listTestCases)
+   * containing Step does not exist
+   * (testCases.listProjectsHistoriesExecutionsStepsTestCases)
    *
    * @param string $projectId A Project id.
    *
@@ -85,19 +86,19 @@ class Google_Service_ToolResults_Resource_TestCases extends Google_Service_Resou
    * Required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A continuation token to resume the query at the
-   * next item.
-   *
-   * Optional.
    * @opt_param int pageSize The maximum number of TestCases to fetch.
    *
    * Default value: 100. The server will use this default if the field is not set
    * or has a value of 0.
    *
    * Optional.
+   * @opt_param string pageToken A continuation token to resume the query at the
+   * next item.
+   *
+   * Optional.
    * @return Google_Service_ToolResults_ListTestCasesResponse
    */
-  public function listTestCases($projectId, $historyId, $executionId, $stepId, $optParams = array())
+  public function listProjectsHistoriesExecutionsStepsTestCases($projectId, $historyId, $executionId, $stepId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId, 'stepId' => $stepId);
     $params = array_merge($params, $optParams);

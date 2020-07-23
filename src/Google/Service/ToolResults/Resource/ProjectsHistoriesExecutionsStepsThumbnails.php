@@ -23,7 +23,7 @@
  *   $thumbnails = $toolresultsService->thumbnails;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_Thumbnails extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsThumbnails extends Google_Service_Resource
 {
   /**
    * Lists thumbnails of images attached to a step.
@@ -32,7 +32,7 @@ class Google_Service_ToolResults_Resource_Thumbnails extends Google_Service_Reso
    * if the user is not authorized to read from the                       project,
    * or from any of the images - INVALID_ARGUMENT - if the request is malformed -
    * NOT_FOUND - if the step does not exist, or if any of the images
-   * do not exist (thumbnails.listThumbnails)
+   * do not exist (thumbnails.listProjectsHistoriesExecutionsStepsThumbnails)
    *
    * @param string $projectId A Project id.
    *
@@ -60,7 +60,7 @@ class Google_Service_ToolResults_Resource_Thumbnails extends Google_Service_Reso
    * Optional.
    * @return Google_Service_ToolResults_ListStepThumbnailsResponse
    */
-  public function listThumbnails($projectId, $historyId, $executionId, $stepId, $optParams = array())
+  public function listProjectsHistoriesExecutionsStepsThumbnails($projectId, $historyId, $executionId, $stepId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId, 'stepId' => $stepId);
     $params = array_merge($params, $optParams);

@@ -23,7 +23,7 @@
  *   $executions = $toolresultsService->executions;
  *  </code>
  */
-class Google_Service_ToolResults_Resource_Executions extends Google_Service_Resource
+class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutions extends Google_Service_Resource
 {
   /**
    * Creates an Execution.
@@ -95,7 +95,8 @@ class Google_Service_ToolResults_Resource_Executions extends Google_Service_Reso
    *
    * - PERMISSION_DENIED - if the user is not authorized to read project -
    * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
-   * containing History does not exist (executions.listExecutions)
+   * containing History does not exist
+   * (executions.listProjectsHistoriesExecutions)
    *
    * @param string $projectId A Project id.
    *
@@ -117,7 +118,7 @@ class Google_Service_ToolResults_Resource_Executions extends Google_Service_Reso
    * Optional.
    * @return Google_Service_ToolResults_ListExecutionsResponse
    */
-  public function listExecutions($projectId, $historyId, $optParams = array())
+  public function listProjectsHistoriesExecutions($projectId, $historyId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'historyId' => $historyId);
     $params = array_merge($params, $optParams);
