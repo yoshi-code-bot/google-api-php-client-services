@@ -16,26 +16,28 @@
  */
 
 /**
- * The "deployments" collection of methods.
+ * The "media" collection of methods.
  * Typical usage is:
  *  <code>
- *   $prod_tt_sasportalService = new Google_Service_SASPortalTesting(...);
- *   $deployments = $prod_tt_sasportalService->deployments;
+ *   $chatService = new Google_Service_HangoutsChat(...);
+ *   $media = $chatService->media;
  *  </code>
  */
-class Google_Service_SASPortalTesting_Resource_Deployments extends Google_Service_Resource
+class Google_Service_HangoutsChat_Resource_Media extends Google_Service_Resource
 {
   /**
-   * Returns a requested deployment. (deployments.get)
+   * Downloads media. Download is supported on the URI
+   * `/v1/media/{+name}?alt=media`. (media.download)
    *
-   * @param string $name Required. The name of the deployment.
+   * @param string $resourceName Name of the media that is being downloaded.  See
+   * ReadRequest.resource_name.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SASPortalTesting_SasPortalDeployment
+   * @return Google_Service_HangoutsChat_Media
    */
-  public function get($name, $optParams = array())
+  public function download($resourceName, $optParams = array())
   {
-    $params = array('name' => $name);
+    $params = array('resourceName' => $resourceName);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SASPortalTesting_SasPortalDeployment");
+    return $this->call('download', array($params), "Google_Service_HangoutsChat_Media");
   }
 }

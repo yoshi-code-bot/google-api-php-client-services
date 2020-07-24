@@ -17,10 +17,19 @@
 
 class Google_Service_YouTube_TestItem extends Google_Model
 {
+  public $gaia;
   public $id;
   protected $snippetType = 'Google_Service_YouTube_TestItemTestItemSnippet';
   protected $snippetDataType = '';
 
+  public function setGaia($gaia)
+  {
+    $this->gaia = $gaia;
+  }
+  public function getGaia()
+  {
+    return $this->gaia;
+  }
   public function setId($id)
   {
     $this->id = $id;
