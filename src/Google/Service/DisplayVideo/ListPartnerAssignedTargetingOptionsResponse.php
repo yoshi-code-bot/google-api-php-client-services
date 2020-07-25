@@ -15,26 +15,26 @@
  * the License.
  */
 
-class Google_Service_Sasportal_SasPortalListDeploymentsResponse extends Google_Collection
+class Google_Service_DisplayVideo_ListPartnerAssignedTargetingOptionsResponse extends Google_Collection
 {
-  protected $collection_key = 'deployments';
-  protected $deploymentsType = 'Google_Service_Sasportal_SasPortalDeployment';
-  protected $deploymentsDataType = 'array';
+  protected $collection_key = 'assignedTargetingOptions';
+  protected $assignedTargetingOptionsType = 'Google_Service_DisplayVideo_AssignedTargetingOption';
+  protected $assignedTargetingOptionsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Sasportal_SasPortalDeployment
+   * @param Google_Service_DisplayVideo_AssignedTargetingOption
    */
-  public function setDeployments($deployments)
+  public function setAssignedTargetingOptions($assignedTargetingOptions)
   {
-    $this->deployments = $deployments;
+    $this->assignedTargetingOptions = $assignedTargetingOptions;
   }
   /**
-   * @return Google_Service_Sasportal_SasPortalDeployment
+   * @return Google_Service_DisplayVideo_AssignedTargetingOption
    */
-  public function getDeployments()
+  public function getAssignedTargetingOptions()
   {
-    return $this->deployments;
+    return $this->assignedTargetingOptions;
   }
   public function setNextPageToken($nextPageToken)
   {

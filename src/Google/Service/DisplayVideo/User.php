@@ -15,30 +15,29 @@
  * the License.
  */
 
-class Google_Service_Sasportal_SasPortalDeployment extends Google_Collection
+class Google_Service_DisplayVideo_User extends Google_Collection
 {
-  protected $collection_key = 'sasUserIds';
-  public $allowedBillingModes;
-  public $defaultBillingMode;
+  protected $collection_key = 'assignedUserRoles';
+  protected $assignedUserRolesType = 'Google_Service_DisplayVideo_AssignedUserRole';
+  protected $assignedUserRolesDataType = 'array';
   public $displayName;
+  public $email;
   public $name;
-  public $sasUserIds;
+  public $userId;
 
-  public function setAllowedBillingModes($allowedBillingModes)
+  /**
+   * @param Google_Service_DisplayVideo_AssignedUserRole
+   */
+  public function setAssignedUserRoles($assignedUserRoles)
   {
-    $this->allowedBillingModes = $allowedBillingModes;
+    $this->assignedUserRoles = $assignedUserRoles;
   }
-  public function getAllowedBillingModes()
+  /**
+   * @return Google_Service_DisplayVideo_AssignedUserRole
+   */
+  public function getAssignedUserRoles()
   {
-    return $this->allowedBillingModes;
-  }
-  public function setDefaultBillingMode($defaultBillingMode)
-  {
-    $this->defaultBillingMode = $defaultBillingMode;
-  }
-  public function getDefaultBillingMode()
-  {
-    return $this->defaultBillingMode;
+    return $this->assignedUserRoles;
   }
   public function setDisplayName($displayName)
   {
@@ -48,6 +47,14 @@ class Google_Service_Sasportal_SasPortalDeployment extends Google_Collection
   {
     return $this->displayName;
   }
+  public function setEmail($email)
+  {
+    $this->email = $email;
+  }
+  public function getEmail()
+  {
+    return $this->email;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -56,12 +63,12 @@ class Google_Service_Sasportal_SasPortalDeployment extends Google_Collection
   {
     return $this->name;
   }
-  public function setSasUserIds($sasUserIds)
+  public function setUserId($userId)
   {
-    $this->sasUserIds = $sasUserIds;
+    $this->userId = $userId;
   }
-  public function getSasUserIds()
+  public function getUserId()
   {
-    return $this->sasUserIds;
+    return $this->userId;
   }
 }
