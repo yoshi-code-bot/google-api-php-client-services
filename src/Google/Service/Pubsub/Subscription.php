@@ -20,6 +20,7 @@ class Google_Service_Pubsub_Subscription extends Google_Model
   public $ackDeadlineSeconds;
   protected $deadLetterPolicyType = 'Google_Service_Pubsub_DeadLetterPolicy';
   protected $deadLetterPolicyDataType = '';
+  public $enableMessageOrdering;
   protected $expirationPolicyType = 'Google_Service_Pubsub_ExpirationPolicy';
   protected $expirationPolicyDataType = '';
   public $filter;
@@ -54,6 +55,14 @@ class Google_Service_Pubsub_Subscription extends Google_Model
   public function getDeadLetterPolicy()
   {
     return $this->deadLetterPolicy;
+  }
+  public function setEnableMessageOrdering($enableMessageOrdering)
+  {
+    $this->enableMessageOrdering = $enableMessageOrdering;
+  }
+  public function getEnableMessageOrdering()
+  {
+    return $this->enableMessageOrdering;
   }
   /**
    * @param Google_Service_Pubsub_ExpirationPolicy
