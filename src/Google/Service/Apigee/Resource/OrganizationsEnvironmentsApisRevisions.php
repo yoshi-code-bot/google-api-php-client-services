@@ -26,11 +26,10 @@
 class Google_Service_Apigee_Resource_OrganizationsEnvironmentsApisRevisions extends Google_Service_Resource
 {
   /**
-   * Undeploys an API proxy revision from an environment.
-   *
-   * Because multiple revisions of the same API proxy can be deployed in the same
-   * environment if the base paths are different, you must specify the revision
-   * number of the API proxy. (revisions.deployments)
+   * Undeploys an API proxy revision from an environment. Because multiple
+   * revisions of the same API proxy can be deployed in the same environment if
+   * the base paths are different, you must specify the revision number of the API
+   * proxy. (revisions.deployments)
    *
    * @param string $name Required. Name of the API proxy revision deployment in
    * the following format:

@@ -19,8 +19,7 @@
  * Service definition for TagManager (v2).
  *
  * <p>
- * This API allows clients to access and modify container and tag
- * configuration.</p>
+ * This API allows clients to access and modify container and tag configuration.</p>
  *
  * <p>
  * For more information about this service, see the API

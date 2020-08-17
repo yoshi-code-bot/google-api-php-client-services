@@ -139,7 +139,7 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * The mothod removes a project lien with a 'TenantManager' origin if that was
    * added. It will then attempt to delete the project. If that operation fails,
    * this method also fails. After the project has been deleted, the tenant
-   * resource state is set to DELETED.  To permanently remove resource metadata,
+   * resource state is set to DELETED. To permanently remove resource metadata,
    * call the `RemoveTenantProject` method. New resources with the same tag can't
    * be added if there are existing resources in a DELETED state. Operation.
    * (tenancyUnits.deleteProject)

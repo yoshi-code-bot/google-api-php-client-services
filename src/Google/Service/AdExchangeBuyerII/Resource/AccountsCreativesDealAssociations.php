@@ -55,14 +55,11 @@ class Google_Service_AdExchangeBuyerII_Resource_AccountsCreativesDealAssociation
    * default.
    * @opt_param string query An optional query string to filter deal associations.
    * If no filter is specified, all associations will be returned. Supported
-   * queries are:
-   *
-   * accountId=account_id_string creativeId=creative_id_string
-   * dealsId=deals_id_string dealsStatus:{approved, conditionally_approved,
-   * disapproved,                   not_checked} openAuctionStatus:{approved,
-   * conditionally_approved, disapproved,                          not_checked}
-   *
-   * Example: 'dealsId=12345 AND dealsStatus:disapproved'
+   * queries are: - accountId=*account_id_string* -
+   * creativeId=*creative_id_string* - dealsId=*deals_id_string* -
+   * dealsStatus:{approved, conditionally_approved, disapproved, not_checked} -
+   * openAuctionStatus:{approved, conditionally_approved, disapproved,
+   * not_checked} Example: 'dealsId=12345 AND dealsStatus:disapproved'
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of
    * ListDealAssociationsResponse.next_page_token returned from the previous call

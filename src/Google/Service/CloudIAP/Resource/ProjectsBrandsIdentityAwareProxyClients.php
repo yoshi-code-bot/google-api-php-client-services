@@ -87,9 +87,7 @@ class Google_Service_CloudIAP_Resource_ProjectsBrandsIdentityAwareProxyClients e
    *
    * @opt_param string pageToken A page token, received from a previous
    * `ListIdentityAwareProxyClients` call. Provide this to retrieve the subsequent
-   * page.
-   *
-   * When paginating, all other parameters provided to
+   * page. When paginating, all other parameters provided to
    * `ListIdentityAwareProxyClients` must match the call that provided the page
    * token.
    * @opt_param int pageSize The maximum number of clients to return. The service

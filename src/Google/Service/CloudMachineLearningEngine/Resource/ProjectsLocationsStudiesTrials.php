@@ -42,7 +42,7 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsLocationsStudie
     return $this->call('addMeasurement', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Trial");
   }
   /**
-   * Checks  whether a trial should stop or not. Returns a long-running operation.
+   * Checks whether a trial should stop or not. Returns a long-running operation.
    * When the operation is successful, it will contain a
    * CheckTrialEarlyStoppingStateResponse. (trials.checkEarlyStoppingState)
    *

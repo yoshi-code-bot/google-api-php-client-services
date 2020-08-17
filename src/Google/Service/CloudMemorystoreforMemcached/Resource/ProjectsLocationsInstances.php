@@ -95,36 +95,6 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
     return $this->call('get', array($params), "Google_Service_CloudMemorystoreforMemcached_Instance");
   }
   /**
-   * Gets the access control policy for a resource. Returns an empty policy if the
-   * resource exists and does not have a policy set. (instances.getIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * requested. See the operation documentation for the appropriate value for this
-   * field.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int options.requestedPolicyVersion Optional. The policy format
-   * version to be returned.
-   *
-   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be
-   * rejected.
-   *
-   * Requests for policies with any conditional bindings must specify version 3.
-   * Policies without any conditional bindings may specify any valid value or
-   * leave the field unset.
-   *
-   * To learn which resources support conditions in their IAM policies, see the
-   * [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-
-   * policies).
-   * @return Google_Service_CloudMemorystoreforMemcached_Policy
-   */
-  public function getIamPolicy($resource, $optParams = array())
-  {
-    $params = array('resource' => $resource);
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', array($params), "Google_Service_CloudMemorystoreforMemcached_Policy");
-  }
-  /**
    * Lists Instances in a given project and location.
    * (instances.listProjectsLocationsInstances)
    *
@@ -133,18 +103,18 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter List filter. For example, exclude all Memcached
-   * instances with name as my-instance by specifying "name != my-instance".
-   * @opt_param string orderBy Sort results. Supported values are "name", "name
-   * desc" or "" (unsorted).
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous List request, if any.
    * @opt_param int pageSize The maximum number of items to return.
    *
    * If not specified, a default value of 1000 will be used by the service.
    * Regardless of the page_size value, the response may include a partial list
    * and a caller should only rely on response's next_page_token to determine if
    * there are more instances left to be queried.
+   * @opt_param string pageToken The next_page_token value returned from a
+   * previous List request, if any.
+   * @opt_param string orderBy Sort results. Supported values are "name", "name
+   * desc" or "" (unsorted).
+   * @opt_param string filter List filter. For example, exclude all Memcached
+   * instances with name as my-instance by specifying "name != my-instance".
    * @return Google_Service_CloudMemorystoreforMemcached_ListInstancesResponse
    */
   public function listProjectsLocationsInstances($parent, $optParams = array())
@@ -177,48 +147,6 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_CloudMemorystoreforMemcached_Operation");
-  }
-  /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy.
-   *
-   * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-   * (instances.setIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See the operation documentation for the appropriate value for this
-   * field.
-   * @param Google_Service_CloudMemorystoreforMemcached_SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_CloudMemorystoreforMemcached_Policy
-   */
-  public function setIamPolicy($resource, Google_Service_CloudMemorystoreforMemcached_SetIamPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_CloudMemorystoreforMemcached_Policy");
-  }
-  /**
-   * Returns permissions that a caller has on the specified resource. If the
-   * resource does not exist, this will return an empty set of permissions, not a
-   * `NOT_FOUND` error.
-   *
-   * Note: This operation is designed to be used for building permission-aware UIs
-   * and command-line tools, not for authorization checking. This operation may
-   * "fail open" without warning. (instances.testIamPermissions)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See the operation documentation for the appropriate value
-   * for this field.
-   * @param Google_Service_CloudMemorystoreforMemcached_TestIamPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_CloudMemorystoreforMemcached_TestIamPermissionsResponse
-   */
-  public function testIamPermissions($resource, Google_Service_CloudMemorystoreforMemcached_TestIamPermissionsRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', array($params), "Google_Service_CloudMemorystoreforMemcached_TestIamPermissionsResponse");
   }
   /**
    * Updates the defined Memcached Parameters for an existing Instance. This

@@ -25,6 +25,8 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public $createTime;
   public $deploymentUri;
   public $description;
+  protected $endpointsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap';
+  protected $endpointsDataType = '';
   public $errorMessage;
   public $etag;
   protected $explanationConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig';
@@ -97,6 +99,20 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap
+   */
+  public function setEndpoints(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap $endpoints)
+  {
+    $this->endpoints = $endpoints;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap
+   */
+  public function getEndpoints()
+  {
+    return $this->endpoints;
   }
   public function setErrorMessage($errorMessage)
   {

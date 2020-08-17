@@ -56,9 +56,9 @@ class Google_Service_SQLAdmin extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://sqladmin.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/sql';
+    $this->batchPath = 'batch';
     $this->version = 'v1beta4';
     $this->serviceName = 'sql';
 
@@ -434,10 +434,6 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -445,6 +441,10 @@ class Google_Service_SQLAdmin extends Google_Service
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'listServerCas' => array(
@@ -646,17 +646,17 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'maxResults' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'instance' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
+                'pageToken' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -717,13 +717,13 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'verifyConnectionOnly' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'syncMode' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'verifyConnectionOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -865,11 +865,11 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'name' => array(
+                'host' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'host' => array(
+                'name' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -918,11 +918,11 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'name' => array(
+                'host' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'host' => array(
+                'name' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

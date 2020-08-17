@@ -20,6 +20,9 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntity extends
   public $confidence;
   public $mentionId;
   public $mentionText;
+  protected $normalizedValueType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue';
+  protected $normalizedValueDataType = '';
+  public $redacted;
   protected $textAnchorType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentTextAnchor';
   protected $textAnchorDataType = '';
   public $type;
@@ -47,6 +50,28 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntity extends
   public function getMentionText()
   {
     return $this->mentionText;
+  }
+  /**
+   * @param Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue
+   */
+  public function setNormalizedValue(Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue $normalizedValue)
+  {
+    $this->normalizedValue = $normalizedValue;
+  }
+  /**
+   * @return Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue
+   */
+  public function getNormalizedValue()
+  {
+    return $this->normalizedValue;
+  }
+  public function setRedacted($redacted)
+  {
+    $this->redacted = $redacted;
+  }
+  public function getRedacted()
+  {
+    return $this->redacted;
   }
   /**
    * @param Google_Service_Document_GoogleCloudDocumentaiV1beta1DocumentTextAnchor

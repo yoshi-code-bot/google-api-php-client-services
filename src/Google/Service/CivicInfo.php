@@ -94,13 +94,13 @@ class Google_Service_CivicInfo extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'electionId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'returnAllAvailableData' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'electionId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -117,23 +117,23 @@ class Google_Service_CivicInfo extends Google_Service
               'path' => 'civicinfo/v2/representatives',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'address' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'roles' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'levels' => array(
+                'address' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
                 ),
                 'includeOffices' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'levels' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
               ),
             ),'representativeInfoByDivision' => array(
@@ -145,14 +145,14 @@ class Google_Service_CivicInfo extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'recursive' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'roles' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ),
-                'recursive' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
                 'levels' => array(
                   'location' => 'query',

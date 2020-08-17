@@ -56,12 +56,10 @@ class Google_Service_CloudBillingBudget_Resource_BillingAccountsBudgets extends 
     return $this->call('delete', array($params), "Google_Service_CloudBillingBudget_GoogleProtobufEmpty");
   }
   /**
-   * Returns a budget.
-   *
-   * WARNING: There are some fields exposed on the Google Cloud Console that
-   * aren't available on this API. When reading from the API, you will not see
-   * these fields in the return value, though they may have been set in the Cloud
-   * Console. (budgets.get)
+   * Returns a budget. WARNING: There are some fields exposed on the Google Cloud
+   * Console that aren't available on this API. When reading from the API, you
+   * will not see these fields in the return value, though they may have been set
+   * in the Cloud Console. (budgets.get)
    *
    * @param string $name Required. Name of budget to get. Values are of the form
    * `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
@@ -75,12 +73,11 @@ class Google_Service_CloudBillingBudget_Resource_BillingAccountsBudgets extends 
     return $this->call('get', array($params), "Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1Budget");
   }
   /**
-   * Returns a list of budgets for a billing account.
-   *
-   * WARNING: There are some fields exposed on the Google Cloud Console that
-   * aren't available on this API. When reading from the API, you will not see
-   * these fields in the return value, though they may have been set in the Cloud
-   * Console. (budgets.listBillingAccountsBudgets)
+   * Returns a list of budgets for a billing account. WARNING: There are some
+   * fields exposed on the Google Cloud Console that aren't available on this API.
+   * When reading from the API, you will not see these fields in the return value,
+   * though they may have been set in the Cloud Console.
+   * (budgets.listBillingAccountsBudgets)
    *
    * @param string $parent Required. Name of billing account to list budgets
    * under. Values are of the form `billingAccounts/{billingAccountId}`.
@@ -100,11 +97,10 @@ class Google_Service_CloudBillingBudget_Resource_BillingAccountsBudgets extends 
     return $this->call('list', array($params), "Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse");
   }
   /**
-   * Updates a budget and returns the updated budget.
-   *
-   * WARNING: There are some fields exposed on the Google Cloud Console that
-   * aren't available on this API. Budget fields that are not exposed in this API
-   * will not be changed by this method. (budgets.patch)
+   * Updates a budget and returns the updated budget. WARNING: There are some
+   * fields exposed on the Google Cloud Console that aren't available on this API.
+   * Budget fields that are not exposed in this API will not be changed by this
+   * method. (budgets.patch)
    *
    * @param string $name Output only. Resource name of the budget. The resource
    * name implies the scope of a budget. Values are of the form

@@ -109,11 +109,30 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups ext
    * `projects/{project}/instances/{instance}/clusters/-`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken If non-empty, `page_token` should contain a
+   * next_page_token from a previous ListBackupsResponse to the same `parent` and
+   * with the same `filter`.
+   * @opt_param int pageSize Number of backups to be returned in the response. If
+   * 0 or less, defaults to the server's maximum allowed page size.
+   * @opt_param string orderBy An expression for specifying the sort order of the
+   * results of the request. The string value should specify one or more fields in
+   * Backup. The full syntax is described at https://aip.dev/132#ordering.
+   *
+   * Fields supported are:    * name    * source_table    * expire_time    *
+   * start_time    * end_time    * size_bytes    * state
+   *
+   * For example, "start_time". The default sorting order is ascending. To specify
+   * descending order for the field, a suffix " desc" should be appended to the
+   * field name. For example, "start_time desc". Redundant space characters in the
+   * syntax are insigificant.
+   *
+   * If order_by is empty, results will be sorted by `start_time` in descending
+   * order starting from the most recently created backup.
    * @opt_param string filter A filter expression that filters backups listed in
    * the response. The expression must specify the field name, a comparison
    * operator, and the value that you want to use for filtering. The value must be
    * a string, a number, or a boolean. The comparison operator must be <, >, <=,
-   * >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is roughly
+   * >=, !=, =, or :. Colon ':' represents a HAS operator which is roughly
    * synonymous with equality. Filter rules are case insensitive.
    *
    * The fields eligible for filtering are:   * `name`   * `source_table`   *
@@ -137,25 +156,6 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups ext
    * backup name contains the string "howl" and start_time              of the
    * backup is before 2018-03-28T14:50:00Z.   * `size_bytes > 10000000000` --> The
    * backup's size is greater than 10GB
-   * @opt_param string orderBy An expression for specifying the sort order of the
-   * results of the request. The string value should specify one or more fields in
-   * Backup. The full syntax is described at https://aip.dev/132#ordering.
-   *
-   * Fields supported are:    * name    * source_table    * expire_time    *
-   * start_time    * end_time    * size_bytes    * state
-   *
-   * For example, "start_time". The default sorting order is ascending. To specify
-   * descending order for the field, a suffix " desc" should be appended to the
-   * field name. For example, "start_time desc". Redundant space characters in the
-   * syntax are insigificant.
-   *
-   * If order_by is empty, results will be sorted by `start_time` in descending
-   * order starting from the most recently created backup.
-   * @opt_param string pageToken If non-empty, `page_token` should contain a
-   * next_page_token from a previous ListBackupsResponse to the same `parent` and
-   * with the same `filter`.
-   * @opt_param int pageSize Number of backups to be returned in the response. If
-   * 0 or less, defaults to the server's maximum allowed page size.
    * @return Google_Service_BigtableAdmin_ListBackupsResponse
    */
   public function listProjectsInstancesClustersBackups($parent, $optParams = array())

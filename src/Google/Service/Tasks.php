@@ -199,15 +199,15 @@ class Google_Service_Tasks extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'showCompleted' => array(
+                'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'updatedMin' => array(
+                'showHidden' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'completedMax' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -215,15 +215,7 @@ class Google_Service_Tasks extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'showDeleted' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'showHidden' => array(
+                'showCompleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -231,9 +223,17 @@ class Google_Service_Tasks extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'completedMax' => array(
+                'updatedMin' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'move' => array(
@@ -250,11 +250,11 @@ class Google_Service_Tasks extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'previous' => array(
+                'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'parent' => array(
+                'previous' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

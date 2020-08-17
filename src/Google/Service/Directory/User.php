@@ -24,7 +24,8 @@ class Google_Service_Directory_User extends Google_Collection
   public $archived;
   public $changePasswordAtNextLogin;
   public $creationTime;
-  public $customSchemas;
+  protected $customSchemasType = 'Google_Service_Directory_UserCustomProperties';
+  protected $customSchemasDataType = 'map';
   public $customerId;
   public $deletionTime;
   public $emails;
@@ -114,10 +115,16 @@ class Google_Service_Directory_User extends Google_Collection
   {
     return $this->creationTime;
   }
+  /**
+   * @param Google_Service_Directory_UserCustomProperties
+   */
   public function setCustomSchemas($customSchemas)
   {
     $this->customSchemas = $customSchemas;
   }
+  /**
+   * @return Google_Service_Directory_UserCustomProperties
+   */
   public function getCustomSchemas()
   {
     return $this->customSchemas;

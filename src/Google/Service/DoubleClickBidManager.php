@@ -19,7 +19,8 @@
  * Service definition for DoubleClickBidManager (v1.1).
  *
  * <p>
- * API for viewing and managing your reports in DoubleClick Bid Manager.</p>
+ * DoubleClick Bid Manager API allows users to manage and create campaigns and
+ * reports.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -51,7 +52,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
     parent::__construct($client);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
     $this->servicePath = 'doubleclickbidmanager/v1.1/';
-    $this->batchPath = 'batch/doubleclickbidmanager/v1.1';
+    $this->batchPath = 'batch/doubleclickbidmanager';
     $this->version = 'v1.1';
     $this->serviceName = 'doubleclickbidmanager';
 
@@ -112,13 +113,13 @@ class Google_Service_DoubleClickBidManager extends Google_Service
               'path' => 'queries',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'runquery' => array(

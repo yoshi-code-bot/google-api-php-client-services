@@ -36,6 +36,7 @@ class Google_Service_TPU_Node extends Google_Collection
   public $serviceAccount;
   public $state;
   public $tensorflowVersion;
+  public $useServiceNetworking;
 
   public function setAcceleratorType($acceleratorType)
   {
@@ -176,5 +177,13 @@ class Google_Service_TPU_Node extends Google_Collection
   public function getTensorflowVersion()
   {
     return $this->tensorflowVersion;
+  }
+  public function setUseServiceNetworking($useServiceNetworking)
+  {
+    $this->useServiceNetworking = $useServiceNetworking;
+  }
+  public function getUseServiceNetworking()
+  {
+    return $this->useServiceNetworking;
   }
 }

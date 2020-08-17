@@ -29,8 +29,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsSharedflowsRevisio
    * Undeploys a shared flow revision from an environment. (revisions.deployments)
    *
    * @param string $name Required. Name of the shared flow revision to undeploy in
-   * the following format:   `organizations/{org}/environments/{env}/sharedflows/{
-   * sharedflow}/revisions/{rev}`
+   * the following format: `organizations/{org}/environments/{env}/sharedflows/{sh
+   * aredflow}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleProtobufEmpty
    */
@@ -45,8 +45,8 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsSharedflowsRevisio
    * runtime pods. (revisions.getDeployments)
    *
    * @param string $name Required. Name representing a shared flow in an
-   * environment in the following format:   `organizations/{org}/environments/{env
-   * }/sharedflows/{sharedflow}/revisions/{rev}`
+   * environment in the following format: `organizations/{org}/environments/{env}/
+   * sharedflows/{sharedflow}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1Deployment
    */

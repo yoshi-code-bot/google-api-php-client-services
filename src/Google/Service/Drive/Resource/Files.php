@@ -42,6 +42,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * choose to make all uploaded files visible to the domain by default; this
    * parameter bypasses that behavior for the request. Permissions are still
    * inherited from parent folders.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool keepRevisionForever Whether to set the 'keepForever' field in
    * the new head revision. This is only applicable to files with binary content
    * in Google Drive. Only 200 revisions for the file can be kept forever. If the
@@ -74,6 +76,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * choose to make all uploaded files visible to the domain by default; this
    * parameter bypasses that behavior for the request. Permissions are still
    * inherited from parent folders.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool keepRevisionForever Whether to set the 'keepForever' field in
    * the new head revision. This is only applicable to files with binary content
    * in Google Drive. Only 200 revisions for the file can be kept forever. If the
@@ -165,6 +169,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * @opt_param bool acknowledgeAbuse Whether the user is acknowledging the risk
    * of downloading known malware or other abusive files. This is only applicable
    * when alt=media.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated use supportsAllDrives instead.
@@ -193,6 +199,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * @opt_param string driveId ID of the shared drive to search.
    * @opt_param bool includeItemsFromAllDrives Whether both My Drive and shared
    * drive items should be included in results.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool includeTeamDriveItems Deprecated use
    * includeItemsFromAllDrives instead.
    * @opt_param string orderBy A comma-separated list of sort keys. Valid keys are
@@ -241,6 +249,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * and placed in the requested folder. Other requests that increase the number
    * of parents fail, except when the canAddMyDriveParent file capability is true
    * and a single parent is being added.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool keepRevisionForever Whether to set the 'keepForever' field in
    * the new head revision. This is only applicable to files with binary content
    * in Google Drive. Only 200 revisions for the file can be kept forever. If the
@@ -272,6 +282,8 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * @opt_param bool acknowledgeAbuse Whether the user is acknowledging the risk
    * of downloading known malware or other abusive files. This is only applicable
    * when alt=media.
+   * @opt_param string includePermissionsForView Specifies which additional view's
+   * permissions to include in the response. Only 'published' is supported.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated use supportsAllDrives instead.
