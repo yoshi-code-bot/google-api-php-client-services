@@ -15,23 +15,23 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_ApproveDeviceUserResponse extends Google_Model
+class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1WipeDeviceResponse extends Google_Model
 {
-  protected $deviceUserType = 'Google_Service_CloudIdentity_DeviceUser';
-  protected $deviceUserDataType = '';
+  protected $deviceType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device';
+  protected $deviceDataType = '';
 
   /**
-   * @param Google_Service_CloudIdentity_DeviceUser
+   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device
    */
-  public function setDeviceUser(Google_Service_CloudIdentity_DeviceUser $deviceUser)
+  public function setDevice(Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device $device)
   {
-    $this->deviceUser = $deviceUser;
+    $this->device = $device;
   }
   /**
-   * @return Google_Service_CloudIdentity_DeviceUser
+   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device
    */
-  public function getDeviceUser()
+  public function getDevice()
   {
-    return $this->deviceUser;
+    return $this->device;
   }
 }

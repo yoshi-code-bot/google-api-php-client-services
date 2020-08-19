@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_CustomAttributeValue extends Google_Model
+class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CustomAttributeValue extends Google_Model
 {
   public $boolValue;
   public $numberValue;

@@ -15,16 +15,23 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessageHumanAgentHandoff extends Google_Model
+class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceResponse extends Google_Model
 {
-  public $metadata;
+  protected $deviceType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device';
+  protected $deviceDataType = '';
 
-  public function setMetadata($metadata)
+  /**
+   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device
+   */
+  public function setDevice(Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device $device)
   {
-    $this->metadata = $metadata;
+    $this->device = $device;
   }
-  public function getMetadata()
+  /**
+   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device
+   */
+  public function getDevice()
   {
-    return $this->metadata;
+    return $this->device;
   }
 }

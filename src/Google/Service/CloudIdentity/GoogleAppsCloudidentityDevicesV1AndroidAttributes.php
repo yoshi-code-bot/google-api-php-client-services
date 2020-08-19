@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_AndroidAttributes extends Google_Model
+class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1AndroidAttributes extends Google_Model
 {
   public $enabledUnknownSources;
   public $ownerProfileAccount;

@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_ClientState extends Google_Collection
+class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ClientState extends Google_Collection
 {
   protected $collection_key = 'assetTags';
   public $assetTags;
@@ -24,7 +24,7 @@ class Google_Service_CloudIdentity_ClientState extends Google_Collection
   public $customId;
   public $etag;
   public $healthScore;
-  protected $keyValuePairsType = 'Google_Service_CloudIdentity_CustomAttributeValue';
+  protected $keyValuePairsType = 'Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CustomAttributeValue';
   protected $keyValuePairsDataType = 'map';
   public $lastUpdateTime;
   public $managed;
@@ -81,14 +81,14 @@ class Google_Service_CloudIdentity_ClientState extends Google_Collection
     return $this->healthScore;
   }
   /**
-   * @param Google_Service_CloudIdentity_CustomAttributeValue
+   * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CustomAttributeValue
    */
   public function setKeyValuePairs($keyValuePairs)
   {
     $this->keyValuePairs = $keyValuePairs;
   }
   /**
-   * @return Google_Service_CloudIdentity_CustomAttributeValue
+   * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CustomAttributeValue
    */
   public function getKeyValuePairs()
   {

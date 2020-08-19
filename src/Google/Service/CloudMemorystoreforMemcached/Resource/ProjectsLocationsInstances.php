@@ -45,17 +45,16 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    * Creates a new Instance in a given project and location. (instances.create)
    *
    * @param string $parent Required. The resource name of the instance location
-   * using the form:     `projects/{project_id}/locations/{location_id}` where
+   * using the form: `projects/{project_id}/locations/{location_id}` where
    * `location_id` refers to a GCP region
    * @param Google_Service_CloudMemorystoreforMemcached_Instance $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string instanceId Required. The logical name of the Memcached
-   * instance in the user project with the following restrictions:
-   *
-   * * Must contain only lowercase letters, numbers, and hyphens. * Must start
-   * with a letter. * Must be between 1-40 characters. * Must end with a number or
-   * a letter. * Must be unique within the user project / location
+   * instance in the user project with the following restrictions: * Must contain
+   * only lowercase letters, numbers, and hyphens. * Must start with a letter. *
+   * Must be between 1-40 characters. * Must end with a number or a letter. * Must
+   * be unique within the user project / location
    * @return Google_Service_CloudMemorystoreforMemcached_Operation
    */
   public function create($parent, Google_Service_CloudMemorystoreforMemcached_Instance $postBody, $optParams = array())
@@ -99,20 +98,19 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    * (instances.listProjectsLocationsInstances)
    *
    * @param string $parent Required. The resource name of the instance location
-   * using the form:     `projects/{project_id}/locations/{location_id}` where
+   * using the form: `projects/{project_id}/locations/{location_id}` where
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of items to return.
-   *
-   * If not specified, a default value of 1000 will be used by the service.
-   * Regardless of the page_size value, the response may include a partial list
-   * and a caller should only rely on response's next_page_token to determine if
-   * there are more instances left to be queried.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @opt_param string orderBy Sort results. Supported values are "name", "name
    * desc" or "" (unsorted).
+   * @opt_param int pageSize The maximum number of items to return. If not
+   * specified, a default value of 1000 will be used by the service. Regardless of
+   * the page_size value, the response may include a partial list and a caller
+   * should only rely on response's next_page_token to determine if there are more
+   * instances left to be queried.
    * @opt_param string filter List filter. For example, exclude all Memcached
    * instances with name as my-instance by specifying "name != my-instance".
    * @return Google_Service_CloudMemorystoreforMemcached_ListInstancesResponse
@@ -129,16 +127,15 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
    *
    * @param string $name Required. Unique name of the resource in this scope
    * including project and location using the form:
-   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Memcached instances are managed and addressed at regional level so
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note:
+   * Memcached instances are managed and addressed at regional level so
    * location_id here refers to a GCP region; however, users may choose which
    * zones Memcached nodes within an instances should be provisioned in. Refer to
    * [zones] field for more details.
    * @param Google_Service_CloudMemorystoreforMemcached_Instance $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. Mask of fields to update.
+   * @opt_param string updateMask Required. Mask of fields to update. *
    * `displayName`
    * @return Google_Service_CloudMemorystoreforMemcached_Operation
    */

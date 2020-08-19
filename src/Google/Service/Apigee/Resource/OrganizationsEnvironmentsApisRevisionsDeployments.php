@@ -39,11 +39,11 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsApisRevisionsDeplo
    * `organizations/{org}/environments/{env}/apis/{api}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string basepath Base path where the API proxy revision should be
+   * deployed. Defaults to '/' if not provided.
    * @opt_param bool override Flag that specifies whether to force the deployment
    * of the new revision over the currently deployed revision by overriding
    * conflict checks.
-   * @opt_param string basepath Base path where the API proxy revision should be
-   * deployed. Defaults to '/' if not provided.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1DeploymentChangeReport
    */
   public function generateDeployChangeReport($name, $optParams = array())
