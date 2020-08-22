@@ -19,8 +19,8 @@
  * Service definition for GroupsMigration (v1).
  *
  * <p>
- * The Groups Migration API allows domain administrators to archive     emails
- * into Google groups.</p>
+ * The Groups Migration API allows domain administrators to archive emails into
+ * Google groups.</p>
  *
  * <p>
  * For more information about this service, see the API

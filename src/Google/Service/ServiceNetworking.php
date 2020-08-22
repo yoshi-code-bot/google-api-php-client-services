@@ -43,6 +43,7 @@ class Google_Service_ServiceNetworking extends Google_Service
   public $services_connections;
   public $services_dnsRecordSets;
   public $services_dnsZones;
+  public $services_projects_global_networks_peeredDnsDomains;
   public $services_roles;
   
   /**
@@ -105,10 +106,6 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -116,6 +113,10 @@ class Google_Service_ServiceNetworking extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -295,6 +296,36 @@ class Google_Service_ServiceNetworking extends Google_Service
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->services_projects_global_networks_peeredDnsDomains = new Google_Service_ServiceNetworking_Resource_ServicesProjectsServicenetworkingGlobalNetworksPeeredDnsDomains(
+        $this,
+        $this->serviceName,
+        'peeredDnsDomains',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/{+parent}/peeredDnsDomains',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

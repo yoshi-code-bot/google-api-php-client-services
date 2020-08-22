@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_TypedMessage extends Google_Model
+class Google_Service_ServiceNetworking_PeeredDnsDomainMetadata extends Google_Model
 {
-  public $message;
-  public $typeId;
-
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setTypeId($typeId)
-  {
-    $this->typeId = $typeId;
-  }
-  public function getTypeId()
-  {
-    return $this->typeId;
-  }
 }

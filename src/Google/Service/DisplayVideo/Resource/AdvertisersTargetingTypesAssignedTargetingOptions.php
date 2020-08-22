@@ -92,6 +92,9 @@ class Google_Service_DisplayVideo_Resource_AdvertisersTargetingTypesAssignedTarg
    * are: * `assignedTargetingOptionId` (default) The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
    * added to the field name. Example: `assignedTargetingOptionId desc`.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListAdvertiserAssignedTargetingOptions` method. If not
@@ -104,9 +107,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersTargetingTypesAssignedTarg
    * Examples: * AssignedTargetingOption with ID 123456
    * `assignedTargetingOptionId="123456"` The length of this field should be no
    * more than 500 characters.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListAdvertiserAssignedTargetingOptionsResponse
    */
   public function listAdvertisersTargetingTypesAssignedTargetingOptions($advertiserId, $targetingType, $optParams = array())

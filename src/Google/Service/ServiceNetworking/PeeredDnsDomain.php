@@ -15,29 +15,18 @@
  * the License.
  */
 
-class Google_Service_FirebaseManagement_FirebaseAppInfo extends Google_Model
+class Google_Service_ServiceNetworking_PeeredDnsDomain extends Google_Model
 {
-  public $appId;
-  public $displayName;
+  public $dnsSuffix;
   public $name;
-  public $namespace;
-  public $platform;
 
-  public function setAppId($appId)
+  public function setDnsSuffix($dnsSuffix)
   {
-    $this->appId = $appId;
+    $this->dnsSuffix = $dnsSuffix;
   }
-  public function getAppId()
+  public function getDnsSuffix()
   {
-    return $this->appId;
-  }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
+    return $this->dnsSuffix;
   }
   public function setName($name)
   {
@@ -46,21 +35,5 @@ class Google_Service_FirebaseManagement_FirebaseAppInfo extends Google_Model
   public function getName()
   {
     return $this->name;
-  }
-  public function setNamespace($namespace)
-  {
-    $this->namespace = $namespace;
-  }
-  public function getNamespace()
-  {
-    return $this->namespace;
-  }
-  public function setPlatform($platform)
-  {
-    $this->platform = $platform;
-  }
-  public function getPlatform()
-  {
-    return $this->platform;
   }
 }
