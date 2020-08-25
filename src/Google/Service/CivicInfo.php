@@ -117,6 +117,11 @@ class Google_Service_CivicInfo extends Google_Service
               'path' => 'civicinfo/v2/representatives',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'levels' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'roles' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -129,11 +134,6 @@ class Google_Service_CivicInfo extends Google_Service
                 'includeOffices' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'levels' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),'representativeInfoByDivision' => array(

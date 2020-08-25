@@ -69,4 +69,25 @@ class Google_Service_ServiceNetworking_Resource_ServicesProjectsServicenetworkin
     $params = array_merge($params, $optParams);
     return $this->call('delete', array($params), "Google_Service_ServiceNetworking_Operation");
   }
+  /**
+   * Lists peered DNS domains for a connection. (peeredDnsDomains.listServicesProj
+   * ectsServicenetworkingGlobalNetworksPeeredDnsDomains)
+   *
+   * @param string $parent Required. Parent resource identifying the connection
+   * which owns this collection of peered DNS domains in the format:
+   * `services/{service}/projects/{project}/global/networks/{network}`. {service}
+   * is the peering service that is managing connectivity for the service
+   * producer's organization. For Google services that support this functionality,
+   * this value is `servicenetworking.googleapis.com`. {project} is a project
+   * number e.g. `12345` that contains the service consumer's VPC network.
+   * {network} is the name of the service consumer's VPC network.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ServiceNetworking_ListPeeredDnsDomainsResponse
+   */
+  public function listServicesProjectsServicenetworkingGlobalNetworksPeeredDnsDomains($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_ServiceNetworking_ListPeeredDnsDomainsResponse");
+  }
 }

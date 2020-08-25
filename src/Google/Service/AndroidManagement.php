@@ -70,7 +70,7 @@ class Google_Service_AndroidManagement extends Google_Service
               'path' => 'v1/enterprises',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'signupUrlName' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -78,7 +78,7 @@ class Google_Service_AndroidManagement extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'projectId' => array(
+                'signupUrlName' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
