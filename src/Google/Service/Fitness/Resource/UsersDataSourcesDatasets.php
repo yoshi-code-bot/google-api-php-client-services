@@ -44,10 +44,10 @@ class Google_Service_Fitness_Resource_UsersDataSourcesDatasets extends Google_Se
    * where startTime and endTime are 64 bit integers.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string modifiedTimeMillis When the operation was performed on the
-   * client.
    * @opt_param string currentTimeMillis The client's current time in milliseconds
    * since epoch.
+   * @opt_param string modifiedTimeMillis When the operation was performed on the
+   * client.
    */
   public function delete($userId, $dataSourceId, $datasetId, $optParams = array())
   {

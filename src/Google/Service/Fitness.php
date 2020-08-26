@@ -100,9 +100,9 @@ class Google_Service_Fitness extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://fitness.googleapis.com/';
     $this->servicePath = 'fitness/v1/users/';
-    $this->batchPath = 'batch/fitness/v1';
+    $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'fitness';
 
@@ -244,11 +244,11 @@ class Google_Service_Fitness extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'modifiedTimeMillis' => array(
+                'currentTimeMillis' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'currentTimeMillis' => array(
+                'modifiedTimeMillis' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -363,10 +363,6 @@ class Google_Service_Fitness extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'activityType' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -376,11 +372,15 @@ class Google_Service_Fitness extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'endTime' => array(
+                'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
