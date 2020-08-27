@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudMemorystoreforMemcached_GoogleCloudMemcacheV1OperationMetadata extends Google_Model
+class Google_Service_CloudMemorystoreforMemcached_GoogleCloudMemcacheV1beta2OperationMetadata extends Google_Model
 {
   public $apiVersion;
   public $cancelRequested;

@@ -36,10 +36,10 @@ class Google_Service_DLP_Resource_InfoTypes extends Google_Service_Resource
    * parts of the API. Defaults to supported_by=INSPECT.
    * @opt_param string parent The parent resource name. The format of this value
    * is as follows: locations/ LOCATION_ID
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string languageCode BCP-47 language code for localized infoType
    * friendly names. If omitted, or if localized strings are not available, en-US
    * strings will be returned.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInfoTypesResponse
    */
   public function listInfoTypes($optParams = array())

@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudMemorystoreforMemcached_LocationMetadata extends Google_Model
+class Google_Service_CloudMemorystoreforMemcached_GoogleCloudMemcacheV1beta2LocationMetadata extends Google_Model
 {
   protected $availableZonesType = 'Google_Service_CloudMemorystoreforMemcached_ZoneMetadata';
   protected $availableZonesDataType = 'map';

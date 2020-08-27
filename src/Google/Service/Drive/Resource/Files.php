@@ -106,6 +106,11 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool enforceSingleParent Set to true to opt in to API behavior
+   * that aims for all items to have exactly one parent. This parameter will only
+   * take effect if the item is not in a shared drive. If an item's last parent is
+   * deleted but the item itself is not, the item will be placed under its owner's
+   * root.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated use supportsAllDrives instead.
@@ -120,6 +125,12 @@ class Google_Service_Drive_Resource_Files extends Google_Service_Resource
    * Permanently deletes all of the user's trashed files. (files.emptyTrash)
    *
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool enforceSingleParent Set to true to opt in to API behavior
+   * that aims for all items to have exactly one parent. This parameter will only
+   * take effect if the item is not in a shared drive. If an item's last parent is
+   * deleted but the item itself is not, the item will be placed under its owner's
+   * root.
    */
   public function emptyTrash($optParams = array())
   {
