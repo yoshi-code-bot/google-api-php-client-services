@@ -50,9 +50,9 @@ class Google_Service_DoubleClickBidManager extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://doubleclickbidmanager.googleapis.com/';
     $this->servicePath = 'doubleclickbidmanager/v1.1/';
-    $this->batchPath = 'batch/doubleclickbidmanager';
+    $this->batchPath = 'batch';
     $this->version = 'v1.1';
     $this->serviceName = 'doubleclickbidmanager';
 
@@ -113,13 +113,13 @@ class Google_Service_DoubleClickBidManager extends Google_Service
               'path' => 'queries',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'runquery' => array(
@@ -155,13 +155,13 @@ class Google_Service_DoubleClickBidManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

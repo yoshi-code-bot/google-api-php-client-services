@@ -22,11 +22,11 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   protected $acceleratorConfigDataType = '';
   protected $autoScalingType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling';
   protected $autoScalingDataType = '';
+  protected $containerType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ContainerSpec';
+  protected $containerDataType = '';
   public $createTime;
   public $deploymentUri;
   public $description;
-  protected $endpointsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap';
-  protected $endpointsDataType = '';
   public $errorMessage;
   public $etag;
   protected $explanationConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig';
@@ -44,6 +44,8 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public $pythonVersion;
   protected $requestLoggingConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RequestLoggingConfig';
   protected $requestLoggingConfigDataType = '';
+  protected $routesType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RouteMap';
+  protected $routesDataType = '';
   public $runtimeVersion;
   public $serviceAccount;
   public $state;
@@ -76,6 +78,20 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   {
     return $this->autoScaling;
   }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ContainerSpec
+   */
+  public function setContainer(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ContainerSpec $container)
+  {
+    $this->container = $container;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ContainerSpec
+   */
+  public function getContainer()
+  {
+    return $this->container;
+  }
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
@@ -99,20 +115,6 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public function getDescription()
   {
     return $this->description;
-  }
-  /**
-   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap
-   */
-  public function setEndpoints(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap $endpoints)
-  {
-    $this->endpoints = $endpoints;
-  }
-  /**
-   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap
-   */
-  public function getEndpoints()
-  {
-    return $this->endpoints;
   }
   public function setErrorMessage($errorMessage)
   {
@@ -243,6 +245,20 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public function getRequestLoggingConfig()
   {
     return $this->requestLoggingConfig;
+  }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RouteMap
+   */
+  public function setRoutes(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RouteMap $routes)
+  {
+    $this->routes = $routes;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1RouteMap
+   */
+  public function getRoutes()
+  {
+    return $this->routes;
   }
   public function setRuntimeVersion($runtimeVersion)
   {

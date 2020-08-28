@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Monitoring_Position extends Google_Model
+class Google_Service_Sheets_DataSourceColumnReference extends Google_Model
 {
-  public $column;
-  public $line;
+  public $name;
 
-  public function setColumn($column)
+  public function setName($name)
   {
-    $this->column = $column;
+    $this->name = $name;
   }
-  public function getColumn()
+  public function getName()
   {
-    return $this->column;
-  }
-  public function setLine($line)
-  {
-    $this->line = $line;
-  }
-  public function getLine()
-  {
-    return $this->line;
+    return $this->name;
   }
 }

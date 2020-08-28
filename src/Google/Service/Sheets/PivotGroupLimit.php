@@ -15,32 +15,25 @@
  * the License.
  */
 
-class Google_Service_Monitoring_QueryError extends Google_Model
+class Google_Service_Sheets_PivotGroupLimit extends Google_Model
 {
-  protected $locatorType = 'Google_Service_Monitoring_TextLocator';
-  protected $locatorDataType = '';
-  public $message;
+  public $applyOrder;
+  public $countLimit;
 
-  /**
-   * @param Google_Service_Monitoring_TextLocator
-   */
-  public function setLocator(Google_Service_Monitoring_TextLocator $locator)
+  public function setApplyOrder($applyOrder)
   {
-    $this->locator = $locator;
+    $this->applyOrder = $applyOrder;
   }
-  /**
-   * @return Google_Service_Monitoring_TextLocator
-   */
-  public function getLocator()
+  public function getApplyOrder()
   {
-    return $this->locator;
+    return $this->applyOrder;
   }
-  public function setMessage($message)
+  public function setCountLimit($countLimit)
   {
-    $this->message = $message;
+    $this->countLimit = $countLimit;
   }
-  public function getMessage()
+  public function getCountLimit()
   {
-    return $this->message;
+    return $this->countLimit;
   }
 }

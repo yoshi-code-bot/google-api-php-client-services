@@ -15,34 +15,43 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1EndpointMap extends Google_Model
+class Google_Service_Sheets_TimeOfDay extends Google_Model
 {
-  public $explain;
-  public $health;
-  public $predict;
+  public $hours;
+  public $minutes;
+  public $nanos;
+  public $seconds;
 
-  public function setExplain($explain)
+  public function setHours($hours)
   {
-    $this->explain = $explain;
+    $this->hours = $hours;
   }
-  public function getExplain()
+  public function getHours()
   {
-    return $this->explain;
+    return $this->hours;
   }
-  public function setHealth($health)
+  public function setMinutes($minutes)
   {
-    $this->health = $health;
+    $this->minutes = $minutes;
   }
-  public function getHealth()
+  public function getMinutes()
   {
-    return $this->health;
+    return $this->minutes;
   }
-  public function setPredict($predict)
+  public function setNanos($nanos)
   {
-    $this->predict = $predict;
+    $this->nanos = $nanos;
   }
-  public function getPredict()
+  public function getNanos()
   {
-    return $this->predict;
+    return $this->nanos;
+  }
+  public function setSeconds($seconds)
+  {
+    $this->seconds = $seconds;
+  }
+  public function getSeconds()
+  {
+    return $this->seconds;
   }
 }
