@@ -327,6 +327,21 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     return $this->call('getIamPolicy', array($params), "Google_Service_Compute_Policy");
   }
   /**
+   * Returns the screenshot from the specified instance. (instances.getScreenshot)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance Name of the instance scoping this request.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Screenshot
+   */
+  public function getScreenshot($project, $zone, $instance, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
+    $params = array_merge($params, $optParams);
+    return $this->call('getScreenshot', array($params), "Google_Service_Compute_Screenshot");
+  }
+  /**
    * Returns the last 1 MB of serial port output from the specified instance.
    * (instances.getSerialPortOutput)
    *

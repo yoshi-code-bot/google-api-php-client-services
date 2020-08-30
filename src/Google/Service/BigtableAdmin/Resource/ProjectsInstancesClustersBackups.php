@@ -109,11 +109,6 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups ext
    * `projects/{project}/instances/{instance}/clusters/-`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken If non-empty, `page_token` should contain a
-   * next_page_token from a previous ListBackupsResponse to the same `parent` and
-   * with the same `filter`.
-   * @opt_param int pageSize Number of backups to be returned in the response. If
-   * 0 or less, defaults to the server's maximum allowed page size.
    * @opt_param string orderBy An expression for specifying the sort order of the
    * results of the request. The string value should specify one or more fields in
    * Backup. The full syntax is described at https://aip.dev/132#ordering.
@@ -128,6 +123,11 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups ext
    *
    * If order_by is empty, results will be sorted by `start_time` in descending
    * order starting from the most recently created backup.
+   * @opt_param string pageToken If non-empty, `page_token` should contain a
+   * next_page_token from a previous ListBackupsResponse to the same `parent` and
+   * with the same `filter`.
+   * @opt_param int pageSize Number of backups to be returned in the response. If
+   * 0 or less, defaults to the server's maximum allowed page size.
    * @opt_param string filter A filter expression that filters backups listed in
    * the response. The expression must specify the field name, a comparison
    * operator, and the value that you want to use for filtering. The value must be

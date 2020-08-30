@@ -34,11 +34,11 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesAppProfiles extends
    * @param Google_Service_BigtableAdmin_AppProfile $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool ignoreWarnings If true, ignore safety checks when creating
+   * the app profile.
    * @opt_param string appProfileId Required. The ID to be used when referring to
    * the new app profile within its instance, e.g., just `myprofile` rather than
    * `projects/myproject/instances/myinstance/appProfiles/myprofile`.
-   * @opt_param bool ignoreWarnings If true, ignore safety checks when creating
-   * the app profile.
    * @return Google_Service_BigtableAdmin_AppProfile
    */
   public function create($parent, Google_Service_BigtableAdmin_AppProfile $postBody, $optParams = array())
@@ -91,8 +91,6 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesAppProfiles extends
    * `projects/myproject/instances/-`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The value of `next_page_token` returned by a
-   * previous call.
    * @opt_param int pageSize Maximum number of results per page.
    *
    * A page_size of zero lets the server choose the number of items to return. A
@@ -102,6 +100,8 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesAppProfiles extends
    * Following the first request, subsequent paginated calls are not required to
    * pass a page_size. If a page_size is set in subsequent calls, it must match
    * the page_size given in the first request.
+   * @opt_param string pageToken The value of `next_page_token` returned by a
+   * previous call.
    * @return Google_Service_BigtableAdmin_ListAppProfilesResponse
    */
   public function listProjectsInstancesAppProfiles($parent, $optParams = array())

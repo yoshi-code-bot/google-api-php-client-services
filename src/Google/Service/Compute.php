@@ -4003,6 +4003,26 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'integer',
                 ),
               ),
+            ),'getScreenshot' => array(
+              'path' => '{project}/zones/{zone}/instances/{instance}/screenshot',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'getSerialPortOutput' => array(
               'path' => '{project}/zones/{zone}/instances/{instance}/serialPort',
               'httpMethod' => 'GET',
