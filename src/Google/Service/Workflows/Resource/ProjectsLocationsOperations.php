@@ -19,12 +19,28 @@
  * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $apigeeService = new Google_Service_Apigee(...);
- *   $operations = $apigeeService->operations;
+ *   $workflowsService = new Google_Service_Workflows(...);
+ *   $operations = $workflowsService->operations;
  *  </code>
  */
-class Google_Service_Apigee_Resource_OrganizationsOperations extends Google_Service_Resource
+class Google_Service_Workflows_Resource_ProjectsLocationsOperations extends Google_Service_Resource
 {
+  /**
+   * Deletes a long-running operation. This method indicates that the client is no
+   * longer interested in the operation result. It does not cancel the operation.
+   * If the server doesn't support this method, it returns
+   * `google.rpc.Code.UNIMPLEMENTED`. (operations.delete)
+   *
+   * @param string $name The name of the operation resource to be deleted.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Workflows_WorkflowsEmpty
+   */
+  public function delete($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', array($params), "Google_Service_Workflows_WorkflowsEmpty");
+  }
   /**
    * Gets the latest state of a long-running operation. Clients can use this
    * method to poll the operation result at intervals as recommended by the API
@@ -32,13 +48,13 @@ class Google_Service_Apigee_Resource_OrganizationsOperations extends Google_Serv
    *
    * @param string $name The name of the operation resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Apigee_GoogleLongrunningOperation
+   * @return Google_Service_Workflows_Operation
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Apigee_GoogleLongrunningOperation");
+    return $this->call('get', array($params), "Google_Service_Workflows_Operation");
   }
   /**
    * Lists operations that match the specified filter in the request. If the
@@ -49,20 +65,20 @@ class Google_Service_Apigee_Resource_OrganizationsOperations extends Google_Serv
    * their service configuration. For backwards compatibility, the default name
    * includes the operations collection id, however overriding users must ensure
    * the name binding is the parent resource, without the operations collection
-   * id. (operations.listOrganizationsOperations)
+   * id. (operations.listProjectsLocationsOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
+   * @opt_param string filter The standard list filter.
    * @opt_param int pageSize The standard list page size.
-   * @return Google_Service_Apigee_GoogleLongrunningListOperationsResponse
+   * @return Google_Service_Workflows_ListOperationsResponse
    */
-  public function listOrganizationsOperations($name, $optParams = array())
+  public function listProjectsLocationsOperations($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Apigee_GoogleLongrunningListOperationsResponse");
+    return $this->call('list', array($params), "Google_Service_Workflows_ListOperationsResponse");
   }
 }

@@ -17,14 +17,14 @@
 
 class Google_Service_Apigee_GoogleCloudApigeeV1OperationConfig extends Google_Collection
 {
-  protected $collection_key = 'resources';
+  protected $collection_key = 'operations';
   public $apiSource;
   protected $attributesType = 'Google_Service_Apigee_GoogleCloudApigeeV1Attribute';
   protected $attributesDataType = 'array';
-  public $methods;
+  protected $operationsType = 'Google_Service_Apigee_GoogleCloudApigeeV1Operation';
+  protected $operationsDataType = 'array';
   protected $quotaType = 'Google_Service_Apigee_GoogleCloudApigeeV1Quota';
   protected $quotaDataType = '';
-  public $resources;
 
   public function setApiSource($apiSource)
   {
@@ -48,13 +48,19 @@ class Google_Service_Apigee_GoogleCloudApigeeV1OperationConfig extends Google_Co
   {
     return $this->attributes;
   }
-  public function setMethods($methods)
+  /**
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1Operation
+   */
+  public function setOperations($operations)
   {
-    $this->methods = $methods;
+    $this->operations = $operations;
   }
-  public function getMethods()
+  /**
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1Operation
+   */
+  public function getOperations()
   {
-    return $this->methods;
+    return $this->operations;
   }
   /**
    * @param Google_Service_Apigee_GoogleCloudApigeeV1Quota
@@ -69,13 +75,5 @@ class Google_Service_Apigee_GoogleCloudApigeeV1OperationConfig extends Google_Co
   public function getQuota()
   {
     return $this->quota;
-  }
-  public function setResources($resources)
-  {
-    $this->resources = $resources;
-  }
-  public function getResources()
-  {
-    return $this->resources;
   }
 }
