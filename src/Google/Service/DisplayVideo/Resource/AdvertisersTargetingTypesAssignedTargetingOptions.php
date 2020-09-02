@@ -88,6 +88,14 @@ class Google_Service_DisplayVideo_Resource_AdvertisersTargetingTypesAssignedTarg
    * targeting options to list.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Allows filtering by assigned targeting option
+   * properties. Supported syntax: * Filter expressions are made up of one or more
+   * restrictions. * Restrictions can be combined by the logical operator `OR`. *
+   * A restriction has the form of `{field} {operator} {value}`. * The operator
+   * must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId`
+   * Examples: * AssignedTargetingOption with ID 123456
+   * `assignedTargetingOptionId="123456"` The length of this field should be no
+   * more than 500 characters.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `assignedTargetingOptionId` (default) The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
@@ -99,14 +107,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersTargetingTypesAssignedTarg
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListAdvertiserAssignedTargetingOptions` method. If not
    * specified, the first page of results will be returned.
-   * @opt_param string filter Allows filtering by assigned targeting option
-   * properties. Supported syntax: * Filter expressions are made up of one or more
-   * restrictions. * Restrictions can be combined by the logical operator `OR`. *
-   * A restriction has the form of `{field} {operator} {value}`. * The operator
-   * must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId`
-   * Examples: * AssignedTargetingOption with ID 123456
-   * `assignedTargetingOptionId="123456"` The length of this field should be no
-   * more than 500 characters.
    * @return Google_Service_DisplayVideo_ListAdvertiserAssignedTargetingOptionsResponse
    */
   public function listAdvertisersTargetingTypesAssignedTargetingOptions($advertiserId, $targetingType, $optParams = array())

@@ -89,14 +89,6 @@ class Google_Service_DisplayVideo_Resource_PartnersTargetingTypesAssignedTargeti
    * `TARGETING_TYPE_CHANNEL`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Allows filtering by assigned targeting option
-   * properties. Supported syntax: * Filter expressions are made up of one or more
-   * restrictions. * Restrictions can be combined by the logical operator `OR`. *
-   * A restriction has the form of `{field} {operator} {value}`. * The operator
-   * must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId`
-   * Examples: * AssignedTargetingOption with ID 123456
-   * `assignedTargetingOptionId="123456"` The length of this field should be no
-   * more than 500 characters.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
@@ -108,6 +100,14 @@ class Google_Service_DisplayVideo_Resource_PartnersTargetingTypesAssignedTargeti
    * are: * `assignedTargetingOptionId` (default) The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
    * added to the field name. Example: `assignedTargetingOptionId desc`.
+   * @opt_param string filter Allows filtering by assigned targeting option
+   * properties. Supported syntax: * Filter expressions are made up of one or more
+   * restrictions. * Restrictions can be combined by the logical operator `OR`. *
+   * A restriction has the form of `{field} {operator} {value}`. * The operator
+   * must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId`
+   * Examples: * AssignedTargetingOption with ID 123456
+   * `assignedTargetingOptionId="123456"` The length of this field should be no
+   * more than 500 characters.
    * @return Google_Service_DisplayVideo_ListPartnerAssignedTargetingOptionsResponse
    */
   public function listPartnersTargetingTypesAssignedTargetingOptions($partnerId, $targetingType, $optParams = array())

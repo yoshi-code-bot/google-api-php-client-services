@@ -27,6 +27,7 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   public $images;
   public $logUrl;
   public $logsBucket;
+  public $name;
   protected $optionsType = 'Google_Service_CloudBuild_BuildOptions';
   protected $optionsDataType = '';
   public $projectId;
@@ -120,6 +121,14 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   public function getLogsBucket()
   {
     return $this->logsBucket;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param Google_Service_CloudBuild_BuildOptions

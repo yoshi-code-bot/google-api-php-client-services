@@ -15,27 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_RetryBuildRequest extends Google_Model
+class Google_Service_CloudBuild_CreateBuildRequest extends Google_Model
 {
-  public $id;
-  public $name;
+  protected $buildType = 'Google_Service_CloudBuild_Build';
+  protected $buildDataType = '';
   public $projectId;
 
-  public function setId($id)
+  /**
+   * @param Google_Service_CloudBuild_Build
+   */
+  public function setBuild(Google_Service_CloudBuild_Build $build)
   {
-    $this->id = $id;
+    $this->build = $build;
   }
-  public function getId()
+  /**
+   * @return Google_Service_CloudBuild_Build
+   */
+  public function getBuild()
   {
-    return $this->id;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->build;
   }
   public function setProjectId($projectId)
   {

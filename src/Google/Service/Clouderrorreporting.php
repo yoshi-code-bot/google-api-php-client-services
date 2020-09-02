@@ -91,15 +91,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'serviceFilter.service' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeRange.period' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -107,15 +99,23 @@ class Google_Service_Clouderrorreporting extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'serviceFilter.version' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'groupId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'serviceFilter.service' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'serviceFilter.version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'serviceFilter.resourceType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeRange.period' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -149,11 +149,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'timedCountDuration' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'serviceFilter.resourceType' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -161,11 +157,11 @@ class Google_Service_Clouderrorreporting extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'order' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'serviceFilter.service' => array(
+                'serviceFilter.resourceType' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -173,24 +169,28 @@ class Google_Service_Clouderrorreporting extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'serviceFilter.version' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'groupId' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'serviceFilter.version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'serviceFilter.service' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timedCountDuration' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'timeRange.period' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'alignment' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'order' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

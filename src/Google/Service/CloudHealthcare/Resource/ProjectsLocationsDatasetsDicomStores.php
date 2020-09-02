@@ -201,7 +201,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * SearchForInstances returns a list of matching instances. See [Search
    * Transaction] (http://dicom.nema.org/medical/dicom/current/output/html/part18.
-   * html#sect_10.6). (dicomStores.searchForInstances)
+   * html#sect_10.6). For details on the implementation of SearchForInstances, see
+   * [Search transaction](https://cloud.google.com/healthcare/docs/dicom#search_tr
+   * ansaction) in the Cloud Healthcare API conformance statement. For samples
+   * that show how to call SearchForInstances, see [Searching for studies, series,
+   * instances, and frames](https://cloud.google.com/healthcare/docs/how-
+   * tos/dicomweb#searching_for_studies_series_instances_and_frames).
+   * (dicomStores.searchForInstances)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -221,7 +227,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * SearchForSeries returns a list of matching series. See [Search Transaction] (
    * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6
-   * ). (dicomStores.searchForSeries)
+   * ). For details on the implementation of SearchForSeries, see [Search transact
+   * ion](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in
+   * the Cloud Healthcare API conformance statement. For samples that show how to
+   * call SearchForSeries, see [Searching for studies, series, instances, and
+   * frames](https://cloud.google.com/healthcare/docs/how-
+   * tos/dicomweb#searching_for_studies_series_instances_and_frames).
+   * (dicomStores.searchForSeries)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -240,7 +252,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * SearchForStudies returns a list of matching studies. See [Search Transaction]
    * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.
-   * 6). (dicomStores.searchForStudies)
+   * 6). For details on the implementation of SearchForStudies, see [Search transa
+   * ction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in
+   * the Cloud Healthcare API conformance statement. For samples that show how to
+   * call SearchForStudies, see [Searching for studies, series, instances, and
+   * frames](https://cloud.google.com/healthcare/docs/how-
+   * tos/dicomweb#searching_for_studies_series_instances_and_frames).
+   * (dicomStores.searchForStudies)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -277,7 +295,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * StoreInstances stores DICOM instances associated with study instance unique
    * identifiers (SUID). See [Store Transaction] (http://dicom.nema.org/medical/di
-   * com/current/output/html/part18.html#sect_10.5). (dicomStores.storeInstances)
+   * com/current/output/html/part18.html#sect_10.5). For details on the
+   * implementation of StoreInstances, see [Store transaction](https://cloud.googl
+   * e.com/healthcare/docs/dicom#store_transaction) in the Cloud Healthcare API
+   * conformance statement. For samples that show how to call StoreInstances, see
+   * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+   * tos/dicomweb#storing_dicom_data). (dicomStores.storeInstances)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}

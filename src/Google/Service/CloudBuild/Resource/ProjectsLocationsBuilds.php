@@ -23,20 +23,20 @@
  *   $builds = $cloudbuildService->builds;
  *  </code>
  */
-class Google_Service_CloudBuild_Resource_ProjectsBuilds extends Google_Service_Resource
+class Google_Service_CloudBuild_Resource_ProjectsLocationsBuilds extends Google_Service_Resource
 {
   /**
    * Cancels a build in progress. (builds.cancel)
    *
-   * @param string $projectId Required. ID of the project.
-   * @param string $id Required. ID of the build.
+   * @param string $name The name of the `Build` to retrieve. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
    * @param Google_Service_CloudBuild_CancelBuildRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudBuild_Build
    */
-  public function cancel($projectId, $id, Google_Service_CloudBuild_CancelBuildRequest $postBody, $optParams = array())
+  public function cancel($name, Google_Service_CloudBuild_CancelBuildRequest $postBody, $optParams = array())
   {
-    $params = array('projectId' => $projectId, 'id' => $id, 'postBody' => $postBody);
+    $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('cancel', array($params), "Google_Service_CloudBuild_Build");
   }
@@ -46,17 +46,15 @@ class Google_Service_CloudBuild_Resource_ProjectsBuilds extends Google_Service_R
    * `GetBuild` to determine the build status (such as `SUCCESS` or `FAILURE`).
    * (builds.create)
    *
-   * @param string $projectId Required. ID of the project.
-   * @param Google_Service_CloudBuild_Build $postBody
+   * @param string $parent The parent resource where this build will be created.
+   * Format: `projects/{project}/locations/{location}`
+   * @param Google_Service_CloudBuild_CreateBuildRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The parent resource where this build will be
-   * created. Format: `projects/{project}/locations/{location}`
    * @return Google_Service_CloudBuild_Operation
    */
-  public function create($projectId, Google_Service_CloudBuild_Build $postBody, $optParams = array())
+  public function create($parent, Google_Service_CloudBuild_CreateBuildRequest $postBody, $optParams = array())
   {
-    $params = array('projectId' => $projectId, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('create', array($params), "Google_Service_CloudBuild_Operation");
   }
@@ -65,39 +63,39 @@ class Google_Service_CloudBuild_Resource_ProjectsBuilds extends Google_Service_R
    * returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`),
    * and timing information. (builds.get)
    *
-   * @param string $projectId Required. ID of the project.
-   * @param string $id Required. ID of the build.
+   * @param string $name The name of the `Build` to retrieve. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string name The name of the `Build` to retrieve. Format:
-   * `projects/{project}/locations/{location}/builds/{build}`
+   * @opt_param string projectId Required. ID of the project.
+   * @opt_param string id Required. ID of the build.
    * @return Google_Service_CloudBuild_Build
    */
-  public function get($projectId, $id, $optParams = array())
+  public function get($name, $optParams = array())
   {
-    $params = array('projectId' => $projectId, 'id' => $id);
+    $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_CloudBuild_Build");
   }
   /**
    * Lists previously requested builds. Previously requested builds may still be
    * in-progress, or may have finished successfully or unsuccessfully.
-   * (builds.listProjectsBuilds)
+   * (builds.listProjectsLocationsBuilds)
    *
-   * @param string $projectId Required. ID of the project.
+   * @param string $parent The parent of the collection of `Builds`. Format:
+   * `projects/{project}/locations/location`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Number of results to return in the list.
-   * @opt_param string parent The parent of the collection of `Builds`. Format:
-   * `projects/{project}/locations/location`
    * @opt_param string filter The raw filter text to constrain the results.
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
+   * @opt_param int pageSize Number of results to return in the list.
+   * @opt_param string projectId Required. ID of the project.
    * @return Google_Service_CloudBuild_ListBuildsResponse
    */
-  public function listProjectsBuilds($projectId, $optParams = array())
+  public function listProjectsLocationsBuilds($parent, $optParams = array())
   {
-    $params = array('projectId' => $projectId);
+    $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_CloudBuild_ListBuildsResponse");
   }
@@ -119,15 +117,15 @@ class Google_Service_CloudBuild_Resource_ProjectsBuilds extends Google_Service_R
    * attempt to use the same object, which may or may not be available depending
    * on the bucket's lifecycle management settings. (builds.retry)
    *
-   * @param string $projectId Required. ID of the project.
-   * @param string $id Required. Build ID of the original build.
+   * @param string $name The name of the `Build` to retry. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
    * @param Google_Service_CloudBuild_RetryBuildRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudBuild_Operation
    */
-  public function retry($projectId, $id, Google_Service_CloudBuild_RetryBuildRequest $postBody, $optParams = array())
+  public function retry($name, Google_Service_CloudBuild_RetryBuildRequest $postBody, $optParams = array())
   {
-    $params = array('projectId' => $projectId, 'id' => $id, 'postBody' => $postBody);
+    $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('retry', array($params), "Google_Service_CloudBuild_Operation");
   }

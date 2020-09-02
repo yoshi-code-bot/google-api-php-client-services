@@ -57,6 +57,14 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
    * targeting options for.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are: * `targetingType` (default) The default sorting order is ascending. To
+   * specify descending order for a field, a suffix "desc" should be added to the
+   * field name. Example: `targetingType desc`.
+   * @opt_param string pageToken A token that lets the client fetch the next page
+   * of results. Typically, this is the value of next_page_token returned from the
+   * previous call to `BulkListLineItemAssignedTargetingOptions` method. If not
+   * specified, the first page of results will be returned.
    * @opt_param string filter Allows filtering by assigned targeting option
    * properties. Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by the logical operator `OR` on
@@ -72,14 +80,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
    * @opt_param int pageSize Requested page size. The size must be an integer
    * between `1` and `5000`. If unspecified, the default is '5000'. Returns error
    * code `INVALID_ARGUMENT` if an invalid value is specified.
-   * @opt_param string pageToken A token that lets the client fetch the next page
-   * of results. Typically, this is the value of next_page_token returned from the
-   * previous call to `BulkListLineItemAssignedTargetingOptions` method. If not
-   * specified, the first page of results will be returned.
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are: * `targetingType` (default) The default sorting order is ascending. To
-   * specify descending order for a field, a suffix "desc" should be added to the
-   * field name. Example: `targetingType desc`.
    * @return Google_Service_DisplayVideo_BulkListLineItemAssignedTargetingOptionsResponse
    */
   public function bulkListLineItemAssignedTargetingOptions($advertiserId, $lineItemId, $optParams = array())
@@ -166,15 +166,15 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of next_page_token returned from
-   * the previous call to `ListLineItems` method. If not specified, the first page
-   * of results will be returned.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
    * The default sorting order is ascending. To specify descending order for a
    * field, a suffix "desc" should be added to the field name. Example:
    * `displayName desc`.
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return. Typically, this is the value of next_page_token returned from
+   * the previous call to `ListLineItems` method. If not specified, the first page
+   * of results will be returned.
    * @return Google_Service_DisplayVideo_ListLineItemsResponse
    */
   public function listAdvertisersLineItems($advertiserId, $optParams = array())
