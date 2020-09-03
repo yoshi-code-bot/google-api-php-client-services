@@ -363,19 +363,6 @@ class Google_Service_Fitness extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'includeDeleted' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'activityType' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                  'repeated' => true,
-                ),
                 'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -383,6 +370,19 @@ class Google_Service_Fitness extends Google_Service
                 'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'includeDeleted' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'activityType' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                  'repeated' => true,
                 ),
               ),
             ),'update' => array(
