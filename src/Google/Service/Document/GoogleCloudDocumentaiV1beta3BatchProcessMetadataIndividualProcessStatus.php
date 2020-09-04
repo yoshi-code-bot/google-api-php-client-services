@@ -17,11 +17,20 @@
 
 class Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus extends Google_Model
 {
+  public $humanReviewOperation;
   public $inputGcsSource;
   public $outputGcsDestination;
   protected $statusType = 'Google_Service_Document_GoogleRpcStatus';
   protected $statusDataType = '';
 
+  public function setHumanReviewOperation($humanReviewOperation)
+  {
+    $this->humanReviewOperation = $humanReviewOperation;
+  }
+  public function getHumanReviewOperation()
+  {
+    return $this->humanReviewOperation;
+  }
   public function setInputGcsSource($inputGcsSource)
   {
     $this->inputGcsSource = $inputGcsSource;
