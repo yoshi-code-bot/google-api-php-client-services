@@ -133,10 +133,6 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'showDeleted' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -144,6 +140,10 @@ class Google_Service_Calendar extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'showDeleted' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -193,6 +193,10 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -200,10 +204,6 @@ class Google_Service_Calendar extends Google_Service
                 'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'syncToken' => array(
                   'location' => 'query',
@@ -253,15 +253,15 @@ class Google_Service_Calendar extends Google_Service
               'path' => 'users/me/calendarList',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'maxResults' => array(
+                'minAccessRole' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'minAccessRole' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -269,9 +269,9 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'maxResults' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'showDeleted' => array(
                   'location' => 'query',
@@ -310,13 +310,17 @@ class Google_Service_Calendar extends Google_Service
               'path' => 'users/me/calendarList/watch',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'syncToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'showHidden' => array(
                   'location' => 'query',
@@ -325,10 +329,6 @@ class Google_Service_Calendar extends Google_Service
                 'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'syncToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'minAccessRole' => array(
                   'location' => 'query',
@@ -474,6 +474,10 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'alwaysIncludeEmail' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -481,10 +485,6 @@ class Google_Service_Calendar extends Google_Service
                 'timeZone' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'import' => array(
@@ -518,19 +518,19 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'sendNotifications' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'conferenceDataVersion' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'supportsAttachments' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'sendNotifications' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -549,19 +549,11 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeMax' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'showDeleted' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'timeZone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -569,19 +561,27 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'timeMin' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'showDeleted' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'alwaysIncludeEmail' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'timeMax' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'originalStart' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeZone' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -599,49 +599,7 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'timeMax' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'iCalUID' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'showDeleted' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'timeZone' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'singleEvents' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'updatedMin' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'sharedExtendedProperty' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'privateExtendedProperty' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -649,7 +607,12 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'timeMin' => array(
+                'privateExtendedProperty' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -657,13 +620,50 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'sharedExtendedProperty' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'singleEvents' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'iCalUID' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeMax' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'showHiddenInvitations' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'updatedMin' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'timeMin' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'showDeleted' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'move' => array(
@@ -708,19 +708,19 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sendUpdates' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'conferenceDataVersion' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'sendNotifications' => array(
+                'alwaysIncludeEmail' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'supportsAttachments' => array(
+                'sendUpdates' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sendNotifications' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -728,7 +728,7 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'alwaysIncludeEmail' => array(
+                'supportsAttachments' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -747,13 +747,13 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sendUpdates' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sendNotifications' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'sendUpdates' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -770,14 +770,6 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'sendNotifications' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'sendUpdates' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -786,11 +778,19 @@ class Google_Service_Calendar extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'supportsAttachments' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'conferenceDataVersion' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'supportsAttachments' => array(
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'sendNotifications' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -804,67 +804,13 @@ class Google_Service_Calendar extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'syncToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeMin' => array(
+                'q' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'alwaysIncludeEmail' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'showHiddenInvitations' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxAttendees' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'q' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sharedExtendedProperty' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'timeZone' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'privateExtendedProperty' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeMax' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'iCalUID' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'updatedMin' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'showDeleted' => array(
                   'location' => 'query',
@@ -873,6 +819,60 @@ class Google_Service_Calendar extends Google_Service
                 'singleEvents' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'sharedExtendedProperty' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'showHiddenInvitations' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'timeMax' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'updatedMin' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeMin' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'privateExtendedProperty' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'syncToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'iCalUID' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxAttendees' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -913,13 +913,13 @@ class Google_Service_Calendar extends Google_Service
               'path' => 'users/me/settings',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'syncToken' => array(
                   'location' => 'query',
@@ -930,15 +930,15 @@ class Google_Service_Calendar extends Google_Service
               'path' => 'users/me/settings/watch',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'syncToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

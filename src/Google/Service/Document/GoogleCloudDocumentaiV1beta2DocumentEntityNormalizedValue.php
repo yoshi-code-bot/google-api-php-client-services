@@ -17,6 +17,8 @@
 
 class Google_Service_Document_GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue extends Google_Model
 {
+  protected $addressValueType = 'Google_Service_Document_GoogleTypePostalAddress';
+  protected $addressValueDataType = '';
   protected $dateValueType = 'Google_Service_Document_GoogleTypeDate';
   protected $dateValueDataType = '';
   protected $datetimeValueType = 'Google_Service_Document_GoogleTypeDateTime';
@@ -25,6 +27,20 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta2DocumentEntityNormaliz
   protected $moneyValueDataType = '';
   public $text;
 
+  /**
+   * @param Google_Service_Document_GoogleTypePostalAddress
+   */
+  public function setAddressValue(Google_Service_Document_GoogleTypePostalAddress $addressValue)
+  {
+    $this->addressValue = $addressValue;
+  }
+  /**
+   * @return Google_Service_Document_GoogleTypePostalAddress
+   */
+  public function getAddressValue()
+  {
+    return $this->addressValue;
+  }
   /**
    * @param Google_Service_Document_GoogleTypeDate
    */

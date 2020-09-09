@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_AdMob_AppManualAppInfo extends Google_Model
+class Google_Service_Apigateway_ApigatewayCancelOperationRequest extends Google_Model
 {
-  public $displayName;
-
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
 }

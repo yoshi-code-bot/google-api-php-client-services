@@ -142,17 +142,17 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
+                'debugOptions.enableDebugging' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'boolean',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'debugOptions.enableDebugging' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -178,21 +178,21 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'debugOptions.enableDebugging' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'userResourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'debugOptions.enableDebugging' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'userResourceName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -214,21 +214,21 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'resolutionStatusCode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageSize' => array(
+                'resolutionStatusCode' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -298,19 +298,19 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'version' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'connectorName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'mode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'connectorName' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -334,13 +334,13 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'connectorName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'connectorName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'index' => array(
@@ -362,17 +362,9 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'connectorName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'brief' => array(
                   'location' => 'query',
@@ -381,6 +373,14 @@ class Google_Service_CloudSearch extends Google_Service
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'connectorName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'poll' => array(
@@ -482,10 +482,6 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -493,6 +489,10 @@ class Google_Service_CloudSearch extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -527,11 +527,7 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/query/sources',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'requestOptions.languageCode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'requestOptions.timeZone' => array(
+                'requestOptions.searchApplicationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -543,7 +539,11 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestOptions.searchApplicationId' => array(
+                'requestOptions.timeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'requestOptions.languageCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -594,17 +594,17 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/settings/datasources',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'debugOptions.enableDebugging' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageSize' => array(
+                'pageToken' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -667,13 +667,13 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'debugOptions.enableDebugging' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'debugOptions.enableDebugging' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'reset' => array(
@@ -710,15 +710,11 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/stats/index',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'toDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'fromDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'fromDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -726,11 +722,15 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'toDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'toDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'fromDate.day' => array(
+                'toDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -739,6 +739,14 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/stats/query',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'toDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'fromDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'fromDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -747,15 +755,7 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'toDate.day' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'fromDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'fromDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -768,19 +768,7 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/stats/session',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'fromDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'toDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'fromDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -788,7 +776,19 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'toDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'toDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'fromDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'fromDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -797,11 +797,19 @@ class Google_Service_CloudSearch extends Google_Service
               'path' => 'v1/stats/user',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'toDate.year' => array(
+                'fromDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'fromDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'toDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'toDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -810,14 +818,6 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'integer',
                 ),
                 'toDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'fromDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -841,14 +841,6 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'fromDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'toDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -858,6 +850,14 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'integer',
                 ),
                 'fromDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'fromDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'toDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -885,11 +885,7 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'fromDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.month' => array(
+                'toDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -897,15 +893,19 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'fromDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'fromDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'toDate.day' => array(
+                'toDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'fromDate.day' => array(
+                'fromDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -933,11 +933,15 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'toDate.year' => array(
+                'fromDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'toDate.month' => array(
+                'toDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'toDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -945,11 +949,7 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'fromDate.year' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'toDate.day' => array(
+                'toDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -973,7 +973,11 @@ class Google_Service_CloudSearch extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'toDate.day' => array(
+                'fromDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'toDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -981,11 +985,7 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'fromDate.month' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'fromDate.year' => array(
+                'toDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -993,7 +993,7 @@ class Google_Service_CloudSearch extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'toDate.month' => array(
+                'fromDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),

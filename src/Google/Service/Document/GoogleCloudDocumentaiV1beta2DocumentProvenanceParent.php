@@ -15,33 +15,25 @@
  * the License.
  */
 
-class Google_Service_AdMob_ListAppsResponse extends Google_Collection
+class Google_Service_Document_GoogleCloudDocumentaiV1beta2DocumentProvenanceParent extends Google_Model
 {
-  protected $collection_key = 'apps';
-  protected $appsType = 'Google_Service_AdMob_App';
-  protected $appsDataType = 'array';
-  public $nextPageToken;
+  public $id;
+  public $revision;
 
-  /**
-   * @param Google_Service_AdMob_App
-   */
-  public function setApps($apps)
+  public function setId($id)
   {
-    $this->apps = $apps;
+    $this->id = $id;
   }
-  /**
-   * @return Google_Service_AdMob_App
-   */
-  public function getApps()
+  public function getId()
   {
-    return $this->apps;
+    return $this->id;
   }
-  public function setNextPageToken($nextPageToken)
+  public function setRevision($revision)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->revision = $revision;
   }
-  public function getNextPageToken()
+  public function getRevision()
   {
-    return $this->nextPageToken;
+    return $this->revision;
   }
 }
