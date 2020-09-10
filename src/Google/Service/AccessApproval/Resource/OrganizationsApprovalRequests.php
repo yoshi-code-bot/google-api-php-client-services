@@ -84,14 +84,14 @@ class Google_Service_AccessApproval_Resource_OrganizationsApprovalRequests exten
    * "organizations/{organization_id}".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken A token identifying the page of results to
+   * return.
    * @opt_param string filter A filter on the type of approval requests to
    * retrieve. Must be one of the following values: 1. [not set]: Requests that
    * are pending or have active approvals. 2. ALL: All requests. 3. PENDING: Only
    * pending requests. 4. ACTIVE: Only active (i.e. currently approved) requests.
    * 5. DISMISSED: Only dismissed (including expired) requests. 6. HISTORY: Active
    * and dismissed (including expired) requests.
-   * @opt_param string pageToken A token identifying the page of results to
-   * return.
    * @opt_param int pageSize Requested page size.
    * @return Google_Service_AccessApproval_ListApprovalRequestsResponse
    */
