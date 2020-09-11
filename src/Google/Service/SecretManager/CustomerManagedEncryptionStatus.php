@@ -15,14 +15,16 @@
  * the License.
  */
 
-/**
- * The "youtube" collection of methods.
- * Typical usage is:
- *  <code>
- *   $youtubeService = new Google_Service_YouTube(...);
- *   $youtube = $youtubeService->youtube;
- *  </code>
- */
-class Google_Service_YouTube_Resource_Youtube extends Google_Service_Resource
+class Google_Service_SecretManager_CustomerManagedEncryptionStatus extends Google_Model
 {
+  public $kmsKeyVersionName;
+
+  public function setKmsKeyVersionName($kmsKeyVersionName)
+  {
+    $this->kmsKeyVersionName = $kmsKeyVersionName;
+  }
+  public function getKmsKeyVersionName()
+  {
+    return $this->kmsKeyVersionName;
+  }
 }

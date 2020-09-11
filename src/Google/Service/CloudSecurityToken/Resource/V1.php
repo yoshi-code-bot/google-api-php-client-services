@@ -16,29 +16,26 @@
  */
 
 /**
- * The "infocards" collection of methods.
+ * The "v1" collection of methods.
  * Typical usage is:
  *  <code>
- *   $youtubeService = new Google_Service_YouTube(...);
- *   $infocards = $youtubeService->infocards;
+ *   $stsService = new Google_Service_CloudSecurityToken(...);
+ *   $v1 = $stsService->v1;
  *  </code>
  */
-class Google_Service_YouTube_Resource_YoutubeV3Infocards extends Google_Service_Resource
+class Google_Service_CloudSecurityToken_Resource_V1 extends Google_Service_Resource
 {
   /**
-   * Retrieves all infocards for a given video. (infocards.listYoutubeV3Infocards)
+   * Exchanges a credential for a Google OAuth 2.0 access token. (v1.token)
    *
-   * @param string|array $part The properties to return.
+   * @param Google_Service_CloudSecurityToken_GoogleIdentityStsV1ExchangeTokenRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string videoId Encrypted id of the video.
-   * @opt_param string onBehalfOfContentOwner Content owner of the video.
-   * @return Google_Service_YouTube_InfocardListResponse
+   * @return Google_Service_CloudSecurityToken_GoogleIdentityStsV1ExchangeTokenResponse
    */
-  public function listYoutubeV3Infocards($part, $optParams = array())
+  public function token(Google_Service_CloudSecurityToken_GoogleIdentityStsV1ExchangeTokenRequest $postBody, $optParams = array())
   {
-    $params = array('part' => $part);
+    $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_YouTube_InfocardListResponse");
+    return $this->call('token', array($params), "Google_Service_CloudSecurityToken_GoogleIdentityStsV1ExchangeTokenResponse");
   }
 }

@@ -143,7 +143,7 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsLocationsStudie
   }
   /**
    * Adds one or more trials to a study, with parameter values suggested by AI
-   * Platform Optimizer. Returns a long-running operation associated with the
+   * Platform Vizier. Returns a long-running operation associated with the
    * generation of trial suggestions. When this long-running operation succeeds,
    * it will contain a SuggestTrialsResponse. (trials.suggest)
    *

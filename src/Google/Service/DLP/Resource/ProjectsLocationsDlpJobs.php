@@ -158,6 +158,8 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken The standard list page token.
+   * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string filter Allows filtering. Supported syntax: * Filter
    * expressions are made up of one or more restrictions. * Restrictions can be
    * combined by `AND` or `OR` logical operators. A sequence of restrictions
@@ -175,8 +177,6 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
    * inspected_storage = cloud_storage AND (state = done OR state = canceled) *
    * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be
    * no more than 500 characters.
-   * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string orderBy Comma separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case-insensitive, default

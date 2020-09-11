@@ -105,7 +105,6 @@ class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Servic
    * project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string pageToken Page token to continue retrieval. Comes from
    * previous call to `ListInspectTemplates`.
    * @opt_param string orderBy Comma separated list of fields to order by,
@@ -117,6 +116,7 @@ class Google_Service_DLP_Resource_ProjectsInspectTemplates extends Google_Servic
    * template's name. - `display_name`: corresponds to template's display name.
    * @opt_param int pageSize Size of the page, can be limited by server. If zero
    * server returns a page of max size 100.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListInspectTemplatesResponse
    */
   public function listProjectsInspectTemplates($parent, $optParams = array())

@@ -61,20 +61,20 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsersClientStates exten
    * devices/{device}/deviceUsers/{deviceUser}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Additional restrictions when fetching list
+   * of client states.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListClientStates` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListClientStates` must match
    * the call that provided the page token.
+   * @opt_param string orderBy Optional. Order specification for client states in
+   * the response.
    * @opt_param string customer Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
    * organization, use `customers/{customer_id}`, where customer_id is the
    * customer to whom the device belongs.
-   * @opt_param string orderBy Optional. Order specification for client states in
-   * the response.
-   * @opt_param string filter Optional. Additional restrictions when fetching list
-   * of client states.
    * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ListClientStatesResponse
    */
   public function listDevicesDeviceUsersClientStates($parent, $optParams = array())
@@ -93,21 +93,27 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsersClientStates exten
    * where partner_id corresponds to the partner storing the data. For partners
    * belonging to the "BeyondCorp Alliance", this is the partner ID specified to
    * you by Google. For all other callers, this is a string of the form:
-   * `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix
+   * `{customer_id}-suffix`, where `customer_id` is your customer ID. The *suffix*
    * is any string the caller specifies. This string will be displayed verbatim in
-   * the administration console.
+   * the administration console. This suffix is used in setting up Custom Access
+   * Levels in Context-Aware Access. Your organization's customer ID can be
+   * obtained from the URL: `GET
+   * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id`
+   * field in the response contains the customer ID starting with the letter 'C'.
+   * The customer ID to be used in this API is the string after the letter 'C'
+   * (not including 'C')
    * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ClientState $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Optional. Comma-separated list of fully
-   * qualified names of fields to be updated. If not specified, all updatable
-   * fields in ClientState are updated.
    * @opt_param string customer Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
    * organization, use `customers/{customer_id}`, where customer_id is the
    * customer to whom the device belongs.
+   * @opt_param string updateMask Optional. Comma-separated list of fully
+   * qualified names of fields to be updated. If not specified, all updatable
+   * fields in ClientState are updated.
    * @return Google_Service_CloudIdentity_Operation
    */
   public function patch($name, Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ClientState $postBody, $optParams = array())

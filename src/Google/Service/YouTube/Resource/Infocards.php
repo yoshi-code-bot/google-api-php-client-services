@@ -16,33 +16,49 @@
  */
 
 /**
- * The "v3" collection of methods.
+ * The "infocards" collection of methods.
  * Typical usage is:
  *  <code>
  *   $youtubeService = new Google_Service_YouTube(...);
- *   $v3 = $youtubeService->v3;
+ *   $infocards = $youtubeService->infocards;
  *  </code>
  */
-class Google_Service_YouTube_Resource_YoutubeV3 extends Google_Service_Resource
+class Google_Service_YouTube_Resource_Infocards extends Google_Service_Resource
 {
+  /**
+   * Retrieves all infocards for a given video. (infocards.listInfocards)
+   *
+   * @param string|array $part The properties to return.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string onBehalfOfContentOwner Content owner of the video.
+   * @opt_param string videoId Encrypted id of the video.
+   * @return Google_Service_YouTube_InfocardListResponse
+   */
+  public function listInfocards($part, $optParams = array())
+  {
+    $params = array('part' => $part);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_YouTube_InfocardListResponse");
+  }
   /**
    * Updates infocards for a given video. Note: * If the card id is not provided,
    * a new card will be created. * If the card id is provided, that card will be
    * updated. * Existing cards will be discarded if they're not included in the
-   * request. (v3.infocards)
+   * request. (infocards.update)
    *
    * @param string|array $part The properties to update.
    * @param Google_Service_YouTube_InfoCards $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string onBehalfOfContentOwner Content owner of the video.
    * @opt_param string videoId Encrypted id of the video.
+   * @opt_param string onBehalfOfContentOwner Content owner of the video.
    * @return Google_Service_YouTube_InfoCards
    */
-  public function infocards($part, Google_Service_YouTube_InfoCards $postBody, $optParams = array())
+  public function update($part, Google_Service_YouTube_InfoCards $postBody, $optParams = array())
   {
     $params = array('part' => $part, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('infocards', array($params), "Google_Service_YouTube_InfoCards");
+    return $this->call('update', array($params), "Google_Service_YouTube_InfoCards");
   }
 }
