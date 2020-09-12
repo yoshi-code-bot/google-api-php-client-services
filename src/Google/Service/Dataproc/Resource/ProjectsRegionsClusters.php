@@ -200,6 +200,14 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * *config.secondary_worker_config.num_instances* Resize secondary worker group
    * config.autoscaling_config.policy_uri Use, stop using, or change autoscaling
    * policies
+   * @opt_param string requestId Optional. A unique id used to identify the
+   * request. If the server receives two UpdateClusterRequest requests with the
+   * same id, then the second request will be ignored and the first
+   * google.longrunning.Operation created and stored in the backend is returned.It
+   * is recommended to always set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
+   * (-). The maximum length is 40 characters.
    * @opt_param string gracefulDecommissionTimeout Optional. Timeout for graceful
    * YARN decomissioning. Graceful decommissioning allows removing nodes from the
    * cluster without interrupting jobs in progress. Timeout specifies how long to
@@ -209,14 +217,6 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * representation of Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and
    * higher.
-   * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two UpdateClusterRequest requests with the
-   * same id, then the second request will be ignored and the first
-   * google.longrunning.Operation created and stored in the backend is returned.It
-   * is recommended to always set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
-   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
-   * (-). The maximum length is 40 characters.
    * @return Google_Service_Dataproc_Operation
    */
   public function patch($projectId, $region, $clusterName, Google_Service_Dataproc_Cluster $postBody, $optParams = array())
