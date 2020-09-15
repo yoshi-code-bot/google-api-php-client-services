@@ -18,10 +18,19 @@
 class Google_Service_CloudBillingBudget_GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends Google_Collection
 {
   protected $collection_key = 'monitoringNotificationChannels';
+  public $disableDefaultIamRecipients;
   public $monitoringNotificationChannels;
   public $pubsubTopic;
   public $schemaVersion;
 
+  public function setDisableDefaultIamRecipients($disableDefaultIamRecipients)
+  {
+    $this->disableDefaultIamRecipients = $disableDefaultIamRecipients;
+  }
+  public function getDisableDefaultIamRecipients()
+  {
+    return $this->disableDefaultIamRecipients;
+  }
   public function setMonitoringNotificationChannels($monitoringNotificationChannels)
   {
     $this->monitoringNotificationChannels = $monitoringNotificationChannels;

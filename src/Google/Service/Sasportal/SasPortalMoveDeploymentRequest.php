@@ -15,24 +15,16 @@
  * the License.
  */
 
-class Google_Service_YouTube_InfoCards extends Google_Collection
+class Google_Service_Sasportal_SasPortalMoveDeploymentRequest extends Google_Model
 {
-  protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_YouTube_InfoCard';
-  protected $itemsDataType = 'array';
+  public $destination;
 
-  /**
-   * @param Google_Service_YouTube_InfoCard
-   */
-  public function setItems($items)
+  public function setDestination($destination)
   {
-    $this->items = $items;
+    $this->destination = $destination;
   }
-  /**
-   * @return Google_Service_YouTube_InfoCard
-   */
-  public function getItems()
+  public function getDestination()
   {
-    return $this->items;
+    return $this->destination;
   }
 }

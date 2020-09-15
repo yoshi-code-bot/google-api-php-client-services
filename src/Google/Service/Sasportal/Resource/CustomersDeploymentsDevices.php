@@ -23,23 +23,8 @@
  *   $devices = $sasportalService->devices;
  *  </code>
  */
-class Google_Service_Sasportal_Resource_NodesNodesDevices extends Google_Service_Resource
+class Google_Service_Sasportal_Resource_CustomersDeploymentsDevices extends Google_Service_Resource
 {
-  /**
-   * Creates a device under a node or customer. Returned devices are unordered.
-   * (devices.bulk)
-   *
-   * @param string $parent Required. The name of the parent resource.
-   * @param Google_Service_Sasportal_SasPortalBulkCreateDeviceRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Sasportal_SasPortalBulkCreateDeviceResponse
-   */
-  public function bulk($parent, Google_Service_Sasportal_SasPortalBulkCreateDeviceRequest $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('bulk', array($params), "Google_Service_Sasportal_SasPortalBulkCreateDeviceResponse");
-  }
   /**
    * Creates a device under a node or customer. (devices.create)
    *
@@ -69,7 +54,8 @@ class Google_Service_Sasportal_Resource_NodesNodesDevices extends Google_Service
     return $this->call('createSigned', array($params), "Google_Service_Sasportal_SasPortalDevice");
   }
   /**
-   * Lists devices under a node or customer. (devices.listNodesNodesDevices)
+   * Lists devices under a node or customer.
+   * (devices.listCustomersDeploymentsDevices)
    *
    * @param string $parent Required. The name of the parent resource.
    * @param array $optParams Optional parameters.
@@ -77,14 +63,14 @@ class Google_Service_Sasportal_Resource_NodesNodesDevices extends Google_Service
    * @opt_param int pageSize The maximum number of devices to return in the
    * response. If empty or zero, all devices will be listed. Must be in the range
    * [0, 1000].
-   * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListDevices that indicates where this listing should continue from.
    * @opt_param string filter The filter expression. The filter should have one of
    * the following formats: "sn=123454" or "display_name=MyDevice". sn corresponds
    * to serial_number of the device. The filter is case insensitive.
+   * @opt_param string pageToken A pagination token returned from a previous call
+   * to ListDevices that indicates where this listing should continue from.
    * @return Google_Service_Sasportal_SasPortalListDevicesResponse
    */
-  public function listNodesNodesDevices($parent, $optParams = array())
+  public function listCustomersDeploymentsDevices($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

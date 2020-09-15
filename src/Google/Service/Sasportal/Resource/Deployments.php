@@ -15,6 +15,14 @@
  * the License.
  */
 
-class Google_Service_YouTube_SubscribeElement extends Google_Model
+/**
+ * The "deployments" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $sasportalService = new Google_Service_Sasportal(...);
+ *   $deployments = $sasportalService->deployments;
+ *  </code>
+ */
+class Google_Service_Sasportal_Resource_Deployments extends Google_Service_Resource
 {
 }

@@ -67,8 +67,8 @@ class Google_Service_CloudBuild_Resource_ProjectsLocationsBuilds extends Google_
    * `projects/{project}/locations/{location}/builds/{build}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string id Required. ID of the build.
    * @opt_param string projectId Required. ID of the project.
+   * @opt_param string id Required. ID of the build.
    * @return Google_Service_CloudBuild_Build
    */
   public function get($name, $optParams = array())
@@ -86,11 +86,11 @@ class Google_Service_CloudBuild_Resource_ProjectsLocationsBuilds extends Google_
    * `projects/{project}/locations/location`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Number of results to return in the list.
+   * @opt_param string filter The raw filter text to constrain the results.
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
-   * @opt_param string filter The raw filter text to constrain the results.
    * @opt_param string projectId Required. ID of the project.
-   * @opt_param int pageSize Number of results to return in the list.
    * @return Google_Service_CloudBuild_ListBuildsResponse
    */
   public function listProjectsLocationsBuilds($parent, $optParams = array())
