@@ -138,11 +138,13 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * resource name of the device. Format: devices/{device}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string orderBy Optional. Order specification for devices in the
-   * response.
    * @opt_param int pageSize Optional. The maximum number of DeviceUsers to
    * return. If unspecified, at most 5 DeviceUsers will be returned. The maximum
    * value is 20; values above 20 will be coerced to 20.
+   * @opt_param string filter Optional. Additional restrictions when fetching list
+   * of devices. [HC article](https://support.google.com/a/answer/7549103)
+   * @opt_param string orderBy Optional. Order specification for devices in the
+   * response.
    * @opt_param string customer Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
@@ -153,8 +155,6 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * `ListDeviceUsers` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListBooks` must match the call
    * that provided the page token.
-   * @opt_param string filter Optional. Additional restrictions when fetching list
-   * of devices. [HC article](https://support.google.com/a/answer/7549103)
    * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse
    */
   public function listDevicesDeviceUsers($parent, $optParams = array())
@@ -181,12 +181,6 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * all DeviceUser belonging to the user.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of DeviceUsers to return. If
-   * unspecified, at most 20 DeviceUsers will be returned. The maximum value is
-   * 20; values above 20 will be coerced to 20.
-   * @opt_param string androidId Android Id returned by [Settings.Secure#ANDROID_I
-   * D](https://developer.android.com/reference/android/provider/Settings.Secure.h
-   * tml#ANDROID_ID).
    * @opt_param string pageToken A page token, received from a previous
    * `LookupDeviceUsers` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `LookupDeviceUsers` must match
@@ -197,6 +191,12 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows:
    * C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
    * ~/.secureConnect/context_aware_config.json
+   * @opt_param int pageSize The maximum number of DeviceUsers to return. If
+   * unspecified, at most 20 DeviceUsers will be returned. The maximum value is
+   * 20; values above 20 will be coerced to 20.
+   * @opt_param string androidId Android Id returned by [Settings.Secure#ANDROID_I
+   * D](https://developer.android.com/reference/android/provider/Settings.Secure.h
+   * tml#ANDROID_ID).
    * @opt_param string userId The user whose DeviceUser's resource name will be
    * fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the
    * calling user.
