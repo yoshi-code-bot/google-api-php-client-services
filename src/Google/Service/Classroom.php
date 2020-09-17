@@ -54,6 +54,12 @@ class Google_Service_Classroom extends Google_Service
   /** View course work and grades for students in the Google Classroom classes you teach or administer. */
   const CLASSROOM_COURSEWORK_STUDENTS_READONLY =
       "https://www.googleapis.com/auth/classroom.coursework.students.readonly";
+  /** See, edit, and create classwork materials in Google Classroom. */
+  const CLASSROOM_COURSEWORKMATERIALS =
+      "https://www.googleapis.com/auth/classroom.courseworkmaterials";
+  /** See all classwork materials for your Google Classroom classes. */
+  const CLASSROOM_COURSEWORKMATERIALS_READONLY =
+      "https://www.googleapis.com/auth/classroom.courseworkmaterials.readonly";
   /** View your Google Classroom guardians. */
   const CLASSROOM_GUARDIANLINKS_ME_READONLY =
       "https://www.googleapis.com/auth/classroom.guardianlinks.me.readonly";
@@ -96,6 +102,7 @@ class Google_Service_Classroom extends Google_Service
   public $courses_announcements;
   public $courses_courseWork;
   public $courses_courseWork_studentSubmissions;
+  public $courses_courseWorkMaterials;
   public $courses_students;
   public $courses_teachers;
   public $courses_topics;
@@ -154,11 +161,11 @@ class Google_Service_Classroom extends Google_Service
               'path' => 'v1/courses',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'teacherId' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'studentId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -167,13 +174,13 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
+                'teacherId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'studentId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -244,13 +251,13 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -519,11 +526,11 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'userId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -532,9 +539,9 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'userId' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'late' => array(
                   'location' => 'query',
@@ -643,6 +650,110 @@ class Google_Service_Classroom extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->courses_courseWorkMaterials = new Google_Service_Classroom_Resource_CoursesCourseWorkMaterials(
+        $this,
+        $this->serviceName,
+        'courseWorkMaterials',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/courses/{courseId}/courseWorkMaterials',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'courseId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1/courses/{courseId}/courseWorkMaterials/{id}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'courseId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1/courses/{courseId}/courseWorkMaterials/{id}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'courseId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1/courses/{courseId}/courseWorkMaterials',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'courseId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'courseWorkMaterialStates' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'materialLink' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'materialDriveId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1/courses/{courseId}/courseWorkMaterials/{id}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'courseId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -920,11 +1031,11 @@ class Google_Service_Classroom extends Google_Service
               'path' => 'v1/invitations',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
+                'courseId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'courseId' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1025,22 +1136,22 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'states' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'invitedEmailAddress' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'states' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -1111,17 +1222,17 @@ class Google_Service_Classroom extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
+                'invitedEmailAddress' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'invitedEmailAddress' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
               ),
             ),

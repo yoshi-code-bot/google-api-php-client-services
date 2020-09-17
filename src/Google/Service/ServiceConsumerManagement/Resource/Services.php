@@ -28,11 +28,14 @@ class Google_Service_ServiceConsumerManagement_Resource_Services extends Google_
   /**
    * Search tenancy units for a managed service. (services.search)
    *
-   * @param string $parent Service for which search is performed.
+   * @param string $parent Required. Service for which search is performed.
    * services/{service} {service} the name of a service, for example
    * 'service.googleapis.com'.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Optional. The continuation token, which is used
+   * to page through large result sets. To get the next page of results, set this
+   * parameter to the value of `nextPageToken` from the previous response.
    * @opt_param int pageSize Optional. The maximum number of results returned by
    * this request. Currently, the default maximum is set to 1000. If `page_size`
    * isn't provided or the size provided is a number larger than 1000, it's
@@ -49,9 +52,6 @@ class Google_Service_ServiceConsumerManagement_Resource_Services extends Google_
    * joined with `AND`s. Tenancy units must match all expressions to be included
    * in the result set. For example, `tenant_resources.tag=xyz AND
    * tenant_resources.resource=projects/123456`
-   * @opt_param string pageToken Optional. The continuation token, which is used
-   * to page through large result sets. To get the next page of results, set this
-   * parameter to the value of `nextPageToken` from the previous response.
    * @return Google_Service_ServiceConsumerManagement_SearchTenancyUnitsResponse
    */
   public function search($parent, $optParams = array())
