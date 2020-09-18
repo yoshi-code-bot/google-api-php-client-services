@@ -15,14 +15,34 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
- *   $projects = $sqladminService->projects;
- *  </code>
- */
-class Google_Service_SQLAdmin_Resource_Projects extends Google_Service_Resource
+class Google_Service_SQLAdmin_MaintenanceDenyPeriod extends Google_Model
 {
+  public $endDate;
+  public $startDate;
+  public $time;
+
+  public function setEndDate($endDate)
+  {
+    $this->endDate = $endDate;
+  }
+  public function getEndDate()
+  {
+    return $this->endDate;
+  }
+  public function setStartDate($startDate)
+  {
+    $this->startDate = $startDate;
+  }
+  public function getStartDate()
+  {
+    return $this->startDate;
+  }
+  public function setTime($time)
+  {
+    $this->time = $time;
+  }
+  public function getTime()
+  {
+    return $this->time;
+  }
 }

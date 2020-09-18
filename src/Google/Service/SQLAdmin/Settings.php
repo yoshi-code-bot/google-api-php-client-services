@@ -17,7 +17,7 @@
 
 class Google_Service_SQLAdmin_Settings extends Google_Collection
 {
-  protected $collection_key = 'databaseFlags';
+  protected $collection_key = 'maintenanceDenyPeriods';
   public $activationPolicy;
   public $authorizedGaeApplications;
   public $availabilityType;
@@ -35,6 +35,8 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public $kind;
   protected $locationPreferenceType = 'Google_Service_SQLAdmin_LocationPreference';
   protected $locationPreferenceDataType = '';
+  protected $maintenanceDenyPeriodsType = 'Google_Service_SQLAdmin_MaintenanceDenyPeriod';
+  protected $maintenanceDenyPeriodsDataType = 'array';
   protected $maintenanceWindowType = 'Google_Service_SQLAdmin_MaintenanceWindow';
   protected $maintenanceWindowDataType = '';
   public $pricingPlan;
@@ -172,6 +174,20 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public function getLocationPreference()
   {
     return $this->locationPreference;
+  }
+  /**
+   * @param Google_Service_SQLAdmin_MaintenanceDenyPeriod
+   */
+  public function setMaintenanceDenyPeriods($maintenanceDenyPeriods)
+  {
+    $this->maintenanceDenyPeriods = $maintenanceDenyPeriods;
+  }
+  /**
+   * @return Google_Service_SQLAdmin_MaintenanceDenyPeriod
+   */
+  public function getMaintenanceDenyPeriods()
+  {
+    return $this->maintenanceDenyPeriods;
   }
   /**
    * @param Google_Service_SQLAdmin_MaintenanceWindow
