@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudRedis_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility extends Google_Model
+class Google_Service_CustomSearchAPI_PromotionImage extends Google_Model
 {
-  public $eligible;
-  public $reason;
+  public $height;
+  public $source;
+  public $width;
 
-  public function setEligible($eligible)
+  public function setHeight($height)
   {
-    $this->eligible = $eligible;
+    $this->height = $height;
   }
-  public function getEligible()
+  public function getHeight()
   {
-    return $this->eligible;
+    return $this->height;
   }
-  public function setReason($reason)
+  public function setSource($source)
   {
-    $this->reason = $reason;
+    $this->source = $source;
   }
-  public function getReason()
+  public function getSource()
   {
-    return $this->reason;
+    return $this->source;
+  }
+  public function setWidth($width)
+  {
+    $this->width = $width;
+  }
+  public function getWidth()
+  {
+    return $this->width;
   }
 }

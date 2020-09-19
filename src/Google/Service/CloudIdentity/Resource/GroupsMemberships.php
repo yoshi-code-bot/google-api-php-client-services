@@ -87,10 +87,10 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    *
    * @opt_param string view Membership resource view to be returned. Defaults to
    * View.BASIC.
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous list request, if any.
    * @opt_param int pageSize The default page size is 200 (max 1000) for the BASIC
    * view, and 50 (max 500) for the FULL view.
+   * @opt_param string pageToken The next_page_token value returned from a
+   * previous list request, if any.
    * @return Google_Service_CloudIdentity_ListMembershipsResponse
    */
   public function listGroupsMemberships($parent, $optParams = array())
@@ -123,5 +123,23 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
     return $this->call('lookup', array($params), "Google_Service_CloudIdentity_LookupMembershipNameResponse");
+  }
+  /**
+   * Modifies the `MembershipRole`s of a `Membership`.
+   * (memberships.modifyMembershipRoles)
+   *
+   * @param string $name Required. The [resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Membership` whose roles are to be modified. Must be of the form
+   * `groups/{group_id}/memberships/{membership_id}`.
+   * @param Google_Service_CloudIdentity_ModifyMembershipRolesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CloudIdentity_ModifyMembershipRolesResponse
+   */
+  public function modifyMembershipRoles($name, Google_Service_CloudIdentity_ModifyMembershipRolesRequest $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('modifyMembershipRoles', array($params), "Google_Service_CloudIdentity_ModifyMembershipRolesResponse");
   }
 }

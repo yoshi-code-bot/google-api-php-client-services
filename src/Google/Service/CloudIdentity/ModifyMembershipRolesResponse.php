@@ -15,16 +15,23 @@
  * the License.
  */
 
-class Google_Service_CloudRedis_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings extends Google_Model
+class Google_Service_CloudIdentity_ModifyMembershipRolesResponse extends Google_Model
 {
-  public $exclude;
+  protected $membershipType = 'Google_Service_CloudIdentity_Membership';
+  protected $membershipDataType = '';
 
-  public function setExclude($exclude)
+  /**
+   * @param Google_Service_CloudIdentity_Membership
+   */
+  public function setMembership(Google_Service_CloudIdentity_Membership $membership)
   {
-    $this->exclude = $exclude;
+    $this->membership = $membership;
   }
-  public function getExclude()
+  /**
+   * @return Google_Service_CloudIdentity_Membership
+   */
+  public function getMembership()
   {
-    return $this->exclude;
+    return $this->membership;
   }
 }

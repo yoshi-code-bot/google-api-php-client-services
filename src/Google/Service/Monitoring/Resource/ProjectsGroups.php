@@ -87,8 +87,6 @@ class Google_Service_Monitoring_Resource_ProjectsGroups extends Google_Service_R
    * ancestors of the specified group. The groups are returned in order, starting
    * with the immediate parent and ending with the most distant ancestor. If the
    * specified group has no immediate parent, the results are empty.
-   * @opt_param int pageSize A positive number that is the maximum number of
-   * results to return.
    * @opt_param string descendantsOfGroup A group name. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] Returns the descendants of
    * the specified group. This is a superset of the results returned by the
@@ -97,6 +95,8 @@ class Google_Service_Monitoring_Resource_ProjectsGroups extends Google_Service_R
    * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] Returns groups whose
    * parent_name field contains the group name. If no groups have this parent, the
    * results are empty.
+   * @opt_param int pageSize A positive number that is the maximum number of
+   * results to return.
    * @opt_param string pageToken If this field is not empty then it must contain
    * the next_page_token value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous

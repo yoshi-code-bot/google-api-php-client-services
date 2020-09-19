@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudRedis_GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource extends Google_Model
+class Google_Service_CustomSearchAPI_SearchSpelling extends Google_Model
 {
-  public $resourceType;
-  public $resourceUrl;
+  public $correctedQuery;
+  public $htmlCorrectedQuery;
 
-  public function setResourceType($resourceType)
+  public function setCorrectedQuery($correctedQuery)
   {
-    $this->resourceType = $resourceType;
+    $this->correctedQuery = $correctedQuery;
   }
-  public function getResourceType()
+  public function getCorrectedQuery()
   {
-    return $this->resourceType;
+    return $this->correctedQuery;
   }
-  public function setResourceUrl($resourceUrl)
+  public function setHtmlCorrectedQuery($htmlCorrectedQuery)
   {
-    $this->resourceUrl = $resourceUrl;
+    $this->htmlCorrectedQuery = $htmlCorrectedQuery;
   }
-  public function getResourceUrl()
+  public function getHtmlCorrectedQuery()
   {
-    return $this->resourceUrl;
+    return $this->htmlCorrectedQuery;
   }
 }
