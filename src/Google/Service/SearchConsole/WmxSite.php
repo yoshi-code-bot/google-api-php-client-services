@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceManagement_DisableServiceRequest extends Google_Model
+class Google_Service_SearchConsole_WmxSite extends Google_Model
 {
-  public $consumerId;
+  public $permissionLevel;
+  public $siteUrl;
 
-  public function setConsumerId($consumerId)
+  public function setPermissionLevel($permissionLevel)
   {
-    $this->consumerId = $consumerId;
+    $this->permissionLevel = $permissionLevel;
   }
-  public function getConsumerId()
+  public function getPermissionLevel()
   {
-    return $this->consumerId;
+    return $this->permissionLevel;
+  }
+  public function setSiteUrl($siteUrl)
+  {
+    $this->siteUrl = $siteUrl;
+  }
+  public function getSiteUrl()
+  {
+    return $this->siteUrl;
   }
 }

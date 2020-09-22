@@ -15,16 +15,34 @@
  * the License.
  */
 
-class Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1IamPolicy extends Google_Model
+class Google_Service_SearchConsole_ApiDimensionFilter extends Google_Model
 {
-  public $policyBlob;
+  public $dimension;
+  public $expression;
+  public $operator;
 
-  public function setPolicyBlob($policyBlob)
+  public function setDimension($dimension)
   {
-    $this->policyBlob = $policyBlob;
+    $this->dimension = $dimension;
   }
-  public function getPolicyBlob()
+  public function getDimension()
   {
-    return $this->policyBlob;
+    return $this->dimension;
+  }
+  public function setExpression($expression)
+  {
+    $this->expression = $expression;
+  }
+  public function getExpression()
+  {
+    return $this->expression;
+  }
+  public function setOperator($operator)
+  {
+    $this->operator = $operator;
+  }
+  public function getOperator()
+  {
+    return $this->operator;
   }
 }
