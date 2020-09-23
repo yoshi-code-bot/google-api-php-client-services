@@ -15,32 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_CreateBuildRequest extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ExportTestCasesResponse extends Google_Model
 {
-  protected $buildType = 'Google_Service_CloudBuild_Build';
-  protected $buildDataType = '';
-  public $projectId;
+  public $content;
+  public $gcsUri;
 
-  /**
-   * @param Google_Service_CloudBuild_Build
-   */
-  public function setBuild(Google_Service_CloudBuild_Build $build)
+  public function setContent($content)
   {
-    $this->build = $build;
+    $this->content = $content;
   }
-  /**
-   * @return Google_Service_CloudBuild_Build
-   */
-  public function getBuild()
+  public function getContent()
   {
-    return $this->build;
+    return $this->content;
   }
-  public function setProjectId($projectId)
+  public function setGcsUri($gcsUri)
   {
-    $this->projectId = $projectId;
+    $this->gcsUri = $gcsUri;
   }
-  public function getProjectId()
+  public function getGcsUri()
   {
-    return $this->projectId;
+    return $this->gcsUri;
   }
 }
