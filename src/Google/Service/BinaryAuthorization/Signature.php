@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "api" collection of methods.
- * Typical usage is:
- *  <code>
- *   $runService = new Google_Service_CloudRun(...);
- *   $api = $runService->api;
- *  </code>
- */
-class Google_Service_CloudRun_Resource_Api extends Google_Service_Resource
+class Google_Service_BinaryAuthorization_Signature extends Google_Model
 {
+  public $publicKeyId;
+  public $signature;
+
+  public function setPublicKeyId($publicKeyId)
+  {
+    $this->publicKeyId = $publicKeyId;
+  }
+  public function getPublicKeyId()
+  {
+    return $this->publicKeyId;
+  }
+  public function setSignature($signature)
+  {
+    $this->signature = $signature;
+  }
+  public function getSignature()
+  {
+    return $this->signature;
+  }
 }

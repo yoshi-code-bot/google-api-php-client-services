@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudRun_NamespaceStatus extends Google_Model
+class Google_Service_BinaryAuthorization_Jwt extends Google_Model
 {
-  public $phase;
+  public $compactJwt;
 
-  public function setPhase($phase)
+  public function setCompactJwt($compactJwt)
   {
-    $this->phase = $phase;
+    $this->compactJwt = $compactJwt;
   }
-  public function getPhase()
+  public function getCompactJwt()
   {
-    return $this->phase;
+    return $this->compactJwt;
   }
 }

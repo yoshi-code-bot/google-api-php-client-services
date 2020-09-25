@@ -15,34 +15,33 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_MaintenanceDenyPeriod extends Google_Model
+class Google_Service_Logging_ListViewsResponse extends Google_Collection
 {
-  public $endDate;
-  public $startDate;
-  public $time;
+  protected $collection_key = 'views';
+  public $nextPageToken;
+  protected $viewsType = 'Google_Service_Logging_LogView';
+  protected $viewsDataType = 'array';
 
-  public function setEndDate($endDate)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->endDate = $endDate;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getEndDate()
+  public function getNextPageToken()
   {
-    return $this->endDate;
+    return $this->nextPageToken;
   }
-  public function setStartDate($startDate)
+  /**
+   * @param Google_Service_Logging_LogView
+   */
+  public function setViews($views)
   {
-    $this->startDate = $startDate;
+    $this->views = $views;
   }
-  public function getStartDate()
+  /**
+   * @return Google_Service_Logging_LogView
+   */
+  public function getViews()
   {
-    return $this->startDate;
-  }
-  public function setTime($time)
-  {
-    $this->time = $time;
-  }
-  public function getTime()
-  {
-    return $this->time;
+    return $this->views;
   }
 }

@@ -15,17 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudRun_NamespaceSpec extends Google_Collection
+class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest extends Google_Model
 {
-  protected $collection_key = 'finalizers';
-  public $finalizers;
+  public $name;
 
-  public function setFinalizers($finalizers)
+  public function setName($name)
   {
-    $this->finalizers = $finalizers;
+    $this->name = $name;
   }
-  public function getFinalizers()
+  public function getName()
   {
-    return $this->finalizers;
+    return $this->name;
   }
 }

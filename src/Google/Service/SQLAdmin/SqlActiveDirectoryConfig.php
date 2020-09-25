@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "v1" collection of methods.
- * Typical usage is:
- *  <code>
- *   $runService = new Google_Service_CloudRun(...);
- *   $v1 = $runService->v1;
- *  </code>
- */
-class Google_Service_CloudRun_Resource_ApiV1 extends Google_Service_Resource
+class Google_Service_SQLAdmin_SqlActiveDirectoryConfig extends Google_Model
 {
+  public $domain;
+  public $kind;
+
+  public function setDomain($domain)
+  {
+    $this->domain = $domain;
+  }
+  public function getDomain()
+  {
+    return $this->domain;
+  }
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+  public function getKind()
+  {
+    return $this->kind;
+  }
 }
