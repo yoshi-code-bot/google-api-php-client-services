@@ -47,7 +47,9 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    * @param string $parent Required. The container resource on which to execute
    * the request. Acceptable formats: 1. "projects/[PROJECT_NUMBER]/locations/[LOC
    * ATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION here refers to GCP
-   * Locations: https://cloud.google.com/about/locations/
+   * Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers
+   * to supported insight types:
+   * https://cloud.google.com/recommender/docs/insights/insight-types.)
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional. If present, retrieves the next batch of
