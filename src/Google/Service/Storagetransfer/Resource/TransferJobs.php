@@ -41,7 +41,7 @@ class Google_Service_Storagetransfer_Resource_TransferJobs extends Google_Servic
   /**
    * Gets a transfer job. (transferJobs.get)
    *
-   * @param string $jobName Required. The job to get.
+   * @param string $jobName " Required. The job to get.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projectId Required. The ID of the Google Cloud Platform
@@ -59,7 +59,6 @@ class Google_Service_Storagetransfer_Resource_TransferJobs extends Google_Servic
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The list page size. The max allowed value is 256.
    * @opt_param string pageToken The list page token.
    * @opt_param string filter Required. A list of query parameters specified as
    * JSON text in the form of: {"project_id":"my_project_id",
@@ -69,6 +68,7 @@ class Google_Service_Storagetransfer_Resource_TransferJobs extends Google_Servic
    * array notation. `project``_``id` is required. `job_names` and `job_statuses`
    * are optional. The valid values for `job_statuses` are case-insensitive:
    * ENABLED, DISABLED, and DELETED.
+   * @opt_param int pageSize The list page size. The max allowed value is 256.
    * @return Google_Service_Storagetransfer_ListTransferJobsResponse
    */
   public function listTransferJobs($optParams = array())
