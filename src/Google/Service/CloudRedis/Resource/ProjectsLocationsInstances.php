@@ -91,7 +91,7 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
     return $this->call('export', array($params), "Google_Service_CloudRedis_Operation");
   }
   /**
-   * Initiates a failover of the master node to current replica node for a
+   * Initiates a failover of the primary node to current replica node for a
    * specific STANDARD tier Cloud Memorystore for Redis instance.
    * (instances.failover)
    *
