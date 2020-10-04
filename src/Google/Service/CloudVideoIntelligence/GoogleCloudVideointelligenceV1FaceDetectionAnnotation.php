@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1FaceDetectionAnnotation extends Google_Model
+class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1FaceDetectionAnnotation extends Google_Model
 {
   public $version;
 

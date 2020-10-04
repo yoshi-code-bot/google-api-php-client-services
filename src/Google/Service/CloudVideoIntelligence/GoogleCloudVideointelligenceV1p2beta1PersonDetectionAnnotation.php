@@ -15,10 +15,27 @@
  * the License.
  */
 
-class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1FaceDetectionAnnotation extends Google_Model
+class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta1PersonDetectionAnnotation extends Google_Collection
 {
+  protected $collection_key = 'tracks';
+  protected $tracksType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta1Track';
+  protected $tracksDataType = 'array';
   public $version;
 
+  /**
+   * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta1Track
+   */
+  public function setTracks($tracks)
+  {
+    $this->tracks = $tracks;
+  }
+  /**
+   * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta1Track
+   */
+  public function getTracks()
+  {
+    return $this->tracks;
+  }
   public function setVersion($version)
   {
     $this->version = $version;
