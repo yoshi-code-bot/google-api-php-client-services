@@ -68,6 +68,10 @@ class Google_Service_Apigee_Resource_Organizations extends Google_Service_Resour
    * organization in the following format:
    * 'organizations/{org}/deployedIngressConfig'.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view When set to FULL, additional details about the
+   * specific deployments receiving traffic will be included in the IngressConfig
+   * response's RoutingRules.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1IngressConfig
    */
   public function getDeployedIngressConfig($name, $optParams = array())

@@ -19,7 +19,8 @@
  * Service definition for AdMob (v1).
  *
  * <p>
- * The Google AdMob API lets you programmatically get reports on earnings.</p>
+ * The AdMob API allows publishers to programmatically get information about
+ * their AdMob account.</p>
  *
  * <p>
  * For more information about this service, see the API
