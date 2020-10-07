@@ -15,16 +15,24 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1CreateVersionOperationMetadata extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ImportDocumentsResponse extends Google_Collection
 {
-  public $version;
+  protected $collection_key = 'warnings';
+  protected $warningsType = 'Google_Service_Dialogflow_GoogleRpcStatus';
+  protected $warningsDataType = 'array';
 
-  public function setVersion($version)
+  /**
+   * @param Google_Service_Dialogflow_GoogleRpcStatus
+   */
+  public function setWarnings($warnings)
   {
-    $this->version = $version;
+    $this->warnings = $warnings;
   }
-  public function getVersion()
+  /**
+   * @return Google_Service_Dialogflow_GoogleRpcStatus
+   */
+  public function getWarnings()
   {
-    return $this->version;
+    return $this->warnings;
   }
 }
