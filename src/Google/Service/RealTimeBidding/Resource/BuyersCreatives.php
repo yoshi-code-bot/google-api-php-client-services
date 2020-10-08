@@ -79,10 +79,6 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
    * pertaining to bidder (`123`), use `bidders/123`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Controls the amount of information included in the
-   * response. By default only creativeServingDecision is included. To retrieve
-   * the entire creative resource (including the declared fields and the creative
-   * content) specify the view as "FULL".
    * @opt_param string filter Query string to filter creatives. If no filter is
    * specified, all active creatives will be returned. Example: 'accountId=12345
    * AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR
@@ -95,6 +91,10 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
    * should return. Typically, this is the value of
    * ListCreativesResponse.nextPageToken returned from the previous call to the
    * 'ListCreatives' method.
+   * @opt_param string view Controls the amount of information included in the
+   * response. By default only creativeServingDecision is included. To retrieve
+   * the entire creative resource (including the declared fields and the creative
+   * content) specify the view as "FULL".
    * @return Google_Service_RealTimeBidding_ListCreativesResponse
    */
   public function listBuyersCreatives($parent, $optParams = array())

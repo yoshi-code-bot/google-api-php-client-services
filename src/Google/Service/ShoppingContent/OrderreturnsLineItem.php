@@ -15,26 +15,25 @@
  * the License.
  */
 
-class Google_Service_RealTimeBidding_AdTechnologyProviders extends Google_Collection
+class Google_Service_ShoppingContent_OrderreturnsLineItem extends Google_Model
 {
-  protected $collection_key = 'detectedProviderIds';
-  public $detectedProviderIds;
-  public $hasUnidentifiedProvider;
+  public $lineItemId;
+  public $quantity;
 
-  public function setDetectedProviderIds($detectedProviderIds)
+  public function setLineItemId($lineItemId)
   {
-    $this->detectedProviderIds = $detectedProviderIds;
+    $this->lineItemId = $lineItemId;
   }
-  public function getDetectedProviderIds()
+  public function getLineItemId()
   {
-    return $this->detectedProviderIds;
+    return $this->lineItemId;
   }
-  public function setHasUnidentifiedProvider($hasUnidentifiedProvider)
+  public function setQuantity($quantity)
   {
-    $this->hasUnidentifiedProvider = $hasUnidentifiedProvider;
+    $this->quantity = $quantity;
   }
-  public function getHasUnidentifiedProvider()
+  public function getQuantity()
   {
-    return $this->hasUnidentifiedProvider;
+    return $this->quantity;
   }
 }

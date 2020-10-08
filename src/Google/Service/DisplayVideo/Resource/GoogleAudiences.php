@@ -63,8 +63,6 @@ class Google_Service_DisplayVideo_Resource_GoogleAudiences extends Google_Servic
    * are: * `googleAudienceId` (default) * `displayName` The default sorting order
    * is ascending. To specify descending order for a field, a suffix "desc" should
    * be added to the field name. Example: `displayName desc`.
-   * @opt_param string partnerId The ID of the partner that has access to the
-   * fetched Google audiences.
    * @opt_param string filter Allows filtering by Google audience fields.
    * Supported syntax: * Filter expressions for Google audiences currently can
    * only contain at most one restriction. * A restriction has the form of
@@ -72,6 +70,8 @@ class Google_Service_DisplayVideo_Resource_GoogleAudiences extends Google_Servic
    * Supported fields: - `displayName` Examples: * All Google audiences for which
    * the display name contains "Google": `displayName : "Google"`. The length of
    * this field should be no more than 500 characters.
+   * @opt_param string partnerId The ID of the partner that has access to the
+   * fetched Google audiences.
    * @return Google_Service_DisplayVideo_ListGoogleAudiencesResponse
    */
   public function listGoogleAudiences($optParams = array())
