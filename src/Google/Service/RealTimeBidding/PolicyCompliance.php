@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_RealTimeBidding_ServingStatus extends Google_Collection
+class Google_Service_RealTimeBidding_PolicyCompliance extends Google_Collection
 {
   protected $collection_key = 'topics';
   public $status;
