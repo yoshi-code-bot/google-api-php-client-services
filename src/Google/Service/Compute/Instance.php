@@ -37,6 +37,9 @@ class Google_Service_Compute_Instance extends Google_Collection
   public $kind;
   public $labelFingerprint;
   public $labels;
+  public $lastStartTimestamp;
+  public $lastStopTimestamp;
+  public $lastSuspendedTimestamp;
   public $machineType;
   protected $metadataType = 'Google_Service_Compute_Metadata';
   protected $metadataDataType = '';
@@ -207,6 +210,30 @@ class Google_Service_Compute_Instance extends Google_Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  public function setLastStartTimestamp($lastStartTimestamp)
+  {
+    $this->lastStartTimestamp = $lastStartTimestamp;
+  }
+  public function getLastStartTimestamp()
+  {
+    return $this->lastStartTimestamp;
+  }
+  public function setLastStopTimestamp($lastStopTimestamp)
+  {
+    $this->lastStopTimestamp = $lastStopTimestamp;
+  }
+  public function getLastStopTimestamp()
+  {
+    return $this->lastStopTimestamp;
+  }
+  public function setLastSuspendedTimestamp($lastSuspendedTimestamp)
+  {
+    $this->lastSuspendedTimestamp = $lastSuspendedTimestamp;
+  }
+  public function getLastSuspendedTimestamp()
+  {
+    return $this->lastSuspendedTimestamp;
   }
   public function setMachineType($machineType)
   {

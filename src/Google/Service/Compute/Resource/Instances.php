@@ -490,9 +490,10 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
   }
   /**
    * Retrieves a list of resources that refer to the VM instance specified in the
-   * request. For example, if the VM instance is part of a managed instance group,
-   * the referrers list includes the managed instance group. For more information,
-   * read Viewing Referrers to VM Instances. (instances.listReferrers)
+   * request. For example, if the VM instance is part of a managed or unmanaged
+   * instance group, the referrers list includes the instance group. For more
+   * information, read Viewing referrers to VM instances.
+   * (instances.listReferrers)
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
