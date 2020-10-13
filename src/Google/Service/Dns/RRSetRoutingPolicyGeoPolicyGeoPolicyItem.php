@@ -15,17 +15,13 @@
  * the License.
  */
 
-class Google_Service_Dns_ResourceRecordSet extends Google_Collection
+class Google_Service_Dns_RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends Google_Collection
 {
   protected $collection_key = 'signatureRrdatas';
   public $kind;
-  public $name;
-  protected $routingPolicyType = 'Google_Service_Dns_RRSetRoutingPolicy';
-  protected $routingPolicyDataType = '';
+  public $location;
   public $rrdatas;
   public $signatureRrdatas;
-  public $ttl;
-  public $type;
 
   public function setKind($kind)
   {
@@ -35,27 +31,13 @@ class Google_Service_Dns_ResourceRecordSet extends Google_Collection
   {
     return $this->kind;
   }
-  public function setName($name)
+  public function setLocation($location)
   {
-    $this->name = $name;
+    $this->location = $location;
   }
-  public function getName()
+  public function getLocation()
   {
-    return $this->name;
-  }
-  /**
-   * @param Google_Service_Dns_RRSetRoutingPolicy
-   */
-  public function setRoutingPolicy(Google_Service_Dns_RRSetRoutingPolicy $routingPolicy)
-  {
-    $this->routingPolicy = $routingPolicy;
-  }
-  /**
-   * @return Google_Service_Dns_RRSetRoutingPolicy
-   */
-  public function getRoutingPolicy()
-  {
-    return $this->routingPolicy;
+    return $this->location;
   }
   public function setRrdatas($rrdatas)
   {
@@ -72,21 +54,5 @@ class Google_Service_Dns_ResourceRecordSet extends Google_Collection
   public function getSignatureRrdatas()
   {
     return $this->signatureRrdatas;
-  }
-  public function setTtl($ttl)
-  {
-    $this->ttl = $ttl;
-  }
-  public function getTtl()
-  {
-    return $this->ttl;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
   }
 }
