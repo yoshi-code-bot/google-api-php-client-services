@@ -84,19 +84,19 @@ class Google_Service_DLP extends Google_Service
               'path' => 'v2/infoTypes',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'parent' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'languageCode' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
+                'parent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'languageCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -120,15 +120,15 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'languageCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'locationId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -182,9 +182,9 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'locationId' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'orderBy' => array(
                   'location' => 'query',
@@ -194,9 +194,9 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
+                'locationId' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -258,21 +258,21 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -338,13 +338,13 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -410,13 +410,13 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'orderBy' => array(
                   'location' => 'query',
@@ -490,11 +490,11 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'locationId' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
+                'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -562,21 +562,21 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'orderBy' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -678,21 +678,21 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'locationId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'locationId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -768,6 +768,14 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'type' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -777,14 +785,6 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                 ),
                 'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'type' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -944,9 +944,9 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'orderBy' => array(
                   'location' => 'query',
@@ -956,13 +956,13 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
+                'filter' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -1064,7 +1064,7 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
+                'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1072,11 +1072,11 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'pageToken' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'locationId' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1170,11 +1170,11 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1182,15 +1182,15 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'locationId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'type' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1264,11 +1264,11 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'locationId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1276,9 +1276,9 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -1360,17 +1360,13 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
+                'filter' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -1379,6 +1375,10 @@ class Google_Service_DLP extends Google_Service
                 'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -1444,11 +1444,11 @@ class Google_Service_DLP extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'orderBy' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1516,6 +1516,14 @@ class Google_Service_DLP extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'locationId' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1523,14 +1531,6 @@ class Google_Service_DLP extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
