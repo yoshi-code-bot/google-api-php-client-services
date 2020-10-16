@@ -32,9 +32,9 @@ class Google_Service_DisplayVideo_Resource_CustomBiddingAlgorithms extends Googl
    * bidding algorithm to fetch.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string partnerId The ID of the DV360 partner that has access to
-   * the custom bidding algorithm.
    * @opt_param string advertiserId The ID of the DV360 partner that has access to
+   * the custom bidding algorithm.
+   * @opt_param string partnerId The ID of the DV360 partner that has access to
    * the custom bidding algorithm.
    * @return Google_Service_DisplayVideo_CustomBiddingAlgorithm
    */
@@ -51,9 +51,15 @@ class Google_Service_DisplayVideo_Resource_CustomBiddingAlgorithms extends Googl
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are: * `displayName` (default) The default sorting order is ascending. To
+   * specify descending order for a field, a suffix "desc" should be added to the
+   * field name. Example: `displayName desc`.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
+   * @opt_param string partnerId The ID of the DV360 partner that has access to
+   * the custom bidding algorithm.
    * @opt_param string filter Allows filtering by custom bidding algorithm fields.
    * Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by `AND`. A sequence of
@@ -75,12 +81,6 @@ class Google_Service_DisplayVideo_Resource_CustomBiddingAlgorithms extends Googl
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListCustomBiddingAlgorithms` method. If not specified,
    * the first page of results will be returned.
-   * @opt_param string partnerId The ID of the DV360 partner that has access to
-   * the custom bidding algorithm.
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are: * `displayName` (default) The default sorting order is ascending. To
-   * specify descending order for a field, a suffix "desc" should be added to the
-   * field name. Example: `displayName desc`.
    * @return Google_Service_DisplayVideo_ListCustomBiddingAlgorithmsResponse
    */
   public function listCustomBiddingAlgorithms($optParams = array())
