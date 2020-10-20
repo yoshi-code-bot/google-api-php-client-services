@@ -46,9 +46,9 @@ class Google_Service_Licensing extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://licensing.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/licensing/v1';
+    $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'licensing';
 
@@ -127,13 +127,13 @@ class Google_Service_Licensing extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'listForProductAndSku' => array(
@@ -155,13 +155,13 @@ class Google_Service_Licensing extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(

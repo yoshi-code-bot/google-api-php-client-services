@@ -15,46 +15,11 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1RuntimeTraceSamplingConfig extends Google_Collection
+class Google_Service_Apigee_GoogleCloudApigeeV1RuntimeTraceSamplingConfig extends Google_Model
 {
-  protected $collection_key = 'responseCodes';
-  public $errorSources;
-  protected $responseCodeRangesType = 'Google_Service_Apigee_GoogleCloudApigeeV1RuntimeTraceSamplingConfigResponseCodeRange';
-  protected $responseCodeRangesDataType = 'array';
-  public $responseCodes;
   public $sampler;
   public $samplingRate;
 
-  public function setErrorSources($errorSources)
-  {
-    $this->errorSources = $errorSources;
-  }
-  public function getErrorSources()
-  {
-    return $this->errorSources;
-  }
-  /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1RuntimeTraceSamplingConfigResponseCodeRange
-   */
-  public function setResponseCodeRanges($responseCodeRanges)
-  {
-    $this->responseCodeRanges = $responseCodeRanges;
-  }
-  /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1RuntimeTraceSamplingConfigResponseCodeRange
-   */
-  public function getResponseCodeRanges()
-  {
-    return $this->responseCodeRanges;
-  }
-  public function setResponseCodes($responseCodes)
-  {
-    $this->responseCodes = $responseCodes;
-  }
-  public function getResponseCodes()
-  {
-    return $this->responseCodes;
-  }
   public function setSampler($sampler)
   {
     $this->sampler = $sampler;

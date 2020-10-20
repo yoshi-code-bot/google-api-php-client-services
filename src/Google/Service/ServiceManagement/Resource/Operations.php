@@ -46,9 +46,6 @@ class Google_Service_ServiceManagement_Resource_Operations extends Google_Servic
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of operations to return. If
-   * unspecified, defaults to 50. The maximum value is 100.
-   * @opt_param string pageToken The standard list page token.
    * @opt_param string filter A string for filtering Operations. The following
    * filter fields are supported: * serviceName: Required. Only `=` operator is
    * allowed. * startTime: The time this job was started, in ISO 8601 format.
@@ -62,6 +59,9 @@ class Google_Service_ServiceManagement_Resource_Operations extends Google_Servic
    * service}.googleapis.com AND status=done` * `serviceName={some-
    * service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
    * @opt_param string name Not used.
+   * @opt_param int pageSize The maximum number of operations to return. If
+   * unspecified, defaults to 50. The maximum value is 100.
+   * @opt_param string pageToken The standard list page token.
    * @return Google_Service_ServiceManagement_ListOperationsResponse
    */
   public function listOperations($optParams = array())

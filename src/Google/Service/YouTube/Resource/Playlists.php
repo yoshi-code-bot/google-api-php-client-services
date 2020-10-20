@@ -104,6 +104,10 @@ class Google_Service_YouTube_Resource_Playlists extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string hl Returen content in specified language
+   * @opt_param string pageToken The *pageToken* parameter identifies a specific
+   * page in the result set that should be returned. In an API response, the
+   * nextPageToken and prevPageToken properties identify other pages that could be
+   * retrieved.
    * @opt_param string onBehalfOfContentOwner *Note:* This parameter is intended
    * exclusively for YouTube content partners. The *onBehalfOfContentOwner*
    * parameter indicates that the request's authorization credentials identify a
@@ -114,9 +118,6 @@ class Google_Service_YouTube_Resource_Playlists extends Google_Service_Resource
    * without having to provide authentication credentials for each individual
    * channel. The CMS account that the user authenticates with must be linked to
    * the specified YouTube content owner.
-   * @opt_param string maxResults The *maxResults* parameter specifies the maximum
-   * number of items that should be returned in the result set.
-   * @opt_param bool mine Return the playlists owned by the authenticated user.
    * @opt_param string onBehalfOfContentOwnerChannel This parameter can only be
    * used in a properly authorized request. *Note:* This parameter is intended
    * exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
@@ -135,12 +136,11 @@ class Google_Service_YouTube_Resource_Playlists extends Google_Service_Resource
    * channel.
    * @opt_param string channelId Return the playlists owned by the specified
    * channel ID.
-   * @opt_param string pageToken The *pageToken* parameter identifies a specific
-   * page in the result set that should be returned. In an API response, the
-   * nextPageToken and prevPageToken properties identify other pages that could be
-   * retrieved.
    * @opt_param string id Return the playlists with the given IDs for Stubby or
    * Apiary.
+   * @opt_param string maxResults The *maxResults* parameter specifies the maximum
+   * number of items that should be returned in the result set.
+   * @opt_param bool mine Return the playlists owned by the authenticated user.
    * @return Google_Service_YouTube_PlaylistListResponse
    */
   public function listPlaylists($part, $optParams = array())

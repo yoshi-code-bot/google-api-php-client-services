@@ -60,9 +60,17 @@ class Google_Service_Localservices extends Google_Service
               'path' => 'v1/accountReports:search',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'endDate.month' => array(
+                'startDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
@@ -72,7 +80,7 @@ class Google_Service_Localservices extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'startDate.day' => array(
+                'endDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -80,21 +88,13 @@ class Google_Service_Localservices extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'endDate.day' => array(
+                'endDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'startDate.month' => array(
+                'startDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -111,18 +111,6 @@ class Google_Service_Localservices extends Google_Service
               'path' => 'v1/detailedLeadReports:search',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'endDate.day' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startDate.day' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'startDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -131,7 +119,11 @@ class Google_Service_Localservices extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'endDate.month' => array(
+                'endDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -146,6 +138,14 @@ class Google_Service_Localservices extends Google_Service
                 'startDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'endDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
