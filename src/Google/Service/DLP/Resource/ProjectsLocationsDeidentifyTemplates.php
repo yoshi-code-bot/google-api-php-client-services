@@ -106,9 +106,9 @@ class Google_Service_DLP_Resource_ProjectsLocationsDeidentifyTemplates extends G
    * data: parent=projects/example-project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param int pageSize Size of the page, can be limited by server. If zero
    * server returns a page of max size 100.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string orderBy Comma separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case-insensitive, default
    * sorting order is ascending, redundant space characters are insignificant.
