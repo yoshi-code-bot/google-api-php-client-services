@@ -15,6 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ExportTestCasesMetadata extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessagePlayAudio extends Google_Model
 {
+  public $allowPlaybackInterruption;
+  public $audioUri;
+
+  public function setAllowPlaybackInterruption($allowPlaybackInterruption)
+  {
+    $this->allowPlaybackInterruption = $allowPlaybackInterruption;
+  }
+  public function getAllowPlaybackInterruption()
+  {
+    return $this->allowPlaybackInterruption;
+  }
+  public function setAudioUri($audioUri)
+  {
+    $this->audioUri = $audioUri;
+  }
+  public function getAudioUri()
+  {
+    return $this->audioUri;
+  }
 }

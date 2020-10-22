@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ImportAgentResponse extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo extends Google_Model
 {
-  public $agent;
+  public $tag;
 
-  public function setAgent($agent)
+  public function setTag($tag)
   {
-    $this->agent = $agent;
+    $this->tag = $tag;
   }
-  public function getAgent()
+  public function getTag()
   {
-    return $this->agent;
+    return $this->tag;
   }
 }

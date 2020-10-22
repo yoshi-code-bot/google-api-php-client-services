@@ -15,13 +15,13 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_User extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extends Google_Model
 {
   public $displayName;
-  public $domainId;
-  public $isAnonymous;
-  public $name;
-  public $type;
+  public $justCollected;
+  public $required;
+  public $state;
+  public $value;
 
   public function setDisplayName($displayName)
   {
@@ -31,36 +31,36 @@ class Google_Service_HangoutsChat_User extends Google_Model
   {
     return $this->displayName;
   }
-  public function setDomainId($domainId)
+  public function setJustCollected($justCollected)
   {
-    $this->domainId = $domainId;
+    $this->justCollected = $justCollected;
   }
-  public function getDomainId()
+  public function getJustCollected()
   {
-    return $this->domainId;
+    return $this->justCollected;
   }
-  public function setIsAnonymous($isAnonymous)
+  public function setRequired($required)
   {
-    $this->isAnonymous = $isAnonymous;
+    $this->required = $required;
   }
-  public function getIsAnonymous()
+  public function getRequired()
   {
-    return $this->isAnonymous;
+    return $this->required;
   }
-  public function setName($name)
+  public function setState($state)
   {
-    $this->name = $name;
+    $this->state = $state;
   }
-  public function getName()
+  public function getState()
   {
-    return $this->name;
+    return $this->state;
   }
-  public function setType($type)
+  public function setValue($value)
   {
-    $this->type = $type;
+    $this->value = $value;
   }
-  public function getType()
+  public function getValue()
   {
-    return $this->type;
+    return $this->value;
   }
 }

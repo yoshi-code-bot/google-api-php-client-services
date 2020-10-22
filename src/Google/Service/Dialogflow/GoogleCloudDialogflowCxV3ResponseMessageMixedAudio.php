@@ -15,24 +15,24 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2ImportDocumentsResponse extends Google_Collection
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageMixedAudio extends Google_Collection
 {
-  protected $collection_key = 'warnings';
-  protected $warningsType = 'Google_Service_Dialogflow_GoogleRpcStatus';
-  protected $warningsDataType = 'array';
+  protected $collection_key = 'segments';
+  protected $segmentsType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment';
+  protected $segmentsDataType = 'array';
 
   /**
-   * @param Google_Service_Dialogflow_GoogleRpcStatus
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment
    */
-  public function setWarnings($warnings)
+  public function setSegments($segments)
   {
-    $this->warnings = $warnings;
+    $this->segments = $segments;
   }
   /**
-   * @return Google_Service_Dialogflow_GoogleRpcStatus
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment
    */
-  public function getWarnings()
+  public function getSegments()
   {
-    return $this->warnings;
+    return $this->segments;
   }
 }

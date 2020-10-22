@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ExportAgentResponse extends Google_Model
+class Google_Service_Bigquery_Explanation extends Google_Model
 {
-  public $agentContent;
-  public $agentUri;
+  public $attribution;
+  public $featureName;
 
-  public function setAgentContent($agentContent)
+  public function setAttribution($attribution)
   {
-    $this->agentContent = $agentContent;
+    $this->attribution = $attribution;
   }
-  public function getAgentContent()
+  public function getAttribution()
   {
-    return $this->agentContent;
+    return $this->attribution;
   }
-  public function setAgentUri($agentUri)
+  public function setFeatureName($featureName)
   {
-    $this->agentUri = $agentUri;
+    $this->featureName = $featureName;
   }
-  public function getAgentUri()
+  public function getFeatureName()
   {
-    return $this->agentUri;
+    return $this->featureName;
   }
 }

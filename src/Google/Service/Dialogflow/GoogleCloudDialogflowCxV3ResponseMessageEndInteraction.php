@@ -15,24 +15,6 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ImportDocumentsResponse extends Google_Collection
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageEndInteraction extends Google_Model
 {
-  protected $collection_key = 'warnings';
-  protected $warningsType = 'Google_Service_Dialogflow_GoogleRpcStatus';
-  protected $warningsDataType = 'array';
-
-  /**
-   * @param Google_Service_Dialogflow_GoogleRpcStatus
-   */
-  public function setWarnings($warnings)
-  {
-    $this->warnings = $warnings;
-  }
-  /**
-   * @return Google_Service_Dialogflow_GoogleRpcStatus
-   */
-  public function getWarnings()
-  {
-    return $this->warnings;
-  }
 }

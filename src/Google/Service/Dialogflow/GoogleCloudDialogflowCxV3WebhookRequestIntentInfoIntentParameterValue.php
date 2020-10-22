@@ -15,17 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ImportTestCasesResponse extends Google_Collection
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3WebhookRequestIntentInfoIntentParameterValue extends Google_Model
 {
-  protected $collection_key = 'names';
-  public $names;
+  public $originalValue;
+  public $resolvedValue;
 
-  public function setNames($names)
+  public function setOriginalValue($originalValue)
   {
-    $this->names = $names;
+    $this->originalValue = $originalValue;
   }
-  public function getNames()
+  public function getOriginalValue()
   {
-    return $this->names;
+    return $this->originalValue;
+  }
+  public function setResolvedValue($resolvedValue)
+  {
+    $this->resolvedValue = $resolvedValue;
+  }
+  public function getResolvedValue()
+  {
+    return $this->resolvedValue;
   }
 }

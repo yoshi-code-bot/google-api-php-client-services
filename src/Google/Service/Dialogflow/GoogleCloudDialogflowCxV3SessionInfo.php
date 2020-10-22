@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dataproc_JobScheduling extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3SessionInfo extends Google_Model
 {
-  public $maxFailuresPerHour;
-  public $maxFailuresTotal;
+  public $parameters;
+  public $session;
 
-  public function setMaxFailuresPerHour($maxFailuresPerHour)
+  public function setParameters($parameters)
   {
-    $this->maxFailuresPerHour = $maxFailuresPerHour;
+    $this->parameters = $parameters;
   }
-  public function getMaxFailuresPerHour()
+  public function getParameters()
   {
-    return $this->maxFailuresPerHour;
+    return $this->parameters;
   }
-  public function setMaxFailuresTotal($maxFailuresTotal)
+  public function setSession($session)
   {
-    $this->maxFailuresTotal = $maxFailuresTotal;
+    $this->session = $session;
   }
-  public function getMaxFailuresTotal()
+  public function getSession()
   {
-    return $this->maxFailuresTotal;
+    return $this->session;
   }
 }

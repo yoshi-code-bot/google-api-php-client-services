@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartMessagingEntryInfo extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff extends Google_Model
 {
-  public $creationMethod;
-  public $occurrenceCount;
+  public $metadata;
 
-  public function setCreationMethod($creationMethod)
+  public function setMetadata($metadata)
   {
-    $this->creationMethod = $creationMethod;
+    $this->metadata = $metadata;
   }
-  public function getCreationMethod()
+  public function getMetadata()
   {
-    return $this->creationMethod;
-  }
-  public function setOccurrenceCount($occurrenceCount)
-  {
-    $this->occurrenceCount = $occurrenceCount;
-  }
-  public function getOccurrenceCount()
-  {
-    return $this->occurrenceCount;
+    return $this->metadata;
   }
 }

@@ -15,6 +15,16 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ImportTestCasesMetadata extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess extends Google_Model
 {
+  public $metadata;
+
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  public function getMetadata()
+  {
+    return $this->metadata;
+  }
 }

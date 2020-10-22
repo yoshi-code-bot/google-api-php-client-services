@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ImportAgentResponse extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1RunTestCaseMetadata extends Google_Model
 {
-  public $agent;
-
-  public function setAgent($agent)
-  {
-    $this->agent = $agent;
-  }
-  public function getAgent()
-  {
-    return $this->agent;
-  }
 }

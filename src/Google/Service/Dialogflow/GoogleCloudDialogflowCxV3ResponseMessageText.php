@@ -15,25 +15,26 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1ExportTestCasesResponse extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ResponseMessageText extends Google_Collection
 {
-  public $content;
-  public $gcsUri;
+  protected $collection_key = 'text';
+  public $allowPlaybackInterruption;
+  public $text;
 
-  public function setContent($content)
+  public function setAllowPlaybackInterruption($allowPlaybackInterruption)
   {
-    $this->content = $content;
+    $this->allowPlaybackInterruption = $allowPlaybackInterruption;
   }
-  public function getContent()
+  public function getAllowPlaybackInterruption()
   {
-    return $this->content;
+    return $this->allowPlaybackInterruption;
   }
-  public function setGcsUri($gcsUri)
+  public function setText($text)
   {
-    $this->gcsUri = $gcsUri;
+    $this->text = $text;
   }
-  public function getGcsUri()
+  public function getText()
   {
-    return $this->gcsUri;
+    return $this->text;
   }
 }

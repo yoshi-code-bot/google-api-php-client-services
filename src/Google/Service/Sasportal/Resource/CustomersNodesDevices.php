@@ -23,7 +23,7 @@
  *   $devices = $sasportalService->devices;
  *  </code>
  */
-class Google_Service_Sasportal_Resource_CustomersDeploymentsDevices extends Google_Service_Resource
+class Google_Service_Sasportal_Resource_CustomersNodesDevices extends Google_Service_Resource
 {
   /**
    * Creates a device under a node or customer. (devices.create)
@@ -54,23 +54,22 @@ class Google_Service_Sasportal_Resource_CustomersDeploymentsDevices extends Goog
     return $this->call('createSigned', array($params), "Google_Service_Sasportal_SasPortalDevice");
   }
   /**
-   * Lists devices under a node or customer.
-   * (devices.listCustomersDeploymentsDevices)
+   * Lists devices under a node or customer. (devices.listCustomersNodesDevices)
    *
    * @param string $parent Required. The name of the parent resource.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListDevices that indicates where this listing should continue from.
-   * @opt_param int pageSize The maximum number of devices to return in the
-   * response. If empty or zero, all devices will be listed. Must be in the range
-   * [0, 1000].
    * @opt_param string filter The filter expression. The filter should have one of
    * the following formats: "sn=123454" or "display_name=MyDevice". sn corresponds
    * to serial_number of the device. The filter is case insensitive.
+   * @opt_param int pageSize The maximum number of devices to return in the
+   * response. If empty or zero, all devices will be listed. Must be in the range
+   * [0, 1000].
+   * @opt_param string pageToken A pagination token returned from a previous call
+   * to ListDevices that indicates where this listing should continue from.
    * @return Google_Service_Sasportal_SasPortalListDevicesResponse
    */
-  public function listCustomersDeploymentsDevices($parent, $optParams = array())
+  public function listCustomersNodesDevices($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
