@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "corpura" collection of methods.
- * Typical usage is:
- *  <code>
- *   $videointelligenceService = new Google_Service_CloudVideoIntelligence(...);
- *   $corpura = $videointelligenceService->corpura;
- *  </code>
- */
-class Google_Service_CloudVideoIntelligence_Resource_ProjectsLocationsCorpura extends Google_Service_Resource
+class Google_Service_ServiceNetworking_SecondaryIpRange extends Google_Model
 {
+  public $ipCidrRange;
+  public $rangeName;
+
+  public function setIpCidrRange($ipCidrRange)
+  {
+    $this->ipCidrRange = $ipCidrRange;
+  }
+  public function getIpCidrRange()
+  {
+    return $this->ipCidrRange;
+  }
+  public function setRangeName($rangeName)
+  {
+    $this->rangeName = $rangeName;
+  }
+  public function getRangeName()
+  {
+    return $this->rangeName;
+  }
 }

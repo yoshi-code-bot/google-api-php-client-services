@@ -153,11 +153,11 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
    * subscriptions. Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @opt_param string pageToken The value returned by the last
    * `ListSubscriptionsResponse`; indicates that this is a continuation of a prior
    * `ListSubscriptions` call, and that the system should return the next page of
    * data.
-   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @return Google_Service_Pubsub_ListSubscriptionsResponse
    */
   public function listProjectsSubscriptions($project, $optParams = array())
@@ -245,9 +245,9 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
   }
   /**
    * Seeks an existing subscription to a point in time or to a given snapshot,
-   * whichever is provided in the request. Snapshots are used in [Seek](
-   * https://cloud.google.com/pubsub/docs/replay-overview) operations, which allow
-   * you to manage message acknowledgments in bulk. That is, you can set the
+   * whichever is provided in the request. Snapshots are used in [Seek]
+   * (https://cloud.google.com/pubsub/docs/replay-overview) operations, which
+   * allow you to manage message acknowledgments in bulk. That is, you can set the
    * acknowledgment state of messages in an existing subscription to the state
    * captured by a snapshot. Note that both the subscription and the snapshot must
    * be on the same topic. (subscriptions.seek)

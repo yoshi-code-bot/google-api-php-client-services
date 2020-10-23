@@ -88,7 +88,7 @@ class Google_Service_Analytics extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://analytics.googleapis.com/';
     $this->servicePath = 'analytics/v3/';
     $this->batchPath = 'batch/analytics/v3';
     $this->version = 'v3';
@@ -124,15 +124,7 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'output' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'segment' => array(
+                'filters' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -140,15 +132,7 @@ class Google_Service_Analytics extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'include-empty-rows' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'filters' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'samplingLevel' => array(
+                'sort' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -156,7 +140,23 @@ class Google_Service_Analytics extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'sort' => array(
+                'include-empty-rows' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'samplingLevel' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'output' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'start-index' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'segment' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -195,6 +195,10 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'max-results' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'filters' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -203,11 +207,7 @@ class Google_Service_Analytics extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'samplingLevel' => array(
+                'dimensions' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -215,7 +215,7 @@ class Google_Service_Analytics extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'dimensions' => array(
+                'samplingLevel' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -244,21 +244,21 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'dimensions' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sort' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filters' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filters' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dimensions' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -366,11 +366,11 @@ class Google_Service_Analytics extends Google_Service
               'path' => 'management/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -413,11 +413,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -481,11 +481,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -597,11 +597,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -871,11 +871,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1142,11 +1142,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1275,11 +1275,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1388,11 +1388,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1516,11 +1516,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1583,11 +1583,11 @@ class Google_Service_Analytics extends Google_Service
               'path' => 'management/segments',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1691,11 +1691,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1882,11 +1882,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1975,11 +1975,11 @@ class Google_Service_Analytics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start-index' => array(
+                'max-results' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'max-results' => array(
+                'start-index' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),

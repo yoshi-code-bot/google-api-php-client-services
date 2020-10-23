@@ -88,10 +88,6 @@ class Google_Service_Monitoring_Resource_ProjectsAlertPolicies extends Google_Se
    *
    * @opt_param int pageSize The maximum number of results to return in a single
    * response.
-   * @opt_param string filter If provided, this field specifies the criteria that
-   * must be met by alert policies to be included in the response.For more
-   * details, see sorting and filtering
-   * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
    * @opt_param string pageToken If this field is not empty then it must contain
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return more results from the previous method
@@ -100,6 +96,10 @@ class Google_Service_Monitoring_Resource_ProjectsAlertPolicies extends Google_Se
    * the result. Supports the same set of field references as the filter field.
    * Entries can be prefixed with a minus sign to sort by the field in descending
    * order.For more details, see sorting and filtering
+   * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
+   * @opt_param string filter If provided, this field specifies the criteria that
+   * must be met by alert policies to be included in the response.For more
+   * details, see sorting and filtering
    * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
    * @return Google_Service_Monitoring_ListAlertPoliciesResponse
    */

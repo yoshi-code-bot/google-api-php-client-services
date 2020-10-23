@@ -296,13 +296,13 @@ class Google_Service_TagManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'includeDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -669,12 +669,12 @@ class Google_Service_TagManager extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'triggerId' => array(
+                'variableId' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'variableId' => array(
+                'triggerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
