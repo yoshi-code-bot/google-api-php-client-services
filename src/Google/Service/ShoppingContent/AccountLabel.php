@@ -15,12 +15,21 @@
  * the License.
  */
 
-class Google_Service_ServiceManagement_ServiceIdentity extends Google_Model
+class Google_Service_ShoppingContent_AccountLabel extends Google_Model
 {
+  public $accountId;
   public $description;
-  public $displayName;
-  public $serviceAccountParent;
+  public $labelId;
+  public $name;
 
+  public function setAccountId($accountId)
+  {
+    $this->accountId = $accountId;
+  }
+  public function getAccountId()
+  {
+    return $this->accountId;
+  }
   public function setDescription($description)
   {
     $this->description = $description;
@@ -29,20 +38,20 @@ class Google_Service_ServiceManagement_ServiceIdentity extends Google_Model
   {
     return $this->description;
   }
-  public function setDisplayName($displayName)
+  public function setLabelId($labelId)
   {
-    $this->displayName = $displayName;
+    $this->labelId = $labelId;
   }
-  public function getDisplayName()
+  public function getLabelId()
   {
-    return $this->displayName;
+    return $this->labelId;
   }
-  public function setServiceAccountParent($serviceAccountParent)
+  public function setName($name)
   {
-    $this->serviceAccountParent = $serviceAccountParent;
+    $this->name = $name;
   }
-  public function getServiceAccountParent()
+  public function getName()
   {
-    return $this->serviceAccountParent;
+    return $this->name;
   }
 }

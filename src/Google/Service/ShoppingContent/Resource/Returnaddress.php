@@ -93,11 +93,11 @@ class Google_Service_ShoppingContent_Resource_Returnaddress extends Google_Servi
    * addresses for.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string country List only return addresses applicable to the given
-   * country of sale. When omitted, all return addresses are listed.
+   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of addresses in the response,
    * used for paging.
-   * @opt_param string pageToken The token returned by the previous request.
+   * @opt_param string country List only return addresses applicable to the given
+   * country of sale. When omitted, all return addresses are listed.
    * @return Google_Service_ShoppingContent_ReturnaddressListResponse
    */
   public function listReturnaddress($merchantId, $optParams = array())

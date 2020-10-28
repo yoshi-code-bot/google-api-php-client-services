@@ -217,18 +217,6 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
    * cannot be a multi-client account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool acknowledged Obtains orders that match the acknowledgement
-   * status. When set to true, obtains orders that have been acknowledged. When
-   * false, obtains orders that have not been acknowledged. We recommend using
-   * this filter set to `false`, in conjunction with the `acknowledge` call, such
-   * that only un-acknowledged orders are returned.
-   * @opt_param string maxResults The maximum number of orders to return in the
-   * response, used for paging. The default value is 25 orders per page, and the
-   * maximum allowed value is 250 orders per page.
-   * @opt_param string orderBy Order results by placement date in descending or
-   * ascending order.
-   *
-   * Acceptable values are: - placedDateAsc - placedDateDesc
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string placedDateEnd Obtains orders placed before this date
    * (exclusively), in ISO 8601 format.
@@ -239,6 +227,16 @@ class Google_Service_ShoppingContent_Resource_Orders extends Google_Service_Reso
    * `partiallyShipped`, and `completed` is a shortcut for `shipped`,
    * `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and
    * `canceled`.
+   * @opt_param string orderBy Order results by placement date in descending or
+   * ascending order. Acceptable values are: - placedDateAsc - placedDateDesc
+   * @opt_param bool acknowledged Obtains orders that match the acknowledgement
+   * status. When set to true, obtains orders that have been acknowledged. When
+   * false, obtains orders that have not been acknowledged. We recommend using
+   * this filter set to `false`, in conjunction with the `acknowledge` call, such
+   * that only un-acknowledged orders are returned.
+   * @opt_param string maxResults The maximum number of orders to return in the
+   * response, used for paging. The default value is 25 orders per page, and the
+   * maximum allowed value is 250 orders per page.
    * @return Google_Service_ShoppingContent_OrdersListResponse
    */
   public function listOrders($merchantId, $optParams = array())
