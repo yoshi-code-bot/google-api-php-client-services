@@ -179,19 +179,19 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'label' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'label' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -364,14 +364,14 @@ class Google_Service_ShoppingContent extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'destinations' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -412,13 +412,13 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -470,13 +470,13 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'updatelabels' => array(
@@ -734,6 +734,7 @@ class Google_Service_ShoppingContent extends Google_Service
                 'gmbEmail' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'requestinventoryverification' => array(
@@ -773,18 +774,22 @@ class Google_Service_ShoppingContent extends Google_Service
                 'country' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'required' => true,
                 ),
                 'language' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'required' => true,
                 ),
                 'contactName' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'required' => true,
                 ),
                 'contactEmail' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'setposdataprovider' => array(
@@ -801,15 +806,16 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'country' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ),
                 'posDataProviderId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'posExternalAccountId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'country' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -917,21 +923,21 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'disbursementEndDate' => array(
+                'disbursementStartDate' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'disbursementStartDate' => array(
+                'disbursementEndDate' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'listtransactions' => array(
@@ -948,6 +954,10 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'transactionEndDate' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -957,10 +967,6 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'integer',
                 ),
                 'transactionStartDate' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1024,10 +1030,6 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'acknowledged' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1037,18 +1039,26 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'shipmentTypes' => array(
+                'createdEndDate' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
                 ),
-                'createdEndDate' => array(
+                'createdStartDate' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'shipmentTrackingNumbers' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'shipmentStates' => array(
                   'location' => 'query',
@@ -1060,18 +1070,14 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'createdStartDate' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'shipmentTrackingNumbers' => array(
+                'shipmentTypes' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'process' => array(
@@ -1272,24 +1278,11 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'placedDateEnd' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'placedDateStart' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'statuses' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1300,6 +1293,19 @@ class Google_Service_ShoppingContent extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'placedDateStart' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'statuses' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
               ),
             ),'refunditem' => array(
@@ -1674,18 +1680,18 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'destinations' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'destinations' => array(
+                'maxResults' => array(
                   'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -1810,10 +1816,6 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'countryCode' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1823,6 +1825,10 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                 ),
                 'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'countryCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1905,7 +1911,7 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'country' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1913,7 +1919,7 @@ class Google_Service_ShoppingContent extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'country' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2016,19 +2022,19 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'transferEndDate' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'transferStartDate' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'transferStartDate' => array(
+                'transferEndDate' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2057,6 +2063,11 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'transactionIds' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -2064,11 +2075,6 @@ class Google_Service_ShoppingContent extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'transactionIds' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),
@@ -2139,13 +2145,13 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'update' => array(

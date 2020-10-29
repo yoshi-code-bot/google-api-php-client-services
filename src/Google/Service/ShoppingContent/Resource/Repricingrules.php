@@ -82,8 +82,6 @@ class Google_Service_ShoppingContent_Resource_Repricingrules extends Google_Serv
    * repricing rule.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string countryCode CLDR country code (e.g. "US"), used as a filter
-   * on repricing rules.
    * @opt_param int pageSize The maximum number of repricing rules to return. The
    * service may return fewer than this value. If unspecified, at most 50 rules
    * will be returned. The maximum value is 1000; values above 1000 will be
@@ -94,6 +92,8 @@ class Google_Service_ShoppingContent_Resource_Repricingrules extends Google_Serv
    * the call that provided the page token.
    * @opt_param string languageCode The two-letter ISO 639-1 language code
    * associated with the repricing rule, used as a filter.
+   * @opt_param string countryCode CLDR country code (e.g. "US"), used as a filter
+   * on repricing rules.
    * @return Google_Service_ShoppingContent_ListRepricingRulesResponse
    */
   public function listRepricingrules($merchantId, $optParams = array())
