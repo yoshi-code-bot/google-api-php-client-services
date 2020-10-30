@@ -15,6 +15,6 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowV3alpha1RunTestCaseMetadata extends Google_Model
+class Google_Service_ToolResults_DeviceOutOfMemory extends Google_Model
 {
 }
