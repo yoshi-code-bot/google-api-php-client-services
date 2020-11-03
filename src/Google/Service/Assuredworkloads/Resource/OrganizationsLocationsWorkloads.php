@@ -111,7 +111,10 @@ class Google_Service_Assuredworkloads_Resource_OrganizationsLocationsWorkloads e
    *
    * @param string $name Optional. The resource name of the workload. Format:
    * organizations/{organization}/locations/{location}/workloads/{workload} Read-
-   * only.
+   * only. The UI extracts the location and workload name from this string, since
+   * they aren't set directly on the workload object. If the format of this field
+   * changes, the UI should likely be updated. LINT.IfChange LINT.ThenChange(//dep
+   * ot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)
    * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload $postBody
    * @param array $optParams Optional parameters.
    *

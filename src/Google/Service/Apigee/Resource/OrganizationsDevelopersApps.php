@@ -164,12 +164,12 @@ class Google_Service_Apigee_Resource_OrganizationsDevelopersApps extends Google_
    * name is case sensitive.
    * @opt_param bool shallowExpand Optional. Specifies whether to expand the
    * results in shallow mode. Set to `true` to expand the results in shallow mode.
-   * @opt_param string count Number of developer apps to return in the API call.
-   * Use with the `startKey` parameter to provide more targeted filtering. The
-   * limit is 1000.
    * @opt_param bool expand Optional. Specifies whether to expand the results. Set
    * to `true` to expand the results. This query parameter is not valid if you use
    * the `count` or `startKey` query parameters.
+   * @opt_param string count Number of developer apps to return in the API call.
+   * Use with the `startKey` parameter to provide more targeted filtering. The
+   * limit is 1000.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListDeveloperAppsResponse
    */
   public function listOrganizationsDevelopersApps($parent, $optParams = array())

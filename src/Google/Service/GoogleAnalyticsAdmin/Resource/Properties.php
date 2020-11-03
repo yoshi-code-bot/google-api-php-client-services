@@ -84,6 +84,10 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Properties extends Google_Ser
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListProperties` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListProperties` must match the
+   * call that provided the page token.
    * @opt_param int pageSize The maximum number of resources to return. The
    * service may return fewer than this value, even if there are additional pages.
    * If unspecified, at most 50 resources will be returned. The maximum value is
@@ -99,10 +103,6 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Properties extends Google_Ser
    * parent:accounts/123 | The account with account id: 123. | | firebase_project
    * :project-id | The firebase project with id: project-id. | |
    * firebase_project:123 | The firebase project with number: 123. |
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListProperties` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListProperties` must match the
-   * call that provided the page token.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListPropertiesResponse
    */
   public function listProperties($optParams = array())

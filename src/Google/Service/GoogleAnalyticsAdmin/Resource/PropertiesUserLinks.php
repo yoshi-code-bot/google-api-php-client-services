@@ -129,8 +129,8 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesUserLinks extends G
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaUserLink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool notifyNewUser Optional. If notify_new_user is set, then email
-   * new user that they've been given permissions on the resource.
+   * @opt_param bool notifyNewUser Optional. If set, then email the new user
+   * notifying them that they've been granted permissions to the resource.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaUserLink
    */
   public function create($parent, Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaUserLink $postBody, $optParams = array())

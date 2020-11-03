@@ -71,6 +71,16 @@ class Google_Service_AnalyticsData extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'runRealtimeReport' => array(
+              'path' => 'v1alpha/{+property}:runRealtimeReport',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'property' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )

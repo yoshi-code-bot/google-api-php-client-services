@@ -60,11 +60,7 @@ class Google_Service_Dfareporting_Resource_CreativeGroups extends Google_Service
    * @param string $profileId User profile ID associated with this request.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int groupNumber Select only creative groups that belong to this
-   * subgroup.
-   * @opt_param string pageToken Value of the nextPageToken from the previous
-   * result page.
-   * @opt_param string sortOrder Order of sorted results.
+   * @opt_param string sortField Field by which to sort the list.
    * @opt_param string advertiserIds Select only creative groups that belong to
    * these advertisers.
    * @opt_param string ids Select only creative groups with these IDs.
@@ -76,8 +72,12 @@ class Google_Service_Dfareporting_Resource_CreativeGroups extends Google_Service
    * search string. For example, a search string of "creativegroup" will match
    * creative groups with the name "my creativegroup", "creativegroup 2015", or
    * simply "creativegroup".
-   * @opt_param string sortField Field by which to sort the list.
+   * @opt_param int groupNumber Select only creative groups that belong to this
+   * subgroup.
    * @opt_param int maxResults Maximum number of results to return.
+   * @opt_param string sortOrder Order of sorted results.
+   * @opt_param string pageToken Value of the nextPageToken from the previous
+   * result page.
    * @return Google_Service_Dfareporting_CreativeGroupsListResponse
    */
   public function listCreativeGroups($profileId, $optParams = array())
