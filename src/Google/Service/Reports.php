@@ -54,9 +54,9 @@ class Google_Service_Reports extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://admin.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/admin/reports_v1';
+    $this->batchPath = 'batch';
     $this->version = 'reports_v1';
     $this->serviceName = 'admin';
 
@@ -80,34 +80,6 @@ class Google_Service_Reports extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'endTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'eventName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'orgUnitID' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filters' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'groupIdFilter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -116,7 +88,35 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'orgUnitID' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'customerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'eventName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filters' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -135,22 +135,6 @@ class Google_Service_Reports extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'groupIdFilter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'endTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -159,7 +143,19 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'eventName' => array(
+                'startTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'groupIdFilter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'customerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -167,11 +163,15 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orgUnitID' => array(
+                'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'customerId' => array(
+                'eventName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orgUnitID' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -209,7 +209,7 @@ class Google_Service_Reports extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'customerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -217,7 +217,7 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'customerId' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -255,7 +255,11 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'customerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filters' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -263,11 +267,7 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'customerId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filters' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -300,13 +300,9 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orgUnitID' => array(
+                'groupIdFilter' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
                 'customerId' => array(
                   'location' => 'query',
@@ -316,11 +312,15 @@ class Google_Service_Reports extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'groupIdFilter' => array(
+                'parameters' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'parameters' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orgUnitID' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

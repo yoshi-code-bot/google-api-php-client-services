@@ -148,9 +148,18 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'analysisQuery.identitySelector.identity' => array(
+                'executionTimeout' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'analysisQuery.options.analyzeServiceAccountImpersonation' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'analysisQuery.accessSelector.roles' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'analysisQuery.resourceSelector.fullResourceName' => array(
                   'location' => 'query',
@@ -160,24 +169,23 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'analysisQuery.options.outputGroupEdges' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'analysisQuery.options.outputResourceEdges' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'executionTimeout' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'analysisQuery.accessSelector.roles' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
                 'analysisQuery.options.expandGroups' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'analysisQuery.identitySelector.identity' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'analysisQuery.options.expandResources' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'analysisQuery.options.outputGroupEdges' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -185,14 +193,6 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ),
-                'analysisQuery.options.analyzeServiceAccountImpersonation' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'analysisQuery.options.expandResources' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),'analyzeIamPolicyLongrunning' => array(
@@ -214,15 +214,11 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'contentType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'readTimeWindow.startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'readTimeWindow.endTime' => array(
+                'contentType' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -230,6 +226,10 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'readTimeWindow.endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'exportAssets' => array(
@@ -251,15 +251,15 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'query' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -273,6 +273,15 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'assetTypes' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -281,18 +290,9 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'assetTypes' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),

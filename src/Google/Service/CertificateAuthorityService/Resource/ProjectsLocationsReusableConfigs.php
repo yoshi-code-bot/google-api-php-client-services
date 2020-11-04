@@ -71,9 +71,9 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsReusa
    * with the ReusableConfigs, in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * @opt_param string filter Optional. Only include resources that match the
    * filter in the response.
-   * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * @opt_param int pageSize Optional. Limit on the number of ReusableConfigs to
    * include in the response. Further ReusableConfigs can subsequently be obtained
    * by including the ListReusableConfigsResponse.next_page_token in a subsequent

@@ -52,14 +52,6 @@ class Google_Service_Reports_Resource_EntityUsageReports extends Google_Service_
    * returns the response corresponding to the remaining valid request parameters.
    * An example of an invalid request parameter is one that does not belong to the
    * application. If no parameters are requested, all parameters are returned.
-   * @opt_param string pageToken Token to specify next page. A report with
-   * multiple pages has a nextPageToken property in the response. In your follow-
-   * on request getting the next page of the report, enter the nextPageToken value
-   * in the pageToken query string.
-   * @opt_param string maxResults Determines how many activity records are shown
-   * on each response page. For example, if the request sets maxResults=1 and the
-   * report has two activities, the report has two pages. The response's
-   * nextPageToken property has the token to the second page.
    * @opt_param string customerId The unique ID of the customer to retrieve data
    * for.
    * @opt_param string filters The filters query string is a comma-separated list
@@ -78,6 +70,14 @@ class Google_Service_Reports_Resource_EntityUsageReports extends Google_Service_
    * (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= - 'greater than
    * or equal to'. It is URL-encoded (%3E=). Filters can only be applied to
    * numeric parameters.
+   * @opt_param string maxResults Determines how many activity records are shown
+   * on each response page. For example, if the request sets maxResults=1 and the
+   * report has two activities, the report has two pages. The response's
+   * nextPageToken property has the token to the second page.
+   * @opt_param string pageToken Token to specify next page. A report with
+   * multiple pages has a nextPageToken property in the response. In your follow-
+   * on request getting the next page of the report, enter the nextPageToken value
+   * in the pageToken query string.
    * @return Google_Service_Reports_UsageReports
    */
   public function get($entityType, $entityKey, $date, $optParams = array())

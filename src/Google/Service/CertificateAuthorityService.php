@@ -19,7 +19,9 @@
  * Service definition for CertificateAuthorityService (v1beta1).
  *
  * <p>
-</p>
+ * The Certificate Authority Service API is a highly-available, scalable service
+ * that enables you to simplify and automate the management of private
+ * certificate authorities (CAs) while staying in control of your private keys."</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -82,6 +84,10 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -89,10 +95,6 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -124,11 +126,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
+                'certificateAuthorityId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'certificateAuthorityId' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -196,21 +198,21 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -222,11 +224,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'updateMask' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestId' => array(
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -290,11 +292,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'certificateRevocationListId' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestId' => array(
+                'certificateRevocationListId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -332,13 +334,13 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'orderBy' => array(
                   'location' => 'query',
@@ -358,11 +360,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'updateMask' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -434,21 +436,21 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -460,11 +462,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'updateMask' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -528,13 +530,13 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'filter' => array(
                   'location' => 'query',
@@ -584,11 +586,11 @@ class Google_Service_CertificateAuthorityService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

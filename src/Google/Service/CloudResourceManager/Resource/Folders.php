@@ -31,7 +31,7 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    * Operation.response field will be populated with the created Folder. In order
    * to succeed, the addition of this new Folder must not violate the Folder
    * naming, height or fanout constraints. + The Folder's display_name must be
-   * distinct from all other Folder's that share its parent. + The addition of the
+   * distinct from all other Folders that share its parent. + The addition of the
    * Folder must not cause the active Folder hierarchy to exceed a height of 10.
    * Note, the full active + deleted Folder hierarchy is allowed to reach a height
    * of 20; this provides additional headroom when moving folders that contain
@@ -124,8 +124,6 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. The maximum number of Folders to return in
-   * the response.
    * @opt_param string parent Required. The resource name of the Organization or
    * Folder whose Folders are being listed. Must be of the form
    * `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is
@@ -136,6 +134,8 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    * continue from.
    * @opt_param bool showDeleted Optional. Controls whether Folders in the
    * DELETE_REQUESTED state should be returned. Defaults to false.
+   * @opt_param int pageSize Optional. The maximum number of Folders to return in
+   * the response.
    * @return Google_Service_CloudResourceManager_ListFoldersResponse
    */
   public function listFolders($optParams = array())
@@ -178,7 +178,7 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    * documentation. The Folder's display name must start and end with a letter or
    * digit, may contain letters, digits, spaces, hyphens and underscores and can
    * be no longer than 30 characters. This is captured by the regular expression:
-   * [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?. The caller must have
+   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`. The caller must have
    * `resourcemanager.folders.update` permission on the identified folder. If the
    * update fails due to the unique name constraint then a PreconditionFailure
    * explaining this violation will be returned in the Status.details field.

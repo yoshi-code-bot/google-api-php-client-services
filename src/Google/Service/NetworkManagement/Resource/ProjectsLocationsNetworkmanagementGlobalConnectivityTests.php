@@ -117,10 +117,10 @@ class Google_Service_NetworkManagement_Resource_ProjectsLocationsNetworkmanageme
    * Tests: `projects/{project_id}/locations/global`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string orderBy Field to use to sort the list.
+   * @opt_param int pageSize Number of `ConnectivityTests` to return.
    * @opt_param string pageToken Page token from an earlier query, as returned in
    * `next_page_token`.
-   * @opt_param int pageSize Number of `ConnectivityTests` to return.
-   * @opt_param string orderBy Field to use to sort the list.
    * @opt_param string filter Lists the `ConnectivityTests` that match the filter
    * expression. A filter expression filters the resources listed in the response.
    * The expression must be of the form ` ` where operators: `<`, `>`, `<=`, `>=`,

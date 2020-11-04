@@ -81,20 +81,20 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * `projects/locations/certificateauthorities`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional. Pagination token, returned earlier via
-   * ListCertificatesResponse.next_page_token.
-   * @opt_param string filter Optional. Only include resources that match the
-   * filter in the response. For details on supported filters and syntax, see
-   * [Certificates Filtering documentation](https://cloud.google.com/certificate-
-   * authority-service/docs/sorting-filtering-certificates#filtering_support).
    * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * For details on supported fields and syntax, see [Certificates Sorting
    * documentation](https://cloud.google.com/certificate-authority-service/docs
    * /sorting-filtering-certificates#sorting_support).
+   * @opt_param string pageToken Optional. Pagination token, returned earlier via
+   * ListCertificatesResponse.next_page_token.
    * @opt_param int pageSize Optional. Limit on the number of Certificates to
    * include in the response. Further Certificates can subsequently be obtained by
    * including the ListCertificatesResponse.next_page_token in a subsequent
    * request. If unspecified, the server will pick an appropriate default.
+   * @opt_param string filter Optional. Only include resources that match the
+   * filter in the response. For details on supported filters and syntax, see
+   * [Certificates Filtering documentation](https://cloud.google.com/certificate-
+   * authority-service/docs/sorting-filtering-certificates#filtering_support).
    * @return Google_Service_CertificateAuthorityService_ListCertificatesResponse
    */
   public function listProjectsLocationsCertificateAuthoritiesCertificates($parent, $optParams = array())
@@ -112,6 +112,8 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * @param Google_Service_CertificateAuthorityService_Certificate $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string updateMask Required. A list of fields to be updated in this
+   * request.
    * @opt_param string requestId Optional. An ID to identify requests. Specify a
    * unique request ID so that if you must retry your request, the server will
    * know to ignore the request if it has already been completed. The server will
@@ -123,8 +125,6 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * creating duplicate commitments. The request ID must be a valid UUID with the
    * exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string updateMask Required. A list of fields to be updated in this
-   * request.
    * @return Google_Service_CertificateAuthorityService_Certificate
    */
   public function patch($name, Google_Service_CertificateAuthorityService_Certificate $postBody, $optParams = array())
