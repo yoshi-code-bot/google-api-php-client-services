@@ -15,27 +15,18 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_FileShareConfig extends Google_Model
+class Google_Service_CloudFilestore_RestoreInstanceRequest extends Google_Model
 {
-  public $capacityGb;
-  public $name;
+  public $fileShare;
   public $sourceBackup;
 
-  public function setCapacityGb($capacityGb)
+  public function setFileShare($fileShare)
   {
-    $this->capacityGb = $capacityGb;
+    $this->fileShare = $fileShare;
   }
-  public function getCapacityGb()
+  public function getFileShare()
   {
-    return $this->capacityGb;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->fileShare;
   }
   public function setSourceBackup($sourceBackup)
   {

@@ -15,34 +15,43 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_FileShareConfig extends Google_Model
+class Google_Service_CloudFilestore_TimeOfDay extends Google_Model
 {
-  public $capacityGb;
-  public $name;
-  public $sourceBackup;
+  public $hours;
+  public $minutes;
+  public $nanos;
+  public $seconds;
 
-  public function setCapacityGb($capacityGb)
+  public function setHours($hours)
   {
-    $this->capacityGb = $capacityGb;
+    $this->hours = $hours;
   }
-  public function getCapacityGb()
+  public function getHours()
   {
-    return $this->capacityGb;
+    return $this->hours;
   }
-  public function setName($name)
+  public function setMinutes($minutes)
   {
-    $this->name = $name;
+    $this->minutes = $minutes;
   }
-  public function getName()
+  public function getMinutes()
   {
-    return $this->name;
+    return $this->minutes;
   }
-  public function setSourceBackup($sourceBackup)
+  public function setNanos($nanos)
   {
-    $this->sourceBackup = $sourceBackup;
+    $this->nanos = $nanos;
   }
-  public function getSourceBackup()
+  public function getNanos()
   {
-    return $this->sourceBackup;
+    return $this->nanos;
+  }
+  public function setSeconds($seconds)
+  {
+    $this->seconds = $seconds;
+  }
+  public function getSeconds()
+  {
+    return $this->seconds;
   }
 }

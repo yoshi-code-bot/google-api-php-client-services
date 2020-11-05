@@ -151,9 +151,9 @@ class Google_Service_ContainerAnalysis_Resource_ProjectsOccurrences extends Goog
    * @opt_param int pageSize Number of occurrences to return in the list. Must be
    * positive. Max allowed page size is 1000. If not specified, page size defaults
    * to 20.
+   * @opt_param string filter The filter expression.
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
-   * @opt_param string filter The filter expression.
    * @return Google_Service_ContainerAnalysis_ListOccurrencesResponse
    */
   public function listProjectsOccurrences($parent, $optParams = array())

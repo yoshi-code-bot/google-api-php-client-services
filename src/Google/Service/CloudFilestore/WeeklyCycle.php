@@ -15,34 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_FileShareConfig extends Google_Model
+class Google_Service_CloudFilestore_WeeklyCycle extends Google_Collection
 {
-  public $capacityGb;
-  public $name;
-  public $sourceBackup;
+  protected $collection_key = 'schedule';
+  protected $scheduleType = 'Google_Service_CloudFilestore_Schedule';
+  protected $scheduleDataType = 'array';
 
-  public function setCapacityGb($capacityGb)
+  /**
+   * @param Google_Service_CloudFilestore_Schedule
+   */
+  public function setSchedule($schedule)
   {
-    $this->capacityGb = $capacityGb;
+    $this->schedule = $schedule;
   }
-  public function getCapacityGb()
+  /**
+   * @return Google_Service_CloudFilestore_Schedule
+   */
+  public function getSchedule()
   {
-    return $this->capacityGb;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setSourceBackup($sourceBackup)
-  {
-    $this->sourceBackup = $sourceBackup;
-  }
-  public function getSourceBackup()
-  {
-    return $this->sourceBackup;
+    return $this->schedule;
   }
 }

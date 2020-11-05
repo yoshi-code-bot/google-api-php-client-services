@@ -116,10 +116,10 @@ class Google_Service_ContainerAnalysis_Resource_ProjectsNotes extends Google_Ser
    *
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
-   * @opt_param string filter The filter expression.
    * @opt_param int pageSize Number of notes to return in the list. Must be
    * positive. Max allowed page size is 1000. If not specified, page size defaults
    * to 20.
+   * @opt_param string filter The filter expression.
    * @return Google_Service_ContainerAnalysis_ListNotesResponse
    */
   public function listProjectsNotes($parent, $optParams = array())

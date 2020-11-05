@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_FileShareConfig extends Google_Model
+class Google_Service_CloudFilestore_Date extends Google_Model
 {
-  public $capacityGb;
-  public $name;
-  public $sourceBackup;
+  public $day;
+  public $month;
+  public $year;
 
-  public function setCapacityGb($capacityGb)
+  public function setDay($day)
   {
-    $this->capacityGb = $capacityGb;
+    $this->day = $day;
   }
-  public function getCapacityGb()
+  public function getDay()
   {
-    return $this->capacityGb;
+    return $this->day;
   }
-  public function setName($name)
+  public function setMonth($month)
   {
-    $this->name = $name;
+    $this->month = $month;
   }
-  public function getName()
+  public function getMonth()
   {
-    return $this->name;
+    return $this->month;
   }
-  public function setSourceBackup($sourceBackup)
+  public function setYear($year)
   {
-    $this->sourceBackup = $sourceBackup;
+    $this->year = $year;
   }
-  public function getSourceBackup()
+  public function getYear()
   {
-    return $this->sourceBackup;
+    return $this->year;
   }
 }
