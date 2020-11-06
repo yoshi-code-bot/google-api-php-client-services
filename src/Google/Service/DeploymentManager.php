@@ -149,13 +149,13 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'preview' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'createPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'preview' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'list' => array(
@@ -167,6 +167,14 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -175,17 +183,9 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -202,15 +202,15 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'createPolicy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'preview' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
                 'deletePolicy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'createPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -274,15 +274,15 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'deletePolicy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'preview' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
                 'createPolicy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'deletePolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -331,23 +331,23 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
                 'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -386,25 +386,25 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -455,6 +455,10 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -464,10 +468,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -491,25 +491,25 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

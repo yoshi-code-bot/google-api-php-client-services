@@ -77,6 +77,7 @@ class Google_Service_DisplayVideo_Resource_AdvertisersChannels extends Google_Se
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListChannels` method. If not specified, the first page
    * of results will be returned.
+   * @opt_param string partnerId The ID of the partner that owns the channels.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
@@ -87,7 +88,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersChannels extends Google_Se
    * `displayName` Examples: * All channels for which the display name contains
    * "google": `displayName : "google"`. The length of this field should be no
    * more than 500 characters.
-   * @opt_param string partnerId The ID of the partner that owns the channels.
    * @return Google_Service_DisplayVideo_ListChannelsResponse
    */
   public function listAdvertisersChannels($advertiserId, $optParams = array())

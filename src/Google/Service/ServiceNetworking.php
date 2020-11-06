@@ -43,6 +43,7 @@ class Google_Service_ServiceNetworking extends Google_Service
   public $services_connections;
   public $services_dnsRecordSets;
   public $services_dnsZones;
+  public $services_projects_global_networks;
   public $services_projects_global_networks_peeredDnsDomains;
   public $services_roles;
   
@@ -106,15 +107,15 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -222,13 +223,13 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'force' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'force' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -294,6 +295,26 @@ class Google_Service_ServiceNetworking extends Google_Service
             ),'remove' => array(
               'path' => 'v1/{+parent}/dnsZones:remove',
               'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->services_projects_global_networks = new Google_Service_ServiceNetworking_Resource_ServicesProjectsServicenetworkingGlobalNetworks(
+        $this,
+        $this->serviceName,
+        'networks',
+        array(
+          'methods' => array(
+            'updateConsumerConfig' => array(
+              'path' => 'v1/{+parent}:updateConsumerConfig',
+              'httpMethod' => 'PATCH',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',

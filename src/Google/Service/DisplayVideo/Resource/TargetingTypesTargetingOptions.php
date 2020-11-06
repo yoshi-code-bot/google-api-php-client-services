@@ -52,11 +52,6 @@ class Google_Service_DisplayVideo_Resource_TargetingTypesTargetingOptions extend
    * listed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
-   * @opt_param string advertiserId Required. The Advertiser this request is being
-   * made in the context of.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListTargetingOptions` method. If not specified, the
@@ -79,6 +74,11 @@ class Google_Service_DisplayVideo_Resource_TargetingTypesTargetingOptions extend
    * are: * `targetingOptionId` (default) The default sorting order is ascending.
    * To specify descending order for a field, a suffix "desc" should be added to
    * the field name. Example: `targetingOptionId desc`.
+   * @opt_param string advertiserId Required. The Advertiser this request is being
+   * made in the context of.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListTargetingOptionsResponse
    */
   public function listTargetingTypesTargetingOptions($targetingType, $optParams = array())

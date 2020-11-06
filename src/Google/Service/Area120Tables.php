@@ -48,6 +48,7 @@ class Google_Service_Area120Tables extends Google_Service
 
   public $tables;
   public $tables_rows;
+  public $workspaces;
   
   /**
    * Constructs the internal representation of the Area120Tables service.
@@ -84,13 +85,13 @@ class Google_Service_Area120Tables extends Google_Service
               'path' => 'v1alpha1/tables',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -170,13 +171,13 @@ class Google_Service_Area120Tables extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'view' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -199,6 +200,39 @@ class Google_Service_Area120Tables extends Google_Service
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->workspaces = new Google_Service_Area120Tables_Resource_Workspaces(
+        $this,
+        $this->serviceName,
+        'workspaces',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1alpha1/workspaces',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
