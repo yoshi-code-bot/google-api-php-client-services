@@ -99,10 +99,6 @@ class Google_Service_AnalyticsData extends Google_Service
               'path' => 'v1alpha:batchRunReports',
               'httpMethod' => 'POST',
               'parameters' => array(),
-            ),'getUniversalMetadata' => array(
-              'path' => 'v1alpha/universalMetadata',
-              'httpMethod' => 'GET',
-              'parameters' => array(),
             ),'runPivotReport' => array(
               'path' => 'v1alpha:runPivotReport',
               'httpMethod' => 'POST',

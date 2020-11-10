@@ -89,12 +89,12 @@ class Google_Service_Assuredworkloads_Resource_OrganizationsLocationsWorkloads e
    * be of the form `organizations/{org_id}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Page size.
-   * @opt_param string filter A custom filter for filtering by properties of a
-   * workload. At this time, only filtering by labels is supported.
    * @opt_param string pageToken Page token returned from previous request. Page
    * token contains context from previous request. Page token needs to be passed
    * in the second and following requests.
+   * @opt_param string filter A custom filter for filtering by properties of a
+   * workload. At this time, only filtering by labels is supported.
+   * @opt_param int pageSize Page size.
    * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse
    */
   public function listOrganizationsLocationsWorkloads($parent, $optParams = array())
@@ -111,10 +111,7 @@ class Google_Service_Assuredworkloads_Resource_OrganizationsLocationsWorkloads e
    *
    * @param string $name Optional. The resource name of the workload. Format:
    * organizations/{organization}/locations/{location}/workloads/{workload} Read-
-   * only. The UI extracts the location and workload name from this string, since
-   * they aren't set directly on the workload object. If the format of this field
-   * changes, the UI should likely be updated. LINT.IfChange LINT.ThenChange(//dep
-   * ot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)
+   * only.
    * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload $postBody
    * @param array $optParams Optional parameters.
    *

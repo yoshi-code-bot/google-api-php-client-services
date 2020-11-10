@@ -41,7 +41,9 @@ class Google_Service_AnalyticsData_Resource_Properties extends Google_Service_Re
    * is a numeric Google Analytics GA4 Property identifier. To learn more, see
    * [where to find your Property ID](https://developers.google.com/analytics
    * /trusted-testing/analytics-data/property-id). Example:
-   * properties/1234/metadata
+   * properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
+   * common to all properties. In this special mode, this method will not return
+   * custom dimensions and metrics.
    * @param array $optParams Optional parameters.
    * @return Google_Service_AnalyticsData_Metadata
    */

@@ -90,10 +90,10 @@ class Google_Service_ShoppingContent_Resource_Repricingrules extends Google_Serv
    * `ListRepricingRules` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListRepricingRules` must match
    * the call that provided the page token.
-   * @opt_param string languageCode The two-letter ISO 639-1 language code
-   * associated with the repricing rule, used as a filter.
    * @opt_param string countryCode CLDR country code (e.g. "US"), used as a filter
    * on repricing rules.
+   * @opt_param string languageCode The two-letter ISO 639-1 language code
+   * associated with the repricing rule, used as a filter.
    * @return Google_Service_ShoppingContent_ListRepricingRulesResponse
    */
   public function listRepricingrules($merchantId, $optParams = array())

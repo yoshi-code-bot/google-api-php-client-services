@@ -55,8 +55,9 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('delete', array($params));
   }
   /**
-   * Invokes a fetch for the datafeed in your Merchant Center account.
-   * (datafeeds.fetchnow)
+   * Invokes a fetch for the datafeed in your Merchant Center account. If you need
+   * to call this method more than once per day, we recommend you use the Products
+   * service to update your product data. (datafeeds.fetchnow)
    *
    * @param string $merchantId The ID of the account that manages the datafeed.
    * This account cannot be a multi-client account.
@@ -110,9 +111,9 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
    * This account cannot be a multi-client account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of products to return in the
    * response, used for paging.
+   * @opt_param string pageToken The token returned by the previous request.
    * @return Google_Service_ShoppingContent_DatafeedsListResponse
    */
   public function listDatafeeds($merchantId, $optParams = array())

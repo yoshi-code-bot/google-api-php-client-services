@@ -33,6 +33,7 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload exte
   protected $il4SettingsDataType = '';
   public $labels;
   public $name;
+  public $provisionedResourcesParent;
   protected $resourcesType = 'Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo';
   protected $resourcesDataType = 'array';
 
@@ -147,6 +148,14 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload exte
   public function getName()
   {
     return $this->name;
+  }
+  public function setProvisionedResourcesParent($provisionedResourcesParent)
+  {
+    $this->provisionedResourcesParent = $provisionedResourcesParent;
+  }
+  public function getProvisionedResourcesParent()
+  {
+    return $this->provisionedResourcesParent;
   }
   /**
    * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo

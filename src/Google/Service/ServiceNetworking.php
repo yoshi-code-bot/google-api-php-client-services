@@ -107,15 +107,15 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -312,7 +312,17 @@ class Google_Service_ServiceNetworking extends Google_Service
         'networks',
         array(
           'methods' => array(
-            'updateConsumerConfig' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'updateConsumerConfig' => array(
               'path' => 'v1/{+parent}:updateConsumerConfig',
               'httpMethod' => 'PATCH',
               'parameters' => array(

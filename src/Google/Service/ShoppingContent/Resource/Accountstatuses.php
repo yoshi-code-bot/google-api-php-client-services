@@ -69,11 +69,11 @@ class Google_Service_ShoppingContent_Resource_Accountstatuses extends Google_Ser
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken The token returned by the previous request.
+   * @opt_param string maxResults The maximum number of account statuses to return
+   * in the response, used for paging.
    * @opt_param string destinations If set, only issues for the specified
    * destinations are returned, otherwise only issues for the Shopping
    * destination.
-   * @opt_param string maxResults The maximum number of account statuses to return
-   * in the response, used for paging.
    * @return Google_Service_ShoppingContent_AccountstatusesListResponse
    */
   public function listAccountstatuses($merchantId, $optParams = array())
