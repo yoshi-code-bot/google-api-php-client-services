@@ -148,11 +148,23 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'analysisQuery.options.expandGroups' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'analysisQuery.options.analyzeServiceAccountImpersonation' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'executionTimeout' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'analysisQuery.options.analyzeServiceAccountImpersonation' => array(
+                'analysisQuery.resourceSelector.fullResourceName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'analysisQuery.options.outputGroupEdges' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -161,19 +173,16 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'analysisQuery.resourceSelector.fullResourceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'analysisQuery.options.expandRoles' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'analysisQuery.options.outputResourceEdges' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'analysisQuery.options.expandGroups' => array(
+                'analysisQuery.accessSelector.permissions' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'analysisQuery.options.expandRoles' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -184,15 +193,6 @@ class Google_Service_CloudAsset extends Google_Service
                 'analysisQuery.options.expandResources' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'analysisQuery.options.outputGroupEdges' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'analysisQuery.accessSelector.permissions' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
             ),'analyzeIamPolicyLongrunning' => array(
@@ -214,20 +214,20 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'readTimeWindow.startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'contentType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'assetNames' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
+                'contentType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'readTimeWindow.endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'readTimeWindow.startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -255,13 +255,13 @@ class Google_Service_CloudAsset extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'searchAllResources' => array(
@@ -273,10 +273,6 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'assetTypes' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -285,6 +281,10 @@ class Google_Service_CloudAsset extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'query' => array(
                   'location' => 'query',
