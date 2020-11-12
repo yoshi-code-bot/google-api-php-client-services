@@ -15,35 +15,32 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudKnowledgeV1alpha1OperationMetadata extends Google_Collection
+class Google_Service_Transcoder_JobTemplate extends Google_Model
 {
-  protected $collection_key = 'message';
-  public $errorCode;
-  public $message;
-  public $state;
+  protected $configType = 'Google_Service_Transcoder_JobConfig';
+  protected $configDataType = '';
+  public $name;
 
-  public function setErrorCode($errorCode)
+  /**
+   * @param Google_Service_Transcoder_JobConfig
+   */
+  public function setConfig(Google_Service_Transcoder_JobConfig $config)
   {
-    $this->errorCode = $errorCode;
+    $this->config = $config;
   }
-  public function getErrorCode()
+  /**
+   * @return Google_Service_Transcoder_JobConfig
+   */
+  public function getConfig()
   {
-    return $this->errorCode;
+    return $this->config;
   }
-  public function setMessage($message)
+  public function setName($name)
   {
-    $this->message = $message;
+    $this->name = $name;
   }
-  public function getMessage()
+  public function getName()
   {
-    return $this->message;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
+    return $this->name;
   }
 }

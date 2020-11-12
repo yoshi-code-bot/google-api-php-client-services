@@ -57,6 +57,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * Platform.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is be on behalf of
    * @opt_param string tlang tlang is the language code; machine translate the
    * captions into this language.
    * @opt_param string tfmt Convert the captions into this format. Supported
@@ -71,8 +73,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * without having to provide authentication credentials for each individual
    * channel. The actual CMS account that the user authenticates with must be
    * linked to the specified YouTube content owner.
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is be on behalf of
    */
   public function download($id, $optParams = array())
   {
@@ -88,8 +88,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * @param Google_Service_YouTube_Caption $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is be on behalf of
    * @opt_param string onBehalfOfContentOwner *Note:* This parameter is intended
    * exclusively for YouTube content partners. The *onBehalfOfContentOwner*
    * parameter indicates that the request's authorization credentials identify a
@@ -100,6 +98,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * without having to provide authentication credentials for each individual
    * channel. The actual CMS account that the user authenticates with must be
    * linked to the specified YouTube content owner.
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is be on behalf of
    * @opt_param bool sync Extra parameter to allow automatically syncing the
    * uploaded caption/transcript with the audio.
    * @return Google_Service_YouTube_Caption
@@ -113,11 +113,11 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
   /**
    * Retrieves a list of resources, possibly filtered. (captions.listCaptions)
    *
-   * @param string $videoId Returns the captions for the specified video.
    * @param string|array $part The *part* parameter specifies a comma-separated
    * list of one or more caption resource parts that the API response will
    * include. The part names that you can include in the parameter value are id
    * and snippet.
+   * @param string $videoId Returns the captions for the specified video.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner *Note:* This parameter is intended
@@ -136,9 +136,9 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * request is on behalf of.
    * @return Google_Service_YouTube_CaptionListResponse
    */
-  public function listCaptions($videoId, $part, $optParams = array())
+  public function listCaptions($part, $videoId, $optParams = array())
   {
-    $params = array('videoId' => $videoId, 'part' => $part);
+    $params = array('part' => $part, 'videoId' => $videoId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_YouTube_CaptionListResponse");
   }
