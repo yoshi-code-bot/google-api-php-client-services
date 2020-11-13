@@ -148,11 +148,11 @@ class Google_Service_PeopleService extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'syncToken' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -211,21 +211,21 @@ class Google_Service_PeopleService extends Google_Service
               'path' => 'v1/otherContacts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'readMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestSyncToken' => array(
+                'pageToken' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'requestSyncToken' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'syncToken' => array(
                   'location' => 'query',
@@ -275,14 +275,14 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'personFields' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sources' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ),
+                'personFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'get' => array(
@@ -294,11 +294,6 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sources' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
                 'requestMask.includeField' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -306,6 +301,11 @@ class Google_Service_PeopleService extends Google_Service
                 'personFields' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'sources' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
               ),
             ),'getBatchGet' => array(
@@ -316,14 +316,14 @@ class Google_Service_PeopleService extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'personFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'resourceNames' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ),
-                'personFields' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'sources' => array(
                   'location' => 'query',
@@ -335,32 +335,32 @@ class Google_Service_PeopleService extends Google_Service
               'path' => 'v1/people:listDirectoryPeople',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'readMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'requestSyncToken' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'readMask' => array(
+                'mergeSources' => array(
                   'location' => 'query',
                   'type' => 'string',
+                  'repeated' => true,
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'sources' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'mergeSources' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
@@ -374,6 +374,10 @@ class Google_Service_PeopleService extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'mergeSources' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -392,10 +396,6 @@ class Google_Service_PeopleService extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'query' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'updateContact' => array(
               'path' => 'v1/{+resourceName}:updateContact',
@@ -406,16 +406,16 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'updatePersonFields' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'sources' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
                 'personFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'updatePersonFields' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -449,19 +449,23 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'personFields' => array(
+                'syncToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'requestSyncToken' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'syncToken' => array(
+                'sortOrder' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestMask.includeField' => array(
+                'personFields' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -470,17 +474,13 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'sortOrder' => array(
+                'requestMask.includeField' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'requestSyncToken' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),

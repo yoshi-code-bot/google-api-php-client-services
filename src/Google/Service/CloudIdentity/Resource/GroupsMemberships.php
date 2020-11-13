@@ -81,6 +81,8 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    *
    * @opt_param string pageToken The `next_page_token` value returned from a
    * previous search request, if any.
+   * @opt_param string view The level of detail to be returned. If unspecified,
+   * defaults to `View.BASIC`.
    * @opt_param int pageSize The maximum number of results to return. Note that
    * the number of results returned may be less than this value even if there are
    * more available results. To fetch all results, clients must continue calling
@@ -88,8 +90,6 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    * `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and
    * to 50 for `GroupView.FULL`. Must not be greater than 1000 for
    * `GroupView.BASIC` or 500 for `GroupView.FULL`.
-   * @opt_param string view The level of detail to be returned. If unspecified,
-   * defaults to `View.BASIC`.
    * @return Google_Service_CloudIdentity_ListMembershipsResponse
    */
   public function listGroupsMemberships($parent, $optParams = array())
