@@ -86,8 +86,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersCampaigns extends Google_S
    * are: * `displayName` (default) * `entityStatus` The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
    * added to the field name. Example: `displayName desc`.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`.
    * @opt_param string filter Allows filtering by campaign properties. Supported
    * syntax: * Filter expressions are made up of one or more restrictions. *
    * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
@@ -102,6 +100,8 @@ class Google_Service_DisplayVideo_Resource_AdvertisersCampaigns extends Google_S
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListCampaigns` method. If not specified, the first page
    * of results will be returned.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`.
    * @return Google_Service_DisplayVideo_ListCampaignsResponse
    */
   public function listAdvertisersCampaigns($advertiserId, $optParams = array())
