@@ -168,16 +168,16 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * with the CertificateAuthorities, in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional. Pagination token, returned earlier via
-   * ListCertificateAuthoritiesResponse.next_page_token.
    * @opt_param string filter Optional. Only include resources that match the
    * filter in the response.
-   * @opt_param string orderBy Optional. Specify how the results should be sorted.
+   * @opt_param string pageToken Optional. Pagination token, returned earlier via
+   * ListCertificateAuthoritiesResponse.next_page_token.
    * @opt_param int pageSize Optional. Limit on the number of
    * CertificateAuthorities to include in the response. Further
    * CertificateAuthorities can subsequently be obtained by including the
    * ListCertificateAuthoritiesResponse.next_page_token in a subsequent request.
    * If unspecified, the server will pick an appropriate default.
+   * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * @return Google_Service_CertificateAuthorityService_ListCertificateAuthoritiesResponse
    */
   public function listProjectsLocationsCertificateAuthorities($parent, $optParams = array())
