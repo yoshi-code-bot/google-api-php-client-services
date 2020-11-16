@@ -111,8 +111,6 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
    * of the form `projects//instances/`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Number of backups to be returned in the response. If
-   * 0 or less, defaults to the server's maximum allowed page size.
    * @opt_param string filter An expression that filters the list of returned
    * backups. A filter expression consists of a field name, a comparison operator,
    * and a value for filtering. The value must be a string, a number, or a
@@ -136,6 +134,8 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
    * @opt_param string pageToken If non-empty, `page_token` should contain a
    * next_page_token from a previous ListBackupsResponse to the same `parent` and
    * with the same `filter`.
+   * @opt_param int pageSize Number of backups to be returned in the response. If
+   * 0 or less, defaults to the server's maximum allowed page size.
    * @return Google_Service_Spanner_ListBackupsResponse
    */
   public function listProjectsInstancesBackups($parent, $optParams = array())
