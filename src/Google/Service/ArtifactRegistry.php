@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for ArtifactRegistry (v1beta1).
+ * Service definition for ArtifactRegistry (v1beta2).
  *
  * <p>
  * Store and manage build artifacts in a scalable and integrated service built
@@ -58,7 +58,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://artifactregistry.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1beta2';
     $this->serviceName = 'artifactregistry';
 
     $this->projects_locations = new Google_Service_ArtifactRegistry_Resource_ProjectsLocations(
@@ -68,7 +68,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -78,7 +78,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+name}/locations',
+              'path' => 'v1beta2/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -86,11 +86,11 @@ class Google_Service_ArtifactRegistry extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -110,7 +110,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -120,17 +120,13 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+name}/operations',
+              'path' => 'v1beta2/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -139,6 +135,10 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -152,7 +152,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/repositories',
+              'path' => 'v1beta2/{+parent}/repositories',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -166,7 +166,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -176,7 +176,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -186,7 +186,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1beta2/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -200,7 +200,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/repositories',
+              'path' => 'v1beta2/{+parent}/repositories',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -208,17 +208,17 @@ class Google_Service_ArtifactRegistry extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -232,7 +232,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1beta2/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -242,7 +242,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1beta2/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -262,7 +262,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -272,7 +272,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/files',
+              'path' => 'v1beta2/{+parent}/files',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -280,17 +280,17 @@ class Google_Service_ArtifactRegistry extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
+                'pageToken' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -304,7 +304,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -314,7 +314,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -324,7 +324,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/packages',
+              'path' => 'v1beta2/{+parent}/packages',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -332,13 +332,13 @@ class Google_Service_ArtifactRegistry extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -352,7 +352,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1beta2/{+parent}/tags',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -366,7 +366,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -376,7 +376,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -386,7 +386,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1beta2/{+parent}/tags',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -394,21 +394,21 @@ class Google_Service_ArtifactRegistry extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
+                'pageToken' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -432,7 +432,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -446,7 +446,7 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1beta2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -460,17 +460,13 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/versions',
+              'path' => 'v1beta2/{+parent}/versions',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'view' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -479,6 +475,10 @@ class Google_Service_ArtifactRegistry extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

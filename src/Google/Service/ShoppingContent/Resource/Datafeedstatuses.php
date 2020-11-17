@@ -48,12 +48,12 @@ class Google_Service_ShoppingContent_Resource_Datafeedstatuses extends Google_Se
    * @param string $datafeedId The ID of the datafeed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string language The language for which to get the datafeed status.
-   * If this parameter is provided then country must also be provided. Note that
-   * this parameter is required for feeds targeting multiple countries and
-   * languages, since a feed may have a different status for each target.
    * @opt_param string country The country for which to get the datafeed status.
    * If this parameter is provided then language must also be provided. Note that
+   * this parameter is required for feeds targeting multiple countries and
+   * languages, since a feed may have a different status for each target.
+   * @opt_param string language The language for which to get the datafeed status.
+   * If this parameter is provided then country must also be provided. Note that
    * this parameter is required for feeds targeting multiple countries and
    * languages, since a feed may have a different status for each target.
    * @return Google_Service_ShoppingContent_DatafeedStatus
@@ -72,9 +72,9 @@ class Google_Service_ShoppingContent_Resource_Datafeedstatuses extends Google_Se
    * This account cannot be a multi-client account.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of products to return in the
    * response, used for paging.
-   * @opt_param string pageToken The token returned by the previous request.
    * @return Google_Service_ShoppingContent_DatafeedstatusesListResponse
    */
   public function listDatafeedstatuses($merchantId, $optParams = array())

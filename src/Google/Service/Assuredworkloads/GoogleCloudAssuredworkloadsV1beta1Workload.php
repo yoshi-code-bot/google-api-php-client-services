@@ -31,6 +31,8 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload
   protected $fedrampModerateSettingsDataType = '';
   protected $il4SettingsType = 'Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings';
   protected $il4SettingsDataType = '';
+  protected $kmsSettingsType = 'Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings';
+  protected $kmsSettingsDataType = '';
   public $labels;
   public $name;
   public $provisionedResourcesParent;
@@ -132,6 +134,20 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload
   public function getIl4Settings()
   {
     return $this->il4Settings;
+  }
+  /**
+   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings
+   */
+  public function setKmsSettings(Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings $kmsSettings)
+  {
+    $this->kmsSettings = $kmsSettings;
+  }
+  /**
+   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings
+   */
+  public function getKmsSettings()
+  {
+    return $this->kmsSettings;
   }
   public function setLabels($labels)
   {

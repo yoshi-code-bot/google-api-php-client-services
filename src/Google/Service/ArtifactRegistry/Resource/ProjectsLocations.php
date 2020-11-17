@@ -46,8 +46,8 @@ class Google_Service_ArtifactRegistry_Resource_ProjectsLocations extends Google_
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
+   * @opt_param string filter The standard list filter.
    * @opt_param int pageSize The standard list page size.
    * @return Google_Service_ArtifactRegistry_ListLocationsResponse
    */

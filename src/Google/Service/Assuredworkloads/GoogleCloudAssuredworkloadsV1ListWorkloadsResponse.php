@@ -15,11 +15,11 @@
  * the License.
  */
 
-class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse extends Google_Collection
+class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1ListWorkloadsResponse extends Google_Collection
 {
   protected $collection_key = 'workloads';
   public $nextPageToken;
-  protected $workloadsType = 'Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload';
+  protected $workloadsType = 'Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload';
   protected $workloadsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
@@ -31,14 +31,14 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1ListWork
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload
+   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload
    */
   public function setWorkloads($workloads)
   {
     $this->workloads = $workloads;
   }
   /**
-   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1beta1Workload
+   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload
    */
   public function getWorkloads()
   {

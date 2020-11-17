@@ -16,29 +16,39 @@
  */
 
 /**
- * Service definition for Assuredworkloads (v1).
+ * Service definition for FirebaseRealtimeDatabase (v1beta).
  *
  * <p>
-</p>
+ * The Firebase Realtime Database Management API enables programmatic
+ * provisioning and management of Realtime Database instances.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com" target="_blank">Documentation</a>
+ * <a href="https://firebase.google.com/docs/reference/rest/database/database-management/rest/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_Assuredworkloads extends Google_Service
+class Google_Service_FirebaseRealtimeDatabase extends Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View your data across Google Cloud Platform services. */
+  const CLOUD_PLATFORM_READ_ONLY =
+      "https://www.googleapis.com/auth/cloud-platform.read-only";
+  /** View and administer all your Firebase data and settings. */
+  const FIREBASE =
+      "https://www.googleapis.com/auth/firebase";
+  /** View all your Firebase data and settings. */
+  const FIREBASE_READONLY =
+      "https://www.googleapis.com/auth/firebase.readonly";
 
-  public $organizations_locations_operations;
-  public $organizations_locations_workloads;
+  public $projects_locations_instances;
   
   /**
-   * Constructs the internal representation of the Assuredworkloads service.
+   * Constructs the internal representation of the FirebaseRealtimeDatabase
+   * service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -46,62 +56,20 @@ class Google_Service_Assuredworkloads extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://assuredworkloads.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://firebasedatabase.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
-    $this->serviceName = 'assuredworkloads';
+    $this->version = 'v1beta';
+    $this->serviceName = 'firebasedatabase';
 
-    $this->organizations_locations_operations = new Google_Service_Assuredworkloads_Resource_OrganizationsLocationsOperations(
+    $this->projects_locations_instances = new Google_Service_FirebaseRealtimeDatabase_Resource_ProjectsLocationsInstances(
         $this,
         $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
-            'get' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/{+name}/operations',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->organizations_locations_workloads = new Google_Service_Assuredworkloads_Resource_OrganizationsLocationsWorkloads(
-        $this,
-        $this->serviceName,
-        'workloads',
+        'instances',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1/{+parent}/workloads',
+              'path' => 'v1beta/{+parent}/instances',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -109,13 +77,17 @@ class Google_Service_Assuredworkloads extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'externalId' => array(
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'databaseId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v1beta/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -123,13 +95,19 @@ class Google_Service_Assuredworkloads extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'etag' => array(
-                  'location' => 'query',
+              ),
+            ),'disable' => array(
+              'path' => 'v1beta/{+name}:disable',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
                   'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v1beta/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -139,7 +117,7 @@ class Google_Service_Assuredworkloads extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+parent}/workloads',
+              'path' => 'v1beta/{+parent}/instances',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -155,23 +133,15 @@ class Google_Service_Assuredworkloads extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
-            ),'patch' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
+            ),'reenable' => array(
+              'path' => 'v1beta/{+name}:reenable',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'updateMask' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
