@@ -29,12 +29,12 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
    * Creates a new data collector. (datacollectors.create)
    *
    * @param string $parent Required. Name of the organization in which to create
-   * the Data Collector in the following format: `organizations/{org}`.
+   * the data collector in the following format: `organizations/{org}`.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1DataCollector $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string dataCollectorId ID of the Data Collector. Overrides any ID
-   * in the Data Collector resource.
+   * @opt_param string dataCollectorId ID of the data collector. Overrides any ID
+   * in the data collector resource. Must begin with `dc_`.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1DataCollector
    */
   public function create($parent, Google_Service_Apigee_GoogleCloudApigeeV1DataCollector $postBody, $optParams = array())
@@ -46,7 +46,7 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
   /**
    * Deletes a data collector. (datacollectors.delete)
    *
-   * @param string $name Required. Name of the Data Collector in the following
+   * @param string $name Required. Name of the data collector in the following
    * format: `organizations/{org}/datacollectors/{data_collector_id}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleProtobufEmpty
@@ -60,7 +60,7 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
   /**
    * Gets a data collector. (datacollectors.get)
    *
-   * @param string $name Required. Name of the Data Collector in the following
+   * @param string $name Required. Name of the data collector in the following
    * format: `organizations/{org}/datacollectors/{data_collector_id}`.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1DataCollector
@@ -75,12 +75,12 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
    * Lists all data collectors. (datacollectors.listOrganizationsDatacollectors)
    *
    * @param string $parent Required. Name of the organization for which to list
-   * Data Collectors in the following format: `organizations/{org}`.
+   * data collectors in the following format: `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Page token, returned from a previous
    * ListDataCollectors call, that you can use to retrieve the next page.
-   * @opt_param int pageSize Maximum number of Data Collectors to return. The page
+   * @opt_param int pageSize Maximum number of data collectors to return. The page
    * size defaults to 25.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListDataCollectorsResponse
    */
@@ -93,7 +93,7 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
   /**
    * Updates a data collector. (datacollectors.patch)
    *
-   * @param string $name Required. Name of the Data Collector in the following
+   * @param string $name Required. Name of the data collector in the following
    * format: `organizations/{org}/datacollectors/{data_collector_id}`.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1DataCollector $postBody
    * @param array $optParams Optional parameters.

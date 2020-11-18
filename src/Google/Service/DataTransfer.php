@@ -81,13 +81,13 @@ class Google_Service_DataTransfer extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -118,15 +118,11 @@ class Google_Service_DataTransfer extends Google_Service
               'path' => 'admin/datatransfer/v1/transfers',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'oldOwnerUserId' => array(
+                'newOwnerUserId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -134,11 +130,15 @@ class Google_Service_DataTransfer extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'status' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'customerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'newOwnerUserId' => array(
+                'oldOwnerUserId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

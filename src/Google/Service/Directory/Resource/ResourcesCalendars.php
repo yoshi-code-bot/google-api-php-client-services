@@ -92,14 +92,14 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
    * Supported fields include generatedResourceName, name, buildingId, floor_name,
    * capacity, featureInstances.feature.name. For example buildingId=US-NYC-9TH
    * AND featureInstances.feature.name:Phone.
-   * @opt_param int maxResults Maximum number of results to return.
+   * @opt_param string pageToken Token to specify the next page in the list.
    * @opt_param string orderBy Field(s) to sort results by in either ascending or
    * descending order. Supported fields include resourceId, resourceName,
    * capacity, buildingId, and floorName. If no order is specified, defaults to
    * ascending. Should be of the form "field [asc|desc], field [asc|desc], ...".
    * For example buildingId, capacity desc would return results sorted first by
    * buildingId in ascending order then by capacity in descending order.
-   * @opt_param string pageToken Token to specify the next page in the list.
+   * @opt_param int maxResults Maximum number of results to return.
    * @return Google_Service_Directory_CalendarResources
    */
   public function listResourcesCalendars($customer, $optParams = array())
