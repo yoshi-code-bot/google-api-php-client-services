@@ -179,6 +179,8 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
       prop.values['typeHint'] = ''
       prop.values['typeHintOld'] = ''
       prop.values['typeHintFull'] = ''
+      if code_type.lower() in PhpLanguageModel.PHP_PRIMITIVE_TYPES:
+          prop.values['annotationType'] = code_type.lower()
     else:
       prop.values['typeHintOld'] = ('%s_%s' %
                                     (self._api.values['owner'].title(),
@@ -187,6 +189,7 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
                                     (self._api.values['owner'].title(),
                                     self._api.values['className'], code_type))
       prop.values['typeHint'] = (code_type)
+      prop.values['annotationType'] = code_type
 
 
 class PhpLanguageModel(language_model.LanguageModel):
@@ -227,6 +230,14 @@ class PhpLanguageModel(language_model.LanguageModel):
       'bool', 'boolean', 'int', 'integer', 'file', 'float', 'double', 'string',
       'array', 'object',
       'null', 'resource',
+      ))
+
+  PHP_PRIMITIVE_TYPES = frozenset((
+      'bool',
+      'int',
+      'float',
+      'string',
+      'array',
       ))
 
   # We can not create classes which match a PHP keyword or built in object type.
