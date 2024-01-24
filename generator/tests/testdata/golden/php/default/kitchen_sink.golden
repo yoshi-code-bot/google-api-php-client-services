@@ -709,6 +709,7 @@ class KitchSink extends \Google\Service
    *
    * @opt_param string access_token The oauth2 access token
    * @return Tag
+   * @throws \Google\Service\Exception
    */
   public function tag($optParams = [])
   {
@@ -1396,6 +1397,7 @@ class FeaturedSeries extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listFeaturedSeries($optParams = [])
   {
@@ -1486,6 +1488,7 @@ class KitchSinkGlobalSeries extends \Google\Service\Resource
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listKitchSinkGlobalSeries($optParams = [])
   {
@@ -1570,6 +1573,7 @@ class MySeries extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listMySeries($optParams = [])
   {
@@ -1655,6 +1659,7 @@ class MyrecentKitchSinkPrivate extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listMyrecentKitchSinkPrivate($optParams = [])
   {
@@ -1704,6 +1709,7 @@ class Profiles extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return Profile
+   * @throws \Google\Service\Exception
    */
   public function get($optParams = [])
   {
@@ -1717,6 +1723,7 @@ class Profiles extends \Google\Service\Resource
    * @param Profile $postBody
    * @param array $optParams Optional parameters.
    * @return Profile
+   * @throws \Google\Service\Exception
    */
   public function update(Profile $postBody, $optParams = [])
   {
@@ -1776,6 +1783,7 @@ class Responses extends \Google\Service\Resource
    * @opt_param bool anonymous Set to true to mark the new submission as
    * anonymous.
    * @return Submission
+   * @throws \Google\Service\Exception
    */
   public function insert($seriesId, $topicId, $parentSubmissionId, Submission $postBody, $optParams = [])
   {
@@ -1799,6 +1807,7 @@ class Responses extends \Google\Service\Resource
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SubmissionList
+   * @throws \Google\Service\Exception
    */
   public function listResponses($seriesId, $submissionId, $optParams = [])
   {
@@ -1850,6 +1859,7 @@ class Series extends \Google\Service\Resource
    * @param int $seriesId The decimal ID of the Series.
    * @param array $optParams Optional parameters.
    * @return SeriesModel
+   * @throws \Google\Service\Exception
    */
   public function get($seriesId, $optParams = [])
   {
@@ -1862,6 +1872,7 @@ class Series extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SeriesModel
+   * @throws \Google\Service\Exception
    */
   public function insert($optParams = [])
   {
@@ -1878,6 +1889,7 @@ class Series extends \Google\Service\Resource
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listSeries($optParams = [])
   {
@@ -1892,6 +1904,7 @@ class Series extends \Google\Service\Resource
    * @param SeriesModel $postBody
    * @param array $optParams Optional parameters.
    * @return SeriesModel
+   * @throws \Google\Service\Exception
    */
   public function update($seriesId, SeriesModel $postBody, $optParams = [])
   {
@@ -1952,6 +1965,7 @@ class SeriesResponses extends \Google\Service\Resource
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SeriesList
+   * @throws \Google\Service\Exception
    */
   public function listSeriesResponses($seriesId, $q, $optParams = [])
   {
@@ -2013,6 +2027,7 @@ class SeriesSubmissions extends \Google\Service\Resource
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SubmissionList
+   * @throws \Google\Service\Exception
    */
   public function listSeriesSubmissions($seriesId, $optParams = [])
   {
@@ -2068,6 +2083,7 @@ class Submissions extends \Google\Service\Resource
    * @opt_param string lang The language code for the language the client prefers
    * resuls in.
    * @return Submission
+   * @throws \Google\Service\Exception
    */
   public function get($seriesId, $submissionId, $optParams = [])
   {
@@ -2087,6 +2103,7 @@ class Submissions extends \Google\Service\Resource
    * @opt_param bool anonymous Set to true to mark the new submission as
    * anonymous.
    * @return Submission
+   * @throws \Google\Service\Exception
    */
   public function insert($seriesId, $topicId, Submission $postBody, $optParams = [])
   {
@@ -2140,6 +2157,7 @@ class Tags extends \Google\Service\Resource
    * @param int $submissionId The decimal ID of the Submission within the Series.
    * @param string $tagId
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($seriesId, $submissionId, $tagId, $optParams = [])
   {
@@ -2156,6 +2174,7 @@ class Tags extends \Google\Service\Resource
    * @param Tag $postBody
    * @param array $optParams Optional parameters.
    * @return Tag
+   * @throws \Google\Service\Exception
    */
   public function insert($seriesId, $submissionId, Tag $postBody, $optParams = [])
   {
@@ -2170,6 +2189,7 @@ class Tags extends \Google\Service\Resource
    * @param string $id id is a reserved word in Objective-C
    * @param array $optParams Optional parameters.
    * @return TagList
+   * @throws \Google\Service\Exception
    */
   public function listTags($else, $id, $optParams = [])
   {
@@ -2223,6 +2243,7 @@ class Topics extends \Google\Service\Resource
    * @param int $topicId The decimal ID of the Topic within the Series.
    * @param array $optParams Optional parameters.
    * @return Topic2
+   * @throws \Google\Service\Exception
    */
   public function get($seriesId, $topicId, $optParams = [])
   {
@@ -2237,6 +2258,7 @@ class Topics extends \Google\Service\Resource
    * @param Topic $postBody
    * @param array $optParams Optional parameters.
    * @return Topic
+   * @throws \Google\Service\Exception
    */
   public function insert($seriesId, Topic $postBody, $optParams = [])
   {
@@ -2256,6 +2278,7 @@ class Topics extends \Google\Service\Resource
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return TopicList
+   * @throws \Google\Service\Exception
    */
   public function listTopics($seriesId, $optParams = [])
   {
@@ -2271,6 +2294,7 @@ class Topics extends \Google\Service\Resource
    * @param Topic $postBody
    * @param array $optParams Optional parameters.
    * @return Topic
+   * @throws \Google\Service\Exception
    */
   public function update($seriesId, $topicId, Topic $postBody, $optParams = [])
   {
@@ -2331,6 +2355,7 @@ class TopicsSubmissions extends \Google\Service\Resource
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return SubmissionList
+   * @throws \Google\Service\Exception
    */
   public function listTopicsSubmissions($seriesId, $topicId, $optParams = [])
   {
@@ -2386,6 +2411,7 @@ class Votes extends \Google\Service\Resource
    *
    * @opt_param string userId
    * @return Vote
+   * @throws \Google\Service\Exception
    */
   public function get($seriesId, $submissionId, $optParams = [])
   {
@@ -2402,6 +2428,7 @@ class Votes extends \Google\Service\Resource
    * @param Vote $postBody
    * @param array $optParams Optional parameters.
    * @return Vote
+   * @throws \Google\Service\Exception
    */
   public function insert($seriesId, $submissionId, Vote $postBody, $optParams = [])
   {
@@ -2418,6 +2445,7 @@ class Votes extends \Google\Service\Resource
    *
    * @opt_param int start-index Index of the first result to be retrieved.
    * @return VoteList
+   * @throws \Google\Service\Exception
    */
   public function listVotes($seriesId, $optParams = [])
   {
@@ -2436,6 +2464,7 @@ class Votes extends \Google\Service\Resource
    *
    * @opt_param string userId
    * @return Vote
+   * @throws \Google\Service\Exception
    */
   public function update($seriesId, $submissionId, Vote $postBody, $optParams = [])
   {

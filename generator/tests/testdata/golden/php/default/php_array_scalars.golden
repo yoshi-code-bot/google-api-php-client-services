@@ -220,6 +220,7 @@ class Getwitharrays extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return ObjectWithArrays
+   * @throws \Google\Service\Exception
    */
   public function get($optParams = [])
   {
