@@ -39,6 +39,7 @@ class Assets extends \Google\Service\Resource
    * `assets/{ASSET_ID}`.
    * @param array $optParams Optional parameters.
    * @return Asset
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -74,6 +75,7 @@ class Assets extends \Google\Service\Resource
    * search whose results were split into multiple pages. To get the next page,
    * submit the same request specifying the value from next_page_token.
    * @return ListAssetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAssets($optParams = [])
   {

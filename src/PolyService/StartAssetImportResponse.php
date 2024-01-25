@@ -28,10 +28,6 @@ class StartAssetImportResponse extends \Google\Collection
    * @var string
    */
   public $assetImportId;
-  /**
-   * @var AssetImportMessage[]
-   */
-  public $assetImportMessages;
   protected $assetImportMessagesType = AssetImportMessage::class;
   protected $assetImportMessagesDataType = 'array';
   /**

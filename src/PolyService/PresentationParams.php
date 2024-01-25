@@ -27,10 +27,6 @@ class PresentationParams extends \Google\Model
    * @var string
    */
   public $colorSpace;
-  /**
-   * @var Quaternion
-   */
-  public $orientingRotation;
   protected $orientingRotationType = Quaternion::class;
   protected $orientingRotationDataType = '';
 

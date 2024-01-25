@@ -28,10 +28,6 @@ class ListUserAssetsResponse extends \Google\Collection
    * @var int
    */
   public $totalSize;
-  /**
-   * @var UserAsset[]
-   */
-  public $userAssets;
   protected $userAssetsType = UserAsset::class;
   protected $userAssetsDataType = 'array';
 

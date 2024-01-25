@@ -50,6 +50,7 @@ class UsersLikedassets extends \Google\Service\Resource
    * search whose results were split into multiple pages. To get the next page,
    * submit the same request specifying the value from next_page_token.
    * @return ListLikedAssetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listUsersLikedassets($name, $optParams = [])
   {

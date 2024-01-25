@@ -53,6 +53,7 @@ class UsersAssets extends \Google\Service\Resource
    * @opt_param string visibility The visibility of the assets to be returned.
    * Defaults to VISIBILITY_UNSPECIFIED which returns all assets.
    * @return ListUserAssetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listUsersAssets($name, $optParams = [])
   {
