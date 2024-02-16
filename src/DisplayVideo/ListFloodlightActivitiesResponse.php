@@ -17,29 +17,29 @@
 
 namespace Google\Service\DisplayVideo;
 
-class BulkListAdvertiserAssignedTargetingOptionsResponse extends \Google\Collection
+class ListFloodlightActivitiesResponse extends \Google\Collection
 {
-  protected $collection_key = 'assignedTargetingOptions';
-  protected $assignedTargetingOptionsType = AssignedTargetingOption::class;
-  protected $assignedTargetingOptionsDataType = 'array';
+  protected $collection_key = 'floodlightActivities';
+  protected $floodlightActivitiesType = FloodlightActivity::class;
+  protected $floodlightActivitiesDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AssignedTargetingOption[]
+   * @param FloodlightActivity[]
    */
-  public function setAssignedTargetingOptions($assignedTargetingOptions)
+  public function setFloodlightActivities($floodlightActivities)
   {
-    $this->assignedTargetingOptions = $assignedTargetingOptions;
+    $this->floodlightActivities = $floodlightActivities;
   }
   /**
-   * @return AssignedTargetingOption[]
+   * @return FloodlightActivity[]
    */
-  public function getAssignedTargetingOptions()
+  public function getFloodlightActivities()
   {
-    return $this->assignedTargetingOptions;
+    return $this->floodlightActivities;
   }
   /**
    * @param string
@@ -58,4 +58,4 @@ class BulkListAdvertiserAssignedTargetingOptionsResponse extends \Google\Collect
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkListAdvertiserAssignedTargetingOptionsResponse::class, 'Google_Service_DisplayVideo_BulkListAdvertiserAssignedTargetingOptionsResponse');
+class_alias(ListFloodlightActivitiesResponse::class, 'Google_Service_DisplayVideo_ListFloodlightActivitiesResponse');

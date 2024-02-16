@@ -17,44 +17,46 @@
 
 namespace Google\Service\DisplayVideo;
 
-class AdvertiserSdfConfig extends \Google\Model
+class RemarketingConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $advertiserId;
   /**
    * @var bool
    */
-  public $overridePartnerSdfConfig;
-  protected $sdfConfigType = SdfConfig::class;
-  protected $sdfConfigDataType = '';
+  public $remarketingEnabled;
 
+  /**
+   * @param string
+   */
+  public function setAdvertiserId($advertiserId)
+  {
+    $this->advertiserId = $advertiserId;
+  }
+  /**
+   * @return string
+   */
+  public function getAdvertiserId()
+  {
+    return $this->advertiserId;
+  }
   /**
    * @param bool
    */
-  public function setOverridePartnerSdfConfig($overridePartnerSdfConfig)
+  public function setRemarketingEnabled($remarketingEnabled)
   {
-    $this->overridePartnerSdfConfig = $overridePartnerSdfConfig;
+    $this->remarketingEnabled = $remarketingEnabled;
   }
   /**
    * @return bool
    */
-  public function getOverridePartnerSdfConfig()
+  public function getRemarketingEnabled()
   {
-    return $this->overridePartnerSdfConfig;
-  }
-  /**
-   * @param SdfConfig
-   */
-  public function setSdfConfig(SdfConfig $sdfConfig)
-  {
-    $this->sdfConfig = $sdfConfig;
-  }
-  /**
-   * @return SdfConfig
-   */
-  public function getSdfConfig()
-  {
-    return $this->sdfConfig;
+    return $this->remarketingEnabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdvertiserSdfConfig::class, 'Google_Service_DisplayVideo_AdvertiserSdfConfig');
+class_alias(RemarketingConfig::class, 'Google_Service_DisplayVideo_RemarketingConfig');
