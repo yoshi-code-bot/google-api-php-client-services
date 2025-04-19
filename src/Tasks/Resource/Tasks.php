@@ -105,8 +105,8 @@ class Tasks extends \Google\Service\Resource
     return $this->call('insert', [$params], Task::class);
   }
   /**
-   * Returns all tasks in the specified task list. Does not return assigned tasks
-   * be default (from Docs, Chat Spaces). A user can have up to 20,000 non-hidden
+   * Returns all tasks in the specified task list. Doesn't return assigned tasks
+   * by default (from Docs, Chat Spaces). A user can have up to 20,000 non-hidden
    * tasks per list and up to 100,000 tasks in total at a time. (tasks.listTasks)
    *
    * @param string $tasklist Task list identifier.
