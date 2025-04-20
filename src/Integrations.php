@@ -634,10 +634,6 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'GCPCloudEventsMode' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'triggerId' => [
                   'location' => 'query',
                   'type' => 'string',
