@@ -17,65 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class CacheInvalidationRule extends \Google\Collection
+class ReservationBlocksListResponseWarningData extends \Google\Model
 {
-  protected $collection_key = 'cacheTags';
-  /**
-   * @var string[]
-   */
-  public $cacheTags;
   /**
    * @var string
    */
-  public $host;
+  public $key;
   /**
    * @var string
    */
-  public $path;
+  public $value;
 
   /**
-   * @param string[]
-   */
-  public function setCacheTags($cacheTags)
-  {
-    $this->cacheTags = $cacheTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCacheTags()
-  {
-    return $this->cacheTags;
-  }
-  /**
    * @param string
    */
-  public function setHost($host)
+  public function setKey($key)
   {
-    $this->host = $host;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getHost()
+  public function getKey()
   {
-    return $this->host;
+    return $this->key;
   }
   /**
    * @param string
    */
-  public function setPath($path)
+  public function setValue($value)
   {
-    $this->path = $path;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getPath()
+  public function getValue()
   {
-    return $this->path;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CacheInvalidationRule::class, 'Google_Service_Compute_CacheInvalidationRule');
+class_alias(ReservationBlocksListResponseWarningData::class, 'Google_Service_Compute_ReservationBlocksListResponseWarningData');

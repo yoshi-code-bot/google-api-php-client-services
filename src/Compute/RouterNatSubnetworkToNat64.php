@@ -17,65 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class CacheInvalidationRule extends \Google\Collection
+class RouterNatSubnetworkToNat64 extends \Google\Model
 {
-  protected $collection_key = 'cacheTags';
-  /**
-   * @var string[]
-   */
-  public $cacheTags;
   /**
    * @var string
    */
-  public $host;
-  /**
-   * @var string
-   */
-  public $path;
+  public $name;
 
   /**
-   * @param string[]
-   */
-  public function setCacheTags($cacheTags)
-  {
-    $this->cacheTags = $cacheTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCacheTags()
-  {
-    return $this->cacheTags;
-  }
-  /**
    * @param string
    */
-  public function setHost($host)
+  public function setName($name)
   {
-    $this->host = $host;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getHost()
+  public function getName()
   {
-    return $this->host;
-  }
-  /**
-   * @param string
-   */
-  public function setPath($path)
-  {
-    $this->path = $path;
-  }
-  /**
-   * @return string
-   */
-  public function getPath()
-  {
-    return $this->path;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CacheInvalidationRule::class, 'Google_Service_Compute_CacheInvalidationRule');
+class_alias(RouterNatSubnetworkToNat64::class, 'Google_Service_Compute_RouterNatSubnetworkToNat64');

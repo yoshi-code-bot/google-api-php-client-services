@@ -17,65 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class CacheInvalidationRule extends \Google\Collection
+class ReservationsBlocksPerformMaintenanceRequest extends \Google\Model
 {
-  protected $collection_key = 'cacheTags';
-  /**
-   * @var string[]
-   */
-  public $cacheTags;
   /**
    * @var string
    */
-  public $host;
-  /**
-   * @var string
-   */
-  public $path;
+  public $maintenanceScope;
 
   /**
-   * @param string[]
-   */
-  public function setCacheTags($cacheTags)
-  {
-    $this->cacheTags = $cacheTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCacheTags()
-  {
-    return $this->cacheTags;
-  }
-  /**
    * @param string
    */
-  public function setHost($host)
+  public function setMaintenanceScope($maintenanceScope)
   {
-    $this->host = $host;
+    $this->maintenanceScope = $maintenanceScope;
   }
   /**
    * @return string
    */
-  public function getHost()
+  public function getMaintenanceScope()
   {
-    return $this->host;
-  }
-  /**
-   * @param string
-   */
-  public function setPath($path)
-  {
-    $this->path = $path;
-  }
-  /**
-   * @return string
-   */
-  public function getPath()
-  {
-    return $this->path;
+    return $this->maintenanceScope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CacheInvalidationRule::class, 'Google_Service_Compute_CacheInvalidationRule');
+class_alias(ReservationsBlocksPerformMaintenanceRequest::class, 'Google_Service_Compute_ReservationsBlocksPerformMaintenanceRequest');

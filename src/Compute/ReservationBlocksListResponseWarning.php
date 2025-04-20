@@ -17,65 +17,63 @@
 
 namespace Google\Service\Compute;
 
-class CacheInvalidationRule extends \Google\Collection
+class ReservationBlocksListResponseWarning extends \Google\Collection
 {
-  protected $collection_key = 'cacheTags';
-  /**
-   * @var string[]
-   */
-  public $cacheTags;
+  protected $collection_key = 'data';
   /**
    * @var string
    */
-  public $host;
+  public $code;
+  protected $dataType = ReservationBlocksListResponseWarningData::class;
+  protected $dataDataType = 'array';
   /**
    * @var string
    */
-  public $path;
+  public $message;
 
   /**
-   * @param string[]
-   */
-  public function setCacheTags($cacheTags)
-  {
-    $this->cacheTags = $cacheTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCacheTags()
-  {
-    return $this->cacheTags;
-  }
-  /**
    * @param string
    */
-  public function setHost($host)
+  public function setCode($code)
   {
-    $this->host = $host;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getHost()
+  public function getCode()
   {
-    return $this->host;
+    return $this->code;
+  }
+  /**
+   * @param ReservationBlocksListResponseWarningData[]
+   */
+  public function setData($data)
+  {
+    $this->data = $data;
+  }
+  /**
+   * @return ReservationBlocksListResponseWarningData[]
+   */
+  public function getData()
+  {
+    return $this->data;
   }
   /**
    * @param string
    */
-  public function setPath($path)
+  public function setMessage($message)
   {
-    $this->path = $path;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getPath()
+  public function getMessage()
   {
-    return $this->path;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CacheInvalidationRule::class, 'Google_Service_Compute_CacheInvalidationRule');
+class_alias(ReservationBlocksListResponseWarning::class, 'Google_Service_Compute_ReservationBlocksListResponseWarning');

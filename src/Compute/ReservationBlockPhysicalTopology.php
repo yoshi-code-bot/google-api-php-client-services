@@ -17,65 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class CacheInvalidationRule extends \Google\Collection
+class ReservationBlockPhysicalTopology extends \Google\Model
 {
-  protected $collection_key = 'cacheTags';
-  /**
-   * @var string[]
-   */
-  public $cacheTags;
   /**
    * @var string
    */
-  public $host;
+  public $block;
   /**
    * @var string
    */
-  public $path;
+  public $cluster;
 
   /**
-   * @param string[]
-   */
-  public function setCacheTags($cacheTags)
-  {
-    $this->cacheTags = $cacheTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCacheTags()
-  {
-    return $this->cacheTags;
-  }
-  /**
    * @param string
    */
-  public function setHost($host)
+  public function setBlock($block)
   {
-    $this->host = $host;
+    $this->block = $block;
   }
   /**
    * @return string
    */
-  public function getHost()
+  public function getBlock()
   {
-    return $this->host;
+    return $this->block;
   }
   /**
    * @param string
    */
-  public function setPath($path)
+  public function setCluster($cluster)
   {
-    $this->path = $path;
+    $this->cluster = $cluster;
   }
   /**
    * @return string
    */
-  public function getPath()
+  public function getCluster()
   {
-    return $this->path;
+    return $this->cluster;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CacheInvalidationRule::class, 'Google_Service_Compute_CacheInvalidationRule');
+class_alias(ReservationBlockPhysicalTopology::class, 'Google_Service_Compute_ReservationBlockPhysicalTopology');
