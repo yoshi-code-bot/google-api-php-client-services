@@ -488,6 +488,11 @@ class Appengine extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1007,6 +1012,40 @@ class Appengine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servicesId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'versionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
