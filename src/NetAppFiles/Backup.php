@@ -22,6 +22,10 @@ class Backup extends \Google\Model
   /**
    * @var string
    */
+  public $backupRegion;
+  /**
+   * @var string
+   */
   public $backupType;
   /**
    * @var string
@@ -66,8 +70,26 @@ class Backup extends \Google\Model
   /**
    * @var string
    */
+  public $volumeRegion;
+  /**
+   * @var string
+   */
   public $volumeUsageBytes;
 
+  /**
+   * @param string
+   */
+  public function setBackupRegion($backupRegion)
+  {
+    $this->backupRegion = $backupRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupRegion()
+  {
+    return $this->backupRegion;
+  }
   /**
    * @param string
    */
@@ -221,6 +243,20 @@ class Backup extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setVolumeRegion($volumeRegion)
+  {
+    $this->volumeRegion = $volumeRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getVolumeRegion()
+  {
+    return $this->volumeRegion;
   }
   /**
    * @param string
