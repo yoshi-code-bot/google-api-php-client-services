@@ -46,6 +46,8 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * @var string
    */
   public $industryVertical;
+  protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig::class;
+  protected $mediaRecommendationEngineConfigDataType = '';
   /**
    * @var string
    */
@@ -172,6 +174,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getIndustryVertical()
   {
     return $this->industryVertical;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig
+   */
+  public function setMediaRecommendationEngineConfig(GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig $mediaRecommendationEngineConfig)
+  {
+    $this->mediaRecommendationEngineConfig = $mediaRecommendationEngineConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig
+   */
+  public function getMediaRecommendationEngineConfig()
+  {
+    return $this->mediaRecommendationEngineConfig;
   }
   /**
    * @param string

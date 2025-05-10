@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
 {
   protected $collection_key = 'staticIpAddresses';
+  /**
+   * @var bool
+   */
+  public $aclEnabled;
   protected $actionConfigType = GoogleCloudDiscoveryengineV1alphaActionConfig::class;
   protected $actionConfigDataType = '';
   protected $alertPolicyConfigsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig::class;
@@ -35,9 +39,17 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public $blockingReasons;
   /**
+   * @var string[]
+   */
+  public $connectorModes;
+  /**
    * @var string
    */
   public $connectorType;
+  /**
+   * @var bool
+   */
+  public $createEuaSaas;
   /**
    * @var string
    */
@@ -48,6 +60,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $dataSource;
   protected $destinationConfigsType = GoogleCloudDiscoveryengineV1alphaDestinationConfig::class;
   protected $destinationConfigsDataType = 'array';
+  protected $endUserConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig::class;
+  protected $endUserConfigDataType = '';
   protected $entitiesType = GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity::class;
   protected $entitiesDataType = 'array';
   protected $errorsType = GoogleRpcStatus::class;
@@ -115,6 +129,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param bool
+   */
+  public function setAclEnabled($aclEnabled)
+  {
+    $this->aclEnabled = $aclEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAclEnabled()
+  {
+    return $this->aclEnabled;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaActionConfig
    */
@@ -186,6 +214,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
     return $this->blockingReasons;
   }
   /**
+   * @param string[]
+   */
+  public function setConnectorModes($connectorModes)
+  {
+    $this->connectorModes = $connectorModes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getConnectorModes()
+  {
+    return $this->connectorModes;
+  }
+  /**
    * @param string
    */
   public function setConnectorType($connectorType)
@@ -198,6 +240,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getConnectorType()
   {
     return $this->connectorType;
+  }
+  /**
+   * @param bool
+   */
+  public function setCreateEuaSaas($createEuaSaas)
+  {
+    $this->createEuaSaas = $createEuaSaas;
+  }
+  /**
+   * @return bool
+   */
+  public function getCreateEuaSaas()
+  {
+    return $this->createEuaSaas;
   }
   /**
    * @param string
@@ -240,6 +296,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getDestinationConfigs()
   {
     return $this->destinationConfigs;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig
+   */
+  public function setEndUserConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig $endUserConfig)
+  {
+    $this->endUserConfig = $endUserConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig
+   */
+  public function getEndUserConfig()
+  {
+    return $this->endUserConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity[]
