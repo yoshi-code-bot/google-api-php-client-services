@@ -17,80 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends \Google\Model
+class GoogleCloudAiplatformV1Checkpoint extends \Google\Model
 {
-  protected $ragChunkType = GoogleCloudAiplatformV1RagChunk::class;
-  protected $ragChunkDataType = '';
   /**
    * @var string
    */
-  public $text;
+  public $checkpointId;
   /**
    * @var string
    */
-  public $title;
+  public $epoch;
   /**
    * @var string
    */
-  public $uri;
+  public $step;
 
   /**
-   * @param GoogleCloudAiplatformV1RagChunk
-   */
-  public function setRagChunk(GoogleCloudAiplatformV1RagChunk $ragChunk)
-  {
-    $this->ragChunk = $ragChunk;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1RagChunk
-   */
-  public function getRagChunk()
-  {
-    return $this->ragChunk;
-  }
-  /**
    * @param string
    */
-  public function setText($text)
+  public function setCheckpointId($checkpointId)
   {
-    $this->text = $text;
+    $this->checkpointId = $checkpointId;
   }
   /**
    * @return string
    */
-  public function getText()
+  public function getCheckpointId()
   {
-    return $this->text;
+    return $this->checkpointId;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setEpoch($epoch)
   {
-    $this->title = $title;
+    $this->epoch = $epoch;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getEpoch()
   {
-    return $this->title;
+    return $this->epoch;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setStep($step)
   {
-    $this->uri = $uri;
+    $this->step = $step;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getStep()
   {
-    return $this->uri;
+    return $this->step;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingChunkRetrievedContext::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingChunkRetrievedContext');
+class_alias(GoogleCloudAiplatformV1Checkpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Checkpoint');

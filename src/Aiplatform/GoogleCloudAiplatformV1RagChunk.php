@@ -17,64 +17,44 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ModelVersionCheckpoint extends \Google\Model
+class GoogleCloudAiplatformV1RagChunk extends \Google\Model
 {
+  protected $pageSpanType = GoogleCloudAiplatformV1RagChunkPageSpan::class;
+  protected $pageSpanDataType = '';
   /**
    * @var string
    */
-  public $checkpointId;
-  /**
-   * @var string
-   */
-  public $epoch;
-  /**
-   * @var string
-   */
-  public $step;
+  public $text;
 
   /**
-   * @param string
+   * @param GoogleCloudAiplatformV1RagChunkPageSpan
    */
-  public function setCheckpointId($checkpointId)
+  public function setPageSpan(GoogleCloudAiplatformV1RagChunkPageSpan $pageSpan)
   {
-    $this->checkpointId = $checkpointId;
+    $this->pageSpan = $pageSpan;
   }
   /**
-   * @return string
+   * @return GoogleCloudAiplatformV1RagChunkPageSpan
    */
-  public function getCheckpointId()
+  public function getPageSpan()
   {
-    return $this->checkpointId;
-  }
-  /**
-   * @param string
-   */
-  public function setEpoch($epoch)
-  {
-    $this->epoch = $epoch;
-  }
-  /**
-   * @return string
-   */
-  public function getEpoch()
-  {
-    return $this->epoch;
+    return $this->pageSpan;
   }
   /**
    * @param string
    */
-  public function setStep($step)
+  public function setText($text)
   {
-    $this->step = $step;
+    $this->text = $text;
   }
   /**
    * @return string
    */
-  public function getStep()
+  public function getText()
   {
-    return $this->step;
+    return $this->text;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ModelVersionCheckpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ModelVersionCheckpoint');
+class_alias(GoogleCloudAiplatformV1RagChunk::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagChunk');
