@@ -48,9 +48,8 @@ class ProjectsLocationsDataExchanges extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string dataExchangeId Required. The ID of the data exchange. Must
-   * contain only Unicode letters, numbers (0-9), underscores (_). Should not use
-   * characters that require URL-escaping, or characters outside of ASCII, spaces.
-   * Max length: 100 bytes.
+   * contain only Unicode letters, numbers (0-9), underscores (_). Max length: 100
+   * bytes.
    * @return DataExchange
    * @throws \Google\Service\Exception
    */

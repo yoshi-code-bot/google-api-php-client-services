@@ -48,9 +48,8 @@ class ProjectsLocationsDataExchangesListings extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string listingId Required. The ID of the listing to create. Must
-   * contain only Unicode letters, numbers (0-9), underscores (_). Should not use
-   * characters that require URL-escaping, or characters outside of ASCII, spaces.
-   * Max length: 100 bytes.
+   * contain only Unicode letters, numbers (0-9), underscores (_). Max length: 100
+   * bytes.
    * @return Listing
    * @throws \Google\Service\Exception
    */
