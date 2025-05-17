@@ -26,6 +26,10 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty extends \Google\Mo
   /**
    * @var string
    */
+  public $groundingConfig;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -49,6 +53,20 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty extends \Google\Mo
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setGroundingConfig($groundingConfig)
+  {
+    $this->groundingConfig = $groundingConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getGroundingConfig()
+  {
+    return $this->groundingConfig;
   }
   /**
    * @param string
