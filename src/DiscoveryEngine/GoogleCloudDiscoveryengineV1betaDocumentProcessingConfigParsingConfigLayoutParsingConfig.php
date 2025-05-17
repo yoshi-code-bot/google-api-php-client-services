@@ -17,8 +17,9 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends \Google\Collection
 {
+  protected $collection_key = 'excludeHtmlIds';
   /**
    * @var bool
    */
@@ -27,6 +28,18 @@ class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayou
    * @var bool
    */
   public $enableTableAnnotation;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlClasses;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlElements;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlIds;
 
   /**
    * @param bool
@@ -55,6 +68,48 @@ class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayou
   public function getEnableTableAnnotation()
   {
     return $this->enableTableAnnotation;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlClasses($excludeHtmlClasses)
+  {
+    $this->excludeHtmlClasses = $excludeHtmlClasses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlClasses()
+  {
+    return $this->excludeHtmlClasses;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlElements($excludeHtmlElements)
+  {
+    $this->excludeHtmlElements = $excludeHtmlElements;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlElements()
+  {
+    return $this->excludeHtmlElements;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlIds($excludeHtmlIds)
+  {
+    $this->excludeHtmlIds = $excludeHtmlIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlIds()
+  {
+    return $this->excludeHtmlIds;
   }
 }
 
