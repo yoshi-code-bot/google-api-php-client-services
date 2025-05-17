@@ -23,6 +23,8 @@ class GoogleAppsCardV1SelectionItem extends \Google\Model
    * @var string
    */
   public $bottomText;
+  protected $materialIconType = GoogleAppsCardV1MaterialIcon::class;
+  protected $materialIconDataType = '';
   /**
    * @var bool
    */
@@ -53,6 +55,20 @@ class GoogleAppsCardV1SelectionItem extends \Google\Model
   public function getBottomText()
   {
     return $this->bottomText;
+  }
+  /**
+   * @param GoogleAppsCardV1MaterialIcon
+   */
+  public function setMaterialIcon(GoogleAppsCardV1MaterialIcon $materialIcon)
+  {
+    $this->materialIcon = $materialIcon;
+  }
+  /**
+   * @return GoogleAppsCardV1MaterialIcon
+   */
+  public function getMaterialIcon()
+  {
+    return $this->materialIcon;
   }
   /**
    * @param bool
