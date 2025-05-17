@@ -133,6 +133,10 @@ class Policy extends \Google\Collection
    */
   public $ensureVerifyAppsEnabled;
   /**
+   * @var string
+   */
+  public $enterpriseDisplayNameVisibility;
+  /**
    * @var bool
    */
   public $factoryResetDisabled;
@@ -804,6 +808,20 @@ class Policy extends \Google\Collection
   public function getEnsureVerifyAppsEnabled()
   {
     return $this->ensureVerifyAppsEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setEnterpriseDisplayNameVisibility($enterpriseDisplayNameVisibility)
+  {
+    $this->enterpriseDisplayNameVisibility = $enterpriseDisplayNameVisibility;
+  }
+  /**
+   * @return string
+   */
+  public function getEnterpriseDisplayNameVisibility()
+  {
+    return $this->enterpriseDisplayNameVisibility;
   }
   /**
    * @param bool
