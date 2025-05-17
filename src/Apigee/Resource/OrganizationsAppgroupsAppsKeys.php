@@ -39,9 +39,9 @@ class OrganizationsAppgroupsAppsKeys extends \Google\Service\Resource
    * KBs each. **Note**: When creating the consumer key and secret, an association
    * to API products will not be made. Therefore, you should not specify the
    * associated API products in your request. Instead, use the
-   * ProductizeAppGroupAppKey API to make the association after the consumer key
-   * and secret are created. If a consumer key and secret already exist, you can
-   * keep them or delete them using the DeleteAppGroupAppKey API. (keys.create)
+   * UpdateAppGroupAppKey API to make the association after the consumer key and
+   * secret are created. If a consumer key and secret already exist, you can keep
+   * them or delete them using the DeleteAppGroupAppKey API. (keys.create)
    *
    * @param string $parent Required. Parent of the AppGroup app key. Use the
    * following structure in your request:
