@@ -122,6 +122,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * operating. It must either be organizations/ or projects/. If it is
    * unspecified, it defaults to the organization where the project provided in
    * name is located.
+   * @opt_param bool semanticSearch Optional. Internal only.
    * @return GoogleCloudDataplexV1SearchEntriesResponse
    * @throws \Google\Service\Exception
    */

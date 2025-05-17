@@ -17,6 +17,9 @@
 
 namespace Google\Service\CloudDataplex\Resource;
 
+use Google\Service\CloudDataplex\DataplexEmpty;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1GlossaryCategory;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListGlossaryCategoriesResponse;
 use Google\Service\CloudDataplex\GoogleIamV1Policy;
 use Google\Service\CloudDataplex\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
@@ -32,6 +35,62 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
  */
 class ProjectsLocationsGlossariesCategories extends \Google\Service\Resource
 {
+  /**
+   * GlossaryCategory APIs are CCFE passthrough APIs. Creates a new
+   * GlossaryCategory resource. (categories.create)
+   *
+   * @param string $parent Required. The parent resource where this
+   * GlossaryCategory will be created. Format:
+   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where
+   * locationId refers to a GCP region.
+   * @param GoogleCloudDataplexV1GlossaryCategory $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string categoryId Required. Category ID: GlossaryCategory
+   * identifier.
+   * @return GoogleCloudDataplexV1GlossaryCategory
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GoogleCloudDataplexV1GlossaryCategory $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleCloudDataplexV1GlossaryCategory::class);
+  }
+  /**
+   * Deletes a GlossaryCategory resource. All the categories and terms nested
+   * directly under the category will be moved one level up to the parent in the
+   * hierarchy. (categories.delete)
+   *
+   * @param string $name Required. The name of the GlossaryCategory to delete.
+   * Format: projects/{project}/locations/{location}/glossary/{glossary}/categorie
+   * s/{glossary_category}
+   * @param array $optParams Optional parameters.
+   * @return DataplexEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], DataplexEmpty::class);
+  }
+  /**
+   * Retrieves a specified GlossaryCategory resource. (categories.get)
+   *
+   * @param string $name Required. The name of the GlossaryCategory to retrieve.
+   * Format: projects/{project}/locations/{location}/glossaries/{glossary}/categor
+   * ies/{glossary_category}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1GlossaryCategory
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDataplexV1GlossaryCategory::class);
+  }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (categories.getIamPolicy)
@@ -61,6 +120,60 @@ class ProjectsLocationsGlossariesCategories extends \Google\Service\Resource
     $params = ['resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
+  }
+  /**
+   * Lists GlossaryCategory resources in a glossary.
+   * (categories.listProjectsLocationsGlossariesCategories)
+   *
+   * @param string $parent Required. The parent, which has this collection of
+   * categories. Format:
+   * projects/{project}/locations/{location}/glossaries/{glossary} Location is the
+   * GCP region.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filter expression that filters categories
+   * listed in the response. Filters supported: List GlossaryCategories based on
+   * immediate parent in the resource hierarchy. This will only return the
+   * GlossaryCategories nested directly under the parent and no other subsequent
+   * nested categories will be returned.
+   * @opt_param string orderBy Optional. Order by expression that orders
+   * categories listed in the response. Order by fields are: name or create_time
+   * for the result. If not specified, the ordering is undefined.
+   * @opt_param int pageSize Optional. The maximum number of categories to return.
+   * The service may return fewer than this value. If unspecified, at most 50
+   * categories will be returned. The maximum value is 1000; values above 1000
+   * will be coerced to 1000.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * ListGlossaryCategories call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to ListGlossaryCategories must
+   * match the call that provided the page token.
+   * @return GoogleCloudDataplexV1ListGlossaryCategoriesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsGlossariesCategories($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDataplexV1ListGlossaryCategoriesResponse::class);
+  }
+  /**
+   * Updates a GlossaryCategory resource. (categories.patch)
+   *
+   * @param string $name Output only. Identifier. The resource name of the
+   * GlossaryCategory. Format: projects/{projectId}/locations/{locationId}/glossar
+   * ies/{glossaryId}/categories/{categoryId}
+   * @param GoogleCloudDataplexV1GlossaryCategory $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to update.
+   * @return GoogleCloudDataplexV1GlossaryCategory
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudDataplexV1GlossaryCategory $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleCloudDataplexV1GlossaryCategory::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
