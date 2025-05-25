@@ -44,6 +44,7 @@ class CloudResourceManager extends \Google\Service
 
   public $effectiveTags;
   public $folders;
+  public $folders_capabilities;
   public $liens;
   public $operations;
   public $organizations;
@@ -228,6 +229,40 @@ class CloudResourceManager extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->folders_capabilities = new CloudResourceManager\Resource\FoldersCapabilities(
+        $this,
+        $this->serviceName,
+        'capabilities',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
