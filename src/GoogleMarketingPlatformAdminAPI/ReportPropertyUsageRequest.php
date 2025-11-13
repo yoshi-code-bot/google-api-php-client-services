@@ -20,12 +20,18 @@ namespace Google\Service\GoogleMarketingPlatformAdminAPI;
 class ReportPropertyUsageRequest extends \Google\Model
 {
   /**
+   * Required. The target month to list property usages. Format: YYYY-MM. For
+   * example, "2025-05"
+   *
    * @var string
    */
   public $month;
 
   /**
-   * @param string
+   * Required. The target month to list property usages. Format: YYYY-MM. For
+   * example, "2025-05"
+   *
+   * @param string $month
    */
   public function setMonth($month)
   {

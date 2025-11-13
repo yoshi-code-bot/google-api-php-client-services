@@ -26,7 +26,10 @@ class ReportPropertyUsageResponse extends \Google\Collection
   protected $propertyUsagesDataType = 'array';
 
   /**
-   * @param BillInfo
+   * Bill amount in the specified organization and month. Will be empty if user
+   * only has access to usage data.
+   *
+   * @param BillInfo $billInfo
    */
   public function setBillInfo(BillInfo $billInfo)
   {
@@ -40,7 +43,9 @@ class ReportPropertyUsageResponse extends \Google\Collection
     return $this->billInfo;
   }
   /**
-   * @param PropertyUsage[]
+   * Usage data for all properties in the specified organization and month.
+   *
+   * @param PropertyUsage[] $propertyUsages
    */
   public function setPropertyUsages($propertyUsages)
   {

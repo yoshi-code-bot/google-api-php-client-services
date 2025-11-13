@@ -24,7 +24,9 @@ class FindSalesPartnerManagedClientsResponse extends \Google\Collection
   protected $clientDataDataType = 'array';
 
   /**
-   * @param ClientData[]
+   * The clients managed by the sales org.
+   *
+   * @param ClientData[] $clientData
    */
   public function setClientData($clientData)
   {

@@ -21,6 +21,9 @@ class ListOrganizationsResponse extends \Google\Collection
 {
   protected $collection_key = 'organizations';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListOrganizationsResponse extends \Google\Collection
   protected $organizationsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,10 @@ class ListOrganizationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Organization[]
+   * The Organization resource that the user has access to, which includes the
+   * org id and display name.
+   *
+   * @param Organization[] $organizations
    */
   public function setOrganizations($organizations)
   {
