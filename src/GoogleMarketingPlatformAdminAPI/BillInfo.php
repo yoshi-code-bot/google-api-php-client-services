@@ -29,7 +29,9 @@ class BillInfo extends \Google\Model
   protected $totalDataType = '';
 
   /**
-   * @param Money
+   * The amount of the monthly base fee.
+   *
+   * @param Money $baseFee
    */
   public function setBaseFee(Money $baseFee)
   {
@@ -43,7 +45,9 @@ class BillInfo extends \Google\Model
     return $this->baseFee;
   }
   /**
-   * @param Money
+   * The amount of the event fee.
+   *
+   * @param Money $eventFee
    */
   public function setEventFee(Money $eventFee)
   {
@@ -57,7 +61,10 @@ class BillInfo extends \Google\Model
     return $this->eventFee;
   }
   /**
-   * @param Money
+   * The amount of the price protection credit, this is only available for
+   * eligible customers.
+   *
+   * @param Money $priceProtectionCredit
    */
   public function setPriceProtectionCredit(Money $priceProtectionCredit)
   {
@@ -71,7 +78,9 @@ class BillInfo extends \Google\Model
     return $this->priceProtectionCredit;
   }
   /**
-   * @param Money
+   * The total amount of the bill.
+   *
+   * @param Money $total
    */
   public function setTotal(Money $total)
   {

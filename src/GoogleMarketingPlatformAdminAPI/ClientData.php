@@ -27,7 +27,9 @@ class ClientData extends \Google\Model
   protected $startDateDataType = '';
 
   /**
-   * @param Date
+   * The end date of the contract between the sales org and the end client.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -41,7 +43,9 @@ class ClientData extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param Organization
+   * The end client that has/had contract with the requested sales org.
+   *
+   * @param Organization $organization
    */
   public function setOrganization(Organization $organization)
   {
@@ -55,7 +59,9 @@ class ClientData extends \Google\Model
     return $this->organization;
   }
   /**
-   * @param Date
+   * The start date of the contract between the sales org and the end client.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {

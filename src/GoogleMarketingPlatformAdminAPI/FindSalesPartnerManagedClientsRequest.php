@@ -20,12 +20,16 @@ namespace Google\Service\GoogleMarketingPlatformAdminAPI;
 class FindSalesPartnerManagedClientsRequest extends \Google\Model
 {
   /**
+   * Optional. If set, only active and just ended clients will be returned.
+   *
    * @var bool
    */
   public $isActive;
 
   /**
-   * @param bool
+   * Optional. If set, only active and just ended clients will be returned.
+   *
+   * @param bool $isActive
    */
   public function setIsActive($isActive)
   {
