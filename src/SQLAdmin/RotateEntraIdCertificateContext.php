@@ -17,23 +17,25 @@
 
 namespace Google\Service\SQLAdmin;
 
-class DiskEncryptionConfiguration extends \Google\Model
+class RotateEntraIdCertificateContext extends \Google\Model
 {
   /**
-   * This is always `sql#diskEncryptionConfiguration`.
+   * Optional. This is always `sql#rotateEntraIdCertificateContext`.
    *
    * @var string
    */
   public $kind;
   /**
-   * Resource name of KMS key for disk encryption
+   * Optional. The fingerprint of the next version to be rotated to. If left
+   * unspecified, will be rotated to the most recently added server certificate
+   * version.
    *
    * @var string
    */
-  public $kmsKeyName;
+  public $nextVersion;
 
   /**
-   * This is always `sql#diskEncryptionConfiguration`.
+   * Optional. This is always `sql#rotateEntraIdCertificateContext`.
    *
    * @param string $kind
    */
@@ -49,22 +51,24 @@ class DiskEncryptionConfiguration extends \Google\Model
     return $this->kind;
   }
   /**
-   * Resource name of KMS key for disk encryption
+   * Optional. The fingerprint of the next version to be rotated to. If left
+   * unspecified, will be rotated to the most recently added server certificate
+   * version.
    *
-   * @param string $kmsKeyName
+   * @param string $nextVersion
    */
-  public function setKmsKeyName($kmsKeyName)
+  public function setNextVersion($nextVersion)
   {
-    $this->kmsKeyName = $kmsKeyName;
+    $this->nextVersion = $nextVersion;
   }
   /**
    * @return string
    */
-  public function getKmsKeyName()
+  public function getNextVersion()
   {
-    return $this->kmsKeyName;
+    return $this->nextVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskEncryptionConfiguration::class, 'Google_Service_SQLAdmin_DiskEncryptionConfiguration');
+class_alias(RotateEntraIdCertificateContext::class, 'Google_Service_SQLAdmin_RotateEntraIdCertificateContext');

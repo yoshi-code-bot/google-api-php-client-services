@@ -17,23 +17,45 @@
 
 namespace Google\Service\SQLAdmin;
 
-class DiskEncryptionConfiguration extends \Google\Model
+class SqlServerEntraIdConfig extends \Google\Model
 {
   /**
-   * This is always `sql#diskEncryptionConfiguration`.
+   * Optional. The application ID for the Entra ID configuration.
+   *
+   * @var string
+   */
+  public $applicationId;
+  /**
+   * Output only. This is always sql#sqlServerEntraIdConfig
    *
    * @var string
    */
   public $kind;
   /**
-   * Resource name of KMS key for disk encryption
+   * Optional. The tenant ID for the Entra ID configuration.
    *
    * @var string
    */
-  public $kmsKeyName;
+  public $tenantId;
 
   /**
-   * This is always `sql#diskEncryptionConfiguration`.
+   * Optional. The application ID for the Entra ID configuration.
+   *
+   * @param string $applicationId
+   */
+  public function setApplicationId($applicationId)
+  {
+    $this->applicationId = $applicationId;
+  }
+  /**
+   * @return string
+   */
+  public function getApplicationId()
+  {
+    return $this->applicationId;
+  }
+  /**
+   * Output only. This is always sql#sqlServerEntraIdConfig
    *
    * @param string $kind
    */
@@ -49,22 +71,22 @@ class DiskEncryptionConfiguration extends \Google\Model
     return $this->kind;
   }
   /**
-   * Resource name of KMS key for disk encryption
+   * Optional. The tenant ID for the Entra ID configuration.
    *
-   * @param string $kmsKeyName
+   * @param string $tenantId
    */
-  public function setKmsKeyName($kmsKeyName)
+  public function setTenantId($tenantId)
   {
-    $this->kmsKeyName = $kmsKeyName;
+    $this->tenantId = $tenantId;
   }
   /**
    * @return string
    */
-  public function getKmsKeyName()
+  public function getTenantId()
   {
-    return $this->kmsKeyName;
+    return $this->tenantId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskEncryptionConfiguration::class, 'Google_Service_SQLAdmin_DiskEncryptionConfiguration');
+class_alias(SqlServerEntraIdConfig::class, 'Google_Service_SQLAdmin_SqlServerEntraIdConfig');
