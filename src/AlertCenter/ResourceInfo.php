@@ -46,6 +46,12 @@ class ResourceInfo extends \Google\Model
    */
   public $documentId;
   /**
+   * RFC2822 message ID.
+   *
+   * @var string
+   */
+  public $messageId;
+  /**
    * Title of the resource, for example email subject, or document title.
    *
    * @var string
@@ -117,6 +123,22 @@ class ResourceInfo extends \Google\Model
   public function getDocumentId()
   {
     return $this->documentId;
+  }
+  /**
+   * RFC2822 message ID.
+   *
+   * @param string $messageId
+   */
+  public function setMessageId($messageId)
+  {
+    $this->messageId = $messageId;
+  }
+  /**
+   * @return string
+   */
+  public function getMessageId()
+  {
+    return $this->messageId;
   }
   /**
    * Title of the resource, for example email subject, or document title.

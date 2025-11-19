@@ -35,7 +35,7 @@ use Google\Client;
  */
 class AlertCenter extends \Google\Service
 {
-  /** See and delete your domain's G Suite alerts, and send alert feedback. */
+  /** See and delete your domain's Google Workspace alerts, and send alert feedback. */
   const APPS_ALERTS =
       "https://www.googleapis.com/auth/apps.alerts";
 
