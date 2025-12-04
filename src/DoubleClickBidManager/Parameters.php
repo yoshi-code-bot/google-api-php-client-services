@@ -29,11 +29,7 @@ class Parameters extends \Google\Collection
    */
   public const TYPE_STANDARD = 'STANDARD';
   /**
-   * Inventory Availability report. See the [Display & Video 360 Help Center
-   * announcement](https://support.google.com/displayvideo/answer/15874746) for
-   * more information on this deprecation.
-   *
-   * @deprecated
+   * Inventory Availability report.
    */
   public const TYPE_INVENTORY_AVAILABILITY = 'INVENTORY_AVAILABILITY';
   /**
