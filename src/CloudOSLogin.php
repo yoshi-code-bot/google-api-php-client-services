@@ -153,6 +153,16 @@ class CloudOSLogin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'provisionPosixAccount' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
