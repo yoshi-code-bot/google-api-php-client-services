@@ -86,8 +86,8 @@ class Operation extends \Google\Collection
   protected $instancesBulkInsertOperationMetadataType = InstancesBulkInsertOperationMetadata::class;
   protected $instancesBulkInsertOperationMetadataDataType = '';
   /**
-   * [Output Only] Type of the resource. Always `compute#operation` for
-   * Operation resources.
+   * Output only. [Output Only] Type of the resource. Always `compute#operation`
+   * for Operation resources.
    *
    * @var string
    */
@@ -99,8 +99,8 @@ class Operation extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] An ID that represents a group of operations, such as when a
-   * group of operations results from a `bulkInsert` API request.
+   * Output only. [Output Only] An ID that represents a group of operations,
+   * such as when a group of operations results from a `bulkInsert` API request.
    *
    * @var string
    */
@@ -136,7 +136,8 @@ class Operation extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -381,8 +382,8 @@ class Operation extends \Google\Collection
     return $this->instancesBulkInsertOperationMetadata;
   }
   /**
-   * [Output Only] Type of the resource. Always `compute#operation` for
-   * Operation resources.
+   * Output only. [Output Only] Type of the resource. Always `compute#operation`
+   * for Operation resources.
    *
    * @param string $kind
    */
@@ -414,8 +415,8 @@ class Operation extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] An ID that represents a group of operations, such as when a
-   * group of operations results from a `bulkInsert` API request.
+   * Output only. [Output Only] An ID that represents a group of operations,
+   * such as when a group of operations results from a `bulkInsert` API request.
    *
    * @param string $operationGroupId
    */
@@ -501,7 +502,8 @@ class Operation extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */
@@ -534,9 +536,9 @@ class Operation extends \Google\Collection
     return $this->setAutoscalerLinkOperationMetadata;
   }
   /**
-   * [Output Only] If the operation is for projects.setCommonInstanceMetadata,
-   * this field will contain information on all underlying zonal actions and
-   * their state.
+   * Output only. [Output Only] If the operation is for
+   * projects.setCommonInstanceMetadata, this field will contain information on
+   * all underlying zonal actions and their state.
    *
    * @param SetCommonInstanceMetadataOperationMetadata $setCommonInstanceMetadataOperationMetadata
    */

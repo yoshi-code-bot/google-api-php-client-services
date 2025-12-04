@@ -21,10 +21,11 @@ class ResourceUpdateErrorErrors extends \Google\Collection
 {
   protected $collection_key = 'errorDetails';
   /**
-   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
-   * for internal use-only (like componentization) (thus the visibility "none")
-   * and in case of public exposure it is strongly recommended to follow pattern
-   * of: https://aip.dev/193 and expose as details field.
+   * Output only. [Output Only] Optional error details WARNING: DO NOT MAKE
+   * VISIBLE This is for internal use-only (like componentization) (thus the
+   * visibility "none") and in case of public exposure it is strongly
+   * recommended to follow pattern of: https://aip.dev/193 and expose as details
+   * field.
    *
    * @var string[]
    */
@@ -54,10 +55,11 @@ class ResourceUpdateErrorErrors extends \Google\Collection
   public $message;
 
   /**
-   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
-   * for internal use-only (like componentization) (thus the visibility "none")
-   * and in case of public exposure it is strongly recommended to follow pattern
-   * of: https://aip.dev/193 and expose as details field.
+   * Output only. [Output Only] Optional error details WARNING: DO NOT MAKE
+   * VISIBLE This is for internal use-only (like componentization) (thus the
+   * visibility "none") and in case of public exposure it is strongly
+   * recommended to follow pattern of: https://aip.dev/193 and expose as details
+   * field.
    *
    * @param string[] $arguments
    */
