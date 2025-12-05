@@ -21,7 +21,7 @@ class Price extends \Google\Model
 {
   /**
    * A placeholder for an undefined pricing type. If the pricing type is
-   * unpsecified, `COST_PER_MILLE` will be used instead.
+   * unspecified, `COST_PER_MILLE` will be used instead.
    */
   public const PRICING_TYPE_PRICING_TYPE_UNSPECIFIED = 'PRICING_TYPE_UNSPECIFIED';
   /**
