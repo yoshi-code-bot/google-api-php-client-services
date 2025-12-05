@@ -107,7 +107,8 @@ class UsersMessages extends \Google\Service\Resource
    * scanning and classification similar to receiving via SMTP. This method
    * doesn't perform SPF checks, so it might not work for some spam messages, such
    * as those attempting to perform domain spoofing. This method does not send a
-   * message. (messages.import)
+   * message. Note that the maximum size of the message is 150MB.
+   * (messages.import)
    *
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.
