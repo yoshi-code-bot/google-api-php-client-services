@@ -27,8 +27,12 @@ class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends \Google\Collection
    */
   public $allowAllBundleIds;
   /**
-   * Optional. iOS bundle ids of apps allowed to use the key. Example:
-   * 'com.companyname.productname.appname'
+   * Optional. iOS bundle IDs of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname' Each key supports a maximum of 250
+   * bundle IDs. To use a key on more apps, set `allow_all_bundle_ids` to true.
+   * When this is set, you are responsible for validating the bundle id by
+   * checking the `token_properties.ios_bundle_id` field in each assessment
+   * response against your list of allowed bundle IDs.
    *
    * @var string[]
    */
@@ -53,8 +57,12 @@ class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends \Google\Collection
     return $this->allowAllBundleIds;
   }
   /**
-   * Optional. iOS bundle ids of apps allowed to use the key. Example:
-   * 'com.companyname.productname.appname'
+   * Optional. iOS bundle IDs of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname' Each key supports a maximum of 250
+   * bundle IDs. To use a key on more apps, set `allow_all_bundle_ids` to true.
+   * When this is set, you are responsible for validating the bundle id by
+   * checking the `token_properties.ios_bundle_id` field in each assessment
+   * response against your list of allowed bundle IDs.
    *
    * @param string[] $allowedBundleIds
    */

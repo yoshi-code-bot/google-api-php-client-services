@@ -78,7 +78,11 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
    * Optional. Domains or subdomains of websites allowed to use the key. All
    * subdomains of an allowed domain are automatically allowed. A valid domain
    * requires a host and must not include any path, port, query or fragment.
-   * Examples: 'example.com' or 'subdomain.example.com'
+   * Examples: 'example.com' or 'subdomain.example.com' Each key supports a
+   * maximum of 250 domains. To use a key on more domains, set
+   * `allow_all_domains` to true. When this is set, you are responsible for
+   * validating the hostname by checking the `token_properties.hostname` field
+   * in each assessment response against your list of allowed domains.
    *
    * @var string[]
    */
@@ -137,7 +141,11 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
    * Optional. Domains or subdomains of websites allowed to use the key. All
    * subdomains of an allowed domain are automatically allowed. A valid domain
    * requires a host and must not include any path, port, query or fragment.
-   * Examples: 'example.com' or 'subdomain.example.com'
+   * Examples: 'example.com' or 'subdomain.example.com' Each key supports a
+   * maximum of 250 domains. To use a key on more domains, set
+   * `allow_all_domains` to true. When this is set, you are responsible for
+   * validating the hostname by checking the `token_properties.hostname` field
+   * in each assessment response against your list of allowed domains.
    *
    * @param string[] $allowedDomains
    */
