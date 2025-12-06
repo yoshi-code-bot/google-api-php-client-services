@@ -57,6 +57,10 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
    */
   public $accountId;
   /**
+   * Optional. The annotation that is assigned to the Event. This field can be
+   * left empty to provide reasons that apply to an event without concluding
+   * whether the event is legitimate or fraudulent.
+   *
    * @var string
    */
   public $annotation;
@@ -72,6 +76,8 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
   protected $phoneAuthenticationEventType = GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent::class;
   protected $phoneAuthenticationEventDataType = '';
   /**
+   * Optional. Reasons for the annotation that are assigned to the event.
+   *
    * @var string[]
    */
   public $reasons;
@@ -97,6 +103,13 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->accountId;
   }
   /**
+   * Optional. The annotation that is assigned to the Event. This field can be
+   * left empty to provide reasons that apply to an event without concluding
+   * whether the event is legitimate or fraudulent.
+   *
+   * Accepted values: ANNOTATION_UNSPECIFIED, LEGITIMATE, FRAUDULENT,
+   * PASSWORD_CORRECT, PASSWORD_INCORRECT
+   *
    * @param self::ANNOTATION_* $annotation
    */
   public function setAnnotation($annotation)
@@ -147,6 +160,8 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->phoneAuthenticationEvent;
   }
   /**
+   * Optional. Reasons for the annotation that are assigned to the event.
+   *
    * @param string[] $reasons
    */
   public function setReasons($reasons)
