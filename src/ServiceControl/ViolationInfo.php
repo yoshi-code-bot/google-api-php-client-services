@@ -50,6 +50,14 @@ class ViolationInfo extends \Google\Model
    */
   public $constraint;
   /**
+   * Optional. Provides extra information for the specific violated constraint.
+   * See the constraint's documentation to determine if this field is populated
+   * and what the structure of the message should be.
+   *
+   * @var array[]
+   */
+  public $constraintViolationInfo;
+  /**
    * Optional. Error message that policy is indicating.
    *
    * @var string
@@ -95,6 +103,24 @@ class ViolationInfo extends \Google\Model
   public function getConstraint()
   {
     return $this->constraint;
+  }
+  /**
+   * Optional. Provides extra information for the specific violated constraint.
+   * See the constraint's documentation to determine if this field is populated
+   * and what the structure of the message should be.
+   *
+   * @param array[] $constraintViolationInfo
+   */
+  public function setConstraintViolationInfo($constraintViolationInfo)
+  {
+    $this->constraintViolationInfo = $constraintViolationInfo;
+  }
+  /**
+   * @return array[]
+   */
+  public function getConstraintViolationInfo()
+  {
+    return $this->constraintViolationInfo;
   }
   /**
    * Optional. Error message that policy is indicating.
