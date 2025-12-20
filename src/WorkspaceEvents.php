@@ -276,6 +276,10 @@ class WorkspaceEvents extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
+                'tenant' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'subscribe' => [
               'path' => 'v1/{+name}:subscribe',
@@ -285,6 +289,10 @@ class WorkspaceEvents extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'tenant' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -310,6 +318,10 @@ class WorkspaceEvents extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'tenant' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -320,6 +332,10 @@ class WorkspaceEvents extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'tenant' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v1/{+name}',
@@ -329,6 +345,10 @@ class WorkspaceEvents extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'tenant' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'list' => [
@@ -345,6 +365,10 @@ class WorkspaceEvents extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'tenant' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
