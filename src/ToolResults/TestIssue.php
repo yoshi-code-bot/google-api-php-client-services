@@ -186,6 +186,9 @@ class TestIssue extends \Google\Model
    * There was an issue with the assets in this test.
    */
   public const TYPE_assetIssue = 'assetIssue';
+  protected $internal_gapi_mappings = [
+        "warningMigration" => "warning_migration",
+  ];
   /**
    * Category of issue. Required.
    *
@@ -212,8 +215,8 @@ class TestIssue extends \Google\Model
    * @var string
    */
   public $type;
-  protected $warningType = Any::class;
-  protected $warningDataType = '';
+  protected $warningMigrationType = Any::class;
+  protected $warningMigrationDataType = '';
 
   /**
    * Category of issue. Required.
@@ -317,18 +320,18 @@ class TestIssue extends \Google\Model
    * Warning message with additional details of the issue. Should always be a
    * message from com.google.devtools.toolresults.v1.warnings
    *
-   * @param Any $warning
+   * @param Any $warningMigration
    */
-  public function setWarning(Any $warning)
+  public function setWarningMigration(Any $warningMigration)
   {
-    $this->warning = $warning;
+    $this->warningMigration = $warningMigration;
   }
   /**
    * @return Any
    */
-  public function getWarning()
+  public function getWarningMigration()
   {
-    return $this->warning;
+    return $this->warningMigration;
   }
 }
 
