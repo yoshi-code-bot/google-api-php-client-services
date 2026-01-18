@@ -86,14 +86,12 @@ class Assignment extends \Google\Model
    */
   public $assignee;
   /**
-   * Optional. This field controls if "Gemini in BigQuery"
-   * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be
-   * enabled for this reservation assignment, which is not on by default.
-   * "Gemini in BigQuery" has a distinct compliance posture from BigQuery. If
-   * this field is set to true, the assignment job type is QUERY, and the parent
-   * reservation edition is ENTERPRISE_PLUS, then the assignment will give the
-   * grantee project/organization access to "Gemini in BigQuery" features.
+   * Optional. Deprecated: "Gemini in BigQuery" is now available by default for
+   * all BigQuery editions and should not be explicitly set. Controls if "Gemini
+   * in BigQuery" (https://cloud.google.com/gemini/docs/bigquery/overview)
+   * features should be enabled for this reservation assignment.
    *
+   * @deprecated
    * @var bool
    */
   public $enableGeminiInBigquery;
@@ -139,14 +137,12 @@ class Assignment extends \Google\Model
     return $this->assignee;
   }
   /**
-   * Optional. This field controls if "Gemini in BigQuery"
-   * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be
-   * enabled for this reservation assignment, which is not on by default.
-   * "Gemini in BigQuery" has a distinct compliance posture from BigQuery. If
-   * this field is set to true, the assignment job type is QUERY, and the parent
-   * reservation edition is ENTERPRISE_PLUS, then the assignment will give the
-   * grantee project/organization access to "Gemini in BigQuery" features.
+   * Optional. Deprecated: "Gemini in BigQuery" is now available by default for
+   * all BigQuery editions and should not be explicitly set. Controls if "Gemini
+   * in BigQuery" (https://cloud.google.com/gemini/docs/bigquery/overview)
+   * features should be enabled for this reservation assignment.
    *
+   * @deprecated
    * @param bool $enableGeminiInBigquery
    */
   public function setEnableGeminiInBigquery($enableGeminiInBigquery)
@@ -154,6 +150,7 @@ class Assignment extends \Google\Model
     $this->enableGeminiInBigquery = $enableGeminiInBigquery;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableGeminiInBigquery()
