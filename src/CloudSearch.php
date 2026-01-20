@@ -519,11 +519,7 @@ class CloudSearch extends \Google\Service
         'query',
         [
           'methods' => [
-            'debugSearch' => [
-              'path' => 'v1/query:debugSearch',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'removeActivity' => [
+            'removeActivity' => [
               'path' => 'v1/query:removeActivity',
               'httpMethod' => 'POST',
               'parameters' => [],
