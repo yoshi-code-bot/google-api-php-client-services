@@ -168,10 +168,9 @@ class Subscription extends \Google\Collection
    */
   public $tags;
   /**
-   * Required. Identifier. The name of the topic from which this subscription is
-   * receiving messages. Format is `projects/{project}/topics/{topic}`. The
-   * value of this field will be `_deleted-topic_` if the topic has been
-   * deleted.
+   * Required. The name of the topic from which this subscription is receiving
+   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
+   * field will be `_deleted-topic_` if the topic has been deleted.
    *
    * @var string
    */
@@ -566,10 +565,9 @@ class Subscription extends \Google\Collection
     return $this->tags;
   }
   /**
-   * Required. Identifier. The name of the topic from which this subscription is
-   * receiving messages. Format is `projects/{project}/topics/{topic}`. The
-   * value of this field will be `_deleted-topic_` if the topic has been
-   * deleted.
+   * Required. The name of the topic from which this subscription is receiving
+   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
+   * field will be `_deleted-topic_` if the topic has been deleted.
    *
    * @param string $topic
    */
