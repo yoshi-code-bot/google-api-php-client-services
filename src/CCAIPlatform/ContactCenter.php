@@ -44,7 +44,8 @@ class ContactCenter extends \Google\Collection
    */
   public const STATE_STATE_TERMINATING_FAILED = 'STATE_TERMINATING_FAILED';
   /**
-   * State TERMINATED
+   * Reused for soft-deleted state because semantically equivalent to `DELETED`
+   * as implied by go/aip/164.
    */
   public const STATE_STATE_TERMINATED = 'STATE_TERMINATED';
   /**
@@ -101,6 +102,12 @@ class ContactCenter extends \Google\Collection
    */
   public $customerDomainPrefix;
   /**
+   * Output only. Timestamp in UTC of when this resource was soft-deleted.
+   *
+   * @var string
+   */
+  public $deleteTime;
+  /**
    * Required. A user friendly name for the ContactCenter.
    *
    * @var string
@@ -108,6 +115,12 @@ class ContactCenter extends \Google\Collection
   public $displayName;
   protected $earlyType = Early::class;
   protected $earlyDataType = '';
+  /**
+   * Output only. Timestamp in UTC of when this resource is considered expired.
+   *
+   * @var string
+   */
+  public $expireTime;
   protected $featureConfigType = FeatureConfig::class;
   protected $featureConfigDataType = '';
   protected $instanceConfigType = InstanceConfig::class;
@@ -140,6 +153,13 @@ class ContactCenter extends \Google\Collection
    * @var string[]
    */
   public $privateComponents;
+  /**
+   * Output only. Timestamp in UTC of when this resource is going to be hard-
+   * deleted.
+   *
+   * @var string
+   */
+  public $purgeTime;
   /**
    * Output only. UJET release version, unique for each new release.
    *
@@ -269,6 +289,22 @@ class ContactCenter extends \Google\Collection
     return $this->customerDomainPrefix;
   }
   /**
+   * Output only. Timestamp in UTC of when this resource was soft-deleted.
+   *
+   * @param string $deleteTime
+   */
+  public function setDeleteTime($deleteTime)
+  {
+    $this->deleteTime = $deleteTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDeleteTime()
+  {
+    return $this->deleteTime;
+  }
+  /**
    * Required. A user friendly name for the ContactCenter.
    *
    * @param string $displayName
@@ -299,6 +335,22 @@ class ContactCenter extends \Google\Collection
   public function getEarly()
   {
     return $this->early;
+  }
+  /**
+   * Output only. Timestamp in UTC of when this resource is considered expired.
+   *
+   * @param string $expireTime
+   */
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   /**
    * Optional. Feature configuration to populate the feature flags.
@@ -427,6 +479,23 @@ class ContactCenter extends \Google\Collection
   public function getPrivateComponents()
   {
     return $this->privateComponents;
+  }
+  /**
+   * Output only. Timestamp in UTC of when this resource is going to be hard-
+   * deleted.
+   *
+   * @param string $purgeTime
+   */
+  public function setPurgeTime($purgeTime)
+  {
+    $this->purgeTime = $purgeTime;
+  }
+  /**
+   * @return string
+   */
+  public function getPurgeTime()
+  {
+    return $this->purgeTime;
   }
   /**
    * Output only. UJET release version, unique for each new release.
