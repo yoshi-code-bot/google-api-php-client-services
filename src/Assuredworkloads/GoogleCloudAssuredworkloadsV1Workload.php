@@ -241,6 +241,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * EKM.
    */
   public const PARTNER_SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM = 'SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM';
+  /**
+   * Enum representing Telefonica (Spain) partner.
+   */
+  public const PARTNER_SPAIN_DATA_BOUNDARY_BY_TELEFONICA = 'SPAIN_DATA_BOUNDARY_BY_TELEFONICA';
   protected $collection_key = 'resources';
   /**
    * Optional. The billing account used for the resources which are direct
@@ -638,7 +642,7 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * Accepted values: PARTNER_UNSPECIFIED, LOCAL_CONTROLS_BY_S3NS,
    * SOVEREIGN_CONTROLS_BY_T_SYSTEMS, SOVEREIGN_CONTROLS_BY_SIA_MINSAIT,
    * SOVEREIGN_CONTROLS_BY_PSN, SOVEREIGN_CONTROLS_BY_CNTXT,
-   * SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM
+   * SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM, SPAIN_DATA_BOUNDARY_BY_TELEFONICA
    *
    * @param self::PARTNER_* $partner
    */
