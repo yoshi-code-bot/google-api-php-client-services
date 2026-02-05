@@ -58,6 +58,39 @@ class ProjectsLocationsApplicationsServicesVersionsInstances extends \Google\Ser
     $params = array_merge($params, $optParams);
     return $this->call('debug', [$params], Operation::class);
   }
+  /**
+   * Stops a running instance.The instance might be automatically recreated based
+   * on the scaling settings of the version. For more information, see "How
+   * Instances are Managed" (standard environment
+   * (https://cloud.google.com/appengine/docs/standard/python/how-instances-are-
+   * managed) | flexible environment
+   * (https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-
+   * managed)).To ensure that instances are not re-created and avoid getting
+   * billed, you can stop all instances within the target version by changing the
+   * serving status of the version to STOPPED with the
+   * apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions/patch) method.
+   * (instances.delete)
+   *
+   * @param string $projectsId Part of `name`. Required. Name of the resource
+   * requested. Example:
+   * apps/myapp/services/default/versions/v1/instances/instance-1.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param string $servicesId Part of `name`. See documentation of `projectsId`.
+   * @param string $versionsId Part of `name`. See documentation of `projectsId`.
+   * @param string $instancesId Part of `name`. See documentation of `projectsId`.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($projectsId, $locationsId, $applicationsId, $servicesId, $versionsId, $instancesId, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'servicesId' => $servicesId, 'versionsId' => $versionsId, 'instancesId' => $instancesId];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
