@@ -20,18 +20,16 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRuleLineageEnablement extends \Google\Model
 {
   /**
-   * Optional. Required. If true, ingestion of lineage should be enabled. If
-   * false, it should be disabled. If unspecified, the system default value is
-   * used.
+   * Optional. If true, ingestion of lineage should be enabled. If false, it
+   * should be disabled. If unspecified, the system default value is used.
    *
    * @var bool
    */
   public $enabled;
 
   /**
-   * Optional. Required. If true, ingestion of lineage should be enabled. If
-   * false, it should be disabled. If unspecified, the system default value is
-   * used.
+   * Optional. If true, ingestion of lineage should be enabled. If false, it
+   * should be disabled. If unspecified, the system default value is used.
    *
    * @param bool $enabled
    */
