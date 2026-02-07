@@ -26,6 +26,14 @@ class CloudRunRenderMetadata extends \Google\Model
    * @var string
    */
   public $service;
+  /**
+   * Output only. The name of the Cloud Run Worker Pool in the rendered
+   * manifest. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   *
+   * @var string
+   */
+  public $workerPool;
 
   /**
    * Output only. The name of the Cloud Run Service in the rendered manifest.
@@ -43,6 +51,24 @@ class CloudRunRenderMetadata extends \Google\Model
   public function getService()
   {
     return $this->service;
+  }
+  /**
+   * Output only. The name of the Cloud Run Worker Pool in the rendered
+   * manifest. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   *
+   * @param string $workerPool
+   */
+  public function setWorkerPool($workerPool)
+  {
+    $this->workerPool = $workerPool;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkerPool()
+  {
+    return $this->workerPool;
   }
 }
 
