@@ -49,6 +49,13 @@ class CloudRunMetadata extends \Google\Collection
    * @var string[]
    */
   public $serviceUrls;
+  /**
+   * Output only. The Cloud Run worker pool associated with a `Rollout`. Format
+   * is `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   *
+   * @var string
+   */
+  public $workerPool;
 
   /**
    * Output only. The name of the Cloud Run job that is associated with a
@@ -118,6 +125,23 @@ class CloudRunMetadata extends \Google\Collection
   public function getServiceUrls()
   {
     return $this->serviceUrls;
+  }
+  /**
+   * Output only. The Cloud Run worker pool associated with a `Rollout`. Format
+   * is `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   *
+   * @param string $workerPool
+   */
+  public function setWorkerPool($workerPool)
+  {
+    $this->workerPool = $workerPool;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkerPool()
+  {
+    return $this->workerPool;
   }
 }
 
