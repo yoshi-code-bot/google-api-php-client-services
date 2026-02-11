@@ -794,6 +794,29 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'deleteRecursive' => [
+              'path' => 'b/{bucket}/folders/{folder}/deleteRecursive',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'folder' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'ifMetagenerationMatch' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'ifMetagenerationNotMatch' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'b/{bucket}/folders/{folder}',
               'httpMethod' => 'GET',
