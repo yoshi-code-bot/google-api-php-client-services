@@ -150,6 +150,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public $goodForWatchingSports;
   protected $googleMapsLinksType = GoogleMapsPlacesV1PlaceGoogleMapsLinks::class;
   protected $googleMapsLinksDataType = '';
+  protected $googleMapsTypeLabelType = GoogleTypeLocalizedText::class;
+  protected $googleMapsTypeLabelDataType = '';
   /**
    * A URL providing more information about this place.
    *
@@ -847,6 +849,27 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getGoogleMapsLinks()
   {
     return $this->googleMapsLinks;
+  }
+  /**
+   * The type label of the place on Google Maps, localized to the request
+   * language if applicable, for example, "Restaurant", "Cafe", "Airport", etc.
+   * The type label may be different from the primary type display name and may
+   * not be a supported type in [Places API Place Types
+   * table](https://developers.google.com/maps/documentation/places/web-
+   * service/place-types).
+   *
+   * @param GoogleTypeLocalizedText $googleMapsTypeLabel
+   */
+  public function setGoogleMapsTypeLabel(GoogleTypeLocalizedText $googleMapsTypeLabel)
+  {
+    $this->googleMapsTypeLabel = $googleMapsTypeLabel;
+  }
+  /**
+   * @return GoogleTypeLocalizedText
+   */
+  public function getGoogleMapsTypeLabel()
+  {
+    return $this->googleMapsTypeLabel;
   }
   /**
    * A URL providing more information about this place.
