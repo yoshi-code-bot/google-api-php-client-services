@@ -23,6 +23,9 @@ use Google\Service\Connectors\ExchangeAuthCodeRequest;
 use Google\Service\Connectors\ExchangeAuthCodeResponse;
 use Google\Service\Connectors\ExecuteSqlQueryRequest;
 use Google\Service\Connectors\ExecuteSqlQueryResponse;
+use Google\Service\Connectors\GenerateCustomToolspecRequest;
+use Google\Service\Connectors\GenerateCustomToolspecResponse;
+use Google\Service\Connectors\ListCustomToolNamesResponse;
 use Google\Service\Connectors\ListToolsPostRequest;
 use Google\Service\Connectors\ListToolsResponse;
 use Google\Service\Connectors\RefreshAccessTokenRequest;
@@ -111,6 +114,38 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['connection' => $connection, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('executeSqlQuery', [$params], ExecuteSqlQueryResponse::class);
+  }
+  /**
+   * Generate toolspec override for the given list of toolNames.
+   * (connections.generateConnectionToolspecOverride)
+   *
+   * @param string $name Required. Resource name of the Connection. Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   * @param GenerateCustomToolspecRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenerateCustomToolspecResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateConnectionToolspecOverride($name, GenerateCustomToolspecRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateConnectionToolspecOverride', [$params], GenerateCustomToolspecResponse::class);
+  }
+  /**
+   * Lists custom tool names. (connections.listCustomToolNames)
+   *
+   * @param string $name Required. Resource name of the Connection. Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   * @param array $optParams Optional parameters.
+   * @return ListCustomToolNamesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listCustomToolNames($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('listCustomToolNames', [$params], ListCustomToolNamesResponse::class);
   }
   /**
    * RefreshAccessToken exchanges the OAuth refresh token (and other necessary

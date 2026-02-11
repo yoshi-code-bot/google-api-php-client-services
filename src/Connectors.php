@@ -114,6 +114,26 @@ class Connectors extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'generateConnectionToolspecOverride' => [
+              'path' => 'v2/{+name}:generateConnectionToolspecOverride',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'listCustomToolNames' => [
+              'path' => 'v2/{+name}:listCustomToolNames',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'refreshAccessToken' => [
               'path' => 'v2/{+name}:refreshAccessToken',
               'httpMethod' => 'POST',
