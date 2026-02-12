@@ -45,13 +45,13 @@ class UserLicense extends \Google\Model
    */
   public $enabled;
   /**
-   * The ID of user license.
+   * The ID of the user license.
    *
    * @var string
    */
   public $id;
   /**
-   * The type of API resource. This is always appsmarket#userLicense.
+   * The type of API resource. This is always `appsmarket#userLicense`.
    *
    * @var string
    */
@@ -140,7 +140,7 @@ class UserLicense extends \Google\Model
     return $this->enabled;
   }
   /**
-   * The ID of user license.
+   * The ID of the user license.
    *
    * @param string $id
    */
@@ -156,7 +156,7 @@ class UserLicense extends \Google\Model
     return $this->id;
   }
   /**
-   * The type of API resource. This is always appsmarket#userLicense.
+   * The type of API resource. This is always `appsmarket#userLicense`.
    *
    * @param string $kind
    */

@@ -41,15 +41,15 @@ class CustomerLicense extends \Google\Collection
    */
   public $id;
   /**
-   * The type of API resource. This is always appsmarket#customerLicense.
+   * The type of API resource. This is always `appsmarket#customerLicense`.
    *
    * @var string
    */
   public $kind;
   /**
    * The customer's license status. One of: - `ACTIVE`: The customer has a valid
-   * license. - `UNLICENSED`: There is no license: either this customer has
-   * never installed your application, or else has deleted it.
+   * license. - `UNLICENSED`: There is no license. Either this customer has
+   * never installed your application or has deleted it.
    *
    * @var string
    */
@@ -122,7 +122,7 @@ class CustomerLicense extends \Google\Collection
     return $this->id;
   }
   /**
-   * The type of API resource. This is always appsmarket#customerLicense.
+   * The type of API resource. This is always `appsmarket#customerLicense`.
    *
    * @param string $kind
    */
@@ -139,8 +139,8 @@ class CustomerLicense extends \Google\Collection
   }
   /**
    * The customer's license status. One of: - `ACTIVE`: The customer has a valid
-   * license. - `UNLICENSED`: There is no license: either this customer has
-   * never installed your application, or else has deleted it.
+   * license. - `UNLICENSED`: There is no license. Either this customer has
+   * never installed your application or has deleted it.
    *
    * @param string $state
    */

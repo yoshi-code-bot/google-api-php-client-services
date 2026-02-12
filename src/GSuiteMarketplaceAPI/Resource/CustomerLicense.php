@@ -30,11 +30,13 @@ use Google\Service\GSuiteMarketplaceAPI\CustomerLicense as CustomerLicenseModel;
 class CustomerLicense extends \Google\Service\Resource
 {
   /**
-   * Gets the status of a license for a customer to determine if they have access
-   * for a given app. (customerLicense.get)
+   * Gets the customer's licensing status to determine if they have access to a
+   * given app. For more information, see [Getting app installation and licensing
+   * details](https://developers.google.com/workspace/marketplace/example-calls-
+   * marketplace-api). (customerLicense.get)
    *
-   * @param string $applicationId Application Id
-   * @param string $customerId Customer Id
+   * @param string $applicationId The ID of the application.
+   * @param string $customerId The ID of the customer.
    * @param array $optParams Optional parameters.
    * @return CustomerLicenseModel
    * @throws \Google\Service\Exception
