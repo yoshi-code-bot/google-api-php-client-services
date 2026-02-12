@@ -108,8 +108,8 @@ class SlurmOrchestrator extends \Google\Collection
     return $this->loginNodes;
   }
   /**
-   * Required. Configuration of Slurm nodesets, which define groups of compute
-   * resources that can be used by Slurm. At least one compute node is required.
+   * Optional. Compute resource configuration for the Slurm nodesets in your
+   * cluster. If not specified, the cluster won't create any nodes.
    *
    * @param SlurmNodeSet[] $nodeSets
    */
@@ -125,9 +125,10 @@ class SlurmOrchestrator extends \Google\Collection
     return $this->nodeSets;
   }
   /**
-   * Required. Configuration of Slurm partitions, which group one or more
-   * nodesets. Acts as a queue against which jobs can be submitted. At least one
-   * partition is required.
+   * Optional. Configuration for the Slurm partitions in your cluster. Each
+   * partition can contain one or more nodesets, and you can submit separate
+   * jobs on each partition. If you don't specify at least one partition in your
+   * cluster, you can't submit jobs to the cluster.
    *
    * @param SlurmPartition[] $partitions
    */
