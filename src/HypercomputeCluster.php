@@ -23,7 +23,8 @@ use Google\Client;
  * Service definition for HypercomputeCluster (v1).
  *
  * <p>
-</p>
+ * The Cluster Director API allows you to deploy, manage, and monitor clusters
+ * that run AI, ML, or HPC workloads.</p>
  *
  * <p>
  * For more information about this service, see the API

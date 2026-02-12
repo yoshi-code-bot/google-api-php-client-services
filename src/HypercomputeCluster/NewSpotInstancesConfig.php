@@ -20,15 +20,15 @@ namespace Google\Service\HypercomputeCluster;
 class NewSpotInstancesConfig extends \Google\Model
 {
   /**
-   * Unspecified termination action
+   * Not set.
    */
   public const TERMINATION_ACTION_TERMINATION_ACTION_UNSPECIFIED = 'TERMINATION_ACTION_UNSPECIFIED';
   /**
-   * Stop the instance
+   * Compute Engine stops the Spot VM on preemption.
    */
   public const TERMINATION_ACTION_STOP = 'STOP';
   /**
-   * Delete the instance
+   * Compute Engine deletes the Spot VM on preemption.
    */
   public const TERMINATION_ACTION_DELETE = 'DELETE';
   /**
@@ -40,7 +40,8 @@ class NewSpotInstancesConfig extends \Google\Model
    */
   public $machineType;
   /**
-   * Optional. Specifies the termination action of the instance
+   * Optional. Termination action for the instance. If not specified, Compute
+   * Engine sets the termination action to DELETE.
    *
    * @var string
    */
@@ -73,7 +74,8 @@ class NewSpotInstancesConfig extends \Google\Model
     return $this->machineType;
   }
   /**
-   * Optional. Specifies the termination action of the instance
+   * Optional. Termination action for the instance. If not specified, Compute
+   * Engine sets the termination action to DELETE.
    *
    * Accepted values: TERMINATION_ACTION_UNSPECIFIED, STOP, DELETE
    *

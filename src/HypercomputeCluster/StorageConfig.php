@@ -21,7 +21,7 @@ class StorageConfig extends \Google\Model
 {
   /**
    * Required. ID of the storage resource to mount, which must match a key in
-   * the cluster's [storage_resources](Cluster.storage_resources).
+   * the cluster's storage_resources.
    *
    * @var string
    */
@@ -36,7 +36,7 @@ class StorageConfig extends \Google\Model
 
   /**
    * Required. ID of the storage resource to mount, which must match a key in
-   * the cluster's [storage_resources](Cluster.storage_resources).
+   * the cluster's storage_resources.
    *
    * @param string $id
    */
