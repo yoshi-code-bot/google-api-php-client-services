@@ -17,11 +17,11 @@
 
 namespace Google\Service\PostmasterTools;
 
-class ListDomainsResponse extends \Google\Collection
+class QueryDomainStatsResponse extends \Google\Collection
 {
-  protected $collection_key = 'domains';
-  protected $domainsType = Domain::class;
-  protected $domainsDataType = 'array';
+  protected $collection_key = 'domainStats';
+  protected $domainStatsType = DomainStat::class;
+  protected $domainStatsDataType = 'array';
   /**
    * Token to retrieve the next page of results, or empty if there are no more
    * results in the list.
@@ -31,20 +31,21 @@ class ListDomainsResponse extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * The domains that have been registered by the user.
+   * The list of domain statistics. Each DomainStat object contains the value
+   * for a metric requested in the QueryDomainStatsRequest.
    *
-   * @param Domain[] $domains
+   * @param DomainStat[] $domainStats
    */
-  public function setDomains($domains)
+  public function setDomainStats($domainStats)
   {
-    $this->domains = $domains;
+    $this->domainStats = $domainStats;
   }
   /**
-   * @return Domain[]
+   * @return DomainStat[]
    */
-  public function getDomains()
+  public function getDomainStats()
   {
-    return $this->domains;
+    return $this->domainStats;
   }
   /**
    * Token to retrieve the next page of results, or empty if there are no more
@@ -66,4 +67,4 @@ class ListDomainsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListDomainsResponse::class, 'Google_Service_PostmasterTools_ListDomainsResponse');
+class_alias(QueryDomainStatsResponse::class, 'Google_Service_PostmasterTools_QueryDomainStatsResponse');
