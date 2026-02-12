@@ -30,11 +30,14 @@ use Google\Service\GSuiteMarketplaceAPI\UserLicense as UserLicenseModel;
 class UserLicense extends \Google\Service\Resource
 {
   /**
-   * Gets the user's licensing status for their permission to use a given app.
-   * (userLicense.get)
+   * Gets the user's licensing status to determine if they have permission to use
+   * a given app. For more information, see [Getting app installation and
+   * licensing
+   * details](https://developers.google.com/workspace/marketplace/example-calls-
+   * marketplace-api). (userLicense.get)
    *
-   * @param string $applicationId Application Id
-   * @param string $userId User Id
+   * @param string $applicationId The ID of the application.
+   * @param string $userId The ID of the user.
    * @param array $optParams Optional parameters.
    * @return UserLicenseModel
    * @throws \Google\Service\Exception
