@@ -79,6 +79,16 @@ class CloudRedis extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getSharedRegionalCertificateAuthority' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
