@@ -28,6 +28,10 @@ class ClusterAutoscaling extends \Google\Collection
    */
   public const AUTOPILOT_GENERAL_PROFILE_NO_PERFORMANCE = 'NO_PERFORMANCE';
   /**
+   * Use default configuration.
+   */
+  public const AUTOPILOT_GENERAL_PROFILE_NONE = 'NONE';
+  /**
    * No change to autoscaling configuration.
    */
   public const AUTOSCALING_PROFILE_PROFILE_UNSPECIFIED = 'PROFILE_UNSPECIFIED';
@@ -78,7 +82,8 @@ class ClusterAutoscaling extends \Google\Collection
    * Autopilot general profile for the cluster, which defines the configuration
    * for the cluster.
    *
-   * Accepted values: AUTOPILOT_GENERAL_PROFILE_UNSPECIFIED, NO_PERFORMANCE
+   * Accepted values: AUTOPILOT_GENERAL_PROFILE_UNSPECIFIED, NO_PERFORMANCE,
+   * NONE
    *
    * @param self::AUTOPILOT_GENERAL_PROFILE_* $autopilotGeneralProfile
    */
