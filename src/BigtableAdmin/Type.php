@@ -35,6 +35,8 @@ class Type extends \Google\Model
   protected $float32TypeDataType = '';
   protected $float64TypeType = GoogleBigtableAdminV2TypeFloat64::class;
   protected $float64TypeDataType = '';
+  protected $geographyTypeType = GoogleBigtableAdminV2TypeGeography::class;
+  protected $geographyTypeDataType = '';
   protected $int64TypeType = GoogleBigtableAdminV2TypeInt64::class;
   protected $int64TypeDataType = '';
   protected $mapTypeType = GoogleBigtableAdminV2TypeMap::class;
@@ -175,6 +177,22 @@ class Type extends \Google\Model
   public function getFloat64Type()
   {
     return $this->float64Type;
+  }
+  /**
+   * Geography
+   *
+   * @param GoogleBigtableAdminV2TypeGeography $geographyType
+   */
+  public function setGeographyType(GoogleBigtableAdminV2TypeGeography $geographyType)
+  {
+    $this->geographyType = $geographyType;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeGeography
+   */
+  public function getGeographyType()
+  {
+    return $this->geographyType;
   }
   /**
    * Int64
