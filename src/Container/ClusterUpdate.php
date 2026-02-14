@@ -490,8 +490,12 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredClusterAutoscaling;
   }
   /**
-   * Enable/Disable Compliance Posture features for the cluster.
+   * Deprecated: Compliance Posture is no longer supported. For more details,
+   * see https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-
+   * management-deprecation. Enable/Disable Compliance Posture features for the
+   * cluster.
    *
+   * @deprecated
    * @param CompliancePostureConfig $desiredCompliancePostureConfig
    */
   public function setDesiredCompliancePostureConfig(CompliancePostureConfig $desiredCompliancePostureConfig)
@@ -499,6 +503,7 @@ class ClusterUpdate extends \Google\Collection
     $this->desiredCompliancePostureConfig = $desiredCompliancePostureConfig;
   }
   /**
+   * @deprecated
    * @return CompliancePostureConfig
    */
   public function getDesiredCompliancePostureConfig()

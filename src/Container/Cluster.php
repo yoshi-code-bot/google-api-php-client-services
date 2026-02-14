@@ -579,8 +579,12 @@ class Cluster extends \Google\Collection
     return $this->clusterIpv4Cidr;
   }
   /**
-   * Enable/Disable Compliance Posture features for the cluster.
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more
+   * details, see https://cloud.google.com/kubernetes-
+   * engine/docs/deprecations/posture-management-deprecation. Enable/Disable
+   * Compliance Posture features for the cluster.
    *
+   * @deprecated
    * @param CompliancePostureConfig $compliancePostureConfig
    */
   public function setCompliancePostureConfig(CompliancePostureConfig $compliancePostureConfig)
@@ -588,6 +592,7 @@ class Cluster extends \Google\Collection
     $this->compliancePostureConfig = $compliancePostureConfig;
   }
   /**
+   * @deprecated
    * @return CompliancePostureConfig
    */
   public function getCompliancePostureConfig()
@@ -1655,7 +1660,7 @@ class Cluster extends \Google\Collection
     return $this->secretManagerConfig;
   }
   /**
-   * Enable/Disable Security Posture API features for the cluster.
+   * Optional. Enable/Disable Security Posture API features for the cluster.
    *
    * @param SecurityPostureConfig $securityPostureConfig
    */
