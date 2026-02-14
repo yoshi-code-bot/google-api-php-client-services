@@ -52,6 +52,22 @@ class Cluster extends \Google\Collection
    */
   public const NODE_TYPE_REDIS_STANDARD_SMALL = 'REDIS_STANDARD_SMALL';
   /**
+   * Server CA mode not specified.
+   */
+  public const SERVER_CA_MODE_SERVER_CA_MODE_UNSPECIFIED = 'SERVER_CA_MODE_UNSPECIFIED';
+  /**
+   * Each cluster has its own Google managed CA.
+   */
+  public const SERVER_CA_MODE_SERVER_CA_MODE_GOOGLE_MANAGED_PER_INSTANCE_CA = 'SERVER_CA_MODE_GOOGLE_MANAGED_PER_INSTANCE_CA';
+  /**
+   * The cluster uses Google managed shared CA in the region.
+   */
+  public const SERVER_CA_MODE_SERVER_CA_MODE_GOOGLE_MANAGED_SHARED_CA = 'SERVER_CA_MODE_GOOGLE_MANAGED_SHARED_CA';
+  /**
+   * The cluster uses customer managed CA from CAS.
+   */
+  public const SERVER_CA_MODE_SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA = 'SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA';
+  /**
    * Not set.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -229,6 +245,12 @@ class Cluster extends \Google\Collection
    */
   public $replicaCount;
   /**
+   * Optional. Input only. Rotate the server certificates.
+   *
+   * @var bool
+   */
+  public $rotateServerCertificate;
+  /**
    * Optional. Output only. Reserved for future use.
    *
    * @var bool
@@ -240,6 +262,20 @@ class Cluster extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * Optional. Server CA mode for the cluster.
+   *
+   * @var string
+   */
+  public $serverCaMode;
+  /**
+   * Optional. Customer-managed CA pool for the cluster. Only applicable for
+   * BYOCA i.e. if server_ca_mode is SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA.
+   * Format: "projects/{project}/locations/{region}/caPools/{ca_pool}".
+   *
+   * @var string
+   */
+  public $serverCaPool;
   /**
    * Optional. Number of shards for the Redis cluster.
    *
@@ -788,6 +824,22 @@ class Cluster extends \Google\Collection
     return $this->replicaCount;
   }
   /**
+   * Optional. Input only. Rotate the server certificates.
+   *
+   * @param bool $rotateServerCertificate
+   */
+  public function setRotateServerCertificate($rotateServerCertificate)
+  {
+    $this->rotateServerCertificate = $rotateServerCertificate;
+  }
+  /**
+   * @return bool
+   */
+  public function getRotateServerCertificate()
+  {
+    return $this->rotateServerCertificate;
+  }
+  /**
    * Optional. Output only. Reserved for future use.
    *
    * @param bool $satisfiesPzi
@@ -818,6 +870,45 @@ class Cluster extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * Optional. Server CA mode for the cluster.
+   *
+   * Accepted values: SERVER_CA_MODE_UNSPECIFIED,
+   * SERVER_CA_MODE_GOOGLE_MANAGED_PER_INSTANCE_CA,
+   * SERVER_CA_MODE_GOOGLE_MANAGED_SHARED_CA,
+   * SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA
+   *
+   * @param self::SERVER_CA_MODE_* $serverCaMode
+   */
+  public function setServerCaMode($serverCaMode)
+  {
+    $this->serverCaMode = $serverCaMode;
+  }
+  /**
+   * @return self::SERVER_CA_MODE_*
+   */
+  public function getServerCaMode()
+  {
+    return $this->serverCaMode;
+  }
+  /**
+   * Optional. Customer-managed CA pool for the cluster. Only applicable for
+   * BYOCA i.e. if server_ca_mode is SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA.
+   * Format: "projects/{project}/locations/{region}/caPools/{ca_pool}".
+   *
+   * @param string $serverCaPool
+   */
+  public function setServerCaPool($serverCaPool)
+  {
+    $this->serverCaPool = $serverCaPool;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCaPool()
+  {
+    return $this->serverCaPool;
   }
   /**
    * Optional. Number of shards for the Redis cluster.
