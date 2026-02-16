@@ -23,17 +23,17 @@ use Google\Service\BigLakeService\TestIamPermissionsRequest;
 use Google\Service\BigLakeService\TestIamPermissionsResponse;
 
 /**
- * The "namespaces" collection of methods.
+ * The "tables" collection of methods.
  * Typical usage is:
  *  <code>
  *   $biglakeService = new Google\Service\BigLakeService(...);
- *   $namespaces = $biglakeService->projects_catalogs_namespaces;
+ *   $tables = $biglakeService->projects_catalogs_namespaces_tables;
  *  </code>
  */
-class ProjectsCatalogsNamespaces extends \Google\Service\Resource
+class ProjectsCatalogsNamespacesTables extends \Google\Service\Resource
 {
   /**
-   * Gets the IAM policy for the specified Catalog. (namespaces.getIamPolicy)
+   * Gets the IAM policy for the specified Catalog. (tables.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See [Resource
@@ -63,7 +63,7 @@ class ProjectsCatalogsNamespaces extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Sets the IAM policy for the specified catalog. (namespaces.setIamPolicy)
+   * Sets the IAM policy for the specified catalog. (tables.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See [Resource
@@ -81,8 +81,8 @@ class ProjectsCatalogsNamespaces extends \Google\Service\Resource
     return $this->call('setIamPolicy', [$params], Policy::class);
   }
   /**
-   * Tests the IAM permissions for the specified namespace.
-   * (namespaces.testIamPermissions)
+   * Tests the IAM permissions for the specified table.
+   * (tables.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See [Resource
@@ -102,4 +102,4 @@ class ProjectsCatalogsNamespaces extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsCatalogsNamespaces::class, 'Google_Service_BigLakeService_Resource_ProjectsCatalogsNamespaces');
+class_alias(ProjectsCatalogsNamespacesTables::class, 'Google_Service_BigLakeService_Resource_ProjectsCatalogsNamespacesTables');
