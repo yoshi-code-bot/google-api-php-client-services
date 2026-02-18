@@ -25,20 +25,21 @@ class GoogleCloudKmsInventoryV1Warning extends \Google\Model
   public const WARNING_CODE_WARNING_CODE_UNSPECIFIED = 'WARNING_CODE_UNSPECIFIED';
   /**
    * Indicates that the caller or service agent lacks necessary permissions to
-   * view some of the requested data. The response may be partial. Examples: -
+   * view some of the requested data. The response may be partial. Example: -
    * KMS organization service agent {service_agent_name} lacks the
    * `cloudasset.assets.searchAllResources` permission on the scope.
    */
   public const WARNING_CODE_INSUFFICIENT_PERMISSIONS_PARTIAL_DATA = 'INSUFFICIENT_PERMISSIONS_PARTIAL_DATA';
   /**
    * Indicates that a resource limit has been exceeded, resulting in partial
-   * data. Examples: - The project has more than 10,000 assets (resources,
-   * crypto keys, key handles, IAM policies, etc).
+   * data. Example: - The project has more than 10,000 assets (resources, crypto
+   * keys, key handles, IAM policies, etc).
    */
   public const WARNING_CODE_RESOURCE_LIMIT_EXCEEDED_PARTIAL_DATA = 'RESOURCE_LIMIT_EXCEEDED_PARTIAL_DATA';
   /**
-   * Indicates that the project is org-less. Thus the analysis is only done for
-   * the project level data and results might be partial.
+   * Indicates that the project exists outside of an organization resource. Thus
+   * the analysis is only done for the project level data and results might be
+   * partial.
    */
   public const WARNING_CODE_ORG_LESS_PROJECT_PARTIAL_DATA = 'ORG_LESS_PROJECT_PARTIAL_DATA';
   /**

@@ -36,7 +36,7 @@ class OrganizationsProtectedResources extends \Google\Service\Resource
    *
    * @param string $scope Required. A scope can be an organization or a project.
    * Resources protected by the crypto key in provided scope will be returned. The
-   * allowed values are: * organizations/{ORGANIZATION_NUMBER} (e.g.,
+   * following values are allowed: * organizations/{ORGANIZATION_NUMBER} (e.g.,
    * "organizations/12345678") * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
    * * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
    * @param array $optParams Optional parameters.
