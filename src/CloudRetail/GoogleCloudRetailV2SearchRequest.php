@@ -137,14 +137,14 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
    */
   public $orderBy;
   /**
-   * The categories associated with a category page. Must be set for category
-   * navigation queries to achieve good search quality. The format should be the
-   * same as UserEvent.page_categories; To represent full path of category, use
-   * '>' sign to separate different hierarchies. If '>' is part of the category
-   * name, replace it with other character(s). Category pages include special
-   * pages such as sales or promotions. For instance, a special sale page may
-   * have the category hierarchy: "pageCategories" : ["Sales > 2017 Black Friday
-   * Deals"].
+   * Optional. The categories associated with a category page. Must be set for
+   * category navigation queries to achieve good search quality. The format
+   * should be the same as UserEvent.page_categories; To represent the full path
+   * of category, use '>' sign, with one space on each side, to separate
+   * different hierarchies. If '>' is part of the category name, replace it with
+   * other character(s). Category pages include special pages such as sales or
+   * promotions. For instance, a special sale page may have the category
+   * hierarchy: "pageCategories" : ["Sales > 2017 Black Friday Deals"].
    *
    * @var string[]
    */
@@ -506,14 +506,14 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
     return $this->orderBy;
   }
   /**
-   * The categories associated with a category page. Must be set for category
-   * navigation queries to achieve good search quality. The format should be the
-   * same as UserEvent.page_categories; To represent full path of category, use
-   * '>' sign to separate different hierarchies. If '>' is part of the category
-   * name, replace it with other character(s). Category pages include special
-   * pages such as sales or promotions. For instance, a special sale page may
-   * have the category hierarchy: "pageCategories" : ["Sales > 2017 Black Friday
-   * Deals"].
+   * Optional. The categories associated with a category page. Must be set for
+   * category navigation queries to achieve good search quality. The format
+   * should be the same as UserEvent.page_categories; To represent the full path
+   * of category, use '>' sign, with one space on each side, to separate
+   * different hierarchies. If '>' is part of the category name, replace it with
+   * other character(s). Category pages include special pages such as sales or
+   * promotions. For instance, a special sale page may have the category
+   * hierarchy: "pageCategories" : ["Sales > 2017 Black Friday Deals"].
    *
    * @param string[] $pageCategories
    */
