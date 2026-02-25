@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
 {
   protected $developerConnectSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource::class;
   protected $developerConnectSourceDataType = '';
+  protected $imageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec::class;
+  protected $imageSpecDataType = '';
   protected $inlineSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource::class;
   protected $inlineSourceDataType = '';
   protected $pythonSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec::class;
@@ -41,6 +43,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
   public function getDeveloperConnectSource()
   {
     return $this->developerConnectSource;
+  }
+  /**
+   * Optional. Configuration for building an image with custom config file.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec $imageSpec
+   */
+  public function setImageSpec(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec $imageSpec)
+  {
+    $this->imageSpec = $imageSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec
+   */
+  public function getImageSpec()
+  {
+    return $this->imageSpec;
   }
   /**
    * Source code is provided directly in the request.
