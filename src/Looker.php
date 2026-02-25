@@ -224,16 +224,6 @@ class Looker extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'undelete' => [
-              'path' => 'v1/{+name}:undelete',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]
