@@ -51,7 +51,7 @@ class Config extends \Google\Collection
    * Optional. Supplied environment variables for a specific build. Provided at
    * Build creation time and immutable afterwards. This field is only applicable
    * for Builds using a build image - (e.g., ContainerSource or ArchiveSource
-   * with locally_build_source) Attempts to set this for other build types will
+   * with locally_built_source) Attempts to set this for other build types will
    * result in an error
    *
    * @param EnvironmentVariable[] $env
