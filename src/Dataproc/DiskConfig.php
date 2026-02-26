@@ -17,8 +17,11 @@
 
 namespace Google\Service\Dataproc;
 
-class DiskConfig extends \Google\Model
+class DiskConfig extends \Google\Collection
 {
+  protected $collection_key = 'attachedDiskConfigs';
+  protected $attachedDiskConfigsType = AttachedDiskConfig::class;
+  protected $attachedDiskConfigsDataType = 'array';
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the
    * number of I/O operations per second that the disk can handle. This field is
@@ -73,6 +76,22 @@ class DiskConfig extends \Google\Model
    */
   public $numLocalSsds;
 
+  /**
+   * Optional. A list of attached disk configs for a group of VM instances.
+   *
+   * @param AttachedDiskConfig[] $attachedDiskConfigs
+   */
+  public function setAttachedDiskConfigs($attachedDiskConfigs)
+  {
+    $this->attachedDiskConfigs = $attachedDiskConfigs;
+  }
+  /**
+   * @return AttachedDiskConfig[]
+   */
+  public function getAttachedDiskConfigs()
+  {
+    return $this->attachedDiskConfigs;
+  }
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the
    * number of I/O operations per second that the disk can handle. This field is
