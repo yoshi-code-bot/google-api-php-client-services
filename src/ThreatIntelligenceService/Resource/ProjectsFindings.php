@@ -32,7 +32,8 @@ use Google\Service\ThreatIntelligenceService\SearchFindingsResponse;
 class ProjectsFindings extends \Google\Service\Resource
 {
   /**
-   * Get a finding by name. (findings.get)
+   * Get a finding by name. The `name` field should have the format:
+   * `projects/{project}/findings/{finding}` (findings.get)
    *
    * @param string $name Required. Name of the finding to get.
    * @param array $optParams Optional parameters.
@@ -46,7 +47,8 @@ class ProjectsFindings extends \Google\Service\Resource
     return $this->call('get', [$params], Finding::class);
   }
   /**
-   * Get a list of findings that meet the filter criteria.
+   * Get a list of findings that meet the filter criteria. The `parent` field in
+   * ListFindingsRequest should have the format: projects/{project}
    * (findings.listProjectsFindings)
    *
    * @param string $parent Required. Parent of the findings.
@@ -68,10 +70,11 @@ class ProjectsFindings extends \Google\Service\Resource
   }
   /**
    * SearchFindings is a more powerful version of ListFindings that supports
-   * complex queries like "findings for issues" using functions such as
-   * `has_issue` and `has_asset` in the query string. Example to search for
-   * findings for a specific issue:
-   * `has_issue("name=\"vaults/vault-12345/issues/issue-12345\"")`)
+   * complex queries like "findings for alerts" using functions such as
+   * `has_alert` in the query string. The `parent` field in SearchFindingsRequest
+   * should have the format: projects/{project} Example to search for findings for
+   * a specific issue:
+   * `has_alert("name=\"projects/gti-12345/alerts/alert-12345\"")`
    * (findings.search)
    *
    * @param string $parent Required. Parent of the findings. Format:
@@ -84,9 +87,8 @@ class ProjectsFindings extends \Google\Service\Resource
    * @opt_param string pageToken Optional. Page token.
    * @opt_param string query Optional. Query on what findings will be returned.
    * This supports the same filter criteria as FindingService.ListFindings as well
-   * as the following relationship queries `has_issue` and `has_asset`. Examples:
-   * - has_issue("name=\"vaults/vault-12345/issues/issue-12345\"") -
-   * has_asset("name=\"vaults/vault-12345/assets/asset-12345\"")
+   * as the following relationship query `has_alert`. Example: -
+   * `has_alert("name=\"projects/gti-12345/alerts/alert-12345\"")`
    * @return SearchFindingsResponse
    * @throws \Google\Service\Exception
    */
