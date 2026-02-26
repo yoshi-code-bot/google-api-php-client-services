@@ -32,8 +32,8 @@ class ActivityEventsStatus extends \Google\Model
    */
   public $errorMessage;
   /**
-   * * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS
-   * - SUCCEEDED - SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
+   * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS -
+   * SUCCEEDED - SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
    *
    * @var string
    */
@@ -78,8 +78,8 @@ class ActivityEventsStatus extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS
-   * - SUCCEEDED - SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
+   * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS -
+   * SUCCEEDED - SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
    *
    * @param string $eventStatus
    */
