@@ -48,6 +48,10 @@ class ChannelProfile extends \Google\Model
    */
   public const CHANNEL_TYPE_FIVE9 = 'FIVE9';
   /**
+   * Third party contact center integration channel.
+   */
+  public const CHANNEL_TYPE_CONTACT_CENTER_INTEGRATION = 'CONTACT_CENTER_INTEGRATION';
+  /**
    * Optional. The type of the channel profile.
    *
    * @var string
@@ -90,7 +94,7 @@ class ChannelProfile extends \Google\Model
    * Optional. The type of the channel profile.
    *
    * Accepted values: UNKNOWN, WEB_UI, API, TWILIO, GOOGLE_TELEPHONY_PLATFORM,
-   * CONTACT_CENTER_AS_A_SERVICE, FIVE9
+   * CONTACT_CENTER_AS_A_SERVICE, FIVE9, CONTACT_CENTER_INTEGRATION
    *
    * @param self::CHANNEL_TYPE_* $channelType
    */

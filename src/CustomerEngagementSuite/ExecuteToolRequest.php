@@ -35,6 +35,12 @@ class ExecuteToolRequest extends \Google\Model
   public $tool;
   protected $toolsetToolType = ToolsetTool::class;
   protected $toolsetToolDataType = '';
+  /**
+   * Optional. The variables that are available for the tool execution.
+   *
+   * @var array[]
+   */
+  public $variables;
 
   /**
    * Optional. The input parameters and values for the tool in JSON object
@@ -86,6 +92,22 @@ class ExecuteToolRequest extends \Google\Model
   public function getToolsetTool()
   {
     return $this->toolsetTool;
+  }
+  /**
+   * Optional. The variables that are available for the tool execution.
+   *
+   * @param array[] $variables
+   */
+  public function setVariables($variables)
+  {
+    $this->variables = $variables;
+  }
+  /**
+   * @return array[]
+   */
+  public function getVariables()
+  {
+    return $this->variables;
   }
 }
 

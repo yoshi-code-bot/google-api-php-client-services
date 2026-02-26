@@ -21,6 +21,8 @@ class EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholds extends \Goog
 {
   protected $expectationLevelMetricsThresholdsType = EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsExpectationLevelMetricsThresholds::class;
   protected $expectationLevelMetricsThresholdsDataType = '';
+  protected $toolMatchingSettingsType = EvaluationMetricsThresholdsToolMatchingSettings::class;
+  protected $toolMatchingSettingsDataType = '';
   protected $turnLevelMetricsThresholdsType = EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsTurnLevelMetricsThresholds::class;
   protected $turnLevelMetricsThresholdsDataType = '';
 
@@ -39,6 +41,24 @@ class EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholds extends \Goog
   public function getExpectationLevelMetricsThresholds()
   {
     return $this->expectationLevelMetricsThresholds;
+  }
+  /**
+   * Optional. The tool matching settings. An extra tool call is a tool call
+   * that is present in the execution but does not match any tool call in the
+   * golden expectation.
+   *
+   * @param EvaluationMetricsThresholdsToolMatchingSettings $toolMatchingSettings
+   */
+  public function setToolMatchingSettings(EvaluationMetricsThresholdsToolMatchingSettings $toolMatchingSettings)
+  {
+    $this->toolMatchingSettings = $toolMatchingSettings;
+  }
+  /**
+   * @return EvaluationMetricsThresholdsToolMatchingSettings
+   */
+  public function getToolMatchingSettings()
+  {
+    return $this->toolMatchingSettings;
   }
   /**
    * Optional. The turn level metrics thresholds.

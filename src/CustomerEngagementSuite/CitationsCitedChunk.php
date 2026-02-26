@@ -20,7 +20,7 @@ namespace Google\Service\CustomerEngagementSuite;
 class CitationsCitedChunk extends \Google\Model
 {
   /**
-   * Text used for citaiton.
+   * Text used for citation.
    *
    * @var string
    */
@@ -39,7 +39,7 @@ class CitationsCitedChunk extends \Google\Model
   public $uri;
 
   /**
-   * Text used for citaiton.
+   * Text used for citation.
    *
    * @param string $text
    */

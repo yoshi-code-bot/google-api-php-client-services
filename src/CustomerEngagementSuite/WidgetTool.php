@@ -64,6 +64,14 @@ class WidgetTool extends \Google\Model
    */
   public const WIDGET_TYPE_APPOINTMENT_DETAILS = 'APPOINTMENT_DETAILS';
   /**
+   * Appointment scheduler widget.
+   */
+  public const WIDGET_TYPE_APPOINTMENT_SCHEDULER = 'APPOINTMENT_SCHEDULER';
+  /**
+   * Contact form widget.
+   */
+  public const WIDGET_TYPE_CONTACT_FORM = 'CONTACT_FORM';
+  /**
    * Optional. The description of the widget tool.
    *
    * @var string
@@ -140,7 +148,7 @@ class WidgetTool extends \Google\Model
    * Accepted values: WIDGET_TYPE_UNSPECIFIED, CUSTOM, PRODUCT_CAROUSEL,
    * PRODUCT_DETAILS, QUICK_ACTIONS, PRODUCT_COMPARISON,
    * ADVANCED_PRODUCT_DETAILS, SHORT_FORM, OVERALL_SATISFACTION, ORDER_SUMMARY,
-   * APPOINTMENT_DETAILS
+   * APPOINTMENT_DETAILS, APPOINTMENT_SCHEDULER, CONTACT_FORM
    *
    * @param self::WIDGET_TYPE_* $widgetType
    */
