@@ -34,7 +34,7 @@ class RetrieveToolSchemaResponse extends \Google\Model
   protected $toolsetToolDataType = '';
 
   /**
-   * Required. The schema of the tool input parameters.
+   * The schema of the tool input parameters.
    *
    * @param Schema $inputSchema
    */
@@ -50,7 +50,7 @@ class RetrieveToolSchemaResponse extends \Google\Model
     return $this->inputSchema;
   }
   /**
-   * Required. The schema of the tool output parameters.
+   * The schema of the tool output parameters.
    *
    * @param Schema $outputSchema
    */

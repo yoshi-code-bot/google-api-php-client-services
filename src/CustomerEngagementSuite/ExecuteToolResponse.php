@@ -20,9 +20,9 @@ namespace Google\Service\CustomerEngagementSuite;
 class ExecuteToolResponse extends \Google\Model
 {
   /**
-   * Required. The tool execution result in JSON object format. Use "output" key
-   * to specify tool response and "error" key to specify error details (if any).
-   * If "output" and "error" keys are not specified, then whole "response" is
+   * The tool execution result in JSON object format. Use "output" key to
+   * specify tool response and "error" key to specify error details (if any). If
+   * "output" and "error" keys are not specified, then whole "response" is
    * treated as tool execution result.
    *
    * @var array[]
@@ -37,11 +37,17 @@ class ExecuteToolResponse extends \Google\Model
   public $tool;
   protected $toolsetToolType = ToolsetTool::class;
   protected $toolsetToolDataType = '';
+  /**
+   * The variable values at the end of the tool execution.
+   *
+   * @var array[]
+   */
+  public $variables;
 
   /**
-   * Required. The tool execution result in JSON object format. Use "output" key
-   * to specify tool response and "error" key to specify error details (if any).
-   * If "output" and "error" keys are not specified, then whole "response" is
+   * The tool execution result in JSON object format. Use "output" key to
+   * specify tool response and "error" key to specify error details (if any). If
+   * "output" and "error" keys are not specified, then whole "response" is
    * treated as tool execution result.
    *
    * @param array[] $response
@@ -89,6 +95,22 @@ class ExecuteToolResponse extends \Google\Model
   public function getToolsetTool()
   {
     return $this->toolsetTool;
+  }
+  /**
+   * The variable values at the end of the tool execution.
+   *
+   * @param array[] $variables
+   */
+  public function setVariables($variables)
+  {
+    $this->variables = $variables;
+  }
+  /**
+   * @return array[]
+   */
+  public function getVariables()
+  {
+    return $this->variables;
   }
 }
 

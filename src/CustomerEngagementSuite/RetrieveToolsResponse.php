@@ -24,7 +24,7 @@ class RetrieveToolsResponse extends \Google\Collection
   protected $toolsDataType = 'array';
 
   /**
-   * Required. The list of tools that are included in the specified toolset.
+   * The list of tools that are included in the specified toolset.
    *
    * @param Tool[] $tools
    */

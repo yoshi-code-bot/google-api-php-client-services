@@ -20,7 +20,7 @@ namespace Google\Service\CustomerEngagementSuite;
 class ApiKeyConfig extends \Google\Model
 {
   /**
-   * Unspecified. This value should not be unused.
+   * Unspecified. This value should not be used.
    */
   public const REQUEST_LOCATION_REQUEST_LOCATION_UNSPECIFIED = 'REQUEST_LOCATION_UNSPECIFIED';
   /**
