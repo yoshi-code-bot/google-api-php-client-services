@@ -115,6 +115,8 @@ class Job extends \Google\Collection
    * @var string
    */
   public $state;
+  protected $updateObjectCustomContextType = UpdateObjectCustomContext::class;
+  protected $updateObjectCustomContextDataType = '';
 
   /**
    * Specifies a list of buckets and their objects to be transformed.
@@ -383,6 +385,22 @@ class Job extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Update object custom context.
+   *
+   * @param UpdateObjectCustomContext $updateObjectCustomContext
+   */
+  public function setUpdateObjectCustomContext(UpdateObjectCustomContext $updateObjectCustomContext)
+  {
+    $this->updateObjectCustomContext = $updateObjectCustomContext;
+  }
+  /**
+   * @return UpdateObjectCustomContext
+   */
+  public function getUpdateObjectCustomContext()
+  {
+    return $this->updateObjectCustomContext;
   }
 }
 
