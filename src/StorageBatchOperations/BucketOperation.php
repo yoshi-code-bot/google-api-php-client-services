@@ -98,6 +98,8 @@ class BucketOperation extends \Google\Collection
    * @var string
    */
   public $state;
+  protected $updateObjectCustomContextType = UpdateObjectCustomContext::class;
+  protected $updateObjectCustomContextDataType = '';
 
   /**
    * The bucket name of the objects to be transformed in the BucketOperation.
@@ -329,6 +331,22 @@ class BucketOperation extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Update object custom context.
+   *
+   * @param UpdateObjectCustomContext $updateObjectCustomContext
+   */
+  public function setUpdateObjectCustomContext(UpdateObjectCustomContext $updateObjectCustomContext)
+  {
+    $this->updateObjectCustomContext = $updateObjectCustomContext;
+  }
+  /**
+   * @return UpdateObjectCustomContext
+   */
+  public function getUpdateObjectCustomContext()
+  {
+    return $this->updateObjectCustomContext;
   }
 }
 
