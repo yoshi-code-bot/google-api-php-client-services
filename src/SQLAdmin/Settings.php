@@ -142,6 +142,13 @@ class Settings extends \Google\Collection
   public const REPLICATION_TYPE_ASYNCHRONOUS = 'ASYNCHRONOUS';
   protected $collection_key = 'denyMaintenancePeriods';
   /**
+   * Optional. Whether the replica is in accelerated mode. This feature is in
+   * private preview and requires allowlisting to take effect.
+   *
+   * @var bool
+   */
+  public $acceleratedReplicaMode;
+  /**
    * The activation policy specifies when the instance is activated; it is
    * applicable only when the instance state is RUNNABLE. Valid values: *
    * `ALWAYS`: The instance is on, and remains so even in the absence of
@@ -393,6 +400,23 @@ class Settings extends \Google\Collection
    */
   public $userLabels;
 
+  /**
+   * Optional. Whether the replica is in accelerated mode. This feature is in
+   * private preview and requires allowlisting to take effect.
+   *
+   * @param bool $acceleratedReplicaMode
+   */
+  public function setAcceleratedReplicaMode($acceleratedReplicaMode)
+  {
+    $this->acceleratedReplicaMode = $acceleratedReplicaMode;
+  }
+  /**
+   * @return bool
+   */
+  public function getAcceleratedReplicaMode()
+  {
+    return $this->acceleratedReplicaMode;
+  }
   /**
    * The activation policy specifies when the instance is activated; it is
    * applicable only when the instance state is RUNNABLE. Valid values: *
