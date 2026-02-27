@@ -105,7 +105,7 @@ class AccountTypesAccountsPartnerLinks extends \Google\Service\Resource
    * Supported fields: - `partner_link_id` - `owning_account.account_type` -
    * `owning_account.account_id` - `partner_account.account_type` -
    * `partner_account.account_id` Example: `owning_account.account_type =
-   * "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+   * "GOOGLE_ADS" AND partner_account.account_id = 987654321`
    * @opt_param int pageSize The maximum number of partner links to return. The
    * service may return fewer than this value. If unspecified, at most 10 partner
    * links will be returned. The maximum value is 100; values above 100 will be

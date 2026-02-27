@@ -20,9 +20,9 @@ namespace Google\Service\DataManager;
 class PairIdInfo extends \Google\Model
 {
   /**
-   * Output only. The count of the advertiser's first party data records that
-   * have been uploaded to a clean room provider. This does not signify the size
-   * of a PAIR user list.
+   * Optional. The count of the advertiser's first party data records that have
+   * been uploaded to a clean room provider. This does not signify the size of a
+   * PAIR user list.
    *
    * @var string
    */
@@ -36,7 +36,7 @@ class PairIdInfo extends \Google\Model
    */
   public $cleanRoomIdentifier;
   /**
-   * Output only. This field denotes the percentage of membership match of this
+   * Optional. This field denotes the percentage of membership match of this
    * user list with the corresponding publisher's first party data. Must be
    * between 0 and 100 inclusive.
    *
@@ -54,7 +54,7 @@ class PairIdInfo extends \Google\Model
    */
   public $publisherId;
   /**
-   * Optional. Descriptive name of the publisher to be displayed in the UI for a
+   * Required. Descriptive name of the publisher to be displayed in the UI for a
    * better targeting experience.
    *
    * @var string
@@ -62,9 +62,9 @@ class PairIdInfo extends \Google\Model
   public $publisherName;
 
   /**
-   * Output only. The count of the advertiser's first party data records that
-   * have been uploaded to a clean room provider. This does not signify the size
-   * of a PAIR user list.
+   * Optional. The count of the advertiser's first party data records that have
+   * been uploaded to a clean room provider. This does not signify the size of a
+   * PAIR user list.
    *
    * @param string $advertiserIdentifierCount
    */
@@ -98,7 +98,7 @@ class PairIdInfo extends \Google\Model
     return $this->cleanRoomIdentifier;
   }
   /**
-   * Output only. This field denotes the percentage of membership match of this
+   * Optional. This field denotes the percentage of membership match of this
    * user list with the corresponding publisher's first party data. Must be
    * between 0 and 100 inclusive.
    *
@@ -136,7 +136,7 @@ class PairIdInfo extends \Google\Model
     return $this->publisherId;
   }
   /**
-   * Optional. Descriptive name of the publisher to be displayed in the UI for a
+   * Required. Descriptive name of the publisher to be displayed in the UI for a
    * better targeting experience.
    *
    * @param string $publisherName
