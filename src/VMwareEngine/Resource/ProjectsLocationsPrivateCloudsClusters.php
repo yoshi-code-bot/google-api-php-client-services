@@ -182,8 +182,7 @@ class ProjectsLocationsPrivateCloudsClusters extends \Google\Service\Resource
     return $this->call('list', [$params], ListClustersResponse::class);
   }
   /**
-   * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
-   * (clusters.mountDatastore)
+   * Mounts a `Datastore` on a cluster resource (clusters.mountDatastore)
    *
    * @param string $name Required. The resource name of the cluster to mount the
    * datastore. Resource names are schemeless URIs that follow the conventions in
@@ -278,8 +277,7 @@ class ProjectsLocationsPrivateCloudsClusters extends \Google\Service\Resource
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
   }
   /**
-   * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
-   * (clusters.unmountDatastore)
+   * Unmounts a `Datastore` on a cluster resource (clusters.unmountDatastore)
    *
    * @param string $name Required. The resource name of the cluster to unmount the
    * datastore. Resource names are schemeless URIs that follow the conventions in
