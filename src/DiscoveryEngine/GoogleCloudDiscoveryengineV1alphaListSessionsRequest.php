@@ -22,10 +22,13 @@ class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends \Google\Model
   /**
    * A comma-separated list of fields to filter by, in EBNF grammar. The
    * supported fields are: * `user_pseudo_id` * `state` * `display_name` *
-   * `starred` * `is_pinned` * `labels` * `create_time` * `update_time`
-   * Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` *
-   * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time
-   * > "1970-01-01T12:00:00Z"`
+   * `starred` * `is_pinned` * `labels` * `create_time` * `update_time` *
+   * `collaborative_project` Examples: * `user_pseudo_id = some_id` *
+   * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+   * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+   * `collaborative_project =
+   * "projects/123/locations/global/collections/default_collection/engines/"
+   * "default_engine/collaborative_projects/cp1"`
    *
    * @var string
    */
@@ -65,10 +68,13 @@ class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends \Google\Model
   /**
    * A comma-separated list of fields to filter by, in EBNF grammar. The
    * supported fields are: * `user_pseudo_id` * `state` * `display_name` *
-   * `starred` * `is_pinned` * `labels` * `create_time` * `update_time`
-   * Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` *
-   * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time
-   * > "1970-01-01T12:00:00Z"`
+   * `starred` * `is_pinned` * `labels` * `create_time` * `update_time` *
+   * `collaborative_project` Examples: * `user_pseudo_id = some_id` *
+   * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+   * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+   * `collaborative_project =
+   * "projects/123/locations/global/collections/default_collection/engines/"
+   * "default_engine/collaborative_projects/cp1"`
    *
    * @param string $filter
    */

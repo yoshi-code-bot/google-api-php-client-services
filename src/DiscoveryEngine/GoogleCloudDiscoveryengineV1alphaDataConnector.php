@@ -277,6 +277,16 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $dataSource;
   protected $destinationConfigsType = GoogleCloudDiscoveryengineV1alphaDestinationConfig::class;
   protected $destinationConfigsDataType = 'array';
+  /**
+   * Output only. The list of FQDNs of the data connector can egress to. This
+   * includes both FQDN derived from the customer provided instance URL and
+   * default per connector type FQDNs. Note: This field is derived from both the
+   * DataConnector.params, and connector source spec. It should only be used for
+   * CAIS and Org Policy evaluation purposes.
+   *
+   * @var string[]
+   */
+  public $egressFqdns;
   protected $endUserConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig::class;
   protected $endUserConfigDataType = '';
   protected $entitiesType = GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity::class;
@@ -440,6 +450,13 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * Output only. Whether the connector is created with VPC-SC enabled. This is
+   * only used for CuOP evaluation purpose.
+   *
+   * @var bool
+   */
+  public $vpcscEnabled;
 
   /**
    * Optional. Whether the connector will be created with an ACL config.
@@ -682,6 +699,26 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getDestinationConfigs()
   {
     return $this->destinationConfigs;
+  }
+  /**
+   * Output only. The list of FQDNs of the data connector can egress to. This
+   * includes both FQDN derived from the customer provided instance URL and
+   * default per connector type FQDNs. Note: This field is derived from both the
+   * DataConnector.params, and connector source spec. It should only be used for
+   * CAIS and Org Policy evaluation purposes.
+   *
+   * @param string[] $egressFqdns
+   */
+  public function setEgressFqdns($egressFqdns)
+  {
+    $this->egressFqdns = $egressFqdns;
+  }
+  /**
+   * @return string[]
+   */
+  public function getEgressFqdns()
+  {
+    return $this->egressFqdns;
   }
   /**
    * Optional. Any params and credentials used specifically for EUA connectors.
@@ -1152,6 +1189,23 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * Output only. Whether the connector is created with VPC-SC enabled. This is
+   * only used for CuOP evaluation purpose.
+   *
+   * @param bool $vpcscEnabled
+   */
+  public function setVpcscEnabled($vpcscEnabled)
+  {
+    $this->vpcscEnabled = $vpcscEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getVpcscEnabled()
+  {
+    return $this->vpcscEnabled;
   }
 }
 
