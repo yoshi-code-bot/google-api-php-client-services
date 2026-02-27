@@ -54,6 +54,31 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
    */
   public const INDUSTRY_VERTICAL_HEALTHCARE_FHIR = 'HEALTHCARE_FHIR';
   /**
+   * Defaults to `MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED`.
+   */
+  public const MARKETPLACE_AGENT_VISIBILITY_MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED = 'MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED';
+  /**
+   * Only agents that are currently available for use by the user are visible.
+   */
+  public const MARKETPLACE_AGENT_VISIBILITY_SHOW_AVAILABLE_AGENTS_ONLY = 'SHOW_AVAILABLE_AGENTS_ONLY';
+  /**
+   * Show marketplace agents that the user does not yet have access to but are
+   * integrated into the engine. This level also includes all agents visible
+   * with `SHOW_AVAILABLE_AGENTS_ONLY`.
+   */
+  public const MARKETPLACE_AGENT_VISIBILITY_SHOW_AGENTS_ALREADY_INTEGRATED = 'SHOW_AGENTS_ALREADY_INTEGRATED';
+  /**
+   * Show all agents visible with `SHOW_AGENTS_ALREADY_INTEGRATED`, plus agents
+   * that have already been purchased by the project/organization, even if they
+   * are not currently integrated into the engine.
+   */
+  public const MARKETPLACE_AGENT_VISIBILITY_SHOW_AGENTS_ALREADY_PURCHASED = 'SHOW_AGENTS_ALREADY_PURCHASED';
+  /**
+   * All agents in the marketplace are visible, regardless of access or purchase
+   * status. This level encompasses all agents shown in the previous levels.
+   */
+  public const MARKETPLACE_AGENT_VISIBILITY_SHOW_ALL_AGENTS = 'SHOW_ALL_AGENTS';
+  /**
    * Default value.
    */
   public const SOLUTION_TYPE_SOLUTION_TYPE_UNSPECIFIED = 'SOLUTION_TYPE_UNSPECIFIED';
@@ -166,6 +191,12 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public $industryVertical;
   protected $knowledgeGraphConfigType = GoogleCloudDiscoveryengineV1EngineKnowledgeGraphConfig::class;
   protected $knowledgeGraphConfigDataType = '';
+  /**
+   * Optional. The visibility of marketplace agents in the agent gallery.
+   *
+   * @var string
+   */
+  public $marketplaceAgentVisibility;
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
   /**
@@ -192,6 +223,12 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public $name;
   protected $observabilityConfigType = GoogleCloudDiscoveryengineV1ObservabilityConfig::class;
   protected $observabilityConfigDataType = '';
+  /**
+   * Optional. The email of the procurement contact.
+   *
+   * @var string
+   */
+  public $procurementContactEmail;
   protected $searchEngineConfigType = GoogleCloudDiscoveryengineV1EngineSearchEngineConfig::class;
   protected $searchEngineConfigDataType = '';
   /**
@@ -465,6 +502,26 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
     return $this->knowledgeGraphConfig;
   }
   /**
+   * Optional. The visibility of marketplace agents in the agent gallery.
+   *
+   * Accepted values: MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED,
+   * SHOW_AVAILABLE_AGENTS_ONLY, SHOW_AGENTS_ALREADY_INTEGRATED,
+   * SHOW_AGENTS_ALREADY_PURCHASED, SHOW_ALL_AGENTS
+   *
+   * @param self::MARKETPLACE_AGENT_VISIBILITY_* $marketplaceAgentVisibility
+   */
+  public function setMarketplaceAgentVisibility($marketplaceAgentVisibility)
+  {
+    $this->marketplaceAgentVisibility = $marketplaceAgentVisibility;
+  }
+  /**
+   * @return self::MARKETPLACE_AGENT_VISIBILITY_*
+   */
+  public function getMarketplaceAgentVisibility()
+  {
+    return $this->marketplaceAgentVisibility;
+  }
+  /**
    * Configurations for the Media Engine. Only applicable on the data stores
    * with solution_type SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA
    * vertical.
@@ -539,6 +596,22 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public function getObservabilityConfig()
   {
     return $this->observabilityConfig;
+  }
+  /**
+   * Optional. The email of the procurement contact.
+   *
+   * @param string $procurementContactEmail
+   */
+  public function setProcurementContactEmail($procurementContactEmail)
+  {
+    $this->procurementContactEmail = $procurementContactEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getProcurementContactEmail()
+  {
+    return $this->procurementContactEmail;
   }
   /**
    * Configurations for the Search Engine. Only applicable if solution_type is

@@ -30,7 +30,9 @@ use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1LicenseConfig;
 class ProjectsLocationsLicenseConfigs extends \Google\Service\Resource
 {
   /**
-   * Creates a LicenseConfig (licenseConfigs.create)
+   * Creates a LicenseConfig This method should only be used for creating
+   * NotebookLm licenses or Gemini Enterprise free trial licenses.
+   * (licenseConfigs.create)
    *
    * @param string $parent Required. The parent resource name, such as
    * `projects/{project}/locations/{location}`.
