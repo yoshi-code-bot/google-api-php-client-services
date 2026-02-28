@@ -20,7 +20,7 @@ namespace Google\Service\DeveloperConnect;
 class SecureSourceManagerInstanceConfig extends \Google\Model
 {
   /**
-   * Required. Immutable. SSM instance resource, formatted as
+   * Required. Immutable. Secure Source Manager instance resource, formatted as
    * `projects/locations/instances`
    *
    * @var string
@@ -28,7 +28,7 @@ class SecureSourceManagerInstanceConfig extends \Google\Model
   public $instance;
 
   /**
-   * Required. Immutable. SSM instance resource, formatted as
+   * Required. Immutable. Secure Source Manager instance resource, formatted as
    * `projects/locations/instances`
    *
    * @param string $instance
