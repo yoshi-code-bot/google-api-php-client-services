@@ -19,6 +19,17 @@ namespace Google\Service\Backupdr;
 
 class InitializeServiceRequest extends \Google\Model
 {
+  /**
+   * Optional. The location where the BackupPlan will be created. This field is
+   * required for multi-region BackupVaults and is optional for regional
+   * BackupVaults. It is useful when creating a Backup Vault in a multi-region,
+   * allowing the BackupPlan to reside in a specific region within that multi-
+   * region. If this field is not provided, the BackupPlan will be created in
+   * the same location as specified in the `name` field.
+   *
+   * @var string
+   */
+  public $backupPlanLocation;
   protected $cloudSqlInstanceInitializationConfigType = CloudSqlInstanceInitializationConfig::class;
   protected $cloudSqlInstanceInitializationConfigDataType = '';
   /**
@@ -46,6 +57,27 @@ class InitializeServiceRequest extends \Google\Model
    */
   public $resourceType;
 
+  /**
+   * Optional. The location where the BackupPlan will be created. This field is
+   * required for multi-region BackupVaults and is optional for regional
+   * BackupVaults. It is useful when creating a Backup Vault in a multi-region,
+   * allowing the BackupPlan to reside in a specific region within that multi-
+   * region. If this field is not provided, the BackupPlan will be created in
+   * the same location as specified in the `name` field.
+   *
+   * @param string $backupPlanLocation
+   */
+  public function setBackupPlanLocation($backupPlanLocation)
+  {
+    $this->backupPlanLocation = $backupPlanLocation;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupPlanLocation()
+  {
+    return $this->backupPlanLocation;
+  }
   /**
    * Optional. The configuration for initializing a Cloud SQL instance.
    *
