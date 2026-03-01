@@ -101,9 +101,10 @@ class AuthzExtension extends \Google\Collection
    */
   public $labels;
   /**
-   * Required. All backend services and forwarding rules referenced by this
+   * Optional. All backend services and forwarding rules referenced by this
    * extension must share the same load balancing scheme. Supported values:
-   * `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more information, refer to
+   * `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be omitted for AuthzExtensions
+   * that do not reference a backend service. For more information, refer to
    * [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    *
@@ -275,9 +276,10 @@ class AuthzExtension extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Required. All backend services and forwarding rules referenced by this
+   * Optional. All backend services and forwarding rules referenced by this
    * extension must share the same load balancing scheme. Supported values:
-   * `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more information, refer to
+   * `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be omitted for AuthzExtensions
+   * that do not reference a backend service. For more information, refer to
    * [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    *
