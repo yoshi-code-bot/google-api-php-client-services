@@ -30,7 +30,7 @@ class SessionConfig extends \Google\Collection
   /**
    * Optional. The entry agent to handle the session. If not specified, the
    * session will be handled by the root agent of the app. Format:
-   * `projects/{project}/locations/{location}/agents/{agent}`
+   * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
    *
    * @var string
    */
@@ -52,6 +52,13 @@ class SessionConfig extends \Google\Collection
    * @var string
    */
   public $timeZone;
+  /**
+   * Optional. Whether to use tool fakes for the session. If this field is set,
+   * the agent will attempt use tool fakes instead of calling the real tools.
+   *
+   * @var bool
+   */
+  public $useToolFakes;
 
   /**
    * Optional. The deployment of the app to use for the session. Format: `projec
@@ -73,7 +80,7 @@ class SessionConfig extends \Google\Collection
   /**
    * Optional. The entry agent to handle the session. If not specified, the
    * session will be handled by the root agent of the app. Format:
-   * `projects/{project}/locations/{location}/agents/{agent}`
+   * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
    *
    * @param string $entryAgent
    */
@@ -179,6 +186,23 @@ class SessionConfig extends \Google\Collection
   public function getTimeZone()
   {
     return $this->timeZone;
+  }
+  /**
+   * Optional. Whether to use tool fakes for the session. If this field is set,
+   * the agent will attempt use tool fakes instead of calling the real tools.
+   *
+   * @param bool $useToolFakes
+   */
+  public function setUseToolFakes($useToolFakes)
+  {
+    $this->useToolFakes = $useToolFakes;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseToolFakes()
+  {
+    return $this->useToolFakes;
   }
 }
 

@@ -21,6 +21,8 @@ class Chunk extends \Google\Model
 {
   protected $agentTransferType = AgentTransfer::class;
   protected $agentTransferDataType = '';
+  protected $blobType = Blob::class;
+  protected $blobDataType = '';
   /**
    * A struct represents default variables at the start of the conversation,
    * keyed by variable names.
@@ -75,6 +77,22 @@ class Chunk extends \Google\Model
   public function getAgentTransfer()
   {
     return $this->agentTransfer;
+  }
+  /**
+   * Optional. Blob data.
+   *
+   * @param Blob $blob
+   */
+  public function setBlob(Blob $blob)
+  {
+    $this->blob = $blob;
+  }
+  /**
+   * @return Blob
+   */
+  public function getBlob()
+  {
+    return $this->blob;
   }
   /**
    * A struct represents default variables at the start of the conversation,

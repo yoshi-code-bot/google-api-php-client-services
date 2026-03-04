@@ -70,6 +70,8 @@ class App extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $errorHandlingSettingsType = ErrorHandlingSettings::class;
+  protected $errorHandlingSettingsDataType = '';
   /**
    * Output only. Etag used to ensure the object hasn't changed during a read-
    * modify-write operation. If the etag is empty, the update will overwrite any
@@ -282,6 +284,22 @@ class App extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. Error handling settings of the app.
+   *
+   * @param ErrorHandlingSettings $errorHandlingSettings
+   */
+  public function setErrorHandlingSettings(ErrorHandlingSettings $errorHandlingSettings)
+  {
+    $this->errorHandlingSettings = $errorHandlingSettings;
+  }
+  /**
+   * @return ErrorHandlingSettings
+   */
+  public function getErrorHandlingSettings()
+  {
+    return $this->errorHandlingSettings;
   }
   /**
    * Output only. Etag used to ensure the object hasn't changed during a read-
