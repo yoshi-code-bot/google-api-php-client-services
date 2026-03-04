@@ -124,6 +124,21 @@ class Database extends \Google\Model
    * @var string
    */
   public $opsInsightsStatus;
+  /**
+   * Optional. The ID of the pluggable database associated with the Database.
+   * The ID must be unique within the project and location.
+   *
+   * @var string
+   */
+  public $pluggableDatabaseId;
+  /**
+   * Optional. The pluggable database associated with the Database. The name
+   * must begin with an alphabetic character and can contain a maximum of thirty
+   * alphanumeric characters.
+   *
+   * @var string
+   */
+  public $pluggableDatabaseName;
   protected $propertiesType = DatabaseProperties::class;
   protected $propertiesDataType = '';
   /**
@@ -332,6 +347,41 @@ class Database extends \Google\Model
   public function getOpsInsightsStatus()
   {
     return $this->opsInsightsStatus;
+  }
+  /**
+   * Optional. The ID of the pluggable database associated with the Database.
+   * The ID must be unique within the project and location.
+   *
+   * @param string $pluggableDatabaseId
+   */
+  public function setPluggableDatabaseId($pluggableDatabaseId)
+  {
+    $this->pluggableDatabaseId = $pluggableDatabaseId;
+  }
+  /**
+   * @return string
+   */
+  public function getPluggableDatabaseId()
+  {
+    return $this->pluggableDatabaseId;
+  }
+  /**
+   * Optional. The pluggable database associated with the Database. The name
+   * must begin with an alphabetic character and can contain a maximum of thirty
+   * alphanumeric characters.
+   *
+   * @param string $pluggableDatabaseName
+   */
+  public function setPluggableDatabaseName($pluggableDatabaseName)
+  {
+    $this->pluggableDatabaseName = $pluggableDatabaseName;
+  }
+  /**
+   * @return string
+   */
+  public function getPluggableDatabaseName()
+  {
+    return $this->pluggableDatabaseName;
   }
   /**
    * Optional. The properties of the Database.
