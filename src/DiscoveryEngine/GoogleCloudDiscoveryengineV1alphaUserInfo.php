@@ -43,7 +43,10 @@ class GoogleCloudDiscoveryengineV1alphaUserInfo extends \Google\Model
    * different users. This mixes the event history of those users together,
    * which results in degraded model quality. The field must be a UTF-8 encoded
    * string with a length limit of 128 characters. Otherwise, an
-   * `INVALID_ARGUMENT` error is returned.
+   * `INVALID_ARGUMENT` error is returned. Represents an opaque ID to the Search
+   * API. The Search API doesn't interpret the value in any way. This field is
+   * used to associate events with a user across sessions if the events are
+   * being uploaded.
    *
    * @var string
    */
@@ -93,7 +96,10 @@ class GoogleCloudDiscoveryengineV1alphaUserInfo extends \Google\Model
    * different users. This mixes the event history of those users together,
    * which results in degraded model quality. The field must be a UTF-8 encoded
    * string with a length limit of 128 characters. Otherwise, an
-   * `INVALID_ARGUMENT` error is returned.
+   * `INVALID_ARGUMENT` error is returned. Represents an opaque ID to the Search
+   * API. The Search API doesn't interpret the value in any way. This field is
+   * used to associate events with a user across sessions if the events are
+   * being uploaded.
    *
    * @param string $userId
    */
