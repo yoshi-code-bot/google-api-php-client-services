@@ -54,6 +54,8 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
    * @var bool
    */
   public $useStaticSecrets;
+  protected $userDefinedScopesMappingType = GoogleCloudDiscoveryengineV1alphaActionConfigScopeList::class;
+  protected $userDefinedScopesMappingDataType = 'map';
 
   /**
    * Optional. Action parameters in structured json format.
@@ -139,6 +141,23 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
   public function getUseStaticSecrets()
   {
     return $this->useStaticSecrets;
+  }
+  /**
+   * Optional. Mapping from operation name to the list of scopes. Only be
+   * populated if there are user specified scopes.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaActionConfigScopeList[] $userDefinedScopesMapping
+   */
+  public function setUserDefinedScopesMapping($userDefinedScopesMapping)
+  {
+    $this->userDefinedScopesMapping = $userDefinedScopesMapping;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaActionConfigScopeList[]
+   */
+  public function getUserDefinedScopesMapping()
+  {
+    return $this->userDefinedScopesMapping;
   }
 }
 

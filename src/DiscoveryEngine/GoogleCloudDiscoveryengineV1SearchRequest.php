@@ -320,9 +320,7 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
    * Example #2 (coordination between /search API calls and /answer API calls):
    * Call /answer API with the session ID generated in the first call. Here, the
    * answer generation happens in the context of the search results from the
-   * first search call. Multi-turn Search feature is currently at private GA
-   * stage. Please use v1alpha or v1beta version instead before we launch this
-   * feature to public GA. Or ask for allowlisting through Google Support team.
+   * first search call.
    *
    * @var string
    */
@@ -957,9 +955,7 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
    * Example #2 (coordination between /search API calls and /answer API calls):
    * Call /answer API with the session ID generated in the first call. Here, the
    * answer generation happens in the context of the search results from the
-   * first search call. Multi-turn Search feature is currently at private GA
-   * stage. Please use v1alpha or v1beta version instead before we launch this
-   * feature to public GA. Or ask for allowlisting through Google Support team.
+   * first search call.
    *
    * @param string $session
    */
