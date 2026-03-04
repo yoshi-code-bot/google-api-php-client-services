@@ -119,12 +119,12 @@ class ProjectsLocationsAppsTools extends \Google\Service\Resource
   /**
    * Updates the specified tool. (tools.patch)
    *
-   * @param string $name Identifier. The unique identifier of the tool. Format: -
-   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ##
-   * standalone tools. `projects/{project}/locations/{location}/apps/{app}/toolset
-   * s/{toolset}/tools/{tool}` for tools retrieved from a toolset. These tools are
-   * dynamic and output-only, they cannot be referenced directly where a tool is
-   * expected.
+   * @param string $name Identifier. The resource name of the tool. Format: *
+   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for
+   * standalone tools. * `projects/{project}/locations/{location}/apps/{app}/tools
+   * ets/{toolset}/tools/{tool}` for tools retrieved from a toolset. These tools
+   * are dynamic and output-only; they cannot be referenced directly where a tool
+   * is expected.
    * @param Tool $postBody
    * @param array $optParams Optional parameters.
    *

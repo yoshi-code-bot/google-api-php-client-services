@@ -20,8 +20,10 @@ namespace Google\Service\CustomerEngagementSuite;
 class Deployment extends \Google\Model
 {
   /**
-   * Required. The resource name of the app version to deploy. Format:
-   * projects/{project}/locations/{location}/apps/{app}/versions/{version}
+   * Optional. The resource name of the app version to deploy. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
+   * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the
+   * draft app.
    *
    * @var string
    */
@@ -49,8 +51,8 @@ class Deployment extends \Google\Model
    */
   public $etag;
   /**
-   * Identifier. The resource name of the deployment. Format:
-   * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+   * Identifier. The resource name of the deployment. Format: `projects/{project
+   * }/locations/{location}/apps/{app}/deployments/{deployment}`
    *
    * @var string
    */
@@ -63,8 +65,10 @@ class Deployment extends \Google\Model
   public $updateTime;
 
   /**
-   * Required. The resource name of the app version to deploy. Format:
-   * projects/{project}/locations/{location}/apps/{app}/versions/{version}
+   * Optional. The resource name of the app version to deploy. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
+   * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the
+   * draft app.
    *
    * @param string $appVersion
    */
@@ -146,8 +150,8 @@ class Deployment extends \Google\Model
     return $this->etag;
   }
   /**
-   * Identifier. The resource name of the deployment. Format:
-   * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+   * Identifier. The resource name of the deployment. Format: `projects/{project
+   * }/locations/{location}/apps/{app}/deployments/{deployment}`
    *
    * @param string $name
    */
