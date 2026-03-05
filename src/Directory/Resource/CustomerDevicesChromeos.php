@@ -59,9 +59,10 @@ class CustomerDevicesChromeos extends \Google\Service\Resource
    * account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Search string in the format given at
-   * https://developers.google.com/workspace/admin/directory/v1/list-query-
-   * operators
+   * @opt_param string filter Optional. Search string in the format given at [List
+   * query
+   * operators](https://developers.google.com/workspace/admin/directory/v1/list-
+   * query-operators).
    * @opt_param bool includeChildOrgunits Optional. Return devices from all child
    * orgunits, as well as the specified org unit. If this is set to true,
    * 'orgUnitPath' must be provided.
