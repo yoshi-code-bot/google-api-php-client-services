@@ -75,6 +75,8 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
    * @var string
    */
   public $likelihood;
+  protected $metadataKeyValueExpressionType = GooglePrivacyDlpV2MetadataKeyValueExpression::class;
+  protected $metadataKeyValueExpressionDataType = '';
   protected $regexType = GooglePrivacyDlpV2Regex::class;
   protected $regexDataType = '';
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
@@ -180,6 +182,22 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
   public function getLikelihood()
   {
     return $this->likelihood;
+  }
+  /**
+   * key-value pairs to detect in the metadata.
+   *
+   * @param GooglePrivacyDlpV2MetadataKeyValueExpression $metadataKeyValueExpression
+   */
+  public function setMetadataKeyValueExpression(GooglePrivacyDlpV2MetadataKeyValueExpression $metadataKeyValueExpression)
+  {
+    $this->metadataKeyValueExpression = $metadataKeyValueExpression;
+  }
+  /**
+   * @return GooglePrivacyDlpV2MetadataKeyValueExpression
+   */
+  public function getMetadataKeyValueExpression()
+  {
+    return $this->metadataKeyValueExpression;
   }
   /**
    * Regular expression based CustomInfoType.
