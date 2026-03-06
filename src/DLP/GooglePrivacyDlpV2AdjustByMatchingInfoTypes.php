@@ -78,7 +78,7 @@ class GooglePrivacyDlpV2AdjustByMatchingInfoTypes extends \Google\Collection
   protected $infoTypesType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypesDataType = 'array';
   /**
-   * How the adjustment rule is applied. Only MATCHING_TYPE_PARTIAL_MATCH is
+   * How the adjustment rule is applied. Only `MATCHING_TYPE_PARTIAL_MATCH` is
    * supported: - Partial match: adjusts the findings of infoTypes specified in
    * the inspection rule when they have a nonempty intersection with a finding
    * of an infoType specified in this adjustment rule.
@@ -121,7 +121,7 @@ class GooglePrivacyDlpV2AdjustByMatchingInfoTypes extends \Google\Collection
     return $this->infoTypes;
   }
   /**
-   * How the adjustment rule is applied. Only MATCHING_TYPE_PARTIAL_MATCH is
+   * How the adjustment rule is applied. Only `MATCHING_TYPE_PARTIAL_MATCH` is
    * supported: - Partial match: adjusts the findings of infoTypes specified in
    * the inspection rule when they have a nonempty intersection with a finding
    * of an infoType specified in this adjustment rule.
