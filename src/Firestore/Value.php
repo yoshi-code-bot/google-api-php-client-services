@@ -95,6 +95,15 @@ class Value extends \Google\Model
    * @var string
    */
   public $timestampValue;
+  /**
+   * Pointer to a variable defined elsewhere in a pipeline. Unlike
+   * `field_reference_value` which references a field within a document, this
+   * refers to a variable, defined in a separate namespace than the fields of a
+   * document.
+   *
+   * @var string
+   */
+  public $variableReferenceValue;
 
   /**
    * An array value. Cannot directly contain another array value, though can
@@ -324,6 +333,25 @@ class Value extends \Google\Model
   public function getTimestampValue()
   {
     return $this->timestampValue;
+  }
+  /**
+   * Pointer to a variable defined elsewhere in a pipeline. Unlike
+   * `field_reference_value` which references a field within a document, this
+   * refers to a variable, defined in a separate namespace than the fields of a
+   * document.
+   *
+   * @param string $variableReferenceValue
+   */
+  public function setVariableReferenceValue($variableReferenceValue)
+  {
+    $this->variableReferenceValue = $variableReferenceValue;
+  }
+  /**
+   * @return string
+   */
+  public function getVariableReferenceValue()
+  {
+    return $this->variableReferenceValue;
   }
 }
 

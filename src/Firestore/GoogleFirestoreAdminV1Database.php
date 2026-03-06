@@ -241,7 +241,7 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
    */
   public $keyPrefix;
   /**
-   * The location of the database. Available locations are listed at
+   * Required. The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    *
    * @var string
@@ -293,7 +293,7 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
    */
   public $tags;
   /**
-   * The type of the database. See
+   * Required. The type of the database. See
    * https://cloud.google.com/datastore/docs/firestore-or-datastore for
    * information about how to choose.
    *
@@ -557,7 +557,7 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
     return $this->keyPrefix;
   }
   /**
-   * The location of the database. Available locations are listed at
+   * Required. The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    *
    * @param string $locationId
@@ -702,7 +702,7 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
     return $this->tags;
   }
   /**
-   * The type of the database. See
+   * Required. The type of the database. See
    * https://cloud.google.com/datastore/docs/firestore-or-datastore for
    * information about how to choose.
    *
