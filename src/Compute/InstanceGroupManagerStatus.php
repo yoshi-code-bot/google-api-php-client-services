@@ -17,10 +17,13 @@
 
 namespace Google\Service\Compute;
 
-class InstanceGroupManagerStatus extends \Google\Model
+class InstanceGroupManagerStatus extends \Google\Collection
 {
+  protected $collection_key = 'appliedAcceleratorTopologies';
   protected $allInstancesConfigType = InstanceGroupManagerStatusAllInstancesConfig::class;
   protected $allInstancesConfigDataType = '';
+  protected $appliedAcceleratorTopologiesType = InstanceGroupManagerStatusAcceleratorTopology::class;
+  protected $appliedAcceleratorTopologiesDataType = 'array';
   /**
    * Output only. [Output Only] The URL of theAutoscaler that targets this
    * instance group manager.
@@ -28,6 +31,8 @@ class InstanceGroupManagerStatus extends \Google\Model
    * @var string
    */
   public $autoscaler;
+  protected $bulkInstanceOperationType = InstanceGroupManagerStatusBulkInstanceOperation::class;
+  protected $bulkInstanceOperationDataType = '';
   /**
    * Output only. [Output Only] A bit indicating whether the managed instance
    * group is in a stable state. A stable state means that: none of the
@@ -62,6 +67,23 @@ class InstanceGroupManagerStatus extends \Google\Model
     return $this->allInstancesConfig;
   }
   /**
+   * Output only. [Output Only] The accelerator topology applied to this MIG.
+   * Currently only one accelerator topology is supported.
+   *
+   * @param InstanceGroupManagerStatusAcceleratorTopology[] $appliedAcceleratorTopologies
+   */
+  public function setAppliedAcceleratorTopologies($appliedAcceleratorTopologies)
+  {
+    $this->appliedAcceleratorTopologies = $appliedAcceleratorTopologies;
+  }
+  /**
+   * @return InstanceGroupManagerStatusAcceleratorTopology[]
+   */
+  public function getAppliedAcceleratorTopologies()
+  {
+    return $this->appliedAcceleratorTopologies;
+  }
+  /**
    * Output only. [Output Only] The URL of theAutoscaler that targets this
    * instance group manager.
    *
@@ -77,6 +99,22 @@ class InstanceGroupManagerStatus extends \Google\Model
   public function getAutoscaler()
   {
     return $this->autoscaler;
+  }
+  /**
+   * Output only. [Output Only] The status of bulk instance operation.
+   *
+   * @param InstanceGroupManagerStatusBulkInstanceOperation $bulkInstanceOperation
+   */
+  public function setBulkInstanceOperation(InstanceGroupManagerStatusBulkInstanceOperation $bulkInstanceOperation)
+  {
+    $this->bulkInstanceOperation = $bulkInstanceOperation;
+  }
+  /**
+   * @return InstanceGroupManagerStatusBulkInstanceOperation
+   */
+  public function getBulkInstanceOperation()
+  {
+    return $this->bulkInstanceOperation;
   }
   /**
    * Output only. [Output Only] A bit indicating whether the managed instance

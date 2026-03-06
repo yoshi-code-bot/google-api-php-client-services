@@ -138,8 +138,9 @@ class SslPolicy extends \Google\Collection
   /**
    * Profile specifies the set of SSL features that can be used by the load
    * balancer when negotiating SSL with clients. This can be one ofCOMPATIBLE,
-   * MODERN, RESTRICTED, orCUSTOM. If using CUSTOM, the set of SSL features to
-   * enable must be specified in the customFeatures field.
+   * MODERN, RESTRICTED,FIPS_202205, or CUSTOM. If usingCUSTOM, the set of SSL
+   * features to enable must be specified in the customFeatures field. If using
+   * FIPS_202205, the min_tls_version field must be set to TLS_1_2.
    *
    * @var string
    */
@@ -329,8 +330,9 @@ class SslPolicy extends \Google\Collection
   /**
    * Profile specifies the set of SSL features that can be used by the load
    * balancer when negotiating SSL with clients. This can be one ofCOMPATIBLE,
-   * MODERN, RESTRICTED, orCUSTOM. If using CUSTOM, the set of SSL features to
-   * enable must be specified in the customFeatures field.
+   * MODERN, RESTRICTED,FIPS_202205, or CUSTOM. If usingCUSTOM, the set of SSL
+   * features to enable must be specified in the customFeatures field. If using
+   * FIPS_202205, the min_tls_version field must be set to TLS_1_2.
    *
    * Accepted values: COMPATIBLE, CUSTOM, FIPS_202205, MODERN, RESTRICTED
    *

@@ -17,27 +17,29 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\NotificationEndpoint;
-use Google\Service\Compute\NotificationEndpointAggregatedList;
-use Google\Service\Compute\NotificationEndpointList;
+use Google\Service\Compute\HealthSource;
+use Google\Service\Compute\HealthSourceAggregatedList;
+use Google\Service\Compute\HealthSourceList;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\TestPermissionsRequest;
 use Google\Service\Compute\TestPermissionsResponse;
 
 /**
- * The "regionNotificationEndpoints" collection of methods.
+ * The "regionHealthSources" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $regionNotificationEndpoints = $computeService->regionNotificationEndpoints;
+ *   $regionHealthSources = $computeService->regionHealthSources;
  *  </code>
  */
-class RegionNotificationEndpoints extends \Google\Service\Resource
+class RegionHealthSources extends \Google\Service\Resource
 {
   /**
-   * Retrieves the list of all NotificationEndpoint resources, regional and
-   * global, available to the specified project.
-   * (regionNotificationEndpoints.aggregatedList)
+   * Retrieves the list of all HealthSource resources (all regional) available to
+   * the specified project.
+   *
+   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * parameter to `true`. (regionHealthSources.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.
    * @param array $optParams Optional parameters.
@@ -121,23 +123,22 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
-   * @return NotificationEndpointAggregatedList
+   * @return HealthSourceAggregatedList
    * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
     $params = ['project' => $project];
     $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', [$params], NotificationEndpointAggregatedList::class);
+    return $this->call('aggregatedList', [$params], HealthSourceAggregatedList::class);
   }
   /**
-   * Deletes the specified NotificationEndpoint in the given region
-   * (regionNotificationEndpoints.delete)
+   * Deletes the specified HealthSource in the given region
+   * (regionHealthSources.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
-   * @param string $notificationEndpoint Name of the NotificationEndpoint resource
-   * to delete.
+   * @param string $healthSource Name of the HealthSource resource to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -155,38 +156,36 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $region, $notificationEndpoint, $optParams = [])
+  public function delete($project, $region, $healthSource, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'notificationEndpoint' => $notificationEndpoint];
+    $params = ['project' => $project, 'region' => $region, 'healthSource' => $healthSource];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified NotificationEndpoint resource in the given region.
-   * (regionNotificationEndpoints.get)
+   * Returns the specified HealthSource resource in the given region.
+   * (regionHealthSources.get)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
-   * @param string $notificationEndpoint Name of the NotificationEndpoint resource
-   * to return.
+   * @param string $healthSource Name of the HealthSource resource to return.
    * @param array $optParams Optional parameters.
-   * @return NotificationEndpoint
+   * @return HealthSource
    * @throws \Google\Service\Exception
    */
-  public function get($project, $region, $notificationEndpoint, $optParams = [])
+  public function get($project, $region, $healthSource, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'notificationEndpoint' => $notificationEndpoint];
+    $params = ['project' => $project, 'region' => $region, 'healthSource' => $healthSource];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], NotificationEndpoint::class);
+    return $this->call('get', [$params], HealthSource::class);
   }
   /**
-   * Create a NotificationEndpoint in the specified project in the given region
-   * using the parameters that are included in the request.
-   * (regionNotificationEndpoints.insert)
+   * Create a HealthSource in the specified project in the given region using the
+   * parameters that are included in the request. (regionHealthSources.insert)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
-   * @param NotificationEndpoint $postBody
+   * @param HealthSource $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -204,15 +203,15 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, $region, NotificationEndpoint $postBody, $optParams = [])
+  public function insert($project, $region, HealthSource $postBody, $optParams = [])
   {
     $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Lists the NotificationEndpoints for a project in the given region.
-   * (regionNotificationEndpoints.listRegionNotificationEndpoints)
+   * Lists the HealthSources for a project in the given region.
+   * (regionHealthSources.listRegionHealthSources)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
@@ -287,18 +286,51 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @return NotificationEndpointList
+   * @return HealthSourceList
    * @throws \Google\Service\Exception
    */
-  public function listRegionNotificationEndpoints($project, $region, $optParams = [])
+  public function listRegionHealthSources($project, $region, $optParams = [])
   {
     $params = ['project' => $project, 'region' => $region];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], NotificationEndpointList::class);
+    return $this->call('list', [$params], HealthSourceList::class);
+  }
+  /**
+   * Updates the specified regional HealthSource resource with the data included
+   * in the request.  This method supportsPATCH semantics and uses theJSON merge
+   * patch format and processing rules. (regionHealthSources.patch)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $healthSource Name of the HealthSource to update. The name must
+   * be 1-63 characters long, and comply with RFC1035.
+   * @param HealthSource $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($project, $region, $healthSource, HealthSource $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'healthSource' => $healthSource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
   /**
    * Returns permissions that a caller has on the specified resource.
-   * (regionNotificationEndpoints.testIamPermissions)
+   * (regionHealthSources.testIamPermissions)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region for this request.
@@ -317,4 +349,4 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RegionNotificationEndpoints::class, 'Google_Service_Compute_Resource_RegionNotificationEndpoints');
+class_alias(RegionHealthSources::class, 'Google_Service_Compute_Resource_RegionHealthSources');
