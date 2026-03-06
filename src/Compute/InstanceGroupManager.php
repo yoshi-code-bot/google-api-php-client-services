@@ -181,6 +181,8 @@ class InstanceGroupManager extends \Google\Collection
    * @var int
    */
   public $targetSize;
+  protected $targetSizePolicyType = InstanceGroupManagerTargetSizePolicy::class;
+  protected $targetSizePolicyDataType = '';
   /**
    * The target number of stopped instances for this managed instance group.
    * This number changes when you:         - Stop instance using the
@@ -686,6 +688,23 @@ class InstanceGroupManager extends \Google\Collection
   public function getTargetSize()
   {
     return $this->targetSize;
+  }
+  /**
+   * The policy that specifies how the MIG creates its VMs to achieve the target
+   * size.
+   *
+   * @param InstanceGroupManagerTargetSizePolicy $targetSizePolicy
+   */
+  public function setTargetSizePolicy(InstanceGroupManagerTargetSizePolicy $targetSizePolicy)
+  {
+    $this->targetSizePolicy = $targetSizePolicy;
+  }
+  /**
+   * @return InstanceGroupManagerTargetSizePolicy
+   */
+  public function getTargetSizePolicy()
+  {
+    return $this->targetSizePolicy;
   }
   /**
    * The target number of stopped instances for this managed instance group.
