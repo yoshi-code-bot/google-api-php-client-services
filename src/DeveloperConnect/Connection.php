@@ -244,7 +244,8 @@ class Connection extends \Google\Model
   /**
    * Optional. Configuration for the git proxy feature. Enabling the git proxy
    * allows clients to perform git operations on the repositories linked in the
-   * connection.
+   * connection. [Learn more](https://docs.cloud.google.com/developer-
+   * connect/docs/configure-git-proxy).
    *
    * @param GitProxyConfig $gitProxyConfig
    */
