@@ -71,6 +71,14 @@ class AdGroupAd extends \Google\Collection
   protected $audioAdDataType = '';
   protected $bumperAdType = BumperAd::class;
   protected $bumperAdDataType = '';
+  protected $demandGenCarouselAdType = DemandGenCarouselAd::class;
+  protected $demandGenCarouselAdDataType = '';
+  protected $demandGenImageAdType = DemandGenImageAd::class;
+  protected $demandGenImageAdDataType = '';
+  protected $demandGenProductAdType = DemandGenProductAd::class;
+  protected $demandGenProductAdDataType = '';
+  protected $demandGenVideoAdType = DemandGenVideoAd::class;
+  protected $demandGenVideoAdDataType = '';
   /**
    * Required. The display name of the ad. Must be UTF-8 encoded with a maximum
    * size of 255 bytes.
@@ -218,6 +226,74 @@ class AdGroupAd extends \Google\Collection
   public function getBumperAd()
   {
     return $this->bumperAd;
+  }
+  /**
+   * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/ans
+   * wer/15598924?&sjid=11207068802760924844-NC#CarouselAd).
+   *
+   * @param DemandGenCarouselAd $demandGenCarouselAd
+   */
+  public function setDemandGenCarouselAd(DemandGenCarouselAd $demandGenCarouselAd)
+  {
+    $this->demandGenCarouselAd = $demandGenCarouselAd;
+  }
+  /**
+   * @return DemandGenCarouselAd
+   */
+  public function getDemandGenCarouselAd()
+  {
+    return $this->demandGenCarouselAd;
+  }
+  /**
+   * Details of a [Demand Gen image ad](//support.google.com/displayvideo/answer
+   * /15598924?&sjid=11207068802760924844-NC#ImageAd).
+   *
+   * @param DemandGenImageAd $demandGenImageAd
+   */
+  public function setDemandGenImageAd(DemandGenImageAd $demandGenImageAd)
+  {
+    $this->demandGenImageAd = $demandGenImageAd;
+  }
+  /**
+   * @return DemandGenImageAd
+   */
+  public function getDemandGenImageAd()
+  {
+    return $this->demandGenImageAd;
+  }
+  /**
+   * Details of a [Demand Gen product ad](//support.google.com/displayvideo/answ
+   * er/15598924?&sjid=11207068802760924844-NC#Product-onlyAd).
+   *
+   * @param DemandGenProductAd $demandGenProductAd
+   */
+  public function setDemandGenProductAd(DemandGenProductAd $demandGenProductAd)
+  {
+    $this->demandGenProductAd = $demandGenProductAd;
+  }
+  /**
+   * @return DemandGenProductAd
+   */
+  public function getDemandGenProductAd()
+  {
+    return $this->demandGenProductAd;
+  }
+  /**
+   * Details of a [Demand Gen video ad](//support.google.com/displayvideo/answer
+   * /15598924?&sjid=11207068802760924844-NC#VideoAd).
+   *
+   * @param DemandGenVideoAd $demandGenVideoAd
+   */
+  public function setDemandGenVideoAd(DemandGenVideoAd $demandGenVideoAd)
+  {
+    $this->demandGenVideoAd = $demandGenVideoAd;
+  }
+  /**
+   * @return DemandGenVideoAd
+   */
+  public function getDemandGenVideoAd()
+  {
+    return $this->demandGenVideoAd;
   }
   /**
    * Required. The display name of the ad. Must be UTF-8 encoded with a maximum

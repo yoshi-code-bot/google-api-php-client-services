@@ -20,6 +20,12 @@ namespace Google\Service\DisplayVideo;
 class ImageAsset extends \Google\Model
 {
   /**
+   * Required. The unique ID of the asset.
+   *
+   * @var string
+   */
+  public $assetId;
+  /**
    * Output only. File size of the image asset in bytes.
    *
    * @var string
@@ -34,6 +40,22 @@ class ImageAsset extends \Google\Model
    */
   public $mimeType;
 
+  /**
+   * Required. The unique ID of the asset.
+   *
+   * @param string $assetId
+   */
+  public function setAssetId($assetId)
+  {
+    $this->assetId = $assetId;
+  }
+  /**
+   * @return string
+   */
+  public function getAssetId()
+  {
+    return $this->assetId;
+  }
   /**
    * Output only. File size of the image asset in bytes.
    *
