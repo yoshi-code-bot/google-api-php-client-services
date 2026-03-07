@@ -19,6 +19,8 @@ namespace Google\Service\DisplayVideo;
 
 class BiddingStrategy extends \Google\Model
 {
+  protected $demandGenBidType = DemandGenBiddingStrategy::class;
+  protected $demandGenBidDataType = '';
   protected $fixedBidType = FixedBidStrategy::class;
   protected $fixedBidDataType = '';
   protected $maximizeSpendAutoBidType = MaximizeSpendBidStrategy::class;
@@ -28,6 +30,23 @@ class BiddingStrategy extends \Google\Model
   protected $youtubeAndPartnersBidType = YoutubeAndPartnersBiddingStrategy::class;
   protected $youtubeAndPartnersBidDataType = '';
 
+  /**
+   * A bid strategy used by Demand Gen resources. It can only be used for a
+   * Demand Gen line item or ad group entity.
+   *
+   * @param DemandGenBiddingStrategy $demandGenBid
+   */
+  public function setDemandGenBid(DemandGenBiddingStrategy $demandGenBid)
+  {
+    $this->demandGenBid = $demandGenBid;
+  }
+  /**
+   * @return DemandGenBiddingStrategy
+   */
+  public function getDemandGenBid()
+  {
+    return $this->demandGenBid;
+  }
   /**
    * A strategy that uses a fixed bid price.
    *

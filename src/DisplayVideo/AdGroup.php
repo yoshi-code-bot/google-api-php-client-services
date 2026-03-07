@@ -58,6 +58,10 @@ class AdGroup extends \Google\Model
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_MASTHEAD = 'AD_GROUP_FORMAT_MASTHEAD';
   /**
+   * Demand Gen ads.
+   */
+  public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_DEMAND_GEN = 'AD_GROUP_FORMAT_DEMAND_GEN';
+  /**
    * Default value when status is not specified or is unknown in this version.
    */
   public const ENTITY_STATUS_ENTITY_STATUS_UNSPECIFIED = 'ENTITY_STATUS_UNSPECIFIED';
@@ -94,6 +98,8 @@ class AdGroup extends \Google\Model
    * @var string
    */
   public $adGroupId;
+  protected $adGroupInventoryControlType = AdGroupInventoryControl::class;
+  protected $adGroupInventoryControlDataType = '';
   /**
    * Output only. The unique ID of the advertiser the ad group belongs to.
    *
@@ -141,7 +147,8 @@ class AdGroup extends \Google\Model
    * Accepted values: AD_GROUP_FORMAT_UNSPECIFIED, AD_GROUP_FORMAT_IN_STREAM,
    * AD_GROUP_FORMAT_VIDEO_DISCOVERY, AD_GROUP_FORMAT_BUMPER,
    * AD_GROUP_FORMAT_NON_SKIPPABLE_IN_STREAM, AD_GROUP_FORMAT_AUDIO,
-   * AD_GROUP_FORMAT_RESPONSIVE, AD_GROUP_FORMAT_REACH, AD_GROUP_FORMAT_MASTHEAD
+   * AD_GROUP_FORMAT_RESPONSIVE, AD_GROUP_FORMAT_REACH,
+   * AD_GROUP_FORMAT_MASTHEAD, AD_GROUP_FORMAT_DEMAND_GEN
    *
    * @param self::AD_GROUP_FORMAT_* $adGroupFormat
    */
@@ -171,6 +178,23 @@ class AdGroup extends \Google\Model
   public function getAdGroupId()
   {
     return $this->adGroupId;
+  }
+  /**
+   * Optional. Specifies the inventory control of the ad group. This field is
+   * required for Demand Gen ad groups.
+   *
+   * @param AdGroupInventoryControl $adGroupInventoryControl
+   */
+  public function setAdGroupInventoryControl(AdGroupInventoryControl $adGroupInventoryControl)
+  {
+    $this->adGroupInventoryControl = $adGroupInventoryControl;
+  }
+  /**
+   * @return AdGroupInventoryControl
+   */
+  public function getAdGroupInventoryControl()
+  {
+    return $this->adGroupInventoryControl;
   }
   /**
    * Output only. The unique ID of the advertiser the ad group belongs to.

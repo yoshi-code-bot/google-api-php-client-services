@@ -18,6 +18,7 @@
 namespace Google\Service\DisplayVideo\Resource;
 
 use Google\Service\DisplayVideo\AssignedTargetingOption;
+use Google\Service\DisplayVideo\DisplayvideoEmpty;
 use Google\Service\DisplayVideo\ListAdGroupAssignedTargetingOptionsResponse;
 
 /**
@@ -30,6 +31,65 @@ use Google\Service\DisplayVideo\ListAdGroupAssignedTargetingOptionsResponse;
  */
 class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\Service\Resource
 {
+  /**
+   * Assigns a targeting option to an ad group. Returns the assigned targeting
+   * option if successful. Only ad groups under a line item of line_item_type
+   * `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+   * (assignedTargetingOptions.create)
+   *
+   * @param string $advertiserId Required. The ID of the advertiser the ad group
+   * belongs to.
+   * @param string $adGroupId Required. The ID of the ad group the assigned
+   * targeting option will belong to.
+   * @param string $targetingType Required. Identifies the type of this assigned
+   * targeting option. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+   * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+   * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` *
+   * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+   * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+   * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+   * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+   * @param AssignedTargetingOption $postBody
+   * @param array $optParams Optional parameters.
+   * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
+   */
+  public function create($advertiserId, $adGroupId, $targetingType, AssignedTargetingOption $postBody, $optParams = [])
+  {
+    $params = ['advertiserId' => $advertiserId, 'adGroupId' => $adGroupId, 'targetingType' => $targetingType, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], AssignedTargetingOption::class);
+  }
+  /**
+   * Deletes an assigned targeting option from an ad group. Only ad groups under a
+   * line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for
+   * this method. (assignedTargetingOptions.delete)
+   *
+   * @param string $advertiserId Required. The ID of the advertiser the ad group
+   * belongs to.
+   * @param string $adGroupId Required. The ID of the ad group the assigned
+   * targeting option belongs to.
+   * @param string $targetingType Required. Identifies the type of this assigned
+   * targeting option. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+   * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+   * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` *
+   * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+   * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
+   * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+   * @param string $assignedTargetingOptionId Required. The ID of the assigned
+   * targeting option to delete.
+   * @param array $optParams Optional parameters.
+   * @return DisplayvideoEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($advertiserId, $adGroupId, $targetingType, $assignedTargetingOptionId, $optParams = [])
+  {
+    $params = ['advertiserId' => $advertiserId, 'adGroupId' => $adGroupId, 'targetingType' => $targetingType, 'assignedTargetingOptionId' => $assignedTargetingOptionId];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], DisplayvideoEmpty::class);
+  }
   /**
    * Gets a single targeting option assigned to an ad group. Inherited assigned
    * targeting options are not included. (assignedTargetingOptions.get)

@@ -172,6 +172,10 @@ class LineItem extends \Google\Collection
    */
   public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME = 'LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME';
   /**
+   * Demand Gen ads.
+   */
+  public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_DEMAND_GEN = 'LINE_ITEM_TYPE_DEMAND_GEN';
+  /**
    * Reservation type value is not specified or is unknown in this version.
    */
   public const RESERVATION_TYPE_RESERVATION_TYPE_UNSPECIFIED = 'RESERVATION_TYPE_UNSPECIFIED';
@@ -235,6 +239,8 @@ class LineItem extends \Google\Collection
    * @var string[]
    */
   public $creativeIds;
+  protected $demandGenSettingsType = DemandGenSettings::class;
+  protected $demandGenSettingsDataType = '';
   /**
    * Required. The display name of the line item. Must be UTF-8 encoded with a
    * maximum size of 240 bytes.
@@ -450,6 +456,22 @@ class LineItem extends \Google\Collection
     return $this->creativeIds;
   }
   /**
+   * Optional. Settings specific to Demand Gen line items.
+   *
+   * @param DemandGenSettings $demandGenSettings
+   */
+  public function setDemandGenSettings(DemandGenSettings $demandGenSettings)
+  {
+    $this->demandGenSettings = $demandGenSettings;
+  }
+  /**
+   * @return DemandGenSettings
+   */
+  public function getDemandGenSettings()
+  {
+    return $this->demandGenSettings;
+  }
+  /**
    * Required. The display name of the line item. Must be UTF-8 encoded with a
    * maximum size of 240 bytes.
    *
@@ -613,7 +635,8 @@ class LineItem extends \Google\Collection
    * LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_SIMPLE_OVER_THE_TOP,
    * LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_TARGET_FREQUENCY,
    * LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIEW,
-   * LINE_ITEM_TYPE_DISPLAY_OUT_OF_HOME, LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME
+   * LINE_ITEM_TYPE_DISPLAY_OUT_OF_HOME, LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME,
+   * LINE_ITEM_TYPE_DEMAND_GEN
    *
    * @param self::LINE_ITEM_TYPE_* $lineItemType
    */
