@@ -285,8 +285,8 @@ class Attributes extends \Google\Collection
   public $sizeSystem;
   /**
    * The cut of the item. It can be used to represent combined size types for
-   * apparel items. Maximum two of size types can be provided (see
-   * [https://support.google.com/merchants/answer/6324497](size type)).
+   * apparel items. Maximum two of size types can be provided (see [size
+   * type](https://support.google.com/merchants/answer/6324497).
    *
    * @var string[]
    */
@@ -1096,8 +1096,8 @@ class Attributes extends \Google\Collection
   }
   /**
    * The cut of the item. It can be used to represent combined size types for
-   * apparel items. Maximum two of size types can be provided (see
-   * [https://support.google.com/merchants/answer/6324497](size type)).
+   * apparel items. Maximum two of size types can be provided (see [size
+   * type](https://support.google.com/merchants/answer/6324497).
    *
    * @param string[] $sizeTypes
    */
