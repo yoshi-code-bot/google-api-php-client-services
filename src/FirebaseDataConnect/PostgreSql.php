@@ -80,6 +80,13 @@ class PostgreSql extends \Google\Model
    */
   public $ephemeral;
   /**
+   * Optional. User-configured PostgreSQL schema. Defaults to "public" if not
+   * specified.
+   *
+   * @var string
+   */
+  public $schema;
+  /**
    * Optional. Configure how to perform Postgresql schema migration.
    *
    * @var string
@@ -156,6 +163,23 @@ class PostgreSql extends \Google\Model
   public function getEphemeral()
   {
     return $this->ephemeral;
+  }
+  /**
+   * Optional. User-configured PostgreSQL schema. Defaults to "public" if not
+   * specified.
+   *
+   * @param string $schema
+   */
+  public function setSchema($schema)
+  {
+    $this->schema = $schema;
+  }
+  /**
+   * @return string
+   */
+  public function getSchema()
+  {
+    return $this->schema;
   }
   /**
    * Optional. Configure how to perform Postgresql schema migration.
