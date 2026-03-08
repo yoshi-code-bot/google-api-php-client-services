@@ -20,7 +20,7 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Collection
 {
   protected $collection_key = 'contents';
-  protected $agentConfigType = GoogleCloudAiplatformV1EvaluationInstanceAgentConfig::class;
+  protected $agentConfigType = GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig::class;
   protected $agentConfigDataType = '';
   protected $contentsType = GoogleCloudAiplatformV1Content::class;
   protected $contentsDataType = 'array';
@@ -39,14 +39,14 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
   /**
    * Optional. Agent configuration, required for agent-based rubric generation.
    *
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig
+   * @param GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig $agentConfig
    */
-  public function setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig)
+  public function setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig $agentConfig)
   {
     $this->agentConfig = $agentConfig;
   }
   /**
-   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentConfig
+   * @return GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig
    */
   public function getAgentConfig()
   {
