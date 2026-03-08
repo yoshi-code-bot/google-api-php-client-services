@@ -17,6 +17,9 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1AskContextsRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1AskContextsResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1AsyncRetrieveContextsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CorroborateContentRequest;
@@ -46,6 +49,41 @@ use Google\Service\Aiplatform\GoogleLongrunningOperation;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Agentic Retrieval Ask API for RAG. (locations.askContexts)
+   *
+   * @param string $parent Required. The resource name of the Location from which
+   * to retrieve RagContexts. The users must have permission to make a call in the
+   * project. Format: `projects/{project}/locations/{location}`.
+   * @param GoogleCloudAiplatformV1AskContextsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1AskContextsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function askContexts($parent, GoogleCloudAiplatformV1AskContextsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('askContexts', [$params], GoogleCloudAiplatformV1AskContextsResponse::class);
+  }
+  /**
+   * Asynchronous API to retrieves relevant contexts for a query.
+   * (locations.asyncRetrieveContexts)
+   *
+   * @param string $parent Required. The resource name of the Location from which
+   * to retrieve RagContexts. The users must have permission to make a call in the
+   * project. Format: `projects/{project}/locations/{location}`.
+   * @param GoogleCloudAiplatformV1AsyncRetrieveContextsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function asyncRetrieveContexts($parent, GoogleCloudAiplatformV1AsyncRetrieveContextsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('asyncRetrieveContexts', [$params], GoogleLongrunningOperation::class);
+  }
   /**
    * Given an input prompt, it returns augmented prompt from vertex rag store to
    * guide LLM towards generating grounded responses. (locations.augmentPrompt)

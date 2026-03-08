@@ -19,10 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
 {
-  protected $agentDataType = GoogleCloudAiplatformV1EvaluationInstanceAgentData::class;
+  protected $agentDataType = GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData::class;
   protected $agentDataDataType = '';
-  protected $agentEvalDataType = GoogleCloudAiplatformV1EvaluationInstanceAgentData::class;
-  protected $agentEvalDataDataType = '';
   protected $otherDataType = GoogleCloudAiplatformV1EvaluationInstanceMapInstance::class;
   protected $otherDataDataType = '';
   protected $promptType = GoogleCloudAiplatformV1EvaluationInstanceInstanceData::class;
@@ -35,39 +33,23 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
   protected $rubricGroupsDataType = 'map';
 
   /**
-   * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent
+   * Optional. Deprecated: Use `agent_eval_data` instead. Data used for agent
    * evaluation.
    *
    * @deprecated
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentData
+   * @param GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData $agentData
    */
-  public function setAgentData(GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentData)
+  public function setAgentData(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData $agentData)
   {
     $this->agentData = $agentData;
   }
   /**
    * @deprecated
-   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentData
+   * @return GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData
    */
   public function getAgentData()
   {
     return $this->agentData;
-  }
-  /**
-   * Optional. Data used for agent evaluation.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentEvalData
-   */
-  public function setAgentEvalData(GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentEvalData)
-  {
-    $this->agentEvalData = $agentEvalData;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentData
-   */
-  public function getAgentEvalData()
-  {
-    return $this->agentEvalData;
   }
   /**
    * Optional. Other data used to populate placeholders based on their key.
