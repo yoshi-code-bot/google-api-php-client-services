@@ -85,6 +85,19 @@ class ExtensionChainExtension extends \Google\Collection
    */
   public $failOpen;
   /**
+   * Optional. List of the Envoy attributes to forward to the extension server.
+   * The attributes provided here are included as part of the
+   * `ProcessingRequest.attributes` field (of type `map`), where the keys are
+   * the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-
+   * matcher-language-reference#attributes) for the names of attributes that can
+   * be forwarded. If omitted, no attributes are sent. Each element is a string
+   * indicating the attribute name.
+   *
+   * @var string[]
+   */
+  public $forwardAttributes;
+  /**
    * Optional. List of the HTTP headers to forward to the extension (from the
    * client or backend). If omitted, all headers are sent. Each element is a
    * string indicating the header name.
@@ -252,6 +265,29 @@ class ExtensionChainExtension extends \Google\Collection
   public function getFailOpen()
   {
     return $this->failOpen;
+  }
+  /**
+   * Optional. List of the Envoy attributes to forward to the extension server.
+   * The attributes provided here are included as part of the
+   * `ProcessingRequest.attributes` field (of type `map`), where the keys are
+   * the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-
+   * matcher-language-reference#attributes) for the names of attributes that can
+   * be forwarded. If omitted, no attributes are sent. Each element is a string
+   * indicating the attribute name.
+   *
+   * @param string[] $forwardAttributes
+   */
+  public function setForwardAttributes($forwardAttributes)
+  {
+    $this->forwardAttributes = $forwardAttributes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getForwardAttributes()
+  {
+    return $this->forwardAttributes;
   }
   /**
    * Optional. List of the HTTP headers to forward to the extension (from the
