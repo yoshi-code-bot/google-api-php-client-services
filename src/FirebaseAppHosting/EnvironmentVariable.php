@@ -81,10 +81,10 @@ class EnvironmentVariable extends \Google\Collection
    */
   public $value;
   /**
-   * Required. The name of the environment variable. - Must be a valid
-   * environment variable name (e.g. A-Z or underscores). - May not start with
-   * "FIREBASE" or "GOOGLE". - May not be a reserved environment variable for
-   * KNative/Cloud Run
+   * Required. The name of the environment variable. The environment variables
+   * reserved by [Cloud Run](https://docs.cloud.google.com/run/docs/configuring/
+   * services/environment-variables#reserved) should not be set. Additionally,
+   * variable names cannot start with "X_FIREBASE_".
    *
    * @var string
    */
@@ -182,10 +182,10 @@ class EnvironmentVariable extends \Google\Collection
     return $this->value;
   }
   /**
-   * Required. The name of the environment variable. - Must be a valid
-   * environment variable name (e.g. A-Z or underscores). - May not start with
-   * "FIREBASE" or "GOOGLE". - May not be a reserved environment variable for
-   * KNative/Cloud Run
+   * Required. The name of the environment variable. The environment variables
+   * reserved by [Cloud Run](https://docs.cloud.google.com/run/docs/configuring/
+   * services/environment-variables#reserved) should not be set. Additionally,
+   * variable names cannot start with "X_FIREBASE_".
    *
    * @param string $variable
    */
