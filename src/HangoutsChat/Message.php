@@ -293,11 +293,15 @@ class Message extends \Google\Collection
   }
   /**
    * Optional. An array of [cards](https://developers.google.com/workspace/chat/
-   * api/reference/rest/v1/cards). Only Chat apps can create cards. If your Chat
-   * app [authenticates as a
+   * api/reference/rest/v1/cards). Chat apps can create cards with [app
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-app). As part of the [Developer Preview
+   * Program](https://developers.google.com/workspace/preview), if your Chat app
+   * [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-
-   * chat-user), the messages can't contain cards. To learn how to create a
-   * message that contains cards, see [Send a
+   * chat-user), it can create card messages. If your Chat app is not part of
+   * Developer Preview Program, it can't create cards with user authentication.
+   * To learn how to create a message that contains cards, see [Send a
    * message](https://developers.google.com/workspace/chat/create-messages).
    * [Card builder](https://addons.gsuite.google.com/uikit/builder)
    *
