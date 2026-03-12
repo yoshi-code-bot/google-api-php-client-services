@@ -99,9 +99,13 @@ class AccountTypesAccountsPartnerLinks extends \Google\Service\Resource
    * `accountTypes/{account_type}/accounts/{account}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. A [filter string](//google.aip.dev/160).
-   * All fields need to be on the left hand side of each condition (for example:
-   * `partner_link_id = 123456789`). Supported operations: - `AND` - `=` - `!=`
+   * @opt_param string filter Optional. A [filter
+   * string](https://google.aip.dev/160). All fields need to be on the left hand
+   * side of each condition (for example: `partner_link_id = 123456789`). Fields
+   * must be specified using either all [camel
+   * case](https://en.wikipedia.org/wiki/Camel_case) or all [snake
+   * case](https://en.wikipedia.org/wiki/Snake_case). Don't use a combination of
+   * camel case and snake case. Supported operations: - `AND` - `=` - `!=`
    * Supported fields: - `partner_link_id` - `owning_account.account_type` -
    * `owning_account.account_id` - `partner_account.account_type` -
    * `partner_account.account_id` Example: `owning_account.account_type =

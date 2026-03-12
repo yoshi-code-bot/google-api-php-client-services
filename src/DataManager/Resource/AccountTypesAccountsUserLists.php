@@ -125,10 +125,14 @@ class AccountTypesAccountsUserLists extends \Google\Service\Resource
    * of user lists. Format: accountTypes/{account_type}/accounts/{account}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. A [filter string](//google.aip.dev/160).
-   * All fields need to be on the left hand side of each condition (for example:
-   * `display_name = "list 1"`). Supported operations: - `AND` - `=` - `!=` - `>`
-   * - `>=` - `<` - `<=` - `:` (has) Supported fields: - `id` - `display_name` -
+   * @opt_param string filter Optional. A [filter
+   * string](https://google.aip.dev/160). All fields need to be on the left hand
+   * side of each condition (for example: `display_name = "list 1"`). Fields must
+   * be specified using either all [camel
+   * case](https://en.wikipedia.org/wiki/Camel_case) or all [snake
+   * case](https://en.wikipedia.org/wiki/Snake_case). Don't use a combination of
+   * camel case and snake case. Supported operations: - `AND` - `=` - `!=` - `>` -
+   * `>=` - `<` - `<=` - `:` (has) Supported fields: - `id` - `display_name` -
    * `description` - `membership_status` - `integration_code` - `access_reason` -
    * `ingested_user_list_info.upload_key_types`
    * @opt_param int pageSize Optional. The maximum number of user lists to return.
