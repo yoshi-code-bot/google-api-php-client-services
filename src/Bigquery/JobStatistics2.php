@@ -119,6 +119,8 @@ class JobStatistics2 extends \Google\Collection
   protected $queryInfoDataType = '';
   protected $queryPlanType = ExplainQueryStage::class;
   protected $queryPlanDataType = 'array';
+  protected $referencedPropertyGraphsType = PropertyGraphReference::class;
+  protected $referencedPropertyGraphsDataType = 'array';
   protected $referencedRoutinesType = RoutineReference::class;
   protected $referencedRoutinesDataType = 'array';
   protected $referencedTablesType = TableReference::class;
@@ -789,6 +791,23 @@ class JobStatistics2 extends \Google\Collection
   public function getQueryPlan()
   {
     return $this->queryPlan;
+  }
+  /**
+   * Output only. Referenced property graphs for the job. Queries that reference
+   * more than 50 property graphs will not have a complete list.
+   *
+   * @param PropertyGraphReference[] $referencedPropertyGraphs
+   */
+  public function setReferencedPropertyGraphs($referencedPropertyGraphs)
+  {
+    $this->referencedPropertyGraphs = $referencedPropertyGraphs;
+  }
+  /**
+   * @return PropertyGraphReference[]
+   */
+  public function getReferencedPropertyGraphs()
+  {
+    return $this->referencedPropertyGraphs;
   }
   /**
    * Output only. Referenced routines for the job.
