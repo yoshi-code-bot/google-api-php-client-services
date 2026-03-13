@@ -186,8 +186,8 @@ class BiddersPretargetingConfigs extends \Google\Service\Resource
   /**
    * Updates a pretargeting configuration. (pretargetingConfigs.patch)
    *
-   * @param string $name Output only. Name of the pretargeting configuration that
-   * must follow the pattern
+   * @param string $name Output only. Name of the pretargeting config that must
+   * follow the pattern
    * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
    * @param PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
