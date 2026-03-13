@@ -51,9 +51,9 @@ class ProjectsLocationsUserStoresUserLicenses extends \Google\Service\Resource
    * user_principal` to order by `last_login_date` in descending order and then by
    * `user_principal` in ascending order.
    * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, defaults to 10. The maximum value
-   * is 50; values above 50 will be coerced to 50. If this field is negative, an
-   * INVALID_ARGUMENT error is returned.
+   * fewer items than requested. If unspecified, defaults to 1000. The maximum
+   * value is 1000; values above 1000 will be coerced to 1000. If this field is
+   * negative, an INVALID_ARGUMENT error is returned.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListUserLicenses` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListUserLicenses` must match

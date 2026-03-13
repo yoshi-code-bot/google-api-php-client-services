@@ -20,14 +20,14 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaObservabilityConfig extends \Google\Model
 {
   /**
-   * Optional. Enables observability. If false, all other flags are ignored.
+   * Optional. Enables observability. If `false`, all other flags are ignored.
    *
    * @var bool
    */
   public $observabilityEnabled;
   /**
    * Optional. Enables sensitive logging. Sensitive logging includes customer
-   * core content (e.g. prompts, responses). If false, will sanitize all
+   * core content (e.g. prompts, responses). If `false`, will sanitize all
    * sensitive fields.
    *
    * @var bool
@@ -35,7 +35,7 @@ class GoogleCloudDiscoveryengineV1betaObservabilityConfig extends \Google\Model
   public $sensitiveLoggingEnabled;
 
   /**
-   * Optional. Enables observability. If false, all other flags are ignored.
+   * Optional. Enables observability. If `false`, all other flags are ignored.
    *
    * @param bool $observabilityEnabled
    */
@@ -52,7 +52,7 @@ class GoogleCloudDiscoveryengineV1betaObservabilityConfig extends \Google\Model
   }
   /**
    * Optional. Enables sensitive logging. Sensitive logging includes customer
-   * core content (e.g. prompts, responses). If false, will sanitize all
+   * core content (e.g. prompts, responses). If `false`, will sanitize all
    * sensitive fields.
    *
    * @param bool $sensitiveLoggingEnabled
