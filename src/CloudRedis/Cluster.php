@@ -101,6 +101,12 @@ class Cluster extends \Google\Collection
   public const TRANSIT_ENCRYPTION_MODE_TRANSIT_ENCRYPTION_MODE_SERVER_AUTHENTICATION = 'TRANSIT_ENCRYPTION_MODE_SERVER_AUTHENTICATION';
   protected $collection_key = 'pscServiceAttachments';
   /**
+   * Optional. The ACL policy to be applied to the cluster.
+   *
+   * @var string
+   */
+  public $aclPolicy;
+  /**
    * Optional. Immutable. Deprecated, do not use.
    *
    * @deprecated
@@ -320,6 +326,22 @@ class Cluster extends \Google\Collection
   protected $zoneDistributionConfigType = ZoneDistributionConfig::class;
   protected $zoneDistributionConfigDataType = '';
 
+  /**
+   * Optional. The ACL policy to be applied to the cluster.
+   *
+   * @param string $aclPolicy
+   */
+  public function setAclPolicy($aclPolicy)
+  {
+    $this->aclPolicy = $aclPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getAclPolicy()
+  {
+    return $this->aclPolicy;
+  }
   /**
    * Optional. Immutable. Deprecated, do not use.
    *
