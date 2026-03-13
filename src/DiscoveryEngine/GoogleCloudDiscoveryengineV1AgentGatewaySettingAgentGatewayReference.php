@@ -17,34 +17,36 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy extends \Google\Model
+class GoogleCloudDiscoveryengineV1AgentGatewaySettingAgentGatewayReference extends \Google\Model
 {
   /**
-   * Optional. Specifies the resource name of the Sensitive Data Protection
-   * content policy.
+   * Required. Immutable. The resource name of the agent gateway. Expected
+   * format: `projects/{project_number}/locations/{location}/agentGateways/{agen
+   * t_gateway}`.
    *
    * @var string
    */
-  public $policy;
+  public $name;
 
   /**
-   * Optional. Specifies the resource name of the Sensitive Data Protection
-   * content policy.
+   * Required. Immutable. The resource name of the agent gateway. Expected
+   * format: `projects/{project_number}/locations/{location}/agentGateways/{agen
+   * t_gateway}`.
    *
-   * @param string $policy
+   * @param string $name
    */
-  public function setPolicy($policy)
+  public function setName($name)
   {
-    $this->policy = $policy;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getPolicy()
+  public function getName()
   {
-    return $this->policy;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy');
+class_alias(GoogleCloudDiscoveryengineV1AgentGatewaySettingAgentGatewayReference::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AgentGatewaySettingAgentGatewayReference');

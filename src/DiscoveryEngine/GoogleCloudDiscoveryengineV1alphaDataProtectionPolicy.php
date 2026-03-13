@@ -23,7 +23,8 @@ class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy extends \Google\Mode
   protected $sensitiveDataProtectionPolicyDataType = '';
 
   /**
-   * Optional. The sensitive data protection policy for the connector source.
+   * Optional. Specifies the sensitive data protection policy for the connector
+   * source.
    *
    * @param GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy $sensitiveDataProtectionPolicy
    */

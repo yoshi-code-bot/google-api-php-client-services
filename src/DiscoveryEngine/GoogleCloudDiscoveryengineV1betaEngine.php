@@ -104,7 +104,9 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * Used for AI Mode.
    */
   public const SOLUTION_TYPE_SOLUTION_TYPE_AI_MODE = 'SOLUTION_TYPE_AI_MODE';
-  protected $collection_key = 'dataStoreIds';
+  protected $collection_key = 'procurementContactEmails';
+  protected $agentGatewaySettingType = GoogleCloudDiscoveryengineV1betaAgentGatewaySetting::class;
+  protected $agentGatewaySettingDataType = '';
   /**
    * Optional. Immutable. This the application type which this engine resource
    * represents. NOTE: this is a new concept independ of existing industry
@@ -224,11 +226,11 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   protected $observabilityConfigType = GoogleCloudDiscoveryengineV1betaObservabilityConfig::class;
   protected $observabilityConfigDataType = '';
   /**
-   * Optional. The email of the procurement contact.
+   * Optional. The emails of the procurement contacts.
    *
-   * @var string
+   * @var string[]
    */
-  public $procurementContactEmail;
+  public $procurementContactEmails;
   protected $searchEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig::class;
   protected $searchEngineConfigDataType = '';
   /**
@@ -244,6 +246,22 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. The agent gateway setting for the engine.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaAgentGatewaySetting $agentGatewaySetting
+   */
+  public function setAgentGatewaySetting(GoogleCloudDiscoveryengineV1betaAgentGatewaySetting $agentGatewaySetting)
+  {
+    $this->agentGatewaySetting = $agentGatewaySetting;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaAgentGatewaySetting
+   */
+  public function getAgentGatewaySetting()
+  {
+    return $this->agentGatewaySetting;
+  }
   /**
    * Optional. Immutable. This the application type which this engine resource
    * represents. NOTE: this is a new concept independ of existing industry
@@ -598,20 +616,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->observabilityConfig;
   }
   /**
-   * Optional. The email of the procurement contact.
+   * Optional. The emails of the procurement contacts.
    *
-   * @param string $procurementContactEmail
+   * @param string[] $procurementContactEmails
    */
-  public function setProcurementContactEmail($procurementContactEmail)
+  public function setProcurementContactEmails($procurementContactEmails)
   {
-    $this->procurementContactEmail = $procurementContactEmail;
+    $this->procurementContactEmails = $procurementContactEmails;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getProcurementContactEmail()
+  public function getProcurementContactEmails()
   {
-    return $this->procurementContactEmail;
+    return $this->procurementContactEmails;
   }
   /**
    * Configurations for the Search Engine. Only applicable if solution_type is
