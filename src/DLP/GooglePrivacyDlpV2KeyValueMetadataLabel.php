@@ -21,11 +21,8 @@ class GooglePrivacyDlpV2KeyValueMetadataLabel extends \Google\Model
 {
   /**
    * The metadata key. The format depends on the source of the metadata.
-   * Examples: - Microsoft Purview Information Protection keys look like
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Method',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Name'. - General metadata
-   * keys look like 'Author', 'Title', 'Description'.
+   * Example: - `MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled` (a
+   * Microsoft Purview Information Protection key example)
    *
    * @var string
    */
@@ -33,11 +30,8 @@ class GooglePrivacyDlpV2KeyValueMetadataLabel extends \Google\Model
 
   /**
    * The metadata key. The format depends on the source of the metadata.
-   * Examples: - Microsoft Purview Information Protection keys look like
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Method',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Name'. - General metadata
-   * keys look like 'Author', 'Title', 'Description'.
+   * Example: - `MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled` (a
+   * Microsoft Purview Information Protection key example)
    *
    * @param string $key
    */
