@@ -59,6 +59,7 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
   /**
    * Identifier for the student that owns this submission. Requires the user to
    * be a teacher in the course and have permission to read student submissions.
+   * Read-only.
    *
    * @var string
    */
@@ -94,6 +95,7 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
   /**
    * Identifier for the student that owns this submission. Requires the user to
    * be a teacher in the course and have permission to read student submissions.
+   * Read-only.
    *
    * @param string $userId
    */
