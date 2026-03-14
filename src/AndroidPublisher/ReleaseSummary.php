@@ -20,59 +20,59 @@ namespace Google\Service\AndroidPublisher;
 class ReleaseSummary extends \Google\Collection
 {
   /**
-   * Fallback value, do not use.
+   * Not specified.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_UNSPECIFIED = 'RELEASE_LIFECYCLE_STATE_UNSPECIFIED';
   /**
-   * Waiting to be saved and submitted.
+   * The release is not yet ready and can be still edited.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_DRAFT = 'RELEASE_LIFECYCLE_STATE_DRAFT';
   /**
-   * Not sent for review and waiting developer action.
+   * The release is ready to be sent for review and awaiting developer action.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_NOT_SENT_FOR_REVIEW = 'RELEASE_LIFECYCLE_STATE_NOT_SENT_FOR_REVIEW';
   /**
-   * Sent for review and pending outcome before it can be published.
+   * Submitted and undergoing the review process.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_IN_REVIEW = 'RELEASE_LIFECYCLE_STATE_IN_REVIEW';
   /**
-   * Not yet published, but ready to be published and awaiting developer action.
-   * Only applicable for developers with managed publishing turned on.
+   * Passed review and is ready to be published (due to managed publishing).
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_APPROVED_NOT_PUBLISHED = 'RELEASE_LIFECYCLE_STATE_APPROVED_NOT_PUBLISHED';
   /**
-   * Review submission was rejected.
+   * Failed the review process.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_NOT_APPROVED = 'RELEASE_LIFECYCLE_STATE_NOT_APPROVED';
   /**
-   * Published, includes latest halted release.
+   * Currently available to users on the track. This includes fully or partially
+   * rolled out releases to users and any halted release that can be resumed.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_PUBLISHED = 'RELEASE_LIFECYCLE_STATE_PUBLISHED';
   protected $collection_key = 'activeArtifacts';
   protected $activeArtifactsType = ArtifactSummary::class;
   protected $activeArtifactsDataType = 'array';
   /**
-   * The lifecycle state of the release.
+   * The lifecycle state of a release.
    *
    * @var string
    */
   public $releaseLifecycleState;
   /**
-   * The name of the release.
+   * Name of the release.
    *
    * @var string
    */
   public $releaseName;
   /**
-   * The alias of the track that this release belongs to.
+   * Identifier of the track. More on [track
+   * name](https://developers.google.com/android-publisher/tracks).
    *
    * @var string
    */
   public $track;
 
   /**
-   * List of active artifacts on this release. This does not include controlled
-   * artifacts.
+   * List of active artifacts on this release.
    *
    * @param ArtifactSummary[] $activeArtifacts
    */
@@ -88,7 +88,7 @@ class ReleaseSummary extends \Google\Collection
     return $this->activeArtifacts;
   }
   /**
-   * The lifecycle state of the release.
+   * The lifecycle state of a release.
    *
    * Accepted values: RELEASE_LIFECYCLE_STATE_UNSPECIFIED,
    * RELEASE_LIFECYCLE_STATE_DRAFT, RELEASE_LIFECYCLE_STATE_NOT_SENT_FOR_REVIEW,
@@ -110,7 +110,7 @@ class ReleaseSummary extends \Google\Collection
     return $this->releaseLifecycleState;
   }
   /**
-   * The name of the release.
+   * Name of the release.
    *
    * @param string $releaseName
    */
@@ -126,7 +126,8 @@ class ReleaseSummary extends \Google\Collection
     return $this->releaseName;
   }
   /**
-   * The alias of the track that this release belongs to.
+   * Identifier of the track. More on [track
+   * name](https://developers.google.com/android-publisher/tracks).
    *
    * @param string $track
    */
