@@ -17,33 +17,36 @@
 
 namespace Google\Service\Backupdr;
 
-class LocationMetadata extends \Google\Collection
+class DiskBackupPlanProperties extends \Google\Model
 {
-  protected $collection_key = 'unsupportedFeatures';
   /**
-   * List of features that are not supported in the location.
+   * Optional. Indicates whether to perform a guest flush operation before
+   * taking a disk backup. When set to false, the system will create crash-
+   * consistent backups. Default value is false.
    *
-   * @var string[]
+   * @var bool
    */
-  public $unsupportedFeatures;
+  public $guestFlush;
 
   /**
-   * List of features that are not supported in the location.
+   * Optional. Indicates whether to perform a guest flush operation before
+   * taking a disk backup. When set to false, the system will create crash-
+   * consistent backups. Default value is false.
    *
-   * @param string[] $unsupportedFeatures
+   * @param bool $guestFlush
    */
-  public function setUnsupportedFeatures($unsupportedFeatures)
+  public function setGuestFlush($guestFlush)
   {
-    $this->unsupportedFeatures = $unsupportedFeatures;
+    $this->guestFlush = $guestFlush;
   }
   /**
-   * @return string[]
+   * @return bool
    */
-  public function getUnsupportedFeatures()
+  public function getGuestFlush()
   {
-    return $this->unsupportedFeatures;
+    return $this->guestFlush;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LocationMetadata::class, 'Google_Service_Backupdr_LocationMetadata');
+class_alias(DiskBackupPlanProperties::class, 'Google_Service_Backupdr_DiskBackupPlanProperties');
