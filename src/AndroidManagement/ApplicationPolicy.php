@@ -145,8 +145,11 @@ class ApplicationPolicy extends \Google\Collection
    * until the app is installed. After installation, users won't be able to
    * remove the app. You can only set this installType for one app per policy.
    * When this is present in the policy, status bar will be automatically
-   * disabled.If there is any app with KIOSK role, then this install type cannot
-   * be set for any app.
+   * disabled.On Android 11 and above, when an app has this install type, the
+   * user control is disallowed for all apps. The IT admin can set
+   * userControlSettings to USER_CONTROL_ALLOWED to allow user control for
+   * specific apps.If there is any app with KIOSK role, then this install type
+   * cannot be set for any app.
    *
    * @deprecated
    */
