@@ -191,11 +191,13 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('generateInstanceRubrics', [$params], GoogleCloudAiplatformV1GenerateInstanceRubricsResponse::class);
   }
   /**
-   * Generates synthetic data based on the provided configuration.
+   * Generates synthetic (artificial) data based on a description
    * (locations.generateSyntheticData)
    *
-   * @param string $location Required. The resource name of the Location to run
-   * the job. Format: `projects/{project}/locations/{location}`
+   * @param string $location Required. The geographic location where the synthetic
+   * data generation request is processed. This should be in the format
+   * `projects/{project}/locations/{location}`. For example, `projects/my-
+   * project/locations/us-central1`.
    * @param GoogleCloudAiplatformV1GenerateSyntheticDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1GenerateSyntheticDataResponse

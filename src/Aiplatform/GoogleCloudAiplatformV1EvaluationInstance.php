@@ -52,7 +52,9 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
     return $this->agentData;
   }
   /**
-   * Optional. Other data used to populate placeholders based on their key.
+   * Optional. Other data used to populate placeholders based on their key. If a
+   * key conflicts with a field in the EvaluationInstance (e.g. `prompt`), the
+   * value of the field will take precedence over the value in other_data.
    *
    * @param GoogleCloudAiplatformV1EvaluationInstanceMapInstance $otherData
    */

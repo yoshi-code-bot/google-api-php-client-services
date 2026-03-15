@@ -23,9 +23,14 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   protected $generationConfigDataType = '';
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to
-   * use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Endpoint
-   * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * use. Anthropic and Llama third-party models are also supported through
+   * Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party
+   * model format: `projects/{project}/locations/{location}/publishers/anthropic
+   * /models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}`
+   * Endpoint format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    *
    * @var string
    */
@@ -49,9 +54,14 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   }
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to
-   * use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Endpoint
-   * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * use. Anthropic and Llama third-party models are also supported through
+   * Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party
+   * model format: `projects/{project}/locations/{location}/publishers/anthropic
+   * /models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}`
+   * Endpoint format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    *
    * @param string $model
    */

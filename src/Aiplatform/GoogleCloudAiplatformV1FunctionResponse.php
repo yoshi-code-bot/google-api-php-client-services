@@ -41,7 +41,7 @@ class GoogleCloudAiplatformV1FunctionResponse extends \Google\Collection
   protected $collection_key = 'parts';
   /**
    * Required. The name of the function to call. Matches
-   * [FunctionDeclaration.name] and [FunctionCall.name].
+   * FunctionDeclaration.name and FunctionCall.name.
    *
    * @var string
    */
@@ -68,7 +68,7 @@ class GoogleCloudAiplatformV1FunctionResponse extends \Google\Collection
 
   /**
    * Required. The name of the function to call. Matches
-   * [FunctionDeclaration.name] and [FunctionCall.name].
+   * FunctionDeclaration.name and FunctionCall.name.
    *
    * @param string $name
    */
