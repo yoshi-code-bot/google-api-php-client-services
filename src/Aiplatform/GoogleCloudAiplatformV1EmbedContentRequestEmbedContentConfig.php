@@ -17,7 +17,7 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
+class GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig extends \Google\Model
 {
   /**
    * Unset value, which will default to one of the other enum values.
@@ -56,50 +56,68 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
    */
   public const TASK_TYPE_CODE_RETRIEVAL_QUERY = 'CODE_RETRIEVAL_QUERY';
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead.
-   * Whether to silently truncate the input content if it's longer than the
-   * maximum sequence length.
+   * Optional. Whether to extract audio from video content.
    *
-   * @deprecated
+   * @var bool
+   */
+  public $audioTrackExtraction;
+  /**
+   * Optional. Whether to silently truncate the input content if it's longer
+   * than the maximum sequence length. Only applicable to text-only embedding
+   * models.
+   *
    * @var bool
    */
   public $autoTruncate;
-  protected $contentType = GoogleCloudAiplatformV1Content::class;
-  protected $contentDataType = '';
-  protected $embedContentConfigType = GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig::class;
-  protected $embedContentConfigDataType = '';
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality
-   * instead. Reduced dimension for the output embedding. If set, excessive
+   * Optional. Whether to enable OCR for document content.
+   *
+   * @var bool
+   */
+  public $documentOcr;
+  /**
+   * Optional. Reduced dimension for the output embedding. If set, excessive
    * values in the output embedding are truncated from the end.
    *
-   * @deprecated
    * @var int
    */
   public $outputDimensionality;
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.task_type instead. The
-   * task type of the embedding.
+   * Optional. The task type of the embedding. Only applicable to text-only
+   * embedding models.
    *
-   * @deprecated
    * @var string
    */
   public $taskType;
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.title instead. The
-   * title for the text.
+   * Optional. The title for the text. Only applicable to text-only embedding
+   * models.
    *
-   * @deprecated
    * @var string
    */
   public $title;
 
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead.
-   * Whether to silently truncate the input content if it's longer than the
-   * maximum sequence length.
+   * Optional. Whether to extract audio from video content.
    *
-   * @deprecated
+   * @param bool $audioTrackExtraction
+   */
+  public function setAudioTrackExtraction($audioTrackExtraction)
+  {
+    $this->audioTrackExtraction = $audioTrackExtraction;
+  }
+  /**
+   * @return bool
+   */
+  public function getAudioTrackExtraction()
+  {
+    return $this->audioTrackExtraction;
+  }
+  /**
+   * Optional. Whether to silently truncate the input content if it's longer
+   * than the maximum sequence length. Only applicable to text-only embedding
+   * models.
+   *
    * @param bool $autoTruncate
    */
   public function setAutoTruncate($autoTruncate)
@@ -107,7 +125,6 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     $this->autoTruncate = $autoTruncate;
   }
   /**
-   * @deprecated
    * @return bool
    */
   public function getAutoTruncate()
@@ -115,43 +132,25 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     return $this->autoTruncate;
   }
   /**
-   * Required. The content to be embedded.
+   * Optional. Whether to enable OCR for document content.
    *
-   * @param GoogleCloudAiplatformV1Content $content
+   * @param bool $documentOcr
    */
-  public function setContent(GoogleCloudAiplatformV1Content $content)
+  public function setDocumentOcr($documentOcr)
   {
-    $this->content = $content;
+    $this->documentOcr = $documentOcr;
   }
   /**
-   * @return GoogleCloudAiplatformV1Content
+   * @return bool
    */
-  public function getContent()
+  public function getDocumentOcr()
   {
-    return $this->content;
+    return $this->documentOcr;
   }
   /**
-   * Optional. Configuration for the EmbedContent request.
-   *
-   * @param GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig $embedContentConfig
-   */
-  public function setEmbedContentConfig(GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig $embedContentConfig)
-  {
-    $this->embedContentConfig = $embedContentConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig
-   */
-  public function getEmbedContentConfig()
-  {
-    return $this->embedContentConfig;
-  }
-  /**
-   * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality
-   * instead. Reduced dimension for the output embedding. If set, excessive
+   * Optional. Reduced dimension for the output embedding. If set, excessive
    * values in the output embedding are truncated from the end.
    *
-   * @deprecated
    * @param int $outputDimensionality
    */
   public function setOutputDimensionality($outputDimensionality)
@@ -159,7 +158,6 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     $this->outputDimensionality = $outputDimensionality;
   }
   /**
-   * @deprecated
    * @return int
    */
   public function getOutputDimensionality()
@@ -167,14 +165,13 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     return $this->outputDimensionality;
   }
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.task_type instead. The
-   * task type of the embedding.
+   * Optional. The task type of the embedding. Only applicable to text-only
+   * embedding models.
    *
    * Accepted values: UNSPECIFIED, RETRIEVAL_QUERY, RETRIEVAL_DOCUMENT,
    * SEMANTIC_SIMILARITY, CLASSIFICATION, CLUSTERING, QUESTION_ANSWERING,
    * FACT_VERIFICATION, CODE_RETRIEVAL_QUERY
    *
-   * @deprecated
    * @param self::TASK_TYPE_* $taskType
    */
   public function setTaskType($taskType)
@@ -182,7 +179,6 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     $this->taskType = $taskType;
   }
   /**
-   * @deprecated
    * @return self::TASK_TYPE_*
    */
   public function getTaskType()
@@ -190,10 +186,9 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     return $this->taskType;
   }
   /**
-   * Optional. Deprecated: Please use EmbedContentConfig.title instead. The
-   * title for the text.
+   * Optional. The title for the text. Only applicable to text-only embedding
+   * models.
    *
-   * @deprecated
    * @param string $title
    */
   public function setTitle($title)
@@ -201,7 +196,6 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
     $this->title = $title;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getTitle()
@@ -211,4 +205,4 @@ class GoogleCloudAiplatformV1EmbedContentRequest extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1EmbedContentRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1EmbedContentRequest');
+class_alias(GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1EmbedContentRequestEmbedContentConfig');

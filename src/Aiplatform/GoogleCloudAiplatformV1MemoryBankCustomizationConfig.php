@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Collection
 {
   protected $collection_key = 'scopeKeys';
+  protected $consolidationConfigType = GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig::class;
+  protected $consolidationConfigDataType = '';
   /**
    * Optional. If true, then the memories will be generated in the third person
    * (i.e. "The user generates memories with Memory Bank."). By default, the
@@ -44,6 +46,23 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
    */
   public $scopeKeys;
 
+  /**
+   * Optional. Represents configuration for customizing how memories are
+   * consolidated together.
+   *
+   * @param GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig $consolidationConfig
+   */
+  public function setConsolidationConfig(GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig $consolidationConfig)
+  {
+    $this->consolidationConfig = $consolidationConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig
+   */
+  public function getConsolidationConfig()
+  {
+    return $this->consolidationConfig;
+  }
   /**
    * Optional. If true, then the memories will be generated in the third person
    * (i.e. "The user generates memories with Memory Bank."). By default, the
