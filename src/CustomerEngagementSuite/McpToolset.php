@@ -22,6 +22,16 @@ class McpToolset extends \Google\Model
   protected $apiAuthenticationType = ApiAuthentication::class;
   protected $apiAuthenticationDataType = '';
   /**
+   * Optional. The custom headers to send in the request to the MCP server. The
+   * values must be in the format `$context.variables.` and can be set in the
+   * session variables. See https://docs.cloud.google.com/customer-engagement-
+   * ai/conversational-agents/ps/tool/open-api#openapi-injection for more
+   * details.
+   *
+   * @var string[]
+   */
+  public $customHeaders;
+  /**
    * Required. The address of the MCP server, for example,
    * "https://example.com/mcp/". If the server is built with the MCP SDK, the
    * url should be suffixed with "/mcp/". Only Streamable HTTP transport based
@@ -54,6 +64,26 @@ class McpToolset extends \Google\Model
   public function getApiAuthentication()
   {
     return $this->apiAuthentication;
+  }
+  /**
+   * Optional. The custom headers to send in the request to the MCP server. The
+   * values must be in the format `$context.variables.` and can be set in the
+   * session variables. See https://docs.cloud.google.com/customer-engagement-
+   * ai/conversational-agents/ps/tool/open-api#openapi-injection for more
+   * details.
+   *
+   * @param string[] $customHeaders
+   */
+  public function setCustomHeaders($customHeaders)
+  {
+    $this->customHeaders = $customHeaders;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCustomHeaders()
+  {
+    return $this->customHeaders;
   }
   /**
    * Required. The address of the MCP server, for example,

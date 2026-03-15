@@ -20,7 +20,7 @@ namespace Google\Service\CustomerEngagementSuite;
 class ErrorHandlingSettings extends \Google\Model
 {
   /**
-   * Unspecified error handling strategy. Defaults to FALLBACK_RESPONSE.
+   * Unspecified error handling strategy.
    */
   public const ERROR_HANDLING_STRATEGY_ERROR_HANDLING_STRATEGY_UNSPECIFIED = 'ERROR_HANDLING_STRATEGY_UNSPECIFIED';
   /**
@@ -28,7 +28,8 @@ class ErrorHandlingSettings extends \Google\Model
    */
   public const ERROR_HANDLING_STRATEGY_NONE = 'NONE';
   /**
-   * A fallback message will be returned to the user in case of LLM errors.
+   * A fallback message will be returned to the user in case of system errors
+   * (e.g. LLM errors).
    */
   public const ERROR_HANDLING_STRATEGY_FALLBACK_RESPONSE = 'FALLBACK_RESPONSE';
   /**

@@ -36,6 +36,10 @@ class ChannelProfileWebWidgetConfig extends \Google\Model
    */
   public const MODALITY_CHAT_ONLY = 'CHAT_ONLY';
   /**
+   * Widget supports chat, voice, and video input.
+   */
+  public const MODALITY_CHAT_VOICE_AND_VIDEO = 'CHAT_VOICE_AND_VIDEO';
+  /**
    * Unknown theme.
    */
   public const THEME_THEME_UNSPECIFIED = 'THEME_UNSPECIFIED';
@@ -72,7 +76,7 @@ class ChannelProfileWebWidgetConfig extends \Google\Model
    * Optional. The modality of the web widget.
    *
    * Accepted values: MODALITY_UNSPECIFIED, CHAT_AND_VOICE, VOICE_ONLY,
-   * CHAT_ONLY
+   * CHAT_ONLY, CHAT_VOICE_AND_VIDEO
    *
    * @param self::MODALITY_* $modality
    */
