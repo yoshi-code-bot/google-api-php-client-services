@@ -172,6 +172,10 @@ class GeoRegionTargetingOptionDetails extends \Google\Model
    */
   public const GEO_REGION_TYPE_GEO_REGION_TYPE_COLLOQUIAL_AREA = 'GEO_REGION_TYPE_COLLOQUIAL_AREA';
   /**
+   * The geographic region is a post town.
+   */
+  public const GEO_REGION_TYPE_GEO_REGION_TYPE_POST_TOWN = 'GEO_REGION_TYPE_POST_TOWN';
+  /**
    * Output only. The display name of the geographic region (e.g., "Ontario,
    * Canada").
    *
@@ -222,7 +226,7 @@ class GeoRegionTargetingOptionDetails extends \Google\Model
    * GEO_REGION_TYPE_SUB_WARD, GEO_REGION_TYPE_MUNICIPALITY_DISTRICT,
    * GEO_REGION_TYPE_SUB_DISTRICT, GEO_REGION_TYPE_QUARTER,
    * GEO_REGION_TYPE_DIVISION, GEO_REGION_TYPE_COMMUNE,
-   * GEO_REGION_TYPE_COLLOQUIAL_AREA
+   * GEO_REGION_TYPE_COLLOQUIAL_AREA, GEO_REGION_TYPE_POST_TOWN
    *
    * @param self::GEO_REGION_TYPE_* $geoRegionType
    */

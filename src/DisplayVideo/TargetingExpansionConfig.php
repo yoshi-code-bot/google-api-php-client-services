@@ -75,6 +75,13 @@ class TargetingExpansionConfig extends \Google\Model
    * @var bool
    */
   public $enableOptimizedTargeting;
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting.
+   * This field only applies to Demand Gen ad groups.
+   *
+   * @var bool
+   */
+  public $excludeDemographicExpansion;
 
   /**
    * Output only. Magnitude of expansion for eligible first-party user lists
@@ -143,6 +150,23 @@ class TargetingExpansionConfig extends \Google\Model
   public function getEnableOptimizedTargeting()
   {
     return $this->enableOptimizedTargeting;
+  }
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting.
+   * This field only applies to Demand Gen ad groups.
+   *
+   * @param bool $excludeDemographicExpansion
+   */
+  public function setExcludeDemographicExpansion($excludeDemographicExpansion)
+  {
+    $this->excludeDemographicExpansion = $excludeDemographicExpansion;
+  }
+  /**
+   * @return bool
+   */
+  public function getExcludeDemographicExpansion()
+  {
+    return $this->excludeDemographicExpansion;
   }
 }
 
