@@ -28,6 +28,10 @@ class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRul
    */
   public const INTEGRATION_DATAPROC = 'DATAPROC';
   /**
+   * Looker Core
+   */
+  public const INTEGRATION_LOOKER_CORE = 'LOOKER_CORE';
+  /**
    * Required. Integration to which the rule applies. This field can be used to
    * specify the integration against which the ingestion rule should be applied.
    *
@@ -39,7 +43,7 @@ class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRul
    * Required. Integration to which the rule applies. This field can be used to
    * specify the integration against which the ingestion rule should be applied.
    *
-   * Accepted values: INTEGRATION_UNSPECIFIED, DATAPROC
+   * Accepted values: INTEGRATION_UNSPECIFIED, DATAPROC, LOOKER_CORE
    *
    * @param self::INTEGRATION_* $integration
    */
