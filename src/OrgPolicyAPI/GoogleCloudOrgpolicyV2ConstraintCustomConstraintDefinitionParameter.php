@@ -77,7 +77,7 @@ class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter extend
   /**
    * Provides a CEL expression to specify the acceptable parameter values during
    * assignment. For example, parameterName in ("parameterValue1",
-   * "parameterValue2")
+   * "parameterValue2").
    *
    * @var string
    */
@@ -156,7 +156,7 @@ class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter extend
   /**
    * Provides a CEL expression to specify the acceptable parameter values during
    * assignment. For example, parameterName in ("parameterValue1",
-   * "parameterValue2")
+   * "parameterValue2").
    *
    * @param string $validValuesExpr
    */
