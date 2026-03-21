@@ -58,6 +58,8 @@ class Subscription extends \Google\Collection
   protected $analyticsHubSubscriptionInfoDataType = '';
   protected $bigqueryConfigType = BigQueryConfig::class;
   protected $bigqueryConfigDataType = '';
+  protected $bigtableConfigType = BigtableConfig::class;
+  protected $bigtableConfigDataType = '';
   protected $cloudStorageConfigType = CloudStorageConfig::class;
   protected $cloudStorageConfigDataType = '';
   protected $deadLetterPolicyType = DeadLetterPolicy::class;
@@ -250,6 +252,23 @@ class Subscription extends \Google\Collection
   public function getBigqueryConfig()
   {
     return $this->bigqueryConfig;
+  }
+  /**
+   * Optional. If delivery to Bigtable is used with this subscription, this
+   * field is used to configure it.
+   *
+   * @param BigtableConfig $bigtableConfig
+   */
+  public function setBigtableConfig(BigtableConfig $bigtableConfig)
+  {
+    $this->bigtableConfig = $bigtableConfig;
+  }
+  /**
+   * @return BigtableConfig
+   */
+  public function getBigtableConfig()
+  {
+    return $this->bigtableConfig;
   }
   /**
    * Optional. If delivery to Google Cloud Storage is used with this
