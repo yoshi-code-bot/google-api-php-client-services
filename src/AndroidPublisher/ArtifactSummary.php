@@ -20,14 +20,14 @@ namespace Google\Service\AndroidPublisher;
 class ArtifactSummary extends \Google\Model
 {
   /**
-   * The version code of the artifact.
+   * Artifact's version code
    *
    * @var int
    */
   public $versionCode;
 
   /**
-   * The version code of the artifact.
+   * Artifact's version code
    *
    * @param int $versionCode
    */
