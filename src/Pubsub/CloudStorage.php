@@ -51,6 +51,15 @@ class CloudStorage extends \Google\Model
    * The Cloud Storage bucket has too many objects, ingestion will be paused.
    */
   public const STATE_TOO_MANY_OBJECTS = 'TOO_MANY_OBJECTS';
+  /**
+   * Indicates an error state where the ingestion source cannot be processed.
+   * This occurs because there is no overlap between the regions allowed by the
+   * topic's `MessageStoragePolicy` and the regions permitted by the Regional
+   * Access Boundary (RAB) restrictions on the project's Pub/Sub service
+   * account. A common, allowed region is required to determine a valid
+   * ingestion region.
+   */
+  public const STATE_CONFLICTING_REGION_CONSTRAINTS = 'CONFLICTING_REGION_CONSTRAINTS';
   protected $avroFormatType = AvroFormat::class;
   protected $avroFormatDataType = '';
   /**
@@ -182,7 +191,7 @@ class CloudStorage extends \Google\Model
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE,
    * CLOUD_STORAGE_PERMISSION_DENIED, PUBLISH_PERMISSION_DENIED,
-   * BUCKET_NOT_FOUND, TOO_MANY_OBJECTS
+   * BUCKET_NOT_FOUND, TOO_MANY_OBJECTS, CONFLICTING_REGION_CONSTRAINTS
    *
    * @param self::STATE_* $state
    */
