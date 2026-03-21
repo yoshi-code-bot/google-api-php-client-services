@@ -24,28 +24,29 @@ class ReleaseSummary extends \Google\Collection
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_UNSPECIFIED = 'RELEASE_LIFECYCLE_STATE_UNSPECIFIED';
   /**
-   * The release is not yet ready and can be still edited.
+   * The release is not yet ready and can still be edited.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_DRAFT = 'RELEASE_LIFECYCLE_STATE_DRAFT';
   /**
-   * The release is ready to be sent for review and awaiting developer action.
+   * The release is ready to be sent for review and an action is required from
+   * developer
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_NOT_SENT_FOR_REVIEW = 'RELEASE_LIFECYCLE_STATE_NOT_SENT_FOR_REVIEW';
   /**
-   * Submitted and undergoing the review process.
+   * Submitted and in review
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_IN_REVIEW = 'RELEASE_LIFECYCLE_STATE_IN_REVIEW';
   /**
-   * Passed review and is ready to be published (due to managed publishing).
+   * Passed review and is ready to be published manually by developer
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_APPROVED_NOT_PUBLISHED = 'RELEASE_LIFECYCLE_STATE_APPROVED_NOT_PUBLISHED';
   /**
-   * Failed the review process.
+   * App was rejected in review
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_NOT_APPROVED = 'RELEASE_LIFECYCLE_STATE_NOT_APPROVED';
   /**
-   * Currently available to users on the track. This includes fully or partially
-   * rolled out releases to users and any halted release that can be resumed.
+   * Available to users on the track. This includes fully- or partially-rolled
+   * out releases and any halted release that can be resumed.
    */
   public const RELEASE_LIFECYCLE_STATE_RELEASE_LIFECYCLE_STATE_PUBLISHED = 'RELEASE_LIFECYCLE_STATE_PUBLISHED';
   protected $collection_key = 'activeArtifacts';
@@ -64,15 +65,15 @@ class ReleaseSummary extends \Google\Collection
    */
   public $releaseName;
   /**
-   * Identifier of the track. More on [track
-   * name](https://developers.google.com/android-publisher/tracks).
+   * Identifier for the track. [Learn more about track
+   * names.](https://developers.google.com/android-publisher/tracks).
    *
    * @var string
    */
   public $track;
 
   /**
-   * List of active artifacts on this release.
+   * List of active artifacts on this release
    *
    * @param ArtifactSummary[] $activeArtifacts
    */
@@ -126,8 +127,8 @@ class ReleaseSummary extends \Google\Collection
     return $this->releaseName;
   }
   /**
-   * Identifier of the track. More on [track
-   * name](https://developers.google.com/android-publisher/tracks).
+   * Identifier for the track. [Learn more about track
+   * names.](https://developers.google.com/android-publisher/tracks).
    *
    * @param string $track
    */

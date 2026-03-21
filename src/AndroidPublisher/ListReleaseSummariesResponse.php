@@ -24,8 +24,7 @@ class ListReleaseSummariesResponse extends \Google\Collection
   protected $releasesDataType = 'array';
 
   /**
-   * List of releases for this track. There will be a maximum of 20 releases
-   * returned.
+   * List of releases for this track. A maximum of 20 releases can be returned.
    *
    * @param ReleaseSummary[] $releases
    */
