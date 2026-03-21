@@ -115,6 +115,10 @@ class Reports extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'includeSensitiveData' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'maxResults' => [
                   'location' => 'query',
                   'type' => 'integer',
