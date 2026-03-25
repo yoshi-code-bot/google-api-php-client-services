@@ -71,6 +71,8 @@ class TableFieldSchema extends \Google\Collection
    * @var string
    */
   public $foreignTypeDefinition;
+  protected $generatedColumnType = GeneratedColumn::class;
+  protected $generatedColumnDataType = '';
   /**
    * Optional. Maximum length of values of this field for STRINGS or BYTES. If
    * max_length is not specified, no maximum length constraint is imposed on
@@ -273,6 +275,23 @@ class TableFieldSchema extends \Google\Collection
   public function getForeignTypeDefinition()
   {
     return $this->foreignTypeDefinition;
+  }
+  /**
+   * Optional. Definition of how values are generated for the field. Only valid
+   * for top-level schema fields (not nested fields).
+   *
+   * @param GeneratedColumn $generatedColumn
+   */
+  public function setGeneratedColumn(GeneratedColumn $generatedColumn)
+  {
+    $this->generatedColumn = $generatedColumn;
+  }
+  /**
+   * @return GeneratedColumn
+   */
+  public function getGeneratedColumn()
+  {
+    return $this->generatedColumn;
   }
   /**
    * Optional. Maximum length of values of this field for STRINGS or BYTES. If
