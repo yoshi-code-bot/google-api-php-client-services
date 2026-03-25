@@ -453,8 +453,8 @@ class Policy extends \Google\Collection
    */
   public $createWindowsDisabled;
   /**
-   * Controls which apps are allowed to act as credential providers on Android
-   * 14 and above. These apps store credentials, see this
+   * Optional. Controls which apps are allowed to act as credential providers on
+   * Android 14 and above. These apps store credentials, see this
    * (https://developer.android.com/training/sign-in/passkeys) and this (https:/
    * /developer.android.com/reference/androidx/credentials/CredentialManager)
    * for details. See also credentialProviderPolicy.
@@ -1314,8 +1314,8 @@ class Policy extends \Google\Collection
     return $this->createWindowsDisabled;
   }
   /**
-   * Controls which apps are allowed to act as credential providers on Android
-   * 14 and above. These apps store credentials, see this
+   * Optional. Controls which apps are allowed to act as credential providers on
+   * Android 14 and above. These apps store credentials, see this
    * (https://developer.android.com/training/sign-in/passkeys) and this (https:/
    * /developer.android.com/reference/androidx/credentials/CredentialManager)
    * for details. See also credentialProviderPolicy.
