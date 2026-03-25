@@ -82,6 +82,8 @@ class JobStatistics2 extends \Google\Collection
   protected $exportDataStatisticsDataType = '';
   protected $externalServiceCostsType = ExternalServiceCost::class;
   protected $externalServiceCostsDataType = 'array';
+  protected $genAiStatsType = GenAiStats::class;
+  protected $genAiStatsDataType = '';
   protected $incrementalResultStatsType = IncrementalResultStats::class;
   protected $incrementalResultStatsDataType = '';
   protected $loadQueryStatisticsType = LoadQueryStatistics::class;
@@ -596,6 +598,22 @@ class JobStatistics2 extends \Google\Collection
   public function getExternalServiceCosts()
   {
     return $this->externalServiceCosts;
+  }
+  /**
+   * Output only. Statistics related to GenAI usage in the query.
+   *
+   * @param GenAiStats $genAiStats
+   */
+  public function setGenAiStats(GenAiStats $genAiStats)
+  {
+    $this->genAiStats = $genAiStats;
+  }
+  /**
+   * @return GenAiStats
+   */
+  public function getGenAiStats()
+  {
+    return $this->genAiStats;
   }
   /**
    * Output only. Statistics related to incremental query results, if enabled
