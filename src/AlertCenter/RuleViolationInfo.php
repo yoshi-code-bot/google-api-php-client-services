@@ -28,6 +28,10 @@ class RuleViolationInfo extends \Google\Collection
    */
   public const DATA_SOURCE_DRIVE = 'DRIVE';
   /**
+   * Gmail data source.
+   */
+  public const DATA_SOURCE_GMAIL = 'GMAIL';
+  /**
    * Chrome data source.
    */
   public const DATA_SOURCE_CHROME = 'CHROME';
@@ -56,6 +60,10 @@ class RuleViolationInfo extends \Google\Collection
    */
   public const TRIGGER_DRIVE_SHARE = 'DRIVE_SHARE';
   /**
+   * An email message is sent.
+   */
+  public const TRIGGER_MAIL_BEING_SENT = 'MAIL_BEING_SENT';
+  /**
    * A file being downloaded in a Chrome browser.
    */
   public const TRIGGER_CHROME_FILE_DOWNLOAD = 'CHROME_FILE_DOWNLOAD';
@@ -83,6 +91,11 @@ class RuleViolationInfo extends \Google\Collection
    * A URL is visited within Chrome.
    */
   public const TRIGGER_CHROME_URL_VISITED = 'CHROME_URL_VISITED';
+  /**
+   * A file being transferred (copy or moved) between different file systems on
+   * ChromeOS.
+   */
+  public const TRIGGER_CHROMEOS_FILE_TRANSFER = 'CHROMEOS_FILE_TRANSFER';
   protected $collection_key = 'triggeredActionTypes';
   /**
    * Source of the data.
@@ -144,7 +157,7 @@ class RuleViolationInfo extends \Google\Collection
   /**
    * Source of the data.
    *
-   * Accepted values: DATA_SOURCE_UNSPECIFIED, DRIVE, CHROME, CHAT
+   * Accepted values: DATA_SOURCE_UNSPECIFIED, DRIVE, GMAIL, CHROME, CHAT
    *
    * @param self::DATA_SOURCE_* $dataSource
    */
@@ -265,9 +278,10 @@ class RuleViolationInfo extends \Google\Collection
   /**
    * Trigger of the rule.
    *
-   * Accepted values: TRIGGER_UNSPECIFIED, DRIVE_SHARE, CHROME_FILE_DOWNLOAD,
-   * CHROME_FILE_UPLOAD, CHROME_WEB_CONTENT_UPLOAD, CHAT_MESSAGE_SENT,
-   * CHAT_ATTACHMENT_UPLOADED, CHROME_PAGE_PRINT, CHROME_URL_VISITED
+   * Accepted values: TRIGGER_UNSPECIFIED, DRIVE_SHARE, MAIL_BEING_SENT,
+   * CHROME_FILE_DOWNLOAD, CHROME_FILE_UPLOAD, CHROME_WEB_CONTENT_UPLOAD,
+   * CHAT_MESSAGE_SENT, CHAT_ATTACHMENT_UPLOADED, CHROME_PAGE_PRINT,
+   * CHROME_URL_VISITED, CHROMEOS_FILE_TRANSFER
    *
    * @param self::TRIGGER_* $trigger
    */
