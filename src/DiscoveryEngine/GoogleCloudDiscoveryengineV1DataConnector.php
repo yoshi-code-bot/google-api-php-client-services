@@ -292,9 +292,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This
    * includes both FQDN derived from the customer provided instance URL and
-   * default per connector type FQDNs. Note: This field is derived from both the
-   * DataConnector.params, and connector source spec. It should only be used for
-   * CAIS and Org Policy evaluation purposes.
+   * default per connector type FQDNs.
    *
    * @var string[]
    */
@@ -382,7 +380,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
    */
   public $latestPauseTime;
   /**
-   * Output only. The full resource name of the Data Connector. Format:
+   * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    *
    * @var string
@@ -463,8 +461,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
    */
   public $updateTime;
   /**
-   * Output only. Whether the connector is created with VPC-SC enabled. This is
-   * only used for CuOP evaluation purpose.
+   * Output only. Whether the connector is created with VPC-SC enabled.
    *
    * @var bool
    */
@@ -727,9 +724,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This
    * includes both FQDN derived from the customer provided instance URL and
-   * default per connector type FQDNs. Note: This field is derived from both the
-   * DataConnector.params, and connector source spec. It should only be used for
-   * CAIS and Org Policy evaluation purposes.
+   * default per connector type FQDNs.
    *
    * @param string[] $egressFqdns
    */
@@ -983,7 +978,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
     return $this->latestPauseTime;
   }
   /**
-   * Output only. The full resource name of the Data Connector. Format:
+   * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    *
    * @param string $name
@@ -1215,8 +1210,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * Output only. Whether the connector is created with VPC-SC enabled. This is
-   * only used for CuOP evaluation purpose.
+   * Output only. Whether the connector is created with VPC-SC enabled.
    *
    * @param bool $vpcscEnabled
    */
