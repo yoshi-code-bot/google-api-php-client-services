@@ -78,11 +78,11 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores_widgetConfigs;
   public $projects_locations_collections_engines;
   public $projects_locations_collections_engines_assistants;
-  public $projects_locations_collections_engines_assistants_agents;
-  public $projects_locations_collections_engines_assistants_agents_message;
+  public $projects_locations_collections_engines_assistants_agents_a2a_v1;
+  public $projects_locations_collections_engines_assistants_agents_a2a_v1_message;
+  public $projects_locations_collections_engines_assistants_agents_a2a_v1_tasks;
+  public $projects_locations_collections_engines_assistants_agents_a2a_v1_tasks_pushNotificationConfigs;
   public $projects_locations_collections_engines_assistants_agents_operations;
-  public $projects_locations_collections_engines_assistants_agents_tasks;
-  public $projects_locations_collections_engines_assistants_agents_tasks_pushNotificationConfigs;
   public $projects_locations_collections_engines_completionConfig;
   public $projects_locations_collections_engines_controls;
   public $projects_locations_collections_engines_conversations;
@@ -2012,14 +2012,14 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_collections_engines_assistants_agents = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgents(
+    $this->projects_locations_collections_engines_assistants_agents_a2a_v1 = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsA2aV1(
         $this,
         $this->serviceName,
-        'agents',
+        'v1',
         [
           'methods' => [
             'getCard' => [
-              'path' => 'v1/{+tenant}/card',
+              'path' => 'v1/{+tenant}/a2a/v1/card',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -2032,14 +2032,14 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_collections_engines_assistants_agents_message = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsMessage(
+    $this->projects_locations_collections_engines_assistants_agents_a2a_v1_message = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsA2aV1Message(
         $this,
         $this->serviceName,
         'message',
         [
           'methods' => [
             'send' => [
-              'path' => 'v1/{+tenant}/message:send',
+              'path' => 'v1/{+tenant}/a2a/v1/message:send',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -2049,13 +2049,154 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'stream' => [
-              'path' => 'v1/{+tenant}/message:stream',
+              'path' => 'v1/{+tenant}/a2a/v1/message:stream',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_engines_assistants_agents_a2a_v1_tasks = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsA2aV1Tasks(
+        $this,
+        $this->serviceName,
+        'tasks',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'historyLength' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'subscribe' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+name}:subscribe',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_engines_assistants_agents_a2a_v1_tasks_pushNotificationConfigs = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsA2aV1TasksPushNotificationConfigs(
+        $this,
+        $this->serviceName,
+        'pushNotificationConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+parent}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'configId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+tenant}/a2a/v1/{+parent}/pushNotificationConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -2076,147 +2217,6 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_collections_engines_assistants_agents_tasks = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsTasks(
-        $this,
-        $this->serviceName,
-        'tasks',
-        [
-          'methods' => [
-            'cancel' => [
-              'path' => 'v1/{+tenant}/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+tenant}/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'historyLength' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'subscribe' => [
-              'path' => 'v1/{+tenant}/{+name}:subscribe',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_collections_engines_assistants_agents_tasks_pushNotificationConfigs = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentsTasksPushNotificationConfigs(
-        $this,
-        $this->serviceName,
-        'pushNotificationConfigs',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+tenant}/{+parent}',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'configId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+tenant}/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+tenant}/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+tenant}/{+parent}/pushNotificationConfigs',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'tenant' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],

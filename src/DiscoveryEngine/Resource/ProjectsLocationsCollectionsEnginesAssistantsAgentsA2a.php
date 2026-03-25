@@ -18,16 +18,16 @@
 namespace Google\Service\DiscoveryEngine\Resource;
 
 /**
- * The "agents" collection of methods.
+ * The "a2a" collection of methods.
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $agents = $discoveryengineService->projects_locations_collections_engines_assistants_agents;
+ *   $a2a = $discoveryengineService->projects_locations_collections_engines_assistants_agents_a2a;
  *  </code>
  */
-class ProjectsLocationsCollectionsEnginesAssistantsAgents extends \Google\Service\Resource
+class ProjectsLocationsCollectionsEnginesAssistantsAgentsA2a extends \Google\Service\Resource
 {
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsCollectionsEnginesAssistantsAgents::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsEnginesAssistantsAgents');
+class_alias(ProjectsLocationsCollectionsEnginesAssistantsAgentsA2a::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsEnginesAssistantsAgentsA2a');

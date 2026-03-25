@@ -69,8 +69,8 @@ class ProjectsLocationsCollections extends \Google\Service\Resource
   /**
    * Updates a DataConnector. (collections.updateDataConnector)
    *
-   * @param string $name Output only. The full resource name of the Data
-   * Connector. Format: `projects/locations/collections/dataConnector`.
+   * @param string $name Identifier. The full resource name of the Data Connector.
+   * Format: `projects/locations/collections/dataConnector`.
    * @param GoogleCloudDiscoveryengineV1DataConnector $postBody
    * @param array $optParams Optional parameters.
    *
