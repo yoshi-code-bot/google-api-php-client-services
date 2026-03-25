@@ -1816,6 +1816,10 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'onBehalfOfContentOwnerChannel' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
