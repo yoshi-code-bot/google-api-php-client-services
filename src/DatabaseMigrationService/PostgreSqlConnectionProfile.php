@@ -48,6 +48,13 @@ class PostgreSqlConnectionProfile extends \Google\Model
    * @var string
    */
   public $database;
+  /**
+   * Optional. If true, Database Migration Service will use IAM database
+   * authentication to connect to the database.
+   *
+   * @var bool
+   */
+  public $enableIamAuthentication;
   protected $forwardSshConnectivityType = ForwardSshTunnelConnectivity::class;
   protected $forwardSshConnectivityDataType = '';
   /**
@@ -150,6 +157,23 @@ class PostgreSqlConnectionProfile extends \Google\Model
   public function getDatabase()
   {
     return $this->database;
+  }
+  /**
+   * Optional. If true, Database Migration Service will use IAM database
+   * authentication to connect to the database.
+   *
+   * @param bool $enableIamAuthentication
+   */
+  public function setEnableIamAuthentication($enableIamAuthentication)
+  {
+    $this->enableIamAuthentication = $enableIamAuthentication;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableIamAuthentication()
+  {
+    return $this->enableIamAuthentication;
   }
   /**
    * Forward SSH tunnel connectivity.
