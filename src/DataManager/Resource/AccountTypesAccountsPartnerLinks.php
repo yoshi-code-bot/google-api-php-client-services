@@ -37,10 +37,7 @@ class AccountTypesAccountsPartnerLinks extends \Google\Service\Resource
    * authorizes access for the request: * `login-account`: (Optional) The resource
    * name of the account where the Google Account of the credentials is a user. If
    * not set, defaults to the account of the request. Format:
-   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-
-   * account`: (Optional) The resource name of the account with an established
-   * product link to the `login-account`. Format:
-   * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
    * (partnerLinks.create)
    *
    * @param string $parent Required. The parent, which owns this collection of
@@ -62,10 +59,7 @@ class AccountTypesAccountsPartnerLinks extends \Google\Service\Resource
    * authorizes access for the request: * `login-account`: (Optional) The resource
    * name of the account where the Google Account of the credentials is a user. If
    * not set, defaults to the account of the request. Format:
-   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-
-   * account`: (Optional) The resource name of the account with an established
-   * product link to the `login-account`. Format:
-   * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
    * (partnerLinks.delete)
    *
    * @param string $name Required. The resource name of the partner link to
@@ -87,10 +81,7 @@ class AccountTypesAccountsPartnerLinks extends \Google\Service\Resource
    * the API authorizes access for the request: * `login-account`: (Optional) The
    * resource name of the account where the Google Account of the credentials is a
    * user. If not set, defaults to the account of the request. Format:
-   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-
-   * account`: (Optional) The resource name of the account with an established
-   * product link to the `login-account`. Format:
-   * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+   * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
    * (partnerLinks.search)
    *
    * @param string $parent Required. Account to search for partner links. If no
