@@ -66,8 +66,9 @@ class ProjectsLocationsPrivateClouds extends \Google\Service\Resource
    * @opt_param string requestId Optional. The request ID must be a valid UUID
    * with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param bool validateOnly Optional. True if you want the request to be
-   * validated and not executed; false otherwise.
+   * @opt_param bool validateOnly Optional. If set to `true`, only validates the
+   * request but doesn’t execute the request. If set to `false`, validates and
+   * executes the request.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -257,6 +258,9 @@ class ProjectsLocationsPrivateClouds extends \Google\Service\Resource
    * fields specified in `updateMask` are relative to the resource, not the full
    * request. A field will be overwritten if it is in the mask. If the user does
    * not provide a mask then all fields will be overwritten.
+   * @opt_param bool validateOnly Optional. If set to `true`, only validates the
+   * request but doesn’t execute the request. If set to `false`, validates and
+   * executes the request.
    * @return Operation
    * @throws \Google\Service\Exception
    */
