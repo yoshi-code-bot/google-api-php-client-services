@@ -36,6 +36,10 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    */
   public const BUSINESS_STATUS_CLOSED_PERMANENTLY = 'CLOSED_PERMANENTLY';
   /**
+   * The establishment will open in the future.
+   */
+  public const BUSINESS_STATUS_FUTURE_OPENING = 'FUTURE_OPENING';
+  /**
    * Place price level is unspecified or unknown.
    */
   public const PRICE_LEVEL_PRICE_LEVEL_UNSPECIFIED = 'PRICE_LEVEL_UNSPECIFIED';
@@ -231,6 +235,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public $nationalPhoneNumber;
   protected $neighborhoodSummaryType = GoogleMapsPlacesV1PlaceNeighborhoodSummary::class;
   protected $neighborhoodSummaryDataType = '';
+  protected $openingDateType = GoogleTypeDate::class;
+  protected $openingDateDataType = '';
   /**
    * Place provides outdoor seating.
    *
@@ -532,7 +538,7 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * The business status for the place.
    *
    * Accepted values: BUSINESS_STATUS_UNSPECIFIED, OPERATIONAL,
-   * CLOSED_TEMPORARILY, CLOSED_PERMANENTLY
+   * CLOSED_TEMPORARILY, CLOSED_PERMANENTLY, FUTURE_OPENING
    *
    * @param self::BUSINESS_STATUS_* $businessStatus
    */
@@ -1087,6 +1093,23 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getNeighborhoodSummary()
   {
     return $this->neighborhoodSummary;
+  }
+  /**
+   * The date this place will open in the future. This field is only populated
+   * if the business status is FUTURE_OPENING.
+   *
+   * @param GoogleTypeDate $openingDate
+   */
+  public function setOpeningDate(GoogleTypeDate $openingDate)
+  {
+    $this->openingDate = $openingDate;
+  }
+  /**
+   * @return GoogleTypeDate
+   */
+  public function getOpeningDate()
+  {
+    return $this->openingDate;
   }
   /**
    * Place provides outdoor seating.
