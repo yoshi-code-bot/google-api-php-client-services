@@ -33,6 +33,18 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   /**
    * @var string
    */
+  public $cesApp;
+  /**
+   * @var string
+   */
+  public $cesTool;
+  /**
+   * @var string
+   */
+  public $cesToolset;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var array[]
@@ -82,6 +94,48 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   public function getAnswerRecord()
   {
     return $this->answerRecord;
+  }
+  /**
+   * @param string $cesApp
+   */
+  public function setCesApp($cesApp)
+  {
+    $this->cesApp = $cesApp;
+  }
+  /**
+   * @return string
+   */
+  public function getCesApp()
+  {
+    return $this->cesApp;
+  }
+  /**
+   * @param string $cesTool
+   */
+  public function setCesTool($cesTool)
+  {
+    $this->cesTool = $cesTool;
+  }
+  /**
+   * @return string
+   */
+  public function getCesTool()
+  {
+    return $this->cesTool;
+  }
+  /**
+   * @param string $cesToolset
+   */
+  public function setCesToolset($cesToolset)
+  {
+    $this->cesToolset = $cesToolset;
+  }
+  /**
+   * @return string
+   */
+  public function getCesToolset()
+  {
+    return $this->cesToolset;
   }
   /**
    * @param string $createTime
