@@ -56,6 +56,16 @@ class Service extends \Google\Collection
    */
   public $name;
   /**
+   * Output only. The resource name of the resulting Agent, MCP Server, or
+   * Endpoint. Format: *
+   * `projects/{project}/locations/{location}/mcpServers/{mcp_server}` *
+   * `projects/{project}/locations/{location}/agents/{agent}` *
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
+   * @var string
+   */
+  public $registryResource;
+  /**
    * Output only. Update time.
    *
    * @var string
@@ -195,6 +205,26 @@ class Service extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The resource name of the resulting Agent, MCP Server, or
+   * Endpoint. Format: *
+   * `projects/{project}/locations/{location}/mcpServers/{mcp_server}` *
+   * `projects/{project}/locations/{location}/agents/{agent}` *
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
+   * @param string $registryResource
+   */
+  public function setRegistryResource($registryResource)
+  {
+    $this->registryResource = $registryResource;
+  }
+  /**
+   * @return string
+   */
+  public function getRegistryResource()
+  {
+    return $this->registryResource;
   }
   /**
    * Output only. Update time.
