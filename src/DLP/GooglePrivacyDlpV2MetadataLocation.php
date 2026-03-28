@@ -31,6 +31,10 @@ class GooglePrivacyDlpV2MetadataLocation extends \Google\Model
    * Metadata extracted from the files.
    */
   public const TYPE_CONTENT_METADATA = 'CONTENT_METADATA';
+  /**
+   * Metadata provided by the client.
+   */
+  public const TYPE_CLIENT_PROVIDED_METADATA = 'CLIENT_PROVIDED_METADATA';
   protected $keyValueMetadataLabelType = GooglePrivacyDlpV2KeyValueMetadataLabel::class;
   protected $keyValueMetadataLabelDataType = '';
   protected $storageLabelType = GooglePrivacyDlpV2StorageMetadataLabel::class;
@@ -78,7 +82,7 @@ class GooglePrivacyDlpV2MetadataLocation extends \Google\Model
    * Type of metadata containing the finding.
    *
    * Accepted values: METADATATYPE_UNSPECIFIED, STORAGE_METADATA,
-   * CONTENT_METADATA
+   * CONTENT_METADATA, CLIENT_PROVIDED_METADATA
    *
    * @param self::TYPE_* $type
    */
