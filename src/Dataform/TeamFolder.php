@@ -17,23 +17,26 @@
 
 namespace Google\Service\Dataform;
 
-class Workspace extends \Google\Model
+class TeamFolder extends \Google\Model
 {
   /**
-   * Output only. The timestamp of when the workspace was created.
+   * Output only. The timestamp of when the TeamFolder was created.
    *
    * @var string
    */
   public $createTime;
-  protected $dataEncryptionStateType = DataEncryptionState::class;
-  protected $dataEncryptionStateDataType = '';
   /**
-   * Optional. If set to true, workspaces will not be moved if its linked
-   * Repository is moved. Instead, it will be deleted.
+   * Output only. The IAM principal identifier of the creator of the TeamFolder.
    *
-   * @var bool
+   * @var string
    */
-  public $disableMoves;
+  public $creatorIamPrincipal;
+  /**
+   * Required. The TeamFolder's user-friendly name.
+   *
+   * @var string
+   */
+  public $displayName;
   /**
    * Output only. All the metadata information that is used internally to serve
    * the resource. For example: timestamps, flags, status fields, etc. The
@@ -43,16 +46,20 @@ class Workspace extends \Google\Model
    */
   public $internalMetadata;
   /**
-   * Identifier. The workspace's name.
+   * Identifier. The TeamFolder's name.
    *
    * @var string
    */
   public $name;
-  protected $privateResourceMetadataType = PrivateResourceMetadata::class;
-  protected $privateResourceMetadataDataType = '';
+  /**
+   * Output only. The timestamp of when the TeamFolder was last updated.
+   *
+   * @var string
+   */
+  public $updateTime;
 
   /**
-   * Output only. The timestamp of when the workspace was created.
+   * Output only. The timestamp of when the TeamFolder was created.
    *
    * @param string $createTime
    */
@@ -68,38 +75,36 @@ class Workspace extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. A data encryption state of a Git repository if this Workspace
-   * is protected by a KMS key.
+   * Output only. The IAM principal identifier of the creator of the TeamFolder.
    *
-   * @param DataEncryptionState $dataEncryptionState
+   * @param string $creatorIamPrincipal
    */
-  public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
+  public function setCreatorIamPrincipal($creatorIamPrincipal)
   {
-    $this->dataEncryptionState = $dataEncryptionState;
+    $this->creatorIamPrincipal = $creatorIamPrincipal;
   }
   /**
-   * @return DataEncryptionState
+   * @return string
    */
-  public function getDataEncryptionState()
+  public function getCreatorIamPrincipal()
   {
-    return $this->dataEncryptionState;
+    return $this->creatorIamPrincipal;
   }
   /**
-   * Optional. If set to true, workspaces will not be moved if its linked
-   * Repository is moved. Instead, it will be deleted.
+   * Required. The TeamFolder's user-friendly name.
    *
-   * @param bool $disableMoves
+   * @param string $displayName
    */
-  public function setDisableMoves($disableMoves)
+  public function setDisplayName($displayName)
   {
-    $this->disableMoves = $disableMoves;
+    $this->displayName = $displayName;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDisableMoves()
+  public function getDisplayName()
   {
-    return $this->disableMoves;
+    return $this->displayName;
   }
   /**
    * Output only. All the metadata information that is used internally to serve
@@ -120,7 +125,7 @@ class Workspace extends \Google\Model
     return $this->internalMetadata;
   }
   /**
-   * Identifier. The workspace's name.
+   * Identifier. The TeamFolder's name.
    *
    * @param string $name
    */
@@ -136,23 +141,22 @@ class Workspace extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. Metadata indicating whether this resource is user-scoped. For
-   * `Workspace` resources, the `user_scoped` field is always `true`.
+   * Output only. The timestamp of when the TeamFolder was last updated.
    *
-   * @param PrivateResourceMetadata $privateResourceMetadata
+   * @param string $updateTime
    */
-  public function setPrivateResourceMetadata(PrivateResourceMetadata $privateResourceMetadata)
+  public function setUpdateTime($updateTime)
   {
-    $this->privateResourceMetadata = $privateResourceMetadata;
+    $this->updateTime = $updateTime;
   }
   /**
-   * @return PrivateResourceMetadata
+   * @return string
    */
-  public function getPrivateResourceMetadata()
+  public function getUpdateTime()
   {
-    return $this->privateResourceMetadata;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Workspace::class, 'Google_Service_Dataform_Workspace');
+class_alias(TeamFolder::class, 'Google_Service_Dataform_TeamFolder');
