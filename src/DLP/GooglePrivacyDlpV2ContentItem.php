@@ -21,6 +21,8 @@ class GooglePrivacyDlpV2ContentItem extends \Google\Model
 {
   protected $byteItemType = GooglePrivacyDlpV2ByteContentItem::class;
   protected $byteItemDataType = '';
+  protected $contentMetadataType = GooglePrivacyDlpV2ContentMetadata::class;
+  protected $contentMetadataDataType = '';
   protected $tableType = GooglePrivacyDlpV2Table::class;
   protected $tableDataType = '';
   /**
@@ -45,6 +47,22 @@ class GooglePrivacyDlpV2ContentItem extends \Google\Model
   public function getByteItem()
   {
     return $this->byteItem;
+  }
+  /**
+   * User provided metadata for the content.
+   *
+   * @param GooglePrivacyDlpV2ContentMetadata $contentMetadata
+   */
+  public function setContentMetadata(GooglePrivacyDlpV2ContentMetadata $contentMetadata)
+  {
+    $this->contentMetadata = $contentMetadata;
+  }
+  /**
+   * @return GooglePrivacyDlpV2ContentMetadata
+   */
+  public function getContentMetadata()
+  {
+    return $this->contentMetadata;
   }
   /**
    * Structured content for inspection. See https://cloud.google.com/sensitive-
