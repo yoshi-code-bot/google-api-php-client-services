@@ -34,11 +34,15 @@ class AdvancedVoiceOptions extends \Google\Model
    */
   public $lowLatencyJourneySynthesis;
   /**
-   * Optional. Input only. If true, relaxes safety filters for Gemini TTS.
+   * Optional. Input only. Deprecated, use safety_settings instead. If true,
+   * relaxes safety filters for Gemini TTS.
    *
+   * @deprecated
    * @var bool
    */
   public $relaxSafetyFilters;
+  protected $safetySettingsType = SafetySettings::class;
+  protected $safetySettingsDataType = '';
 
   /**
    * Optional. If true, textnorm will be applied to text input. This feature is
@@ -75,8 +79,10 @@ class AdvancedVoiceOptions extends \Google\Model
     return $this->lowLatencyJourneySynthesis;
   }
   /**
-   * Optional. Input only. If true, relaxes safety filters for Gemini TTS.
+   * Optional. Input only. Deprecated, use safety_settings instead. If true,
+   * relaxes safety filters for Gemini TTS.
    *
+   * @deprecated
    * @param bool $relaxSafetyFilters
    */
   public function setRelaxSafetyFilters($relaxSafetyFilters)
@@ -84,11 +90,31 @@ class AdvancedVoiceOptions extends \Google\Model
     $this->relaxSafetyFilters = $relaxSafetyFilters;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getRelaxSafetyFilters()
   {
     return $this->relaxSafetyFilters;
+  }
+  /**
+   * Optional. Input only. This applies to Gemini TTS only. If set, the category
+   * specified in the safety setting will be blocked if the harm probability is
+   * above the threshold. Otherwise, the safety filter will be disabled by
+   * default.
+   *
+   * @param SafetySettings $safetySettings
+   */
+  public function setSafetySettings(SafetySettings $safetySettings)
+  {
+    $this->safetySettings = $safetySettings;
+  }
+  /**
+   * @return SafetySettings
+   */
+  public function getSafetySettings()
+  {
+    return $this->safetySettings;
   }
 }
 
