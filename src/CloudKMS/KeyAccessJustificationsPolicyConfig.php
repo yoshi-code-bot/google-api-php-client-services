@@ -22,6 +22,15 @@ class KeyAccessJustificationsPolicyConfig extends \Google\Model
   protected $defaultKeyAccessJustificationPolicyType = KeyAccessJustificationsPolicy::class;
   protected $defaultKeyAccessJustificationPolicyDataType = '';
   /**
+   * Output only. Indicates whether this parent resource is available to default
+   * policy feature. Please consult [the prerequisite of default policy
+   * feature](https://cloud.google.com/assured-workloads/key-access-
+   * justifications/docs/set-default-policy#before) for more details.
+   *
+   * @var bool
+   */
+  public $defaultPolicyAvailable;
+  /**
    * Identifier. Represents the resource name for this
    * KeyAccessJustificationsPolicyConfig in the format of
    * "{organizations|folders|projects}/kajPolicyConfig".
@@ -52,6 +61,25 @@ class KeyAccessJustificationsPolicyConfig extends \Google\Model
   public function getDefaultKeyAccessJustificationPolicy()
   {
     return $this->defaultKeyAccessJustificationPolicy;
+  }
+  /**
+   * Output only. Indicates whether this parent resource is available to default
+   * policy feature. Please consult [the prerequisite of default policy
+   * feature](https://cloud.google.com/assured-workloads/key-access-
+   * justifications/docs/set-default-policy#before) for more details.
+   *
+   * @param bool $defaultPolicyAvailable
+   */
+  public function setDefaultPolicyAvailable($defaultPolicyAvailable)
+  {
+    $this->defaultPolicyAvailable = $defaultPolicyAvailable;
+  }
+  /**
+   * @return bool
+   */
+  public function getDefaultPolicyAvailable()
+  {
+    return $this->defaultPolicyAvailable;
   }
   /**
    * Identifier. Represents the resource name for this
