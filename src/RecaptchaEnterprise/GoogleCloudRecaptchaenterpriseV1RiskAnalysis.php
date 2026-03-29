@@ -44,9 +44,9 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
    */
   public $challenge;
   /**
-   * Output only. Advanced reasons contributing to the risk analysis verdict.
+   * Output only. Additional reasons contributing to the risk analysis verdict.
    * These reasons are available to Enterprise tier projects only. Contact sales
-   * for more information. The set of possible reasons is subject to change.
+   * for more information. The set of reasons is subject to change.
    *
    * @var string[]
    */
@@ -87,9 +87,9 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
     return $this->challenge;
   }
   /**
-   * Output only. Advanced reasons contributing to the risk analysis verdict.
+   * Output only. Additional reasons contributing to the risk analysis verdict.
    * These reasons are available to Enterprise tier projects only. Contact sales
-   * for more information. The set of possible reasons is subject to change.
+   * for more information. The set of reasons is subject to change.
    *
    * @param string[] $extendedVerdictReasons
    */
