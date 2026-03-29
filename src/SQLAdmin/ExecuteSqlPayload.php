@@ -43,7 +43,7 @@ class ExecuteSqlPayload extends \Google\Model
    */
   public $application;
   /**
-   * Optional. When set to true, the API caller identity associated with the
+   * Optional. When set to `true`, the API caller identity associated with the
    * request is used for database authentication. The API caller must be an IAM
    * user in the database.
    *
@@ -105,7 +105,7 @@ class ExecuteSqlPayload extends \Google\Model
     return $this->application;
   }
   /**
-   * Optional. When set to true, the API caller identity associated with the
+   * Optional. When set to `true`, the API caller identity associated with the
    * request is used for database authentication. The API caller must be an IAM
    * user in the database.
    *
