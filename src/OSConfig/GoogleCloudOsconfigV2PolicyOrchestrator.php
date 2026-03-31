@@ -71,8 +71,8 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
   protected $orchestrationStateType = GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState::class;
   protected $orchestrationStateDataType = '';
   /**
-   * Output only. Set to true, if the there are ongoing changes being applied by
-   * the orchestrator.
+   * Output only. Set to true, if there are ongoing changes being applied by the
+   * orchestrator.
    *
    * @var bool
    */
@@ -256,8 +256,8 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->orchestrationState;
   }
   /**
-   * Output only. Set to true, if the there are ongoing changes being applied by
-   * the orchestrator.
+   * Output only. Set to true, if there are ongoing changes being applied by the
+   * orchestrator.
    *
    * @param bool $reconciling
    */
