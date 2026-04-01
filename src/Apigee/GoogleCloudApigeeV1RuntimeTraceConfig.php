@@ -24,17 +24,33 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
    */
   public const EXPORTER_EXPORTER_UNSPECIFIED = 'EXPORTER_UNSPECIFIED';
   /**
-   * Jaeger exporter
+   * Exports events to Jaeger. Compatible with OpenCensus protocol.
    */
   public const EXPORTER_JAEGER = 'JAEGER';
   /**
-   * Cloudtrace exporter
+   * Exports events to Cloud Trace. Compatible with OpenCensus protocol.
    */
   public const EXPORTER_CLOUD_TRACE = 'CLOUD_TRACE';
   /**
-   * Open Telemetry Collector
+   * OpenTelemetry Collector. Compatible with OpenTelemetry protocol.
    */
   public const EXPORTER_OPEN_TELEMETRY_COLLECTOR = 'OPEN_TELEMETRY_COLLECTOR';
+  /**
+   * Exports events to Cloud Trace. Compatible with OpenTelemetry protocol.
+   */
+  public const EXPORTER_OPEN_TELEMETRY_CLOUD_TRACE = 'OPEN_TELEMETRY_CLOUD_TRACE';
+  /**
+   * Protocol unspecified. Defaults to OPEN_CENSUS.
+   */
+  public const TRACE_PROTOCOL_TRACE_PROTOCOL_UNSPECIFIED = 'TRACE_PROTOCOL_UNSPECIFIED';
+  /**
+   * Uses OpenCensus protocol.
+   */
+  public const TRACE_PROTOCOL_OPEN_CENSUS = 'OPEN_CENSUS';
+  /**
+   * Uses OpenTelemetry Protocol (OTLP).
+   */
+  public const TRACE_PROTOCOL_OTLP = 'OTLP';
   protected $collection_key = 'overrides';
   /**
    * Endpoint of the exporter.
@@ -58,13 +74,15 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
    */
   public $name;
   /**
-   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace
-   * data. Configuration Requirements (if `open_telemetry_protocol_enabled` is
-   * `true`): - Allowed `Exporter`s: `CLOUD_TRACE` or
-   * `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`:
-   * - `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is
-   * `CLOUD_TRACE`: - `endpoint` refers to a valid project ID
+   * Optional. If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send
+   * trace data. Configuration Requirements (if
+   * `open_telemetry_protocol_enabled` is `true`): - Allowed `Exporter`s:
+   * `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is
+   * `OPEN_TELEMETRY_COLLECTOR`: - `endpoint` refers to a valid OTLP collector
+   * URL. - If `Exporter` is `CLOUD_TRACE`: - `endpoint` refers to a valid
+   * project ID Deprecated: Use trace_protocol instead.
    *
+   * @deprecated
    * @var bool
    */
   public $openTelemetryProtocolEnabled;
@@ -85,6 +103,12 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
   public $revisionId;
   protected $samplingConfigType = GoogleCloudApigeeV1RuntimeTraceSamplingConfig::class;
   protected $samplingConfigDataType = '';
+  /**
+   * Optional. The trace protocol to use.
+   *
+   * @var string
+   */
+  public $traceProtocol;
 
   /**
    * Endpoint of the exporter.
@@ -108,7 +132,7 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
    * consuming them. Recorded spans can be exported by registered exporters.
    *
    * Accepted values: EXPORTER_UNSPECIFIED, JAEGER, CLOUD_TRACE,
-   * OPEN_TELEMETRY_COLLECTOR
+   * OPEN_TELEMETRY_COLLECTOR, OPEN_TELEMETRY_CLOUD_TRACE
    *
    * @param self::EXPORTER_* $exporter
    */
@@ -141,13 +165,15 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace
-   * data. Configuration Requirements (if `open_telemetry_protocol_enabled` is
-   * `true`): - Allowed `Exporter`s: `CLOUD_TRACE` or
-   * `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`:
-   * - `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is
-   * `CLOUD_TRACE`: - `endpoint` refers to a valid project ID
+   * Optional. If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send
+   * trace data. Configuration Requirements (if
+   * `open_telemetry_protocol_enabled` is `true`): - Allowed `Exporter`s:
+   * `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is
+   * `OPEN_TELEMETRY_COLLECTOR`: - `endpoint` refers to a valid OTLP collector
+   * URL. - If `Exporter` is `CLOUD_TRACE`: - `endpoint` refers to a valid
+   * project ID Deprecated: Use trace_protocol instead.
    *
+   * @deprecated
    * @param bool $openTelemetryProtocolEnabled
    */
   public function setOpenTelemetryProtocolEnabled($openTelemetryProtocolEnabled)
@@ -155,6 +181,7 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
     $this->openTelemetryProtocolEnabled = $openTelemetryProtocolEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getOpenTelemetryProtocolEnabled()
@@ -225,6 +252,24 @@ class GoogleCloudApigeeV1RuntimeTraceConfig extends \Google\Collection
   public function getSamplingConfig()
   {
     return $this->samplingConfig;
+  }
+  /**
+   * Optional. The trace protocol to use.
+   *
+   * Accepted values: TRACE_PROTOCOL_UNSPECIFIED, OPEN_CENSUS, OTLP
+   *
+   * @param self::TRACE_PROTOCOL_* $traceProtocol
+   */
+  public function setTraceProtocol($traceProtocol)
+  {
+    $this->traceProtocol = $traceProtocol;
+  }
+  /**
+   * @return self::TRACE_PROTOCOL_*
+   */
+  public function getTraceProtocol()
+  {
+    return $this->traceProtocol;
   }
 }
 
