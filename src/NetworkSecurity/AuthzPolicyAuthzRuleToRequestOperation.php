@@ -24,6 +24,8 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
   protected $headerSetDataType = '';
   protected $hostsType = AuthzPolicyAuthzRuleStringMatch::class;
   protected $hostsDataType = 'array';
+  protected $mcpType = AuthzPolicyAuthzRuleToRequestOperationMCP::class;
+  protected $mcpDataType = '';
   /**
    * Optional. A list of HTTP methods to match against. Each entry must be a
    * valid HTTP method name (GET, PUT, POST, HEAD, PATCH, DELETE, OPTIONS). It
@@ -70,6 +72,25 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
   public function getHosts()
   {
     return $this->hosts;
+  }
+  /**
+   * Optional. Defines the MCP protocol attributes to match on. If the MCP
+   * payload in the request body cannot be successfully parsed, the request will
+   * be denied. This field can be set only for AuthzPolicies targeting
+   * AgentGateway resources.
+   *
+   * @param AuthzPolicyAuthzRuleToRequestOperationMCP $mcp
+   */
+  public function setMcp(AuthzPolicyAuthzRuleToRequestOperationMCP $mcp)
+  {
+    $this->mcp = $mcp;
+  }
+  /**
+   * @return AuthzPolicyAuthzRuleToRequestOperationMCP
+   */
+  public function getMcp()
+  {
+    return $this->mcp;
   }
   /**
    * Optional. A list of HTTP methods to match against. Each entry must be a

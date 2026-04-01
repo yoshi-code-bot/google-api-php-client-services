@@ -54,7 +54,9 @@ class FirewallEndpoint extends \Google\Collection
   protected $associationsType = FirewallEndpointAssociationReference::class;
   protected $associationsDataType = 'array';
   /**
-   * Required. Project to bill on endpoint uptime usage.
+   * Optional. Project to charge for the deployed firewall endpoint. This field
+   * must be specified when creating the endpoint in the organization scope, and
+   * should be omitted otherwise.
    *
    * @var string
    */
@@ -158,7 +160,9 @@ class FirewallEndpoint extends \Google\Collection
     return $this->associations;
   }
   /**
-   * Required. Project to bill on endpoint uptime usage.
+   * Optional. Project to charge for the deployed firewall endpoint. This field
+   * must be specified when creating the endpoint in the organization scope, and
+   * should be omitted otherwise.
    *
    * @param string $billingProjectId
    */

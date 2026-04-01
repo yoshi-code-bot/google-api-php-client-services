@@ -35,6 +35,25 @@ class AuthzPolicy extends \Google\Collection
    * Delegate the authorization decision to an external authorization engine.
    */
   public const ACTION_CUSTOM = 'CUSTOM';
+  /**
+   * Unspecified policy profile.
+   */
+  public const POLICY_PROFILE_POLICY_PROFILE_UNSPECIFIED = 'POLICY_PROFILE_UNSPECIFIED';
+  /**
+   * Applies to request authorization. `CUSTOM` authorization policies with
+   * Authz extensions will be allowed with `EXT_AUTHZ_GRPC` or `EXT_PROC_GRPC`
+   * protocols. Extensions are invoked only for request header events.
+   */
+  public const POLICY_PROFILE_REQUEST_AUTHZ = 'REQUEST_AUTHZ';
+  /**
+   * Applies to content security, sanitization, etc. Only `CUSTOM` action is
+   * allowed in this policy profile. AuthzExtensions in the custom provider must
+   * support `EXT_PROC_GRPC` protocol only and be capable of receiving all
+   * `EXT_PROC_GRPC` events (REQUEST_HEADERS, REQUEST_BODY, REQUEST_TRAILERS,
+   * RESPONSE_HEADERS, RESPONSE_BODY, RESPONSE_TRAILERS) with
+   * `FULL_DUPLEX_STREAMED` body send mode.
+   */
+  public const POLICY_PROFILE_CONTENT_AUTHZ = 'CONTENT_AUTHZ';
   protected $collection_key = 'httpRules';
   /**
    * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is
@@ -86,6 +105,14 @@ class AuthzPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * Optional. Immutable. Defines the type of authorization being performed. If
+   * not specified, `REQUEST_AUTHZ` is applied. This field cannot be changed
+   * once AuthzPolicy is created.
+   *
+   * @var string
+   */
+  public $policyProfile;
   protected $targetType = AuthzPolicyTarget::class;
   protected $targetDataType = '';
   /**
@@ -229,6 +256,26 @@ class AuthzPolicy extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Immutable. Defines the type of authorization being performed. If
+   * not specified, `REQUEST_AUTHZ` is applied. This field cannot be changed
+   * once AuthzPolicy is created.
+   *
+   * Accepted values: POLICY_PROFILE_UNSPECIFIED, REQUEST_AUTHZ, CONTENT_AUTHZ
+   *
+   * @param self::POLICY_PROFILE_* $policyProfile
+   */
+  public function setPolicyProfile($policyProfile)
+  {
+    $this->policyProfile = $policyProfile;
+  }
+  /**
+   * @return self::POLICY_PROFILE_*
+   */
+  public function getPolicyProfile()
+  {
+    return $this->policyProfile;
   }
   /**
    * Required. Specifies the set of resources to which this policy should be
