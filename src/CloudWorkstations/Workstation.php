@@ -42,6 +42,14 @@ class Workstation extends \Google\Model
    */
   public const STATE_STATE_STOPPED = 'STATE_STOPPED';
   /**
+   * The workstation is being suspended.
+   */
+  public const STATE_STATE_SUSPENDING = 'STATE_SUSPENDING';
+  /**
+   * The workstation is suspended.
+   */
+  public const STATE_STATE_SUSPENDED = 'STATE_SUSPENDED';
+  /**
    * Optional. Client-specified annotations.
    *
    * @var string[]
@@ -399,7 +407,7 @@ class Workstation extends \Google\Model
    * Output only. Current state of the workstation.
    *
    * Accepted values: STATE_UNSPECIFIED, STATE_STARTING, STATE_RUNNING,
-   * STATE_STOPPING, STATE_STOPPED
+   * STATE_STOPPING, STATE_STOPPED, STATE_SUSPENDING, STATE_SUSPENDED
    *
    * @param self::STATE_* $state
    */
