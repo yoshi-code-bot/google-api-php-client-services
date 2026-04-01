@@ -172,9 +172,12 @@ class OrganizationsDevelopersApps extends \Google\Service\Resource
    * limit is 1000.
    * @opt_param bool expand Optional. Specifies whether to expand the results. Set
    * to `true` to expand the results. This query parameter is not valid if you use
-   * the `count` or `startKey` query parameters.
+   * the `count` or `startKey` query parameters. **Note**: If set to `true`, the
+   * `apigee.developerapps.get` permission is required.
    * @opt_param bool shallowExpand Optional. Specifies whether to expand the
    * results in shallow mode. Set to `true` to expand the results in shallow mode.
+   * **Note**: If set to `true`, the `apigee.developerapps.get` permission is
+   * required.
    * @opt_param string startKey **Note**: Must be used in conjunction with the
    * `count` parameter. Name of the developer app from which to start displaying
    * the list of developer apps. For example, if you're returning 50 developer
