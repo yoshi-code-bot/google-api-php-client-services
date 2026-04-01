@@ -59,6 +59,12 @@ class BDRBackupRestoreJobLog extends \Google\Model
    */
   public $backupVaultName;
   /**
+   * Canonical Data Source Name
+   *
+   * @var string
+   */
+  public $dataSourceName;
+  /**
    * End time of the job.
    *
    * @var string
@@ -254,6 +260,22 @@ class BDRBackupRestoreJobLog extends \Google\Model
   public function getBackupVaultName()
   {
     return $this->backupVaultName;
+  }
+  /**
+   * Canonical Data Source Name
+   *
+   * @param string $dataSourceName
+   */
+  public function setDataSourceName($dataSourceName)
+  {
+    $this->dataSourceName = $dataSourceName;
+  }
+  /**
+   * @return string
+   */
+  public function getDataSourceName()
+  {
+    return $this->dataSourceName;
   }
   /**
    * End time of the job.
