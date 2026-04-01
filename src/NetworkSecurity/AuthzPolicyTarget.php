@@ -40,7 +40,7 @@ class AuthzPolicyTarget extends \Google\Collection
   public const LOAD_BALANCING_SCHEME_INTERNAL_SELF_MANAGED = 'INTERNAL_SELF_MANAGED';
   protected $collection_key = 'resources';
   /**
-   * Required. All gateways and forwarding rules referenced by this policy and
+   * Optional. All gateways and forwarding rules referenced by this policy and
    * extensions must share the same load balancing scheme. Supported values:
    * `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For more information, refer to
    * [Backend services overview](https://cloud.google.com/load-
@@ -58,7 +58,7 @@ class AuthzPolicyTarget extends \Google\Collection
   public $resources;
 
   /**
-   * Required. All gateways and forwarding rules referenced by this policy and
+   * Optional. All gateways and forwarding rules referenced by this policy and
    * extensions must share the same load balancing scheme. Supported values:
    * `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For more information, refer to
    * [Backend services overview](https://cloud.google.com/load-
