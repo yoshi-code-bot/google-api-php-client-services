@@ -34,13 +34,16 @@ class LanguageSettings extends \Google\Collection
    */
   public $enableMultilingualSupport;
   /**
-   * Optional. The action to perform when an agent receives input in an
-   * unsupported language. This can be a predefined action or a custom tool
-   * call. Valid values are: - A tool's full resource name, which triggers a
-   * specific tool execution. - A predefined system action, such as "escalate"
-   * or "exit", which triggers an EndSession signal with corresponding metadata
-   * to terminate the conversation.
+   * Optional. Deprecated: This feature is no longer supported. Use
+   * `enable_multilingual_support` instead to improve handling of multilingual
+   * input. The action to perform when an agent receives input in an unsupported
+   * language. This can be a predefined action or a custom tool call. Valid
+   * values are: - A tool's full resource name, which triggers a specific tool
+   * execution. - A predefined system action, such as "escalate" or "exit",
+   * which triggers an EndSession signal with corresponding metadata to
+   * terminate the conversation.
    *
+   * @deprecated
    * @var string
    */
   public $fallbackAction;
@@ -86,13 +89,16 @@ class LanguageSettings extends \Google\Collection
     return $this->enableMultilingualSupport;
   }
   /**
-   * Optional. The action to perform when an agent receives input in an
-   * unsupported language. This can be a predefined action or a custom tool
-   * call. Valid values are: - A tool's full resource name, which triggers a
-   * specific tool execution. - A predefined system action, such as "escalate"
-   * or "exit", which triggers an EndSession signal with corresponding metadata
-   * to terminate the conversation.
+   * Optional. Deprecated: This feature is no longer supported. Use
+   * `enable_multilingual_support` instead to improve handling of multilingual
+   * input. The action to perform when an agent receives input in an unsupported
+   * language. This can be a predefined action or a custom tool call. Valid
+   * values are: - A tool's full resource name, which triggers a specific tool
+   * execution. - A predefined system action, such as "escalate" or "exit",
+   * which triggers an EndSession signal with corresponding metadata to
+   * terminate the conversation.
    *
+   * @deprecated
    * @param string $fallbackAction
    */
   public function setFallbackAction($fallbackAction)
@@ -100,6 +106,7 @@ class LanguageSettings extends \Google\Collection
     $this->fallbackAction = $fallbackAction;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getFallbackAction()
