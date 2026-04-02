@@ -62,6 +62,8 @@ class BackupPlan extends \Google\Collection
    * @var string
    */
   public $backupVaultServiceAccount;
+  protected $computeInstanceBackupPlanPropertiesType = ComputeInstanceBackupPlanProperties::class;
+  protected $computeInstanceBackupPlanPropertiesDataType = '';
   /**
    * Output only. When the `BackupPlan` was created.
    *
@@ -213,6 +215,24 @@ class BackupPlan extends \Google\Collection
   public function getBackupVaultServiceAccount()
   {
     return $this->backupVaultServiceAccount;
+  }
+  /**
+   * Optional. Defines optional properties specific to backups of disk-based
+   * resources, such as Compute Engine. This includes settings like whether to
+   * perform a guest flush.
+   *
+   * @param ComputeInstanceBackupPlanProperties $computeInstanceBackupPlanProperties
+   */
+  public function setComputeInstanceBackupPlanProperties(ComputeInstanceBackupPlanProperties $computeInstanceBackupPlanProperties)
+  {
+    $this->computeInstanceBackupPlanProperties = $computeInstanceBackupPlanProperties;
+  }
+  /**
+   * @return ComputeInstanceBackupPlanProperties
+   */
+  public function getComputeInstanceBackupPlanProperties()
+  {
+    return $this->computeInstanceBackupPlanProperties;
   }
   /**
    * Output only. When the `BackupPlan` was created.
