@@ -222,6 +222,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $discoveredWorkloadType = DiscoveredWorkload::class;
+  protected $discoveredWorkloadDataType = '';
   protected $diskType = Disk::class;
   protected $diskDataType = '';
   /**
@@ -816,6 +818,22 @@ class Finding extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * DiscoveredWorkload associated with the finding.
+   *
+   * @param DiscoveredWorkload $discoveredWorkload
+   */
+  public function setDiscoveredWorkload(DiscoveredWorkload $discoveredWorkload)
+  {
+    $this->discoveredWorkload = $discoveredWorkload;
+  }
+  /**
+   * @return DiscoveredWorkload
+   */
+  public function getDiscoveredWorkload()
+  {
+    return $this->discoveredWorkload;
   }
   /**
    * Disk associated with the finding.

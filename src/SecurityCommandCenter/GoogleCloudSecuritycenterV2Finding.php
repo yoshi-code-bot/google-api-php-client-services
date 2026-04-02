@@ -230,6 +230,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $discoveredWorkloadType = GoogleCloudSecuritycenterV2DiscoveredWorkload::class;
+  protected $discoveredWorkloadDataType = '';
   protected $diskType = GoogleCloudSecuritycenterV2Disk::class;
   protected $diskDataType = '';
   /**
@@ -855,6 +857,22 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * DiscoveredWorkload associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2DiscoveredWorkload $discoveredWorkload
+   */
+  public function setDiscoveredWorkload(GoogleCloudSecuritycenterV2DiscoveredWorkload $discoveredWorkload)
+  {
+    $this->discoveredWorkload = $discoveredWorkload;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2DiscoveredWorkload
+   */
+  public function getDiscoveredWorkload()
+  {
+    return $this->discoveredWorkload;
   }
   /**
    * Disk associated with the finding.
