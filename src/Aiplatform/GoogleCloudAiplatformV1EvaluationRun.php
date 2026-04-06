@@ -52,6 +52,10 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
    */
   public const STATE_GENERATING_RUBRICS = 'GENERATING_RUBRICS';
   /**
+   * The evaluation run is performing loss analysis.
+   */
+  public const STATE_GENERATING_LOSS_CLUSTERS = 'GENERATING_LOSS_CLUSTERS';
+  /**
    * Output only. Time when the evaluation run was completed.
    *
    * @var string
@@ -320,7 +324,7 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
    * Output only. The state of the evaluation run.
    *
    * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED, FAILED,
-   * CANCELLED, INFERENCE, GENERATING_RUBRICS
+   * CANCELLED, INFERENCE, GENERATING_RUBRICS, GENERATING_LOSS_CLUSTERS
    *
    * @param self::STATE_* $state
    */

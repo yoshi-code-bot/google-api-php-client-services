@@ -54,7 +54,7 @@ class GoogleCloudAiplatformV1Memory extends \Google\Collection
    */
   public $expireTime;
   /**
-   * Required. Semantic knowledge extracted from the source content.
+   * Optional. Semantic knowledge extracted from the source content.
    *
    * @var string
    */
@@ -197,7 +197,7 @@ class GoogleCloudAiplatformV1Memory extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * Required. Semantic knowledge extracted from the source content.
+   * Optional. Semantic knowledge extracted from the source content.
    *
    * @param string $fact
    */
