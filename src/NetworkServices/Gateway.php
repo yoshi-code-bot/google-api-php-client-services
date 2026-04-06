@@ -81,6 +81,14 @@ class Gateway extends \Google\Collection
    */
   public $addresses;
   /**
+   * Optional. If true, the Gateway will listen on all ports. This is mutually
+   * exclusive with the `ports` field. This field only applies to gateways of
+   * type 'SECURE_WEB_GATEWAY'.
+   *
+   * @var bool
+   */
+  public $allPorts;
+  /**
    * Optional. If true, the gateway will allow traffic from clients outside of
    * the region where the gateway is located. This field is configurable only
    * for gateways of type SECURE_WEB_GATEWAY.
@@ -238,6 +246,24 @@ class Gateway extends \Google\Collection
   public function getAddresses()
   {
     return $this->addresses;
+  }
+  /**
+   * Optional. If true, the Gateway will listen on all ports. This is mutually
+   * exclusive with the `ports` field. This field only applies to gateways of
+   * type 'SECURE_WEB_GATEWAY'.
+   *
+   * @param bool $allPorts
+   */
+  public function setAllPorts($allPorts)
+  {
+    $this->allPorts = $allPorts;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllPorts()
+  {
+    return $this->allPorts;
   }
   /**
    * Optional. If true, the gateway will allow traffic from clients outside of
