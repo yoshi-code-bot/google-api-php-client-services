@@ -127,6 +127,16 @@ class LogEntry extends \Google\Collection
   protected $operationType = LogEntryOperation::class;
   protected $operationDataType = '';
   /**
+   * Optional. The structured OpenTelemetry protocol payload. Contains the
+   * OpenTelemetry Resource, Instrumentation Scope, and Entities attributes for
+   * this log as they are defined in the OTLP specification, and any other
+   * fields that do not have a direct analog in the LogEntry. See
+   * https://opentelemetry.io/docs/specs/otel/logs/data-model/
+   *
+   * @var array[]
+   */
+  public $otel;
+  /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud
    * Platform services use this field for their log entry payloads.The following
    * protocol buffer types are supported; user-defined types are not
@@ -443,6 +453,26 @@ class LogEntry extends \Google\Collection
   public function getOperation()
   {
     return $this->operation;
+  }
+  /**
+   * Optional. The structured OpenTelemetry protocol payload. Contains the
+   * OpenTelemetry Resource, Instrumentation Scope, and Entities attributes for
+   * this log as they are defined in the OTLP specification, and any other
+   * fields that do not have a direct analog in the LogEntry. See
+   * https://opentelemetry.io/docs/specs/otel/logs/data-model/
+   *
+   * @param array[] $otel
+   */
+  public function setOtel($otel)
+  {
+    $this->otel = $otel;
+  }
+  /**
+   * @return array[]
+   */
+  public function getOtel()
+  {
+    return $this->otel;
   }
   /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud
