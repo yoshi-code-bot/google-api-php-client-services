@@ -17,27 +17,32 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\InstanceTemplate;
-use Google\Service\Compute\InstanceTemplateList;
+use Google\Service\Compute\InstantSnapshotGroup;
+use Google\Service\Compute\ListInstantSnapshotGroups;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\Policy;
+use Google\Service\Compute\RegionSetPolicyRequest;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
- * The "regionInstanceTemplates" collection of methods.
+ * The "regionInstantSnapshotGroups" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $regionInstanceTemplates = $computeService->regionInstanceTemplates;
+ *   $regionInstantSnapshotGroups = $computeService->regionInstantSnapshotGroups;
  *  </code>
  */
-class RegionInstanceTemplates extends \Google\Service\Resource
+class RegionInstantSnapshotGroups extends \Google\Service\Resource
 {
   /**
-   * Deletes the specified instance template. Deleting an instance template is
-   * permanent and cannot be undone. (regionInstanceTemplates.delete)
+   * deletes a Regional InstantSnapshotGroup resource
+   * (regionInstantSnapshotGroups.delete)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template to delete.
+   * @param string $instantSnapshotGroup Name of the InstantSnapshotGroup resource
+   * to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -55,36 +60,56 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $region, $instanceTemplate, $optParams = [])
+  public function delete($project, $region, $instantSnapshotGroup, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'region' => $region, 'instantSnapshotGroup' => $instantSnapshotGroup];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified instance template. (regionInstanceTemplates.get)
+   * returns the specified InstantSnapshotGroup resource in the specified region.
+   * (regionInstantSnapshotGroups.get)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template.
+   * @param string $instantSnapshotGroup Name of the InstantSnapshotGroup resource
+   * to return.
    * @param array $optParams Optional parameters.
-   * @return InstanceTemplate
+   * @return InstantSnapshotGroup
    * @throws \Google\Service\Exception
    */
-  public function get($project, $region, $instanceTemplate, $optParams = [])
+  public function get($project, $region, $instantSnapshotGroup, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'region' => $region, 'instantSnapshotGroup' => $instantSnapshotGroup];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], InstanceTemplate::class);
+    return $this->call('get', [$params], InstantSnapshotGroup::class);
   }
   /**
-   * Creates an instance template in the specified project and region using the
-   * global instance template whose URL is included in the request.
-   * (regionInstanceTemplates.insert)
+   * Gets the access control policy for a resource. May be empty if no such policy
+   * or resource exists. (regionInstantSnapshotGroups.getIamPolicy)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region for this request.
-   * @param InstanceTemplate $postBody
+   * @param string $resource Name or id of the resource for this request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
+   * @return Policy
+   * @throws \Google\Service\Exception
+   */
+  public function getIamPolicy($project, $region, $resource, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource];
+    $params = array_merge($params, $optParams);
+    return $this->call('getIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * creates a Regional InstantSnapshotGroup resource
+   * (regionInstantSnapshotGroups.insert)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region for this request.
+   * @param InstantSnapshotGroup $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -99,22 +124,24 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
+   * @opt_param string sourceConsistencyGroup begin_interface:
+   * MixerMutationRequestBuilder
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, $region, InstanceTemplate $postBody, $optParams = [])
+  public function insert($project, $region, InstantSnapshotGroup $postBody, $optParams = [])
   {
     $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Retrieves a list of instance templates that are contained within the
-   * specified project and region.
-   * (regionInstanceTemplates.listRegionInstanceTemplates)
+   * retrieves the list of InstantSnapshotGroup resources contained within the
+   * specified region.
+   * (regionInstantSnapshotGroups.listRegionInstantSnapshotGroups)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the regions for this request.
+   * @param string $region The name of the region for this request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -186,16 +213,52 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @return InstanceTemplateList
+   * @return ListInstantSnapshotGroups
    * @throws \Google\Service\Exception
    */
-  public function listRegionInstanceTemplates($project, $region, $optParams = [])
+  public function listRegionInstantSnapshotGroups($project, $region, $optParams = [])
   {
     $params = ['project' => $project, 'region' => $region];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], InstanceTemplateList::class);
+    return $this->call('list', [$params], ListInstantSnapshotGroups::class);
+  }
+  /**
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. (regionInstantSnapshotGroups.setIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param RegionSetPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Policy
+   * @throws \Google\Service\Exception
+   */
+  public function setIamPolicy($project, $region, $resource, RegionSetPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (regionInstantSnapshotGroups.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RegionInstanceTemplates::class, 'Google_Service_Compute_Resource_RegionInstanceTemplates');
+class_alias(RegionInstantSnapshotGroups::class, 'Google_Service_Compute_Resource_RegionInstantSnapshotGroups');

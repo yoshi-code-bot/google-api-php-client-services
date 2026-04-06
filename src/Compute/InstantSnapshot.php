@@ -186,6 +186,24 @@ class InstantSnapshot extends \Google\Model
    */
   public $sourceDiskId;
   /**
+   * Output only. [Output Only] URL of the source instant snapshot this instant
+   * snapshot is part of. Note that the source instant snapshot group must be in
+   * the same zone/region as the instant snapshot to be created. This can be a
+   * full or valid partial URL.
+   *
+   * @var string
+   */
+  public $sourceInstantSnapshotGroup;
+  /**
+   * Output only. [Output Only] The ID value of the source instant snapshot
+   * group this InstantSnapshot is part of. This value may be used to determine
+   * whether the InstantSnapshot was created as part of an InstantSnapshotGroup
+   * creation.
+   *
+   * @var string
+   */
+  public $sourceInstantSnapshotGroupId;
+  /**
    * Output only. [Output Only] The status of the instantSnapshot. This can
    * beCREATING, DELETING, FAILED, orREADY.
    *
@@ -525,6 +543,44 @@ class InstantSnapshot extends \Google\Model
   public function getSourceDiskId()
   {
     return $this->sourceDiskId;
+  }
+  /**
+   * Output only. [Output Only] URL of the source instant snapshot this instant
+   * snapshot is part of. Note that the source instant snapshot group must be in
+   * the same zone/region as the instant snapshot to be created. This can be a
+   * full or valid partial URL.
+   *
+   * @param string $sourceInstantSnapshotGroup
+   */
+  public function setSourceInstantSnapshotGroup($sourceInstantSnapshotGroup)
+  {
+    $this->sourceInstantSnapshotGroup = $sourceInstantSnapshotGroup;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstantSnapshotGroup()
+  {
+    return $this->sourceInstantSnapshotGroup;
+  }
+  /**
+   * Output only. [Output Only] The ID value of the source instant snapshot
+   * group this InstantSnapshot is part of. This value may be used to determine
+   * whether the InstantSnapshot was created as part of an InstantSnapshotGroup
+   * creation.
+   *
+   * @param string $sourceInstantSnapshotGroupId
+   */
+  public function setSourceInstantSnapshotGroupId($sourceInstantSnapshotGroupId)
+  {
+    $this->sourceInstantSnapshotGroupId = $sourceInstantSnapshotGroupId;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstantSnapshotGroupId()
+  {
+    return $this->sourceInstantSnapshotGroupId;
   }
   /**
    * Output only. [Output Only] The status of the instantSnapshot. This can

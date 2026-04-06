@@ -84,6 +84,7 @@ class Compute extends \Google\Service
   public $instanceSettings;
   public $instanceTemplates;
   public $instances;
+  public $instantSnapshotGroups;
   public $instantSnapshots;
   public $interconnectAttachmentGroups;
   public $interconnectAttachments;
@@ -126,12 +127,15 @@ class Compute extends \Google\Service
   public $regionInstanceGroups;
   public $regionInstanceTemplates;
   public $regionInstances;
+  public $regionInstantSnapshotGroups;
   public $regionInstantSnapshots;
   public $regionNetworkEndpointGroups;
   public $regionNetworkFirewallPolicies;
   public $regionNotificationEndpoints;
   public $regionOperations;
   public $regionSecurityPolicies;
+  public $regionSnapshotSettings;
+  public $regionSnapshots;
   public $regionSslCertificates;
   public $regionSslPolicies;
   public $regionTargetHttpProxies;
@@ -5734,10 +5738,6 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'projects/{project}/global/instanceTemplates/{resource}/getIamPolicy',
@@ -5800,10 +5800,6 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'setIamPolicy' => [
@@ -6143,10 +6139,6 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'getEffectiveFirewalls' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getEffectiveFirewalls',
@@ -6223,30 +6215,6 @@ class Compute extends \Google\Service
                 'optionsRequestedPolicyVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ],
-              ],
-            ],'getPartnerMetadata' => [
-              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getPartnerMetadata',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'zone' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'instance' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'namespaces' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'getScreenshot' => [
@@ -6378,10 +6346,6 @@ class Compute extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'listReferrers' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/referrers',
@@ -6421,30 +6385,6 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-              ],
-            ],'patchPartnerMetadata' => [
-              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/patchPartnerMetadata',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'zone' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'instance' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'performMaintenance' => [
@@ -7225,6 +7165,182 @@ class Compute extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->instantSnapshotGroups = new Compute\Resource\InstantSnapshotGroups(
+        $this,
+        $this->serviceName,
+        'instantSnapshotGroups',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups/{instantSnapshotGroup}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instantSnapshotGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups/{instantSnapshotGroup}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instantSnapshotGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getIamPolicy' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'optionsRequestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'sourceConsistencyGroup' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -15320,10 +15436,6 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'insert' => [
               'path' => 'projects/{project}/regions/{region}/instanceTemplates',
@@ -15378,10 +15490,6 @@ class Compute extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],
           ]
@@ -15410,6 +15518,182 @@ class Compute extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->regionInstantSnapshotGroups = new Compute\Resource\RegionInstantSnapshotGroups(
+        $this,
+        $this->serviceName,
+        'regionInstantSnapshotGroups',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups/{instantSnapshotGroup}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instantSnapshotGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups/{instantSnapshotGroup}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instantSnapshotGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getIamPolicy' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'optionsRequestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'sourceConsistencyGroup' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -16770,6 +17054,274 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->regionSnapshotSettings = new Compute\Resource\RegionSnapshotSettings(
+        $this,
+        $this->serviceName,
+        'regionSnapshotSettings',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/regions/{region}/snapshotSettings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'projects/{project}/regions/{region}/snapshotSettings',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->regionSnapshots = new Compute\Resource\RegionSnapshots(
+        $this,
+        $this->serviceName,
+        'regionSnapshots',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{snapshot}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'snapshot' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{snapshot}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'snapshot' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getIamPolicy' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'optionsRequestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setLabels' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{resource}/setLabels',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateKmsKey' => [
+              'path' => 'projects/{project}/regions/{region}/snapshots/{snapshot}/updateKmsKey',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'snapshot' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
