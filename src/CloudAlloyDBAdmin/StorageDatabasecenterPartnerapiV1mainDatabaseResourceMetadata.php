@@ -140,6 +140,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_READ_POOL = 'SUB_RESOURCE_TYPE_READ_POOL';
   /**
+   * Represents a reservation resource.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_RESERVATION = 'SUB_RESOURCE_TYPE_RESERVATION';
+  /**
+   * Represents a dataset resource.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_DATASET = 'SUB_RESOURCE_TYPE_DATASET';
+  /**
    * For rest of the other categories.
    */
   public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_OTHER = 'SUB_RESOURCE_TYPE_OTHER';
@@ -239,6 +247,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $machineConfigurationDataType = '';
   protected $maintenanceInfoType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo::class;
   protected $maintenanceInfoDataType = '';
+  /**
+   * Optional. The modes of the database resource.
+   *
+   * @var string[]
+   */
+  public $modes;
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
@@ -510,6 +524,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * PRIMARY, SECONDARY, READ_REPLICA, OTHER, SUB_RESOURCE_TYPE_PRIMARY,
    * SUB_RESOURCE_TYPE_SECONDARY, SUB_RESOURCE_TYPE_READ_REPLICA,
    * SUB_RESOURCE_TYPE_EXTERNAL_PRIMARY, SUB_RESOURCE_TYPE_READ_POOL,
+   * SUB_RESOURCE_TYPE_RESERVATION, SUB_RESOURCE_TYPE_DATASET,
    * SUB_RESOURCE_TYPE_OTHER
    *
    * @param self::INSTANCE_TYPE_* $instanceType
@@ -588,6 +603,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getMaintenanceInfo()
   {
     return $this->maintenanceInfo;
+  }
+  /**
+   * Optional. The modes of the database resource.
+   *
+   * @param string[] $modes
+   */
+  public function setModes($modes)
+  {
+    $this->modes = $modes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModes()
+  {
+    return $this->modes;
   }
   /**
    * Identifier for this resource's immediate parent/primary resource if the
