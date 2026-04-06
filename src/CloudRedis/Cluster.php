@@ -32,6 +32,10 @@ class Cluster extends \Google\Collection
    */
   public const AUTHORIZATION_MODE_AUTH_MODE_DISABLED = 'AUTH_MODE_DISABLED';
   /**
+   * Token based authorization mode
+   */
+  public const AUTHORIZATION_MODE_AUTH_MODE_TOKEN_AUTH = 'AUTH_MODE_TOKEN_AUTH';
+  /**
    * Node type unspecified
    */
   public const NODE_TYPE_NODE_TYPE_UNSPECIFIED = 'NODE_TYPE_UNSPECIFIED';
@@ -410,7 +414,7 @@ class Cluster extends \Google\Collection
    * auth feature is disabled for the cluster.
    *
    * Accepted values: AUTH_MODE_UNSPECIFIED, AUTH_MODE_IAM_AUTH,
-   * AUTH_MODE_DISABLED
+   * AUTH_MODE_DISABLED, AUTH_MODE_TOKEN_AUTH
    *
    * @param self::AUTHORIZATION_MODE_* $authorizationMode
    */
