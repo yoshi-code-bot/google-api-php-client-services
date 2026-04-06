@@ -190,7 +190,9 @@ class Volume extends \Google\Collection
   public $labels;
   /**
    * Optional. Flag indicating if the volume will be a large capacity volume or
-   * a regular volume.
+   * a regular volume. This field is used for legacy FILE pools. For Unified
+   * pools, use the `large_capacity_config` field instead. This field and
+   * `large_capacity_config` are mutually exclusive.
    *
    * @var bool
    */
@@ -623,7 +625,9 @@ class Volume extends \Google\Collection
   }
   /**
    * Optional. Flag indicating if the volume will be a large capacity volume or
-   * a regular volume.
+   * a regular volume. This field is used for legacy FILE pools. For Unified
+   * pools, use the `large_capacity_config` field instead. This field and
+   * `large_capacity_config` are mutually exclusive.
    *
    * @param bool $largeCapacity
    */
@@ -639,7 +643,10 @@ class Volume extends \Google\Collection
     return $this->largeCapacity;
   }
   /**
-   * Optional. Large capacity config for the volume.
+   * Optional. Large capacity config for the volume. Enables and configures
+   * large capacity for volumes in Unified pools with File protocols. Not
+   * applicable for Block protocols in Unified pools. This field and the legacy
+   * `large_capacity` boolean field are mutually exclusive.
    *
    * @param LargeCapacityConfig $largeCapacityConfig
    */
