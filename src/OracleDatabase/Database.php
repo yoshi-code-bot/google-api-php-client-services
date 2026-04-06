@@ -48,11 +48,21 @@ class Database extends \Google\Model
    */
   public const OPS_INSIGHTS_STATUS_FAILED_DISABLING = 'FAILED_DISABLING';
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    *
    * @var string
    */
   public $adminPassword;
+  /**
+   * Optional. The resource name of a secret version in Secret Manager which
+   * contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
+   *
+   * @var string
+   */
+  public $adminPasswordSecretVersion;
   /**
    * Optional. The character set for the database. The default is AL32UTF8.
    *
@@ -142,14 +152,27 @@ class Database extends \Google\Model
   protected $propertiesType = DatabaseProperties::class;
   protected $propertiesDataType = '';
   /**
-   * Optional. The TDE wallet password for the database.
+   * Optional. The TDE wallet password for the database. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be
+   * populated.
    *
    * @var string
    */
   public $tdeWalletPassword;
+  /**
+   * Optional. The resource name of a secret version in Secret Manager which
+   * contains the TDE wallet password for the database. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be
+   * populated.
+   *
+   * @var string
+   */
+  public $tdeWalletPasswordSecretVersion;
 
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    *
    * @param string $adminPassword
    */
@@ -163,6 +186,25 @@ class Database extends \Google\Model
   public function getAdminPassword()
   {
     return $this->adminPassword;
+  }
+  /**
+   * Optional. The resource name of a secret version in Secret Manager which
+   * contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
+   *
+   * @param string $adminPasswordSecretVersion
+   */
+  public function setAdminPasswordSecretVersion($adminPasswordSecretVersion)
+  {
+    $this->adminPasswordSecretVersion = $adminPasswordSecretVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getAdminPasswordSecretVersion()
+  {
+    return $this->adminPasswordSecretVersion;
   }
   /**
    * Optional. The character set for the database. The default is AL32UTF8.
@@ -400,7 +442,9 @@ class Database extends \Google\Model
     return $this->properties;
   }
   /**
-   * Optional. The TDE wallet password for the database.
+   * Optional. The TDE wallet password for the database. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be
+   * populated.
    *
    * @param string $tdeWalletPassword
    */
@@ -414,6 +458,26 @@ class Database extends \Google\Model
   public function getTdeWalletPassword()
   {
     return $this->tdeWalletPassword;
+  }
+  /**
+   * Optional. The resource name of a secret version in Secret Manager which
+   * contains the TDE wallet password for the database. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be
+   * populated.
+   *
+   * @param string $tdeWalletPasswordSecretVersion
+   */
+  public function setTdeWalletPasswordSecretVersion($tdeWalletPasswordSecretVersion)
+  {
+    $this->tdeWalletPasswordSecretVersion = $tdeWalletPasswordSecretVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getTdeWalletPasswordSecretVersion()
+  {
+    return $this->tdeWalletPasswordSecretVersion;
   }
 }
 

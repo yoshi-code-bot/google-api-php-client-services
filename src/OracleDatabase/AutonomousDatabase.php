@@ -21,11 +21,22 @@ class AutonomousDatabase extends \Google\Collection
 {
   protected $collection_key = 'peerAutonomousDatabases';
   /**
-   * Optional. Immutable. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user. Note: Only
+   * one of `admin_password_secret_version` or `admin_password` can be
+   * populated.
    *
    * @var string
    */
   public $adminPassword;
+  /**
+   * Optional. Immutable. The resource name of a secret version in Secret
+   * Manager which contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
+   *
+   * @var string
+   */
+  public $adminPasswordSecretVersion;
   /**
    * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    *
@@ -120,7 +131,9 @@ class AutonomousDatabase extends \Google\Collection
   protected $sourceConfigDataType = '';
 
   /**
-   * Optional. Immutable. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user. Note: Only
+   * one of `admin_password_secret_version` or `admin_password` can be
+   * populated.
    *
    * @param string $adminPassword
    */
@@ -134,6 +147,25 @@ class AutonomousDatabase extends \Google\Collection
   public function getAdminPassword()
   {
     return $this->adminPassword;
+  }
+  /**
+   * Optional. Immutable. The resource name of a secret version in Secret
+   * Manager which contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
+   *
+   * @param string $adminPasswordSecretVersion
+   */
+  public function setAdminPasswordSecretVersion($adminPasswordSecretVersion)
+  {
+    $this->adminPasswordSecretVersion = $adminPasswordSecretVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getAdminPasswordSecretVersion()
+  {
+    return $this->adminPasswordSecretVersion;
   }
   /**
    * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
