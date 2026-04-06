@@ -49,6 +49,18 @@ class ClusterConfig extends \Google\Collection
    * secondary worker nodes.
    */
   public const CLUSTER_TYPE_ZERO_SCALE = 'ZERO_SCALE';
+  /**
+   * The engine is not specified. Works the same as ENGINE_DEFAULT.
+   */
+  public const ENGINE_ENGINE_UNSPECIFIED = 'ENGINE_UNSPECIFIED';
+  /**
+   * The cluster is a default engine cluster.
+   */
+  public const ENGINE_DEFAULT = 'DEFAULT';
+  /**
+   * The cluster is a lightning engine cluster.
+   */
+  public const ENGINE_LIGHTNING = 'LIGHTNING';
   protected $collection_key = 'initializationActions';
   protected $autoscalingConfigType = AutoscalingConfig::class;
   protected $autoscalingConfigDataType = '';
@@ -97,6 +109,12 @@ class ClusterConfig extends \Google\Collection
   protected $encryptionConfigDataType = '';
   protected $endpointConfigType = EndpointConfig::class;
   protected $endpointConfigDataType = '';
+  /**
+   * Optional. The cluster engine.
+   *
+   * @var string
+   */
+  public $engine;
   protected $gceClusterConfigType = GceClusterConfig::class;
   protected $gceClusterConfigDataType = '';
   protected $gkeClusterConfigType = GkeClusterConfig::class;
@@ -297,6 +315,24 @@ class ClusterConfig extends \Google\Collection
   public function getEndpointConfig()
   {
     return $this->endpointConfig;
+  }
+  /**
+   * Optional. The cluster engine.
+   *
+   * Accepted values: ENGINE_UNSPECIFIED, DEFAULT, LIGHTNING
+   *
+   * @param self::ENGINE_* $engine
+   */
+  public function setEngine($engine)
+  {
+    $this->engine = $engine;
+  }
+  /**
+   * @return self::ENGINE_*
+   */
+  public function getEngine()
+  {
+    return $this->engine;
   }
   /**
    * Optional. The shared Compute Engine config settings for all instances in a

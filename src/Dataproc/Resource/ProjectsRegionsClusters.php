@@ -218,8 +218,11 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * separated items are treated as having an implicit AND operator.Example
    * filter:status.state = ACTIVE AND clusterName = mycluster AND labels.env =
    * staging AND labels.starred = *
-   * @opt_param int pageSize Optional. The standard List page size.
-   * @opt_param string pageToken Optional. The standard List page token.
+   * @opt_param int pageSize Optional. The maximum number of clusters to return in
+   * each response. The service may return fewer than this value. If unspecified,
+   * the default value is 200. The maximum value is 1000.
+   * @opt_param string pageToken Optional. A page token received from a previous
+   * ListClusters call. Provide this token to retrieve the subsequent page.
    * @return ListClustersResponse
    * @throws \Google\Service\Exception
    */
