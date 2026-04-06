@@ -17,34 +17,9 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1LookupContextResponse extends \Google\Model
+class GoogleCloudDataplexV1ExecutionIdentityUserCredential extends \Google\Model
 {
-  /**
-   * Pre-formatted block of text containing the context for the requested
-   * resources.
-   *
-   * @var string
-   */
-  public $context;
-
-  /**
-   * Pre-formatted block of text containing the context for the requested
-   * resources.
-   *
-   * @param string $context
-   */
-  public function setContext($context)
-  {
-    $this->context = $context;
-  }
-  /**
-   * @return string
-   */
-  public function getContext()
-  {
-    return $this->context;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1LookupContextResponse::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1LookupContextResponse');
+class_alias(GoogleCloudDataplexV1ExecutionIdentityUserCredential::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1ExecutionIdentityUserCredential');

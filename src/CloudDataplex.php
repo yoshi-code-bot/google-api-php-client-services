@@ -71,7 +71,6 @@ class CloudDataplex extends \Google\Service
   public $projects_locations_governanceRules;
   public $projects_locations_lakes;
   public $projects_locations_lakes_actions;
-  public $projects_locations_lakes_environments;
   public $projects_locations_lakes_tasks;
   public $projects_locations_lakes_tasks_jobs;
   public $projects_locations_lakes_zones;
@@ -401,6 +400,16 @@ class CloudDataplex extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'modifyEntry' => [
+              'path' => 'v1/{+name}:modifyEntry',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'searchEntries' => [
@@ -2525,50 +2534,6 @@ class CloudDataplex extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_lakes_environments = new CloudDataplex\Resource\ProjectsLocationsLakesEnvironments(
-        $this,
-        $this->serviceName,
-        'environments',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],

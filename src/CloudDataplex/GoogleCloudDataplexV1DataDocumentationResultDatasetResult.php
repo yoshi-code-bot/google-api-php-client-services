@@ -19,7 +19,7 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataDocumentationResultDatasetResult extends \Google\Collection
 {
-  protected $collection_key = 'tableResults';
+  protected $collection_key = 'schemaRelationships';
   /**
    * Output only. Generated Dataset description.
    *
@@ -30,8 +30,6 @@ class GoogleCloudDataplexV1DataDocumentationResultDatasetResult extends \Google\
   protected $queriesDataType = 'array';
   protected $schemaRelationshipsType = GoogleCloudDataplexV1DataDocumentationResultSchemaRelationship::class;
   protected $schemaRelationshipsDataType = 'array';
-  protected $tableResultsType = GoogleCloudDataplexV1DataDocumentationResultTableResult::class;
-  protected $tableResultsDataType = 'array';
 
   /**
    * Output only. Generated Dataset description.
@@ -81,23 +79,6 @@ class GoogleCloudDataplexV1DataDocumentationResultDatasetResult extends \Google\
   public function getSchemaRelationships()
   {
     return $this->schemaRelationships;
-  }
-  /**
-   * Output only. Generated table and column descriptions for each table in the
-   * dataset.
-   *
-   * @param GoogleCloudDataplexV1DataDocumentationResultTableResult[] $tableResults
-   */
-  public function setTableResults($tableResults)
-  {
-    $this->tableResults = $tableResults;
-  }
-  /**
-   * @return GoogleCloudDataplexV1DataDocumentationResultTableResult[]
-   */
-  public function getTableResults()
-  {
-    return $this->tableResults;
   }
 }
 

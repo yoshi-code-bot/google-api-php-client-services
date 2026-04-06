@@ -21,6 +21,7 @@ use Google\Service\CloudDataplex\GoogleCloudDataplexV1Entry;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupContextRequest;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupContextResponse;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupEntryLinksResponse;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ModifyEntryRequest;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1SearchEntriesResponse;
 use Google\Service\CloudDataplex\GoogleCloudLocationListLocationsResponse;
 use Google\Service\CloudDataplex\GoogleCloudLocationLocation;
@@ -159,6 +160,23 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('lookupEntryLinks', [$params], GoogleCloudDataplexV1LookupEntryLinksResponse::class);
+  }
+  /**
+   * Modifies an entry using the permission on the source system.
+   * (locations.modifyEntry)
+   *
+   * @param string $name Required. The project to which the request should be
+   * attributed in the following form: projects/{project}/locations/{location}.
+   * @param GoogleCloudDataplexV1ModifyEntryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1Entry
+   * @throws \Google\Service\Exception
+   */
+  public function modifyEntry($name, GoogleCloudDataplexV1ModifyEntryRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('modifyEntry', [$params], GoogleCloudDataplexV1Entry::class);
   }
   /**
    * Searches for Entries matching the given query and scope.
