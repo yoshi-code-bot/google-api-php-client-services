@@ -144,7 +144,7 @@ class Rollout extends \Google\Model
    */
   public $release;
   /**
-   * Optional. Immutable. Name of the RolloutKind this rollout is stemming from
+   * Required. Immutable. Name of the RolloutKind this rollout is stemming from
    * and adhering to.
    *
    * @var string
@@ -431,7 +431,7 @@ class Rollout extends \Google\Model
     return $this->release;
   }
   /**
-   * Optional. Immutable. Name of the RolloutKind this rollout is stemming from
+   * Required. Immutable. Name of the RolloutKind this rollout is stemming from
    * and adhering to.
    *
    * @param string $rolloutKind
