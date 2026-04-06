@@ -75,6 +75,8 @@ class GoogleCloudContactcenterinsightsV1Chart extends \Google\Model
    * Sankey chart.
    */
   public const CHART_VISUALIZATION_TYPE_SANKEY = 'SANKEY';
+  protected $actionType = GoogleCloudContactcenterinsightsV1ChartAction::class;
+  protected $actionDataType = '';
   /**
    * Output only. Chart type.
    *
@@ -141,6 +143,22 @@ class GoogleCloudContactcenterinsightsV1Chart extends \Google\Model
    */
   public $width;
 
+  /**
+   * Optional action to be taken when the chart is clicked.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ChartAction $action
+   */
+  public function setAction(GoogleCloudContactcenterinsightsV1ChartAction $action)
+  {
+    $this->action = $action;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1ChartAction
+   */
+  public function getAction()
+  {
+    return $this->action;
+  }
   /**
    * Output only. Chart type.
    *
