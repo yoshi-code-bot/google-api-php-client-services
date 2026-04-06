@@ -31,6 +31,12 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
    * @var string
    */
   public $faceLandmarksGcsUri;
+  /**
+   * GCS URI of the performance mesh to condition video generation.
+   *
+   * @var string
+   */
+  public $perfMeshGcsUri;
 
   /**
    * GCS URI of the human pose video to condition video generation.
@@ -63,6 +69,22 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
   public function getFaceLandmarksGcsUri()
   {
     return $this->faceLandmarksGcsUri;
+  }
+  /**
+   * GCS URI of the performance mesh to condition video generation.
+   *
+   * @param string $perfMeshGcsUri
+   */
+  public function setPerfMeshGcsUri($perfMeshGcsUri)
+  {
+    $this->perfMeshGcsUri = $perfMeshGcsUri;
+  }
+  /**
+   * @return string
+   */
+  public function getPerfMeshGcsUri()
+  {
+    return $this->perfMeshGcsUri;
   }
 }
 

@@ -17,8 +17,11 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Model
+class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collection
 {
+  protected $collection_key = 'conditioningFrames';
+  protected $conditioningFramesType = CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame::class;
+  protected $conditioningFramesDataType = 'array';
   protected $humanPoseType = CloudAiLargeModelsVisionHumanPose::class;
   protected $humanPoseDataType = '';
   /**
@@ -49,6 +52,23 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Model
    */
   public $videoTransformStrength;
 
+  /**
+   * Conditioning frames for veo experimental models ONLY, not to be confused
+   * with keyframes (ID:31) in GenerateVideoRequest.
+   *
+   * @param CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame[] $conditioningFrames
+   */
+  public function setConditioningFrames($conditioningFrames)
+  {
+    $this->conditioningFrames = $conditioningFrames;
+  }
+  /**
+   * @return CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame[]
+   */
+  public function getConditioningFrames()
+  {
+    return $this->conditioningFrames;
+  }
   /**
    * Human pose parameters for Pose Control
    *

@@ -135,7 +135,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     return $this->call('generateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
   /**
-   * Perform an online prediction. (models.predict)
+   * (models.predict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
    * the prediction. Format:

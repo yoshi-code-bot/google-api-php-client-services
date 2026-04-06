@@ -336,7 +336,7 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleCloudAiplatformV1Endpoint::class);
   }
   /**
-   * Perform an online prediction. (endpoints.predict)
+   * (endpoints.predict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
    * the prediction. Format:
