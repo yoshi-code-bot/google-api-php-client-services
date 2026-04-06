@@ -47,6 +47,8 @@ class GoogleDevtoolsCloudbuildV1Results extends \Google\Collection
    * @var string[]
    */
   public $buildStepOutputs;
+  protected $genericArtifactsType = GoogleDevtoolsCloudbuildV1UploadedGenericArtifact::class;
+  protected $genericArtifactsDataType = 'array';
   protected $goModulesType = GoogleDevtoolsCloudbuildV1UploadedGoModule::class;
   protected $goModulesDataType = 'array';
   protected $imagesType = GoogleDevtoolsCloudbuildV1BuiltImage::class;
@@ -135,6 +137,23 @@ class GoogleDevtoolsCloudbuildV1Results extends \Google\Collection
   public function getBuildStepOutputs()
   {
     return $this->buildStepOutputs;
+  }
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of
+   * the build.
+   *
+   * @param GoogleDevtoolsCloudbuildV1UploadedGenericArtifact[] $genericArtifacts
+   */
+  public function setGenericArtifacts($genericArtifacts)
+  {
+    $this->genericArtifacts = $genericArtifacts;
+  }
+  /**
+   * @return GoogleDevtoolsCloudbuildV1UploadedGenericArtifact[]
+   */
+  public function getGenericArtifacts()
+  {
+    return $this->genericArtifacts;
   }
   /**
    * Optional. Go module artifacts uploaded to Artifact Registry at the end of

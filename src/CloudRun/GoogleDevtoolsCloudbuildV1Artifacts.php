@@ -20,6 +20,8 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1Artifacts extends \Google\Collection
 {
   protected $collection_key = 'pythonPackages';
+  protected $genericArtifactsType = GoogleDevtoolsCloudbuildV1GenericArtifact::class;
+  protected $genericArtifactsDataType = 'array';
   protected $goModulesType = GoogleDevtoolsCloudbuildV1GoModule::class;
   protected $goModulesDataType = 'array';
   /**
@@ -43,6 +45,24 @@ class GoogleDevtoolsCloudbuildV1Artifacts extends \Google\Collection
   protected $pythonPackagesType = GoogleDevtoolsCloudbuildV1PythonPackage::class;
   protected $pythonPackagesDataType = 'array';
 
+  /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry
+   * upon successful completion of all build steps. If any artifacts fail to be
+   * pushed, the build is marked FAILURE.
+   *
+   * @param GoogleDevtoolsCloudbuildV1GenericArtifact[] $genericArtifacts
+   */
+  public function setGenericArtifacts($genericArtifacts)
+  {
+    $this->genericArtifacts = $genericArtifacts;
+  }
+  /**
+   * @return GoogleDevtoolsCloudbuildV1GenericArtifact[]
+   */
+  public function getGenericArtifacts()
+  {
+    return $this->genericArtifacts;
+  }
   /**
    * Optional. A list of Go modules to be uploaded to Artifact Registry upon
    * successful completion of all build steps. If any objects fail to be pushed,
