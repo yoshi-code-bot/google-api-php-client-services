@@ -129,6 +129,10 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public const LOCAL_DISASTER_RECOVERY_TYPE_BACKUP_BASED = 'BACKUP_BASED';
   /**
+   * Local disaster recovery is not available.
+   */
+  public const LOCAL_DISASTER_RECOVERY_TYPE_NOT_AVAILABLE = 'NOT_AVAILABLE';
+  /**
    * Default unspecified value.
    */
   public const MAINTENANCE_SCHEDULE_TYPE_MAINTENANCE_SCHEDULE_TYPE_UNSPECIFIED = 'MAINTENANCE_SCHEDULE_TYPE_UNSPECIFIED';
@@ -1332,7 +1336,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
    * an Autonomous Database.
    *
    * Accepted values: LOCAL_DISASTER_RECOVERY_TYPE_UNSPECIFIED, ADG,
-   * BACKUP_BASED
+   * BACKUP_BASED, NOT_AVAILABLE
    *
    * @param self::LOCAL_DISASTER_RECOVERY_TYPE_* $localDisasterRecoveryType
    */
