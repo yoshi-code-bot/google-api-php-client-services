@@ -96,6 +96,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
    * @var string
    */
   public $lastRefreshTime;
+  /**
+   * Resource location.
+   *
+   * @var string
+   */
+  public $location;
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   /**
@@ -169,6 +175,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
   public function getLastRefreshTime()
   {
     return $this->lastRefreshTime;
+  }
+  /**
+   * Resource location.
+   *
+   * @param string $location
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * Database resource id.
