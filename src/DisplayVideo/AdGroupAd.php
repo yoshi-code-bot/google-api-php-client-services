@@ -71,6 +71,8 @@ class AdGroupAd extends \Google\Collection
   protected $audioAdDataType = '';
   protected $bumperAdType = BumperAd::class;
   protected $bumperAdDataType = '';
+  protected $dcmTrackingInfoType = DcmTrackingInfo::class;
+  protected $dcmTrackingInfoDataType = '';
   protected $demandGenCarouselAdType = DemandGenCarouselAd::class;
   protected $demandGenCarouselAdDataType = '';
   protected $demandGenImageAdType = DemandGenImageAd::class;
@@ -226,6 +228,25 @@ class AdGroupAd extends \Google\Collection
   public function getBumperAd()
   {
     return $this->bumperAd;
+  }
+  /**
+   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To
+   * remove the DCM tracking ad info, please leave this field empty. Retrieval
+   * and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
+   *
+   * @param DcmTrackingInfo $dcmTrackingInfo
+   */
+  public function setDcmTrackingInfo(DcmTrackingInfo $dcmTrackingInfo)
+  {
+    $this->dcmTrackingInfo = $dcmTrackingInfo;
+  }
+  /**
+   * @return DcmTrackingInfo
+   */
+  public function getDcmTrackingInfo()
+  {
+    return $this->dcmTrackingInfo;
   }
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/ans
