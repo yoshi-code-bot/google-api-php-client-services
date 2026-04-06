@@ -161,6 +161,8 @@ class GoogleFirestoreAdminV1Index extends \Google\Collection
    * @var string
    */
   public $queryScope;
+  protected $searchIndexOptionsType = GoogleFirestoreAdminV1SearchIndexOptions::class;
+  protected $searchIndexOptionsDataType = '';
   /**
    * Optional. The number of shards for the index.
    *
@@ -305,6 +307,24 @@ class GoogleFirestoreAdminV1Index extends \Google\Collection
   public function getQueryScope()
   {
     return $this->queryScope;
+  }
+  /**
+   * Optional. Options for search indexes that are at the index definition
+   * level. This field is only currently supported for indexes with
+   * MONGODB_COMPATIBLE_API ApiScope.
+   *
+   * @param GoogleFirestoreAdminV1SearchIndexOptions $searchIndexOptions
+   */
+  public function setSearchIndexOptions(GoogleFirestoreAdminV1SearchIndexOptions $searchIndexOptions)
+  {
+    $this->searchIndexOptions = $searchIndexOptions;
+  }
+  /**
+   * @return GoogleFirestoreAdminV1SearchIndexOptions
+   */
+  public function getSearchIndexOptions()
+  {
+    return $this->searchIndexOptions;
   }
   /**
    * Optional. The number of shards for the index.
