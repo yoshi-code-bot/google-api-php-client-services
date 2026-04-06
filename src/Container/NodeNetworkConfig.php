@@ -20,6 +20,15 @@ namespace Google\Service\Container;
 class NodeNetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'additionalPodNetworkConfigs';
+  /**
+   * Immutable. The accelerator network profile for the node pool. For now the
+   * only valid value is "auto". If specified, the network configuration of the
+   * nodes in this node pool will be managed by this profile for the supported
+   * machine types, zone, etc.
+   *
+   * @var string
+   */
+  public $acceleratorNetworkProfile;
   protected $additionalNodeNetworkConfigsType = AdditionalNodeNetworkConfig::class;
   protected $additionalNodeNetworkConfigsDataType = 'array';
   protected $additionalPodNetworkConfigsType = AdditionalPodNetworkConfig::class;
@@ -96,6 +105,25 @@ class NodeNetworkConfig extends \Google\Collection
    */
   public $subnetwork;
 
+  /**
+   * Immutable. The accelerator network profile for the node pool. For now the
+   * only valid value is "auto". If specified, the network configuration of the
+   * nodes in this node pool will be managed by this profile for the supported
+   * machine types, zone, etc.
+   *
+   * @param string $acceleratorNetworkProfile
+   */
+  public function setAcceleratorNetworkProfile($acceleratorNetworkProfile)
+  {
+    $this->acceleratorNetworkProfile = $acceleratorNetworkProfile;
+  }
+  /**
+   * @return string
+   */
+  public function getAcceleratorNetworkProfile()
+  {
+    return $this->acceleratorNetworkProfile;
+  }
   /**
    * We specify the additional node networks for this node pool using this list.
    * Each node network corresponds to an additional interface
