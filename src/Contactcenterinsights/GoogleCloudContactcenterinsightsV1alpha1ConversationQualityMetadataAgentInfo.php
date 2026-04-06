@@ -78,6 +78,12 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
    */
   public $dispositionCode;
   /**
+   * The entry subagent's display name.
+   *
+   * @var string
+   */
+  public $entrySubagentDisplayName;
+  /**
    * The agent's location.
    *
    * @var string
@@ -209,6 +215,22 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
   public function getDispositionCode()
   {
     return $this->dispositionCode;
+  }
+  /**
+   * The entry subagent's display name.
+   *
+   * @param string $entrySubagentDisplayName
+   */
+  public function setEntrySubagentDisplayName($entrySubagentDisplayName)
+  {
+    $this->entrySubagentDisplayName = $entrySubagentDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getEntrySubagentDisplayName()
+  {
+    return $this->entrySubagentDisplayName;
   }
   /**
    * The agent's location.
