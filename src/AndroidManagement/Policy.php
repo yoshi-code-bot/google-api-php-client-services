@@ -171,9 +171,7 @@ class Policy extends \Google\Collection
    */
   public const ENCRYPTION_POLICY_ENABLED_WITH_PASSWORD = 'ENABLED_WITH_PASSWORD';
   /**
-   * Unspecified. Defaults to displaying the enterprise name that's set at the
-   * time of device setup. In future, this will default to
-   * ENTERPRISE_DISPLAY_NAME_VISIBLE.
+   * Unspecified. Defaults to ENTERPRISE_DISPLAY_NAME_VISIBLE.
    */
   public const ENTERPRISE_DISPLAY_NAME_VISIBILITY_ENTERPRISE_DISPLAY_NAME_VISIBILITY_UNSPECIFIED = 'ENTERPRISE_DISPLAY_NAME_VISIBILITY_UNSPECIFIED';
   /**
