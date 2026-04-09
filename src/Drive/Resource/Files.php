@@ -20,6 +20,7 @@ namespace Google\Service\Drive\Resource;
 use Google\Service\Drive\Channel;
 use Google\Service\Drive\DriveFile;
 use Google\Service\Drive\FileList;
+use Google\Service\Drive\GenerateCseTokenResponse;
 use Google\Service\Drive\GeneratedIds;
 use Google\Service\Drive\LabelList;
 use Google\Service\Drive\ModifyLabelsRequest;
@@ -230,6 +231,28 @@ class Files extends \Google\Service\Resource
     $params = ['fileId' => $fileId, 'mimeType' => $mimeType];
     $params = array_merge($params, $optParams);
     return $this->call('export', [$params]);
+  }
+  /**
+   * Generates a CSE token which can be used to create or update CSE files.
+   * (files.generateCseToken)
+   *
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string fileId The ID of the file for which the JWT should be
+   * generated. If not provided, an id will be generated.
+   * @opt_param string parent The ID of the expected parent of the file. Used when
+   * generating a JWT for a new CSE file. If specified, the parent will be
+   * fetched, and if the parent is a shared drive item, the shared drive's policy
+   * will be used to determine the KACLS that should be used. It is invalid to
+   * specify both file_id and parent in a single request.
+   * @return GenerateCseTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateCseToken($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateCseToken', [$params], GenerateCseTokenResponse::class);
   }
   /**
    * Generates a set of file IDs which can be provided in create or copy requests.
