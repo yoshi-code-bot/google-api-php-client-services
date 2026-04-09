@@ -34,8 +34,7 @@ use Google\Service\HangoutsChat\PositionSectionResponse;
 class UsersSections extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a section in Google Chat. Sections help users group conversations and
+   * Creates a section in Google Chat. Sections help users group conversations and
    * customize the list of spaces displayed in Chat navigation panel. Only
    * sections of type `CUSTOM_SECTION` can be created. For details, see [Create
    * and organize sections in Google
@@ -60,10 +59,9 @@ class UsersSections extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleChatV1Section::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Deletes
-   * a section of type `CUSTOM_SECTION`. If the section contains items, such as
-   * spaces, the items are moved to Google Chat's default sections and are not
-   * deleted. For details, see [Create and organize sections in Google
+   * Deletes a section of type `CUSTOM_SECTION`. If the section contains items,
+   * such as spaces, the items are moved to Google Chat's default sections and are
+   * not deleted. For details, see [Create and organize sections in Google
    * Chat](https://support.google.com/chat/answer/16059854). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user) with the [authorization
@@ -84,8 +82,7 @@ class UsersSections extends \Google\Service\Resource
     return $this->call('delete', [$params], ChatEmpty::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
-   * sections available to the Chat user. Sections help users group their
+   * Lists sections available to the Chat user. Sections help users group their
    * conversations and customize the list of spaces displayed in Chat navigation
    * panel. For details, see [Create and organize sections in Google
    * Chat](https://support.google.com/chat/answer/16059854). Requires [user
@@ -125,8 +122,7 @@ class UsersSections extends \Google\Service\Resource
     return $this->call('list', [$params], ListSectionsResponse::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Updates
-   * a section. Only sections of type `CUSTOM_SECTION` can be updated. For
+   * Updates a section. Only sections of type `CUSTOM_SECTION` can be updated. For
    * details, see [Create and organize sections in Google
    * Chat](https://support.google.com/chat/answer/16059854). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -156,10 +152,9 @@ class UsersSections extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleChatV1Section::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Changes
-   * the sort order of a section. For details, see [Create and organize sections
-   * in Google Chat](https://support.google.com/chat/answer/16059854). Requires
-   * [user
+   * Changes the sort order of a section. For details, see [Create and organize
+   * sections in Google Chat](https://support.google.com/chat/answer/16059854).
+   * Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user) with the [authorization
    * scope](https://developers.google.com/workspace/chat/authenticate-
