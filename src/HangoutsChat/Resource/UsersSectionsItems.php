@@ -32,8 +32,7 @@ use Google\Service\HangoutsChat\MoveSectionItemResponse;
 class UsersSectionsItems extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
-   * items in a section. Only spaces can be section items. For details, see
+   * Lists items in a section. Only spaces can be section items. For details, see
    * [Create and organize sections in Google
    * Chat](https://support.google.com/chat/answer/16059854). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -74,8 +73,7 @@ class UsersSectionsItems extends \Google\Service\Resource
     return $this->call('list', [$params], ListSectionItemsResponse::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Moves
-   * an item from one section to another. For example, if a section contains
+   * Moves an item from one section to another. For example, if a section contains
    * spaces, this method can be used to move a space to a different section. For
    * details, see [Create and organize sections in Google
    * Chat](https://support.google.com/chat/answer/16059854). Requires [user

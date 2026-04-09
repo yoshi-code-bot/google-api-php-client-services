@@ -299,6 +299,28 @@ class HangoutsChat extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'findGroupChats' => [
+              'path' => 'v1/spaces:findGroupChats',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'spaceView' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'users' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
