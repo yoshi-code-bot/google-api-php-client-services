@@ -160,7 +160,7 @@ class Cluster extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. Network resources available to the cluster. Must contain at most
+   * Optional. Network resources available to the cluster. Must contain exactly
    * one value. Keys specify the ID of the network resource by which it can be
    * referenced elsewhere, and must conform to
    * [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
