@@ -29,14 +29,6 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
    */
   public const INDEX_TYPE_TOKENIZED = 'TOKENIZED';
   /**
-   * Field values are indexed as n-grams.
-   */
-  public const INDEX_TYPE_NGRAMS = 'NGRAMS';
-  /**
-   * Field values are indexed to allow fast equality checks.
-   */
-  public const INDEX_TYPE_EXACT_MATCH = 'EXACT_MATCH';
-  /**
    * The match type is unspecified. Not a valid option.
    */
   public const MATCH_TYPE_TEXT_MATCH_TYPE_UNSPECIFIED = 'TEXT_MATCH_TYPE_UNSPECIFIED';
@@ -45,10 +37,6 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
    * MONGODB_COMPATIBLE_API.
    */
   public const MATCH_TYPE_MATCH_GLOBALLY = 'MATCH_GLOBALLY';
-  /**
-   * Match on a specific field.
-   */
-  public const MATCH_TYPE_MATCH_FIELD = 'MATCH_FIELD';
   /**
    * Required. How to index the text field value.
    *
@@ -65,8 +53,7 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
   /**
    * Required. How to index the text field value.
    *
-   * Accepted values: TEXT_INDEX_TYPE_UNSPECIFIED, TOKENIZED, NGRAMS,
-   * EXACT_MATCH
+   * Accepted values: TEXT_INDEX_TYPE_UNSPECIFIED, TOKENIZED
    *
    * @param self::INDEX_TYPE_* $indexType
    */
@@ -84,7 +71,7 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
   /**
    * Required. How to match the text field value.
    *
-   * Accepted values: TEXT_MATCH_TYPE_UNSPECIFIED, MATCH_GLOBALLY, MATCH_FIELD
+   * Accepted values: TEXT_MATCH_TYPE_UNSPECIFIED, MATCH_GLOBALLY
    *
    * @param self::MATCH_TYPE_* $matchType
    */

@@ -17,20 +17,8 @@
 
 namespace Google\Service\Firestore;
 
-class GoogleFirestoreAdminV1SearchIndexOptions extends \Google\Collection
+class GoogleFirestoreAdminV1SearchIndexOptions extends \Google\Model
 {
-  protected $collection_key = 'customPartitionFieldPaths';
-  /**
-   * Optional. Custom partition fields to use for the search index. If
-   * unspecified, all indexed fields will be in the same default partition. If a
-   * search index is created specifying custom partition fields, all search
-   * queries using that index will be required to filter on the partition. For
-   * indexes with MONGODB_COMPATIBLE_API ApiScope: This must refer to a top
-   * level field name.
-   *
-   * @var string[]
-   */
-  public $customPartitionFieldPaths;
   /**
    * Optional. The language to use for text search indexes. Used as the default
    * language if not overridden at the document level by specifying the
@@ -52,27 +40,6 @@ class GoogleFirestoreAdminV1SearchIndexOptions extends \Google\Collection
    */
   public $textLanguageOverrideFieldPath;
 
-  /**
-   * Optional. Custom partition fields to use for the search index. If
-   * unspecified, all indexed fields will be in the same default partition. If a
-   * search index is created specifying custom partition fields, all search
-   * queries using that index will be required to filter on the partition. For
-   * indexes with MONGODB_COMPATIBLE_API ApiScope: This must refer to a top
-   * level field name.
-   *
-   * @param string[] $customPartitionFieldPaths
-   */
-  public function setCustomPartitionFieldPaths($customPartitionFieldPaths)
-  {
-    $this->customPartitionFieldPaths = $customPartitionFieldPaths;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCustomPartitionFieldPaths()
-  {
-    return $this->customPartitionFieldPaths;
-  }
   /**
    * Optional. The language to use for text search indexes. Used as the default
    * language if not overridden at the document level by specifying the
