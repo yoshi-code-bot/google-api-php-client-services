@@ -116,6 +116,33 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudRunV2ListInstancesResponse::class);
   }
   /**
+   * Updates an Instance. (instances.patch)
+   *
+   * @param string $name The fully qualified name of this Instance. In
+   * CreateInstanceRequest, this field is ignored, and instead composed from
+   * CreateInstanceRequest.parent and CreateInstanceRequest.instance_id. Format:
+   * projects/{project}/locations/{location}/instances/{instance_id}
+   * @param GoogleCloudRunV2Instance $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool allowMissing Optional. If set to true, and if the Instance
+   * does not exist, it will create a new one. The caller must have
+   * 'run.instances.create' permissions if this is set to true and the Instance
+   * does not exist.
+   * @opt_param string updateMask Optional. The list of fields to be updated.
+   * @opt_param bool validateOnly Optional. Indicates that the request should be
+   * validated and default values populated, without persisting the request or
+   * updating any resources.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudRunV2Instance $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Starts an Instance. (instances.start)
    *
    * @param string $name Required. The name of the Instance to stop. Format:
