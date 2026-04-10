@@ -55,7 +55,7 @@ class ReadWrite extends \Google\Model
    */
   public $multiplexedSessionPreviousTransactionId;
   /**
-   * Read lock mode for the transaction.
+   * The read lock mode for the transaction.
    *
    * @var string
    */
@@ -80,7 +80,7 @@ class ReadWrite extends \Google\Model
     return $this->multiplexedSessionPreviousTransactionId;
   }
   /**
-   * Read lock mode for the transaction.
+   * The read lock mode for the transaction.
    *
    * Accepted values: READ_LOCK_MODE_UNSPECIFIED, PESSIMISTIC, OPTIMISTIC
    *
