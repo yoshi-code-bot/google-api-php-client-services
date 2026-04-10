@@ -30,7 +30,7 @@ class Annotations extends \Google\Model
   /**
    * Output only. If true, calling the tool repeatedly with the same arguments
    * will have no additional effect on its environment. NOTE: This property is
-   * meaningful only when `read_only_hint == false. Default: false
+   * meaningful only when `read_only_hint == false` Default: false
    *
    * @var bool
    */
@@ -79,7 +79,7 @@ class Annotations extends \Google\Model
   /**
    * Output only. If true, calling the tool repeatedly with the same arguments
    * will have no additional effect on its environment. NOTE: This property is
-   * meaningful only when `read_only_hint == false. Default: false
+   * meaningful only when `read_only_hint == false` Default: false
    *
    * @param bool $idempotentHint
    */
