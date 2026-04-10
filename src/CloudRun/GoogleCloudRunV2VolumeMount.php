@@ -37,8 +37,8 @@ class GoogleCloudRunV2VolumeMount extends \Google\Model
   public $name;
   /**
    * Optional. Path within the volume from which the container's volume should
-   * be mounted. Defaults to "" (volume's root). This field is currently ignored
-   * for Secret volumes.
+   * be mounted. Defaults to "" (volume's root). This field is currently
+   * rejected in Secret volume mounts.
    *
    * @var string
    */
@@ -82,8 +82,8 @@ class GoogleCloudRunV2VolumeMount extends \Google\Model
   }
   /**
    * Optional. Path within the volume from which the container's volume should
-   * be mounted. Defaults to "" (volume's root). This field is currently ignored
-   * for Secret volumes.
+   * be mounted. Defaults to "" (volume's root). This field is currently
+   * rejected in Secret volume mounts.
    *
    * @param string $subPath
    */
