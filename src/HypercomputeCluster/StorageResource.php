@@ -29,8 +29,8 @@ class StorageResource extends \Google\Model
   protected $lustreDataType = '';
 
   /**
-   * Reference to a Google Cloud Storage bucket. Populated if and only if the
-   * storage resource was configured to use Google Cloud Storage.
+   * Output only. Reference to a Google Cloud Storage bucket. Populated if and
+   * only if the storage resource was configured to use Google Cloud Storage.
    *
    * @param BucketReference $bucket
    */
@@ -66,8 +66,8 @@ class StorageResource extends \Google\Model
     return $this->config;
   }
   /**
-   * Reference to a Filestore instance. Populated if and only if the storage
-   * resource was configured to use Filestore.
+   * Output only. Reference to a Filestore instance. Populated if and only if
+   * the storage resource was configured to use Filestore.
    *
    * @param FilestoreReference $filestore
    */
@@ -83,8 +83,8 @@ class StorageResource extends \Google\Model
     return $this->filestore;
   }
   /**
-   * Reference to a Managed Lustre instance. Populated if and only if the
-   * storage resource was configured to use Managed Lustre.
+   * Output only. Reference to a Managed Lustre instance. Populated if and only
+   * if the storage resource was configured to use Managed Lustre.
    *
    * @param LustreReference $lustre
    */

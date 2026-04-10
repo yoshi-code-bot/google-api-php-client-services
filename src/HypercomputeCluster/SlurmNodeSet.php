@@ -21,7 +21,7 @@ class SlurmNodeSet extends \Google\Collection
 {
   protected $collection_key = 'storageConfigs';
   /**
-   * Optional. ID of the compute resource on which this nodeset will run. Must
+   * Required. ID of the compute resource on which this nodeset will run. Must
    * match a key in the cluster's compute_resources.
    *
    * @var string
@@ -60,7 +60,7 @@ class SlurmNodeSet extends \Google\Collection
   protected $storageConfigsDataType = 'array';
 
   /**
-   * Optional. ID of the compute resource on which this nodeset will run. Must
+   * Required. ID of the compute resource on which this nodeset will run. Must
    * match a key in the cluster's compute_resources.
    *
    * @param string $computeId
