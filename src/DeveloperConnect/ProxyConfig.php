@@ -26,6 +26,15 @@ class ProxyConfig extends \Google\Model
    * @var bool
    */
   public $enabled;
+  /**
+   * Output only. The base URI for the HTTP proxy endpoint. Has the format
+   * `https://{generatedID}-a-h-{shortRegion}.developerconnect.dev` Populated
+   * only when `enabled` is set to `true`. This endpoint is used by other Google
+   * services that integrate with Developer Connect.
+   *
+   * @var string
+   */
+  public $httpProxyBaseUri;
 
   /**
    * Optional. Setting this to true allows the git and http proxies to perform
@@ -43,6 +52,25 @@ class ProxyConfig extends \Google\Model
   public function getEnabled()
   {
     return $this->enabled;
+  }
+  /**
+   * Output only. The base URI for the HTTP proxy endpoint. Has the format
+   * `https://{generatedID}-a-h-{shortRegion}.developerconnect.dev` Populated
+   * only when `enabled` is set to `true`. This endpoint is used by other Google
+   * services that integrate with Developer Connect.
+   *
+   * @param string $httpProxyBaseUri
+   */
+  public function setHttpProxyBaseUri($httpProxyBaseUri)
+  {
+    $this->httpProxyBaseUri = $httpProxyBaseUri;
+  }
+  /**
+   * @return string
+   */
+  public function getHttpProxyBaseUri()
+  {
+    return $this->httpProxyBaseUri;
   }
 }
 
