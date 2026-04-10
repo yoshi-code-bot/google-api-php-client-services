@@ -21,8 +21,6 @@ class GoogleFirestoreAdminV1SearchConfig extends \Google\Model
 {
   protected $geoSpecType = GoogleFirestoreAdminV1SearchGeoSpec::class;
   protected $geoSpecDataType = '';
-  protected $numberSpecType = GoogleFirestoreAdminV1SearchNumberSpec::class;
-  protected $numberSpecDataType = '';
   protected $textSpecType = GoogleFirestoreAdminV1SearchTextSpec::class;
   protected $textSpecDataType = '';
 
@@ -41,22 +39,6 @@ class GoogleFirestoreAdminV1SearchConfig extends \Google\Model
   public function getGeoSpec()
   {
     return $this->geoSpec;
-  }
-  /**
-   * Optional. The specification for building a number search index for a field.
-   *
-   * @param GoogleFirestoreAdminV1SearchNumberSpec $numberSpec
-   */
-  public function setNumberSpec(GoogleFirestoreAdminV1SearchNumberSpec $numberSpec)
-  {
-    $this->numberSpec = $numberSpec;
-  }
-  /**
-   * @return GoogleFirestoreAdminV1SearchNumberSpec
-   */
-  public function getNumberSpec()
-  {
-    return $this->numberSpec;
   }
   /**
    * Optional. The specification for building a text search index for a field.
