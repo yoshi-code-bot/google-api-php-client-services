@@ -66,6 +66,12 @@ class AccountConnector extends \Google\Model
   protected $proxyConfigType = ProxyConfig::class;
   protected $proxyConfigDataType = '';
   /**
+   * Output only. A system-assigned unique identifier for the Account Connector.
+   *
+   * @var string
+   */
+  public $uid;
+  /**
    * Output only. The timestamp when the accountConnector was updated.
    *
    * @var string
@@ -219,6 +225,22 @@ class AccountConnector extends \Google\Model
   public function getProxyConfig()
   {
     return $this->proxyConfig;
+  }
+  /**
+   * Output only. A system-assigned unique identifier for the Account Connector.
+   *
+   * @param string $uid
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
   /**
    * Output only. The timestamp when the accountConnector was updated.
