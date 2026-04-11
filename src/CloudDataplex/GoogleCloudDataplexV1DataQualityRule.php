@@ -21,6 +21,14 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
 {
   protected $collection_key = 'debugQueries';
   /**
+   * Optional. Map of attribute name and value linked to the rule. The rules to
+   * evaluate can be filtered based on attributes provided here and a filter
+   * expression provided in the DataQualitySpec.filter field.
+   *
+   * @var string[]
+   */
+  public $attributes;
+  /**
    * Optional. The unnested column which this rule is evaluated against.
    *
    * @var string
@@ -67,6 +75,8 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
   protected $regexExpectationDataType = '';
   protected $rowConditionExpectationType = GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation::class;
   protected $rowConditionExpectationDataType = '';
+  protected $ruleSourceType = GoogleCloudDataplexV1DataQualityRuleRuleSource::class;
+  protected $ruleSourceDataType = '';
   protected $setExpectationType = GoogleCloudDataplexV1DataQualityRuleSetExpectation::class;
   protected $setExpectationDataType = '';
   protected $sqlAssertionType = GoogleCloudDataplexV1DataQualityRuleSqlAssertion::class;
@@ -81,6 +91,8 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
   public $suspended;
   protected $tableConditionExpectationType = GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation::class;
   protected $tableConditionExpectationDataType = '';
+  protected $templateReferenceType = GoogleCloudDataplexV1DataQualityRuleTemplateReference::class;
+  protected $templateReferenceDataType = '';
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass
    * this rule, with a range of 0.0, 1.0.0 indicates default value (i.e.
@@ -92,6 +104,24 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
   protected $uniquenessExpectationType = GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation::class;
   protected $uniquenessExpectationDataType = '';
 
+  /**
+   * Optional. Map of attribute name and value linked to the rule. The rules to
+   * evaluate can be filtered based on attributes provided here and a filter
+   * expression provided in the DataQualitySpec.filter field.
+   *
+   * @param string[] $attributes
+   */
+  public function setAttributes($attributes)
+  {
+    $this->attributes = $attributes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAttributes()
+  {
+    return $this->attributes;
+  }
   /**
    * Optional. The unnested column which this rule is evaluated against.
    *
@@ -264,6 +294,23 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
     return $this->rowConditionExpectation;
   }
   /**
+   * Output only. Contains information about the source of the rule and its
+   * relationship with the BigQuery table, where applicable.
+   *
+   * @param GoogleCloudDataplexV1DataQualityRuleRuleSource $ruleSource
+   */
+  public function setRuleSource(GoogleCloudDataplexV1DataQualityRuleRuleSource $ruleSource)
+  {
+    $this->ruleSource = $ruleSource;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataQualityRuleRuleSource
+   */
+  public function getRuleSource()
+  {
+    return $this->ruleSource;
+  }
+  /**
    * Row-level rule which evaluates whether each column value is contained by a
    * specified set.
    *
@@ -346,6 +393,24 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
   public function getTableConditionExpectation()
   {
     return $this->tableConditionExpectation;
+  }
+  /**
+   * Aggregate rule which references a rule template and provides the parameters
+   * to be substituted in the template. If any rows are returned, this rule
+   * fails.
+   *
+   * @param GoogleCloudDataplexV1DataQualityRuleTemplateReference $templateReference
+   */
+  public function setTemplateReference(GoogleCloudDataplexV1DataQualityRuleTemplateReference $templateReference)
+  {
+    $this->templateReference = $templateReference;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataQualityRuleTemplateReference
+   */
+  public function getTemplateReference()
+  {
+    return $this->templateReference;
   }
   public function setThreshold($threshold)
   {
