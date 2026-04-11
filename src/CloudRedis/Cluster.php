@@ -56,6 +56,18 @@ class Cluster extends \Google\Collection
    */
   public const NODE_TYPE_REDIS_STANDARD_SMALL = 'REDIS_STANDARD_SMALL';
   /**
+   * Redis highcpu medium node_type.
+   */
+  public const NODE_TYPE_REDIS_HIGHCPU_MEDIUM = 'REDIS_HIGHCPU_MEDIUM';
+  /**
+   * Redis standard large node_type.
+   */
+  public const NODE_TYPE_REDIS_STANDARD_LARGE = 'REDIS_STANDARD_LARGE';
+  /**
+   * Redis highmem 2xlarge node_type.
+   */
+  public const NODE_TYPE_REDIS_HIGHMEM_2XLARGE = 'REDIS_HIGHMEM_2XLARGE';
+  /**
    * Server CA mode not specified.
    */
   public const SERVER_CA_MODE_SERVER_CA_MODE_UNSPECIFIED = 'SERVER_CA_MODE_UNSPECIFIED';
@@ -734,7 +746,8 @@ class Cluster extends \Google\Collection
    * underlying machine-type of a redis node.
    *
    * Accepted values: NODE_TYPE_UNSPECIFIED, REDIS_SHARED_CORE_NANO,
-   * REDIS_HIGHMEM_MEDIUM, REDIS_HIGHMEM_XLARGE, REDIS_STANDARD_SMALL
+   * REDIS_HIGHMEM_MEDIUM, REDIS_HIGHMEM_XLARGE, REDIS_STANDARD_SMALL,
+   * REDIS_HIGHCPU_MEDIUM, REDIS_STANDARD_LARGE, REDIS_HIGHMEM_2XLARGE
    *
    * @param self::NODE_TYPE_* $nodeType
    */
