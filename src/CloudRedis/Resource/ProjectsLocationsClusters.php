@@ -181,7 +181,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * should only rely on response's `next_page_token` to determine if there are
    * more clusters left to be queried.
    * @opt_param string pageToken The `next_page_token` value returned from a
-   * previous ListClusters request, if any.
+   * previous `ListClusters` request, if any.
    * @return ListClustersResponse
    * @throws \Google\Service\Exception
    */

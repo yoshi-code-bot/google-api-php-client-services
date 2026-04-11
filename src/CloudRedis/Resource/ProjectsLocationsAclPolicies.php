@@ -113,7 +113,7 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
    * there are more ACL policies left to be queried. The maximum value is 1000;
    * values above 1000 will be coerced to 1000.
    * @opt_param string pageToken Optional. The `next_page_token` value returned
-   * from a previous ListAclPolicies request, if any.
+   * from a previous `ListAclPolicies` request, if any.
    * @return ListAclPoliciesResponse
    * @throws \Google\Service\Exception
    */
@@ -139,7 +139,7 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
    * @opt_param string requestId Optional. Idempotent request UUID.
    * @opt_param string updateMask Optional. Mask of fields to be updated. At least
    * one path must be supplied in this field. The elements of the repeated paths
-   * field may only include these fields from AclPolicy: * `rules`
+   * field may only include these fields from `AclPolicy`: * `rules`
    * @return Operation
    * @throws \Google\Service\Exception
    */
