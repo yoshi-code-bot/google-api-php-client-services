@@ -1192,7 +1192,17 @@ class CloudDataplex extends \Google\Service
         'jobs',
         [
           'methods' => [
-            'generateDataQualityRules' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generateDataQualityRules' => [
               'path' => 'v1/{+name}:generateDataQualityRules',
               'httpMethod' => 'POST',
               'parameters' => [
