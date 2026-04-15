@@ -119,7 +119,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * highlights` * `disable-agent-sharing` * `disable-image-generation` *
    * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-
    * content` * `disable-google-drive-upload` * `disable-welcome-emails` *
-   * `disable-canvas` * `disable-canvas-workspace`
+   * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
    *
    * @var string[]
    */
@@ -326,7 +326,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * highlights` * `disable-agent-sharing` * `disable-image-generation` *
    * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-
    * content` * `disable-google-drive-upload` * `disable-welcome-emails` *
-   * `disable-canvas` * `disable-canvas-workspace`
+   * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
    *
    * @param string[] $features
    */

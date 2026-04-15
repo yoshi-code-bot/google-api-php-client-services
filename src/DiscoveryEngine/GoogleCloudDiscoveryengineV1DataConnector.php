@@ -239,6 +239,8 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
    * @var string[]
    */
   public $blockingReasons;
+  protected $cliConfigType = GoogleCloudDiscoveryengineV1CliConfig::class;
+  protected $cliConfigDataType = '';
   /**
    * Optional. The modes enabled for this connector. Default state is
    * CONNECTOR_MODE_UNSPECIFIED.
@@ -587,6 +589,22 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   public function getBlockingReasons()
   {
     return $this->blockingReasons;
+  }
+  /**
+   * Optional. The configuration for establishing a CLI connection.
+   *
+   * @param GoogleCloudDiscoveryengineV1CliConfig $cliConfig
+   */
+  public function setCliConfig(GoogleCloudDiscoveryengineV1CliConfig $cliConfig)
+  {
+    $this->cliConfig = $cliConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1CliConfig
+   */
+  public function getCliConfig()
+  {
+    return $this->cliConfig;
   }
   /**
    * Optional. The modes enabled for this connector. Default state is
