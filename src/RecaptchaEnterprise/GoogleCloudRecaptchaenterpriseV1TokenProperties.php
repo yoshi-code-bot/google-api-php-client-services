@@ -58,6 +58,15 @@ class GoogleCloudRecaptchaenterpriseV1TokenProperties extends \Google\Model
    */
   public const INVALID_REASON_UNEXPECTED_ACTION = 'UNEXPECTED_ACTION';
   /**
+   * The key used to generate the token does not match the `site_key`.
+   */
+  public const INVALID_REASON_KEY_MISMATCH = 'KEY_MISMATCH';
+  /**
+   * The domain of the page on which the token was generated does not match the
+   * `allowed_domains` configured in the `site_key`.
+   */
+  public const INVALID_REASON_DOMAIN_MISMATCH = 'DOMAIN_MISMATCH';
+  /**
    * Output only. Action name provided at token generation.
    *
    * @var string
@@ -177,7 +186,8 @@ class GoogleCloudRecaptchaenterpriseV1TokenProperties extends \Google\Model
    * Output only. Reason associated with the response when valid = false.
    *
    * Accepted values: INVALID_REASON_UNSPECIFIED, UNKNOWN_INVALID_REASON,
-   * MALFORMED, EXPIRED, DUPE, MISSING, BROWSER_ERROR, UNEXPECTED_ACTION
+   * MALFORMED, EXPIRED, DUPE, MISSING, BROWSER_ERROR, UNEXPECTED_ACTION,
+   * KEY_MISMATCH, DOMAIN_MISMATCH
    *
    * @param self::INVALID_REASON_* $invalidReason
    */
