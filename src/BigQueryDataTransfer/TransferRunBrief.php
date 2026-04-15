@@ -20,8 +20,8 @@ namespace Google\Service\BigQueryDataTransfer;
 class TransferRunBrief extends \Google\Model
 {
   /**
-   * Optional. Run URI. Format
-   * projects/{project}/locations/{location}/transferConfigs/{config}/run/{run}
+   * Optional. Run URI. The format must be: `projects/{project}/locations/{locat
+   * ion}/transferConfigs/{transfer_config}/run/{run}`
    *
    * @var string
    */
@@ -34,8 +34,8 @@ class TransferRunBrief extends \Google\Model
   public $startTime;
 
   /**
-   * Optional. Run URI. Format
-   * projects/{project}/locations/{location}/transferConfigs/{config}/run/{run}
+   * Optional. Run URI. The format must be: `projects/{project}/locations/{locat
+   * ion}/transferConfigs/{transfer_config}/run/{run}`
    *
    * @param string $run
    */

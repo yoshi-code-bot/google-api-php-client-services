@@ -53,8 +53,8 @@ class ProjectsTransferConfigsTransferResources extends \Google\Service\Resource
    *
    * @param string $parent Required. Name of transfer configuration for which
    * transfer resources should be retrieved. The name should be in one of the
-   * following form: * `projects/{project_id}/transferConfigs/{config_id}` *
-   * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+   * following forms: * `projects/{project}/transferConfigs/{transfer_config}` * `
+   * projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter for the transfer resources.
@@ -65,7 +65,7 @@ class ProjectsTransferConfigsTransferResources extends \Google\Service\Resource
    * `hierarchy_detail.partition_detail.table` Multiple filters can be applied
    * using the `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
    * latest_status_detail.state="SUCCEEDED")` * `update_time >=
-   * "2012-04-21T11:30:00-04:00` * `hierarchy_detail.partition_detail.table =
+   * "2012-04-21T11:30:00-04:00"` * `hierarchy_detail.partition_detail.table =
    * "table1"`
    * @opt_param int pageSize Optional. The maximum number of transfer resources to
    * return. The maximum value is 1000; values above 1000 will be coerced to 1000.
