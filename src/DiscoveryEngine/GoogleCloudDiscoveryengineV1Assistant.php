@@ -35,6 +35,12 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
    * Grounding with Enterprise Web Search is enabled.
    */
   public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH = 'WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH';
+  /**
+   * Output only. Represents the time when this Assistant was created.
+   *
+   * @var string
+   */
+  public $createTime;
   protected $customerPolicyType = GoogleCloudDiscoveryengineV1AssistantCustomerPolicy::class;
   protected $customerPolicyDataType = '';
   /**
@@ -78,12 +84,35 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
    */
   public $name;
   /**
+   * Output only. Represents the time when this Assistant was most recently
+   * updated.
+   *
+   * @var string
+   */
+  public $updateTime;
+  /**
    * Optional. The type of web grounding to use.
    *
    * @var string
    */
   public $webGroundingType;
 
+  /**
+   * Output only. Represents the time when this Assistant was created.
+   *
+   * @param string $createTime
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
   /**
    * Optional. Customer policy for the assistant.
    *
@@ -214,6 +243,23 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Represents the time when this Assistant was most recently
+   * updated.
+   *
+   * @param string $updateTime
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
   /**
    * Optional. The type of web grounding to use.
