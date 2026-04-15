@@ -56,6 +56,13 @@ class InitializeServiceRequest extends \Google\Model
    * @var string
    */
   public $resourceType;
+  /**
+   * Optional. If set, validates the request and returns the result, but does
+   * not actually run it.
+   *
+   * @var bool
+   */
+  public $validateOnly;
 
   /**
    * Optional. The location where the BackupPlan will be created. This field is
@@ -137,6 +144,23 @@ class InitializeServiceRequest extends \Google\Model
   public function getResourceType()
   {
     return $this->resourceType;
+  }
+  /**
+   * Optional. If set, validates the request and returns the result, but does
+   * not actually run it.
+   *
+   * @param bool $validateOnly
+   */
+  public function setValidateOnly($validateOnly)
+  {
+    $this->validateOnly = $validateOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getValidateOnly()
+  {
+    return $this->validateOnly;
   }
 }
 
