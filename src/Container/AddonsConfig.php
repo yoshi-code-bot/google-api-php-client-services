@@ -53,6 +53,8 @@ class AddonsConfig extends \Google\Model
   protected $rayOperatorConfigDataType = '';
   protected $sliceControllerConfigType = SliceControllerConfig::class;
   protected $sliceControllerConfigDataType = '';
+  protected $slurmOperatorConfigType = SlurmOperatorConfig::class;
+  protected $slurmOperatorConfigDataType = '';
   protected $statefulHaConfigType = StatefulHAConfig::class;
   protected $statefulHaConfigDataType = '';
 
@@ -340,6 +342,22 @@ class AddonsConfig extends \Google\Model
   public function getSliceControllerConfig()
   {
     return $this->sliceControllerConfig;
+  }
+  /**
+   * Configuration for the Slurm Operator.
+   *
+   * @param SlurmOperatorConfig $slurmOperatorConfig
+   */
+  public function setSlurmOperatorConfig(SlurmOperatorConfig $slurmOperatorConfig)
+  {
+    $this->slurmOperatorConfig = $slurmOperatorConfig;
+  }
+  /**
+   * @return SlurmOperatorConfig
+   */
+  public function getSlurmOperatorConfig()
+  {
+    return $this->slurmOperatorConfig;
   }
   /**
    * Optional. Configuration for the StatefulHA add-on.
