@@ -22,12 +22,14 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
   /**
    * GCS URI of the human pose video to condition video generation.
    *
+   * @deprecated
    * @var string
    */
   public $bodyLandmarksGcsUri;
   /**
    * GCS URI of the face landmarks video to condition video generation.
    *
+   * @deprecated
    * @var string
    */
   public $faceLandmarksGcsUri;
@@ -41,6 +43,7 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
   /**
    * GCS URI of the human pose video to condition video generation.
    *
+   * @deprecated
    * @param string $bodyLandmarksGcsUri
    */
   public function setBodyLandmarksGcsUri($bodyLandmarksGcsUri)
@@ -48,6 +51,7 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
     $this->bodyLandmarksGcsUri = $bodyLandmarksGcsUri;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBodyLandmarksGcsUri()
@@ -57,6 +61,7 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
   /**
    * GCS URI of the face landmarks video to condition video generation.
    *
+   * @deprecated
    * @param string $faceLandmarksGcsUri
    */
   public function setFaceLandmarksGcsUri($faceLandmarksGcsUri)
@@ -64,6 +69,7 @@ class CloudAiLargeModelsVisionHumanPose extends \Google\Model
     $this->faceLandmarksGcsUri = $faceLandmarksGcsUri;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getFaceLandmarksGcsUri()
