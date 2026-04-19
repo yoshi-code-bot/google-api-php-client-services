@@ -35,8 +35,11 @@ use Google\Client;
  */
 class GoogleHealthAPI extends \Google\Service
 {
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
+  const CLOUD_PLATFORM =
+      "https://www.googleapis.com/auth/cloud-platform";
 
-
+  public $projects_subscribers;
   public $users;
   public $users_dataTypes_dataPoints;
   public $rootUrlTemplate;
@@ -58,6 +61,76 @@ class GoogleHealthAPI extends \Google\Service
     $this->version = 'v4';
     $this->serviceName = 'health';
 
+    $this->projects_subscribers = new GoogleHealthAPI\Resource\ProjectsSubscribers(
+        $this,
+        $this->serviceName,
+        'subscribers',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v4/{+parent}/subscribers',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subscriberId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v4/{+parent}/subscribers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->users = new GoogleHealthAPI\Resource\Users(
         $this,
         $this->serviceName,
@@ -174,6 +247,16 @@ class GoogleHealthAPI extends \Google\Service
                 'partialData' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'list' => [

@@ -57,6 +57,8 @@ class RollupDataPoint extends \Google\Model
   public $startTime;
   protected $stepsType = StepsRollupValue::class;
   protected $stepsDataType = '';
+  protected $swimLengthsDataType = SwimLengthsDataRollupValue::class;
+  protected $swimLengthsDataDataType = '';
   protected $timeInHeartRateZoneType = TimeInHeartRateZoneRollupValue::class;
   protected $timeInHeartRateZoneDataType = '';
   protected $totalCaloriesType = TotalCaloriesRollupValue::class;
@@ -328,6 +330,24 @@ class RollupDataPoint extends \Google\Model
   public function getSteps()
   {
     return $this->steps;
+  }
+  /**
+   * Returned by default when rolling up data points from the `swim-lengths-
+   * data` data type, or when requested explicitly using the `swim-lengths-data`
+   * rollup type identifier.
+   *
+   * @param SwimLengthsDataRollupValue $swimLengthsData
+   */
+  public function setSwimLengthsData(SwimLengthsDataRollupValue $swimLengthsData)
+  {
+    $this->swimLengthsData = $swimLengthsData;
+  }
+  /**
+   * @return SwimLengthsDataRollupValue
+   */
+  public function getSwimLengthsData()
+  {
+    return $this->swimLengthsData;
   }
   /**
    * Returned by default when rolling up data points from the `time-in-heart-
