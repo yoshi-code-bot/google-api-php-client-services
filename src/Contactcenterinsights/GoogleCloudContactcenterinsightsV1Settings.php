@@ -36,6 +36,8 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $diagnosticMetricConfigType = GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig::class;
+  protected $diagnosticMetricConfigDataType = '';
   /**
    * A language code to be applied to each transcript segment unless the segment
    * already specifies a language code. Language code defaults to "en-US" if it
@@ -152,6 +154,22 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Configuration for diagnostic metrics.
+   *
+   * @param GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig $diagnosticMetricConfig
+   */
+  public function setDiagnosticMetricConfig(GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig $diagnosticMetricConfig)
+  {
+    $this->diagnosticMetricConfig = $diagnosticMetricConfig;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig
+   */
+  public function getDiagnosticMetricConfig()
+  {
+    return $this->diagnosticMetricConfig;
   }
   /**
    * A language code to be applied to each transcript segment unless the segment
