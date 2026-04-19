@@ -85,6 +85,8 @@ class Request extends \Google\Model
   protected $updateDocumentStyleDataType = '';
   protected $updateDocumentTabPropertiesType = UpdateDocumentTabPropertiesRequest::class;
   protected $updateDocumentTabPropertiesDataType = '';
+  protected $updateNamedStyleType = UpdateNamedStyleRequest::class;
+  protected $updateNamedStyleDataType = '';
   protected $updateParagraphStyleType = UpdateParagraphStyleRequest::class;
   protected $updateParagraphStyleDataType = '';
   protected $updateSectionStyleType = UpdateSectionStyleRequest::class;
@@ -625,6 +627,22 @@ class Request extends \Google\Model
   public function getUpdateDocumentTabProperties()
   {
     return $this->updateDocumentTabProperties;
+  }
+  /**
+   * Updates a named style.
+   *
+   * @param UpdateNamedStyleRequest $updateNamedStyle
+   */
+  public function setUpdateNamedStyle(UpdateNamedStyleRequest $updateNamedStyle)
+  {
+    $this->updateNamedStyle = $updateNamedStyle;
+  }
+  /**
+   * @return UpdateNamedStyleRequest
+   */
+  public function getUpdateNamedStyle()
+  {
+    return $this->updateNamedStyle;
   }
   /**
    * Updates the paragraph style at the specified range.
