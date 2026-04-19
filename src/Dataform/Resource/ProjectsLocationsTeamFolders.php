@@ -152,17 +152,17 @@ class ProjectsLocationsTeamFolders extends \Google\Service\Resource
   /**
    * Returns the contents of a given TeamFolder. (teamFolders.queryContents)
    *
-   * @param string $teamFolder Required. Name of the team_folder whose contents to
-   * list. Format: `projects/locations/teamFolders`.
+   * @param string $teamFolder Required. Resource name of the TeamFolder to list
+   * contents for. Format: `projects/locations/teamFolders`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Optional filtering for the returned list.
-   * Filtering is currently only supported on the `display_name` field. Example: -
+   * Filtering is currently only supported on the `display_name` field. Example: *
    * `filter="display_name="MyFolder""`
    * @opt_param string orderBy Optional. Field to additionally sort results by.
    * Will order Folders before Repositories, and then by `order_by` in ascending
    * order. Supported keywords: `display_name` (default), `create_time`,
-   * last_modified_time. Examples: - `orderBy="display_name"` -
+   * last_modified_time. Examples: * `orderBy="display_name"` *
    * `orderBy="display_name desc"`
    * @opt_param int pageSize Optional. Maximum number of paths to return. The
    * server may return fewer items than requested. If unspecified, the server will
@@ -190,11 +190,11 @@ class ProjectsLocationsTeamFolders extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Optional filtering for the returned list.
-   * Filtering is currently only supported on the `display_name` field. Example: -
+   * Filtering is currently only supported on the `display_name` field. Example: *
    * `filter="display_name="MyFolder""`
    * @opt_param string orderBy Optional. Field to additionally sort results by.
    * Supported keywords: `display_name` (default), `create_time`,
-   * `last_modified_time`. Examples: - `orderBy="display_name"` -
+   * `last_modified_time`. Examples: * `orderBy="display_name"` *
    * `orderBy="display_name desc"`
    * @opt_param int pageSize Optional. Maximum number of TeamFolders to return.
    * The server may return fewer items than requested. If unspecified, the server

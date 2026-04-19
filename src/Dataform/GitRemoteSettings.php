@@ -45,7 +45,8 @@ class GitRemoteSettings extends \Google\Model
    */
   public $authenticationTokenSecretVersion;
   /**
-   * Required. The Git remote's default branch name.
+   * Required. The Git remote's default branch name. If not set, `main` will be
+   * used and stored for the repository.
    *
    * @var string
    */
@@ -86,7 +87,8 @@ class GitRemoteSettings extends \Google\Model
     return $this->authenticationTokenSecretVersion;
   }
   /**
-   * Required. The Git remote's default branch name.
+   * Required. The Git remote's default branch name. If not set, `main` will be
+   * used and stored for the repository.
    *
    * @param string $defaultBranch
    */

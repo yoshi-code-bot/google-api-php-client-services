@@ -101,17 +101,17 @@ class ProjectsLocations extends \Google\Service\Resource
    * folder contains all resources that are created by the user and not contained
    * in any other folder. (locations.queryUserRootContents)
    *
-   * @param string $location Required. Location of the user root folder whose
-   * contents to list. Format: projects/locations
+   * @param string $location Required. Location of the user root folder to list
+   * contents for. Format: projects/locations
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Optional filtering for the returned list.
-   * Filtering is currently only supported on the `display_name` field. Example: -
+   * Filtering is currently only supported on the `display_name` field. Example: *
    * `filter="display_name="MyFolder""`
    * @opt_param string orderBy Optional. Field to additionally sort results by.
    * Will order Folders before Repositories, and then by `order_by` in ascending
    * order. Supported keywords: display_name (default), created_at,
-   * last_modified_at. Examples: - `orderBy="display_name"` -
+   * last_modified_at. Examples: * `orderBy="display_name"` *
    * `orderBy="display_name desc"`
    * @opt_param int pageSize Optional. Maximum number of paths to return. The
    * server may return fewer items than requested. If unspecified, the server will
