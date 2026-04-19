@@ -121,6 +121,22 @@ class UsersDataTypesDataPoints extends \Google\Service\Resource
     return $this->call('exportExerciseTcx', [$params], ExportExerciseTcxResponse::class);
   }
   /**
+   * Get a single identifyable data point. (dataPoints.get)
+   *
+   * @param string $name Required. The name of the data point to retrieve. Format:
+   * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See
+   * DataPoint.name for examples and possible values.
+   * @param array $optParams Optional parameters.
+   * @return DataPoint
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], DataPoint::class);
+  }
+  /**
    * Query user health and fitness data points.
    * (dataPoints.listUsersDataTypesDataPoints)
    *
