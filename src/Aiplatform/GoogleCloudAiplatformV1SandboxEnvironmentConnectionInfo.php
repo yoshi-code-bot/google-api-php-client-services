@@ -32,6 +32,12 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
    */
   public $loadBalancerIp;
   /**
+   * Output only. The routing token for the SandboxEnvironment.
+   *
+   * @var string
+   */
+  public $routingToken;
+  /**
    * Output only. The hostname of the SandboxEnvironment.
    *
    * @var string
@@ -75,6 +81,22 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
   public function getLoadBalancerIp()
   {
     return $this->loadBalancerIp;
+  }
+  /**
+   * Output only. The routing token for the SandboxEnvironment.
+   *
+   * @param string $routingToken
+   */
+  public function setRoutingToken($routingToken)
+  {
+    $this->routingToken = $routingToken;
+  }
+  /**
+   * @return string
+   */
+  public function getRoutingToken()
+  {
+    return $this->routingToken;
   }
   /**
    * Output only. The hostname of the SandboxEnvironment.

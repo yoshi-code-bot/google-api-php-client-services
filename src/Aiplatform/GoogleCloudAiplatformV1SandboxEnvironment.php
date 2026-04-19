@@ -66,11 +66,43 @@ class GoogleCloudAiplatformV1SandboxEnvironment extends \Google\Model
    */
   public $expireTime;
   /**
+   * Output only. The resource name of the latest snapshot taken for this
+   * SandboxEnvironment.
+   *
+   * @var string
+   */
+  public $latestSandboxEnvironmentSnapshot;
+  /**
    * Identifier. The name of the SandboxEnvironment.
    *
    * @var string
    */
   public $name;
+  /**
+   * Optional. Owner information for this sandbox environment. A Sandbox can
+   * only be restored from a snapshot that belongs to the same owner. If not
+   * set, sandbox will be created as the default owner.
+   *
+   * @var string
+   */
+  public $owner;
+  /**
+   * Optional. The resource name of the SandboxEnvironmentSnapshot to use for
+   * creating this SandboxEnvironment. Format: `projects/{project}/locations/{lo
+   * cation}/reasoningEngines/{reasoning_engine}/sandboxEnvironmentSnapshots/{sa
+   * ndbox_environment_snapshot}`
+   *
+   * @var string
+   */
+  public $sandboxEnvironmentSnapshot;
+  /**
+   * Optional. The name of the SandboxEnvironmentTemplate specified in the
+   * parent Agent Engine resource that this SandboxEnvironment is created from.
+   * Only one of `sandbox_environment_template` and `spec` should be set.
+   *
+   * @var string
+   */
+  public $sandboxEnvironmentTemplate;
   protected $specType = GoogleCloudAiplatformV1SandboxEnvironmentSpec::class;
   protected $specDataType = '';
   /**
@@ -161,6 +193,23 @@ class GoogleCloudAiplatformV1SandboxEnvironment extends \Google\Model
     return $this->expireTime;
   }
   /**
+   * Output only. The resource name of the latest snapshot taken for this
+   * SandboxEnvironment.
+   *
+   * @param string $latestSandboxEnvironmentSnapshot
+   */
+  public function setLatestSandboxEnvironmentSnapshot($latestSandboxEnvironmentSnapshot)
+  {
+    $this->latestSandboxEnvironmentSnapshot = $latestSandboxEnvironmentSnapshot;
+  }
+  /**
+   * @return string
+   */
+  public function getLatestSandboxEnvironmentSnapshot()
+  {
+    return $this->latestSandboxEnvironmentSnapshot;
+  }
+  /**
    * Identifier. The name of the SandboxEnvironment.
    *
    * @param string $name
@@ -175,6 +224,61 @@ class GoogleCloudAiplatformV1SandboxEnvironment extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Owner information for this sandbox environment. A Sandbox can
+   * only be restored from a snapshot that belongs to the same owner. If not
+   * set, sandbox will be created as the default owner.
+   *
+   * @param string $owner
+   */
+  public function setOwner($owner)
+  {
+    $this->owner = $owner;
+  }
+  /**
+   * @return string
+   */
+  public function getOwner()
+  {
+    return $this->owner;
+  }
+  /**
+   * Optional. The resource name of the SandboxEnvironmentSnapshot to use for
+   * creating this SandboxEnvironment. Format: `projects/{project}/locations/{lo
+   * cation}/reasoningEngines/{reasoning_engine}/sandboxEnvironmentSnapshots/{sa
+   * ndbox_environment_snapshot}`
+   *
+   * @param string $sandboxEnvironmentSnapshot
+   */
+  public function setSandboxEnvironmentSnapshot($sandboxEnvironmentSnapshot)
+  {
+    $this->sandboxEnvironmentSnapshot = $sandboxEnvironmentSnapshot;
+  }
+  /**
+   * @return string
+   */
+  public function getSandboxEnvironmentSnapshot()
+  {
+    return $this->sandboxEnvironmentSnapshot;
+  }
+  /**
+   * Optional. The name of the SandboxEnvironmentTemplate specified in the
+   * parent Agent Engine resource that this SandboxEnvironment is created from.
+   * Only one of `sandbox_environment_template` and `spec` should be set.
+   *
+   * @param string $sandboxEnvironmentTemplate
+   */
+  public function setSandboxEnvironmentTemplate($sandboxEnvironmentTemplate)
+  {
+    $this->sandboxEnvironmentTemplate = $sandboxEnvironmentTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getSandboxEnvironmentTemplate()
+  {
+    return $this->sandboxEnvironmentTemplate;
   }
   /**
    * Optional. The configuration of the SandboxEnvironment.

@@ -41,7 +41,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
   public $maxInstances;
   /**
    * Optional. The minimum number of application instances that will be kept
-   * running at all times. Defaults to 1. Range: [0, 10].
+   * running at all times. Defaults to 1. Range: [0, 75].
    *
    * @var int
    */
@@ -136,7 +136,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
   }
   /**
    * Optional. The minimum number of application instances that will be kept
-   * running at all times. Defaults to 1. Range: [0, 10].
+   * running at all times. Defaults to 1. Range: [0, 75].
    *
    * @param int $minInstances
    */

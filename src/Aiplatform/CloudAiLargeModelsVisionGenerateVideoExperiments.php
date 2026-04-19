@@ -39,6 +39,16 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   protected $promptInputsType = CloudAiLargeModelsVisionPromptInputs::class;
   protected $promptInputsDataType = '';
   /**
+   * Optional tag for tracking the source of this request. Allowed values:
+   * "colab", "comfyui", "curl", "flowresearch", "vertexstudio". Unrecognized
+   * tags are recorded as "unknown" in metrics. Tags do not affect video
+   * generation behavior. Up to 16 characters, ASCII alphanumeric, hyphens, and
+   * underscores only.
+   *
+   * @var string
+   */
+  public $requestOriginTag;
+  /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to
    * sdedit_video_tmax_scale_map
    *
@@ -133,6 +143,26 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getPromptInputs()
   {
     return $this->promptInputs;
+  }
+  /**
+   * Optional tag for tracking the source of this request. Allowed values:
+   * "colab", "comfyui", "curl", "flowresearch", "vertexstudio". Unrecognized
+   * tags are recorded as "unknown" in metrics. Tags do not affect video
+   * generation behavior. Up to 16 characters, ASCII alphanumeric, hyphens, and
+   * underscores only.
+   *
+   * @param string $requestOriginTag
+   */
+  public function setRequestOriginTag($requestOriginTag)
+  {
+    $this->requestOriginTag = $requestOriginTag;
+  }
+  /**
+   * @return string
+   */
+  public function getRequestOriginTag()
+  {
+    return $this->requestOriginTag;
   }
   /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to
