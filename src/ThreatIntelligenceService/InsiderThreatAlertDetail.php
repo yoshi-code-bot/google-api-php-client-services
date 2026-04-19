@@ -27,9 +27,8 @@ class InsiderThreatAlertDetail extends \Google\Collection
    */
   public $discoveryDocumentIds;
   /**
-   * Required. InsiderThreat specific severity This will be the string
-   * representation of the InsiderThreatFindingDetail.Severityenum. (e.g.,
-   * "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Insider Threat alert. Allowed values are: *
+   * `LOW` * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @var string
    */
@@ -52,9 +51,8 @@ class InsiderThreatAlertDetail extends \Google\Collection
     return $this->discoveryDocumentIds;
   }
   /**
-   * Required. InsiderThreat specific severity This will be the string
-   * representation of the InsiderThreatFindingDetail.Severityenum. (e.g.,
-   * "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Insider Threat alert. Allowed values are: *
+   * `LOW` * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @param string $severity
    */

@@ -27,7 +27,8 @@ class InitialAccessBrokerAlertDetail extends \Google\Collection
    */
   public $discoveryDocumentIds;
   /**
-   * Required. IAB specific severity
+   * Required. The severity of the Initial Access Broker (IAB) alert. Allowed
+   * values are: * `LOW` * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @var string
    */
@@ -50,7 +51,8 @@ class InitialAccessBrokerAlertDetail extends \Google\Collection
     return $this->discoveryDocumentIds;
   }
   /**
-   * Required. IAB specific severity
+   * Required. The severity of the Initial Access Broker (IAB) alert. Allowed
+   * values are: * `LOW` * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @param string $severity
    */

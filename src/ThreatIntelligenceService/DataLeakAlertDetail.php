@@ -27,9 +27,8 @@ class DataLeakAlertDetail extends \Google\Collection
    */
   public $discoveryDocumentIds;
   /**
-   * Required. Data Leak specific severity This will be the string
-   * representation of the DataLeakFindingDetail.Severityenum. (e.g., "LOW",
-   * "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Data Leak alert. Allowed values are: * `LOW`
+   * * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @var string
    */
@@ -52,9 +51,8 @@ class DataLeakAlertDetail extends \Google\Collection
     return $this->discoveryDocumentIds;
   }
   /**
-   * Required. Data Leak specific severity This will be the string
-   * representation of the DataLeakFindingDetail.Severityenum. (e.g., "LOW",
-   * "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Data Leak alert. Allowed values are: * `LOW`
+   * * `MEDIUM` * `HIGH` * `CRITICAL`
    *
    * @param string $severity
    */
