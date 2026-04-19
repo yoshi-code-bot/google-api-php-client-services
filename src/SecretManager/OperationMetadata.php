@@ -26,17 +26,19 @@ class OperationMetadata extends \Google\Model
    */
   public $apiVersion;
   /**
-   * Output only. The time the operation was created.
+   * Output only. Time the operation was created.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. The time the operation finished running.
+   * Output only. Time the operation finished running.
    *
    * @var string
    */
   public $endTime;
+  protected $progressType = Progress::class;
+  protected $progressDataType = '';
   /**
    * Output only. Identifies whether the user has requested cancellation of the
    * operation. Operations that have been cancelled successfully have
@@ -82,7 +84,7 @@ class OperationMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * Output only. The time the operation was created.
+   * Output only. Time the operation was created.
    *
    * @param string $createTime
    */
@@ -98,7 +100,7 @@ class OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. The time the operation finished running.
+   * Output only. Time the operation finished running.
    *
    * @param string $endTime
    */
@@ -112,6 +114,23 @@ class OperationMetadata extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * Output only. Represents the progress of the operation. This field is
+   * populated for operations that involve processing multiple secret versions.
+   *
+   * @param Progress $progress
+   */
+  public function setProgress(Progress $progress)
+  {
+    $this->progress = $progress;
+  }
+  /**
+   * @return Progress
+   */
+  public function getProgress()
+  {
+    return $this->progress;
   }
   /**
    * Output only. Identifies whether the user has requested cancellation of the
