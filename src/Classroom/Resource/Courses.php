@@ -121,8 +121,7 @@ class Courses extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string courseStates Restricts returned courses to those in one of
-   * the specified states The default value is ACTIVE, ARCHIVED, PROVISIONED,
-   * DECLINED.
+   * the specified states. If unspecified, Courses in any state are returned.
    * @opt_param int pageSize Maximum number of items to return. Zero or
    * unspecified indicates that the server may assign a maximum. The server may
    * return fewer than the specified number of results.
