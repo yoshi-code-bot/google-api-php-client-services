@@ -120,7 +120,9 @@ class Assignment extends \Google\Model
    * l://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for
    * service accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER
    * /locations/global/workloadIdentityPools/POOL_ID/subject/SUBJECT_ID` for
-   * workload identity pool identities.
+   * workload identity pool identities. * The special value
+   * `unknown_or_deleted_user` represents principals which cannot be read from
+   * the user info service, for example deleted users.
    *
    * @var string
    */
@@ -221,7 +223,9 @@ class Assignment extends \Google\Model
    * l://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for
    * service accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER
    * /locations/global/workloadIdentityPools/POOL_ID/subject/SUBJECT_ID` for
-   * workload identity pool identities.
+   * workload identity pool identities. * The special value
+   * `unknown_or_deleted_user` represents principals which cannot be read from
+   * the user info service, for example deleted users.
    *
    * @param string $principal
    */
