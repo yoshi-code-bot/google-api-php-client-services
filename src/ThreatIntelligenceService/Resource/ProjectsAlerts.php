@@ -146,11 +146,32 @@ class ProjectsAlerts extends \Google\Service\Resource
    * projects/{project}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter criteria.
+   * @opt_param string filter Optional. Filter criteria. Supported fields for
+   * filtering include: * `audit.create_time` * `audit.creator` *
+   * `audit.update_time` * `audit.updater` *
+   * `detail.data_leak.discovery_document_ids` * `detail.data_leak.severity` *
+   * `detail.detail_type` * `detail.initial_access_broker.discovery_document_ids`
+   * * `detail.initial_access_broker.severity` *
+   * `detail.insider_threat.discovery_document_ids` *
+   * `detail.insider_threat.severity` * `finding_count` *
+   * `priority_analysis.priority_level` * `relevance_analysis.confidence` *
+   * `relevance_analysis.relevance_level` * `relevance_analysis.relevant` *
+   * `severity_analysis.severity_level` * `state` Examples: * `detail.detail_type
+   * = "initial_access_broker"` * `detail.detail_type != "data_leak"` *
+   * `detail.insider_threat.severity = "HIGH"` * `audit.create_time >=
+   * "2026-04-03T00:00:00Z" AND audit.create_time < "2026-04-06T00:00:00Z"` *
+   * `state = "NEW" OR state = "TRIAGED"` * `severity_analysis.severity_level =
+   * "SEVERITY_LEVEL_CRITICAL"`
    * @opt_param string orderBy Optional. Order by criteria in the csv format:
-   * "field1,field2 desc" or "field1,field2" or "field1 asc, field2".
-   * @opt_param int pageSize Optional. Page size.
-   * @opt_param string pageToken Optional. Page token.
+   * "field1, field2 desc" or "field1, field2" or "field1 asc, field2". If a field
+   * is specified without `asc` or `desc`, ascending order is used by default.
+   * Supported fields for ordering are identical to those supported for filtering.
+   * Examples: * `audit.create_time desc` * `audit.update_time asc` *
+   * `audit.create_time desc, severity_analysis.severity_level desc`
+   * @opt_param int pageSize Optional. Page size. Default to 100 alerts per page.
+   * Maximum is 1000 alerts per page.
+   * @opt_param string pageToken Optional. Page token to retrieve the next page of
+   * results.
    * @return ListAlertsResponse
    * @throws \Google\Service\Exception
    */
