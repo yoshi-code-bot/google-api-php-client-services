@@ -21,7 +21,7 @@ class GoogleHomeEnterpriseSdmV1Device extends \Google\Collection
 {
   protected $collection_key = 'parentRelations';
   /**
-   * Output only. The GHP device ID of the device.
+   * Output only. The Home APIs device ID of the device.
    *
    * @var string
    */
@@ -52,7 +52,7 @@ class GoogleHomeEnterpriseSdmV1Device extends \Google\Collection
   public $type;
 
   /**
-   * Output only. The GHP device ID of the device.
+   * Output only. The Home APIs device ID of the device.
    *
    * @param string $ghpName
    */
