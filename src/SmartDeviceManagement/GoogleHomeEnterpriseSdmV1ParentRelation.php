@@ -27,8 +27,8 @@ class GoogleHomeEnterpriseSdmV1ParentRelation extends \Google\Model
    */
   public $displayName;
   /**
-   * Output only. The GHP name of the relation -- e.g., structure/room where the
-   * device is assigned to. For example:
+   * Output only. The Home APIs name of the relation -- e.g., structure/room
+   * where the device is assigned to. For example:
    * "homegraph.googleapis.com/Structure/ABC" or
    * "homegraph.googleapis.com/Room/ABC"
    *
@@ -62,8 +62,8 @@ class GoogleHomeEnterpriseSdmV1ParentRelation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Output only. The GHP name of the relation -- e.g., structure/room where the
-   * device is assigned to. For example:
+   * Output only. The Home APIs name of the relation -- e.g., structure/room
+   * where the device is assigned to. For example:
    * "homegraph.googleapis.com/Structure/ABC" or
    * "homegraph.googleapis.com/Room/ABC"
    *
