@@ -20,7 +20,8 @@ namespace Google\Service\MyBusinessAccountManagement;
 class TargetLocation extends \Google\Model
 {
   /**
-   * The address of the location to which the user is invited.
+   * The address of the location to which the user is invited. Not always
+   * populated.
    *
    * @var string
    */
@@ -33,7 +34,8 @@ class TargetLocation extends \Google\Model
   public $locationName;
 
   /**
-   * The address of the location to which the user is invited.
+   * The address of the location to which the user is invited. Not always
+   * populated.
    *
    * @param string $address
    */
