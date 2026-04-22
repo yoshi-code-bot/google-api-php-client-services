@@ -38,6 +38,9 @@ class DataManager extends \Google\Service
   /** See, edit, create, import, or delete your customer data in Google Ads, Google Marketing Platform (Campaign Manager 360, Search Ads 360, Display & Video 360), and Google Analytics. */
   const DATAMANAGER =
       "https://www.googleapis.com/auth/datamanager";
+  /** View, create, or delete your partner links in Google Ads, Marketing Platform (Campaign Manager 360, Search Ads 360, Display & Video 360), and Analytics. */
+  const DATAMANAGER_PARTNERLINK =
+      "https://www.googleapis.com/auth/datamanager.partnerlink";
 
   public $accountTypes_accounts_insights;
   public $accountTypes_accounts_partnerLinks;
