@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for DeveloperKnowledge (v1alpha).
+ * Service definition for DeveloperKnowledge (v1).
  *
  * <p>
  * The Developer Knowledge API provides access to Google's developer knowledge.</p>
@@ -39,7 +39,6 @@ class DeveloperKnowledge extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $documents;
-  public $v1alpha;
   public $rootUrlTemplate;
 
   /**
@@ -56,7 +55,7 @@ class DeveloperKnowledge extends \Google\Service
     $this->rootUrlTemplate = $rootUrl ?: 'https://developerknowledge.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1alpha';
+    $this->version = 'v1';
     $this->serviceName = 'developerknowledge';
 
     $this->documents = new DeveloperKnowledge\Resource\Documents(
@@ -66,7 +65,7 @@ class DeveloperKnowledge extends \Google\Service
         [
           'methods' => [
             'batchGet' => [
-              'path' => 'v1alpha/documents:batchGet',
+              'path' => 'v1/documents:batchGet',
               'httpMethod' => 'GET',
               'parameters' => [
                 'names' => [
@@ -80,7 +79,7 @@ class DeveloperKnowledge extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -94,7 +93,7 @@ class DeveloperKnowledge extends \Google\Service
                 ],
               ],
             ],'searchDocumentChunks' => [
-              'path' => 'v1alpha/documents:searchDocumentChunks',
+              'path' => 'v1/documents:searchDocumentChunks',
               'httpMethod' => 'GET',
               'parameters' => [
                 'filter' => [
@@ -114,20 +113,6 @@ class DeveloperKnowledge extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->v1alpha = new DeveloperKnowledge\Resource\V1alpha(
-        $this,
-        $this->serviceName,
-        'v1alpha',
-        [
-          'methods' => [
-            'answerQuery' => [
-              'path' => 'v1alpha:answerQuery',
-              'httpMethod' => 'POST',
-              'parameters' => [],
             ],
           ]
         ]
