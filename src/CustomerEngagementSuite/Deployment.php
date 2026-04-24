@@ -50,6 +50,8 @@ class Deployment extends \Google\Model
    * @var string
    */
   public $etag;
+  protected $experimentConfigType = ExperimentConfig::class;
+  protected $experimentConfigDataType = '';
   /**
    * Identifier. The resource name of the deployment. Format: `projects/{project
    * }/locations/{location}/apps/{app}/deployments/{deployment}`
@@ -148,6 +150,22 @@ class Deployment extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * Optional. Experiment configuration for the deployment.
+   *
+   * @param ExperimentConfig $experimentConfig
+   */
+  public function setExperimentConfig(ExperimentConfig $experimentConfig)
+  {
+    $this->experimentConfig = $experimentConfig;
+  }
+  /**
+   * @return ExperimentConfig
+   */
+  public function getExperimentConfig()
+  {
+    return $this->experimentConfig;
   }
   /**
    * Identifier. The resource name of the deployment. Format: `projects/{project

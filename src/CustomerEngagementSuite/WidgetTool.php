@@ -87,6 +87,8 @@ class WidgetTool extends \Google\Model
   public $name;
   protected $parametersType = Schema::class;
   protected $parametersDataType = '';
+  protected $textResponseConfigType = WidgetToolTextResponseConfig::class;
+  protected $textResponseConfigDataType = '';
   /**
    * Optional. Configuration for rendering the widget.
    *
@@ -165,6 +167,22 @@ class WidgetTool extends \Google\Model
   public function getParameters()
   {
     return $this->parameters;
+  }
+  /**
+   * Optional. Configuration for always-included text responses.
+   *
+   * @param WidgetToolTextResponseConfig $textResponseConfig
+   */
+  public function setTextResponseConfig(WidgetToolTextResponseConfig $textResponseConfig)
+  {
+    $this->textResponseConfig = $textResponseConfig;
+  }
+  /**
+   * @return WidgetToolTextResponseConfig
+   */
+  public function getTextResponseConfig()
+  {
+    return $this->textResponseConfig;
   }
   /**
    * Optional. Configuration for rendering the widget.

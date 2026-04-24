@@ -35,7 +35,7 @@ class MockedToolCall extends \Google\Model
    */
   public $mockResponse;
   /**
-   * Required. Deprecated. Use tool_identifier instead.
+   * Optional. Deprecated. Use tool_identifier instead.
    *
    * @deprecated
    * @var string
@@ -87,7 +87,7 @@ class MockedToolCall extends \Google\Model
     return $this->mockResponse;
   }
   /**
-   * Required. Deprecated. Use tool_identifier instead.
+   * Optional. Deprecated. Use tool_identifier instead.
    *
    * @deprecated
    * @param string $tool
