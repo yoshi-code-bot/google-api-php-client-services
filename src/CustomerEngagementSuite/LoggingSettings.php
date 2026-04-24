@@ -33,6 +33,8 @@ class LoggingSettings extends \Google\Model
   protected $metricAnalysisSettingsDataType = '';
   protected $redactionConfigType = RedactionConfig::class;
   protected $redactionConfigDataType = '';
+  protected $unredactedAudioRecordingConfigType = AudioRecordingConfig::class;
+  protected $unredactedAudioRecordingConfigDataType = '';
 
   /**
    * Optional. Configuration for how audio interactions should be recorded.
@@ -150,6 +152,24 @@ class LoggingSettings extends \Google\Model
   public function getRedactionConfig()
   {
     return $this->redactionConfig;
+  }
+  /**
+   * Optional. Configures recording of unredacted audio. Use this to maintain a
+   * raw backup with restricted access when audio redaction is enabled,
+   * typically for auditing or monitoring purposes.
+   *
+   * @param AudioRecordingConfig $unredactedAudioRecordingConfig
+   */
+  public function setUnredactedAudioRecordingConfig(AudioRecordingConfig $unredactedAudioRecordingConfig)
+  {
+    $this->unredactedAudioRecordingConfig = $unredactedAudioRecordingConfig;
+  }
+  /**
+   * @return AudioRecordingConfig
+   */
+  public function getUnredactedAudioRecordingConfig()
+  {
+    return $this->unredactedAudioRecordingConfig;
   }
 }
 
