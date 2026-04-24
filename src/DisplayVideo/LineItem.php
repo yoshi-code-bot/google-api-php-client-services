@@ -469,7 +469,9 @@ class LineItem extends \Google\Collection
     return $this->creativeIds;
   }
   /**
-   * Optional. Settings specific to Demand Gen line items.
+   * Optional. Settings specific to Demand Gen line items. Only applicable to
+   * Demand Gen line items. Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
    *
    * @param DemandGenSettings $demandGenSettings
    */
