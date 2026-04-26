@@ -49,9 +49,9 @@ class GoogleChromeManagementVersionsV1ConnectorConfigStatus extends \Google\Mode
   public $state;
   /**
    * Output only. Field recording time of most recent modification of the
-   * status. For ENABLED, this is the time the status was changed to ENABLED.
-   * For DISABLED_BY_FAILURES, this is the time of the most recent failed
-   * attempt to send an event to this config.
+   * status. For `ENABLED`, this is the time the status was changed to
+   * `ENABLED`. For `DISABLED_BY_FAILURES`, this is the time of the most recent
+   * failed attempt to send an event to this config.
    *
    * @var string
    */
@@ -97,9 +97,9 @@ class GoogleChromeManagementVersionsV1ConnectorConfigStatus extends \Google\Mode
   }
   /**
    * Output only. Field recording time of most recent modification of the
-   * status. For ENABLED, this is the time the status was changed to ENABLED.
-   * For DISABLED_BY_FAILURES, this is the time of the most recent failed
-   * attempt to send an event to this config.
+   * status. For `ENABLED`, this is the time the status was changed to
+   * `ENABLED`. For `DISABLED_BY_FAILURES`, this is the time of the most recent
+   * failed attempt to send an event to this config.
    *
    * @param string $updateTime
    */

@@ -56,14 +56,6 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
    */
   public $displayName;
   /**
-   * Optional. This checksum is computed by the server based on the value of
-   * other fields, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
-   *
-   * @var string
-   */
-  public $etag;
-  /**
    * Identifier. Format:
    * customers/{customer}/connectorConfigs/{connector_config}
    *
@@ -110,24 +102,6 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * Optional. This checksum is computed by the server based on the value of
-   * other fields, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
-   *
-   * @param string $etag
-   */
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  /**
-   * @return string
-   */
-  public function getEtag()
-  {
-    return $this->etag;
   }
   /**
    * Identifier. Format:

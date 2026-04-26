@@ -29,12 +29,6 @@ class GoogleChromeManagementVersionsV1ListConnectorConfigsResponse extends \Goog
    * @var string
    */
   public $nextPageToken;
-  /**
-   * The total size of the connector configs list.
-   *
-   * @var int
-   */
-  public $totalSize;
 
   /**
    * The list of connector configs returned.
@@ -68,22 +62,6 @@ class GoogleChromeManagementVersionsV1ListConnectorConfigsResponse extends \Goog
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  /**
-   * The total size of the connector configs list.
-   *
-   * @param int $totalSize
-   */
-  public function setTotalSize($totalSize)
-  {
-    $this->totalSize = $totalSize;
-  }
-  /**
-   * @return int
-   */
-  public function getTotalSize()
-  {
-    return $this->totalSize;
   }
 }
 
