@@ -344,10 +344,6 @@ class ChromeManagement extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'get' => [
               'path' => 'v1/{+name}',
@@ -373,6 +369,20 @@ class ChromeManagement extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

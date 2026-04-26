@@ -59,10 +59,6 @@ class CustomersConnectorConfigs extends \Google\Service\Resource
    * @param string $name Required. Format:
    * customers/{customer}/connectorConfigs/{connector_config}
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string etag Optional. The etag of the connector config. If an etag
-   * is provided and does not match the current etag of the connector config,
-   * deletion will be blocked and an ABORTED error will be returned.
    * @return GoogleProtobufEmpty
    * @throws \Google\Service\Exception
    */
@@ -110,6 +106,25 @@ class CustomersConnectorConfigs extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleChromeManagementVersionsV1ListConnectorConfigsResponse::class);
+  }
+  /**
+   * Updates a connector config. (connectorConfigs.patch)
+   *
+   * @param string $name Identifier. Format:
+   * customers/{customer}/connectorConfigs/{connector_config}
+   * @param GoogleChromeManagementVersionsV1ConnectorConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The update mask that can be used to
+   * specify which fields to update.
+   * @return GoogleChromeManagementVersionsV1ConnectorConfig
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleChromeManagementVersionsV1ConnectorConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleChromeManagementVersionsV1ConnectorConfig::class);
   }
 }
 
