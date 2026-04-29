@@ -21,12 +21,6 @@ class GoogleHomeEnterpriseSdmV1Device extends \Google\Collection
 {
   protected $collection_key = 'parentRelations';
   /**
-   * Output only. The Home APIs device ID of the device.
-   *
-   * @var string
-   */
-  public $ghpName;
-  /**
    * Required. The resource name of the device. For example:
    * "enterprises/XYZ/devices/123".
    *
@@ -51,22 +45,6 @@ class GoogleHomeEnterpriseSdmV1Device extends \Google\Collection
    */
   public $type;
 
-  /**
-   * Output only. The Home APIs device ID of the device.
-   *
-   * @param string $ghpName
-   */
-  public function setGhpName($ghpName)
-  {
-    $this->ghpName = $ghpName;
-  }
-  /**
-   * @return string
-   */
-  public function getGhpName()
-  {
-    return $this->ghpName;
-  }
   /**
    * Required. The resource name of the device. For example:
    * "enterprises/XYZ/devices/123".
