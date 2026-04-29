@@ -20,23 +20,27 @@ namespace Google\Service\Meet;
 class GatewaySipAccess extends \Google\Model
 {
   /**
-   * Permanent numeric code for manual entry on specially configured devices.
+   * The permanent numeric code for manual entry on specially configured
+   * devices.
    *
    * @var string
    */
   public $sipAccessCode;
   /**
-   * The SIP URI the conference can be reached through. The string is on one of
-   * the formats: "sip:@" "sips:@" where currently is the 13-digit universal
-   * pin, and is a valid address to be resolved using a DNS SRV lookup, or a
-   * dotted quad.
+   * The Session Initiation Protocol (SIP) URI the conference can be reached
+   * through. The string is in one of these formats: *
+   * "sip:USER_ID@GATEWAY_ADDRESS" * "sips:USER_ID@GATEWAY_ADDRESS" where
+   * USER_ID is the 13-digit universal pin (with the future option to support
+   * using a Meet meeting code as well), and GATEWAY_ADDRESS is a valid address
+   * to be resolved using a DNS SRV lookup, or a dotted quad.
    *
    * @var string
    */
   public $uri;
 
   /**
-   * Permanent numeric code for manual entry on specially configured devices.
+   * The permanent numeric code for manual entry on specially configured
+   * devices.
    *
    * @param string $sipAccessCode
    */
@@ -52,10 +56,12 @@ class GatewaySipAccess extends \Google\Model
     return $this->sipAccessCode;
   }
   /**
-   * The SIP URI the conference can be reached through. The string is on one of
-   * the formats: "sip:@" "sips:@" where currently is the 13-digit universal
-   * pin, and is a valid address to be resolved using a DNS SRV lookup, or a
-   * dotted quad.
+   * The Session Initiation Protocol (SIP) URI the conference can be reached
+   * through. The string is in one of these formats: *
+   * "sip:USER_ID@GATEWAY_ADDRESS" * "sips:USER_ID@GATEWAY_ADDRESS" where
+   * USER_ID is the 13-digit universal pin (with the future option to support
+   * using a Meet meeting code as well), and GATEWAY_ADDRESS is a valid address
+   * to be resolved using a DNS SRV lookup, or a dotted quad.
    *
    * @param string $uri
    */

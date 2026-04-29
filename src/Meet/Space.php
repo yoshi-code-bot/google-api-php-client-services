@@ -90,7 +90,7 @@ class Space extends \Google\Collection
     return $this->config;
   }
   /**
-   * Output only. The SIP based access methods that can be used to join the
+   * Output only. The SIP-based access methods that can be used to join the
    * conference. Can be empty.
    *
    * @param GatewaySipAccess[] $gatewaySipAccess
