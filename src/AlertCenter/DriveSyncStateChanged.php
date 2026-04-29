@@ -36,15 +36,18 @@ class DriveSyncStateChanged extends \Google\Model
    */
   public const SYNC_STATE_CHANGE_REASON_SYNC_STATE_CHANGE_REASON_UNSPECIFIED = 'SYNC_STATE_CHANGE_REASON_UNSPECIFIED';
   /**
-   * Sync state change reason is unusual activity
+   * Sync state was changed due to unusual activity, such as potential
+   * ransomware
    */
   public const SYNC_STATE_CHANGE_REASON_UNUSUAL_ACTIVITY = 'UNUSUAL_ACTIVITY';
   /**
-   * Sync state change reason is user feedback true positive
+   * The user provided feedback indicating that the initial sync state change
+   * may have been caused by unexpected activity
    */
   public const SYNC_STATE_CHANGE_REASON_USER_FEEDBACK_TRUE_POSITIVE = 'USER_FEEDBACK_TRUE_POSITIVE';
   /**
-   * Sync state change reason is user feedback false positive
+   * The user provided feedback indicating that the initial sync state change
+   * may have been caused by a false positive
    */
   public const SYNC_STATE_CHANGE_REASON_USER_FEEDBACK_FALSE_POSITIVE = 'USER_FEEDBACK_FALSE_POSITIVE';
   /**
