@@ -101,6 +101,14 @@ class Step extends \Google\Model
    */
   public const STATE_START_FROM_SERVERLESS_NEG = 'START_FROM_SERVERLESS_NEG';
   /**
+   * Initial state: packet originating from a DMS Private Connection.
+   */
+  public const STATE_START_FROM_DMS_PRIVATE_CONNECTION = 'START_FROM_DMS_PRIVATE_CONNECTION';
+  /**
+   * Initial state: packet originating from a Datastream Private Connection.
+   */
+  public const STATE_START_FROM_DATASTREAM_PRIVATE_CONNECTION = 'START_FROM_DATASTREAM_PRIVATE_CONNECTION';
+  /**
    * Config checking state: verify ingress firewall rule.
    */
   public const STATE_APPLY_INGRESS_FIREWALL_RULE = 'APPLY_INGRESS_FIREWALL_RULE';
@@ -252,6 +260,8 @@ class Step extends \Google\Model
   protected $cloudRunRevisionDataType = '';
   protected $cloudSqlInstanceType = CloudSQLInstanceInfo::class;
   protected $cloudSqlInstanceDataType = '';
+  protected $datastreamPrivateConnectionType = PrivateConnectionInfo::class;
+  protected $datastreamPrivateConnectionDataType = '';
   protected $deliverType = DeliverInfo::class;
   protected $deliverDataType = '';
   /**
@@ -262,6 +272,8 @@ class Step extends \Google\Model
   public $description;
   protected $directVpcEgressConnectionType = DirectVpcEgressConnectionInfo::class;
   protected $directVpcEgressConnectionDataType = '';
+  protected $dmsPrivateConnectionType = PrivateConnectionInfo::class;
+  protected $dmsPrivateConnectionDataType = '';
   protected $dropType = DropInfo::class;
   protected $dropDataType = '';
   protected $endpointType = EndpointInfo::class;
@@ -430,6 +442,22 @@ class Step extends \Google\Model
     return $this->cloudSqlInstance;
   }
   /**
+   * Display information of a Datastream Private Connection.
+   *
+   * @param PrivateConnectionInfo $datastreamPrivateConnection
+   */
+  public function setDatastreamPrivateConnection(PrivateConnectionInfo $datastreamPrivateConnection)
+  {
+    $this->datastreamPrivateConnection = $datastreamPrivateConnection;
+  }
+  /**
+   * @return PrivateConnectionInfo
+   */
+  public function getDatastreamPrivateConnection()
+  {
+    return $this->datastreamPrivateConnection;
+  }
+  /**
    * Display information of the final state "deliver" and reason.
    *
    * @param DeliverInfo $deliver
@@ -476,6 +504,22 @@ class Step extends \Google\Model
   public function getDirectVpcEgressConnection()
   {
     return $this->directVpcEgressConnection;
+  }
+  /**
+   * Display information of a DMS Private Connection.
+   *
+   * @param PrivateConnectionInfo $dmsPrivateConnection
+   */
+  public function setDmsPrivateConnection(PrivateConnectionInfo $dmsPrivateConnection)
+  {
+    $this->dmsPrivateConnection = $dmsPrivateConnection;
+  }
+  /**
+   * @return PrivateConnectionInfo
+   */
+  public function getDmsPrivateConnection()
+  {
+    return $this->dmsPrivateConnection;
   }
   /**
    * Display information of the final state "drop" and reason.
@@ -910,11 +954,12 @@ class Step extends \Google\Model
    * START_FROM_CLOUD_FUNCTION, START_FROM_APP_ENGINE_VERSION,
    * START_FROM_CLOUD_RUN_REVISION, START_FROM_STORAGE_BUCKET,
    * START_FROM_PSC_PUBLISHED_SERVICE, START_FROM_SERVERLESS_NEG,
-   * APPLY_INGRESS_FIREWALL_RULE, APPLY_EGRESS_FIREWALL_RULE, APPLY_ROUTE,
-   * APPLY_FORWARDING_RULE, ANALYZE_LOAD_BALANCER_BACKEND, SPOOFING_APPROVED,
-   * ARRIVE_AT_INSTANCE, ARRIVE_AT_INTERNAL_LOAD_BALANCER,
-   * ARRIVE_AT_EXTERNAL_LOAD_BALANCER, ARRIVE_AT_HYBRID_SUBNET,
-   * ARRIVE_AT_VPN_GATEWAY, ARRIVE_AT_VPN_TUNNEL,
+   * START_FROM_DMS_PRIVATE_CONNECTION,
+   * START_FROM_DATASTREAM_PRIVATE_CONNECTION, APPLY_INGRESS_FIREWALL_RULE,
+   * APPLY_EGRESS_FIREWALL_RULE, APPLY_ROUTE, APPLY_FORWARDING_RULE,
+   * ANALYZE_LOAD_BALANCER_BACKEND, SPOOFING_APPROVED, ARRIVE_AT_INSTANCE,
+   * ARRIVE_AT_INTERNAL_LOAD_BALANCER, ARRIVE_AT_EXTERNAL_LOAD_BALANCER,
+   * ARRIVE_AT_HYBRID_SUBNET, ARRIVE_AT_VPN_GATEWAY, ARRIVE_AT_VPN_TUNNEL,
    * ARRIVE_AT_INTERCONNECT_ATTACHMENT, ARRIVE_AT_VPC_CONNECTOR,
    * ARRIVE_AT_GKE_POD, DIRECT_VPC_EGRESS_CONNECTION,
    * SERVERLESS_EXTERNAL_CONNECTION, NGFW_PACKET_INSPECTION, NAT,
