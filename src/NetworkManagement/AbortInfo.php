@@ -247,6 +247,10 @@ class AbortInfo extends \Google\Collection
    * yet.
    */
   public const CAUSE_GKE_POD_UNKNOWN_ENDPOINT_LOCATION = 'GKE_POD_UNKNOWN_ENDPOINT_LOCATION';
+  /**
+   * Aborted because the response size exceeds the limit.
+   */
+  public const CAUSE_RESPONSE_TOO_LARGE = 'RESPONSE_TOO_LARGE';
   protected $collection_key = 'projectsMissingPermission';
   /**
    * Causes that the analysis is aborted.
@@ -298,7 +302,8 @@ class AbortInfo extends \Google\Collection
    * SOURCE_FORWARDING_RULE_UNSUPPORTED, NON_ROUTABLE_IP_ADDRESS,
    * UNKNOWN_ISSUE_IN_GOOGLE_MANAGED_PROJECT,
    * UNSUPPORTED_GOOGLE_MANAGED_PROJECT_CONFIG, NO_SERVERLESS_IP_RANGES,
-   * IP_VERSION_PROTOCOL_MISMATCH, GKE_POD_UNKNOWN_ENDPOINT_LOCATION
+   * IP_VERSION_PROTOCOL_MISMATCH, GKE_POD_UNKNOWN_ENDPOINT_LOCATION,
+   * RESPONSE_TOO_LARGE
    *
    * @param self::CAUSE_* $cause
    */
