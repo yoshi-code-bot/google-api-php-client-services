@@ -17,8 +17,17 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class ExternalExposure extends \Google\Model
+class ExternalExposure extends \Google\Collection
 {
+  protected $collection_key = 'httpResponse';
+  /**
+   * The full resource name of the load balancer backend bucket, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/backendBuckets/{name}"
+   *
+   * @var string
+   */
+  public $backendBucket;
   /**
    * The full resource name of load balancer backend service, for example,
    * "//compute.googleapis.com/projects/{project-
@@ -27,6 +36,13 @@ class ExternalExposure extends \Google\Model
    * @var string
    */
   public $backendService;
+  /**
+   * The name and version of the exposed web application, for example, "Jenkins
+   * 2.184".
+   *
+   * @var string
+   */
+  public $exposedApplication;
   /**
    * The resource which is running the exposed service, for example,
    * "//compute.googleapis.com/projects/{project-
@@ -51,6 +67,15 @@ class ExternalExposure extends \Google\Model
    */
   public $forwardingRule;
   /**
+   * Hostname of the exposed application, for example, "https://test-
+   * app.a.run.app/"
+   *
+   * @var string
+   */
+  public $hostnameUri;
+  protected $httpResponseType = HttpResponse::class;
+  protected $httpResponseDataType = 'array';
+  /**
    * The full resource name of the instance group, for example,
    * "//compute.googleapis.com/projects/{project-
    * id}/global/instanceGroups/{name}".
@@ -58,6 +83,15 @@ class ExternalExposure extends \Google\Model
    * @var string
    */
   public $instanceGroup;
+  /**
+   * The full resource name of load balancer backend service in the internal
+   * project having resource exposed via PSC, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/backendServices/{name}".
+   *
+   * @var string
+   */
+  public $internalBackendService;
   /**
    * The full resource name of the load balancer firewall policy, for example,
    * "//compute.googleapis.com/projects/{project-
@@ -75,6 +109,14 @@ class ExternalExposure extends \Google\Model
    */
   public $networkEndpointGroup;
   /**
+   * The full resource name of the network ingress firewall policy, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/firewallPolicies/{name}".
+   *
+   * @var string
+   */
+  public $networkIngressFirewallPolicy;
+  /**
    * Private IP address of the exposed endpoint.
    *
    * @var string
@@ -86,6 +128,24 @@ class ExternalExposure extends \Google\Model
    * @var string
    */
   public $privatePort;
+  /**
+   * The full resource name of the PSC (Private Service Connect) network
+   * attachment that network interface controller is attached to, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/networkAttachments/{name}"
+   *
+   * @var string
+   */
+  public $pscNetworkAttachment;
+  /**
+   * The full resource name of the PSC (Private Service Connect) service
+   * attachment that the load balancer network endpoint group targets, for
+   * example, "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/serviceAttachments/{name}"
+   *
+   * @var string
+   */
+  public $pscServiceAttachment;
   /**
    * Public IP address of the exposed endpoint.
    *
@@ -108,6 +168,24 @@ class ExternalExposure extends \Google\Model
   public $serviceFirewallPolicy;
 
   /**
+   * The full resource name of the load balancer backend bucket, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/backendBuckets/{name}"
+   *
+   * @param string $backendBucket
+   */
+  public function setBackendBucket($backendBucket)
+  {
+    $this->backendBucket = $backendBucket;
+  }
+  /**
+   * @return string
+   */
+  public function getBackendBucket()
+  {
+    return $this->backendBucket;
+  }
+  /**
    * The full resource name of load balancer backend service, for example,
    * "//compute.googleapis.com/projects/{project-
    * id}/global/backendServices/{name}".
@@ -124,6 +202,23 @@ class ExternalExposure extends \Google\Model
   public function getBackendService()
   {
     return $this->backendService;
+  }
+  /**
+   * The name and version of the exposed web application, for example, "Jenkins
+   * 2.184".
+   *
+   * @param string $exposedApplication
+   */
+  public function setExposedApplication($exposedApplication)
+  {
+    $this->exposedApplication = $exposedApplication;
+  }
+  /**
+   * @return string
+   */
+  public function getExposedApplication()
+  {
+    return $this->exposedApplication;
   }
   /**
    * The resource which is running the exposed service, for example,
@@ -179,6 +274,39 @@ class ExternalExposure extends \Google\Model
     return $this->forwardingRule;
   }
   /**
+   * Hostname of the exposed application, for example, "https://test-
+   * app.a.run.app/"
+   *
+   * @param string $hostnameUri
+   */
+  public function setHostnameUri($hostnameUri)
+  {
+    $this->hostnameUri = $hostnameUri;
+  }
+  /**
+   * @return string
+   */
+  public function getHostnameUri()
+  {
+    return $this->hostnameUri;
+  }
+  /**
+   * The http response returned by the web application.
+   *
+   * @param HttpResponse[] $httpResponse
+   */
+  public function setHttpResponse($httpResponse)
+  {
+    $this->httpResponse = $httpResponse;
+  }
+  /**
+   * @return HttpResponse[]
+   */
+  public function getHttpResponse()
+  {
+    return $this->httpResponse;
+  }
+  /**
    * The full resource name of the instance group, for example,
    * "//compute.googleapis.com/projects/{project-
    * id}/global/instanceGroups/{name}".
@@ -195,6 +323,25 @@ class ExternalExposure extends \Google\Model
   public function getInstanceGroup()
   {
     return $this->instanceGroup;
+  }
+  /**
+   * The full resource name of load balancer backend service in the internal
+   * project having resource exposed via PSC, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/backendServices/{name}".
+   *
+   * @param string $internalBackendService
+   */
+  public function setInternalBackendService($internalBackendService)
+  {
+    $this->internalBackendService = $internalBackendService;
+  }
+  /**
+   * @return string
+   */
+  public function getInternalBackendService()
+  {
+    return $this->internalBackendService;
   }
   /**
    * The full resource name of the load balancer firewall policy, for example,
@@ -233,6 +380,24 @@ class ExternalExposure extends \Google\Model
     return $this->networkEndpointGroup;
   }
   /**
+   * The full resource name of the network ingress firewall policy, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/global/firewallPolicies/{name}".
+   *
+   * @param string $networkIngressFirewallPolicy
+   */
+  public function setNetworkIngressFirewallPolicy($networkIngressFirewallPolicy)
+  {
+    $this->networkIngressFirewallPolicy = $networkIngressFirewallPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getNetworkIngressFirewallPolicy()
+  {
+    return $this->networkIngressFirewallPolicy;
+  }
+  /**
    * Private IP address of the exposed endpoint.
    *
    * @param string $privateIpAddress
@@ -263,6 +428,44 @@ class ExternalExposure extends \Google\Model
   public function getPrivatePort()
   {
     return $this->privatePort;
+  }
+  /**
+   * The full resource name of the PSC (Private Service Connect) network
+   * attachment that network interface controller is attached to, for example,
+   * "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/networkAttachments/{name}"
+   *
+   * @param string $pscNetworkAttachment
+   */
+  public function setPscNetworkAttachment($pscNetworkAttachment)
+  {
+    $this->pscNetworkAttachment = $pscNetworkAttachment;
+  }
+  /**
+   * @return string
+   */
+  public function getPscNetworkAttachment()
+  {
+    return $this->pscNetworkAttachment;
+  }
+  /**
+   * The full resource name of the PSC (Private Service Connect) service
+   * attachment that the load balancer network endpoint group targets, for
+   * example, "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/serviceAttachments/{name}"
+   *
+   * @param string $pscServiceAttachment
+   */
+  public function setPscServiceAttachment($pscServiceAttachment)
+  {
+    $this->pscServiceAttachment = $pscServiceAttachment;
+  }
+  /**
+   * @return string
+   */
+  public function getPscServiceAttachment()
+  {
+    return $this->pscServiceAttachment;
   }
   /**
    * Public IP address of the exposed endpoint.

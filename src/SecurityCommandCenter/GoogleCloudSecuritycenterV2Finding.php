@@ -71,6 +71,11 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    */
   public const FINDING_CLASS_EXTERNAL_EXPOSURE = 'EXTERNAL_EXPOSURE';
   /**
+   * Describes a potential security risk due to plaintext credentials, keys, or
+   * tokens being exposed in an asset or workload.
+   */
+  public const FINDING_CLASS_SECRET = 'SECRET';
+  /**
    * Unspecified.
    */
   public const MUTE_MUTE_UNSPECIFIED = 'MUTE_UNSPECIFIED';
@@ -1000,7 +1005,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    *
    * Accepted values: FINDING_CLASS_UNSPECIFIED, THREAT, VULNERABILITY,
    * MISCONFIGURATION, OBSERVATION, SCC_ERROR, POSTURE_VIOLATION,
-   * TOXIC_COMBINATION, SENSITIVE_DATA_RISK, CHOKEPOINT, EXTERNAL_EXPOSURE
+   * TOXIC_COMBINATION, SENSITIVE_DATA_RISK, CHOKEPOINT, EXTERNAL_EXPOSURE,
+   * SECRET
    *
    * @param self::FINDING_CLASS_* $findingClass
    */
