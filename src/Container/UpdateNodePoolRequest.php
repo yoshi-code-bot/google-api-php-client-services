@@ -184,6 +184,8 @@ class UpdateNodePoolRequest extends \Google\Collection
   public $storagePools;
   protected $tagsType = NetworkTags::class;
   protected $tagsDataType = '';
+  protected $taintConfigType = TaintConfig::class;
+  protected $taintConfigDataType = '';
   protected $taintsType = NodeTaints::class;
   protected $taintsDataType = '';
   protected $upgradeSettingsType = UpgradeSettings::class;
@@ -770,6 +772,22 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * The taint configuration for the node pool.
+   *
+   * @param TaintConfig $taintConfig
+   */
+  public function setTaintConfig(TaintConfig $taintConfig)
+  {
+    $this->taintConfig = $taintConfig;
+  }
+  /**
+   * @return TaintConfig
+   */
+  public function getTaintConfig()
+  {
+    return $this->taintConfig;
   }
   /**
    * The desired node taints to be applied to all nodes in the node pool. If

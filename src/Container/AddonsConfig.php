@@ -45,6 +45,8 @@ class AddonsConfig extends \Google\Model
   protected $lustreCsiDriverConfigDataType = '';
   protected $networkPolicyConfigType = NetworkPolicyConfig::class;
   protected $networkPolicyConfigDataType = '';
+  protected $nodeReadinessConfigType = NodeReadinessConfig::class;
+  protected $nodeReadinessConfigDataType = '';
   protected $parallelstoreCsiDriverConfigType = ParallelstoreCsiDriverConfig::class;
   protected $parallelstoreCsiDriverConfigDataType = '';
   protected $podSnapshotConfigType = PodSnapshotConfig::class;
@@ -278,6 +280,22 @@ class AddonsConfig extends \Google\Model
   public function getNetworkPolicyConfig()
   {
     return $this->networkPolicyConfig;
+  }
+  /**
+   * Optional. Configuration for NodeReadinessController add-on.
+   *
+   * @param NodeReadinessConfig $nodeReadinessConfig
+   */
+  public function setNodeReadinessConfig(NodeReadinessConfig $nodeReadinessConfig)
+  {
+    $this->nodeReadinessConfig = $nodeReadinessConfig;
+  }
+  /**
+   * @return NodeReadinessConfig
+   */
+  public function getNodeReadinessConfig()
+  {
+    return $this->nodeReadinessConfig;
   }
   /**
    * Configuration for the Cloud Storage Parallelstore CSI driver.
