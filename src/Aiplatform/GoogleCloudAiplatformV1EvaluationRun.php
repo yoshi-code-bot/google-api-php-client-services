@@ -201,7 +201,8 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
     return $this->error;
   }
   /**
-   * Required. The configuration used for the evaluation.
+   * Optional. The configuration used for the evaluation. Optional when
+   * analysis_configs is provided.
    *
    * @param GoogleCloudAiplatformV1EvaluationRunEvaluationConfig $evaluationConfig
    */

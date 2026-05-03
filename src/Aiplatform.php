@@ -23,8 +23,7 @@ use Google\Client;
  * Service definition for Aiplatform (v1).
  *
  * <p>
- * Train high-quality custom machine learning models with minimal machine
- * learning expertise and effort.</p>
+ * Build, scale, govern, and optimize sophisticated agents and models.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -188,6 +187,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_reasoningEngines_sessions_operations;
   public $projects_locations_schedules;
   public $projects_locations_schedules_operations;
+  public $projects_locations_skills_operations;
   public $projects_locations_specialistPools;
   public $projects_locations_specialistPools_operations;
   public $projects_locations_studies;
@@ -222,6 +222,7 @@ class Aiplatform extends \Google\Service
   public $reasoningEngines_sandboxEnvironments_operations;
   public $reasoningEngines_sessions_operations;
   public $schedules_operations;
+  public $skills_operations;
   public $specialistPools_operations;
   public $studies_operations;
   public $studies_trials_operations;
@@ -10954,7 +10955,17 @@ class Aiplatform extends \Google\Service
         'reasoningEngines',
         [
           'methods' => [
-            'create' => [
+            'asyncQuery' => [
+              'path' => 'v1/{+name}:asyncQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/reasoningEngines',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -12122,6 +12133,86 @@ class Aiplatform extends \Google\Service
         ]
     );
     $this->projects_locations_schedules_operations = new Aiplatform\Resource\ProjectsLocationsSchedulesOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'wait' => [
+              'path' => 'v1/{+name}:wait',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'timeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_skills_operations = new Aiplatform\Resource\ProjectsLocationsSkillsOperations(
         $this,
         $this->serviceName,
         'operations',
@@ -14139,7 +14230,17 @@ class Aiplatform extends \Google\Service
         'reasoningEngines',
         [
           'methods' => [
-            'create' => [
+            'asyncQuery' => [
+              'path' => 'v1/{+name}:asyncQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/reasoningEngines',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -14870,6 +14971,86 @@ class Aiplatform extends \Google\Service
         ]
     );
     $this->schedules_operations = new Aiplatform\Resource\SchedulesOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'wait' => [
+              'path' => 'v1/{+name}:wait',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'timeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->skills_operations = new Aiplatform\Resource\SkillsOperations(
         $this,
         $this->serviceName,
         'operations',

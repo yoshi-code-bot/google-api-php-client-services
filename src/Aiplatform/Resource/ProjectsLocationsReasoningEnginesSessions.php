@@ -122,8 +122,8 @@ class ProjectsLocationsReasoningEnginesSessions extends \Google\Service\Resource
    * Supported fields: * `create_time` * `update_time` Example: `create_time
    * desc`.
    * @opt_param int pageSize Optional. The maximum number of sessions to return.
-   * The service may return fewer than this value. If unspecified, at most 100
-   * sessions will be returned.
+   * The service may return fewer than this value. If unspecified, the default
+   * page size is 100. Values greater than 100 will be capped at 100.
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous list SessionService.ListSessions call.
    * @return GoogleCloudAiplatformV1ListSessionsResponse

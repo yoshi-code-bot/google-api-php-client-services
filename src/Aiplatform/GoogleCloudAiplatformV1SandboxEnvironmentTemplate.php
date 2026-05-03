@@ -83,8 +83,6 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends \Google\Model
    * @var string
    */
   public $updateTime;
-  protected $warmPoolConfigType = GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig::class;
-  protected $warmPoolConfigDataType = '';
 
   /**
    * Output only. The timestamp when this SandboxEnvironmentTemplate was
@@ -220,22 +218,6 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
-  }
-  /**
-   * Optional. The configuration for the warm pool of this template.
-   *
-   * @param GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig $warmPoolConfig
-   */
-  public function setWarmPoolConfig(GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig $warmPoolConfig)
-  {
-    $this->warmPoolConfig = $warmPoolConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig
-   */
-  public function getWarmPoolConfig()
-  {
-    return $this->warmPoolConfig;
   }
 }
 
