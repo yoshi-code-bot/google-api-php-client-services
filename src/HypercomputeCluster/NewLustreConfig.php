@@ -48,6 +48,15 @@ class NewLustreConfig extends \Google\Model
    * @var string
    */
   public $lustre;
+  /**
+   * Optional. Immutable. Throughput of the instance in MB/s/TiB. Valid values
+   * are 125, 250, 500, 1000. See [Performance tiers and maximum storage
+   * capacities](https://cloud.google.com/managed-lustre/docs/create-
+   * instance#performance-tiers) for more information.
+   *
+   * @var string
+   */
+  public $perUnitStorageThroughput;
 
   /**
    * Required. Immutable. Storage capacity of the instance in gibibytes (GiB).
@@ -117,6 +126,25 @@ class NewLustreConfig extends \Google\Model
   public function getLustre()
   {
     return $this->lustre;
+  }
+  /**
+   * Optional. Immutable. Throughput of the instance in MB/s/TiB. Valid values
+   * are 125, 250, 500, 1000. See [Performance tiers and maximum storage
+   * capacities](https://cloud.google.com/managed-lustre/docs/create-
+   * instance#performance-tiers) for more information.
+   *
+   * @param string $perUnitStorageThroughput
+   */
+  public function setPerUnitStorageThroughput($perUnitStorageThroughput)
+  {
+    $this->perUnitStorageThroughput = $perUnitStorageThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getPerUnitStorageThroughput()
+  {
+    return $this->perUnitStorageThroughput;
   }
 }
 
