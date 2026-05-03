@@ -106,11 +106,9 @@ class GoogleCloudRecaptchaenterpriseV1TokenProperties extends \Google\Model
    */
   public $iosBundleId;
   /**
-   * Output only. Whether the provided user response token is valid. When valid
-   * = false, the reason could be specified in invalid_reason or it could also
-   * be due to a user failing to solve a challenge or a sitekey mismatch (i.e
-   * the sitekey used to generate the token was different than the one specified
-   * in the assessment).
+   * Output only. Indicates whether the provided user response token is valid.
+   * If `false`, the token is invalid, either because the user failed the
+   * challenge or for a reason provided in the `invalid_reason` field.
    *
    * @var bool
    */
@@ -220,11 +218,9 @@ class GoogleCloudRecaptchaenterpriseV1TokenProperties extends \Google\Model
     return $this->iosBundleId;
   }
   /**
-   * Output only. Whether the provided user response token is valid. When valid
-   * = false, the reason could be specified in invalid_reason or it could also
-   * be due to a user failing to solve a challenge or a sitekey mismatch (i.e
-   * the sitekey used to generate the token was different than the one specified
-   * in the assessment).
+   * Output only. Indicates whether the provided user response token is valid.
+   * If `false`, the token is invalid, either because the user failed the
+   * challenge or for a reason provided in the `invalid_reason` field.
    *
    * @param bool $valid
    */
