@@ -20,7 +20,8 @@ namespace Google\Service\BigtableAdmin;
 class Table extends \Google\Model
 {
   /**
-   * The user did not specify a granularity. Should not be returned.
+   * The user did not specify a granularity. Should not be returned. When
+   * specified during table creation, MILLIS will be used.
    */
   public const GRANULARITY_TIMESTAMP_GRANULARITY_UNSPECIFIED = 'TIMESTAMP_GRANULARITY_UNSPECIFIED';
   /**
