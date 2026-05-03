@@ -108,7 +108,7 @@ class SingleTenantHsmInstance extends \Google\Model
   /**
    * Output only. The system-defined duration that an instance can remain
    * unrefreshed until it is automatically disabled. This will have a value of
-   * 120 days.
+   * 730 days.
    *
    * @var string
    */
@@ -240,7 +240,7 @@ class SingleTenantHsmInstance extends \Google\Model
   /**
    * Output only. The system-defined duration that an instance can remain
    * unrefreshed until it is automatically disabled. This will have a value of
-   * 120 days.
+   * 730 days.
    *
    * @param string $unrefreshedDurationUntilDisable
    */
