@@ -25,8 +25,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
    */
   public $etag;
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by
-   * the server.
+   * Output only. Unique identifier for the resource; defined by the server.
    *
    * @var string
    */
@@ -34,7 +33,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
   protected $itemsType = InstanceGroupManagerResizeRequest::class;
   protected $itemsDataType = 'array';
   /**
-   * Output only. [Output Only] Type of the resource.
+   * Output only. Type of the resource.
    * Alwayscompute#regionInstanceGroupManagerResizeRequestList for a list of
    * Resize Requests.
    *
@@ -42,23 +41,23 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
    */
   public $kind;
   /**
-   * Output only. [Output Only] This token allows you to get the next page of
-   * results for list requests. If the number of results is larger
-   * thanmaxResults, use the nextPageToken as a value for the query parameter
-   * pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * Output only. This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
    *
    * @var string
    */
   public $nextPageToken;
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * Output only. Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
+   * Output only. Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -82,8 +81,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->etag;
   }
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by
-   * the server.
+   * Output only. Unique identifier for the resource; defined by the server.
    *
    * @param string $id
    */
@@ -115,7 +113,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->items;
   }
   /**
-   * Output only. [Output Only] Type of the resource.
+   * Output only. Type of the resource.
    * Alwayscompute#regionInstanceGroupManagerResizeRequestList for a list of
    * Resize Requests.
    *
@@ -133,11 +131,11 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->kind;
   }
   /**
-   * Output only. [Output Only] This token allows you to get the next page of
-   * results for list requests. If the number of results is larger
-   * thanmaxResults, use the nextPageToken as a value for the query parameter
-   * pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * Output only. This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
    *
    * @param string $nextPageToken
    */
@@ -153,7 +151,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * Output only. Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -169,7 +167,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->selfLink;
   }
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
+   * Output only. Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables
@@ -186,7 +184,7 @@ class RegionInstanceGroupManagerResizeRequestsListResponse extends \Google\Colle
     return $this->unreachables;
   }
   /**
-   * Output only. [Output Only] Informational warning message.
+   * Output only. Informational warning message.
    *
    * @param RegionInstanceGroupManagerResizeRequestsListResponseWarning $warning
    */
