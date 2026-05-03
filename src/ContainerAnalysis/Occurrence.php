@@ -76,11 +76,17 @@ class Occurrence extends \Google\Model
    */
   public const KIND_SECRET = 'SECRET';
   /**
+   * This represents an AI skill analysis.
+   */
+  public const KIND_AI_SKILL_ANALYSIS = 'AI_SKILL_ANALYSIS';
+  /**
    * The time this advisory was published by the source.
    *
    * @var string
    */
   public $advisoryPublishTime;
+  protected $aiSkillAnalysisType = AISkillAnalysisOccurrence::class;
+  protected $aiSkillAnalysisDataType = '';
   protected $attestationType = AttestationOccurrence::class;
   protected $attestationDataType = '';
   protected $buildType = BuildOccurrence::class;
@@ -171,6 +177,22 @@ class Occurrence extends \Google\Model
   public function getAdvisoryPublishTime()
   {
     return $this->advisoryPublishTime;
+  }
+  /**
+   * Describes an AI skill analysis.
+   *
+   * @param AISkillAnalysisOccurrence $aiSkillAnalysis
+   */
+  public function setAiSkillAnalysis(AISkillAnalysisOccurrence $aiSkillAnalysis)
+  {
+    $this->aiSkillAnalysis = $aiSkillAnalysis;
+  }
+  /**
+   * @return AISkillAnalysisOccurrence
+   */
+  public function getAiSkillAnalysis()
+  {
+    return $this->aiSkillAnalysis;
   }
   /**
    * Describes an attestation of an artifact.
@@ -322,7 +344,8 @@ class Occurrence extends \Google\Model
    *
    * Accepted values: NOTE_KIND_UNSPECIFIED, VULNERABILITY, BUILD, IMAGE,
    * PACKAGE, DEPLOYMENT, DISCOVERY, ATTESTATION, UPGRADE, COMPLIANCE,
-   * DSSE_ATTESTATION, VULNERABILITY_ASSESSMENT, SBOM_REFERENCE, SECRET
+   * DSSE_ATTESTATION, VULNERABILITY_ASSESSMENT, SBOM_REFERENCE, SECRET,
+   * AI_SKILL_ANALYSIS
    *
    * @param self::KIND_* $kind
    */
