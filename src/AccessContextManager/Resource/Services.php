@@ -52,9 +52,9 @@ class Services extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize This flag specifies the maximum number of services to
-   * return per page. Default is 100.
-   * @opt_param string pageToken Token to start on a later page. Default is the
-   * first page.
+   * return per page. Default value is 100.
+   * @opt_param string pageToken Use this token to retrieve a specific page of
+   * results. Default is the first page.
    * @return ListSupportedServicesResponse
    * @throws \Google\Service\Exception
    */

@@ -166,9 +166,10 @@ class AccessPoliciesServicePerimeters extends \Google\Service\Resource
    * perimeters provided. This is done atomically. The long-running operation from
    * this RPC has a successful status after all replacements propagate to long-
    * lasting storage. Replacements containing errors result in an error response
-   * for the first error encountered. Upon an error, replacement are cancelled and
-   * existing service perimeters are not affected. The Operation.response field
-   * contains ReplaceServicePerimetersResponse. (servicePerimeters.replaceAll)
+   * for the first error encountered. Upon an error, replacements are cancelled
+   * and existing service perimeters are not affected. The Operation.response
+   * field contains ReplaceServicePerimetersResponse.
+   * (servicePerimeters.replaceAll)
    *
    * @param string $parent Required. Resource name for the access policy which
    * owns these Service Perimeters. Format: `accessPolicies/{policy_id}`
