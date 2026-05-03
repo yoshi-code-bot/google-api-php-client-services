@@ -32,7 +32,7 @@ use Google\Service\Compute\VmExtensionPolicyList;
 class ZoneVmExtensionPolicies extends \Google\Service\Resource
 {
   /**
-   * Deletes a specified zone VM extension policy.
+   * Deletes a specified zone VM extension policy within a project.
    * (zoneVmExtensionPolicies.delete)
    *
    * @param string $project Project ID for this request.
@@ -63,7 +63,7 @@ class ZoneVmExtensionPolicies extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Retrieves details of a specific zone VM extension policy.
+   * Retrieves details of a specific zone VM extension policy within a project.
    * (zoneVmExtensionPolicies.get)
    *
    * @param string $project Project ID for this request.
@@ -197,7 +197,7 @@ class ZoneVmExtensionPolicies extends \Google\Service\Resource
     return $this->call('list', [$params], VmExtensionPolicyList::class);
   }
   /**
-   * Modifies an existing zone VM extension policy.
+   * Modifies an existing zone VM extension policy within a project.
    * (zoneVmExtensionPolicies.update)
    *
    * @param string $project Project ID for this request.
