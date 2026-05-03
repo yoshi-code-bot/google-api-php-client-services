@@ -31,9 +31,9 @@ class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
   public const MODE_STANDARD = 'STANDARD';
   /**
    * Specifies lightweight profiling mode. This mode is optimized for low-
-   * latency low-fidelity profiling.When this mode is selected, the following
-   * fields must not be set: - sampling_percent - row_filter - include_fields -
-   * exclude_fields
+   * latency, low-fidelity profiling.When this mode is selected, the following
+   * fields must not be set: sampling_percent, row_filter, include_fields, and
+   * exclude_fields.
    */
   public const MODE_LIGHTWEIGHT = 'LIGHTWEIGHT';
   /**

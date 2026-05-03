@@ -67,9 +67,8 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
-   * unsupported and is ignored unless explicitly documented otherwise. This is
-   * primarily for internal usage.
+   * @opt_param string extraLocationTypes Optional. Do not use this field unless
+   * explicitly documented otherwise. This is primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like "displayName=tokyo", and
    * is documented in more detail in AIP-160 (https://google.aip.dev/160).
@@ -118,7 +117,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * associated with the provided paths within the Entry. It only works for CUSTOM
    * view.
    * @opt_param string view Optional. View to control which parts of an entry the
-   * service should return.
+   * service should return. Please check the limitations on returned aspects in
+   * the Entry view documentation. Amount of returned aspects depends on the
+   * selected Entry View.
    * @return GoogleCloudDataplexV1Entry
    * @throws \Google\Service\Exception
    */
