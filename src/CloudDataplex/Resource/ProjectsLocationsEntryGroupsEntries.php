@@ -88,7 +88,9 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
    * associated with the provided paths within the Entry. It only works for CUSTOM
    * view.
    * @opt_param string view Optional. View to control which parts of an entry the
-   * service should return.
+   * service should return. Please check the limitations on returned aspects in
+   * the Entry view documentation. Amount of returned aspects depends on the
+   * selected Entry View.
    * @return GoogleCloudDataplexV1Entry
    * @throws \Google\Service\Exception
    */
