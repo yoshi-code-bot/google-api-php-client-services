@@ -49,6 +49,14 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    */
   public $requestOriginTag;
   /**
+   * If true (default), truncate input videos that exceed the model's maximum
+   * frame count by applying a frame_selection_config to __video_file__ inputs.
+   * Set to false to preserve the existing fail-fast behavior.
+   *
+   * @var bool
+   */
+  public $truncateInputVideo;
+  /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to
    * sdedit_video_tmax_scale_map
    *
@@ -163,6 +171,24 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getRequestOriginTag()
   {
     return $this->requestOriginTag;
+  }
+  /**
+   * If true (default), truncate input videos that exceed the model's maximum
+   * frame count by applying a frame_selection_config to __video_file__ inputs.
+   * Set to false to preserve the existing fail-fast behavior.
+   *
+   * @param bool $truncateInputVideo
+   */
+  public function setTruncateInputVideo($truncateInputVideo)
+  {
+    $this->truncateInputVideo = $truncateInputVideo;
+  }
+  /**
+   * @return bool
+   */
+  public function getTruncateInputVideo()
+  {
+    return $this->truncateInputVideo;
   }
   /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to

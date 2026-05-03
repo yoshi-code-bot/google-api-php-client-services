@@ -22,7 +22,7 @@ class GoogleCloudAiplatformV1MetricSource extends \Google\Model
   protected $metricType = GoogleCloudAiplatformV1Metric::class;
   protected $metricDataType = '';
   /**
-   * Resource name for registered metric.
+   * Optional. Resource name for registered metric.
    *
    * @var string
    */
@@ -45,7 +45,7 @@ class GoogleCloudAiplatformV1MetricSource extends \Google\Model
     return $this->metric;
   }
   /**
-   * Resource name for registered metric.
+   * Optional. Resource name for registered metric.
    *
    * @param string $metricResourceName
    */
