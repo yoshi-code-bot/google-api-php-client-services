@@ -56,10 +56,11 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
    */
   public $labels;
   /**
-   * Immutable. Identifier. In form of * `organizations/{organization_id}/locati
-   * ons/global/policyOrchestrators/{orchestrator_id}` * `folders/{folder_id}/lo
-   * cations/global/policyOrchestrators/{orchestrator_id}` * `projects/{project_
-   * id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+   * Immutable. Identifier. In the following format: * `organizations/{organizat
+   * ion_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `folders/
+   * {folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proj
+   * ects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestra
+   * tor_id}`
    *
    * @var string
    */
@@ -183,10 +184,11 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->labels;
   }
   /**
-   * Immutable. Identifier. In form of * `organizations/{organization_id}/locati
-   * ons/global/policyOrchestrators/{orchestrator_id}` * `folders/{folder_id}/lo
-   * cations/global/policyOrchestrators/{orchestrator_id}` * `projects/{project_
-   * id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+   * Immutable. Identifier. In the following format: * `organizations/{organizat
+   * ion_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `folders/
+   * {folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proj
+   * ects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestra
+   * tor_id}`
    *
    * @param string $name
    */
