@@ -97,7 +97,7 @@ class DatabaseResourceSignalData extends \Google\Collection
    */
   public $lastRefreshTime;
   /**
-   * Resource location.
+   * Required. Resource location.
    *
    * @var string
    */
@@ -177,7 +177,7 @@ class DatabaseResourceSignalData extends \Google\Collection
     return $this->lastRefreshTime;
   }
   /**
-   * Resource location.
+   * Required. Resource location.
    *
    * @param string $location
    */
