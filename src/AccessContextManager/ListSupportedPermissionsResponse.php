@@ -21,22 +21,22 @@ class ListSupportedPermissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'supportedPermissions';
   /**
-   * The pagination token to retrieve the next page of results. If the value is
-   * empty, no further results remain.
+   * Use this pagination token to retrieve the next page of results. An empty
+   * value indicates that no further results are available.
    *
    * @var string
    */
   public $nextPageToken;
   /**
-   * List of VPC-SC supported permissions.
+   * List of VPC Service Controls supported permissions.
    *
    * @var string[]
    */
   public $supportedPermissions;
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is
-   * empty, no further results remain.
+   * Use this pagination token to retrieve the next page of results. An empty
+   * value indicates that no further results are available.
    *
    * @param string $nextPageToken
    */
@@ -52,7 +52,7 @@ class ListSupportedPermissionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * List of VPC-SC supported permissions.
+   * List of VPC Service Controls supported permissions.
    *
    * @param string[] $supportedPermissions
    */

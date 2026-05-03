@@ -30,15 +30,15 @@ use Google\Service\AccessContextManager\ListSupportedPermissionsResponse;
 class Permissions extends \Google\Service\Resource
 {
   /**
-   * Lists all supported permissions in VPCSC Granular Controls.
-   * (permissions.listPermissions)
+   * Lists all supported permissions in VPC Service Controls ingress and egress
+   * rules for Granular Controls. (permissions.listPermissions)
    *
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. This flag specifies the maximum number of
-   * services to return per page. Default is 100.
-   * @opt_param string pageToken Optional. Token to start on a later page. Default
-   * is the first page.
+   * services to return per page. Default value is 100.
+   * @opt_param string pageToken Optional. Use this token to retrieve a specific
+   * page of results. Default is the first page.
    * @return ListSupportedPermissionsResponse
    * @throws \Google\Service\Exception
    */
