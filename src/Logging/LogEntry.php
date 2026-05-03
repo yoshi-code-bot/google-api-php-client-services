@@ -288,10 +288,13 @@ class LogEntry extends \Google\Collection
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting)
    * error groups associated with this LogEntry. Error Reporting sets the values
-   * for this field during error group creation.For more information, see View
-   * error details( https://cloud.google.com/error-reporting/docs/viewing-
-   * errors#view_error_details)This field isn't available during log routing
-   * (https://cloud.google.com/logging/docs/routing/overview)
+   * for this field during error group creation.This field is populated only
+   * when log entries are stored in Cloud Logging storage (Logs Explorer and
+   * Observability Analytics). It is not available for use in log sink filters,
+   * log-based metrics, or log-based alerts, and it is excluded from log exports
+   * (Cloud Storage, BigQuery, and Pub/Sub).For more information, see View error
+   * details( https://cloud.google.com/error-reporting/docs/viewing-
+   * errors#view_error_details)
    *
    * @param LogErrorGroup[] $errorGroups
    */
