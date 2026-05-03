@@ -93,6 +93,8 @@ class LinuxNodeConfig extends \Google\Model
    * @var string
    */
   public $cgroupMode;
+  protected $customNodeInitType = CustomNodeInit::class;
+  protected $customNodeInitDataType = '';
   protected $hugepagesType = HugepagesConfig::class;
   protected $hugepagesDataType = '';
   protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
@@ -180,6 +182,23 @@ class LinuxNodeConfig extends \Google\Model
   public function getCgroupMode()
   {
     return $this->cgroupMode;
+  }
+  /**
+   * Optional. Allow users to run arbitrary bash script or container on the
+   * node.
+   *
+   * @param CustomNodeInit $customNodeInit
+   */
+  public function setCustomNodeInit(CustomNodeInit $customNodeInit)
+  {
+    $this->customNodeInit = $customNodeInit;
+  }
+  /**
+   * @return CustomNodeInit
+   */
+  public function getCustomNodeInit()
+  {
+    return $this->customNodeInit;
   }
   /**
    * Optional. Amounts for 2M and 1G hugepages
