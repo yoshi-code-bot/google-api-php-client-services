@@ -23,10 +23,14 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer extends \
    * @var string
    */
   public $answerText;
+  protected $eventSourceType = GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerEventSource::class;
+  protected $eventSourceDataType = '';
   protected $faqSourceType = GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource::class;
   protected $faqSourceDataType = '';
   protected $generativeSourceType = GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource::class;
   protected $generativeSourceDataType = '';
+  protected $playbookSourceType = GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource::class;
+  protected $playbookSourceDataType = '';
 
   /**
    * @param string $answerText
@@ -41,6 +45,20 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer extends \
   public function getAnswerText()
   {
     return $this->answerText;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerEventSource $eventSource
+   */
+  public function setEventSource(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerEventSource $eventSource)
+  {
+    $this->eventSource = $eventSource;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerEventSource
+   */
+  public function getEventSource()
+  {
+    return $this->eventSource;
   }
   /**
    * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource $faqSource
@@ -69,6 +87,20 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer extends \
   public function getGenerativeSource()
   {
     return $this->generativeSource;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource $playbookSource
+   */
+  public function setPlaybookSource(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource $playbookSource)
+  {
+    $this->playbookSource = $playbookSource;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource
+   */
+  public function getPlaybookSource()
+  {
+    return $this->playbookSource;
   }
 }
 
