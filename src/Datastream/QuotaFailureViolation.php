@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class QuotaFailureViolation extends \Google\Model
 {
   /**
-   * The API Service from which the `QuotaFailure.Violation` orginates. In some
+   * The API Service from which the `QuotaFailure.Violation` originates. In some
    * cases, Quota issues originate from an API Service other than the one that
    * was called. In other words, a dependency of the called API Service could be
    * the cause of the `QuotaFailure`, and this field would have the dependency
@@ -104,7 +104,7 @@ class QuotaFailureViolation extends \Google\Model
   public $subject;
 
   /**
-   * The API Service from which the `QuotaFailure.Violation` orginates. In some
+   * The API Service from which the `QuotaFailure.Violation` originates. In some
    * cases, Quota issues originate from an API Service other than the one that
    * was called. In other words, a dependency of the called API Service could be
    * the cause of the `QuotaFailure`, and this field would have the dependency
