@@ -198,9 +198,8 @@ class Spaces extends \Google\Service\Resource
     return $this->call('findDirectMessage', [$params], Space::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Returns
-   * all spaces with `spaceType == GROUP_CHAT`, whose human memberships contain
-   * exactly the calling user, and the users specified in
+   * Returns all spaces with `spaceType == GROUP_CHAT`, whose human memberships
+   * contain exactly the calling user, and the users specified in
    * `FindGroupChatsRequest.users`. Only members that have joined the conversation
    * are supported. For an example, see [Find group
    * chats](https://developers.google.com/workspace/chat/find-group-chats). If the
