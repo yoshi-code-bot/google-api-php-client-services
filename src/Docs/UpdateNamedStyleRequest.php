@@ -20,7 +20,7 @@ namespace Google\Service\Docs;
 class UpdateNamedStyleRequest extends \Google\Model
 {
   /**
-   * The NamedStyle fields that should be updated. At least `named_style_type
+   * The NamedStyle fields that should be updated. At least `named_style_type`
    * must be specified. The root `named_style` is implied and should not be
    * specified. A single `"*"` can be used as short-hand for listing every
    * field. For example, to update the text style to bold, set `fields` to
@@ -45,7 +45,7 @@ class UpdateNamedStyleRequest extends \Google\Model
   public $tabId;
 
   /**
-   * The NamedStyle fields that should be updated. At least `named_style_type
+   * The NamedStyle fields that should be updated. At least `named_style_type`
    * must be specified. The root `named_style` is implied and should not be
    * specified. A single `"*"` can be used as short-hand for listing every
    * field. For example, to update the text style to bold, set `fields` to
