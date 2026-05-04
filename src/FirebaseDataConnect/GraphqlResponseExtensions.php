@@ -24,7 +24,7 @@ class GraphqlResponseExtensions extends \Google\Collection
   protected $dataConnectDataType = 'array';
 
   /**
-   * Data Connect specific GraphQL extension, a list of paths and properties.
+   * SQL Connect specific GraphQL extension, a list of paths and properties.
    *
    * @param DataConnectProperties[] $dataConnect
    */

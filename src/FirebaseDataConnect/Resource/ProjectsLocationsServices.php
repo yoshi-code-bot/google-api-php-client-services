@@ -102,12 +102,12 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Execute any GraphQL query and mutation against the Firebase Data Connect's
+   * Execute any GraphQL query or mutation against the Firebase SQL Connect's
    * generated GraphQL schema. Grants full read and write access to the connected
    * data sources. Note: Use introspection query to explore the generated GraphQL
    * schema. (services.executeGraphql)
    *
-   * @param string $name Required. The relative resource name of Firebase Data
+   * @param string $name Required. The relative resource name of Firebase SQL
    * Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ```
    * @param GraphqlRequest $postBody
@@ -122,12 +122,12 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('executeGraphql', [$params], GraphqlResponse::class);
   }
   /**
-   * Execute any GraphQL query against the Firebase Data Connect's generated
+   * Execute any GraphQL query against the Firebase SQL Connect's generated
    * GraphQL schema. Grants full read to the connected data sources.
    * `ExecuteGraphqlRead` is identical to `ExecuteGraphql` except it only accepts
    * read-only query. (services.executeGraphqlRead)
    *
-   * @param string $name Required. The relative resource name of Firebase Data
+   * @param string $name Required. The relative resource name of Firebase SQL
    * Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ```
    * @param GraphqlRequest $postBody
@@ -157,7 +157,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('get', [$params], Service::class);
   }
   /**
-   * Execute introspection query against the Firebase Data Connect's generated
+   * Execute introspection query against the Firebase SQL Connect's generated
    * GraphQL schema. GraphQL introspection query provides metadata such as what
    * tables the schema have, what queries and mutations can be performed on the
    * schema, and so on. Read more at https://graphql.org/learn/introspection.
@@ -165,7 +165,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * SQL instance, which can be done via ExecuteGraphqlRead.
    * (services.introspectGraphql)
    *
-   * @param string $name Required. The relative resource name of Firebase Data
+   * @param string $name Required. The relative resource name of Firebase SQL
    * Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ```
    * @param GraphqlRequest $postBody
@@ -208,10 +208,10 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * Updates the parameters of a single Service. (services.patch)
    *
    * @param string $name Identifier. The relative resource name of the Firebase
-   * Data Connect service, in the format: ```
+   * SQL Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ``` Note that the
-   * service ID is specific to Firebase Data Connect and does not correspond to
-   * any of the instance IDs of the underlying data source connections.
+   * service ID is specific to Firebase SQL Connect and does not correspond to any
+   * of the instance IDs of the underlying data source connections.
    * @param Service $postBody
    * @param array $optParams Optional parameters.
    *
