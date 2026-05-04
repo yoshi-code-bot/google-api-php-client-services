@@ -44,7 +44,8 @@ class AlertDocument extends \Google\Model
    */
   public $content;
   /**
-   * Output only. The time the document was created.
+   * Output only. The timestamp of the original external publication of the
+   * document.
    *
    * @var string
    */
@@ -160,7 +161,8 @@ class AlertDocument extends \Google\Model
     return $this->content;
   }
   /**
-   * Output only. The time the document was created.
+   * Output only. The timestamp of the original external publication of the
+   * document.
    *
    * @param string $createTime
    */
