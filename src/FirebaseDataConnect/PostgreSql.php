@@ -25,7 +25,7 @@ class PostgreSql extends \Google\Model
   public const SCHEMA_MIGRATION_SQL_SCHEMA_MIGRATION_UNSPECIFIED = 'SQL_SCHEMA_MIGRATION_UNSPECIFIED';
   /**
    * Connect to the SQL database and identify any missing SQL resources used in
-   * the given Firebase Data Connect Schema. Automatically create necessary SQL
+   * the given Firebase SQL Connect Schema. Automatically create necessary SQL
    * resources (SQL table, column, etc) before deploying the schema. During
    * migration steps, the SQL Schema must comply with the previous before_deploy
    * setting in case the migration is interrupted. Therefore, the previous
@@ -50,7 +50,7 @@ class PostgreSql extends \Google\Model
   public const SCHEMA_VALIDATION_STRICT = 'STRICT';
   /**
    * Connect to the SQL database and validate that the SQL DDL has all the SQL
-   * resources used in the given Firebase Data Connect Schema. Surface any
+   * resources used in the given Firebase SQL Connect Schema. Surface any
    * missing resources as `FAILED_PRECONDITION` with an
    * `IncompatibleSqlSchemaError` error detail. Succeed even if there are
    * unknown tables and columns.
@@ -65,13 +65,13 @@ class PostgreSql extends \Google\Model
    */
   public $database;
   /**
-   * Output only. Ephemeral is true if this data connect service is served from
+   * Output only. Ephemeral is true if this SQL Connect service is served from
    * temporary in-memory emulation of Postgres. While Cloud SQL is being
-   * provisioned, the data connect service provides the ephemeral service to
-   * help developers get started. Once the Cloud SQL is provisioned, Data
-   * Connect service will transfer its data on a best-effort basis to the Cloud
-   * SQL instance. WARNING: Ephemeral data sources will expire after 24 hour.
-   * The data will be lost if they aren't transferred to the Cloud SQL instance.
+   * provisioned, the SQL Connect service provides the ephemeral service to help
+   * developers get started. Once the Cloud SQL is provisioned, SQL Connect
+   * service will transfer its data on a best-effort basis to the Cloud SQL
+   * instance. WARNING: Ephemeral data sources will expire after 24 hour. The
+   * data will be lost if they aren't transferred to the Cloud SQL instance.
    * WARNING: When `ephemeral=true`, mutations to the database are not
    * guaranteed to be durably persisted, even if an OK status code is returned.
    * All or parts of the data may be lost or reverted to earlier versions.
@@ -140,13 +140,13 @@ class PostgreSql extends \Google\Model
     return $this->database;
   }
   /**
-   * Output only. Ephemeral is true if this data connect service is served from
+   * Output only. Ephemeral is true if this SQL Connect service is served from
    * temporary in-memory emulation of Postgres. While Cloud SQL is being
-   * provisioned, the data connect service provides the ephemeral service to
-   * help developers get started. Once the Cloud SQL is provisioned, Data
-   * Connect service will transfer its data on a best-effort basis to the Cloud
-   * SQL instance. WARNING: Ephemeral data sources will expire after 24 hour.
-   * The data will be lost if they aren't transferred to the Cloud SQL instance.
+   * provisioned, the SQL Connect service provides the ephemeral service to help
+   * developers get started. Once the Cloud SQL is provisioned, SQL Connect
+   * service will transfer its data on a best-effort basis to the Cloud SQL
+   * instance. WARNING: Ephemeral data sources will expire after 24 hour. The
+   * data will be lost if they aren't transferred to the Cloud SQL instance.
    * WARNING: When `ephemeral=true`, mutations to the database are not
    * guaranteed to be durably persisted, even if an OK status code is returned.
    * All or parts of the data may be lost or reverted to earlier versions.
