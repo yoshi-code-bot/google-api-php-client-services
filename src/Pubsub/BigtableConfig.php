@@ -28,29 +28,28 @@ class BigtableConfig extends \Google\Model
    */
   public const STATE_ACTIVE = 'ACTIVE';
   /**
-   * Cannot write to Bigtable because the instance, table, or app profile does
-   * not exist.
+   * Unused in the current implementation. Placeholder for future use.
    */
   public const STATE_NOT_FOUND = 'NOT_FOUND';
   /**
-   * Cannot write to Bigtable because the app profile is not configured for
-   * single-cluster routing.
+   * Unused in the current implementation. Placeholder for future use.
    */
   public const STATE_APP_PROFILE_MISCONFIGURED = 'APP_PROFILE_MISCONFIGURED';
   /**
    * Cannot write to Bigtable because of permission denied errors. This can
-   * happen if: - The Pub/Sub service agent has not been granted the
-   * [appropriate Bigtable IAM permission bigtable.tables.mutateRows]({$universe
-   * .dns_names.final_documentation_domain}/bigtable/docs/access-
-   * control#permissions) - The bigtable.googleapis.com API is not enabled for
-   * the project
+   * happen if: - The Bigtable instance, table, or app profile does not exist. -
+   * The Pub/Sub service agent has not been granted the [appropriate Bigtable
+   * IAM permission bigtable.tables.mutateRows]({$universe.dns_names.final_docum
+   * entation_domain}/bigtable/docs/access-control#permissions) - The
+   * bigtable.googleapis.com API is not enabled for the project
    * ([instructions]({$universe.dns_names.final_documentation_domain}/service-
    * usage/docs/enable-disable))
    */
   public const STATE_PERMISSION_DENIED = 'PERMISSION_DENIED';
   /**
-   * Cannot write to Bigtable because of a missing column family ("data") or if
-   * there is no structured row key for the subscription name + message ID.
+   * Cannot write to Bigtable because of a missing column family ("data"), or if
+   * there is no structured row key for the subscription name + message ID, if
+   * because the app profile is not configured for single-cluster routing.
    */
   public const STATE_SCHEMA_MISMATCH = 'SCHEMA_MISMATCH';
   /**

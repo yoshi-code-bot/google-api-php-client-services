@@ -52,12 +52,9 @@ class CloudStorage extends \Google\Model
    */
   public const STATE_TOO_MANY_OBJECTS = 'TOO_MANY_OBJECTS';
   /**
-   * Indicates an error state where the ingestion source cannot be processed.
-   * This occurs because there is no overlap between the regions allowed by the
-   * topic's `MessageStoragePolicy` and the regions permitted by the Regional
-   * Access Boundary (RAB) restrictions on the project's Pub/Sub service
-   * account. A common, allowed region is required to determine a valid
-   * ingestion region.
+   * Indicates an error state where the ingestion source cannot be processed
+   * because the selected ingestion region is not permitted by the Regional
+   * Access Boundary (RAB) restrictions on the project's service account.
    */
   public const STATE_CONFLICTING_REGION_CONSTRAINTS = 'CONFLICTING_REGION_CONSTRAINTS';
   protected $avroFormatType = AvroFormat::class;
