@@ -119,8 +119,7 @@ class GoogleFirestoreAdminV1IndexField extends \Google\Model
     return $this->order;
   }
   /**
-   * Indicates that this field supports search operations. This field is only
-   * currently supported for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Indicates that this field supports search operations.
    *
    * @param GoogleFirestoreAdminV1SearchConfig $searchConfig
    */
