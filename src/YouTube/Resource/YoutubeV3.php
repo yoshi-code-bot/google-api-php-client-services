@@ -30,25 +30,6 @@ use Google\Service\YouTube\CommentThread;
 class YoutubeV3 extends \Google\Service\Resource
 {
   /**
-   * Deletes one or more AudioTracks from a video. (v3.deleteAudiotracks)
-   *
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string audioTrackId Required. The audio track ID of the AudioTrack
-   * to be deleted (e.g., "v1234567890").
-   * @opt_param string part Optional. The `part` parameter specifies the
-   * `AudioTrack` resource parts that the API response will include. The `part`
-   * names that you can include in the parameter value are `id` and `snippet`.
-   * @opt_param string videoId Required. The external YouTube video ID.
-   * @throws \Google\Service\Exception
-   */
-  public function deleteAudiotracks($optParams = [])
-  {
-    $params = [];
-    $params = array_merge($params, $optParams);
-    return $this->call('deleteAudiotracks', [$params]);
-  }
-  /**
    * Updates an existing resource. (v3.updateCommentThreads)
    *
    * @param CommentThread $postBody
