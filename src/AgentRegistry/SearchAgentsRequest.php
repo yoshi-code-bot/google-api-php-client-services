@@ -53,8 +53,8 @@ class SearchAgentsRequest extends \Google\Model
    * No | Included | | skills.name | No | Yes | No | Included | |
    * skills.description | No | Yes | No | Included | | skills.tags | No | Yes |
    * No | Included | | skills.examples | No | Yes | No | Included | Examples: *
-   * `agentId=urn:agent:projects-123:projects:123:locations:us-
-   * central1:reasoningEngines:1234` to find the agent with the specified agent
+   * `agentId="urn:agent:projects-123:projects:123:locations:us-
+   * central1:reasoningEngines:1234"` to find the agent with the specified agent
    * ID. * `name:important` to find agents whose name contains `important` as a
    * word. * `displayName:works*` to find agents whose display name contains
    * words that start with `works`. * `skills.tags:test` to find agents whose
@@ -119,8 +119,8 @@ class SearchAgentsRequest extends \Google\Model
    * No | Included | | skills.name | No | Yes | No | Included | |
    * skills.description | No | Yes | No | Included | | skills.tags | No | Yes |
    * No | Included | | skills.examples | No | Yes | No | Included | Examples: *
-   * `agentId=urn:agent:projects-123:projects:123:locations:us-
-   * central1:reasoningEngines:1234` to find the agent with the specified agent
+   * `agentId="urn:agent:projects-123:projects:123:locations:us-
+   * central1:reasoningEngines:1234"` to find the agent with the specified agent
    * ID. * `name:important` to find agents whose name contains `important` as a
    * word. * `displayName:works*` to find agents whose display name contains
    * words that start with `works`. * `skills.tags:test` to find agents whose
