@@ -40,6 +40,9 @@ class QuerySources extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Number of sources to return in the response.
+   * @opt_param string requestOptions.clientDisplayLanguageCode The BCP-47
+   * language code, such as "pt" or "en". It represents the user's preferred
+   * Display Language.
    * @opt_param bool requestOptions.debugOptions.enableDebugging If you are asked
    * by Google to help with debugging, set this field. Otherwise, ignore this
    * field.
