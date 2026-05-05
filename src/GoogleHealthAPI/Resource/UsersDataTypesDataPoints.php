@@ -178,7 +178,6 @@ class UsersDataTypesDataPoints extends \Google\Service\Resource
    * date: - Pattern: `{daily_summary_data_type}.date` - Supported comparison
    * operators: `>=`, `<` - Date literal expected in ISO 8601 `YYYY-MM-DD` format
    * - Supported logical operators: `AND` - Example: -
-   * `daily_resting_heart_rate.date >= "2024-08-14"` -
    * `daily_heart_rate_variability.date < "2024-08-15"` - Session civil start time
    * (**Excluding Sleep**): - Pattern:
    * `{session_data_type}.interval.civil_start_time` - Supported comparison
