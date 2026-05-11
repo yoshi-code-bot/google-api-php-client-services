@@ -24,36 +24,38 @@ class PostgreSql extends \Google\Model
    */
   public const SCHEMA_MIGRATION_SQL_SCHEMA_MIGRATION_UNSPECIFIED = 'SQL_SCHEMA_MIGRATION_UNSPECIFIED';
   /**
-   * Connect to the SQL database and identify any missing SQL resources used in
-   * the given Firebase SQL Connect Schema. Automatically create necessary SQL
-   * resources (SQL table, column, etc) before deploying the schema. During
-   * migration steps, the SQL Schema must comply with the previous before_deploy
-   * setting in case the migration is interrupted. Therefore, the previous
-   * before_deploy setting must not be `schema_validation=STRICT`.
+   * Waits for the Cloud SQL instance to be provisioned and automatically
+   * creates necessary SQL resources (tables, columns, etc.) to match the
+   * desired FDC schema. This operation is strictly additive and executes as a
+   * Long-Running Operation during provisioning. Rejects migrations on a non-
+   * empty existing SQL schema.
    */
   public const SCHEMA_MIGRATION_MIGRATE_COMPATIBLE = 'MIGRATE_COMPATIBLE';
   /**
-   * Unspecified SQL schema validation. Default to STRICT.
+   * Unspecified SQL schema validation. Defaults to STRICT.
    */
   public const SCHEMA_VALIDATION_SQL_SCHEMA_VALIDATION_UNSPECIFIED = 'SQL_SCHEMA_VALIDATION_UNSPECIFIED';
   /**
-   * Skip no SQL schema validation. Use it with extreme caution. CreateSchema or
-   * UpdateSchema will succeed even if SQL database is unavailable or SQL schema
-   * is incompatible. Generated SQL may fail at execution time.
+   * Skips SQL schema validation. Deployment succeeds even if the database is
+   * pending provisioning, unavailable, or incompatible. Under NONE, newly
+   * created services route requests to a temporary ephemeral database (in-
+   * memory emulation) so the API can be tested immediately. Ephemeral data
+   * expires after 24 hours unless successfully validated or migrated to a
+   * linked database.
    */
   public const SCHEMA_VALIDATION_NONE = 'NONE';
   /**
-   * Connect to the SQL database and validate that the SQL DDL matches the
-   * schema exactly. Surface any discrepancies as `FAILED_PRECONDITION` with an
-   * `IncompatibleSqlSchemaError` error detail.
+   * Connects to the SQL database and validates that the SQL DDL matches the FDC
+   * schema exactly. Any discrepancies (extra or missing tables/columns) result
+   * in a FAILED_PRECONDITION error with required SQL diffs. Recommended for
+   * greenfield projects to ensure full schema consistency.
    */
   public const SCHEMA_VALIDATION_STRICT = 'STRICT';
   /**
-   * Connect to the SQL database and validate that the SQL DDL has all the SQL
-   * resources used in the given Firebase SQL Connect Schema. Surface any
-   * missing resources as `FAILED_PRECONDITION` with an
-   * `IncompatibleSqlSchemaError` error detail. Succeed even if there are
-   * unknown tables and columns.
+   * Connects to the SQL database and validates that it contains all the SQL
+   * resources required by the FDC schema. Succeeds even if the database
+   * contains additional tables or columns not used by FDC. Suitable when
+   * sharing a database with other tools or legacy applications.
    */
   public const SCHEMA_VALIDATION_COMPATIBLE = 'COMPATIBLE';
   protected $cloudSqlType = CloudSqlInstance::class;
@@ -87,13 +89,15 @@ class PostgreSql extends \Google\Model
    */
   public $schema;
   /**
-   * Optional. Configure how to perform Postgresql schema migration.
+   * Optional. Configure how to perform automatic PostgreSQL schema migration
+   * before deploying the FDC schema. This is an additive-only operation.
    *
    * @var string
    */
   public $schemaMigration;
   /**
-   * Optional. Configure how much Postgresql schema validation to perform.
+   * Optional. Configure how much PostgreSQL schema validation to perform
+   * against the live database before deploying the FDC schema.
    *
    * @var string
    */
@@ -182,7 +186,8 @@ class PostgreSql extends \Google\Model
     return $this->schema;
   }
   /**
-   * Optional. Configure how to perform Postgresql schema migration.
+   * Optional. Configure how to perform automatic PostgreSQL schema migration
+   * before deploying the FDC schema. This is an additive-only operation.
    *
    * Accepted values: SQL_SCHEMA_MIGRATION_UNSPECIFIED, MIGRATE_COMPATIBLE
    *
@@ -200,7 +205,8 @@ class PostgreSql extends \Google\Model
     return $this->schemaMigration;
   }
   /**
-   * Optional. Configure how much Postgresql schema validation to perform.
+   * Optional. Configure how much PostgreSQL schema validation to perform
+   * against the live database before deploying the FDC schema.
    *
    * Accepted values: SQL_SCHEMA_VALIDATION_UNSPECIFIED, NONE, STRICT,
    * COMPATIBLE

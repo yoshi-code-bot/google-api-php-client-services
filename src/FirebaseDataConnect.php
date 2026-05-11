@@ -256,6 +256,26 @@ class FirebaseDataConnect extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'generateQuery' => [
+              'path' => 'v1/{+name}:generateQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generateSchema' => [
+              'path' => 'v1/{+name}:generateSchema',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
