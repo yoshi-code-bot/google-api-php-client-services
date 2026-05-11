@@ -36,6 +36,8 @@ class BuildingInsights extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string additionalInsights Optional. A list of additional_insights
+   * to be included in the response.
    * @opt_param bool exactQualityRequired Optional. Whether to require exact
    * quality of the imagery. If set to false, the `required_quality` field is
    * interpreted as the minimum required quality, such that HIGH quality imagery
