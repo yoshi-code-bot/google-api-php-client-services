@@ -83,6 +83,19 @@ class Policy extends \Google\Collection
    */
   public const AUTO_DATE_AND_TIME_ZONE_AUTO_DATE_AND_TIME_ZONE_ENFORCED = 'AUTO_DATE_AND_TIME_ZONE_ENFORCED';
   /**
+   * Defaults to AUTOFILL_USER_CHOICE.
+   */
+  public const AUTOFILL_POLICY_AUTOFILL_POLICY_UNSPECIFIED = 'AUTOFILL_POLICY_UNSPECIFIED';
+  /**
+   * The user can choose and use an autofill service.
+   */
+  public const AUTOFILL_POLICY_AUTOFILL_USER_CHOICE = 'AUTOFILL_USER_CHOICE';
+  /**
+   * Autofill is disabled and the user is not allowed to change this setting.
+   * This is supported only on Android 8 and above.
+   */
+  public const AUTOFILL_POLICY_AUTOFILL_DISABLED = 'AUTOFILL_DISABLED';
+  /**
    * If camera_disabled is true, this is equivalent to CAMERA_ACCESS_DISABLED.
    * Otherwise, this is equivalent to CAMERA_ACCESS_USER_CHOICE.
    */
@@ -388,6 +401,12 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $autoTimeRequired;
+  /**
+   * Optional. The policy for the autofill service.
+   *
+   * @var string
+   */
+  public $autofillPolicy;
   /**
    * This field has no effect.
    *
@@ -1128,6 +1147,25 @@ class Policy extends \Google\Collection
   public function getAutoTimeRequired()
   {
     return $this->autoTimeRequired;
+  }
+  /**
+   * Optional. The policy for the autofill service.
+   *
+   * Accepted values: AUTOFILL_POLICY_UNSPECIFIED, AUTOFILL_USER_CHOICE,
+   * AUTOFILL_DISABLED
+   *
+   * @param self::AUTOFILL_POLICY_* $autofillPolicy
+   */
+  public function setAutofillPolicy($autofillPolicy)
+  {
+    $this->autofillPolicy = $autofillPolicy;
+  }
+  /**
+   * @return self::AUTOFILL_POLICY_*
+   */
+  public function getAutofillPolicy()
+  {
+    return $this->autofillPolicy;
   }
   /**
    * This field has no effect.
