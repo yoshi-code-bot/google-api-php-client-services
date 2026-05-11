@@ -27,6 +27,12 @@ class SizeInfo extends \Google\Model
    */
   public $displayNetworkMembersCount;
   /**
+   * Output only. Estimated number of members in this user list on Gmail.
+   *
+   * @var string
+   */
+  public $gmailMembersCount;
+  /**
    * Output only. Estimated number of members in this user list in the
    * google.com domain. These are the members available for targeting in Search
    * campaigns.
@@ -34,6 +40,12 @@ class SizeInfo extends \Google\Model
    * @var string
    */
   public $searchNetworkMembersCount;
+  /**
+   * Output only. Estimated number of members in this user list on YouTube.
+   *
+   * @var string
+   */
+  public $youtubeMembersCount;
 
   /**
    * Output only. Estimated number of members in this user list, on the Google
@@ -53,6 +65,22 @@ class SizeInfo extends \Google\Model
     return $this->displayNetworkMembersCount;
   }
   /**
+   * Output only. Estimated number of members in this user list on Gmail.
+   *
+   * @param string $gmailMembersCount
+   */
+  public function setGmailMembersCount($gmailMembersCount)
+  {
+    $this->gmailMembersCount = $gmailMembersCount;
+  }
+  /**
+   * @return string
+   */
+  public function getGmailMembersCount()
+  {
+    return $this->gmailMembersCount;
+  }
+  /**
    * Output only. Estimated number of members in this user list in the
    * google.com domain. These are the members available for targeting in Search
    * campaigns.
@@ -69,6 +97,22 @@ class SizeInfo extends \Google\Model
   public function getSearchNetworkMembersCount()
   {
     return $this->searchNetworkMembersCount;
+  }
+  /**
+   * Output only. Estimated number of members in this user list on YouTube.
+   *
+   * @param string $youtubeMembersCount
+   */
+  public function setYoutubeMembersCount($youtubeMembersCount)
+  {
+    $this->youtubeMembersCount = $youtubeMembersCount;
+  }
+  /**
+   * @return string
+   */
+  public function getYoutubeMembersCount()
+  {
+    return $this->youtubeMembersCount;
   }
 }
 
