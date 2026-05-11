@@ -58,8 +58,8 @@ class ProjectedField extends \Google\Model
    */
   public $cast;
   /**
-   * The field name. This will be the field that is selected using the dot
-   * notation to display the drill down value.
+   * Optional. The field name. This will be the field that is selected using the
+   * dot notation to display the drill down value.
    *
    * @var string
    */
@@ -136,8 +136,8 @@ class ProjectedField extends \Google\Model
     return $this->cast;
   }
   /**
-   * The field name. This will be the field that is selected using the dot
-   * notation to display the drill down value.
+   * Optional. The field name. This will be the field that is selected using the
+   * dot notation to display the drill down value.
    *
    * @param string $field
    */
