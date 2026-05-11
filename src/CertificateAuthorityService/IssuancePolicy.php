@@ -20,6 +20,18 @@ namespace Google\Service\CertificateAuthorityService;
 class IssuancePolicy extends \Google\Collection
 {
   protected $collection_key = 'allowedKeyTypes';
+  /**
+   * Optional. If set to true, allows requesters to specify the
+   * requested_not_before_time field when creating a Certificate. Certificates
+   * requested with this option enabled will have a 'not_before_time' equal to
+   * the value specified in the request. The 'not_after_time' will be adjusted
+   * to preserve the requested lifetime. The maximum time that a certificate can
+   * be backdated with these options is 48 hours in the past. This option cannot
+   * be set if backdate_duration is set.
+   *
+   * @var bool
+   */
+  public $allowRequesterSpecifiedNotBeforeTime;
   protected $allowedIssuanceModesType = IssuanceModes::class;
   protected $allowedIssuanceModesDataType = '';
   protected $allowedKeyTypesType = AllowedKeyType::class;
@@ -51,6 +63,28 @@ class IssuancePolicy extends \Google\Collection
   protected $passthroughExtensionsType = CertificateExtensionConstraints::class;
   protected $passthroughExtensionsDataType = '';
 
+  /**
+   * Optional. If set to true, allows requesters to specify the
+   * requested_not_before_time field when creating a Certificate. Certificates
+   * requested with this option enabled will have a 'not_before_time' equal to
+   * the value specified in the request. The 'not_after_time' will be adjusted
+   * to preserve the requested lifetime. The maximum time that a certificate can
+   * be backdated with these options is 48 hours in the past. This option cannot
+   * be set if backdate_duration is set.
+   *
+   * @param bool $allowRequesterSpecifiedNotBeforeTime
+   */
+  public function setAllowRequesterSpecifiedNotBeforeTime($allowRequesterSpecifiedNotBeforeTime)
+  {
+    $this->allowRequesterSpecifiedNotBeforeTime = $allowRequesterSpecifiedNotBeforeTime;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowRequesterSpecifiedNotBeforeTime()
+  {
+    return $this->allowRequesterSpecifiedNotBeforeTime;
+  }
   /**
    * Optional. If specified, then only methods allowed in the IssuanceModes may
    * be used to issue Certificates.
