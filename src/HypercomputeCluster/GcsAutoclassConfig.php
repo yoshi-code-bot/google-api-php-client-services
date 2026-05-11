@@ -24,6 +24,14 @@ class GcsAutoclassConfig extends \Google\Model
    */
   public const TERMINAL_STORAGE_CLASS_TERMINAL_STORAGE_CLASS_UNSPECIFIED = 'TERMINAL_STORAGE_CLASS_UNSPECIFIED';
   /**
+   * Nearline terminal storage class
+   */
+  public const TERMINAL_STORAGE_CLASS_NEARLINE = 'NEARLINE';
+  /**
+   * Archive terminal storage class
+   */
+  public const TERMINAL_STORAGE_CLASS_ARCHIVE = 'ARCHIVE';
+  /**
    * Required. Enables Auto-class feature.
    *
    * @var bool
@@ -55,7 +63,7 @@ class GcsAutoclassConfig extends \Google\Model
   /**
    * Optional. Terminal storage class of the autoclass bucket
    *
-   * Accepted values: TERMINAL_STORAGE_CLASS_UNSPECIFIED
+   * Accepted values: TERMINAL_STORAGE_CLASS_UNSPECIFIED, NEARLINE, ARCHIVE
    *
    * @param self::TERMINAL_STORAGE_CLASS_* $terminalStorageClass
    */
