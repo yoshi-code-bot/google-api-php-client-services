@@ -17,6 +17,10 @@
 
 namespace Google\Service\FirebaseDataConnect\Resource;
 
+use Google\Service\FirebaseDataConnect\GenerateQueryRequest;
+use Google\Service\FirebaseDataConnect\GenerateQueryResponse;
+use Google\Service\FirebaseDataConnect\GenerateSchemaRequest;
+use Google\Service\FirebaseDataConnect\GenerateSchemaResponse;
 use Google\Service\FirebaseDataConnect\GraphqlRequest;
 use Google\Service\FirebaseDataConnect\GraphqlResponse;
 use Google\Service\FirebaseDataConnect\ListServicesResponse;
@@ -140,6 +144,46 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('executeGraphqlRead', [$params], GraphqlResponse::class);
+  }
+  /**
+   * Generates a GraphQL query based on a natural language prompt and the provided
+   * schema context. This is a stateless method; the schema is provided per
+   * request to support local development states. Streams results with real-time
+   * status and output chunks. (services.generateQuery)
+   *
+   * @param string $name Required. The resource name of the service in which to
+   * generate the query. Format:
+   * projects/{project}/locations/{location}/services/{service}
+   * @param GenerateQueryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenerateQueryResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateQuery($name, GenerateQueryRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateQuery', [$params], GenerateQueryResponse::class);
+  }
+  /**
+   * Generates GraphQL schema based on a natural language prompt or data
+   * description. This allows users to scaffold new types and tables quickly.
+   * Streams results with real-time status and output chunks.
+   * (services.generateSchema)
+   *
+   * @param string $name Required. The resource name of the service in which to
+   * generate the schema. Format:
+   * projects/{project}/locations/{location}/services/{service}
+   * @param GenerateSchemaRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenerateSchemaResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateSchema($name, GenerateSchemaRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateSchema', [$params], GenerateSchemaResponse::class);
   }
   /**
    * Gets details of a single Service. (services.get)
