@@ -209,7 +209,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * @opt_param string filter Optional. A filter constraining the clusters to
    * list. Filters are case-sensitive and have the following syntax:field = value
    * AND field = value ...where field is one of status.state, clusterName, or
-   * labels.[KEY], and [KEY] is a label key. value can be * to match all values.
+   * labels.[KEY], and [KEY] is a label key. value can be "*" to match all values.
    * status.state can be one of the following: ACTIVE, INACTIVE, CREATING,
    * RUNNING, ERROR, DELETING, UPDATING, STOPPING, or STOPPED. ACTIVE contains the
    * CREATING, UPDATING, and RUNNING states. INACTIVE contains the DELETING,

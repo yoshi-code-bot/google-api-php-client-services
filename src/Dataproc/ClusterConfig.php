@@ -20,15 +20,15 @@ namespace Google\Service\Dataproc;
 class ClusterConfig extends \Google\Collection
 {
   /**
-   * Not set. Works the same as CLUSTER_TIER_STANDARD.
+   * Uses standard tier if unspecified.
    */
   public const CLUSTER_TIER_CLUSTER_TIER_UNSPECIFIED = 'CLUSTER_TIER_UNSPECIFIED';
   /**
-   * Standard Dataproc cluster.
+   * Standard cluster tier.
    */
   public const CLUSTER_TIER_CLUSTER_TIER_STANDARD = 'CLUSTER_TIER_STANDARD';
   /**
-   * Premium Dataproc cluster.
+   * Premium cluster tier.
    */
   public const CLUSTER_TIER_CLUSTER_TIER_PREMIUM = 'CLUSTER_TIER_PREMIUM';
   /**
@@ -81,10 +81,10 @@ class ClusterConfig extends \Google\Collection
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config
    * files, and job driver console output. If you do not specify a staging
-   * bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA,
-   * or EU) for your cluster's staging bucket according to the Compute Engine
-   * zone where your cluster is deployed, and then create and manage this
-   * project-level, per-location bucket (see Dataproc staging and temp buckets
+   * bucket, Dataproc determines a Cloud Storage location (US, ASIA, or EU) for
+   * the cluster staging bucket according to the Compute Engine zone where the
+   * cluster is deployed, and then creates and manages this project-level, per-
+   * location bucket (see Dataproc staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-
    * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
    * not a gs://... URI to a Cloud Storage bucket.
@@ -136,13 +136,12 @@ class ClusterConfig extends \Google\Collection
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs
    * data, such as Spark and MapReduce history files. If you do not specify a
-   * temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or
-   * EU) for your cluster's temp bucket according to the Compute Engine zone
-   * where your cluster is deployed, and then create and manage this project-
-   * level, per-location bucket. The default bucket has a TTL of 90 days, but
-   * you can use any TTL (or none) if you specify a bucket (see Dataproc staging
-   * and temp buckets
-   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * temp bucket, Dataproc determines a Cloud Storage location (US, ASIA, or EU)
+   * for the cluster temp bucket according to the Compute Engine zone where the
+   * cluster is deployed, and then creates and manages this project-level, per-
+   * location bucket. The default bucket has a TTL of 90 days, but you can use
+   * any TTL (or none) if you specify a bucket (see Dataproc staging and temp
+   * buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-
    * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
    * not a gs://... URI to a Cloud Storage bucket.
    *
@@ -226,10 +225,10 @@ class ClusterConfig extends \Google\Collection
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config
    * files, and job driver console output. If you do not specify a staging
-   * bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA,
-   * or EU) for your cluster's staging bucket according to the Compute Engine
-   * zone where your cluster is deployed, and then create and manage this
-   * project-level, per-location bucket (see Dataproc staging and temp buckets
+   * bucket, Dataproc determines a Cloud Storage location (US, ASIA, or EU) for
+   * the cluster staging bucket according to the Compute Engine zone where the
+   * cluster is deployed, and then creates and manages this project-level, per-
+   * location bucket (see Dataproc staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-
    * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
    * not a gs://... URI to a Cloud Storage bucket.
@@ -497,13 +496,12 @@ class ClusterConfig extends \Google\Collection
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs
    * data, such as Spark and MapReduce history files. If you do not specify a
-   * temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or
-   * EU) for your cluster's temp bucket according to the Compute Engine zone
-   * where your cluster is deployed, and then create and manage this project-
-   * level, per-location bucket. The default bucket has a TTL of 90 days, but
-   * you can use any TTL (or none) if you specify a bucket (see Dataproc staging
-   * and temp buckets
-   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * temp bucket, Dataproc determines a Cloud Storage location (US, ASIA, or EU)
+   * for the cluster temp bucket according to the Compute Engine zone where the
+   * cluster is deployed, and then creates and manages this project-level, per-
+   * location bucket. The default bucket has a TTL of 90 days, but you can use
+   * any TTL (or none) if you specify a bucket (see Dataproc staging and temp
+   * buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-
    * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
    * not a gs://... URI to a Cloud Storage bucket.
    *
