@@ -64,6 +64,13 @@ class UnitOperationCondition extends \Google\Model
    */
   public const TYPE_TYPE_APP_COMPONENTS_REGISTERED = 'TYPE_APP_COMPONENTS_REGISTERED';
   /**
+   * Indicates if the UnitOperation's core workload execution completed
+   * successfully. The workload is the core execution operation performed for a
+   * UnitOperation (e.g., provisioning, updating, or deprovisioning resources)
+   * excluding post-operation checks.
+   */
+  public const TYPE_TYPE_WORKLOAD_SUCCEEDED = 'TYPE_WORKLOAD_SUCCEEDED';
+  /**
    * Required. Last time the condition transited from one status to another.
    *
    * @var string
@@ -168,7 +175,7 @@ class UnitOperationCondition extends \Google\Model
    *
    * Accepted values: TYPE_UNSPECIFIED, TYPE_SCHEDULED, TYPE_RUNNING,
    * TYPE_SUCCEEDED, TYPE_CANCELLED, TYPE_APP_CREATED,
-   * TYPE_APP_COMPONENTS_REGISTERED
+   * TYPE_APP_COMPONENTS_REGISTERED, TYPE_WORKLOAD_SUCCEEDED
    *
    * @param self::TYPE_* $type
    */
