@@ -46,19 +46,18 @@ class DiskConfig extends \Google\Collection
    */
   public $bootDiskSizeGb;
   /**
-   * Optional. Type of the boot disk (default is "pd-standard"). Valid values:
-   * "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd"
-   * (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard
-   * Disk Drive). See Disk types
-   * (https://cloud.google.com/compute/docs/disks#disk-types).
+   * Optional. Type of the boot disk (default is pd-standard). Valid values: pd-
+   * balanced (Persistent Disk Balanced Solid State Drive), pd-ssd (Persistent
+   * Disk Solid State Drive), or pd-standard (Persistent Disk Hard Disk Drive).
+   * See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
    *
    * @var string
    */
   public $bootDiskType;
   /**
-   * Optional. Interface type of local SSDs (default is "scsi"). Valid values:
-   * "scsi" (Small Computer System Interface), "nvme" (Non-Volatile Memory
-   * Express). See local SSD performance
+   * Optional. Interface type of local SSDs (default is scsi). Valid values:
+   * scsi (Small Computer System Interface), nvme (Non-Volatile Memory Express).
+   * See local SSD performance
    * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
    *
    * @var string
@@ -146,11 +145,10 @@ class DiskConfig extends \Google\Collection
     return $this->bootDiskSizeGb;
   }
   /**
-   * Optional. Type of the boot disk (default is "pd-standard"). Valid values:
-   * "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd"
-   * (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard
-   * Disk Drive). See Disk types
-   * (https://cloud.google.com/compute/docs/disks#disk-types).
+   * Optional. Type of the boot disk (default is pd-standard). Valid values: pd-
+   * balanced (Persistent Disk Balanced Solid State Drive), pd-ssd (Persistent
+   * Disk Solid State Drive), or pd-standard (Persistent Disk Hard Disk Drive).
+   * See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
    *
    * @param string $bootDiskType
    */
@@ -166,9 +164,9 @@ class DiskConfig extends \Google\Collection
     return $this->bootDiskType;
   }
   /**
-   * Optional. Interface type of local SSDs (default is "scsi"). Valid values:
-   * "scsi" (Small Computer System Interface), "nvme" (Non-Volatile Memory
-   * Express). See local SSD performance
+   * Optional. Interface type of local SSDs (default is scsi). Valid values:
+   * scsi (Small Computer System Interface), nvme (Non-Volatile Memory Express).
+   * See local SSD performance
    * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
    *
    * @param string $localSsdInterface
