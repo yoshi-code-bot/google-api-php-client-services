@@ -20,7 +20,7 @@ namespace Google\Service\HypercomputeCluster;
 class BootDisk extends \Google\Model
 {
   /**
-   * Required. Immutable. Size of the disk in gigabytes. Must be at least 10GB.
+   * Required. Immutable. Size of the disk in gigabytes. Must be at least 40GB.
    *
    * @var string
    */
@@ -35,7 +35,7 @@ class BootDisk extends \Google\Model
   public $type;
 
   /**
-   * Required. Immutable. Size of the disk in gigabytes. Must be at least 10GB.
+   * Required. Immutable. Size of the disk in gigabytes. Must be at least 40GB.
    *
    * @param string $sizeGb
    */
