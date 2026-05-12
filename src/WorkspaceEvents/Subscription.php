@@ -108,6 +108,8 @@ class Subscription extends \Google\Collection
    * @var string
    */
   public $createTime;
+  protected $driveOptionsType = DriveOptions::class;
+  protected $driveOptionsDataType = '';
   /**
    * Optional. This checksum is computed by the server based on the value of
    * other fields, and might be sent on update requests to ensure the client has
@@ -264,6 +266,23 @@ class Subscription extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Features that are supported only for subscriptions on Drive
+   * resources.
+   *
+   * @param DriveOptions $driveOptions
+   */
+  public function setDriveOptions(DriveOptions $driveOptions)
+  {
+    $this->driveOptions = $driveOptions;
+  }
+  /**
+   * @return DriveOptions
+   */
+  public function getDriveOptions()
+  {
+    return $this->driveOptions;
   }
   /**
    * Optional. This checksum is computed by the server based on the value of
