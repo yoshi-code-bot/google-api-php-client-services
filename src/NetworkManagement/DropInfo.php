@@ -147,6 +147,11 @@ class DropInfo extends \Google\Model
    */
   public const CAUSE_FIREWALL_BLOCKING_LOAD_BALANCER_BACKEND_HEALTH_CHECK = 'FIREWALL_BLOCKING_LOAD_BALANCER_BACKEND_HEALTH_CHECK';
   /**
+   * Firewalls block health check probes to the Envoy proxies that power this
+   * load balancer.
+   */
+  public const CAUSE_FIREWALL_BLOCKING_LOAD_BALANCER_ENVOY_PROXY_HEALTH_CHECK = 'FIREWALL_BLOCKING_LOAD_BALANCER_ENVOY_PROXY_HEALTH_CHECK';
+  /**
    * Matching ingress firewall rules by network tags for packets sent via
    * serverless VPC direct egress is unsupported. Behavior is undefined.
    * https://cloud.google.com/run/docs/configuring/vpc-direct-vpc#limitations
@@ -601,6 +606,7 @@ class DropInfo extends \Google\Model
    * UNKNOWN_INTERNAL_ADDRESS, FORWARDING_RULE_MISMATCH,
    * FORWARDING_RULE_NO_INSTANCES,
    * FIREWALL_BLOCKING_LOAD_BALANCER_BACKEND_HEALTH_CHECK,
+   * FIREWALL_BLOCKING_LOAD_BALANCER_ENVOY_PROXY_HEALTH_CHECK,
    * INGRESS_FIREWALL_TAGS_UNSUPPORTED_BY_DIRECT_VPC_EGRESS,
    * INSTANCE_NOT_RUNNING, GKE_CLUSTER_NOT_RUNNING, GKE_POD_NOT_RUNNING,
    * CLOUD_SQL_INSTANCE_NOT_RUNNING, REDIS_INSTANCE_NOT_RUNNING,
