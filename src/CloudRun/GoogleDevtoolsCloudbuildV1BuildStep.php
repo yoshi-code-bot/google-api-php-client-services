@@ -416,7 +416,7 @@ class GoogleDevtoolsCloudbuildV1BuildStep extends \Google\Collection
     return $this->pullTiming;
   }
   /**
-   * Output only. Declaration of results for this build step.
+   * Declaration of results for this build step.
    *
    * @param GoogleDevtoolsCloudbuildV1StepResult[] $results
    */
