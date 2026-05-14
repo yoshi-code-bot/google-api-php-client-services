@@ -66,7 +66,8 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends \Google\Colle
     return $this->datasetCustomMetrics;
   }
   /**
-   * Required. The metrics to be calculated in the evaluation run.
+   * Optional. The metrics to be calculated in the evaluation run. Required when
+   * analysis_configs is not set.
    *
    * @param GoogleCloudAiplatformV1EvaluationRunMetric[] $metrics
    */
