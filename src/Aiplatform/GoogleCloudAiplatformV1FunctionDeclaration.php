@@ -20,6 +20,29 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FunctionDeclaration extends \Google\Model
 {
   /**
+   * This value is unspecified.
+   */
+  public const BEHAVIOR_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * If set, the system will wait to receive the function response before
+   * continuing the conversation.
+   */
+  public const BEHAVIOR_BLOCKING = 'BLOCKING';
+  /**
+   * If set, the system will not wait to receive the function response. Instead,
+   * it will attempt to handle function responses as they become available while
+   * maintaining the conversation between the user and the model.
+   */
+  public const BEHAVIOR_NON_BLOCKING = 'NON_BLOCKING';
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system
+   * keeps the current function call behavior. This field is currently only
+   * supported by the BidiGenerateContent method.
+   *
+   * @var string
+   */
+  public $behavior;
+  /**
    * Optional. Description and purpose of the function. Model uses it to decide
    * how and whether to call the function.
    *
@@ -59,6 +82,26 @@ class GoogleCloudAiplatformV1FunctionDeclaration extends \Google\Model
    */
   public $responseJsonSchema;
 
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system
+   * keeps the current function call behavior. This field is currently only
+   * supported by the BidiGenerateContent method.
+   *
+   * Accepted values: UNSPECIFIED, BLOCKING, NON_BLOCKING
+   *
+   * @param self::BEHAVIOR_* $behavior
+   */
+  public function setBehavior($behavior)
+  {
+    $this->behavior = $behavior;
+  }
+  /**
+   * @return self::BEHAVIOR_*
+   */
+  public function getBehavior()
+  {
+    return $this->behavior;
+  }
   /**
    * Optional. Description and purpose of the function. Model uses it to decide
    * how and whether to call the function.

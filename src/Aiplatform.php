@@ -10974,10 +10974,6 @@ class Aiplatform extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'operationName' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'create' => [
               'path' => 'v1/{+parent}/reasoningEngines',
@@ -14262,10 +14258,6 @@ class Aiplatform extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'operationName' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'create' => [

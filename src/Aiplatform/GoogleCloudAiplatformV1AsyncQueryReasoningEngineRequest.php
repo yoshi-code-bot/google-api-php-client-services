@@ -20,20 +20,31 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1AsyncQueryReasoningEngineRequest extends \Google\Model
 {
   /**
-   * Optional. Input Cloud Storage URI for the Async query.
+   * Optional. Input Cloud Storage URI for the Async query. If you are not
+   * bringing your own container (BYOC), the content of the file should be a
+   * JSON object with an `input` field matching the `input` field of
+   * `QueryReasoningEngineRequest` (e.g. `{ "input": { "user_id": "hello",
+   * "message":"$QUERY"} }`). For BYOC, the content of the file depends on the
+   * the agent application.
    *
    * @var string
    */
   public $inputGcsUri;
   /**
-   * Optional. Output Cloud Storage URI for the Async query.
+   * Optional. Output Cloud Storage URI for the Async query. This contains the
+   * final response of the query.
    *
    * @var string
    */
   public $outputGcsUri;
 
   /**
-   * Optional. Input Cloud Storage URI for the Async query.
+   * Optional. Input Cloud Storage URI for the Async query. If you are not
+   * bringing your own container (BYOC), the content of the file should be a
+   * JSON object with an `input` field matching the `input` field of
+   * `QueryReasoningEngineRequest` (e.g. `{ "input": { "user_id": "hello",
+   * "message":"$QUERY"} }`). For BYOC, the content of the file depends on the
+   * the agent application.
    *
    * @param string $inputGcsUri
    */
@@ -49,7 +60,8 @@ class GoogleCloudAiplatformV1AsyncQueryReasoningEngineRequest extends \Google\Mo
     return $this->inputGcsUri;
   }
   /**
-   * Optional. Output Cloud Storage URI for the Async query.
+   * Optional. Output Cloud Storage URI for the Async query. This contains the
+   * final response of the query.
    *
    * @param string $outputGcsUri
    */

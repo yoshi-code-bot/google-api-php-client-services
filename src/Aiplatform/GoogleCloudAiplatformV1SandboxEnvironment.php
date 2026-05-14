@@ -98,7 +98,6 @@ class GoogleCloudAiplatformV1SandboxEnvironment extends \Google\Model
   /**
    * Optional. The name of the SandboxEnvironmentTemplate specified in the
    * parent Agent Engine resource that this SandboxEnvironment is created from.
-   * Only one of `sandbox_environment_template` and `spec` should be set.
    *
    * @var string
    */
@@ -265,7 +264,6 @@ class GoogleCloudAiplatformV1SandboxEnvironment extends \Google\Model
   /**
    * Optional. The name of the SandboxEnvironmentTemplate specified in the
    * parent Agent Engine resource that this SandboxEnvironment is created from.
-   * Only one of `sandbox_environment_template` and `spec` should be set.
    *
    * @param string $sandboxEnvironmentTemplate
    */

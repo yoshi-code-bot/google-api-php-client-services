@@ -19,7 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collection
 {
+  public const CODEC_VIDEO_CODEC_UNSPECIFIED = 'VIDEO_CODEC_UNSPECIFIED';
+  public const CODEC_VIDEO_CODEC_H264 = 'VIDEO_CODEC_H264';
+  public const CODEC_VIDEO_CODEC_PRORES = 'VIDEO_CODEC_PRORES';
   protected $collection_key = 'conditioningFrames';
+  /**
+   * Optional. Video codec to use for output.
+   *
+   * @var string
+   */
+  public $codec;
   protected $conditioningFramesType = CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame::class;
   protected $conditioningFramesDataType = 'array';
   protected $humanPoseType = CloudAiLargeModelsVisionHumanPose::class;
@@ -70,6 +79,25 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    */
   public $videoTransformStrength;
 
+  /**
+   * Optional. Video codec to use for output.
+   *
+   * Accepted values: VIDEO_CODEC_UNSPECIFIED, VIDEO_CODEC_H264,
+   * VIDEO_CODEC_PRORES
+   *
+   * @param self::CODEC_* $codec
+   */
+  public function setCodec($codec)
+  {
+    $this->codec = $codec;
+  }
+  /**
+   * @return self::CODEC_*
+   */
+  public function getCodec()
+  {
+    return $this->codec;
+  }
   /**
    * Conditioning frames for veo experimental models ONLY, not to be confused
    * with keyframes (ID:31) in GenerateVideoRequest.
