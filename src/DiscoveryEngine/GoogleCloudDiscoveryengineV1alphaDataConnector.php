@@ -249,6 +249,13 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public $connectorModes;
   /**
+   * Optional. If set, this value instead of `data_source` is used to fetch the
+   * corresponding connector source.
+   *
+   * @var string
+   */
+  public $connectorSourceId;
+  /**
    * Output only. The type of connector. Each source can only map to one type.
    * For example, salesforce, confluence and jira have THIRD_PARTY connector
    * type. It is not mutable once set by system.
@@ -624,6 +631,23 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getConnectorModes()
   {
     return $this->connectorModes;
+  }
+  /**
+   * Optional. If set, this value instead of `data_source` is used to fetch the
+   * corresponding connector source.
+   *
+   * @param string $connectorSourceId
+   */
+  public function setConnectorSourceId($connectorSourceId)
+  {
+    $this->connectorSourceId = $connectorSourceId;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectorSourceId()
+  {
+    return $this->connectorSourceId;
   }
   /**
    * Output only. The type of connector. Each source can only map to one type.
