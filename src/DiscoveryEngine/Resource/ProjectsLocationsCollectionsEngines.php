@@ -170,7 +170,9 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * Sets the IAM access control policy for an Engine. A `NOT_FOUND` error is
    * returned if the resource does not exist. **Important:** When setting a policy
    * directly on an Engine resource, the only recommended roles in the bindings
-   * are: `roles/discoveryengine.user` and `roles/discoveryengine.agentspaceUser`.
+   * are: `roles/discoveryengine.admin`, `roles/discoveryengine.agentspaceAdmin`,
+   * `roles/discoveryengine.user`, `roles/discoveryengine.agentspaceUser`,
+   * `roles/discoveryengine.viewer`, `roles/discoveryengine.agentspaceViewer`.
    * Attempting to grant any other role will result in a warning in logging.
    * (engines.setIamPolicy)
    *
