@@ -37,10 +37,10 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest extends \Go
    */
   public $pageSize;
   /**
-   * The page token received from a previous `BatchSearchLinkProcesses` call.
-   * Use it to get the next page. When requesting subsequent pages of a
-   * response, remember that all parameters must match the values you provided
-   * in the original request.
+   * Optional. The page token received from a previous
+   * `BatchSearchLinkProcesses` call. Use it to get the next page. When
+   * requesting subsequent pages of a response, remember that all parameters
+   * must match the values you provided in the original request.
    *
    * @var string
    */
@@ -83,10 +83,10 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest extends \Go
     return $this->pageSize;
   }
   /**
-   * The page token received from a previous `BatchSearchLinkProcesses` call.
-   * Use it to get the next page. When requesting subsequent pages of a
-   * response, remember that all parameters must match the values you provided
-   * in the original request.
+   * Optional. The page token received from a previous
+   * `BatchSearchLinkProcesses` call. Use it to get the next page. When
+   * requesting subsequent pages of a response, remember that all parameters
+   * must match the values you provided in the original request.
    *
    * @param string $pageToken
    */
