@@ -50,7 +50,14 @@ class UsersMessages extends \Google\Service\Resource
     return $this->call('batchDelete', [$params]);
   }
   /**
-   * Modifies the labels on the specified messages. (messages.batchModify)
+   * Modifies the labels and the Classification Label values on the specified
+   * messages. For administrators modifying messages for users in their
+   * organization, requests require authorization with a [service account](https:/
+   * /developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+   * [domain-wide delegation authority](https://developers.google.com/identity/pro
+   * tocols/OAuth2ServiceAccount#delegatingauthority) to impersonate users with
+   * the `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
+   * (messages.batchModify)
    *
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.
@@ -194,7 +201,14 @@ class UsersMessages extends \Google\Service\Resource
     return $this->call('list', [$params], ListMessagesResponse::class);
   }
   /**
-   * Modifies the labels on the specified message. (messages.modify)
+   * Modifies the labels and the Classification Label values on the specified
+   * message. For administrators modifying message for users in their
+   * organization, requests require authorization with a [service account](https:/
+   * /developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+   * [domain-wide delegation authority](https://developers.google.com/identity/pro
+   * tocols/OAuth2ServiceAccount#delegatingauthority) to impersonate users with
+   * the `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
+   * (messages.modify)
    *
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.

@@ -89,7 +89,9 @@ class Message extends \Google\Collection
    * schemas can be queried using the Google Drive Labels API. Each
    * classification label ID must be unique. If duplicate IDs are provided, only
    * one will be retained, and the selection is arbitrary. Only used for Google
-   * Workspace accounts.
+   * Workspace accounts. There's a limit of 20 Classification Label values per
+   * request. If the Classification Label values exceeds the maximum allowed
+   * number, the request fails.
    *
    * @param ClassificationLabelValue[] $classificationLabelValues
    */
