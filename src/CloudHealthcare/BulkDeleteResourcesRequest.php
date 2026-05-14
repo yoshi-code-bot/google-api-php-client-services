@@ -55,6 +55,15 @@ class BulkDeleteResourcesRequest extends \Google\Model
    */
   public $until;
   /**
+   * Optional. If set to true, the request will only perform a dry run. By
+   * default (once the behavior change is fully rolled out), this will default
+   * to true. During the transition period, the default depends on the Mendel
+   * flag status for the project.
+   *
+   * @var bool
+   */
+  public $validateOnly;
+  /**
    * Optional. Specifies which version of the resources to delete.
    *
    * @var string
@@ -117,6 +126,25 @@ class BulkDeleteResourcesRequest extends \Google\Model
   public function getUntil()
   {
     return $this->until;
+  }
+  /**
+   * Optional. If set to true, the request will only perform a dry run. By
+   * default (once the behavior change is fully rolled out), this will default
+   * to true. During the transition period, the default depends on the Mendel
+   * flag status for the project.
+   *
+   * @param bool $validateOnly
+   */
+  public function setValidateOnly($validateOnly)
+  {
+    $this->validateOnly = $validateOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getValidateOnly()
+  {
+    return $this->validateOnly;
   }
   /**
    * Optional. Specifies which version of the resources to delete.
