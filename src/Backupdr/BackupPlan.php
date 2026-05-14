@@ -217,9 +217,9 @@ class BackupPlan extends \Google\Collection
     return $this->backupVaultServiceAccount;
   }
   /**
-   * Optional. Defines optional properties specific to backups of disk-based
-   * resources, such as Compute Engine. This includes settings like whether to
-   * perform a guest flush.
+   * Optional. Defines optional properties specific to backups of compute
+   * instance-based resources, such as Compute Engine. This includes settings
+   * like whether to perform a guest flush.
    *
    * @param ComputeInstanceBackupPlanProperties $computeInstanceBackupPlanProperties
    */
