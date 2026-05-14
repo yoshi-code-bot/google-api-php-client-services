@@ -28,7 +28,7 @@ class EstablishVolumePeeringRequest extends \Google\Collection
    */
   public $peerClusterName;
   /**
-   * Optional. List of IPv4 ip addresses to be used for peering.
+   * Optional. List of IPv4 IP addresses to be used for peering.
    *
    * @var string[]
    */
@@ -66,7 +66,7 @@ class EstablishVolumePeeringRequest extends \Google\Collection
     return $this->peerClusterName;
   }
   /**
-   * Optional. List of IPv4 ip addresses to be used for peering.
+   * Optional. List of IPv4 IP addresses to be used for peering.
    *
    * @param string[] $peerIpAddresses
    */
