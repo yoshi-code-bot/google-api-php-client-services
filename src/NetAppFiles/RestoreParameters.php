@@ -22,8 +22,8 @@ class RestoreParameters extends \Google\Model
   /**
    * Full name of the backup resource. Format for standard backup: projects/{pro
    * ject}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_i
-   * d} Format for BackupDR backup: projects/{project}/locations/{location}/back
-   * upVaults/{backup_vault}/dataSources/{data_source}/backups/{backup}
+   * d}. Format for BackupDR backup: projects/{project}/locations/{location}/bac
+   * kupVaults/{backup_vault}/dataSources/{data_source}/backups/{backup}
    *
    * @var string
    */
@@ -39,8 +39,8 @@ class RestoreParameters extends \Google\Model
   /**
    * Full name of the backup resource. Format for standard backup: projects/{pro
    * ject}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_i
-   * d} Format for BackupDR backup: projects/{project}/locations/{location}/back
-   * upVaults/{backup_vault}/dataSources/{data_source}/backups/{backup}
+   * d}. Format for BackupDR backup: projects/{project}/locations/{location}/bac
+   * kupVaults/{backup_vault}/dataSources/{data_source}/backups/{backup}
    *
    * @param string $sourceBackup
    */

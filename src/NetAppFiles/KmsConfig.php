@@ -103,7 +103,7 @@ class KmsConfig extends \Google\Model
    */
   public $labels;
   /**
-   * Identifier. Name of the KmsConfig. Format:
+   * Identifier. Name of the `KmsConfig`. Format:
    * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    *
    * @var string
@@ -213,7 +213,7 @@ class KmsConfig extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. Name of the KmsConfig. Format:
+   * Identifier. Name of the `KmsConfig`. Format:
    * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    *
    * @param string $name

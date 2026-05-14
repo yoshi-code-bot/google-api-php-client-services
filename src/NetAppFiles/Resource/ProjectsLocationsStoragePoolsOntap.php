@@ -35,8 +35,8 @@ use Google\Service\NetAppFiles\ExecuteOntapPostResponse;
 class ProjectsLocationsStoragePoolsOntap extends \Google\Service\Resource
 {
   /**
-   * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
-   * `StoragePool` cluster. (ontap.executeOntapDelete)
+   * `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the `StoragePool`
+   * cluster. (ontap.executeOntapDelete)
    *
    * @param string $ontapPath Required. The resource path of the ONTAP resource.
    * Format: `projects/{project_number}/locations/{location_id}/storagePools/{stor
@@ -54,8 +54,8 @@ class ProjectsLocationsStoragePoolsOntap extends \Google\Service\Resource
     return $this->call('executeOntapDelete', [$params], ExecuteOntapDeleteResponse::class);
   }
   /**
-   * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool`
-   * cluster. (ontap.executeOntapGet)
+   * `ExecuteOntapGet` sends the ONTAP `GET` request to the `StoragePool` cluster.
+   * (ontap.executeOntapGet)
    *
    * @param string $ontapPath Required. The resource path of the ONTAP resource.
    * Format: `projects/{project_number}/locations/{location_id}/storagePools/{stor
@@ -73,7 +73,7 @@ class ProjectsLocationsStoragePoolsOntap extends \Google\Service\Resource
     return $this->call('executeOntapGet', [$params], ExecuteOntapGetResponse::class);
   }
   /**
-   * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool`
+   * `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the `StoragePool`
    * cluster. (ontap.executeOntapPatch)
    *
    * @param string $ontapPath Required. The resource path of the ONTAP resource.
@@ -93,12 +93,12 @@ class ProjectsLocationsStoragePoolsOntap extends \Google\Service\Resource
     return $this->call('executeOntapPatch', [$params], ExecuteOntapPatchResponse::class);
   }
   /**
-   * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool`
+   * `ExecuteOntapPost` sends the ONTAP `POST` request to the `StoragePool`
    * cluster. (ontap.executeOntapPost)
    *
-   * @param string $ontapPath Required. The resource path of the ONTAP resource.
-   * Format: `projects/{project_number}/locations/{location_id}/storagePools/{stor
-   * age_pool_id}/ontap/{ontap_resource_path}`. For example:
+   * @param string $ontapPath Required. The path of the ONTAP resource. Format: `p
+   * rojects/{project_number}/locations/{location_id}/storagePools/{storage_pool_i
+   * d}/ontap/{ontap_resource_path}`. For example:
    * `projects/123456789/locations/us-central1/storagePools/my-storage-
    * pool/ontap/api/storage/volumes`.
    * @param ExecuteOntapPostRequest $postBody

@@ -138,9 +138,9 @@ class Backup extends \Google\Model
    */
   public $sourceSnapshot;
   /**
-   * Volume full name of this backup belongs to. Either source_volume or
-   * ontap_source should be provided. Format:
-   * `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * The resource name of the volume that this backup belongs to. You must
+   * provide either `source_volume` or `ontap_source`. Format:
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
    *
    * @var string
    */
@@ -354,9 +354,9 @@ class Backup extends \Google\Model
     return $this->sourceSnapshot;
   }
   /**
-   * Volume full name of this backup belongs to. Either source_volume or
-   * ontap_source should be provided. Format:
-   * `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * The resource name of the volume that this backup belongs to. You must
+   * provide either `source_volume` or `ontap_source`. Format:
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
    *
    * @param string $sourceVolume
    */
