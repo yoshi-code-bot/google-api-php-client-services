@@ -21,7 +21,8 @@ class GoogleFirestoreAdminV1SearchGeoSpec extends \Google\Model
 {
   /**
    * Optional. Disables geoJSON indexing for the field. By default, geoJSON
-   * points are indexed.
+   * points are indexed. Firestore GeoPoints are indexed regardless of this
+   * value.
    *
    * @var bool
    */
@@ -29,7 +30,8 @@ class GoogleFirestoreAdminV1SearchGeoSpec extends \Google\Model
 
   /**
    * Optional. Disables geoJSON indexing for the field. By default, geoJSON
-   * points are indexed.
+   * points are indexed. Firestore GeoPoints are indexed regardless of this
+   * value.
    *
    * @param bool $geoJsonIndexingDisabled
    */

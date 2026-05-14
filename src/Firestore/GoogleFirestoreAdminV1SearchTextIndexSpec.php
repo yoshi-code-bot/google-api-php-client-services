@@ -24,8 +24,7 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
    */
   public const INDEX_TYPE_TEXT_INDEX_TYPE_UNSPECIFIED = 'TEXT_INDEX_TYPE_UNSPECIFIED';
   /**
-   * Field values are tokenized. This is the only way currently supported for
-   * MONGODB_COMPATIBLE_API.
+   * Field values are tokenized.
    */
   public const INDEX_TYPE_TOKENIZED = 'TOKENIZED';
   /**
@@ -33,8 +32,7 @@ class GoogleFirestoreAdminV1SearchTextIndexSpec extends \Google\Model
    */
   public const MATCH_TYPE_TEXT_MATCH_TYPE_UNSPECIFIED = 'TEXT_MATCH_TYPE_UNSPECIFIED';
   /**
-   * Match on any indexed field. This is the only way currently supported for
-   * MONGODB_COMPATIBLE_API.
+   * Match on any indexed field.
    */
   public const MATCH_TYPE_MATCH_GLOBALLY = 'MATCH_GLOBALLY';
   /**
