@@ -65,7 +65,7 @@ class Alert extends \Google\Collection
   public const STATE_TRACKED_EXTERNALLY = 'TRACKED_EXTERNALLY';
   protected $collection_key = 'findings';
   /**
-   * Optional. AI summary of the finding.
+   * Optional. AI summary of the alert.
    *
    * @var string
    */
@@ -149,7 +149,7 @@ class Alert extends \Google\Collection
   public $state;
 
   /**
-   * Optional. AI summary of the finding.
+   * Optional. AI summary of the alert.
    *
    * @param string $aiSummary
    */
