@@ -20,7 +20,7 @@ namespace Google\Service\ThreatIntelligenceService;
 class AlertDocument extends \Google\Model
 {
   /**
-   * Output only. AI summary of the finding.
+   * Output only. AI summary of the document.
    *
    * @var string
    */
@@ -97,7 +97,7 @@ class AlertDocument extends \Google\Model
   protected $translationDataType = '';
 
   /**
-   * Output only. AI summary of the finding.
+   * Output only. AI summary of the document.
    *
    * @param string $aiSummary
    */
