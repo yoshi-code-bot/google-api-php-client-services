@@ -310,8 +310,7 @@ class GoogleFirestoreAdminV1Index extends \Google\Collection
   }
   /**
    * Optional. Options for search indexes that are at the index definition
-   * level. This field is only currently supported for indexes with
-   * MONGODB_COMPATIBLE_API ApiScope.
+   * level.
    *
    * @param GoogleFirestoreAdminV1SearchIndexOptions $searchIndexOptions
    */
