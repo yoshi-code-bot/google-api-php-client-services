@@ -76,23 +76,6 @@ class AttachedDiskInitializeParams extends \Google\Collection
    */
   public $diskSizeGb;
   /**
-   * Specifies the disk type to use to create the instance. If not specified,
-   * the default is pd-standard, specified using the full URL. For example:
-   *
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes
-   * /pd-standard
-   *
-   * For a full list of acceptable values, seePersistent disk types. If you
-   * specify this field when creating a VM, you can provide either the full or
-   * partial URL. For example, the following values are valid:              - ht
-   * tps://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/d
-   * iskType     - projects/project/zones/zone/diskTypes/diskType     -
-   * zones/zone/diskTypes/diskType
-   *
-   * If you specify this field when creating or updating an instance template or
-   * all-instances configuration, specify the type of the disk, not the URL. For
-   * example: pd-standard.
-   *
    * @var string
    */
   public $diskType;
@@ -306,23 +289,6 @@ class AttachedDiskInitializeParams extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * Specifies the disk type to use to create the instance. If not specified,
-   * the default is pd-standard, specified using the full URL. For example:
-   *
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes
-   * /pd-standard
-   *
-   * For a full list of acceptable values, seePersistent disk types. If you
-   * specify this field when creating a VM, you can provide either the full or
-   * partial URL. For example, the following values are valid:              - ht
-   * tps://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/d
-   * iskType     - projects/project/zones/zone/diskTypes/diskType     -
-   * zones/zone/diskTypes/diskType
-   *
-   * If you specify this field when creating or updating an instance template or
-   * all-instances configuration, specify the type of the disk, not the URL. For
-   * example: pd-standard.
-   *
    * @param string $diskType
    */
   public function setDiskType($diskType)
