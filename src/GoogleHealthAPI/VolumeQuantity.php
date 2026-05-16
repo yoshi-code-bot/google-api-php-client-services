@@ -62,7 +62,9 @@ class VolumeQuantity extends \Google\Model
    */
   public $milliliters;
   /**
-   * Optional. Value representing the user provided unit.
+   * Optional. Value representing the user provided unit, used only for user-
+   * facing input and display purposes. In the API format, all volume quantities
+   * are converted to milliliters.
    *
    * @var string
    */
@@ -77,7 +79,9 @@ class VolumeQuantity extends \Google\Model
     return $this->milliliters;
   }
   /**
-   * Optional. Value representing the user provided unit.
+   * Optional. Value representing the user provided unit, used only for user-
+   * facing input and display purposes. In the API format, all volume quantities
+   * are converted to milliliters.
    *
    * Accepted values: VOLUME_UNIT_UNSPECIFIED, CUP_IMPERIAL, CUP_US,
    * FLUID_OUNCE_IMPERIAL, FLUID_OUNCE_US, LITER, MILLILITER, PINT_IMPERIAL,

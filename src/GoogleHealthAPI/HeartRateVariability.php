@@ -21,7 +21,8 @@ class HeartRateVariability extends \Google\Model
 {
   /**
    * Optional. The root mean square of successive differences between normal
-   * heartbeats. This is a measure of heart rate variability used by Fitbit.
+   * heartbeats. This is a measure of heart rate variability used by Google
+   * Health.
    *
    * @var 
    */
