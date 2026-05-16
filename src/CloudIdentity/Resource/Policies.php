@@ -18,6 +18,7 @@
 namespace Google\Service\CloudIdentity\Resource;
 
 use Google\Service\CloudIdentity\ListPoliciesResponse;
+use Google\Service\CloudIdentity\Operation;
 use Google\Service\CloudIdentity\Policy;
 
 /**
@@ -30,6 +31,35 @@ use Google\Service\CloudIdentity\Policy;
  */
 class Policies extends \Google\Service\Resource
 {
+  /**
+   * Create a policy. (policies.create)
+   *
+   * @param Policy $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function create(Policy $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
+  /**
+   * Delete a policy. (policies.delete)
+   *
+   * @param string $name Required. The name of the policy to delete. Format:
+   * `policies/{policy}`.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
   /**
    * Get a policy. (policies.get)
    *
@@ -80,6 +110,23 @@ class Policies extends \Google\Service\Resource
     $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListPoliciesResponse::class);
+  }
+  /**
+   * Update a policy. (policies.patch)
+   *
+   * @param string $name Output only. Identifier. The [resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the Policy.
+   * Format: policies/{policy}.
+   * @param Policy $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, Policy $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
 }
 
