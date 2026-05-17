@@ -20,6 +20,8 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataProduct extends \Google\Collection
 {
   protected $collection_key = 'ownerEmails';
+  protected $accessApprovalConfigType = GoogleCloudDataplexV1DataProductAccessApprovalConfig::class;
+  protected $accessApprovalConfigDataType = '';
   protected $accessGroupsType = GoogleCloudDataplexV1DataProductAccessGroup::class;
   protected $accessGroupsDataType = 'map';
   /**
@@ -99,6 +101,22 @@ class GoogleCloudDataplexV1DataProduct extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. Configuration for access approval for the data product.
+   *
+   * @param GoogleCloudDataplexV1DataProductAccessApprovalConfig $accessApprovalConfig
+   */
+  public function setAccessApprovalConfig(GoogleCloudDataplexV1DataProductAccessApprovalConfig $accessApprovalConfig)
+  {
+    $this->accessApprovalConfig = $accessApprovalConfig;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataProductAccessApprovalConfig
+   */
+  public function getAccessApprovalConfig()
+  {
+    return $this->accessApprovalConfig;
+  }
   /**
    * Optional. Data product access groups by access group id as key. If data
    * product is used only for packaging data assets, then access groups may be

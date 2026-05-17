@@ -19,6 +19,8 @@ namespace Google\Service\CloudDataplex\Resource;
 
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1DataProduct;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListDataProductsResponse;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1RequestDataProductAccessRequest;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1RequestDataProductAccessResponse;
 use Google\Service\CloudDataplex\GoogleIamV1Policy;
 use Google\Service\CloudDataplex\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
@@ -187,6 +189,26 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Requests access to a data product. This will trigger an access approval
+   * workflow, and the requester will need to wait for the approval to be granted
+   * before they will be able to access the data product assets.
+   * (dataProducts.requestAccess)
+   *
+   * @param string $parent Required. The resource name of the data product.
+   * Format: projects/{project_number}/locations/{location_id}/dataProducts/{data_
+   * product_id}
+   * @param GoogleCloudDataplexV1RequestDataProductAccessRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1RequestDataProductAccessResponse
+   * @throws \Google\Service\Exception
+   */
+  public function requestAccess($parent, GoogleCloudDataplexV1RequestDataProductAccessRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('requestAccess', [$params], GoogleCloudDataplexV1RequestDataProductAccessResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

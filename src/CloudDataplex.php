@@ -907,6 +907,16 @@ class CloudDataplex extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'requestAccess' => [
+              'path' => 'v1/{+parent}:requestAccess',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
