@@ -53,9 +53,15 @@ class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
    */
   public const INTEGRATION_STATE_ADHOC_SHARING_KEY_NOT_GENERATED = 'ADHOC_SHARING_KEY_NOT_GENERATED';
   /**
-   * The ad-hoc sharing key is not yet registered in ADI for this app.
+   * The ad-hoc sharing key is not yet registered in Android Developer
+   * Verification for this app.
    */
   public const INTEGRATION_STATE_ADHOC_SHARING_KEY_NOT_REGISTERED = 'ADHOC_SHARING_KEY_NOT_REGISTERED';
+  /**
+   * The linked Play developer account was not found or is not fully set up in
+   * Android Developer Console.
+   */
+  public const INTEGRATION_STATE_PLAY_ANDROID_DEVELOPER_CONSOLE_ACCOUNT_NOT_FOUND = 'PLAY_ANDROID_DEVELOPER_CONSOLE_ACCOUNT_NOT_FOUND';
   /**
    * App bundle integration state. Only valid for android apps.
    *
@@ -78,7 +84,8 @@ class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
    * Accepted values: AAB_INTEGRATION_STATE_UNSPECIFIED, INTEGRATED,
    * PLAY_ACCOUNT_NOT_LINKED, NO_APP_WITH_GIVEN_BUNDLE_ID_IN_PLAY_ACCOUNT,
    * APP_NOT_PUBLISHED, AAB_STATE_UNAVAILABLE, PLAY_IAS_TERMS_NOT_ACCEPTED,
-   * ADHOC_SHARING_KEY_NOT_GENERATED, ADHOC_SHARING_KEY_NOT_REGISTERED
+   * ADHOC_SHARING_KEY_NOT_GENERATED, ADHOC_SHARING_KEY_NOT_REGISTERED,
+   * PLAY_ANDROID_DEVELOPER_CONSOLE_ACCOUNT_NOT_FOUND
    *
    * @param self::INTEGRATION_STATE_* $integrationState
    */
