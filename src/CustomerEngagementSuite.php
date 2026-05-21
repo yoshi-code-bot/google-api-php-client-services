@@ -49,6 +49,7 @@ class CustomerEngagementSuite extends \Google\Service
   public $projects_locations_apps_deployments;
   public $projects_locations_apps_examples;
   public $projects_locations_apps_guardrails;
+  public $projects_locations_apps_message;
   public $projects_locations_apps_sessions;
   public $projects_locations_apps_tools;
   public $projects_locations_apps_toolsets;
@@ -724,6 +725,26 @@ class CustomerEngagementSuite extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_apps_message = new CustomerEngagementSuite\Resource\ProjectsLocationsAppsMessage(
+        $this,
+        $this->serviceName,
+        'message',
+        [
+          'methods' => [
+            'send' => [
+              'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

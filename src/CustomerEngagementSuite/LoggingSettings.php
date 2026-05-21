@@ -37,7 +37,8 @@ class LoggingSettings extends \Google\Model
   protected $unredactedAudioRecordingConfigDataType = '';
 
   /**
-   * Optional. Configuration for how audio interactions should be recorded.
+   * Optional. Configuration for how audio interactions should be recorded. The
+   * audio is subject to redaction as configured in RedactionConfig.
    *
    * @param AudioRecordingConfig $audioRecordingConfig
    */
@@ -53,8 +54,8 @@ class LoggingSettings extends \Google\Model
     return $this->audioRecordingConfig;
   }
   /**
-   * Optional. Settings to describe the BigQuery export behaviors for the app.
-   * The conversation data will be exported to BigQuery tables if it is enabled.
+   * Optional. Configures the BigQuery export behaviors for the app. The
+   * conversation data is subject to redaction as configured in RedactionConfig.
    *
    * @param BigQueryExportSettings $bigqueryExportSettings
    */
@@ -154,8 +155,8 @@ class LoggingSettings extends \Google\Model
     return $this->redactionConfig;
   }
   /**
-   * Optional. Configures recording of unredacted audio. Use this to maintain a
-   * raw backup with restricted access when audio redaction is enabled,
+   * Optional. Configures an additional recording of unredacted audio. This can
+   * be used to maintain a raw audio copy when audio redaction is enabled,
    * typically for auditing or monitoring purposes.
    *
    * @param AudioRecordingConfig $unredactedAudioRecordingConfig
