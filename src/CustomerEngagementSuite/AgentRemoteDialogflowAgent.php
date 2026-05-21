@@ -48,6 +48,14 @@ class AgentRemoteDialogflowAgent extends \Google\Model
    */
   public $inputVariableMapping;
   /**
+   * Optional. The name of the variable that contains the language code to be
+   * used for the Dialogflow session. If unspecified, the default language code
+   * of the Dialogflow agent will be used.
+   *
+   * @var string
+   */
+  public $languageCodeVariable;
+  /**
    * Optional. The mapping of the Dialogflow session parameters names to the app
    * variables names to be sent back to the CES agent after the Dialogflow agent
    * execution ends.
@@ -135,6 +143,24 @@ class AgentRemoteDialogflowAgent extends \Google\Model
   public function getInputVariableMapping()
   {
     return $this->inputVariableMapping;
+  }
+  /**
+   * Optional. The name of the variable that contains the language code to be
+   * used for the Dialogflow session. If unspecified, the default language code
+   * of the Dialogflow agent will be used.
+   *
+   * @param string $languageCodeVariable
+   */
+  public function setLanguageCodeVariable($languageCodeVariable)
+  {
+    $this->languageCodeVariable = $languageCodeVariable;
+  }
+  /**
+   * @return string
+   */
+  public function getLanguageCodeVariable()
+  {
+    return $this->languageCodeVariable;
   }
   /**
    * Optional. The mapping of the Dialogflow session parameters names to the app

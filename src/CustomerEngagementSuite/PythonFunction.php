@@ -40,6 +40,8 @@ class PythonFunction extends \Google\Model
    * @var string
    */
   public $pythonCode;
+  protected $serviceDirectoryConfigType = ServiceDirectoryConfig::class;
+  protected $serviceDirectoryConfigDataType = '';
 
   /**
    * Output only. The description of the Python function, parsed from the python
@@ -91,6 +93,22 @@ class PythonFunction extends \Google\Model
   public function getPythonCode()
   {
     return $this->pythonCode;
+  }
+  /**
+   * Optional. Service Directory configuration for the tool.
+   *
+   * @param ServiceDirectoryConfig $serviceDirectoryConfig
+   */
+  public function setServiceDirectoryConfig(ServiceDirectoryConfig $serviceDirectoryConfig)
+  {
+    $this->serviceDirectoryConfig = $serviceDirectoryConfig;
+  }
+  /**
+   * @return ServiceDirectoryConfig
+   */
+  public function getServiceDirectoryConfig()
+  {
+    return $this->serviceDirectoryConfig;
   }
 }
 

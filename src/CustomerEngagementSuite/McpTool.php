@@ -19,6 +19,23 @@ namespace Google\Service\CustomerEngagementSuite;
 
 class McpTool extends \Google\Model
 {
+  /**
+   * Default state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The tool is available and actively offered by the server.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The tool is configured or pinned, but currently not offered by the server.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
+  /**
+   * The tool exists on the server, but does not match the version on the
+   * server.
+   */
+  public const STATE_STALE = 'STALE';
   protected $apiAuthenticationType = ApiAuthentication::class;
   protected $apiAuthenticationDataType = '';
   /**
@@ -45,6 +62,13 @@ class McpTool extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Optional. The name override of the MCP tool. This is populated if the name
+   * was overridden by a Toolset override.
+   *
+   * @var string
+   */
+  public $nameOverride;
   protected $outputSchemaType = Schema::class;
   protected $outputSchemaDataType = '';
   /**
@@ -60,6 +84,13 @@ class McpTool extends \Google\Model
   public $serverAddress;
   protected $serviceDirectoryConfigType = ServiceDirectoryConfig::class;
   protected $serviceDirectoryConfigDataType = '';
+  /**
+   * Output only. The dynamic availability state of the tool on the external
+   * server.
+   *
+   * @var string
+   */
+  public $state;
   protected $tlsConfigType = TlsConfig::class;
   protected $tlsConfigDataType = '';
 
@@ -151,6 +182,23 @@ class McpTool extends \Google\Model
     return $this->name;
   }
   /**
+   * Optional. The name override of the MCP tool. This is populated if the name
+   * was overridden by a Toolset override.
+   *
+   * @param string $nameOverride
+   */
+  public function setNameOverride($nameOverride)
+  {
+    $this->nameOverride = $nameOverride;
+  }
+  /**
+   * @return string
+   */
+  public function getNameOverride()
+  {
+    return $this->nameOverride;
+  }
+  /**
    * Optional. The schema of the output arguments of the MCP tool.
    *
    * @param Schema $outputSchema
@@ -203,6 +251,25 @@ class McpTool extends \Google\Model
   public function getServiceDirectoryConfig()
   {
     return $this->serviceDirectoryConfig;
+  }
+  /**
+   * Output only. The dynamic availability state of the tool on the external
+   * server.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, INACTIVE, STALE
+   *
+   * @param self::STATE_* $state
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return self::STATE_*
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * Optional. The TLS configuration. Includes the custom server certificates

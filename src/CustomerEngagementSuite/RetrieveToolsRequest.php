@@ -21,6 +21,14 @@ class RetrieveToolsRequest extends \Google\Collection
 {
   protected $collection_key = 'toolIds';
   /**
+   * Optional. If true, the returned tools will contain raw descriptions and
+   * schemas directly from the server, bypassing any stored persistence
+   * configurations (overrides/snapshots).
+   *
+   * @var bool
+   */
+  public $bypassPersistenceConfig;
+  /**
    * Optional. The identifiers of the tools to retrieve from the toolset. If
    * empty, all tools in the toolset will be returned.
    *
@@ -28,6 +36,24 @@ class RetrieveToolsRequest extends \Google\Collection
    */
   public $toolIds;
 
+  /**
+   * Optional. If true, the returned tools will contain raw descriptions and
+   * schemas directly from the server, bypassing any stored persistence
+   * configurations (overrides/snapshots).
+   *
+   * @param bool $bypassPersistenceConfig
+   */
+  public function setBypassPersistenceConfig($bypassPersistenceConfig)
+  {
+    $this->bypassPersistenceConfig = $bypassPersistenceConfig;
+  }
+  /**
+   * @return bool
+   */
+  public function getBypassPersistenceConfig()
+  {
+    return $this->bypassPersistenceConfig;
+  }
   /**
    * Optional. The identifiers of the tools to retrieve from the toolset. If
    * empty, all tools in the toolset will be returned.
