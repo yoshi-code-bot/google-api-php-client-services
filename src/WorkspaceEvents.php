@@ -77,6 +77,12 @@ class WorkspaceEvents extends \Google\Service
   /** View chat and spaces in Google Chat. */
   const CHAT_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.spaces.readonly";
+  /** See and change your availability status in Google Chat.. */
+  const CHAT_USERS_AVAILABILITY =
+      "https://www.googleapis.com/auth/chat.users.availability";
+  /** See your availability status in Google Chat.. */
+  const CHAT_USERS_AVAILABILITY_READONLY =
+      "https://www.googleapis.com/auth/chat.users.availability.readonly";
   /** View and modify last read time for Google Chat conversations. */
   const CHAT_USERS_READSTATE =
       "https://www.googleapis.com/auth/chat.users.readstate";
