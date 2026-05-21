@@ -116,6 +116,8 @@ class Backup extends \Google\Model
    * @var string
    */
   public $name;
+  protected $ontapSourceType = OntapSource::class;
+  protected $ontapSourceDataType = '';
   /**
    * Output only. Reserved for future use
    *
@@ -301,6 +303,23 @@ class Backup extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume
+   * or ontap_source should be provided.
+   *
+   * @param OntapSource $ontapSource
+   */
+  public function setOntapSource(OntapSource $ontapSource)
+  {
+    $this->ontapSource = $ontapSource;
+  }
+  /**
+   * @return OntapSource
+   */
+  public function getOntapSource()
+  {
+    return $this->ontapSource;
   }
   /**
    * Output only. Reserved for future use
