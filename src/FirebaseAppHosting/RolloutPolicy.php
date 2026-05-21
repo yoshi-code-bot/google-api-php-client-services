@@ -101,8 +101,8 @@ class RolloutPolicy extends \Google\Collection
    * Optional. A list of file paths patterns to exclude from triggering a
    * rollout. Patterns in this list take precedence over required_paths.
    * **Note**: All paths must be in the ignored_paths in order for the rollout
-   * to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
-   * "foo/bar/excluded” type: GLOB }
+   * to be skipped. Limited to 100 paths. Example: ``` ignored_paths: { pattern:
+   * "foo/bar/excluded", type: "GLOB" } ```
    *
    * @param Path[] $ignoredPaths
    */
@@ -122,8 +122,8 @@ class RolloutPolicy extends \Google\Collection
    * at least one of the changed files in the commit are present in this list.
    * This field is optional; the rollout policy will default to triggering on
    * all paths if both ignored_paths and required_paths are not populated.
-   * Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type:
-   * GLOB }
+   * Limited to 100 paths. Example: ``` required_paths: { pattern: "foo/bar",
+   * type: "GLOB" } ```
    *
    * @param Path[] $requiredPaths
    */
