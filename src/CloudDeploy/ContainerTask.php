@@ -46,13 +46,6 @@ class ContainerTask extends \Google\Collection
    * @var string
    */
   public $image;
-  /**
-   * Optional. Shell script to execute. If provided then command and args cannot
-   * be specified.
-   *
-   * @var string
-   */
-  public $script;
 
   /**
    * Optional. Args is the container arguments to use. This overrides the
@@ -119,23 +112,6 @@ class ContainerTask extends \Google\Collection
   public function getImage()
   {
     return $this->image;
-  }
-  /**
-   * Optional. Shell script to execute. If provided then command and args cannot
-   * be specified.
-   *
-   * @param string $script
-   */
-  public function setScript($script)
-  {
-    $this->script = $script;
-  }
-  /**
-   * @return string
-   */
-  public function getScript()
-  {
-    return $this->script;
   }
 }
 
