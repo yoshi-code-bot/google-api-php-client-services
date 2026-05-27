@@ -124,6 +124,8 @@ class ComputeEngineTargetDefaults extends \Google\Collection
    * @var string
    */
   public $diskType;
+  protected $disksType = PersistentDiskDefaults::class;
+  protected $disksDataType = 'array';
   /**
    * Optional. Defines whether the instance has integrity monitoring enabled.
    * This can be set to true only if the VM boot option is EFI, and vTPM is
@@ -375,6 +377,22 @@ class ComputeEngineTargetDefaults extends \Google\Collection
   public function getDiskType()
   {
     return $this->diskType;
+  }
+  /**
+   * Optional. The details of each disk to create.
+   *
+   * @param PersistentDiskDefaults[] $disks
+   */
+  public function setDisks($disks)
+  {
+    $this->disks = $disks;
+  }
+  /**
+   * @return PersistentDiskDefaults[]
+   */
+  public function getDisks()
+  {
+    return $this->disks;
   }
   /**
    * Optional. Defines whether the instance has integrity monitoring enabled.
