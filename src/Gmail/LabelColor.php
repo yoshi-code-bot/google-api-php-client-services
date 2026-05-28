@@ -35,7 +35,8 @@ class LabelColor extends \Google\Model
    * #f2b2a8, #7a2e0b, #ffc8af, #7a4706, #ffdeb5, \#594c05, #fbe983, #684e07,
    * #fdedc1, #0b4f30, #b3efd3, #04502e, #a2dcc1, \#c2c2c2, #4986e7, #2da2bb,
    * #b99aff, #994a64, #f691b2, #ff7537, #ffad46, \#662e37, #ebdbde, #cca6ac,
-   * #094228, #42d692, #16a765
+   * #094228, #42d692, #16a765, #757575, #1e53b8, \#007286, #7858c3, #c2185b,
+   * #d93025, #54240e, #633e04, #521d28, #202124, \#083018
    *
    * @var string
    */
@@ -56,7 +57,8 @@ class LabelColor extends \Google\Model
    * #f2b2a8, #7a2e0b, #ffc8af, #7a4706, #ffdeb5, \#594c05, #fbe983, #684e07,
    * #fdedc1, #0b4f30, #b3efd3, #04502e, #a2dcc1, \#c2c2c2, #4986e7, #2da2bb,
    * #b99aff, #994a64, #f691b2, #ff7537, #ffad46, \#662e37, #ebdbde, #cca6ac,
-   * #094228, #42d692, #16a765
+   * #094228, #42d692, #16a765, #757575, #1e53b8, \#007286, #7858c3, #c2185b,
+   * #d93025, #54240e, #633e04, #521d28, #202124, \#083018
    *
    * @var string
    */
@@ -78,7 +80,8 @@ class LabelColor extends \Google\Model
    * #f2b2a8, #7a2e0b, #ffc8af, #7a4706, #ffdeb5, \#594c05, #fbe983, #684e07,
    * #fdedc1, #0b4f30, #b3efd3, #04502e, #a2dcc1, \#c2c2c2, #4986e7, #2da2bb,
    * #b99aff, #994a64, #f691b2, #ff7537, #ffad46, \#662e37, #ebdbde, #cca6ac,
-   * #094228, #42d692, #16a765
+   * #094228, #42d692, #16a765, #757575, #1e53b8, \#007286, #7858c3, #c2185b,
+   * #d93025, #54240e, #633e04, #521d28, #202124, \#083018
    *
    * @param string $backgroundColor
    */
@@ -109,7 +112,8 @@ class LabelColor extends \Google\Model
    * #f2b2a8, #7a2e0b, #ffc8af, #7a4706, #ffdeb5, \#594c05, #fbe983, #684e07,
    * #fdedc1, #0b4f30, #b3efd3, #04502e, #a2dcc1, \#c2c2c2, #4986e7, #2da2bb,
    * #b99aff, #994a64, #f691b2, #ff7537, #ffad46, \#662e37, #ebdbde, #cca6ac,
-   * #094228, #42d692, #16a765
+   * #094228, #42d692, #16a765, #757575, #1e53b8, \#007286, #7858c3, #c2185b,
+   * #d93025, #54240e, #633e04, #521d28, #202124, \#083018
    *
    * @param string $textColor
    */

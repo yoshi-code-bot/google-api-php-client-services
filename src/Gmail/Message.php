@@ -55,7 +55,8 @@ class Message extends \Google\Collection
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded
    * string. Returned in `messages.get` and `drafts.get` responses when the
-   * `format=RAW` parameter is supplied.
+   * `format=RAW` parameter is supplied. @required gmail.users.drafts.create
+   * gmail.users.drafts.update
    *
    * @var string
    */
@@ -193,7 +194,8 @@ class Message extends \Google\Collection
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded
    * string. Returned in `messages.get` and `drafts.get` responses when the
-   * `format=RAW` parameter is supplied.
+   * `format=RAW` parameter is supplied. @required gmail.users.drafts.create
+   * gmail.users.drafts.update
    *
    * @param string $raw
    */
