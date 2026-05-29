@@ -97,6 +97,8 @@ class ProjectedField extends \Google\Model
    * @var string
    */
   public $truncationGranularity;
+  protected $virtualFieldType = VirtualField::class;
+  protected $virtualFieldDataType = '';
 
   /**
    * The alias name for the field. Valid alias examples are: - single word
@@ -231,6 +233,26 @@ class ProjectedField extends \Google\Model
   public function getTruncationGranularity()
   {
     return $this->truncationGranularity;
+  }
+  /**
+   * Optional. A virtual field definition, used in place of field to define a
+   * field that is computed from other fields rather than being directly present
+   * in the data schema.For example, a virtual field can be defined using
+   * COALESCE to select the first non-null value from a list of fields.If
+   * virtual_field is set, field must not be set.
+   *
+   * @param VirtualField $virtualField
+   */
+  public function setVirtualField(VirtualField $virtualField)
+  {
+    $this->virtualField = $virtualField;
+  }
+  /**
+   * @return VirtualField
+   */
+  public function getVirtualField()
+  {
+    return $this->virtualField;
   }
 }
 
