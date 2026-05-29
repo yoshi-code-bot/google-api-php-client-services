@@ -41,6 +41,10 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountRiskReason
    */
   public const REASON_CLIENT_ACCESSED_MANY_ACCOUNTS = 'CLIENT_ACCESSED_MANY_ACCOUNTS';
   /**
+   * This email domain is a suspected provider of disposable email addresses.
+   */
+  public const REASON_DISPOSABLE_EMAIL_DOMAIN = 'DISPOSABLE_EMAIL_DOMAIN';
+  /**
    * Output only. A risk reason associated with this request.
    *
    * @var string
@@ -51,7 +55,8 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountRiskReason
    * Output only. A risk reason associated with this request.
    *
    * Accepted values: RISK_REASON_UNSPECIFIED, CLIENT_HISTORICAL_BOT_ACTIVITY,
-   * ACCOUNT_IN_LARGE_RELATED_GROUP, CLIENT_ACCESSED_MANY_ACCOUNTS
+   * ACCOUNT_IN_LARGE_RELATED_GROUP, CLIENT_ACCESSED_MANY_ACCOUNTS,
+   * DISPOSABLE_EMAIL_DOMAIN
    *
    * @param self::REASON_* $reason
    */
