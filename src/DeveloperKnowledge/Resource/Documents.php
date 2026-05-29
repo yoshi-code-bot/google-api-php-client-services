@@ -41,10 +41,7 @@ class Documents extends \Google\Service\Resource
    * retrieve. A maximum of 20 documents can be retrieved in a batch. The
    * documents are returned in the same order as the `names` in the request.
    * Format: `documents/{uri_without_scheme}` Example:
-   * `documents/docs.cloud.google.com/storage/docs/creating-buckets` If you are
-   * changing the batch size, consider the value of `maxConcurrentGCSFetches`
-   * constant in the service implementation: http://csdepot/google3/devrel/boq/dev
-   * eloperknowledge/service/developerknowledge.go
+   * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * @opt_param string view Optional. Specifies the DocumentView of the document.
    * If unspecified, DeveloperKnowledge.BatchGetDocuments defaults to
    * `DOCUMENT_VIEW_CONTENT`.
