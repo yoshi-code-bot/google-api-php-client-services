@@ -19,8 +19,6 @@ namespace Google\Service\MyBusinessVerifications;
 
 class GenerateInstantVerificationTokenRequest extends \Google\Model
 {
-  protected $locationDataType = LocationData::class;
-  protected $locationDataDataType = '';
   /**
    * The location identifier associated with an unverified listing. This is the
    * location id generated at the time that the listing was originally created.
@@ -34,26 +32,6 @@ class GenerateInstantVerificationTokenRequest extends \Google\Model
    */
   public $locationId;
 
-  /**
-   * Immutable. Deprecated: Please use location_id instead. The address and
-   * other details of the location to generate an instant verification token
-   * for.
-   *
-   * @deprecated
-   * @param LocationData $locationData
-   */
-  public function setLocationData(LocationData $locationData)
-  {
-    $this->locationData = $locationData;
-  }
-  /**
-   * @deprecated
-   * @return LocationData
-   */
-  public function getLocationData()
-  {
-    return $this->locationData;
-  }
   /**
    * The location identifier associated with an unverified listing. This is the
    * location id generated at the time that the listing was originally created.
