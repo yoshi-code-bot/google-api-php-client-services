@@ -186,6 +186,10 @@ class TestIssue extends \Google\Model
    * There was an issue with the assets in this test.
    */
   public const TYPE_assetIssue = 'assetIssue';
+  /**
+   * Licensing protection termination (Pairip) was detected.
+   */
+  public const TYPE_licensingProtectionTermination = 'licensingProtectionTermination';
   protected $internal_gapi_mappings = [
         "warningMigration" => "warning_migration",
   ];
@@ -301,7 +305,8 @@ class TestIssue extends \Google\Model
    * usedRoboDirective, usedRoboIgnoreDirective, insufficientCoverage,
    * inAppPurchases, crashDialogError, uiElementsTooDeep, blankScreen,
    * overlappingUiElements, unityException, deviceOutOfMemory,
-   * logcatCollectionError, detectedAppSplashScreen, assetIssue
+   * logcatCollectionError, detectedAppSplashScreen, assetIssue,
+   * licensingProtectionTermination
    *
    * @param self::TYPE_* $type
    */
