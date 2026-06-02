@@ -38,8 +38,9 @@ class Projects extends \Google\Service\Resource
    * (projects.getAutokeyConfig)
    *
    * @param string $name Required. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`,
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+   * `projects/{PROJECT_ID}/autokeyConfig`.
    * @param array $optParams Optional parameters.
    * @return AutokeyConfig
    * @throws \Google\Service\Exception
@@ -128,8 +129,9 @@ class Projects extends \Google\Service\Resource
    * (projects.updateAutokeyConfig)
    *
    * @param string $name Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`,
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+   * `projects/{PROJECT_ID}/autokeyConfig`.
    * @param AutokeyConfig $postBody
    * @param array $optParams Optional parameters.
    *

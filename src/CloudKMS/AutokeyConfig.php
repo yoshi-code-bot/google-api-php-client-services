@@ -62,6 +62,12 @@ class AutokeyConfig extends \Google\Model
    */
   public const STATE_UNINITIALIZED = 'UNINITIALIZED';
   /**
+   * Deprecated: This state is not returned by the backend.
+   *
+   * @deprecated
+   */
+  public const STATE_KEY_PROJECT_PERMISSION_DENIED = 'KEY_PROJECT_PERMISSION_DENIED';
+  /**
    * Optional. A checksum computed by the server based on the value of other
    * fields. This may be sent on update requests to ensure that the client has
    * an up-to-date value before proceeding. The request will be rejected with an
@@ -93,8 +99,9 @@ class AutokeyConfig extends \Google\Model
   public $keyProjectResolutionMode;
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`,
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+   * `projects/{PROJECT_ID}/autokeyConfig`.
    *
    * @var string
    */
@@ -171,8 +178,9 @@ class AutokeyConfig extends \Google\Model
   }
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`,
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+   * `projects/{PROJECT_ID}/autokeyConfig`.
    *
    * @param string $name
    */
@@ -191,7 +199,7 @@ class AutokeyConfig extends \Google\Model
    * Output only. The state for the AutokeyConfig.
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, KEY_PROJECT_DELETED,
-   * UNINITIALIZED
+   * UNINITIALIZED, KEY_PROJECT_PERMISSION_DENIED
    *
    * @param self::STATE_* $state
    */
