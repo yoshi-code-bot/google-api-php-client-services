@@ -155,7 +155,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * clients from accidentally creating duplicate commitments. The request ID must
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string updateMask Required. Field mask is used to specify the
+   * @opt_param string updateMask Optional. Field mask is used to specify the
    * fields to be overwritten in the Boundary resource by the update. The fields
    * specified in the update_mask are relative to the resource, not the full
    * request. A field will be overwritten if it is in the mask. If the user does
