@@ -31,7 +31,7 @@ class RegistryBook extends \Google\Collection
    */
   public $claimedScopes;
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the RegistryBook was created.
    *
    * @var string
    */
@@ -43,19 +43,19 @@ class RegistryBook extends \Google\Collection
    */
   public $isDefault;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the RegistryBook.
    *
    * @var string
    */
   public $name;
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the RegistryBook was last updated.
    *
    * @var string
    */
@@ -97,7 +97,7 @@ class RegistryBook extends \Google\Collection
     return $this->claimedScopes;
   }
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the RegistryBook was created.
    *
    * @param string $createTime
    */
@@ -129,7 +129,7 @@ class RegistryBook extends \Google\Collection
     return $this->isDefault;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @param string[] $labels
    */
@@ -145,7 +145,7 @@ class RegistryBook extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the RegistryBook.
    *
    * @param string $name
    */
@@ -161,7 +161,7 @@ class RegistryBook extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the RegistryBook was last updated.
    *
    * @param string $updateTime
    */

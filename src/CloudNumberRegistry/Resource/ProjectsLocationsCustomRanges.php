@@ -37,11 +37,13 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
    * Creates a new CustomRange in a given project and location.
    * (customRanges.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. The parent resource name where the
+   * CustomRange will be created.
    * @param CustomRange $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customRangeId Required. Id of the requesting object.
+   * @opt_param string customRangeId Required. The ID to use for the CustomRange,
+   * which will become the final segment of the resource name.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -65,7 +67,7 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
   /**
    * Deletes a single CustomRange. (customRanges.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the CustomRange to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force Optional. If set to true, all associated resources will
@@ -93,7 +95,8 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
   /**
    * Finds free IP ranges in a single CustomRange. (customRanges.findFreeIpRanges)
    *
-   * @param string $name Required. Name of the CustomRange.
+   * @param string $name Required. The resource name of the CustomRange to search
+   * within.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int cidrPrefixLength Required. The prefix length of the free IP
@@ -122,7 +125,8 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
   /**
    * Gets details of a single CustomRange. (customRanges.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the CustomRange to
+   * retrieve.
    * @param array $optParams Optional parameters.
    * @return CustomRange
    * @throws \Google\Service\Exception
@@ -137,10 +141,11 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
    * Lists CustomRanges in a given project and location.
    * (customRanges.listProjectsLocationsCustomRanges)
    *
-   * @param string $parent Required. Parent value for ListCustomRangesRequest
+   * @param string $parent Required. The parent resource name, for example
+   * `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string filter Optional. Filter expression to filter the results.
    * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
@@ -159,7 +164,9 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
   /**
    * Updates the parameters of a single CustomRange. (customRanges.patch)
    *
-   * @param string $name Required. Identifier. name of resource
+   * @param string $name Required. Identifier. The resource name of the
+   * CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    * @param CustomRange $postBody
    * @param array $optParams Optional parameters.
    *
@@ -192,7 +199,7 @@ class ProjectsLocationsCustomRanges extends \Google\Service\Resource
    * Gets the details of a single CustomRange and its utilization.
    * (customRanges.showUtilization)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the CustomRange.
    * @param array $optParams Optional parameters.
    * @return ShowCustomRangeUtilizationResponse
    * @throws \Google\Service\Exception

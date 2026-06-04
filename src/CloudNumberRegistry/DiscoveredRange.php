@@ -23,14 +23,14 @@ class DiscoveredRange extends \Google\Collection
   protected $attributesType = Attribute::class;
   protected $attributesDataType = 'array';
   /**
-   * Output only. If true, allow child ranges of this range to overlap with each
-   * other.
+   * Output only. If true, allows child DiscoveredRanges of this DiscoveredRange
+   * to overlap with each other.
    *
    * @var bool
    */
   public $childCidrOverlapAllowed;
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the DiscoveredRange was created.
    *
    * @var string
    */
@@ -56,37 +56,41 @@ class DiscoveredRange extends \Google\Collection
    */
   public $ipv6CidrRange;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Required. Identifier. Name of the DiscoveredRange.
+   * Required. Identifier. The resource name of the DiscoveredRange, in the
+   * format `projects/{project}/locations/{location}/discoveredRanges/{discovere
+   * d_range}`.
    *
    * @var string
    */
   public $name;
   /**
-   * Optional. The parent range of the DiscoveredRange.
+   * Optional. The resource name of the parent DiscoveredRange, in the format `p
+   * rojects/{project}/locations/{location}/discoveredRanges/{discovered_range}`
+   * .
    *
    * @var string
    */
   public $parentRange;
   /**
-   * Optional. The realm of the DiscoveredRange.
+   * Optional. The Realm of the DiscoveredRange.
    *
    * @var string
    */
   public $realm;
   /**
-   * Output only. The registry book of the DiscoveredRange.
+   * Output only. The RegistryBook of the DiscoveredRange.
    *
    * @var string
    */
   public $registryBook;
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the DiscoveredRange was last updated.
    *
    * @var string
    */
@@ -109,8 +113,8 @@ class DiscoveredRange extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * Output only. If true, allow child ranges of this range to overlap with each
-   * other.
+   * Output only. If true, allows child DiscoveredRanges of this DiscoveredRange
+   * to overlap with each other.
    *
    * @param bool $childCidrOverlapAllowed
    */
@@ -126,7 +130,7 @@ class DiscoveredRange extends \Google\Collection
     return $this->childCidrOverlapAllowed;
   }
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the DiscoveredRange was created.
    *
    * @param string $createTime
    */
@@ -211,7 +215,7 @@ class DiscoveredRange extends \Google\Collection
     return $this->ipv6CidrRange;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @param string[] $labels
    */
@@ -227,7 +231,9 @@ class DiscoveredRange extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Required. Identifier. Name of the DiscoveredRange.
+   * Required. Identifier. The resource name of the DiscoveredRange, in the
+   * format `projects/{project}/locations/{location}/discoveredRanges/{discovere
+   * d_range}`.
    *
    * @param string $name
    */
@@ -243,7 +249,9 @@ class DiscoveredRange extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. The parent range of the DiscoveredRange.
+   * Optional. The resource name of the parent DiscoveredRange, in the format `p
+   * rojects/{project}/locations/{location}/discoveredRanges/{discovered_range}`
+   * .
    *
    * @param string $parentRange
    */
@@ -259,7 +267,7 @@ class DiscoveredRange extends \Google\Collection
     return $this->parentRange;
   }
   /**
-   * Optional. The realm of the DiscoveredRange.
+   * Optional. The Realm of the DiscoveredRange.
    *
    * @param string $realm
    */
@@ -275,7 +283,7 @@ class DiscoveredRange extends \Google\Collection
     return $this->realm;
   }
   /**
-   * Output only. The registry book of the DiscoveredRange.
+   * Output only. The RegistryBook of the DiscoveredRange.
    *
    * @param string $registryBook
    */
@@ -291,7 +299,7 @@ class DiscoveredRange extends \Google\Collection
     return $this->registryBook;
   }
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the DiscoveredRange was last updated.
    *
    * @param string $updateTime
    */

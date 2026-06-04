@@ -27,7 +27,7 @@ class Range extends \Google\Model
   protected $utilizationDataType = '';
 
   /**
-   * A custom range.
+   * A CustomRange.
    *
    * @param CustomRange $customRange
    */
@@ -43,7 +43,7 @@ class Range extends \Google\Model
     return $this->customRange;
   }
   /**
-   * A discovered range.
+   * A DiscoveredRange.
    *
    * @param DiscoveredRange $discoveredRange
    */
@@ -59,7 +59,7 @@ class Range extends \Google\Model
     return $this->discoveredRange;
   }
   /**
-   * The utilization of the range.
+   * The utilization of the Range.
    *
    * @param RangeUtilization $utilization
    */

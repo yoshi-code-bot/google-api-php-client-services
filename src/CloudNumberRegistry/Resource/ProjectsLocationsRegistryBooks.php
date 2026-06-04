@@ -37,11 +37,13 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
    * Creates a new RegistryBook in a given project and location.
    * (registryBooks.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. The parent resource name where the
+   * RegistryBook will be created.
    * @param RegistryBook $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string registryBookId Required. Id of the requesting object.
+   * @opt_param string registryBookId Required. The ID to use for the
+   * RegistryBook, which will become the final segment of the resource name.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -65,7 +67,8 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
   /**
    * Deletes a single RegistryBook. (registryBooks.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the RegistryBook to
+   * delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force Optional. If set to true, all associated resources will
@@ -93,10 +96,11 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
   /**
    * Gets details of a single RegistryBook. (registryBooks.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the RegistryBook to
+   * retrieve.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Optional. The view of the RegistryBook.
+   * @opt_param string view Optional. The view of the RegistryBook to retrieve.
    * @return RegistryBook
    * @throws \Google\Service\Exception
    */
@@ -110,17 +114,18 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
    * Lists RegistryBooks in a given project and location.
    * (registryBooks.listProjectsLocationsRegistryBooks)
    *
-   * @param string $parent Required. Parent value for ListRegistryBooksRequest
+   * @param string $parent Required. The parent resource name, for example
+   * `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filter expression to filter the results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
-   * @opt_param string view Optional. The view of the RegistryBook.
+   * @opt_param string view Optional. The view of the RegistryBook to retrieve.
    * @return ListRegistryBooksResponse
    * @throws \Google\Service\Exception
    */
@@ -133,7 +138,8 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
   /**
    * Updates the parameters of a single RegistryBook. (registryBooks.patch)
    *
-   * @param string $name Required. Identifier. name of resource
+   * @param string $name Required. Identifier. The resource name of the
+   * RegistryBook.
    * @param RegistryBook $postBody
    * @param array $optParams Optional parameters.
    *
@@ -166,7 +172,8 @@ class ProjectsLocationsRegistryBooks extends \Google\Service\Resource
    * Searches IP resources in a given RegistryBook.
    * (registryBooks.searchIpResources)
    *
-   * @param string $name Required. The name of the RegistryBook to search in.
+   * @param string $name Required. The resource name of the RegistryBook to search
+   * in.
    * @param SearchIpResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SearchIpResourcesResponse

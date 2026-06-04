@@ -20,25 +20,25 @@ namespace Google\Service\CloudNumberRegistry;
 class AggregatedData extends \Google\Model
 {
   /**
-   * Output only. Number of custom ranges in the RegistryBook.
+   * Output only. Number of CustomRanges in the RegistryBook.
    *
    * @var int
    */
   public $customRangesCount;
   /**
-   * Output only. Number of custom realms in the RegistryBook.
+   * Output only. Number of custom Realms in the RegistryBook.
    *
    * @var int
    */
   public $customRealmsCount;
   /**
-   * Output only. Number of discovered ranges in the RegistryBook.
+   * Output only. Number of DiscoveredRanges in the RegistryBook.
    *
    * @var int
    */
   public $discoveredRangesCount;
   /**
-   * Output only. Number of discovered realms in the RegistryBook.
+   * Output only. Number of discovered Realms in the RegistryBook.
    *
    * @var int
    */
@@ -51,7 +51,7 @@ class AggregatedData extends \Google\Model
   public $uniqueScopesCount;
 
   /**
-   * Output only. Number of custom ranges in the RegistryBook.
+   * Output only. Number of CustomRanges in the RegistryBook.
    *
    * @param int $customRangesCount
    */
@@ -67,7 +67,7 @@ class AggregatedData extends \Google\Model
     return $this->customRangesCount;
   }
   /**
-   * Output only. Number of custom realms in the RegistryBook.
+   * Output only. Number of custom Realms in the RegistryBook.
    *
    * @param int $customRealmsCount
    */
@@ -83,7 +83,7 @@ class AggregatedData extends \Google\Model
     return $this->customRealmsCount;
   }
   /**
-   * Output only. Number of discovered ranges in the RegistryBook.
+   * Output only. Number of DiscoveredRanges in the RegistryBook.
    *
    * @param int $discoveredRangesCount
    */
@@ -99,7 +99,7 @@ class AggregatedData extends \Google\Model
     return $this->discoveredRangesCount;
   }
   /**
-   * Output only. Number of discovered realms in the RegistryBook.
+   * Output only. Number of discovered Realms in the RegistryBook.
    *
    * @param int $discoveredRealmsCount
    */

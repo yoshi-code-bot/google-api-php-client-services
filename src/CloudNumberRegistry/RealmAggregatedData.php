@@ -20,20 +20,20 @@ namespace Google\Service\CloudNumberRegistry;
 class RealmAggregatedData extends \Google\Model
 {
   /**
-   * Output only. Number of custom ranges in the Realm.
+   * Output only. Number of CustomRanges in the Realm.
    *
    * @var int
    */
   public $customRangesCount;
   /**
-   * Output only. Number of discovered ranges in the Realm.
+   * Output only. Number of DiscoveredRanges in the Realm.
    *
    * @var int
    */
   public $discoveredRangesCount;
 
   /**
-   * Output only. Number of custom ranges in the Realm.
+   * Output only. Number of CustomRanges in the Realm.
    *
    * @param int $customRangesCount
    */
@@ -49,7 +49,7 @@ class RealmAggregatedData extends \Google\Model
     return $this->customRangesCount;
   }
   /**
-   * Output only. Number of discovered ranges in the Realm.
+   * Output only. Number of DiscoveredRanges in the Realm.
    *
    * @param int $discoveredRangesCount
    */

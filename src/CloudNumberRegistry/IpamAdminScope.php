@@ -69,26 +69,26 @@ class IpamAdminScope extends \Google\Collection
   public const STATE_READY_FOR_DELETION = 'READY_FOR_DELETION';
   protected $collection_key = 'scopes';
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the IpamAdminScope was created.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Required. Addon platforms that are enabled for this IPAM admin scope. Cloud
+   * Required. Add-on platforms that are enabled for this IpamAdminScope. Cloud
    * Number Registry only discovers the IP addresses from the enabled platforms.
    *
    * @var string[]
    */
   public $enabledAddonPlatforms;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the IpamAdminScope.
    *
    * @var string
    */
@@ -108,14 +108,14 @@ class IpamAdminScope extends \Google\Collection
    */
   public $state;
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the IpamAdminScope was last updated.
    *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the IpamAdminScope was created.
    *
    * @param string $createTime
    */
@@ -131,7 +131,7 @@ class IpamAdminScope extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. Addon platforms that are enabled for this IPAM admin scope. Cloud
+   * Required. Add-on platforms that are enabled for this IpamAdminScope. Cloud
    * Number Registry only discovers the IP addresses from the enabled platforms.
    *
    * @param string[] $enabledAddonPlatforms
@@ -148,7 +148,7 @@ class IpamAdminScope extends \Google\Collection
     return $this->enabledAddonPlatforms;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @param string[] $labels
    */
@@ -164,7 +164,7 @@ class IpamAdminScope extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the IpamAdminScope.
    *
    * @param string $name
    */
@@ -219,7 +219,7 @@ class IpamAdminScope extends \Google\Collection
     return $this->state;
   }
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the IpamAdminScope was last updated.
    *
    * @param string $updateTime
    */

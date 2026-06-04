@@ -36,7 +36,8 @@ class ProjectsLocationsDiscoveredRanges extends \Google\Service\Resource
    * Finds free IP ranges in a single DiscoveredRange.
    * (discoveredRanges.findFreeIpRanges)
    *
-   * @param string $name Required. Name of the DiscoveredRange.
+   * @param string $name Required. The resource name of the DiscoveredRange to
+   * search within.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int cidrPrefixLength Required. The prefix length of the free IP
@@ -65,7 +66,8 @@ class ProjectsLocationsDiscoveredRanges extends \Google\Service\Resource
   /**
    * Gets details of a single DiscoveredRange. (discoveredRanges.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the DiscoveredRange to
+   * retrieve.
    * @param array $optParams Optional parameters.
    * @return DiscoveredRange
    * @throws \Google\Service\Exception
@@ -80,10 +82,11 @@ class ProjectsLocationsDiscoveredRanges extends \Google\Service\Resource
    * Lists DiscoveredRanges in a given project and location.
    * (discoveredRanges.listProjectsLocationsDiscoveredRanges)
    *
-   * @param string $parent Required. Parent value for ListDiscoveredRangesRequest
+   * @param string $parent Required. The parent resource name, for example
+   * `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string filter Optional. Filter expression to filter the results.
    * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
@@ -103,7 +106,7 @@ class ProjectsLocationsDiscoveredRanges extends \Google\Service\Resource
    * Gets the details of a single DiscoveredRange and its utilization.
    * (discoveredRanges.showUtilization)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the DiscoveredRange.
    * @param array $optParams Optional parameters.
    * @return ShowDiscoveredRangeUtilizationResponse
    * @throws \Google\Service\Exception

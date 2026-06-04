@@ -25,7 +25,7 @@ class SearchIpResourcesResult extends \Google\Model
   protected $realmDataType = '';
 
   /**
-   * A range matching the search query.
+   * A Range matching the search query.
    *
    * @param Range $range
    */
@@ -41,7 +41,7 @@ class SearchIpResourcesResult extends \Google\Model
     return $this->range;
   }
   /**
-   * A realm matching the search query.
+   * A Realm matching the search query.
    *
    * @param Realm $realm
    */
