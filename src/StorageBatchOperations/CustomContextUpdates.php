@@ -21,7 +21,7 @@ class CustomContextUpdates extends \Google\Collection
 {
   protected $collection_key = 'keysToClear';
   /**
-   * Optional. Custom contexts to clear by key. A key cannot be present in both
+   * Optional. Custom contexts to clear by key. A key can't be present in both
    * `updates` and `keys_to_clear`.
    *
    * @var string[]
@@ -31,7 +31,7 @@ class CustomContextUpdates extends \Google\Collection
   protected $updatesDataType = 'map';
 
   /**
-   * Optional. Custom contexts to clear by key. A key cannot be present in both
+   * Optional. Custom contexts to clear by key. A key can't be present in both
    * `updates` and `keys_to_clear`.
    *
    * @param string[] $keysToClear

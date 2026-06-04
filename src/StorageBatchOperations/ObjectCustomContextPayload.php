@@ -20,20 +20,20 @@ namespace Google\Service\StorageBatchOperations;
 class ObjectCustomContextPayload extends \Google\Model
 {
   /**
-   * The value of the object custom context. If set, `value` must NOT be an
-   * empty string since it is a required field in custom context. If unset,
-   * `value` will be ignored and no changes will be made to the `value` field of
-   * the custom context payload.
+   * The value of the object custom context. If set, `value` can't be an empty
+   * string because it is a required field in custom context. If unset, `value`
+   * is ignored and no changes are made to the `value` field of the custom
+   * context payload.
    *
    * @var string
    */
   public $value;
 
   /**
-   * The value of the object custom context. If set, `value` must NOT be an
-   * empty string since it is a required field in custom context. If unset,
-   * `value` will be ignored and no changes will be made to the `value` field of
-   * the custom context payload.
+   * The value of the object custom context. If set, `value` can't be an empty
+   * string because it is a required field in custom context. If unset, `value`
+   * is ignored and no changes are made to the `value` field of the custom
+   * context payload.
    *
    * @param string $value
    */
