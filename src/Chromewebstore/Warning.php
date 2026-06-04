@@ -28,9 +28,7 @@ class Warning extends \Google\Model
   public $description;
   /**
    * The reason for the warning. This is a constant value that identifies the
-   * proximate cause of the warning. This should be at most 63 characters and
-   * match a regular expression of `A-Z+[A-Z0-9]`, which represents
-   * UPPER_SNAKE_CASE.
+   * proximate cause of the warning.
    *
    * @var string
    */
@@ -55,9 +53,7 @@ class Warning extends \Google\Model
   }
   /**
    * The reason for the warning. This is a constant value that identifies the
-   * proximate cause of the warning. This should be at most 63 characters and
-   * match a regular expression of `A-Z+[A-Z0-9]`, which represents
-   * UPPER_SNAKE_CASE.
+   * proximate cause of the warning.
    *
    * @param string $reason
    */

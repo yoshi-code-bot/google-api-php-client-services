@@ -35,7 +35,7 @@ class PublishItemRequest extends \Google\Collection
   protected $collection_key = 'deployInfos';
   /**
    * Optional. When set to true the request will fail if there are any warnings
-   * during validation and the details will be included in the error_details.
+   * during validation and the details will be included in the `error.details`.
    * Otherwise warnings are treated as non-blocking and will be ignored for
    * validation but will be included in the response for inspection. Defaults to
    * `false` if unset.
@@ -64,7 +64,7 @@ class PublishItemRequest extends \Google\Collection
 
   /**
    * Optional. When set to true the request will fail if there are any warnings
-   * during validation and the details will be included in the error_details.
+   * during validation and the details will be included in the `error.details`.
    * Otherwise warnings are treated as non-blocking and will be ignored for
    * validation but will be included in the response for inspection. Defaults to
    * `false` if unset.
