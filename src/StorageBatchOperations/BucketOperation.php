@@ -72,20 +72,24 @@ class BucketOperation extends \Google\Collection
   protected $manifestDataType = '';
   /**
    * Identifier. The resource name of the BucketOperation. This is defined by
-   * the service. Format: projects/{project}/locations/global/jobs/{job_id}/buck
-   * etOperations/{bucket_operation}.
+   * the service. Format: `projects/{project_id}/locations/global/jobs/{job_id}/
+   * bucketOperations/{bucket_operation}`.
    *
    * @var string
    */
   public $name;
   protected $prefixListType = PrefixList::class;
   protected $prefixListDataType = '';
+  protected $projectSourceType = ProjectSource::class;
+  protected $projectSourceDataType = '';
   protected $putMetadataType = PutMetadata::class;
   protected $putMetadataDataType = '';
   protected $putObjectHoldType = PutObjectHold::class;
   protected $putObjectHoldDataType = '';
   protected $rewriteObjectType = RewriteObject::class;
   protected $rewriteObjectDataType = '';
+  protected $setObjectAclsType = SetObjectAcls::class;
+  protected $setObjectAclsDataType = '';
   /**
    * Output only. The time that the BucketOperation was started.
    *
@@ -215,8 +219,8 @@ class BucketOperation extends \Google\Collection
   }
   /**
    * Identifier. The resource name of the BucketOperation. This is defined by
-   * the service. Format: projects/{project}/locations/global/jobs/{job_id}/buck
-   * etOperations/{bucket_operation}.
+   * the service. Format: `projects/{project_id}/locations/global/jobs/{job_id}/
+   * bucketOperations/{bucket_operation}`.
    *
    * @param string $name
    */
@@ -246,6 +250,22 @@ class BucketOperation extends \Google\Collection
   public function getPrefixList()
   {
     return $this->prefixList;
+  }
+  /**
+   * Specifies objects matching the object filters in a project source.
+   *
+   * @param ProjectSource $projectSource
+   */
+  public function setProjectSource(ProjectSource $projectSource)
+  {
+    $this->projectSource = $projectSource;
+  }
+  /**
+   * @return ProjectSource
+   */
+  public function getProjectSource()
+  {
+    return $this->projectSource;
   }
   /**
    * Updates object metadata. Allows updating fixed-key and custom metadata and
@@ -296,6 +316,22 @@ class BucketOperation extends \Google\Collection
   public function getRewriteObject()
   {
     return $this->rewriteObject;
+  }
+  /**
+   * Updates object ACLs.
+   *
+   * @param SetObjectAcls $setObjectAcls
+   */
+  public function setSetObjectAcls(SetObjectAcls $setObjectAcls)
+  {
+    $this->setObjectAcls = $setObjectAcls;
+  }
+  /**
+   * @return SetObjectAcls
+   */
+  public function getSetObjectAcls()
+  {
+    return $this->setObjectAcls;
   }
   /**
    * Output only. The time that the BucketOperation was started.

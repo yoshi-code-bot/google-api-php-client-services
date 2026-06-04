@@ -33,9 +33,9 @@ class ProjectsLocationsJobsBucketOperations extends \Google\Service\Resource
   /**
    * Gets a BucketOperation. (bucketOperations.get)
    *
-   * @param string $name Required. `name` of the bucket operation to retrieve.
-   * Format: projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations
-   * /{bucket_operation_id}.
+   * @param string $name Required. The `name` of the bucket operation to retrieve.
+   * Format: `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperation
+   * s/{bucket_operation_id}`.
    * @param array $optParams Optional parameters.
    * @return BucketOperation
    * @throws \Google\Service\Exception
@@ -51,13 +51,13 @@ class ProjectsLocationsJobsBucketOperations extends \Google\Service\Resource
    * (bucketOperations.listProjectsLocationsJobsBucketOperations)
    *
    * @param string $parent Required. Format:
-   * projects/{project_id}/locations/global/jobs/{job_id}.
+   * `projects/{project_id}/locations/global/jobs/{job_id}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filters results as defined by
    * https://google.aip.dev/160.
    * @opt_param string orderBy Optional. Field to sort by. Supported fields are
-   * name, create_time.
+   * `name` and `create_time`.
    * @opt_param int pageSize Optional. The list page size. Default page size is
    * 100.
    * @opt_param string pageToken Optional. The list page token.

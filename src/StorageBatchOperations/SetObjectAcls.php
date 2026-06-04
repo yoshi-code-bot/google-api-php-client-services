@@ -17,31 +17,28 @@
 
 namespace Google\Service\StorageBatchOperations;
 
-class BucketList extends \Google\Collection
+class SetObjectAcls extends \Google\Model
 {
-  protected $collection_key = 'buckets';
-  protected $bucketsType = Bucket::class;
-  protected $bucketsDataType = 'array';
+  protected $accessControlsUpdatesType = AccessControlsUpdates::class;
+  protected $accessControlsUpdatesDataType = '';
 
   /**
-   * Required. List of buckets and their objects to be transformed. You can
-   * specify only one bucket per job. If multiple buckets are specified, an
-   * error occurs.
+   * Required. Add, update, or remove grants from the object's existing ACLs.
    *
-   * @param Bucket[] $buckets
+   * @param AccessControlsUpdates $accessControlsUpdates
    */
-  public function setBuckets($buckets)
+  public function setAccessControlsUpdates(AccessControlsUpdates $accessControlsUpdates)
   {
-    $this->buckets = $buckets;
+    $this->accessControlsUpdates = $accessControlsUpdates;
   }
   /**
-   * @return Bucket[]
+   * @return AccessControlsUpdates
    */
-  public function getBuckets()
+  public function getAccessControlsUpdates()
   {
-    return $this->buckets;
+    return $this->accessControlsUpdates;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BucketList::class, 'Google_Service_StorageBatchOperations_BucketList');
+class_alias(SetObjectAcls::class, 'Google_Service_StorageBatchOperations_SetObjectAcls');

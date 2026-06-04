@@ -20,7 +20,7 @@ namespace Google\Service\StorageBatchOperations;
 class UpdateObjectCustomContext extends \Google\Model
 {
   /**
-   * If set, must be set to true and all existing object custom contexts will be
+   * If set, must be set to true and all existing object custom contexts are
    * deleted.
    *
    * @var bool
@@ -30,7 +30,7 @@ class UpdateObjectCustomContext extends \Google\Model
   protected $customContextUpdatesDataType = '';
 
   /**
-   * If set, must be set to true and all existing object custom contexts will be
+   * If set, must be set to true and all existing object custom contexts are
    * deleted.
    *
    * @param bool $clearAll
