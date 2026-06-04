@@ -66,7 +66,7 @@ class Realm extends \Google\Model
   protected $aggregatedDataType = RealmAggregatedData::class;
   protected $aggregatedDataDataType = '';
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the Realm was created.
    *
    * @var string
    */
@@ -74,43 +74,43 @@ class Realm extends \Google\Model
   protected $discoveryMetadataType = DiscoveryMetadata::class;
   protected $discoveryMetadataDataType = '';
   /**
-   * Optional. IP version of the realm.
+   * Optional. IP version of the Realm.
    *
    * @var string
    */
   public $ipVersion;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Required. Management type of realm.
+   * Required. Management type of the Realm.
    *
    * @var string
    */
   public $managementType;
   /**
-   * Required. Identifier. Unique name/ID of the realm
+   * Required. Identifier. The resource name of the Realm.
    *
    * @var string
    */
   public $name;
   /**
-   * Required. URI of the registry book that claims the realm.
+   * Required. Name of the RegistryBook that claims the Realm.
    *
    * @var string
    */
   public $registryBook;
   /**
-   * Required. Traffic type of realm.
+   * Required. Traffic type of the Realm.
    *
    * @var string
    */
   public $trafficType;
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the Realm was last updated.
    *
    * @var string
    */
@@ -134,7 +134,7 @@ class Realm extends \Google\Model
     return $this->aggregatedData;
   }
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the Realm was created.
    *
    * @param string $createTime
    */
@@ -150,7 +150,7 @@ class Realm extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. Discovery metadata of the realm.
+   * Output only. Discovery metadata of the Realm.
    *
    * @param DiscoveryMetadata $discoveryMetadata
    */
@@ -166,7 +166,7 @@ class Realm extends \Google\Model
     return $this->discoveryMetadata;
   }
   /**
-   * Optional. IP version of the realm.
+   * Optional. IP version of the Realm.
    *
    * Accepted values: IP_VERSION_UNSPECIFIED, IPV4, IPV6
    *
@@ -184,7 +184,7 @@ class Realm extends \Google\Model
     return $this->ipVersion;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @param string[] $labels
    */
@@ -200,7 +200,7 @@ class Realm extends \Google\Model
     return $this->labels;
   }
   /**
-   * Required. Management type of realm.
+   * Required. Management type of the Realm.
    *
    * Accepted values: MANAGEMENT_TYPE_UNSPECIFIED, CNR, USER
    *
@@ -218,7 +218,7 @@ class Realm extends \Google\Model
     return $this->managementType;
   }
   /**
-   * Required. Identifier. Unique name/ID of the realm
+   * Required. Identifier. The resource name of the Realm.
    *
    * @param string $name
    */
@@ -234,7 +234,7 @@ class Realm extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. URI of the registry book that claims the realm.
+   * Required. Name of the RegistryBook that claims the Realm.
    *
    * @param string $registryBook
    */
@@ -250,7 +250,7 @@ class Realm extends \Google\Model
     return $this->registryBook;
   }
   /**
-   * Required. Traffic type of realm.
+   * Required. Traffic type of the Realm.
    *
    * Accepted values: TRAFFIC_TYPE_UNSPECIFIED, UNSET, INTERNET, PRIVATE,
    * LINKLOCAL
@@ -269,7 +269,7 @@ class Realm extends \Google\Model
     return $this->trafficType;
   }
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the Realm was last updated.
    *
    * @param string $updateTime
    */

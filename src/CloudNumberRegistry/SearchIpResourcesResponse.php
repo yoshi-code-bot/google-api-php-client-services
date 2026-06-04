@@ -54,7 +54,7 @@ class SearchIpResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Deprecated: Use results field instead. The list of ranges matching the
+   * Deprecated: Use results field instead. The list of Ranges matching the
    * search query.
    *
    * @deprecated

@@ -41,7 +41,7 @@ class ShowCustomRangeUtilizationResponse extends \Google\Model
     return $this->customRange;
   }
   /**
-   * The utilization of the CustomRange.
+   * The utilization details of the CustomRange.
    *
    * @param RangeUtilization $rangeUtilization
    */

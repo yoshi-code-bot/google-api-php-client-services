@@ -41,7 +41,7 @@ class ShowDiscoveredRangeUtilizationResponse extends \Google\Model
     return $this->discoveredRange;
   }
   /**
-   * The utilization of the DiscoveredRange.
+   * The utilization details of the DiscoveredRange.
    *
    * @param RangeUtilization $rangeUtilization
    */

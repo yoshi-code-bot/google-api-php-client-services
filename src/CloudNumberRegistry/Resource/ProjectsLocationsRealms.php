@@ -34,11 +34,13 @@ class ProjectsLocationsRealms extends \Google\Service\Resource
   /**
    * Creates a new Realm in a given project and location. (realms.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. The parent resource name where the Realm will
+   * be created.
    * @param Realm $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string realmId Required. Id of the requesting object.
+   * @opt_param string realmId Required. The ID to use for the Realm, which will
+   * become the final segment of the resource name.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -56,7 +58,7 @@ class ProjectsLocationsRealms extends \Google\Service\Resource
   /**
    * Deletes a single Realm. (realms.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the Realm to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force Optional. If set to true, all associated resources will
@@ -78,10 +80,10 @@ class ProjectsLocationsRealms extends \Google\Service\Resource
   /**
    * Gets details of a single Realm. (realms.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The resource name of the Realm to retrieve.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Optional. The view of the Realm.
+   * @opt_param string view Optional. The view of the Realm to retrieve.
    * @return Realm
    * @throws \Google\Service\Exception
    */
@@ -95,17 +97,18 @@ class ProjectsLocationsRealms extends \Google\Service\Resource
    * Lists Realms in a given project and location.
    * (realms.listProjectsLocationsRealms)
    *
-   * @param string $parent Required. Parent value for ListRealmsRequest
+   * @param string $parent Required. The parent resource name, for example
+   * `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filter expression to filter the results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
-   * @opt_param string view Optional. The view of the Realm.
+   * @opt_param string view Optional. The view of the Realm to retrieve.
    * @return ListRealmsResponse
    * @throws \Google\Service\Exception
    */
@@ -118,7 +121,7 @@ class ProjectsLocationsRealms extends \Google\Service\Resource
   /**
    * Updates the parameters of a single Realm. (realms.patch)
    *
-   * @param string $name Required. Identifier. Unique name/ID of the realm
+   * @param string $name Required. Identifier. The resource name of the Realm.
    * @param Realm $postBody
    * @param array $optParams Optional parameters.
    *

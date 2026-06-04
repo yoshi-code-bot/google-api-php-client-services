@@ -76,7 +76,7 @@ class DiscoveryMetadata extends \Google\Model
    * Output only. A single source resource can be the source of multiple CNR
    * resources. This sub_id is used to distinguish between the different CNR
    * resources derived from the same upstream resource. For example, a single
-   * subnetwork can be the source of multiple ranges, one for each protocol. In
+   * subnetwork can be the source of multiple Ranges, one for each protocol. In
    * this case, the sub_id could be "private-ipv4" or "private-ipv6".
    *
    * @var string
@@ -180,7 +180,7 @@ class DiscoveryMetadata extends \Google\Model
    * Output only. A single source resource can be the source of multiple CNR
    * resources. This sub_id is used to distinguish between the different CNR
    * resources derived from the same upstream resource. For example, a single
-   * subnetwork can be the source of multiple ranges, one for each protocol. In
+   * subnetwork can be the source of multiple Ranges, one for each protocol. In
    * this case, the sub_id could be "private-ipv4" or "private-ipv6".
    *
    * @param string $sourceSubId

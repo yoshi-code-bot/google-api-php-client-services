@@ -52,7 +52,7 @@ class ListRealmsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of Realm
+   * The list of Realms.
    *
    * @param Realm[] $realms
    */

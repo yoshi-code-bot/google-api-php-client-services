@@ -23,7 +23,7 @@ class CustomRange extends \Google\Collection
   protected $attributesType = Attribute::class;
   protected $attributesDataType = 'array';
   /**
-   * Optional. Description of the CustomRange.
+   * Optional. The description of the CustomRange.
    *
    * @var string
    */
@@ -41,38 +41,41 @@ class CustomRange extends \Google\Collection
    */
   public $ipv6CidrRange;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    *
    * @var string
    */
   public $name;
   /**
-   * Optional. The parent range of the CustomRange. Do not allow setting parent
-   * range if realm is specified. Format must follow this pattern:
-   * projects/{project}/locations/{location}/customRanges/{custom_range}
+   * Optional. The resource name of the parent CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`. If
+   * specified, the parent CustomRange must be in the same RegistryBook. This
+   * field is mutually exclusive with the `realm` field, as the Realm is
+   * inherited from the parent CustomRange.
    *
    * @var string
    */
   public $parentRange;
   /**
-   * Optional. The realm of the CustomRange. The realm must be in the same
-   * project as the custom range. Do not allow setting realm if parent range is
-   * specified, since the realm should be inherited from the parent range.
-   * Format must follow this pattern:
-   * projects/{project}/locations/{location}/realms/{realm}
+   * Optional. The resource name of the Realm associated with the CustomRange,
+   * in the format `projects/{project}/locations/{location}/realms/{realm}`. The
+   * Realm must be in the same project as the CustomRange. This field must not
+   * be set if the `parent_range` field is set, as the Realm will be inherited
+   * from the parent CustomRange.
    *
    * @var string
    */
   public $realm;
   /**
-   * Output only. The registry book of the CustomRange. This field is inherited
-   * from the realm or parent range depending on which one is specified.
+   * Output only. The RegistryBook of the CustomRange. This field is inherited
+   * from the Realm or parent CustomRange depending on which one is specified.
    *
    * @var string
    */
@@ -95,7 +98,7 @@ class CustomRange extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * Optional. Description of the CustomRange.
+   * Optional. The description of the CustomRange.
    *
    * @param string $description
    */
@@ -143,7 +146,7 @@ class CustomRange extends \Google\Collection
     return $this->ipv6CidrRange;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    *
    * @param string[] $labels
    */
@@ -159,7 +162,8 @@ class CustomRange extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    *
    * @param string $name
    */
@@ -175,9 +179,11 @@ class CustomRange extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. The parent range of the CustomRange. Do not allow setting parent
-   * range if realm is specified. Format must follow this pattern:
-   * projects/{project}/locations/{location}/customRanges/{custom_range}
+   * Optional. The resource name of the parent CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`. If
+   * specified, the parent CustomRange must be in the same RegistryBook. This
+   * field is mutually exclusive with the `realm` field, as the Realm is
+   * inherited from the parent CustomRange.
    *
    * @param string $parentRange
    */
@@ -193,11 +199,11 @@ class CustomRange extends \Google\Collection
     return $this->parentRange;
   }
   /**
-   * Optional. The realm of the CustomRange. The realm must be in the same
-   * project as the custom range. Do not allow setting realm if parent range is
-   * specified, since the realm should be inherited from the parent range.
-   * Format must follow this pattern:
-   * projects/{project}/locations/{location}/realms/{realm}
+   * Optional. The resource name of the Realm associated with the CustomRange,
+   * in the format `projects/{project}/locations/{location}/realms/{realm}`. The
+   * Realm must be in the same project as the CustomRange. This field must not
+   * be set if the `parent_range` field is set, as the Realm will be inherited
+   * from the parent CustomRange.
    *
    * @param string $realm
    */
@@ -213,8 +219,8 @@ class CustomRange extends \Google\Collection
     return $this->realm;
   }
   /**
-   * Output only. The registry book of the CustomRange. This field is inherited
-   * from the realm or parent range depending on which one is specified.
+   * Output only. The RegistryBook of the CustomRange. This field is inherited
+   * from the Realm or parent CustomRange depending on which one is specified.
    *
    * @param string $registryBook
    */

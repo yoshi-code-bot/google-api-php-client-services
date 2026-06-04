@@ -20,20 +20,20 @@ namespace Google\Service\CloudNumberRegistry;
 class Attribute extends \Google\Model
 {
   /**
-   * Required. Key of attribute
+   * Required. The key of the attribute.
    *
    * @var string
    */
   public $key;
   /**
-   * Required. Value of attribute
+   * Required. The value of the attribute.
    *
    * @var string
    */
   public $value;
 
   /**
-   * Required. Key of attribute
+   * Required. The key of the attribute.
    *
    * @param string $key
    */
@@ -49,7 +49,7 @@ class Attribute extends \Google\Model
     return $this->key;
   }
   /**
-   * Required. Value of attribute
+   * Required. The value of the attribute.
    *
    * @param string $value
    */

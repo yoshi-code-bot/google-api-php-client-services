@@ -20,19 +20,19 @@ namespace Google\Service\CloudNumberRegistry;
 class RangeUtilization extends \Google\Model
 {
   /**
-   * Output only. The total number of IP addresses consumed in the range.
+   * Output only. The total number of IP addresses consumed in the Range.
    *
    * @var string
    */
   public $totalConsumed;
   /**
-   * Output only. The total number of IP addresses produced in the range.
+   * Output only. The total number of IP addresses produced in the Range.
    *
    * @var string
    */
   public $totalProduced;
   /**
-   * Output only. The usage of the range as a percentage. This is marked as
+   * Output only. The usage of the Range as a percentage. This is marked as
    * optional so that we have presence tracking and API responses show 0.0
    * instead of NULL.
    *
@@ -41,7 +41,7 @@ class RangeUtilization extends \Google\Model
   public $usage;
 
   /**
-   * Output only. The total number of IP addresses consumed in the range.
+   * Output only. The total number of IP addresses consumed in the Range.
    *
    * @param string $totalConsumed
    */
@@ -57,7 +57,7 @@ class RangeUtilization extends \Google\Model
     return $this->totalConsumed;
   }
   /**
-   * Output only. The total number of IP addresses produced in the range.
+   * Output only. The total number of IP addresses produced in the Range.
    *
    * @param string $totalProduced
    */

@@ -23,7 +23,8 @@ class ListCustomRangesResponse extends \Google\Collection
   protected $customRangesType = CustomRange::class;
   protected $customRangesDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
    *
    * @var string
    */
@@ -36,7 +37,7 @@ class ListCustomRangesResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of CustomRange
+   * The list of CustomRanges.
    *
    * @param CustomRange[] $customRanges
    */
@@ -52,7 +53,8 @@ class ListCustomRangesResponse extends \Google\Collection
     return $this->customRanges;
   }
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
    *
    * @param string $nextPageToken
    */

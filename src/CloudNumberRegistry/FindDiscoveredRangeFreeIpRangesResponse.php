@@ -21,14 +21,14 @@ class FindDiscoveredRangeFreeIpRangesResponse extends \Google\Collection
 {
   protected $collection_key = 'freeIpCidrRanges';
   /**
-   * Output only. Free IP CIDR ranges found in the DiscoveredRange.
+   * Output only. The free IP CIDR ranges found.
    *
    * @var string[]
    */
   public $freeIpCidrRanges;
 
   /**
-   * Output only. Free IP CIDR ranges found in the DiscoveredRange.
+   * Output only. The free IP CIDR ranges found.
    *
    * @param string[] $freeIpCidrRanges
    */
