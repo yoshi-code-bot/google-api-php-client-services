@@ -161,6 +161,12 @@ class BDRBackupRestoreJobLog extends \Google\Model
    * @var string
    */
   public $startTime;
+  /**
+   * The target resource type for restore jobs.
+   *
+   * @var string
+   */
+  public $targetResourceType;
 
   /**
    * Backup consistency time.
@@ -525,6 +531,22 @@ class BDRBackupRestoreJobLog extends \Google\Model
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  /**
+   * The target resource type for restore jobs.
+   *
+   * @param string $targetResourceType
+   */
+  public function setTargetResourceType($targetResourceType)
+  {
+    $this->targetResourceType = $targetResourceType;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetResourceType()
+  {
+    return $this->targetResourceType;
   }
 }
 
