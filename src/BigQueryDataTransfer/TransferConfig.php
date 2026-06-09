@@ -113,6 +113,8 @@ class TransferConfig extends \Google\Model
    * @var string
    */
   public $managedTableType;
+  protected $metadataDestinationType = MetadataDestination::class;
+  protected $metadataDestinationDataType = '';
   /**
    * Identifier. The resource name of the transfer config. Transfer config names
    * have the form either
@@ -361,6 +363,22 @@ class TransferConfig extends \Google\Model
   public function getManagedTableType()
   {
     return $this->managedTableType;
+  }
+  /**
+   * The metadata destination of the transfer config.
+   *
+   * @param MetadataDestination $metadataDestination
+   */
+  public function setMetadataDestination(MetadataDestination $metadataDestination)
+  {
+    $this->metadataDestination = $metadataDestination;
+  }
+  /**
+   * @return MetadataDestination
+   */
+  public function getMetadataDestination()
+  {
+    return $this->metadataDestination;
   }
   /**
    * Identifier. The resource name of the transfer config. Transfer config names
