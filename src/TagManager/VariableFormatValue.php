@@ -40,11 +40,6 @@ class VariableFormatValue extends \Google\Model
    */
   public const CONVERT_TO_NUMBER_comma = 'comma';
   /**
-   * The option to convert a variable value to a number with automatic decimal
-   * separator detection.
-   */
-  public const CONVERT_TO_NUMBER_automatic = 'automatic';
-  /**
    * The option to convert a string-type variable value to either lowercase or
    * uppercase.
    *
@@ -142,7 +137,7 @@ class VariableFormatValue extends \Google\Model
   /**
    * The option to convert a variable value to a number.
    *
-   * Accepted values: decimalSeparatorTypeUnspecified, period, comma, automatic
+   * Accepted values: decimalSeparatorTypeUnspecified, period, comma
    *
    * @param self::CONVERT_TO_NUMBER_* $convertToNumber
    */
