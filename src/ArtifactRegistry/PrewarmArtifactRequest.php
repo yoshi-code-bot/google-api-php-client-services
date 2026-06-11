@@ -26,6 +26,8 @@ class PrewarmArtifactRequest extends \Google\Model
    * @var bool
    */
   public $force;
+  protected $platformType = PrewarmPlatform::class;
+  protected $platformDataType = '';
   /**
    * Optional. The retention days of the prewarmed artifact. If not specified,
    * the artifact will be cached for 3 days.
@@ -72,6 +74,22 @@ class PrewarmArtifactRequest extends \Google\Model
   public function getForce()
   {
     return $this->force;
+  }
+  /**
+   * Optional. The platform (architecture and OS) of the image or tag.
+   *
+   * @param PrewarmPlatform $platform
+   */
+  public function setPlatform(PrewarmPlatform $platform)
+  {
+    $this->platform = $platform;
+  }
+  /**
+   * @return PrewarmPlatform
+   */
+  public function getPlatform()
+  {
+    return $this->platform;
   }
   /**
    * Optional. The retention days of the prewarmed artifact. If not specified,
