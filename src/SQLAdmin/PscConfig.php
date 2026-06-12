@@ -38,13 +38,20 @@ class PscConfig extends \Google\Collection
    * @var string
    */
   public $networkAttachmentUri;
+  /**
+   * Optional. Whether to set up the PSC service connection policy
+   * automatically.
+   *
+   * @var bool
+   */
+  public $pscAutoConnectionPolicyEnabled;
   protected $pscAutoConnectionsType = PscAutoConnectionConfig::class;
   protected $pscAutoConnectionsDataType = 'array';
   /**
-   * Optional. Indicates whether PSC DNS automation is enabled for this
-   * instance. When enabled, Cloud SQL provisions a universal DNS record across
-   * all networks configured with Private Service Connect (PSC) auto-
-   * connections. This will default to true for new instances when Private
+   * Optional. Indicates whether Private Service Connect DNS automation is
+   * enabled for this instance. When enabled, Cloud SQL provisions a universal
+   * DNS record across all networks configured with Private Service Connect
+   * auto-connections. This will default to true for new instances when Private
    * Service Connect is enabled.
    *
    * @var bool
@@ -57,12 +64,12 @@ class PscConfig extends \Google\Collection
    */
   public $pscEnabled;
   /**
-   * Optional. Indicates whether PSC write endpoint DNS automation is enabled
-   * for this instance. When enabled, Cloud SQL provisions a universal global
-   * DNS record across all networks configured with Private Service Connect
-   * (PSC) auto-connections that always points to the cluster primary instance.
-   * This feature is only supported for Enterprise Plus edition. This will
-   * default to true for new Enterprise Plus instances when
+   * Optional. Indicates whether Private Service Connect write endpoint DNS
+   * automation is enabled for this instance. When enabled, Cloud SQL provisions
+   * a universal global DNS record across all networks configured with Private
+   * Service Connect auto-connections that points to the cluster primary
+   * instance. This feature is only supported for Enterprise Plus edition. This
+   * will default to true for new Enterprise Plus instances when
    * `psc_auto_dns_enabled` is enabled.
    *
    * @var bool
@@ -108,6 +115,23 @@ class PscConfig extends \Google\Collection
     return $this->networkAttachmentUri;
   }
   /**
+   * Optional. Whether to set up the PSC service connection policy
+   * automatically.
+   *
+   * @param bool $pscAutoConnectionPolicyEnabled
+   */
+  public function setPscAutoConnectionPolicyEnabled($pscAutoConnectionPolicyEnabled)
+  {
+    $this->pscAutoConnectionPolicyEnabled = $pscAutoConnectionPolicyEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPscAutoConnectionPolicyEnabled()
+  {
+    return $this->pscAutoConnectionPolicyEnabled;
+  }
+  /**
    * Optional. The list of settings for requested Private Service Connect
    * consumer endpoints that can be used to connect to this Cloud SQL instance.
    *
@@ -125,10 +149,10 @@ class PscConfig extends \Google\Collection
     return $this->pscAutoConnections;
   }
   /**
-   * Optional. Indicates whether PSC DNS automation is enabled for this
-   * instance. When enabled, Cloud SQL provisions a universal DNS record across
-   * all networks configured with Private Service Connect (PSC) auto-
-   * connections. This will default to true for new instances when Private
+   * Optional. Indicates whether Private Service Connect DNS automation is
+   * enabled for this instance. When enabled, Cloud SQL provisions a universal
+   * DNS record across all networks configured with Private Service Connect
+   * auto-connections. This will default to true for new instances when Private
    * Service Connect is enabled.
    *
    * @param bool $pscAutoDnsEnabled
@@ -161,12 +185,12 @@ class PscConfig extends \Google\Collection
     return $this->pscEnabled;
   }
   /**
-   * Optional. Indicates whether PSC write endpoint DNS automation is enabled
-   * for this instance. When enabled, Cloud SQL provisions a universal global
-   * DNS record across all networks configured with Private Service Connect
-   * (PSC) auto-connections that always points to the cluster primary instance.
-   * This feature is only supported for Enterprise Plus edition. This will
-   * default to true for new Enterprise Plus instances when
+   * Optional. Indicates whether Private Service Connect write endpoint DNS
+   * automation is enabled for this instance. When enabled, Cloud SQL provisions
+   * a universal global DNS record across all networks configured with Private
+   * Service Connect auto-connections that points to the cluster primary
+   * instance. This feature is only supported for Enterprise Plus edition. This
+   * will default to true for new Enterprise Plus instances when
    * `psc_auto_dns_enabled` is enabled.
    *
    * @param bool $pscWriteEndpointDnsEnabled

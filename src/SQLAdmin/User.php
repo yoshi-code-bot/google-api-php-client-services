@@ -76,6 +76,11 @@ class User extends \Google\Collection
    */
   public const TYPE_CLOUD_IAM_GROUP_SERVICE_ACCOUNT = 'CLOUD_IAM_GROUP_SERVICE_ACCOUNT';
   /**
+   * Cloud IAM workforce identity user managed via workforce identity
+   * federation.
+   */
+  public const TYPE_CLOUD_IAM_WORKFORCE_IDENTITY = 'CLOUD_IAM_WORKFORCE_IDENTITY';
+  /**
    * Microsoft Entra ID user.
    */
   public const TYPE_ENTRAID_USER = 'ENTRAID_USER';
@@ -395,7 +400,7 @@ class User extends \Google\Collection
    *
    * Accepted values: BUILT_IN, CLOUD_IAM_USER, CLOUD_IAM_SERVICE_ACCOUNT,
    * CLOUD_IAM_GROUP, CLOUD_IAM_GROUP_USER, CLOUD_IAM_GROUP_SERVICE_ACCOUNT,
-   * ENTRAID_USER
+   * CLOUD_IAM_WORKFORCE_IDENTITY, ENTRAID_USER
    *
    * @param self::TYPE_* $type
    */
