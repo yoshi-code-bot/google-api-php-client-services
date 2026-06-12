@@ -24,34 +24,35 @@ class LocationDetails extends \Google\Collection
   public const INTERNET_ACCESS_CONFIGURE_NAT = 'CONFIGURE_NAT';
   protected $collection_key = 'customTags';
   /**
-   * Optional. create firewall, if true, create firewall for the deployment.
-   * This field provides an option to not always create firewall for the
+   * Optional. Create firewall. If true, creates a firewall for the deployment.
+   * This field provides an option to not always create a firewall for the
    * deployment.
    *
    * @var bool
    */
   public $createCommsFirewall;
   /**
-   * Optional. network tags
+   * Optional. Network tags.
    *
    * @var string[]
    */
   public $customTags;
   /**
-   * Optional. when user skip DNS configuration from UI,
-   * deployment_dns_enabled=false otherwise deployment_dns_enabled=true
+   * Optional. When the user skips DNS configuration in the UI,
+   * `deployment_dns_enabled` is false; otherwise `deployment_dns_enabled` is
+   * true.
    *
    * @var bool
    */
   public $deploymentDnsEnabled;
   /**
-   * Optional. dns zone name
+   * Optional. DNS zone name.
    *
    * @var string
    */
   public $dnsZone;
   /**
-   * Optional. dns_zone_name_suffix
+   * Optional. DNS zone name suffix.
    *
    * @var string
    */
@@ -61,45 +62,45 @@ class LocationDetails extends \Google\Collection
    */
   public $internetAccess;
   /**
-   * Optional. network project
+   * Optional. Network project.
    *
    * @var string
    */
   public $networkProject;
   /**
-   * Required. region_name
+   * Required. Region name.
    *
    * @var string
    */
   public $regionName;
   /**
-   * Required. subnet_name
+   * Required. Subnet name.
    *
    * @var string
    */
   public $subnetName;
   /**
-   * Required. vpc_name
+   * Required. VPC name.
    *
    * @var string
    */
   public $vpcName;
   /**
-   * Required. zone1_name
+   * Required. Zone 1 name.
    *
    * @var string
    */
   public $zone1Name;
   /**
-   * Optional. zone2_name
+   * Optional. Zone 2 name.
    *
    * @var string
    */
   public $zone2Name;
 
   /**
-   * Optional. create firewall, if true, create firewall for the deployment.
-   * This field provides an option to not always create firewall for the
+   * Optional. Create firewall. If true, creates a firewall for the deployment.
+   * This field provides an option to not always create a firewall for the
    * deployment.
    *
    * @param bool $createCommsFirewall
@@ -116,7 +117,7 @@ class LocationDetails extends \Google\Collection
     return $this->createCommsFirewall;
   }
   /**
-   * Optional. network tags
+   * Optional. Network tags.
    *
    * @param string[] $customTags
    */
@@ -132,8 +133,9 @@ class LocationDetails extends \Google\Collection
     return $this->customTags;
   }
   /**
-   * Optional. when user skip DNS configuration from UI,
-   * deployment_dns_enabled=false otherwise deployment_dns_enabled=true
+   * Optional. When the user skips DNS configuration in the UI,
+   * `deployment_dns_enabled` is false; otherwise `deployment_dns_enabled` is
+   * true.
    *
    * @param bool $deploymentDnsEnabled
    */
@@ -149,7 +151,7 @@ class LocationDetails extends \Google\Collection
     return $this->deploymentDnsEnabled;
   }
   /**
-   * Optional. dns zone name
+   * Optional. DNS zone name.
    *
    * @param string $dnsZone
    */
@@ -165,7 +167,7 @@ class LocationDetails extends \Google\Collection
     return $this->dnsZone;
   }
   /**
-   * Optional. dns_zone_name_suffix
+   * Optional. DNS zone name suffix.
    *
    * @param string $dnsZoneNameSuffix
    */
@@ -195,7 +197,7 @@ class LocationDetails extends \Google\Collection
     return $this->internetAccess;
   }
   /**
-   * Optional. network project
+   * Optional. Network project.
    *
    * @param string $networkProject
    */
@@ -211,7 +213,7 @@ class LocationDetails extends \Google\Collection
     return $this->networkProject;
   }
   /**
-   * Required. region_name
+   * Required. Region name.
    *
    * @param string $regionName
    */
@@ -227,7 +229,7 @@ class LocationDetails extends \Google\Collection
     return $this->regionName;
   }
   /**
-   * Required. subnet_name
+   * Required. Subnet name.
    *
    * @param string $subnetName
    */
@@ -243,7 +245,7 @@ class LocationDetails extends \Google\Collection
     return $this->subnetName;
   }
   /**
-   * Required. vpc_name
+   * Required. VPC name.
    *
    * @param string $vpcName
    */
@@ -259,7 +261,7 @@ class LocationDetails extends \Google\Collection
     return $this->vpcName;
   }
   /**
-   * Required. zone1_name
+   * Required. Zone 1 name.
    *
    * @param string $zone1Name
    */
@@ -275,7 +277,7 @@ class LocationDetails extends \Google\Collection
     return $this->zone1Name;
   }
   /**
-   * Optional. zone2_name
+   * Optional. Zone 2 name.
    *
    * @param string $zone2Name
    */

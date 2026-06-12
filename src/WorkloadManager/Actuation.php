@@ -20,31 +20,32 @@ namespace Google\Service\WorkloadManager;
 class Actuation extends \Google\Collection
 {
   /**
-   * state unspecified
+   * State unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * creating infrastructure in backend (terraform applying)
+   * Creating infrastructure in backend (Terraform applying).
    */
   public const STATE_INFRA_CREATING = 'INFRA_CREATING';
   /**
-   * success
+   * Success.
    */
   public const STATE_SUCCEEDED = 'SUCCEEDED';
   /**
-   * failed either in infra creating, post infra configuring or infra destroying
+   * Failed either in infra creating, post infra configuring, or infra
+   * destroying.
    */
   public const STATE_FAILED = 'FAILED';
   /**
-   * configure workload after infrastructure is ready (ansible running)
+   * Configure workload after infrastructure is ready (Ansible running).
    */
   public const STATE_POST_INFRA_CONFIGURING = 'POST_INFRA_CONFIGURING';
   /**
-   * destroying infrastructure in backend (terraform destroying)
+   * Destroying infrastructure in backend (Terraform destroying).
    */
   public const STATE_INFRA_DESTROYING = 'INFRA_DESTROYING';
   /**
-   * ansible is timeout due to losing heartbeat in post infra configuring
+   * Ansible timed out due to losing heartbeat in post infra configuring.
    */
   public const STATE_TIMEOUT = 'TIMEOUT';
   protected $collection_key = 'deploymentOutput';
@@ -53,33 +54,33 @@ class Actuation extends \Google\Collection
   protected $deploymentOutputType = DeploymentOutput::class;
   protected $deploymentOutputDataType = 'array';
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. End time stamp.
    *
    * @var string
    */
   public $endTime;
   /**
-   * The name of actuation resource. The format is projects/{project}/locations/
-   * {location}/deployments/{deployment}/actuations/{actuation}
+   * The name of the actuation resource. The format is projects/{project}/locati
+   * ons/{location}/deployments/{deployment}/actuations/{actuation}.
    *
    * @var string
    */
   public $name;
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. Start time stamp.
    *
    * @var string
    */
   public $startTime;
   /**
-   * Output only. [Output only] Actuation state
+   * Output only. Actuation state.
    *
    * @var string
    */
   public $state;
 
   /**
-   * Output only. [Output only] Actuation output
+   * Output only. Actuation output.
    *
    * @param ActuationOutput $actuationOutput
    */
@@ -95,7 +96,7 @@ class Actuation extends \Google\Collection
     return $this->actuationOutput;
   }
   /**
-   * Output only. [Output only] Deployment output
+   * Output only. Deployment output.
    *
    * @param DeploymentOutput[] $deploymentOutput
    */
@@ -111,7 +112,7 @@ class Actuation extends \Google\Collection
     return $this->deploymentOutput;
   }
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. End time stamp.
    *
    * @param string $endTime
    */
@@ -127,8 +128,8 @@ class Actuation extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * The name of actuation resource. The format is projects/{project}/locations/
-   * {location}/deployments/{deployment}/actuations/{actuation}
+   * The name of the actuation resource. The format is projects/{project}/locati
+   * ons/{location}/deployments/{deployment}/actuations/{actuation}.
    *
    * @param string $name
    */
@@ -144,7 +145,7 @@ class Actuation extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. Start time stamp.
    *
    * @param string $startTime
    */
@@ -160,7 +161,7 @@ class Actuation extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * Output only. [Output only] Actuation state
+   * Output only. Actuation state.
    *
    * Accepted values: STATE_UNSPECIFIED, INFRA_CREATING, SUCCEEDED, FAILED,
    * POST_INFRA_CONFIGURING, INFRA_DESTROYING, TIMEOUT

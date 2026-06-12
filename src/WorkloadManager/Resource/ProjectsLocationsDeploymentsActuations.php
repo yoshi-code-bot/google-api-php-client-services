@@ -36,7 +36,7 @@ class ProjectsLocationsDeploymentsActuations extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the Actuation location
    * using the form:
-   * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+   * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
    * @param Actuation $postBody
    * @param array $optParams Optional parameters.
    *
@@ -61,11 +61,11 @@ class ProjectsLocationsDeploymentsActuations extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single Actuation (actuations.delete)
+   * Deletes a single Actuation. (actuations.delete)
    *
-   * @param string $name Required. The name of the book to delete. project/{projec
-   * t_id}/locations/{location_id}/deployments/{deployment_id}/actuations/{actuati
-   * on_id}
+   * @param string $name Required. The name of the actuation to delete. projects/{
+   * project}/locations/{location}/deployments/{deployment}/actuations/{actuation}
+   * .
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -79,7 +79,7 @@ class ProjectsLocationsDeploymentsActuations extends \Google\Service\Resource
   /**
    * Gets details of a single Actuation. (actuations.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Actuation
    * @throws \Google\Service\Exception
@@ -96,10 +96,10 @@ class ProjectsLocationsDeploymentsActuations extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource prefix of the Actuation using
    * the form:
-   * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+   * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
+   * @opt_param string filter Optional. Filtering results.
    * @opt_param string orderBy Optional. Field to sort by. See
    * https://google.aip.dev/132#ordering for more details.
    * @opt_param int pageSize Optional. Requested page size. Server may return

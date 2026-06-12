@@ -20,81 +20,81 @@ namespace Google\Service\WorkloadManager;
 class SqlLocationDetails extends \Google\Model
 {
   /**
-   * Unspecified internet access
+   * Unspecified internet access.
    */
   public const INTERNET_ACCESS_INTERNET_ACCESS_UNSPECIFIED = 'INTERNET_ACCESS_UNSPECIFIED';
   /**
-   * Allow external IP
+   * Allow external IP.
    */
   public const INTERNET_ACCESS_ALLOW_EXTERNAL_IP = 'ALLOW_EXTERNAL_IP';
   /**
-   * Configure NAT
+   * Configure NAT.
    */
   public const INTERNET_ACCESS_CONFIGURE_NAT = 'CONFIGURE_NAT';
   /**
-   * Optional. create a new DNS Zone when the field is empty, Only show for
-   * `Using an existing DNS` List of existing DNS Zones tf variable name:
-   * existing_dns_zone_name
+   * Optional. Create a new DNS zone when the field is empty. Only shown for
+   * `Using an existing DNS`. List of existing DNS zones. Terraform variable
+   * name: existing_dns_zone_name.
    *
    * @var string
    */
   public $dnsZone;
   /**
-   * Required. the project that infrastructure deployed, currently only supports
-   * the same project where the deployment resource exists.
+   * Required. The project that infrastructure is deployed in. Currently only
+   * supports the same project where the deployment resource exists.
    *
    * @var string
    */
   public $gcpProjectId;
   /**
-   * Required. Internet Access
+   * Required. Internet Access.
    *
    * @var string
    */
   public $internetAccess;
   /**
-   * Required. network name
+   * Required. Network name.
    *
    * @var string
    */
   public $network;
   /**
-   * Required. primary zone
+   * Required. Primary zone.
    *
    * @var string
    */
   public $primaryZone;
   /**
-   * Required. region name
+   * Required. Region name.
    *
    * @var string
    */
   public $region;
   /**
-   * Optional. secondary zone can't be same as primary_zone and is only for High
-   * Availability deployment mode
+   * Optional. Secondary zone cannot be the same as primary_zone and is only for
+   * High Availability deployment mode.
    *
    * @var string
    */
   public $secondaryZone;
   /**
-   * Required. subnetwork name
+   * Required. Subnetwork name.
    *
    * @var string
    */
   public $subnetwork;
   /**
-   * Optional. teriary zone can't be same as primary_zone and secondary zone,
-   * and it is only for High Availability deployment mode
+   * Optional. Tertiary zone cannot be the same as primary_zone and
+   * secondary_zone, and it is only for High Availability deployment mode.
    *
    * @var string
    */
   public $tertiaryZone;
 
   /**
-   * Optional. create a new DNS Zone when the field is empty, Only show for
-   * `Using an existing DNS` List of existing DNS Zones tf variable name:
-   * existing_dns_zone_name
+   * Optional. Create a new DNS zone when the field is empty. Only shown for
+   * `Using an existing DNS`. List of existing DNS zones. Terraform variable
+   * name: existing_dns_zone_name.
    *
    * @param string $dnsZone
    */
@@ -110,8 +110,8 @@ class SqlLocationDetails extends \Google\Model
     return $this->dnsZone;
   }
   /**
-   * Required. the project that infrastructure deployed, currently only supports
-   * the same project where the deployment resource exists.
+   * Required. The project that infrastructure is deployed in. Currently only
+   * supports the same project where the deployment resource exists.
    *
    * @param string $gcpProjectId
    */
@@ -127,7 +127,7 @@ class SqlLocationDetails extends \Google\Model
     return $this->gcpProjectId;
   }
   /**
-   * Required. Internet Access
+   * Required. Internet Access.
    *
    * Accepted values: INTERNET_ACCESS_UNSPECIFIED, ALLOW_EXTERNAL_IP,
    * CONFIGURE_NAT
@@ -146,7 +146,7 @@ class SqlLocationDetails extends \Google\Model
     return $this->internetAccess;
   }
   /**
-   * Required. network name
+   * Required. Network name.
    *
    * @param string $network
    */
@@ -162,7 +162,7 @@ class SqlLocationDetails extends \Google\Model
     return $this->network;
   }
   /**
-   * Required. primary zone
+   * Required. Primary zone.
    *
    * @param string $primaryZone
    */
@@ -178,7 +178,7 @@ class SqlLocationDetails extends \Google\Model
     return $this->primaryZone;
   }
   /**
-   * Required. region name
+   * Required. Region name.
    *
    * @param string $region
    */
@@ -194,8 +194,8 @@ class SqlLocationDetails extends \Google\Model
     return $this->region;
   }
   /**
-   * Optional. secondary zone can't be same as primary_zone and is only for High
-   * Availability deployment mode
+   * Optional. Secondary zone cannot be the same as primary_zone and is only for
+   * High Availability deployment mode.
    *
    * @param string $secondaryZone
    */
@@ -211,7 +211,7 @@ class SqlLocationDetails extends \Google\Model
     return $this->secondaryZone;
   }
   /**
-   * Required. subnetwork name
+   * Required. Subnetwork name.
    *
    * @param string $subnetwork
    */
@@ -227,8 +227,8 @@ class SqlLocationDetails extends \Google\Model
     return $this->subnetwork;
   }
   /**
-   * Optional. teriary zone can't be same as primary_zone and secondary zone,
-   * and it is only for High Availability deployment mode
+   * Optional. Tertiary zone cannot be the same as primary_zone and
+   * secondary_zone, and it is only for High Availability deployment mode.
    *
    * @param string $tertiaryZone
    */

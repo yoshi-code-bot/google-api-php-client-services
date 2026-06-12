@@ -44,36 +44,36 @@ class Deployment extends \Google\Model
    */
   public const STATE_FAILED = 'FAILED';
   /**
-   * Unspecified workload type
+   * Unspecified workload type.
    */
   public const WORKLOAD_TYPE_WORKLOAD_TYPE_UNSPECIFIED = 'WORKLOAD_TYPE_UNSPECIFIED';
   /**
-   * SAP S/4HANA workload type
+   * SAP S/4HANA workload type.
    */
   public const WORKLOAD_TYPE_SAP_S4 = 'SAP_S4';
   /**
-   * SQL Server workload type
+   * SQL Server workload type.
    */
   public const WORKLOAD_TYPE_SQL_SERVER = 'SQL_SERVER';
   /**
-   * Oracle workload type
+   * Oracle workload type.
    */
   public const WORKLOAD_TYPE_ORACLE = 'ORACLE';
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Description of the Deployment
+   * Description of the deployment.
    *
    * @var string
    */
   public $description;
   /**
-   * The name of deployment resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * The name of the deployment resource. The format is 'projects/{project_id}/l
+   * ocations/{location_id}/deployments/{deployment_id}'.
    *
    * @var string
    */
@@ -81,10 +81,10 @@ class Deployment extends \Google\Model
   protected $sapSystemS4ConfigType = SapSystemS4Config::class;
   protected $sapSystemS4ConfigDataType = '';
   /**
-   * User-specified Service Account (SA) credentials to be used for cloud build
+   * User-specified Service Account (SA) credentials to be used for Cloud Build.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}` The default
    * Cloud Build SA will be used initially if this field is not set during
-   * deployment creation
+   * deployment creation.
    *
    * @var string
    */
@@ -100,7 +100,7 @@ class Deployment extends \Google\Model
   protected $terraformVariablesType = TerraformVariable::class;
   protected $terraformVariablesDataType = 'map';
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    *
    * @var string
    */
@@ -116,14 +116,14 @@ class Deployment extends \Google\Model
    */
   public $workerPool;
   /**
-   * Optional. Workload type of the deployment
+   * Optional. Workload type of the deployment.
    *
    * @var string
    */
   public $workloadType;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    *
    * @param string $createTime
    */
@@ -139,7 +139,7 @@ class Deployment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Description of the Deployment
+   * Description of the deployment.
    *
    * @param string $description
    */
@@ -155,8 +155,8 @@ class Deployment extends \Google\Model
     return $this->description;
   }
   /**
-   * The name of deployment resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * The name of the deployment resource. The format is 'projects/{project_id}/l
+   * ocations/{location_id}/deployments/{deployment_id}'.
    *
    * @param string $name
    */
@@ -172,7 +172,7 @@ class Deployment extends \Google\Model
     return $this->name;
   }
   /**
-   * SAP system workload input
+   * SAP system workload input.
    *
    * @param SapSystemS4Config $sapSystemS4Config
    */
@@ -188,10 +188,10 @@ class Deployment extends \Google\Model
     return $this->sapSystemS4Config;
   }
   /**
-   * User-specified Service Account (SA) credentials to be used for cloud build
+   * User-specified Service Account (SA) credentials to be used for Cloud Build.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}` The default
    * Cloud Build SA will be used initially if this field is not set during
-   * deployment creation
+   * deployment creation.
    *
    * @param string $serviceAccount
    */
@@ -207,7 +207,7 @@ class Deployment extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * MS SQL workload input
+   * MS SQL workload input.
    *
    * @param SqlServerWorkload $sqlServerWorkload
    */
@@ -262,7 +262,7 @@ class Deployment extends \Google\Model
     return $this->terraformVariables;
   }
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    *
    * @param string $updateTime
    */
@@ -298,7 +298,7 @@ class Deployment extends \Google\Model
     return $this->workerPool;
   }
   /**
-   * Optional. Workload type of the deployment
+   * Optional. Workload type of the deployment.
    *
    * Accepted values: WORKLOAD_TYPE_UNSPECIFIED, SAP_S4, SQL_SERVER, ORACLE
    *

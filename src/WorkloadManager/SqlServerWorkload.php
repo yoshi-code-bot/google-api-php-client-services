@@ -20,126 +20,126 @@ namespace Google\Service\WorkloadManager;
 class SqlServerWorkload extends \Google\Model
 {
   /**
-   * Unspecified deployment model
+   * Unspecified deployment model.
    */
   public const DEPLOYMENT_MODEL_DEPLOYMENT_MODEL_UNSPECIFIED = 'DEPLOYMENT_MODEL_UNSPECIFIED';
   /**
-   * High Availability deployment model
+   * High Availability deployment model.
    */
   public const DEPLOYMENT_MODEL_HIGH_AVAILABILITY = 'HIGH_AVAILABILITY';
   /**
-   * Single Instance deployment model
+   * Single instance deployment model.
    */
   public const DEPLOYMENT_MODEL_SINGLE_INSTANCE = 'SINGLE_INSTANCE';
   /**
-   * Unspecified environment type
+   * Unspecified environment type.
    */
   public const ENVIRONMENT_TYPE_ENVIRONMENT_TYPE_UNSPECIFIED = 'ENVIRONMENT_TYPE_UNSPECIFIED';
   /**
-   * Non-production environment type
+   * Non-production environment type.
    */
   public const ENVIRONMENT_TYPE_NON_PRODUCTION = 'NON_PRODUCTION';
   /**
-   * Production environment type
+   * Production environment type.
    */
   public const ENVIRONMENT_TYPE_PRODUCTION = 'PRODUCTION';
   /**
-   * Unspecified FCI type
+   * Unspecified FCI type.
    */
   public const FCI_TYPE_FCI_TYPE_UNSPECIFIED = 'FCI_TYPE_UNSPECIFIED';
   /**
-   * SHARED DISK FCI type
+   * SHARED DISK FCI type.
    */
   public const FCI_TYPE_SHARED_DISK = 'SHARED_DISK';
   /**
-   * S2D FCI type
+   * S2D FCI type.
    */
   public const FCI_TYPE_S2D = 'S2D';
   /**
-   * Unspecified HA type
+   * Unspecified HA type.
    */
   public const HA_TYPE_HA_TYPE_UNSPECIFIED = 'HA_TYPE_UNSPECIFIED';
   /**
-   * AOAG HA type
+   * AOAG HA type.
    */
   public const HA_TYPE_AOAG = 'AOAG';
   /**
-   * FCI HA type
+   * FCI HA type.
    */
   public const HA_TYPE_FCI = 'FCI';
   /**
-   * Unspecified operating system type
+   * Unspecified operating system type.
    */
   public const OPERATING_SYSTEM_TYPE_OPERATING_SYSTEM_TYPE_UNSPECIFIED = 'OPERATING_SYSTEM_TYPE_UNSPECIFIED';
   /**
-   * Windows operating system type
+   * Windows operating system type.
    */
   public const OPERATING_SYSTEM_TYPE_WINDOWS = 'WINDOWS';
   /**
-   * Ubuntu operating system type
+   * Ubuntu operating system type.
    */
   public const OPERATING_SYSTEM_TYPE_UBUNTU = 'UBUNTU';
   /**
-   * Red Hat Enterprise Linux operating system type
+   * Red Hat Enterprise Linux operating system type.
    */
   public const OPERATING_SYSTEM_TYPE_RED_HAT_ENTERPRISE_LINUX = 'RED_HAT_ENTERPRISE_LINUX';
   /**
-   * Suse operating system type
+   * SUSE operating system type.
    */
   public const OPERATING_SYSTEM_TYPE_SUSE = 'SUSE';
   /**
-   * Unspecified OS image type
+   * Unspecified OS image type.
    */
   public const OS_IMAGE_TYPE_OS_IMAGE_TYPE_UNSPECIFIED = 'OS_IMAGE_TYPE_UNSPECIFIED';
   /**
-   * Public image
+   * Public image.
    */
   public const OS_IMAGE_TYPE_PUBLIC_IMAGE = 'PUBLIC_IMAGE';
   /**
-   * Custom image
+   * Custom image.
    */
   public const OS_IMAGE_TYPE_CUSTOM_IMAGE = 'CUSTOM_IMAGE';
   /**
-   * Unspecified type
+   * Unspecified type.
    */
   public const SQL_SERVER_EDITION_SQL_SERVER_EDITION_TYPE_UNSPECIFIED = 'SQL_SERVER_EDITION_TYPE_UNSPECIFIED';
   /**
-   * Developer type
+   * Developer type.
    */
   public const SQL_SERVER_EDITION_SQL_SERVER_EDITION_TYPE_DEVELOPER = 'SQL_SERVER_EDITION_TYPE_DEVELOPER';
   /**
-   * Enterprise type
+   * Enterprise type.
    */
   public const SQL_SERVER_EDITION_SQL_SERVER_EDITION_TYPE_ENTERPRISE = 'SQL_SERVER_EDITION_TYPE_ENTERPRISE';
   /**
-   * Standard type
+   * Standard type.
    */
   public const SQL_SERVER_EDITION_SQL_SERVER_EDITION_TYPE_STANDARD = 'SQL_SERVER_EDITION_TYPE_STANDARD';
   /**
-   * Web type
+   * Web type.
    */
   public const SQL_SERVER_EDITION_SQL_SERVER_EDITION_TYPE_WEB = 'SQL_SERVER_EDITION_TYPE_WEB';
   /**
-   * Unspecified type
+   * Unspecified type.
    */
   public const SQL_SERVER_VERSION_SQL_SERVER_VERSION_TYPE_UNSPECIFIED = 'SQL_SERVER_VERSION_TYPE_UNSPECIFIED';
   /**
-   * 2017 type
+   * 2017 type.
    */
   public const SQL_SERVER_VERSION_SQL_SERVER_VERSION_TYPE_2017 = 'SQL_SERVER_VERSION_TYPE_2017';
   /**
-   * 2019 type
+   * 2019 type.
    */
   public const SQL_SERVER_VERSION_SQL_SERVER_VERSION_TYPE_2019 = 'SQL_SERVER_VERSION_TYPE_2019';
   /**
-   * 2022 type
+   * 2022 type.
    */
   public const SQL_SERVER_VERSION_SQL_SERVER_VERSION_TYPE_2022 = 'SQL_SERVER_VERSION_TYPE_2022';
   protected $activeDirectoryType = ActiveDirectory::class;
   protected $activeDirectoryDataType = '';
   /**
-   * Compute engine service account - let customers bring their own SA for
-   * Compute engine
+   * Compute Engine service account. Let customers bring their own service
+   * account for Compute Engine.
    *
    * @var string
    */
@@ -147,32 +147,32 @@ class SqlServerWorkload extends \Google\Model
   protected $databaseType = Database::class;
   protected $databaseDataType = '';
   /**
-   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE
+   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE.
    *
    * @var string
    */
   public $deploymentModel;
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    *
    * @var string
    */
   public $environmentType;
   /**
-   * Optional. SHARED_DISK or S2D
+   * Optional. SHARED_DISK or S2D.
    *
    * @var string
    */
   public $fciType;
   /**
-   * Optional. AOAG or FCI, it is only needed for High Availability deployment
-   * mode
+   * Optional. AOAG or FCI. It is only needed for the High Availability
+   * deployment mode.
    *
    * @var string
    */
   public $haType;
   /**
-   * Required. SQL licensing type
+   * Required. SQL licensing type.
    *
    * @var bool
    */
@@ -180,28 +180,28 @@ class SqlServerWorkload extends \Google\Model
   protected $locationType = SqlLocationDetails::class;
   protected $locationDataType = '';
   /**
-   * Required. name of the media storing SQL server installation files
+   * Required. Name of the media storing SQL server installation files.
    *
    * @var string
    */
   public $mediaBucket;
   /**
-   * Required. type of the operating system the SQL server is going to run on
-   * top of
+   * Required. The type of the operating system the SQL server is going to run
+   * on top of.
    *
    * @var string
    */
   public $operatingSystemType;
   /**
-   * Required. the image of the operating system
+   * Required. The image of the operating system.
    *
    * @var string
    */
   public $osImage;
   /**
-   * Optional. OS image type, it's used to create boot disks for VM instances
+   * Optional. OS image type. It's used to create boot disks for VM instances.
    * When either Windows licensing type or SQL licensing type is BYOL, this
-   * option is disabled and default to custom image
+   * option is disabled and defaults to a custom image.
    *
    * @var string
    */
@@ -209,27 +209,27 @@ class SqlServerWorkload extends \Google\Model
   protected $pacemakerType = Pacemaker::class;
   protected $pacemakerDataType = '';
   /**
-   * Optional. SQL Server Edition type, only applicable when Operating System is
-   * Linux
+   * Optional. SQL Server Edition type, only applicable when the operating
+   * system is Linux.
    *
    * @var string
    */
   public $sqlServerEdition;
   /**
-   * Optional. 2017 or 2019 or 2022
+   * Optional. 2017, 2019, or 2022.
    *
    * @var string
    */
   public $sqlServerVersion;
   /**
-   * Required. should be unique in the project
+   * Required. Should be unique in the project.
    *
    * @var string
    */
   public $vmPrefix;
 
   /**
-   * Required. active directory details
+   * Required. Active Directory details.
    *
    * @param ActiveDirectory $activeDirectory
    */
@@ -245,8 +245,8 @@ class SqlServerWorkload extends \Google\Model
     return $this->activeDirectory;
   }
   /**
-   * Compute engine service account - let customers bring their own SA for
-   * Compute engine
+   * Compute Engine service account. Let customers bring their own service
+   * account for Compute Engine.
    *
    * @param string $computeEngineServiceAccount
    */
@@ -262,7 +262,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->computeEngineServiceAccount;
   }
   /**
-   * Required. database details
+   * Required. Database details.
    *
    * @param Database $database
    */
@@ -278,7 +278,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->database;
   }
   /**
-   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE
+   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE.
    *
    * Accepted values: DEPLOYMENT_MODEL_UNSPECIFIED, HIGH_AVAILABILITY,
    * SINGLE_INSTANCE
@@ -297,7 +297,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->deploymentModel;
   }
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    *
    * Accepted values: ENVIRONMENT_TYPE_UNSPECIFIED, NON_PRODUCTION, PRODUCTION
    *
@@ -315,7 +315,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->environmentType;
   }
   /**
-   * Optional. SHARED_DISK or S2D
+   * Optional. SHARED_DISK or S2D.
    *
    * Accepted values: FCI_TYPE_UNSPECIFIED, SHARED_DISK, S2D
    *
@@ -333,8 +333,8 @@ class SqlServerWorkload extends \Google\Model
     return $this->fciType;
   }
   /**
-   * Optional. AOAG or FCI, it is only needed for High Availability deployment
-   * mode
+   * Optional. AOAG or FCI. It is only needed for the High Availability
+   * deployment mode.
    *
    * Accepted values: HA_TYPE_UNSPECIFIED, AOAG, FCI
    *
@@ -352,7 +352,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->haType;
   }
   /**
-   * Required. SQL licensing type
+   * Required. SQL licensing type.
    *
    * @param bool $isSqlPayg
    */
@@ -368,7 +368,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->isSqlPayg;
   }
   /**
-   * Required. location details
+   * Required. Location details.
    *
    * @param SqlLocationDetails $location
    */
@@ -384,7 +384,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->location;
   }
   /**
-   * Required. name of the media storing SQL server installation files
+   * Required. Name of the media storing SQL server installation files.
    *
    * @param string $mediaBucket
    */
@@ -400,8 +400,8 @@ class SqlServerWorkload extends \Google\Model
     return $this->mediaBucket;
   }
   /**
-   * Required. type of the operating system the SQL server is going to run on
-   * top of
+   * Required. The type of the operating system the SQL server is going to run
+   * on top of.
    *
    * Accepted values: OPERATING_SYSTEM_TYPE_UNSPECIFIED, WINDOWS, UBUNTU,
    * RED_HAT_ENTERPRISE_LINUX, SUSE
@@ -420,7 +420,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->operatingSystemType;
   }
   /**
-   * Required. the image of the operating system
+   * Required. The image of the operating system.
    *
    * @param string $osImage
    */
@@ -436,9 +436,9 @@ class SqlServerWorkload extends \Google\Model
     return $this->osImage;
   }
   /**
-   * Optional. OS image type, it's used to create boot disks for VM instances
+   * Optional. OS image type. It's used to create boot disks for VM instances.
    * When either Windows licensing type or SQL licensing type is BYOL, this
-   * option is disabled and default to custom image
+   * option is disabled and defaults to a custom image.
    *
    * Accepted values: OS_IMAGE_TYPE_UNSPECIFIED, PUBLIC_IMAGE, CUSTOM_IMAGE
    *
@@ -456,7 +456,8 @@ class SqlServerWorkload extends \Google\Model
     return $this->osImageType;
   }
   /**
-   * Optional. pacemaker configuration, only applicable for Linux HA deployments
+   * Optional. Pacemaker configuration, only applicable for Linux HA
+   * deployments.
    *
    * @param Pacemaker $pacemaker
    */
@@ -472,8 +473,8 @@ class SqlServerWorkload extends \Google\Model
     return $this->pacemaker;
   }
   /**
-   * Optional. SQL Server Edition type, only applicable when Operating System is
-   * Linux
+   * Optional. SQL Server Edition type, only applicable when the operating
+   * system is Linux.
    *
    * Accepted values: SQL_SERVER_EDITION_TYPE_UNSPECIFIED,
    * SQL_SERVER_EDITION_TYPE_DEVELOPER, SQL_SERVER_EDITION_TYPE_ENTERPRISE,
@@ -493,7 +494,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->sqlServerEdition;
   }
   /**
-   * Optional. 2017 or 2019 or 2022
+   * Optional. 2017, 2019, or 2022.
    *
    * Accepted values: SQL_SERVER_VERSION_TYPE_UNSPECIFIED,
    * SQL_SERVER_VERSION_TYPE_2017, SQL_SERVER_VERSION_TYPE_2019,
@@ -513,7 +514,7 @@ class SqlServerWorkload extends \Google\Model
     return $this->sqlServerVersion;
   }
   /**
-   * Required. should be unique in the project
+   * Required. Should be unique in the project.
    *
    * @param string $vmPrefix
    */

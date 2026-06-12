@@ -21,86 +21,87 @@ class AppDetails extends \Google\Collection
 {
   protected $collection_key = 'appVmNames';
   /**
-   * Optional. instance id for app
+   * Optional. Instance ID for app.
    *
    * @var string
    */
   public $appInstanceId;
   /**
-   * Application service account - let custoemrs bring their own SA for
-   * application
+   * Application service account. Let customers bring their own service account
+   * for the application.
    *
    * @var string
    */
   public $appServiceAccount;
   /**
-   * Optional. Customized vm names
+   * Optional. Customized VM names.
    *
    * @var string[]
    */
   public $appVmNames;
   /**
-   * Required. image for ascs server
+   * Required. Image for the ASCS server.
    *
    * @var string
    */
   public $ascsImage;
   /**
-   * Optional. instance id for ascs
+   * Optional. Instance ID for ASCS.
    *
    * @var string
    */
   public $ascsInstanceId;
   /**
-   * Required. ascs_machine_type
+   * Required. ASCS machine type.
    *
    * @var string
    */
   public $ascsMachineType;
   /**
-   * ASCS service account - let custoemrs bring their own SA for ASCS
+   * ASCS service account. Let customers bring their own service account for
+   * ASCS.
    *
    * @var string
    */
   public $ascsServiceAccount;
   /**
-   * Optional. ASCS vm name
+   * Optional. ASCS VM name.
    *
    * @var string
    */
   public $ascsVm;
   /**
-   * Optional. instance id for ers
+   * Optional. Instance ID for ERS.
    *
    * @var string
    */
   public $ersInstanceId;
   /**
-   * Optional. ERS vm name
+   * Optional. ERS VM name.
    *
    * @var string
    */
   public $ersVm;
   /**
-   * Required. image for app server and ascs server
+   * Required. Image for the app server and ASCS server.
    *
    * @var string
    */
   public $image;
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @var string
    */
   public $machineType;
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @var string
    */
   public $secretManagerSecret;
   /**
-   * Optional. Storage location
+   * Optional. Storage location.
    *
    * @var string
    */
@@ -113,14 +114,14 @@ class AppDetails extends \Google\Collection
    */
   public $sid;
   /**
-   * Required. vms_multiplier
+   * Required. VMs multiplier.
    *
    * @var int
    */
   public $vmsMultiplier;
 
   /**
-   * Optional. instance id for app
+   * Optional. Instance ID for app.
    *
    * @param string $appInstanceId
    */
@@ -136,8 +137,8 @@ class AppDetails extends \Google\Collection
     return $this->appInstanceId;
   }
   /**
-   * Application service account - let custoemrs bring their own SA for
-   * application
+   * Application service account. Let customers bring their own service account
+   * for the application.
    *
    * @param string $appServiceAccount
    */
@@ -153,7 +154,7 @@ class AppDetails extends \Google\Collection
     return $this->appServiceAccount;
   }
   /**
-   * Optional. Customized vm names
+   * Optional. Customized VM names.
    *
    * @param string[] $appVmNames
    */
@@ -169,7 +170,7 @@ class AppDetails extends \Google\Collection
     return $this->appVmNames;
   }
   /**
-   * Required. image for ascs server
+   * Required. Image for the ASCS server.
    *
    * @param string $ascsImage
    */
@@ -185,7 +186,7 @@ class AppDetails extends \Google\Collection
     return $this->ascsImage;
   }
   /**
-   * Optional. instance id for ascs
+   * Optional. Instance ID for ASCS.
    *
    * @param string $ascsInstanceId
    */
@@ -201,7 +202,7 @@ class AppDetails extends \Google\Collection
     return $this->ascsInstanceId;
   }
   /**
-   * Required. ascs_machine_type
+   * Required. ASCS machine type.
    *
    * @param string $ascsMachineType
    */
@@ -217,7 +218,8 @@ class AppDetails extends \Google\Collection
     return $this->ascsMachineType;
   }
   /**
-   * ASCS service account - let custoemrs bring their own SA for ASCS
+   * ASCS service account. Let customers bring their own service account for
+   * ASCS.
    *
    * @param string $ascsServiceAccount
    */
@@ -233,7 +235,7 @@ class AppDetails extends \Google\Collection
     return $this->ascsServiceAccount;
   }
   /**
-   * Optional. ASCS vm name
+   * Optional. ASCS VM name.
    *
    * @param string $ascsVm
    */
@@ -249,7 +251,7 @@ class AppDetails extends \Google\Collection
     return $this->ascsVm;
   }
   /**
-   * Optional. instance id for ers
+   * Optional. Instance ID for ERS.
    *
    * @param string $ersInstanceId
    */
@@ -265,7 +267,7 @@ class AppDetails extends \Google\Collection
     return $this->ersInstanceId;
   }
   /**
-   * Optional. ERS vm name
+   * Optional. ERS VM name.
    *
    * @param string $ersVm
    */
@@ -281,7 +283,7 @@ class AppDetails extends \Google\Collection
     return $this->ersVm;
   }
   /**
-   * Required. image for app server and ascs server
+   * Required. Image for the app server and ASCS server.
    *
    * @param string $image
    */
@@ -297,7 +299,7 @@ class AppDetails extends \Google\Collection
     return $this->image;
   }
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @param string $machineType
    */
@@ -313,7 +315,7 @@ class AppDetails extends \Google\Collection
     return $this->machineType;
   }
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @param string $secretManagerSecret
    */
@@ -329,7 +331,7 @@ class AppDetails extends \Google\Collection
     return $this->secretManagerSecret;
   }
   /**
-   * Optional. Storage location
+   * Optional. Storage location.
    *
    * @param string $sharedStorage
    */
@@ -362,7 +364,7 @@ class AppDetails extends \Google\Collection
     return $this->sid;
   }
   /**
-   * Required. vms_multiplier
+   * Required. VMs multiplier.
    *
    * @param int $vmsMultiplier
    */
