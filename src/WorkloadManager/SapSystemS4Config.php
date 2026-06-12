@@ -23,25 +23,25 @@ class SapSystemS4Config extends \Google\Model
   public const DEPLOYMENT_MODEL_DISTRIBUTED = 'DISTRIBUTED';
   public const DEPLOYMENT_MODEL_DISTRIBUTED_HA = 'DISTRIBUTED_HA';
   /**
-   * Unspecified environment type
+   * Unspecified environment type.
    */
   public const ENVIRONMENT_TYPE_ENVIRONMENT_TYPE_UNSPECIFIED = 'ENVIRONMENT_TYPE_UNSPECIFIED';
   /**
-   * Non-production environment type
+   * Non-production environment type.
    */
   public const ENVIRONMENT_TYPE_NON_PRODUCTION = 'NON_PRODUCTION';
   /**
-   * Production environment type
+   * Production environment type.
    */
   public const ENVIRONMENT_TYPE_PRODUCTION = 'PRODUCTION';
   public const SCALING_METHOD_SCALE_METHOD_UNSPECIFIED = 'SCALE_METHOD_UNSPECIFIED';
   /**
    * Scale up: Increases the size of a physical machine by increasing the amount
-   * of RAM and CPU available for processing
+   * of RAM and CPU available for processing.
    */
   public const SCALING_METHOD_SCALE_UP = 'SCALE_UP';
   /**
-   * Scale out: Combines multiple independent computers into one system
+   * Scale out: Combines multiple independent computers into one system.
    */
   public const SCALING_METHOD_SCALE_OUT = 'SCALE_OUT';
   public const VERSION_VERSION_UNSPECIFIED = 'VERSION_UNSPECIFIED';
@@ -53,8 +53,8 @@ class SapSystemS4Config extends \Google\Model
    */
   public $allowStoppingForUpdate;
   /**
-   * Ansible runner service account - let custoemrs bring their own SA for
-   * Ansible runner
+   * Ansible runner service account. Let customers bring their own service
+   * account for the Ansible runner.
    *
    * @var string
    */
@@ -64,20 +64,20 @@ class SapSystemS4Config extends \Google\Model
   protected $databaseType = DatabaseDetails::class;
   protected $databaseDataType = '';
   /**
-   * Required. two model non-HA and HA supported
+   * Required. Supports non-HA and HA models.
    *
    * @var string
    */
   public $deploymentModel;
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    *
    * @var string
    */
   public $environmentType;
   /**
-   * the project that infrastructure deployed, current only support the same
-   * project where the deployment resource exist.
+   * The project that infrastructure is deployed in. Currently only supports the
+   * same project where the deployment resource exists.
    *
    * @var string
    */
@@ -85,31 +85,31 @@ class SapSystemS4Config extends \Google\Model
   protected $locationType = LocationDetails::class;
   protected $locationDataType = '';
   /**
-   * Required. media_bucket_name
+   * Required. Media bucket name.
    *
    * @var string
    */
   public $mediaBucketName;
   /**
-   * Optional. sap_boot_disk_image
+   * Optional. SAP boot disk image.
    *
    * @var string
    */
   public $sapBootDiskImage;
   /**
-   * Required. support scale up and scale out
+   * Required. Supports scale up and scale out.
    *
    * @var string
    */
   public $scalingMethod;
   /**
-   * Required. sap hana version
+   * Required. SAP HANA version.
    *
    * @var string
    */
   public $version;
   /**
-   * vm_prefix
+   * VM prefix.
    *
    * @var string
    */
@@ -130,8 +130,8 @@ class SapSystemS4Config extends \Google\Model
     return $this->allowStoppingForUpdate;
   }
   /**
-   * Ansible runner service account - let custoemrs bring their own SA for
-   * Ansible runner
+   * Ansible runner service account. Let customers bring their own service
+   * account for the Ansible runner.
    *
    * @param string $ansibleRunnerServiceAccount
    */
@@ -147,7 +147,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->ansibleRunnerServiceAccount;
   }
   /**
-   * instance details
+   * Instance details.
    *
    * @param AppDetails $app
    */
@@ -163,7 +163,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->app;
   }
   /**
-   * database details
+   * Database details.
    *
    * @param DatabaseDetails $database
    */
@@ -179,7 +179,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->database;
   }
   /**
-   * Required. two model non-HA and HA supported
+   * Required. Supports non-HA and HA models.
    *
    * Accepted values: DEPLOYMENT_MODEL_UNSPECIFIED, DISTRIBUTED, DISTRIBUTED_HA
    *
@@ -197,7 +197,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->deploymentModel;
   }
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    *
    * Accepted values: ENVIRONMENT_TYPE_UNSPECIFIED, NON_PRODUCTION, PRODUCTION
    *
@@ -215,8 +215,8 @@ class SapSystemS4Config extends \Google\Model
     return $this->environmentType;
   }
   /**
-   * the project that infrastructure deployed, current only support the same
-   * project where the deployment resource exist.
+   * The project that infrastructure is deployed in. Currently only supports the
+   * same project where the deployment resource exists.
    *
    * @param string $gcpProjectId
    */
@@ -232,7 +232,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->gcpProjectId;
   }
   /**
-   * database details
+   * Database details.
    *
    * @param LocationDetails $location
    */
@@ -248,7 +248,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->location;
   }
   /**
-   * Required. media_bucket_name
+   * Required. Media bucket name.
    *
    * @param string $mediaBucketName
    */
@@ -264,7 +264,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->mediaBucketName;
   }
   /**
-   * Optional. sap_boot_disk_image
+   * Optional. SAP boot disk image.
    *
    * @param string $sapBootDiskImage
    */
@@ -280,7 +280,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->sapBootDiskImage;
   }
   /**
-   * Required. support scale up and scale out
+   * Required. Supports scale up and scale out.
    *
    * Accepted values: SCALE_METHOD_UNSPECIFIED, SCALE_UP, SCALE_OUT
    *
@@ -298,7 +298,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->scalingMethod;
   }
   /**
-   * Required. sap hana version
+   * Required. SAP HANA version.
    *
    * Accepted values: VERSION_UNSPECIFIED, S4_HANA_2021, S4_HANA_2022,
    * S4_HANA_2023
@@ -317,7 +317,7 @@ class SapSystemS4Config extends \Google\Model
     return $this->version;
   }
   /**
-   * vm_prefix
+   * VM prefix.
    *
    * @param string $vmPrefix
    */

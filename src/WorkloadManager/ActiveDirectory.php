@@ -20,50 +20,50 @@ namespace Google\Service\WorkloadManager;
 class ActiveDirectory extends \Google\Model
 {
   /**
-   * Unspecified active directory type
+   * Unspecified Active Directory type.
    */
   public const TYPE_ACTIVE_DIRECTORY_TYPE_UNSPECIFIED = 'ACTIVE_DIRECTORY_TYPE_UNSPECIFIED';
   /**
-   * GCP managed active directory type
+   * GCP managed Active Directory type.
    */
   public const TYPE_GCP_MANAGED = 'GCP_MANAGED';
   /**
-   * Self managed active directory type
+   * Self managed Active Directory type.
    */
   public const TYPE_SELF_MANAGED = 'SELF_MANAGED';
   /**
-   * Optional. DNS IP address
+   * Optional. DNS IP address.
    *
    * @var string
    */
   public $dnsAddress;
   /**
-   * Optional. human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as “google.com”.
    *
    * @var string
    */
   public $domain;
   /**
-   * Optional. domain username
+   * Optional. Domain username.
    *
    * @var string
    */
   public $domainUsername;
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @var string
    */
   public $secretManagerSecret;
   /**
-   * Required. active directory type
+   * Required. Active Directory type.
    *
    * @var string
    */
   public $type;
 
   /**
-   * Optional. DNS IP address
+   * Optional. DNS IP address.
    *
    * @param string $dnsAddress
    */
@@ -79,7 +79,7 @@ class ActiveDirectory extends \Google\Model
     return $this->dnsAddress;
   }
   /**
-   * Optional. human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as “google.com”.
    *
    * @param string $domain
    */
@@ -95,7 +95,7 @@ class ActiveDirectory extends \Google\Model
     return $this->domain;
   }
   /**
-   * Optional. domain username
+   * Optional. Domain username.
    *
    * @param string $domainUsername
    */
@@ -111,7 +111,7 @@ class ActiveDirectory extends \Google\Model
     return $this->domainUsername;
   }
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @param string $secretManagerSecret
    */
@@ -127,7 +127,7 @@ class ActiveDirectory extends \Google\Model
     return $this->secretManagerSecret;
   }
   /**
-   * Required. active directory type
+   * Required. Active Directory type.
    *
    * Accepted values: ACTIVE_DIRECTORY_TYPE_UNSPECIFIED, GCP_MANAGED,
    * SELF_MANAGED

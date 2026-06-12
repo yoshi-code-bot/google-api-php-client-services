@@ -20,49 +20,50 @@ namespace Google\Service\WorkloadManager;
 class DatabaseDetails extends \Google\Model
 {
   /**
-   * Database service account - let custoemrs bring their own SA for database
+   * Database service account. Let customers bring their own SA for the
+   * database.
    *
    * @var string
    */
   public $databaseServiceAccount;
   /**
-   * Required. disk_type
+   * Required. Disk type.
    *
    * @var string
    */
   public $diskType;
   /**
-   * Required. image for database server
+   * Required. Image for the database server.
    *
    * @var string
    */
   public $image;
   /**
-   * Optional. instance id
+   * Optional. Instance ID.
    *
    * @var string
    */
   public $instanceId;
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @var string
    */
   public $machineType;
   /**
-   * Optional. primary db vm name
+   * Optional. Primary DB VM name.
    *
    * @var string
    */
   public $primaryDbVm;
   /**
-   * Optional. secondary db vm name
+   * Optional. Secondary DB VM name.
    *
    * @var string
    */
   public $secondaryDbVm;
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @var string
    */
@@ -76,7 +77,8 @@ class DatabaseDetails extends \Google\Model
   public $sid;
 
   /**
-   * Database service account - let custoemrs bring their own SA for database
+   * Database service account. Let customers bring their own SA for the
+   * database.
    *
    * @param string $databaseServiceAccount
    */
@@ -92,7 +94,7 @@ class DatabaseDetails extends \Google\Model
     return $this->databaseServiceAccount;
   }
   /**
-   * Required. disk_type
+   * Required. Disk type.
    *
    * @param string $diskType
    */
@@ -108,7 +110,7 @@ class DatabaseDetails extends \Google\Model
     return $this->diskType;
   }
   /**
-   * Required. image for database server
+   * Required. Image for the database server.
    *
    * @param string $image
    */
@@ -124,7 +126,7 @@ class DatabaseDetails extends \Google\Model
     return $this->image;
   }
   /**
-   * Optional. instance id
+   * Optional. Instance ID.
    *
    * @param string $instanceId
    */
@@ -140,7 +142,7 @@ class DatabaseDetails extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @param string $machineType
    */
@@ -156,7 +158,7 @@ class DatabaseDetails extends \Google\Model
     return $this->machineType;
   }
   /**
-   * Optional. primary db vm name
+   * Optional. Primary DB VM name.
    *
    * @param string $primaryDbVm
    */
@@ -172,7 +174,7 @@ class DatabaseDetails extends \Google\Model
     return $this->primaryDbVm;
   }
   /**
-   * Optional. secondary db vm name
+   * Optional. Secondary DB VM name.
    *
    * @param string $secondaryDbVm
    */
@@ -188,7 +190,7 @@ class DatabaseDetails extends \Google\Model
     return $this->secondaryDbVm;
   }
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @param string $secretManagerSecret
    */

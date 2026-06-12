@@ -36,7 +36,7 @@ class ListDeploymentsResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of Deployment
+   * The list of deployments.
    *
    * @param Deployment[] $deployments
    */

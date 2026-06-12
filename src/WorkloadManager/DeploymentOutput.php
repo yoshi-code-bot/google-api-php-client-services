@@ -20,20 +20,20 @@ namespace Google\Service\WorkloadManager;
 class DeploymentOutput extends \Google\Model
 {
   /**
-   * name of the resource
+   * Name of the resource.
    *
    * @var string
    */
   public $name;
   /**
-   * type of the resource
+   * Type of the resource.
    *
    * @var string
    */
   public $type;
 
   /**
-   * name of the resource
+   * Name of the resource.
    *
    * @param string $name
    */
@@ -49,7 +49,7 @@ class DeploymentOutput extends \Google\Model
     return $this->name;
   }
   /**
-   * type of the resource
+   * Type of the resource.
    *
    * @param string $type
    */

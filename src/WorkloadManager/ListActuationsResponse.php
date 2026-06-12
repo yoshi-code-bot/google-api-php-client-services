@@ -37,7 +37,7 @@ class ListActuationsResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of Actuation
+   * The list of actuations.
    *
    * @param Actuation[] $actuations
    */

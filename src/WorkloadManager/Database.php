@@ -20,88 +20,88 @@ namespace Google\Service\WorkloadManager;
 class Database extends \Google\Model
 {
   /**
-   * Unspecified tenancy model
+   * Unspecified tenancy model.
    */
   public const TENANCY_MODEL_TENANCY_MODEL_UNSPECIFIED = 'TENANCY_MODEL_UNSPECIFIED';
   /**
-   * Shared tenancy model
+   * Shared tenancy model.
    */
   public const TENANCY_MODEL_SHARED = 'SHARED';
   /**
-   * Sole Tenant tenancy model
+   * Sole Tenant tenancy model.
    */
   public const TENANCY_MODEL_SOLE_TENANT = 'SOLE_TENANT';
   /**
-   * Required. disk_type
+   * Required. Disk type.
    *
    * @var string
    */
   public $diskType;
   /**
-   * Optional. only useful for Linux High Availability setup
+   * Optional. Only useful for Linux High Availability setup.
    *
    * @var string
    */
   public $floatingIpAddress;
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @var string
    */
   public $machineType;
   /**
-   * Optional. the name of a secondary-sole-tenant node/node group
+   * Optional. The name of a secondary-sole-tenant node/node group.
    *
    * @var string
    */
   public $secondarySoleTenantNode;
   /**
-   * Optional. the type of a secondary-sole-tenant node/node group e.g.
-   * compute.googleapis.com/node-name
+   * Optional. The type of a secondary-sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    *
    * @var string
    */
   public $secondarySoleTenantNodeType;
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @var string
    */
   public $secretManagerSecret;
   /**
-   * Required. whether simultaneous multithreading is enabled or not
+   * Required. Whether simultaneous multithreading is enabled or not.
    *
    * @var bool
    */
   public $smt;
   /**
-   * Optional. the name of a primary sole-tenant node/node group
+   * Optional. The name of a primary sole-tenant node/node group.
    *
    * @var string
    */
   public $soleTenantNode;
   /**
-   * Optional. the type of a primary sole-tenant node/node group e.g.
-   * compute.googleapis.com/node-name
+   * Optional. The type of a primary sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    *
    * @var string
    */
   public $soleTenantNodeType;
   /**
-   * Required. whether to have TempDB on local SSD
+   * Required. Whether to have TempDB on local SSD.
    *
    * @var bool
    */
   public $tempdbOnSsd;
   /**
-   * Required. SHARED or SOLE_TENANT
+   * Required. SHARED or SOLE_TENANT.
    *
    * @var string
    */
   public $tenancyModel;
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    *
    * @param string $diskType
    */
@@ -117,7 +117,7 @@ class Database extends \Google\Model
     return $this->diskType;
   }
   /**
-   * Optional. only useful for Linux High Availability setup
+   * Optional. Only useful for Linux High Availability setup.
    *
    * @param string $floatingIpAddress
    */
@@ -133,7 +133,7 @@ class Database extends \Google\Model
     return $this->floatingIpAddress;
   }
   /**
-   * Required. machine type
+   * Required. Machine type.
    *
    * @param string $machineType
    */
@@ -149,7 +149,7 @@ class Database extends \Google\Model
     return $this->machineType;
   }
   /**
-   * Optional. the name of a secondary-sole-tenant node/node group
+   * Optional. The name of a secondary-sole-tenant node/node group.
    *
    * @param string $secondarySoleTenantNode
    */
@@ -165,8 +165,8 @@ class Database extends \Google\Model
     return $this->secondarySoleTenantNode;
   }
   /**
-   * Optional. the type of a secondary-sole-tenant node/node group e.g.
-   * compute.googleapis.com/node-name
+   * Optional. The type of a secondary-sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    *
    * @param string $secondarySoleTenantNodeType
    */
@@ -182,7 +182,7 @@ class Database extends \Google\Model
     return $this->secondarySoleTenantNodeType;
   }
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    *
    * @param string $secretManagerSecret
    */
@@ -198,7 +198,7 @@ class Database extends \Google\Model
     return $this->secretManagerSecret;
   }
   /**
-   * Required. whether simultaneous multithreading is enabled or not
+   * Required. Whether simultaneous multithreading is enabled or not.
    *
    * @param bool $smt
    */
@@ -214,7 +214,7 @@ class Database extends \Google\Model
     return $this->smt;
   }
   /**
-   * Optional. the name of a primary sole-tenant node/node group
+   * Optional. The name of a primary sole-tenant node/node group.
    *
    * @param string $soleTenantNode
    */
@@ -230,8 +230,8 @@ class Database extends \Google\Model
     return $this->soleTenantNode;
   }
   /**
-   * Optional. the type of a primary sole-tenant node/node group e.g.
-   * compute.googleapis.com/node-name
+   * Optional. The type of a primary sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    *
    * @param string $soleTenantNodeType
    */
@@ -247,7 +247,7 @@ class Database extends \Google\Model
     return $this->soleTenantNodeType;
   }
   /**
-   * Required. whether to have TempDB on local SSD
+   * Required. Whether to have TempDB on local SSD.
    *
    * @param bool $tempdbOnSsd
    */
@@ -263,7 +263,7 @@ class Database extends \Google\Model
     return $this->tempdbOnSsd;
   }
   /**
-   * Required. SHARED or SOLE_TENANT
+   * Required. SHARED or SOLE_TENANT.
    *
    * Accepted values: TENANCY_MODEL_UNSPECIFIED, SHARED, SOLE_TENANT
    *

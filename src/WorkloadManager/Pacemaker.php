@@ -20,44 +20,44 @@ namespace Google\Service\WorkloadManager;
 class Pacemaker extends \Google\Model
 {
   /**
-   * Required. bucket location for node certificates
+   * Required. Bucket location for node certificates.
    *
    * @var string
    */
   public $bucketNameNodeCertificates;
   /**
-   * Required. pacemaker cluster name
+   * Required. Pacemaker cluster name.
    *
    * @var string
    */
   public $pacemakerCluster;
   /**
-   * Required. pacemaker cluster secret name
+   * Required. Pacemaker cluster secret name.
    *
    * @var string
    */
   public $pacemakerClusterSecret;
   /**
-   * Required. pacemaker cluster username
+   * Required. Pacemaker cluster username.
    *
    * @var string
    */
   public $pacemakerClusterUsername;
   /**
-   * Required. sql pacemaker secret name
+   * Required. SQL Pacemaker secret name.
    *
    * @var string
    */
   public $sqlPacemakerSecret;
   /**
-   * Required. sql pacemaker username
+   * Required. SQL Pacemaker username.
    *
    * @var string
    */
   public $sqlPacemakerUsername;
 
   /**
-   * Required. bucket location for node certificates
+   * Required. Bucket location for node certificates.
    *
    * @param string $bucketNameNodeCertificates
    */
@@ -73,7 +73,7 @@ class Pacemaker extends \Google\Model
     return $this->bucketNameNodeCertificates;
   }
   /**
-   * Required. pacemaker cluster name
+   * Required. Pacemaker cluster name.
    *
    * @param string $pacemakerCluster
    */
@@ -89,7 +89,7 @@ class Pacemaker extends \Google\Model
     return $this->pacemakerCluster;
   }
   /**
-   * Required. pacemaker cluster secret name
+   * Required. Pacemaker cluster secret name.
    *
    * @param string $pacemakerClusterSecret
    */
@@ -105,7 +105,7 @@ class Pacemaker extends \Google\Model
     return $this->pacemakerClusterSecret;
   }
   /**
-   * Required. pacemaker cluster username
+   * Required. Pacemaker cluster username.
    *
    * @param string $pacemakerClusterUsername
    */
@@ -121,7 +121,7 @@ class Pacemaker extends \Google\Model
     return $this->pacemakerClusterUsername;
   }
   /**
-   * Required. sql pacemaker secret name
+   * Required. SQL Pacemaker secret name.
    *
    * @param string $sqlPacemakerSecret
    */
@@ -137,7 +137,7 @@ class Pacemaker extends \Google\Model
     return $this->sqlPacemakerSecret;
   }
   /**
-   * Required. sql pacemaker username
+   * Required. SQL Pacemaker username.
    *
    * @param string $sqlPacemakerUsername
    */

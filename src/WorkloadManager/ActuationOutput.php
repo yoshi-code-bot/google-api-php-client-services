@@ -24,74 +24,74 @@ class ActuationOutput extends \Google\Collection
    */
   public const ERROR_CODE_ERROR_CODE_UNSPECIFIED = 'ERROR_CODE_UNSPECIFIED';
   /**
-   * general terraform failure
+   * General Terraform failure.
    */
   public const ERROR_CODE_TERRAFORM_FAILED = 'TERRAFORM_FAILED';
   /**
-   * permission error in terraform
+   * Permission error in Terraform.
    */
   public const ERROR_CODE_PERMISSION_DENIED_IN_TERRAFORM = 'PERMISSION_DENIED_IN_TERRAFORM';
   /**
-   * quota related error in terraform
+   * Quota related error in Terraform.
    */
   public const ERROR_CODE_QUOTA_EXCEED_IN_TERRAFORM = 'QUOTA_EXCEED_IN_TERRAFORM';
   /**
-   * general ansible failure
+   * General Ansible failure.
    */
   public const ERROR_CODE_ANSIBLE_FAILED = 'ANSIBLE_FAILED';
   /**
-   * constraint related error in terraform
+   * Constraint related error in Terraform.
    */
   public const ERROR_CODE_CONSTRAINT_VIOLATION_IN_TERRAFORM = 'CONSTRAINT_VIOLATION_IN_TERRAFORM';
   /**
-   * resource already exists error in terraform
+   * Resource already exists error in Terraform.
    */
   public const ERROR_CODE_RESOURCE_ALREADY_EXISTS_IN_TERRAFORM = 'RESOURCE_ALREADY_EXISTS_IN_TERRAFORM';
   /**
-   * resource not found error in terraform
+   * Resource not found error in Terraform.
    */
   public const ERROR_CODE_RESOURCE_UNAVAILABLE_IN_TERRAFORM = 'RESOURCE_UNAVAILABLE_IN_TERRAFORM';
   /**
-   * permission denied error in ansible
+   * Permission denied error in Ansible.
    */
   public const ERROR_CODE_PERMISSION_DENIED_IN_ANSIBLE = 'PERMISSION_DENIED_IN_ANSIBLE';
   /**
-   * secret related error in ansible
+   * Secret related error in Ansible.
    */
   public const ERROR_CODE_INVALID_SECRET_IN_ANSIBLE = 'INVALID_SECRET_IN_ANSIBLE';
   /**
-   * general terraform failure during deletion
+   * General Terraform failure during deletion.
    */
   public const ERROR_CODE_TERRAFORM_DELETION_FAILED = 'TERRAFORM_DELETION_FAILED';
   /**
-   * resource in use error in terraform deletion
+   * Resource in use error in Terraform deletion.
    */
   public const ERROR_CODE_RESOURCE_IN_USE_IN_TERRAFORM_DELETION = 'RESOURCE_IN_USE_IN_TERRAFORM_DELETION';
   /**
-   * start up failure in ansible
+   * Startup failure in Ansible.
    */
   public const ERROR_CODE_ANSIBLE_START_FAILED = 'ANSIBLE_START_FAILED';
   protected $collection_key = 'ansibleFailedTask';
   /**
-   * A link to gcs file that store build logs
+   * A link to the Cloud Storage file that stores build logs.
    *
    * @var string
    */
   public $actuateLogs;
   /**
-   * Output only. error message return from ansible.
+   * Output only. Error message returned from Ansible.
    *
    * @var string
    */
   public $ansibleError;
   /**
-   * Output only. failed task name return from ansible.
+   * Output only. Failed task name returned from Ansible.
    *
    * @var string[]
    */
   public $ansibleFailedTask;
   /**
-   * reference to Blueprint Controller deployment and revision resource
+   * Reference to the Blueprint Controller deployment and revision resource.
    *
    * @var string
    */
@@ -111,33 +111,33 @@ class ActuationOutput extends \Google\Collection
    */
   public $errorCode;
   /**
-   * A link to actuation cloud build log.
+   * A link to the actuation Cloud Build log.
    *
    * @var string
    */
   public $errorLogs;
   /**
-   * Output only. whether the error message is user facing. If true, the error
+   * Output only. Whether the error message is user facing. If true, the error
    * message will be shown in the UI.
    *
    * @var bool
    */
   public $hasUserFacingErrorMsg;
   /**
-   * Output only. error message return from terraform.
+   * Output only. Error message returned from Terraform.
    *
    * @var string
    */
   public $terraformError;
   /**
-   * reference to terraform template used
+   * Reference to the Terraform template used.
    *
    * @var string
    */
   public $terraformTemplate;
 
   /**
-   * A link to gcs file that store build logs
+   * A link to the Cloud Storage file that stores build logs.
    *
    * @param string $actuateLogs
    */
@@ -153,7 +153,7 @@ class ActuationOutput extends \Google\Collection
     return $this->actuateLogs;
   }
   /**
-   * Output only. error message return from ansible.
+   * Output only. Error message returned from Ansible.
    *
    * @param string $ansibleError
    */
@@ -169,7 +169,7 @@ class ActuationOutput extends \Google\Collection
     return $this->ansibleError;
   }
   /**
-   * Output only. failed task name return from ansible.
+   * Output only. Failed task name returned from Ansible.
    *
    * @param string[] $ansibleFailedTask
    */
@@ -185,7 +185,7 @@ class ActuationOutput extends \Google\Collection
     return $this->ansibleFailedTask;
   }
   /**
-   * reference to Blueprint Controller deployment and revision resource
+   * Reference to the Blueprint Controller deployment and revision resource.
    *
    * @param string $blueprintId
    */
@@ -242,7 +242,7 @@ class ActuationOutput extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * A link to actuation cloud build log.
+   * A link to the actuation Cloud Build log.
    *
    * @param string $errorLogs
    */
@@ -258,7 +258,7 @@ class ActuationOutput extends \Google\Collection
     return $this->errorLogs;
   }
   /**
-   * Output only. whether the error message is user facing. If true, the error
+   * Output only. Whether the error message is user facing. If true, the error
    * message will be shown in the UI.
    *
    * @param bool $hasUserFacingErrorMsg
@@ -275,7 +275,7 @@ class ActuationOutput extends \Google\Collection
     return $this->hasUserFacingErrorMsg;
   }
   /**
-   * Output only. error message return from terraform.
+   * Output only. Error message returned from Terraform.
    *
    * @param string $terraformError
    */
@@ -291,7 +291,7 @@ class ActuationOutput extends \Google\Collection
     return $this->terraformError;
   }
   /**
-   * reference to terraform template used
+   * Reference to the Terraform template used.
    *
    * @param string $terraformTemplate
    */

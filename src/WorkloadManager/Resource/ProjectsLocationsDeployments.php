@@ -40,7 +40,7 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
    * @param Deployment $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string deploymentId Required. Id of the deployment
+   * @opt_param string deploymentId Required. ID of the deployment.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -64,11 +64,11 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
   /**
    * Deletes a single Deployment. (deployments.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force Optional. If set to true, any actuation will also be
-   * deleted. Followed the best practice from https://aip.dev/135#cascading-delete
+   * deleted. Follows the best practice from https://aip.dev/135#cascading-delete.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -81,8 +81,8 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
   /**
    * Gets details of a single Deployment. (deployments.get)
    *
-   * @param string $name Required. Name of the resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * @param string $name Required. Name of the resource. The format is
+   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
    * @param array $optParams Optional parameters.
    * @return Deployment
    * @throws \Google\Service\Exception
@@ -101,8 +101,8 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
    * the form: `projects/{project_id}/locations/{location_id}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter resource follow
-   * https://google.aip.dev/160
+   * @opt_param string filter Optional. Filter resource following
+   * https://google.aip.dev/160.
    * @opt_param string orderBy Optional. Field to sort by. See
    * https://google.aip.dev/132#ordering for more details.
    * @opt_param int pageSize Optional. Requested page size. Server may return
