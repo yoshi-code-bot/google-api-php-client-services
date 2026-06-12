@@ -288,6 +288,10 @@ class CloudDomains extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'validateOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'register' => [
               'path' => 'v1/{+parent}/registrations:register',
