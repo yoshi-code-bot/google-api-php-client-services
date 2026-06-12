@@ -255,6 +255,12 @@ class Operation extends \Google\Model
    */
   public const OPERATION_TYPE_PRE_CHECK_MAJOR_VERSION_UPGRADE = 'PRE_CHECK_MAJOR_VERSION_UPGRADE';
   /**
+   * This operation type represents individual steps in a multi-step setup
+   * migration workflow: including configuration, replication, switchover/back,
+   * and data reseeding, as defined by operation's intent.
+   */
+  public const OPERATION_TYPE_SETUP_MIGRATION = 'SETUP_MIGRATION';
+  /**
    * The state of the operation is unknown.
    */
   public const STATUS_SQL_OPERATION_STATUS_UNSPECIFIED = 'SQL_OPERATION_STATUS_UNSPECIFIED';
@@ -553,7 +559,7 @@ class Operation extends \Google\Model
    * RECONFIGURE_OLD_PRIMARY, CLUSTER_MAINTENANCE, SELF_SERVICE_MAINTENANCE,
    * SWITCHOVER_TO_REPLICA, MAJOR_VERSION_UPGRADE, ADVANCED_BACKUP,
    * MANAGE_BACKUP, ENHANCED_BACKUP, REPAIR_READ_POOL, CREATE_READ_POOL,
-   * PRE_CHECK_MAJOR_VERSION_UPGRADE
+   * PRE_CHECK_MAJOR_VERSION_UPGRADE, SETUP_MIGRATION
    *
    * @param self::OPERATION_TYPE_* $operationType
    */
