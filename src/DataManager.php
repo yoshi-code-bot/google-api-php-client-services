@@ -48,6 +48,7 @@ class DataManager extends \Google\Service
   public $accountTypes_accounts_userListGlobalLicenses;
   public $accountTypes_accounts_userListGlobalLicenses_userListGlobalLicenseCustomerInfos;
   public $accountTypes_accounts_userLists;
+  public $adEvents;
   public $audienceMembers;
   public $events;
   public $requestStatus;
@@ -390,6 +391,20 @@ class DataManager extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->adEvents = new DataManager\Resource\AdEvents(
+        $this,
+        $this->serviceName,
+        'adEvents',
+        [
+          'methods' => [
+            'ingest' => [
+              'path' => 'v1/adEvents:ingest',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]
