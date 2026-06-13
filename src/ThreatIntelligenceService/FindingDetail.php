@@ -32,6 +32,8 @@ class FindingDetail extends \Google\Model
   protected $initialAccessBrokerDataType = '';
   protected $insiderThreatType = InsiderThreatFindingDetail::class;
   protected $insiderThreatDataType = '';
+  protected $targetTechnologyType = TargetTechnologyFindingDetail::class;
+  protected $targetTechnologyDataType = '';
 
   /**
    * Data Leak finding detail type.
@@ -97,6 +99,22 @@ class FindingDetail extends \Google\Model
   public function getInsiderThreat()
   {
     return $this->insiderThreat;
+  }
+  /**
+   * Technology Watchlist finding detail type.
+   *
+   * @param TargetTechnologyFindingDetail $targetTechnology
+   */
+  public function setTargetTechnology(TargetTechnologyFindingDetail $targetTechnology)
+  {
+    $this->targetTechnology = $targetTechnology;
+  }
+  /**
+   * @return TargetTechnologyFindingDetail
+   */
+  public function getTargetTechnology()
+  {
+    return $this->targetTechnology;
   }
 }
 

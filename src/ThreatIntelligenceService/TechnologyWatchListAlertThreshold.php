@@ -43,10 +43,37 @@ class TechnologyWatchListAlertThreshold extends \Google\Collection
    * Priority level 4.
    */
   public const PRIORITY_MINIMUM_P4 = 'P4';
+  /**
+   * Unspecified risk rating. This is the default value when the risk rating is
+   * not set.
+   */
+  public const RISK_RATING_MINIMUM_RISK_RATING_UNSPECIFIED = 'RISK_RATING_UNSPECIFIED';
+  /**
+   * Low risk rating.
+   */
+  public const RISK_RATING_MINIMUM_LOW = 'LOW';
+  /**
+   * Medium risk rating.
+   */
+  public const RISK_RATING_MINIMUM_MEDIUM = 'MEDIUM';
+  /**
+   * High risk rating.
+   */
+  public const RISK_RATING_MINIMUM_HIGH = 'HIGH';
+  /**
+   * Critical risk rating.
+   */
+  public const RISK_RATING_MINIMUM_CRITICAL = 'CRITICAL';
+  /**
+   * The vulnerability has been assessed, but a specific risk rating could not
+   * be determined or assigned.
+   */
+  public const RISK_RATING_MINIMUM_UNRATED = 'UNRATED';
   protected $collection_key = 'exploitationStates';
   /**
-   * Optional. The minimum cvss V3 score for the alert. Ex: 7.0. Valid range is
-   * [0.0, 10.0].
+   * Optional. The minimum CVSS score for the alert. Evaluates to CVSS v3 when
+   * available with a fallback to v2 and v4. Ex: 7.0. Valid range is [0.0,
+   * 10.0].
    *
    * @var float
    */
@@ -70,10 +97,17 @@ class TechnologyWatchListAlertThreshold extends \Google\Collection
    * @var string
    */
   public $priorityMinimum;
+  /**
+   * Optional. The minimum risk rating for the alert.
+   *
+   * @var string
+   */
+  public $riskRatingMinimum;
 
   /**
-   * Optional. The minimum cvss V3 score for the alert. Ex: 7.0. Valid range is
-   * [0.0, 10.0].
+   * Optional. The minimum CVSS score for the alert. Evaluates to CVSS v3 when
+   * available with a fallback to v2 and v4. Ex: 7.0. Valid range is [0.0,
+   * 10.0].
    *
    * @param float $cvssScoreMinimum
    */
@@ -138,6 +172,25 @@ class TechnologyWatchListAlertThreshold extends \Google\Collection
   public function getPriorityMinimum()
   {
     return $this->priorityMinimum;
+  }
+  /**
+   * Optional. The minimum risk rating for the alert.
+   *
+   * Accepted values: RISK_RATING_UNSPECIFIED, LOW, MEDIUM, HIGH, CRITICAL,
+   * UNRATED
+   *
+   * @param self::RISK_RATING_MINIMUM_* $riskRatingMinimum
+   */
+  public function setRiskRatingMinimum($riskRatingMinimum)
+  {
+    $this->riskRatingMinimum = $riskRatingMinimum;
+  }
+  /**
+   * @return self::RISK_RATING_MINIMUM_*
+   */
+  public function getRiskRatingMinimum()
+  {
+    return $this->riskRatingMinimum;
   }
 }
 
