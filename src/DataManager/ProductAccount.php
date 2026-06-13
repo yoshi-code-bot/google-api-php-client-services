@@ -78,7 +78,7 @@ class ProductAccount extends \Google\Model
    */
   public $accountId;
   /**
-   * Optional. The type of the account. For example, `GOOGLE_ADS`. Either
+   * Required. The type of the account. For example, `GOOGLE_ADS`. Either
    * `account_type` or the deprecated `product` is required. If both are set,
    * the values must match.
    *
@@ -110,7 +110,7 @@ class ProductAccount extends \Google\Model
     return $this->accountId;
   }
   /**
-   * Optional. The type of the account. For example, `GOOGLE_ADS`. Either
+   * Required. The type of the account. For example, `GOOGLE_ADS`. Either
    * `account_type` or the deprecated `product` is required. If both are set,
    * the values must match.
    *

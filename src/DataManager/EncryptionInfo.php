@@ -21,6 +21,8 @@ class EncryptionInfo extends \Google\Model
 {
   protected $awsWrappedKeyInfoType = AwsWrappedKeyInfo::class;
   protected $awsWrappedKeyInfoDataType = '';
+  protected $coordinatorKeyInfoType = CoordinatorKeyInfo::class;
+  protected $coordinatorKeyInfoDataType = '';
   protected $gcpWrappedKeyInfoType = GcpWrappedKeyInfo::class;
   protected $gcpWrappedKeyInfoDataType = '';
 
@@ -39,6 +41,23 @@ class EncryptionInfo extends \Google\Model
   public function getAwsWrappedKeyInfo()
   {
     return $this->awsWrappedKeyInfo;
+  }
+  /**
+   * Key information for the chosen coordinator key. This is not supported for
+   * the IngestEvents, IngestAudienceMembers, and RemoveAudienceMembers methods.
+   *
+   * @param CoordinatorKeyInfo $coordinatorKeyInfo
+   */
+  public function setCoordinatorKeyInfo(CoordinatorKeyInfo $coordinatorKeyInfo)
+  {
+    $this->coordinatorKeyInfo = $coordinatorKeyInfo;
+  }
+  /**
+   * @return CoordinatorKeyInfo
+   */
+  public function getCoordinatorKeyInfo()
+  {
+    return $this->coordinatorKeyInfo;
   }
   /**
    * Google Cloud Platform wrapped key information.

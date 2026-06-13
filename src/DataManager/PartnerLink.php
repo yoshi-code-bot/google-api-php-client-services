@@ -20,6 +20,27 @@ namespace Google\Service\DataManager;
 class PartnerLink extends \Google\Model
 {
   /**
+   * Unspecified feature set. If unspecified, the system behavior defaults to
+   * FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   */
+  public const FEATURE_SET_FEATURE_SET_UNSPECIFIED = 'FEATURE_SET_UNSPECIFIED';
+  /**
+   * Indicates a link used for audience and event management.
+   */
+  public const FEATURE_SET_FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT = 'FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT';
+  /**
+   * Indicates a link used for ad event management.
+   */
+  public const FEATURE_SET_FEATURE_SET_AD_EVENT_MANAGEMENT = 'FEATURE_SET_AD_EVENT_MANAGEMENT';
+  /**
+   * Optional. Immutable. The set of features supported for the partner link. If
+   * not specified, the system behavior defaults to
+   * FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   *
+   * @var string
+   */
+  public $featureSet;
+  /**
    * Identifier. The name of the partner link. Format:
    * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
    *
@@ -30,13 +51,38 @@ class PartnerLink extends \Google\Model
   protected $owningAccountDataType = '';
   protected $partnerAccountType = ProductAccount::class;
   protected $partnerAccountDataType = '';
+  protected $partnerCustomerAccountType = PartnerCustomerAccount::class;
+  protected $partnerCustomerAccountDataType = '';
   /**
    * Output only. The partner link ID.
    *
    * @var string
    */
   public $partnerLinkId;
+  protected $partnerLinkMetadataType = PartnerLinkMetadata::class;
+  protected $partnerLinkMetadataDataType = '';
 
+  /**
+   * Optional. Immutable. The set of features supported for the partner link. If
+   * not specified, the system behavior defaults to
+   * FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   *
+   * Accepted values: FEATURE_SET_UNSPECIFIED,
+   * FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT, FEATURE_SET_AD_EVENT_MANAGEMENT
+   *
+   * @param self::FEATURE_SET_* $featureSet
+   */
+  public function setFeatureSet($featureSet)
+  {
+    $this->featureSet = $featureSet;
+  }
+  /**
+   * @return self::FEATURE_SET_*
+   */
+  public function getFeatureSet()
+  {
+    return $this->featureSet;
+  }
   /**
    * Identifier. The name of the partner link. Format:
    * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
@@ -87,6 +133,23 @@ class PartnerLink extends \Google\Model
     return $this->partnerAccount;
   }
   /**
+   * Optional. The customer account in the partner system. This is required for
+   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
+   *
+   * @param PartnerCustomerAccount $partnerCustomerAccount
+   */
+  public function setPartnerCustomerAccount(PartnerCustomerAccount $partnerCustomerAccount)
+  {
+    $this->partnerCustomerAccount = $partnerCustomerAccount;
+  }
+  /**
+   * @return PartnerCustomerAccount
+   */
+  public function getPartnerCustomerAccount()
+  {
+    return $this->partnerCustomerAccount;
+  }
+  /**
    * Output only. The partner link ID.
    *
    * @param string $partnerLinkId
@@ -101,6 +164,23 @@ class PartnerLink extends \Google\Model
   public function getPartnerLinkId()
   {
     return $this->partnerLinkId;
+  }
+  /**
+   * Optional. Metadata associated with the partner link. This is optional and
+   * only accepted for partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
+   *
+   * @param PartnerLinkMetadata $partnerLinkMetadata
+   */
+  public function setPartnerLinkMetadata(PartnerLinkMetadata $partnerLinkMetadata)
+  {
+    $this->partnerLinkMetadata = $partnerLinkMetadata;
+  }
+  /**
+   * @return PartnerLinkMetadata
+   */
+  public function getPartnerLinkMetadata()
+  {
+    return $this->partnerLinkMetadata;
   }
 }
 
