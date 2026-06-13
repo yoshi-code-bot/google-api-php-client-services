@@ -47,7 +47,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
    * Database resource encountered an error and is in indeterministic state.
    */
   public const MAINTENANCE_STATE_ERROR = 'ERROR';
-  protected $collection_key = 'denyMaintenanceSchedules';
+  protected $collection_key = 'nextAvailableMaintenanceVersions';
   protected $currentVersionReleaseDateType = GoogleTypeDate::class;
   protected $currentVersionReleaseDateDataType = '';
   protected $denyMaintenanceSchedulesType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule::class;
@@ -75,6 +75,12 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
    * @var string
    */
   public $maintenanceVersion;
+  /**
+   * Optional. List of next available maintenance versions.
+   *
+   * @var string[]
+   */
+  public $nextAvailableMaintenanceVersions;
   protected $upcomingMaintenanceType = StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 
@@ -179,6 +185,22 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public function getMaintenanceVersion()
   {
     return $this->maintenanceVersion;
+  }
+  /**
+   * Optional. List of next available maintenance versions.
+   *
+   * @param string[] $nextAvailableMaintenanceVersions
+   */
+  public function setNextAvailableMaintenanceVersions($nextAvailableMaintenanceVersions)
+  {
+    $this->nextAvailableMaintenanceVersions = $nextAvailableMaintenanceVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNextAvailableMaintenanceVersions()
+  {
+    return $this->nextAvailableMaintenanceVersions;
   }
   /**
    * Optional. Upcoming maintenance for the database resource. This field is
