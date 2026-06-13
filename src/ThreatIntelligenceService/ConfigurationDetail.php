@@ -28,6 +28,8 @@ class ConfigurationDetail extends \Google\Model
    * @var string
    */
   public $detailType;
+  protected $technologyWatchlistType = TechnologyWatchListConfig::class;
+  protected $technologyWatchlistDataType = '';
 
   /**
    * Customer Profile detail config.
@@ -61,6 +63,22 @@ class ConfigurationDetail extends \Google\Model
   public function getDetailType()
   {
     return $this->detailType;
+  }
+  /**
+   * Technology Watchlist detail config.
+   *
+   * @param TechnologyWatchListConfig $technologyWatchlist
+   */
+  public function setTechnologyWatchlist(TechnologyWatchListConfig $technologyWatchlist)
+  {
+    $this->technologyWatchlist = $technologyWatchlist;
+  }
+  /**
+   * @return TechnologyWatchListConfig
+   */
+  public function getTechnologyWatchlist()
+  {
+    return $this->technologyWatchlist;
   }
 }
 
