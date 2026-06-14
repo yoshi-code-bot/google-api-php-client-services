@@ -48,6 +48,12 @@ class ChromeManagement extends \Google\Service
   /** See reports about devices and Chrome browsers managed within your organization. */
   const CHROME_MANAGEMENT_REPORTS_READONLY =
       "https://www.googleapis.com/auth/chrome.management.reports.readonly";
+  /** Turn Chrome Security Insights on and off and view the data it generates. */
+  const CHROME_MANAGEMENT_SECURITYINSIGHTS =
+      "https://www.googleapis.com/auth/chrome.management.securityinsights";
+  /** See Chrome Security Insights reports. */
+  const CHROME_MANAGEMENT_SECURITYINSIGHTS_READONLY =
+      "https://www.googleapis.com/auth/chrome.management.securityinsights.readonly";
   /** See basic device and telemetry information collected from ChromeOS devices or users managed within your organization. */
   const CHROME_MANAGEMENT_TELEMETRY_READONLY =
       "https://www.googleapis.com/auth/chrome.management.telemetry.readonly";
@@ -426,6 +432,102 @@ class ChromeManagement extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'queryContentTransfers' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:queryContentTransfers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'queryContentTransfersBreakdowns' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:queryContentTransfersBreakdowns',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'breakdown' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'fixedTimeRange' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'metric' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'queryUrlVisits' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:queryUrlVisits',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'queryUrlVisitsBreakdowns' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:queryUrlVisitsBreakdowns',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'breakdown' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'fixedTimeRange' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'metric' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
