@@ -34,8 +34,6 @@ class ProjectsLocationsWorkloadIdentityPools extends \Google\Service\Resource
    * (workloadIdentityPools.getAllowedLocations)
    *
    * @param string $name Required. Resource name of workload identity pool.
-   * Format:
-   * `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
    * @param array $optParams Optional parameters.
    * @return WorkloadIdentityPoolAllowedLocations
    * @throws \Google\Service\Exception
