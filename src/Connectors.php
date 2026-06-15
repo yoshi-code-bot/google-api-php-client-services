@@ -104,6 +104,16 @@ class Connectors extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'executeHttpRequest' => [
+              'path' => 'v2/{+name}:executeHttpRequest',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'executeSqlQuery' => [
               'path' => 'v2/{+connection}:executeSqlQuery',
               'httpMethod' => 'POST',

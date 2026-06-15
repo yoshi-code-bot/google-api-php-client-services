@@ -21,6 +21,8 @@ use Google\Service\Connectors\CheckReadinessResponse;
 use Google\Service\Connectors\CheckStatusResponse;
 use Google\Service\Connectors\ExchangeAuthCodeRequest;
 use Google\Service\Connectors\ExchangeAuthCodeResponse;
+use Google\Service\Connectors\ExecuteHttpRequestRequest;
+use Google\Service\Connectors\ExecuteHttpRequestResponse;
 use Google\Service\Connectors\ExecuteSqlQueryRequest;
 use Google\Service\Connectors\ExecuteSqlQueryResponse;
 use Google\Service\Connectors\GenerateCustomToolspecRequest;
@@ -95,6 +97,24 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('exchangeAuthCode', [$params], ExchangeAuthCodeResponse::class);
+  }
+  /**
+   * Executes a generic HTTP request. This supports all payload formats including
+   * REST/JSON, GraphQL, XML, SOAP, and Multipart by passing the rendered payload
+   * as raw bytes. (connections.executeHttpRequest)
+   *
+   * @param string $name Required. Resource name of the Connection. Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   * @param ExecuteHttpRequestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ExecuteHttpRequestResponse
+   * @throws \Google\Service\Exception
+   */
+  public function executeHttpRequest($name, ExecuteHttpRequestRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('executeHttpRequest', [$params], ExecuteHttpRequestResponse::class);
   }
   /**
    * Executes a SQL statement specified in the body of the request. An example of
