@@ -32,53 +32,85 @@ class Instance extends \Google\Model
    */
   public const CLASS_TYPE_P1 = 'P1';
   /**
-   * Platform edition is unspecified.
+   * Represents an unspecified platform edition.
    */
   public const PLATFORM_EDITION_PLATFORM_EDITION_UNSPECIFIED = 'PLATFORM_EDITION_UNSPECIFIED';
   /**
-   * Trial.
+   * Represents the Looker Core Trial edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_TRIAL = 'LOOKER_CORE_TRIAL';
   /**
-   * Standard.
+   * Represents the Looker Core Standard edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_STANDARD = 'LOOKER_CORE_STANDARD';
   /**
-   * Subscription Standard.
+   * Represents the Looker Core Standard Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_STANDARD_ANNUAL = 'LOOKER_CORE_STANDARD_ANNUAL';
   /**
-   * Subscription Enterprise.
+   * Represents the Looker Core Enterprise Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_ENTERPRISE_ANNUAL = 'LOOKER_CORE_ENTERPRISE_ANNUAL';
   /**
-   * Subscription Embed.
+   * Represents the Looker Core Embed Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_EMBED_ANNUAL = 'LOOKER_CORE_EMBED_ANNUAL';
   /**
-   * Nonprod Subscription Standard.
+   * Represents the Looker Core Nonprod Standard Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_NONPROD_STANDARD_ANNUAL = 'LOOKER_CORE_NONPROD_STANDARD_ANNUAL';
   /**
-   * Nonprod Subscription Enterprise.
+   * Represents the Looker Core Nonprod Enterprise Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_NONPROD_ENTERPRISE_ANNUAL = 'LOOKER_CORE_NONPROD_ENTERPRISE_ANNUAL';
   /**
-   * Nonprod Subscription Embed.
+   * Represents the Looker Core Nonprod Embed Annual edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_NONPROD_EMBED_ANNUAL = 'LOOKER_CORE_NONPROD_EMBED_ANNUAL';
   /**
-   * Trial Standard.
+   * Represents the Looker Core Trial Standard edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_TRIAL_STANDARD = 'LOOKER_CORE_TRIAL_STANDARD';
   /**
-   * Trial Enterprise.
+   * Represents the Looker Core Trial Enterprise edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_TRIAL_ENTERPRISE = 'LOOKER_CORE_TRIAL_ENTERPRISE';
   /**
-   * Trial Embed.
+   * Represents the Looker Core Trial Embed edition.
    */
   public const PLATFORM_EDITION_LOOKER_CORE_TRIAL_EMBED = 'LOOKER_CORE_TRIAL_EMBED';
+  /**
+   * Unspecified release channel.
+   */
+  public const RELEASE_CHANNEL_RELEASE_CHANNEL_UNSPECIFIED = 'RELEASE_CHANNEL_UNSPECIFIED';
+  /**
+   * Rapid: Most frequent updates.
+   */
+  public const RELEASE_CHANNEL_RAPID = 'RAPID';
+  /**
+   * Regular: Balanced, default for production.
+   */
+  public const RELEASE_CHANNEL_REGULAR = 'REGULAR';
+  /**
+   * Stable: Least frequent, for maximum stability.
+   */
+  public const RELEASE_CHANNEL_STABLE = 'STABLE';
+  /**
+   * Soft delete reason is unspecified. This is the default value.
+   */
+  public const SOFT_DELETE_REASON_SOFT_DELETE_REASON_UNSPECIFIED = 'SOFT_DELETE_REASON_UNSPECIFIED';
+  /**
+   * Instance is soft deleted due to billing account issues.
+   */
+  public const SOFT_DELETE_REASON_BILLING_ACCOUNT_ISSUE = 'BILLING_ACCOUNT_ISSUE';
+  /**
+   * Instance is soft deleted due to trial expiration.
+   */
+  public const SOFT_DELETE_REASON_TRIAL_EXPIRED = 'TRIAL_EXPIRED';
+  /**
+   * Instance is soft deleted by the customer.
+   */
+  public const SOFT_DELETE_REASON_CUSTOMER_REQUEST = 'CUSTOMER_REQUEST';
   /**
    * State is unspecified.
    */
@@ -115,6 +147,12 @@ class Instance extends \Google\Model
    * Instance is importing data.
    */
   public const STATE_IMPORTING = 'IMPORTING';
+  /**
+   * Optional. Accelerated security patch enabled for the instance.
+   *
+   * @var bool
+   */
+  public $acceleratedSecurityPatchEnabled;
   protected $adminSettingsType = AdminSettings::class;
   protected $adminSettingsDataType = '';
   /**
@@ -257,6 +295,12 @@ class Instance extends \Google\Model
    */
   public $publicIpEnabled;
   /**
+   * Optional. The selected release channel for the instance.
+   *
+   * @var string
+   */
+  public $releaseChannel;
+  /**
    * Name of a reserved IP address range within the Instance.consumer_network,
    * to be used for private services access connection. May or may not be
    * specified in a create request.
@@ -277,11 +321,24 @@ class Instance extends \Google\Model
    */
   public $satisfiesPzs;
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   *
+   * @var string
+   */
+  public $softDeleteReason;
+  /**
    * Output only. The state of the instance.
    *
    * @var string
    */
   public $state;
+  /**
+   * Output only. The time when the Looker instance was suspended (soft
+   * deleted).
+   *
+   * @var string
+   */
+  public $suspendedTime;
   /**
    * Output only. The time when the Looker instance was last updated.
    *
@@ -291,6 +348,22 @@ class Instance extends \Google\Model
   protected $userMetadataType = UserMetadata::class;
   protected $userMetadataDataType = '';
 
+  /**
+   * Optional. Accelerated security patch enabled for the instance.
+   *
+   * @param bool $acceleratedSecurityPatchEnabled
+   */
+  public function setAcceleratedSecurityPatchEnabled($acceleratedSecurityPatchEnabled)
+  {
+    $this->acceleratedSecurityPatchEnabled = $acceleratedSecurityPatchEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAcceleratedSecurityPatchEnabled()
+  {
+    return $this->acceleratedSecurityPatchEnabled;
+  }
   /**
    * Looker Instance Admin settings.
    *
@@ -791,6 +864,24 @@ class Instance extends \Google\Model
     return $this->publicIpEnabled;
   }
   /**
+   * Optional. The selected release channel for the instance.
+   *
+   * Accepted values: RELEASE_CHANNEL_UNSPECIFIED, RAPID, REGULAR, STABLE
+   *
+   * @param self::RELEASE_CHANNEL_* $releaseChannel
+   */
+  public function setReleaseChannel($releaseChannel)
+  {
+    $this->releaseChannel = $releaseChannel;
+  }
+  /**
+   * @return self::RELEASE_CHANNEL_*
+   */
+  public function getReleaseChannel()
+  {
+    return $this->releaseChannel;
+  }
+  /**
    * Name of a reserved IP address range within the Instance.consumer_network,
    * to be used for private services access connection. May or may not be
    * specified in a create request.
@@ -841,6 +932,25 @@ class Instance extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   *
+   * Accepted values: SOFT_DELETE_REASON_UNSPECIFIED, BILLING_ACCOUNT_ISSUE,
+   * TRIAL_EXPIRED, CUSTOMER_REQUEST
+   *
+   * @param self::SOFT_DELETE_REASON_* $softDeleteReason
+   */
+  public function setSoftDeleteReason($softDeleteReason)
+  {
+    $this->softDeleteReason = $softDeleteReason;
+  }
+  /**
+   * @return self::SOFT_DELETE_REASON_*
+   */
+  public function getSoftDeleteReason()
+  {
+    return $this->softDeleteReason;
+  }
+  /**
    * Output only. The state of the instance.
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, FAILED, SUSPENDED,
@@ -858,6 +968,23 @@ class Instance extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The time when the Looker instance was suspended (soft
+   * deleted).
+   *
+   * @param string $suspendedTime
+   */
+  public function setSuspendedTime($suspendedTime)
+  {
+    $this->suspendedTime = $suspendedTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSuspendedTime()
+  {
+    return $this->suspendedTime;
   }
   /**
    * Output only. The time when the Looker instance was last updated.
