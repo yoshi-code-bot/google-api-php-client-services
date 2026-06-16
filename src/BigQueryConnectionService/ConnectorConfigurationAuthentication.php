@@ -19,6 +19,8 @@ namespace Google\Service\BigQueryConnectionService;
 
 class ConnectorConfigurationAuthentication extends \Google\Model
 {
+  protected $parametersType = ConnectorConfigurationParameterValue::class;
+  protected $parametersDataType = 'map';
   /**
    * Output only. Google-managed service account associated with this
    * connection, e.g., `service-{project_number}@gcp-sa-
@@ -32,6 +34,28 @@ class ConnectorConfigurationAuthentication extends \Google\Model
   protected $usernamePasswordType = ConnectorConfigurationUsernamePassword::class;
   protected $usernamePasswordDataType = '';
 
+  /**
+   * Optional. A map of name-value pairs for authentication-specific parameters.
+   * Extra configuration parameters, that are not standardized in
+   * authentication. To update a single parameter value call
+   * ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.authentication.parameters.parameter_id`. If parameter id
+   * does not fit `[a-zA-Z0-9_]+` pattern, it should be escaped with backticks -
+   * for example ``configuration.authentication.parameters.`parameter id` ``.
+   *
+   * @param ConnectorConfigurationParameterValue[] $parameters
+   */
+  public function setParameters($parameters)
+  {
+    $this->parameters = $parameters;
+  }
+  /**
+   * @return ConnectorConfigurationParameterValue[]
+   */
+  public function getParameters()
+  {
+    return $this->parameters;
+  }
   /**
    * Output only. Google-managed service account associated with this
    * connection, e.g., `service-{project_number}@gcp-sa-
