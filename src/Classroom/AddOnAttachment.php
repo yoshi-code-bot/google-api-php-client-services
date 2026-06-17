@@ -231,9 +231,9 @@ class AddOnAttachment extends \Google\Collection
    * The URI will be opened in an iframe with the `courseId`, `itemId`,
    * `itemType`, `attachmentId`, and `submissionId` query parameters set. This
    * is the same `submissionId` returned in the [`AddOnContext.studentContext`](
-   * //devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentContex
-   * t) field when a student views the attachment. If the URI is omitted or
-   * removed, `max_points` will also be discarded.
+   * /workspace/classroom/reference/rest/v1/AddOnContext#StudentContext) field
+   * when a student views the attachment. If the URI is omitted or removed,
+   * `max_points` will also be discarded.
    *
    * @param EmbedUri $studentWorkReviewUri
    */

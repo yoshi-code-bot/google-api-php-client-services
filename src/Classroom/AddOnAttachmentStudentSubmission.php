@@ -74,7 +74,9 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
   /**
    * Identifier for the student that owns this submission. Requires the user to
    * be a teacher in the course and have permission to read student submissions.
-   * Read-only.
+   * See [`courseWork.studentSubmissions.get`](/workspace/classroom/reference/re
+   * st/v1/courses.courseWork.studentSubmissions/get#authorization-scopes) for
+   * the list of acceptable OAuth scopes for this field. Read-only.
    *
    * @var string
    */
@@ -145,7 +147,9 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
   /**
    * Identifier for the student that owns this submission. Requires the user to
    * be a teacher in the course and have permission to read student submissions.
-   * Read-only.
+   * See [`courseWork.studentSubmissions.get`](/workspace/classroom/reference/re
+   * st/v1/courses.courseWork.studentSubmissions/get#authorization-scopes) for
+   * the list of acceptable OAuth scopes for this field. Read-only.
    *
    * @param string $userId
    */
