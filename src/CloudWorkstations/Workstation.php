@@ -17,7 +17,7 @@
 
 namespace Google\Service\CloudWorkstations;
 
-class Workstation extends \Google\Model
+class Workstation extends \Google\Collection
 {
   /**
    * Do not use.
@@ -41,6 +41,7 @@ class Workstation extends \Google\Model
    * it is started.
    */
   public const STATE_STATE_STOPPED = 'STATE_STOPPED';
+  protected $collection_key = 'persistentDirectories';
   /**
    * Optional. Client-specified annotations.
    *
@@ -113,6 +114,8 @@ class Workstation extends \Google\Model
    * @var string
    */
   public $name;
+  protected $persistentDirectoriesType = WorkstationPersistentDirectory::class;
+  protected $persistentDirectoriesDataType = 'array';
   /**
    * Output only. Indicates whether this workstation is currently being updated
    * to match its intended state.
@@ -326,6 +329,22 @@ class Workstation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Directories to persist across workstation sessions.
+   *
+   * @param WorkstationPersistentDirectory[] $persistentDirectories
+   */
+  public function setPersistentDirectories($persistentDirectories)
+  {
+    $this->persistentDirectories = $persistentDirectories;
+  }
+  /**
+   * @return WorkstationPersistentDirectory[]
+   */
+  public function getPersistentDirectories()
+  {
+    return $this->persistentDirectories;
   }
   /**
    * Output only. Indicates whether this workstation is currently being updated
