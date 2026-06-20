@@ -108,11 +108,11 @@ class Preview extends \Google\Collection
    */
   public $annotations;
   /**
-   * Optional. User-defined location of Cloud Build logs, artifacts, and in
-   * Google Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket
-   * will be bootstrapped if the field is not set or empty Default Bucket
-   * Format: `gs://--blueprint-config` Constraints: - The bucket needs to be in
-   * the same project as the deployment - The path cannot be within the path of
+   * User-defined location of Cloud Build logs, artifacts, and in Google Cloud
+   * Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
+   * bootstrapped if the field is not set or empty Default Bucket Format:
+   * `gs://--blueprint-config` Constraints: - The bucket needs to be in the same
+   * project as the deployment - The path cannot be within the path of
    * `gcs_source` If omitted and deployment resource ref provided has
    * artifacts_gcs_bucket defined, that artifact bucket is used.
    *
@@ -212,15 +212,14 @@ class Preview extends \Google\Collection
    */
   public $tfVersion;
   /**
-   * Optional. The user-specified Terraform version constraint. Example:
-   * "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    *
    * @var string
    */
   public $tfVersionConstraint;
   /**
-   * Optional. The user-specified Worker Pool resource in which the Cloud Build
-   * job will execute. Format
+   * The user-specified Worker Pool resource in which the Cloud Build job will
+   * execute. Format
    * projects/{project}/locations/{location}/workerPools/{workerPoolId} If this
    * field is unspecified, the default Cloud Build worker pool will be used. If
    * omitted and deployment resource ref provided has worker_pool defined, that
@@ -250,11 +249,11 @@ class Preview extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Optional. User-defined location of Cloud Build logs, artifacts, and in
-   * Google Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket
-   * will be bootstrapped if the field is not set or empty Default Bucket
-   * Format: `gs://--blueprint-config` Constraints: - The bucket needs to be in
-   * the same project as the deployment - The path cannot be within the path of
+   * User-defined location of Cloud Build logs, artifacts, and in Google Cloud
+   * Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
+   * bootstrapped if the field is not set or empty Default Bucket Format:
+   * `gs://--blueprint-config` Constraints: - The bucket needs to be in the same
+   * project as the deployment - The path cannot be within the path of
    * `gcs_source` If omitted and deployment resource ref provided has
    * artifacts_gcs_bucket defined, that artifact bucket is used.
    *
@@ -565,8 +564,7 @@ class Preview extends \Google\Collection
     return $this->tfVersion;
   }
   /**
-   * Optional. The user-specified Terraform version constraint. Example:
-   * "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    *
    * @param string $tfVersionConstraint
    */
@@ -582,8 +580,8 @@ class Preview extends \Google\Collection
     return $this->tfVersionConstraint;
   }
   /**
-   * Optional. The user-specified Worker Pool resource in which the Cloud Build
-   * job will execute. Format
+   * The user-specified Worker Pool resource in which the Cloud Build job will
+   * execute. Format
    * projects/{project}/locations/{location}/workerPools/{workerPoolId} If this
    * field is unspecified, the default Cloud Build worker pool will be used. If
    * omitted and deployment resource ref provided has worker_pool defined, that

@@ -140,8 +140,8 @@ class Deployment extends \Google\Collection
    */
   public $annotations;
   /**
-   * Optional. User-defined location of Cloud Build logs and artifacts in Google
-   * Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
+   * User-defined location of Cloud Build logs and artifacts in Google Cloud
+   * Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
    * bootstrapped if the field is not set or empty. Default bucket format:
    * `gs://--blueprint-config` Constraints: - The bucket needs to be in the same
    * project as the deployment - The path cannot be within the path of
@@ -265,8 +265,7 @@ class Deployment extends \Google\Collection
    */
   public $tfVersion;
   /**
-   * Optional. The user-specified Terraform version constraint. Example:
-   * "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    *
    * @var string
    */
@@ -278,8 +277,8 @@ class Deployment extends \Google\Collection
    */
   public $updateTime;
   /**
-   * Optional. The user-specified Cloud Build worker pool resource in which the
-   * Cloud Build job will execute. Format:
+   * The user-specified Cloud Build worker pool resource in which the Cloud
+   * Build job will execute. Format:
    * `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If
    * this field is unspecified, the default Cloud Build worker pool will be
    * used.
@@ -308,8 +307,8 @@ class Deployment extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Optional. User-defined location of Cloud Build logs and artifacts in Google
-   * Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
+   * User-defined location of Cloud Build logs and artifacts in Google Cloud
+   * Storage. Format: `gs://{bucket}/{folder}` A default bucket will be
    * bootstrapped if the field is not set or empty. Default bucket format:
    * `gs://--blueprint-config` Constraints: - The bucket needs to be in the same
    * project as the deployment - The path cannot be within the path of
@@ -665,8 +664,7 @@ class Deployment extends \Google\Collection
     return $this->tfVersion;
   }
   /**
-   * Optional. The user-specified Terraform version constraint. Example:
-   * "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    *
    * @param string $tfVersionConstraint
    */
@@ -698,8 +696,8 @@ class Deployment extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * Optional. The user-specified Cloud Build worker pool resource in which the
-   * Cloud Build job will execute. Format:
+   * The user-specified Cloud Build worker pool resource in which the Cloud
+   * Build job will execute. Format:
    * `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If
    * this field is unspecified, the default Cloud Build worker pool will be
    * used.
