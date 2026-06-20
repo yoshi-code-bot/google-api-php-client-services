@@ -19,9 +19,27 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2KnowledgeAssistAnswerAdditionalSuggestedQueryResult extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $answerRecord;
   protected $suggestedQueryType = GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery::class;
   protected $suggestedQueryDataType = '';
 
+  /**
+   * @param string $answerRecord
+   */
+  public function setAnswerRecord($answerRecord)
+  {
+    $this->answerRecord = $answerRecord;
+  }
+  /**
+   * @return string
+   */
+  public function getAnswerRecord()
+  {
+    return $this->answerRecord;
+  }
   /**
    * @param GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery $suggestedQuery
    */
