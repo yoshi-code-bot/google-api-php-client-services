@@ -60,6 +60,13 @@ class GceRegionalPersistentDisk extends \Google\Model
    */
   public $fsType;
   /**
+   * Optional. Maximum size in GB to which this persistent directory can be
+   * resized. Defaults to unlimited if not set.
+   *
+   * @var int
+   */
+  public $maxSizeGb;
+  /**
    * Optional. Whether the persistent disk should be deleted when the
    * workstation is deleted. Valid values are `DELETE` and `RETAIN`. Defaults to
    * `DELETE`.
@@ -142,6 +149,23 @@ class GceRegionalPersistentDisk extends \Google\Model
   public function getFsType()
   {
     return $this->fsType;
+  }
+  /**
+   * Optional. Maximum size in GB to which this persistent directory can be
+   * resized. Defaults to unlimited if not set.
+   *
+   * @param int $maxSizeGb
+   */
+  public function setMaxSizeGb($maxSizeGb)
+  {
+    $this->maxSizeGb = $maxSizeGb;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxSizeGb()
+  {
+    return $this->maxSizeGb;
   }
   /**
    * Optional. Whether the persistent disk should be deleted when the
