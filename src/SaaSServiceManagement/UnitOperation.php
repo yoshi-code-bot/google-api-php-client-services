@@ -285,6 +285,8 @@ class UnitOperation extends \Google\Collection
     return $this->deleteTime;
   }
   /**
+   * Optional. Deprovision operation.
+   *
    * @param Deprovision $deprovision
    */
   public function setDeprovision(Deprovision $deprovision)
@@ -354,6 +356,8 @@ class UnitOperation extends \Google\Collection
     return $this->etag;
   }
   /**
+   * Optional. Flag update operation.
+   *
    * @param FlagUpdate $flagUpdate
    */
   public function setFlagUpdate(FlagUpdate $flagUpdate)
@@ -549,6 +553,8 @@ class UnitOperation extends \Google\Collection
     return $this->updateTime;
   }
   /**
+   * Optional. Upgrade operation.
+   *
    * @param Upgrade $upgrade
    */
   public function setUpgrade(Upgrade $upgrade)

@@ -19,6 +19,9 @@ namespace Google\Service\SaaSServiceManagement;
 
 class Unit extends \Google\Collection
 {
+  /**
+   * Unspecified management mode.
+   */
   public const MANAGEMENT_MODE_MANAGEMENT_MODE_UNSPECIFIED = 'MANAGEMENT_MODE_UNSPECIFIED';
   /**
    * Unit's lifecycle is managed by the user.
@@ -60,6 +63,9 @@ class Unit extends \Google\Collection
    * Unit has error, when it is not ready and some error operation
    */
   public const STATE_UNIT_STATE_ERROR = 'UNIT_STATE_ERROR';
+  /**
+   * Unspecified system managed state.
+   */
   public const SYSTEM_MANAGED_STATE_SYSTEM_MANAGED_STATE_UNSPECIFIED = 'SYSTEM_MANAGED_STATE_UNSPECIFIED';
   /**
    * Unit has dependents attached.
@@ -214,12 +220,6 @@ class Unit extends \Google\Collection
    * @var string
    */
   public $uid;
-  /**
-   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
-   *
-   * @var string
-   */
-  public $unitGroup;
   /**
    * Optional. Reference to the UnitKind this Unit belongs to. Immutable once
    * set.
@@ -659,22 +659,6 @@ class Unit extends \Google\Collection
   public function getUid()
   {
     return $this->uid;
-  }
-  /**
-   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
-   *
-   * @param string $unitGroup
-   */
-  public function setUnitGroup($unitGroup)
-  {
-    $this->unitGroup = $unitGroup;
-  }
-  /**
-   * @return string
-   */
-  public function getUnitGroup()
-  {
-    return $this->unitGroup;
   }
   /**
    * Optional. Reference to the UnitKind this Unit belongs to. Immutable once
