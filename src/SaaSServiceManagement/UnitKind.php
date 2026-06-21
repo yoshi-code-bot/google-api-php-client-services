@@ -19,11 +19,17 @@ namespace Google\Service\SaaSServiceManagement;
 
 class UnitKind extends \Google\Collection
 {
+  /**
+   * Unspecified boundary type.
+   */
   public const BOUNDARY_TYPE_BOUNDARY_TYPE_UNSPECIFIED = 'BOUNDARY_TYPE_UNSPECIFIED';
   /**
    * Tenant project boundary.
    */
   public const BOUNDARY_TYPE_BOUNDARY_TYPE_TENANT_PROJECT = 'BOUNDARY_TYPE_TENANT_PROJECT';
+  /**
+   * Managed project boundary.
+   */
   public const BOUNDARY_TYPE_BOUNDARY_TYPE_MANAGED_PROJECT = 'BOUNDARY_TYPE_MANAGED_PROJECT';
   protected $collection_key = 'outputVariableMappings';
   /**
@@ -248,8 +254,8 @@ class UnitKind extends \Google\Collection
   }
   /**
    * Optional. List of inputVariables for this release that will either be
-   * retrieved from a dependency’s outputVariables, or will be passed on to a
-   * dependency’s inputVariables. Maximum 100.
+   * retrieved from a dependency's outputVariables, or will be passed on to a
+   * dependency's inputVariables. Maximum 100.
    *
    * @param VariableMapping[] $inputVariableMappings
    */
