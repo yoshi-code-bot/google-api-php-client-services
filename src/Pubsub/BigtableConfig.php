@@ -47,7 +47,7 @@ class BigtableConfig extends \Google\Model
    */
   public const STATE_PERMISSION_DENIED = 'PERMISSION_DENIED';
   /**
-   * Cannot write to Bigtable because of a missing column family ("data"), or if
+   * Cannot write to Bigtable because of a missing column family (`data`), or if
    * there is no structured row key for the subscription name + message ID, if
    * because the app profile is not configured for single-cluster routing.
    */
