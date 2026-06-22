@@ -25,6 +25,8 @@ class AgentGatewayNetworkConfigEgress extends \Google\Model
    * @var string
    */
   public $networkAttachment;
+  protected $trustConfigType = AgentGatewayNetworkConfigEgressTrustConfig::class;
+  protected $trustConfigDataType = '';
 
   /**
    * Optional. The URI of the Network Attachment resource.
@@ -41,6 +43,22 @@ class AgentGatewayNetworkConfigEgress extends \Google\Model
   public function getNetworkAttachment()
   {
     return $this->networkAttachment;
+  }
+  /**
+   * Optional. TrustConfig defines the trust configuration for egress.
+   *
+   * @param AgentGatewayNetworkConfigEgressTrustConfig $trustConfig
+   */
+  public function setTrustConfig(AgentGatewayNetworkConfigEgressTrustConfig $trustConfig)
+  {
+    $this->trustConfig = $trustConfig;
+  }
+  /**
+   * @return AgentGatewayNetworkConfigEgressTrustConfig
+   */
+  public function getTrustConfig()
+  {
+    return $this->trustConfig;
   }
 }
 
