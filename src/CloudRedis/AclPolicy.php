@@ -24,16 +24,16 @@ class AclPolicy extends \Google\Collection
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * ACL Policy has been created and is fully usable. Since ACL Policy creation
+   * ACL policy has been created and is fully usable. Since ACL policy creation
    * is synchronous and not an LRO, there is no CREATING state.
    */
   public const STATE_ACTIVE = 'ACTIVE';
   /**
-   * ACL Policy is being updated.
+   * ACL policy is being updated.
    */
   public const STATE_UPDATING = 'UPDATING';
   /**
-   * ACL Policy is being deleted.
+   * ACL policy is being deleted.
    */
   public const STATE_DELETING = 'DELETING';
   protected $collection_key = 'rules';
@@ -58,8 +58,9 @@ class AclPolicy extends \Google\Collection
    */
   public $state;
   /**
-   * Output only. The version of the ACL policy. Used in drift resolution.
+   * Output only. Deprecated: Used in drift resolution.
    *
+   * @deprecated
    * @var string
    */
   public $version;
@@ -131,8 +132,9 @@ class AclPolicy extends \Google\Collection
     return $this->state;
   }
   /**
-   * Output only. The version of the ACL policy. Used in drift resolution.
+   * Output only. Deprecated: Used in drift resolution.
    *
+   * @deprecated
    * @param string $version
    */
   public function setVersion($version)
@@ -140,6 +142,7 @@ class AclPolicy extends \Google\Collection
     $this->version = $version;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getVersion()

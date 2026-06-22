@@ -17,7 +17,7 @@
 
 namespace Google\Service\CloudRedis;
 
-class ZoneDistributionConfig extends \Google\Model
+class ZoneDistributionConfig extends \Google\Collection
 {
   /**
    * Not Set. Default: MULTI_ZONE
@@ -33,6 +33,7 @@ class ZoneDistributionConfig extends \Google\Model
    * specified, when this mode is selected.
    */
   public const MODE_SINGLE_ZONE = 'SINGLE_ZONE';
+  protected $collection_key = 'zones';
   /**
    * Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not
    * specified.
@@ -48,6 +49,13 @@ class ZoneDistributionConfig extends \Google\Model
    * @var string
    */
   public $zone;
+  /**
+   * Optional. Specify the zones of a multi-zone cluster where Redis Cluster
+   * allocates resources. This flag isn't applicable for single-zone clusters.
+   *
+   * @var string[]
+   */
+  public $zones;
 
   /**
    * Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not
@@ -86,6 +94,23 @@ class ZoneDistributionConfig extends \Google\Model
   public function getZone()
   {
     return $this->zone;
+  }
+  /**
+   * Optional. Specify the zones of a multi-zone cluster where Redis Cluster
+   * allocates resources. This flag isn't applicable for single-zone clusters.
+   *
+   * @param string[] $zones
+   */
+  public function setZones($zones)
+  {
+    $this->zones = $zones;
+  }
+  /**
+   * @return string[]
+   */
+  public function getZones()
+  {
+    return $this->zones;
   }
 }
 

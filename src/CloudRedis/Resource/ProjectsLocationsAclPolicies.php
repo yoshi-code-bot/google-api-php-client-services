@@ -32,7 +32,7 @@ use Google\Service\CloudRedis\Operation;
 class ProjectsLocationsAclPolicies extends \Google\Service\Resource
 {
   /**
-   * Creates an ACL Policy. The creation is executed synchronously and the policy
+   * Creates an ACL policy. The creation is executed synchronously and the policy
    * is available for use immediately after the RPC returns. (aclPolicies.create)
    *
    * @param string $parent Required. The resource name of the cluster location
@@ -41,7 +41,7 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
    * @param AclPolicy $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string aclPolicyId Required. The logical name of the ACL Policy in
+   * @opt_param string aclPolicyId Required. The logical name of the ACL policy in
    * the customer project with the following restrictions: * Must contain only
    * lowercase letters, numbers, and hyphens. * Must start with a letter. * Must
    * be between 1-63 characters. * Must end with a number or a letter. * Must be
@@ -57,11 +57,11 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
     return $this->call('create', [$params], AclPolicy::class);
   }
   /**
-   * Deletes a specific Acl Policy. This action will delete the Acl Policy and all
+   * Deletes a specific ACL policy. This action will delete the ACL policy and all
    * the rules associated with it. An ACL policy cannot be deleted if it is
    * attached to a cluster. (aclPolicies.delete)
    *
-   * @param string $name Required. Redis ACL Policy resource name using the form:
+   * @param string $name Required. Redis ACL policy resource name using the form:
    * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
    * where `location_id` refers to a GCP region.
    * @param array $optParams Optional parameters.
@@ -79,9 +79,9 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets the details of a specific Redis Cluster ACL Policy. (aclPolicies.get)
+   * Gets the details of a specific Redis Cluster ACL policy. (aclPolicies.get)
    *
-   * @param string $name Required. Redis ACL Policy resource name using the form:
+   * @param string $name Required. Redis ACL policy resource name using the form:
    * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
    * where `location_id` refers to a GCP region.
    * @param array $optParams Optional parameters.
@@ -95,13 +95,13 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
     return $this->call('get', [$params], AclPolicy::class);
   }
   /**
-   * Lists all ACL Policies owned by a project in either the specified location
+   * Lists all ACL policies owned by a project in either the specified location
    * (region) or all locations. The location should have the following format: *
    * `projects/{project_id}/locations/{location_id}` If `location_id` is specified
    * as `-` (wildcard), then all regions available to the project are queried, and
    * the results are aggregated. (aclPolicies.listProjectsLocationsAclPolicies)
    *
-   * @param string $parent Required. The resource name of the cluster location
+   * @param string $parent Required. The resource name of the ACL policy location
    * using the form: `projects/{project_id}/locations/{location_id}` where
    * `location_id` refers to a Google Cloud region.
    * @param array $optParams Optional parameters.
@@ -129,7 +129,7 @@ class ProjectsLocationsAclPolicies extends \Google\Service\Resource
    * then the operation returns a SUCCESS status. If Memorystore can't apply the
    * policy to all clusters, then to ensure eventual consistency, Memorystore uses
    * reconciliation to apply the policy to the failed clusters. Completed
-   * longrunning.Operation will contain the new ACL Policy object in the response
+   * longrunning.Operation will contain the new ACL policy object in the response
    * field. (aclPolicies.patch)
    *
    * @param string $name Identifier. Full resource path of the ACL policy.

@@ -30,7 +30,7 @@ class ListAclPoliciesResponse extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
@@ -73,7 +73,7 @@ class ListAclPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */

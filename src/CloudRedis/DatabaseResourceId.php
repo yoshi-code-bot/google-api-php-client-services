@@ -19,6 +19,9 @@ namespace Google\Service\CloudRedis;
 
 class DatabaseResourceId extends \Google\Model
 {
+  /**
+   * Unspecified provider.
+   */
   public const PROVIDER_PROVIDER_UNSPECIFIED = 'PROVIDER_UNSPECIFIED';
   /**
    * Google cloud platform provider
