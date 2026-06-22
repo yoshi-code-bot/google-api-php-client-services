@@ -92,7 +92,7 @@ class DataDisk extends \Google\Collection
    */
   public $diskSizeGb;
   /**
-   * Optional. Input only. Indicates the type of the disk.
+   * Optional. Indicates the type of the disk.
    *
    * @var string
    */
@@ -150,7 +150,7 @@ class DataDisk extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * Optional. Input only. Indicates the type of the disk.
+   * Optional. Indicates the type of the disk.
    *
    * Accepted values: DISK_TYPE_UNSPECIFIED, PD_STANDARD, PD_SSD, PD_BALANCED,
    * PD_EXTREME, HYPERDISK_BALANCED, HYPERDISK_EXTREME, HYPERDISK_THROUGHPUT,
