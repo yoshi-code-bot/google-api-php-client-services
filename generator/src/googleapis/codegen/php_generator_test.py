@@ -18,6 +18,8 @@ __author__ = 'chirags@google.com (Chirag Shah)'
 
 
 
+import hashlib
+
 from absl.testing import absltest
 from googleapis.codegen import api
 from googleapis.codegen import php_generator
@@ -138,6 +140,27 @@ class PHPApiTest(absltest.TestCase):
       s = schema_obj[1]
       self.assertEqual(php_type,
                         self.language_model.GetCodeTypeFromDictionary(s))
+
+  def testGetOutputFilePath(self):
+    # Standard path
+    path = 'Speech/SomeModel.php'
+    self.assertEqual(path, self.generator._GetOutputFilePath(path))
+
+    # Long class name (139 chars) - should not be shortened
+    classname_139 = 'A' * 139
+    path_139 = 'Speech/%s.php' % classname_139
+    self.assertEqual(path_139, self.generator._GetOutputFilePath(path_139))
+
+    # Long class name (140 chars) - should be shortened
+    classname_140 = 'A' * 140
+    expected_hash = hashlib.md5(classname_140.encode('utf-8')).hexdigest().upper()[:8]
+    expected_classname = 'A' * 80 + '_' + expected_hash
+    expected_path = 'Speech/%s.php' % expected_classname
+    self.assertEqual(expected_path, self.generator._GetOutputFilePath('Speech/%s.php' % classname_140))
+
+    # Path without .php extension (should not be shortened even if long)
+    long_txt = 'A' * 150
+    self.assertEqual('Speech/%s.txt' % long_txt, self.generator._GetOutputFilePath('Speech/%s.txt' % long_txt))
 
 if __name__ == '__main__':
   absltest.main()
