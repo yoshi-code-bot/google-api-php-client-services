@@ -19,9 +19,31 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1ChartAction extends \Google\Model
 {
+  /**
+   * The conversation filter string.
+   *
+   * @var string
+   */
+  public $conversationFilter;
   protected $redirectActionType = GoogleCloudContactcenterinsightsV1RedirectAction::class;
   protected $redirectActionDataType = '';
 
+  /**
+   * The conversation filter string.
+   *
+   * @param string $conversationFilter
+   */
+  public function setConversationFilter($conversationFilter)
+  {
+    $this->conversationFilter = $conversationFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getConversationFilter()
+  {
+    return $this->conversationFilter;
+  }
   /**
    * Redirect action.
    *
