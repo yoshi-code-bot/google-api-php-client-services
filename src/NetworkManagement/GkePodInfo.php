@@ -27,7 +27,8 @@ class GkePodInfo extends \Google\Model
    */
   public $ipAddress;
   /**
-   * URI of the network containing the GKE Pod.
+   * URI of the network containing the GKE Pod. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    *
    * @var string
    */
@@ -61,7 +62,8 @@ class GkePodInfo extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * URI of the network containing the GKE Pod.
+   * URI of the network containing the GKE Pod. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    *
    * @param string $networkUri
    */

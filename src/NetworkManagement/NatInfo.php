@@ -80,7 +80,8 @@ class NatInfo extends \Google\Model
    */
   public $natGatewayName;
   /**
-   * URI of the network where NAT translation takes place.
+   * URI of the VPC network where NAT translation takes place. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    *
    * @var string
    */
@@ -142,7 +143,8 @@ class NatInfo extends \Google\Model
    */
   public $protocol;
   /**
-   * Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+   * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    *
    * @var string
    */
@@ -190,7 +192,8 @@ class NatInfo extends \Google\Model
     return $this->natGatewayName;
   }
   /**
-   * URI of the network where NAT translation takes place.
+   * URI of the VPC network where NAT translation takes place. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    *
    * @param string $networkUri
    */
@@ -352,7 +355,8 @@ class NatInfo extends \Google\Model
     return $this->protocol;
   }
   /**
-   * Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+   * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    *
    * @param string $routerUri
    */

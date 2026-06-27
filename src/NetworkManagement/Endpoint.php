@@ -137,6 +137,15 @@ class Endpoint extends \Google\Model
    */
   public $cloudSqlInstance;
   /**
+   * A [DMS Private Connection](https://docs.cloud.google.com/database-
+   * migration/docs/reference/rest/v1/projects.locations.privateConnections)
+   * name format: projects/{project}/locations/{location}/privateConnections/{pr
+   * ivateConnection}.
+   *
+   * @var string
+   */
+  public $dmsPrivateConnection;
+  /**
    * A forwarding rule and its corresponding IP address represent the frontend
    * configuration of a Google Cloud load balancer. Forwarding rules are also
    * used for protocol forwarding, Private Service Connect and other network
@@ -337,6 +346,25 @@ class Endpoint extends \Google\Model
   public function getCloudSqlInstance()
   {
     return $this->cloudSqlInstance;
+  }
+  /**
+   * A [DMS Private Connection](https://docs.cloud.google.com/database-
+   * migration/docs/reference/rest/v1/projects.locations.privateConnections)
+   * name format: projects/{project}/locations/{location}/privateConnections/{pr
+   * ivateConnection}.
+   *
+   * @param string $dmsPrivateConnection
+   */
+  public function setDmsPrivateConnection($dmsPrivateConnection)
+  {
+    $this->dmsPrivateConnection = $dmsPrivateConnection;
+  }
+  /**
+   * @return string
+   */
+  public function getDmsPrivateConnection()
+  {
+    return $this->dmsPrivateConnection;
   }
   /**
    * A forwarding rule and its corresponding IP address represent the frontend

@@ -67,7 +67,11 @@ class LoadBalancerInfo extends \Google\Collection
    */
   public $backendType;
   /**
-   * Backend configuration URI.
+   * URI of the backend associated with the load balancer. Format: * `projects/{
+   * project_id}/regions/{region}/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/global/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}` *
+   * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
    *
    * @var string
    */
@@ -110,7 +114,11 @@ class LoadBalancerInfo extends \Google\Collection
     return $this->backendType;
   }
   /**
-   * Backend configuration URI.
+   * URI of the backend associated with the load balancer. Format: * `projects/{
+   * project_id}/regions/{region}/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/global/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}` *
+   * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
    *
    * @param string $backendUri
    */

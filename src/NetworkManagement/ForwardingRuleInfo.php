@@ -45,7 +45,8 @@ class ForwardingRuleInfo extends \Google\Model
    */
   public $matchedProtocol;
   /**
-   * Network URI.
+   * URI of a VPC network where the forwarding rule is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @var string
    */
@@ -58,7 +59,8 @@ class ForwardingRuleInfo extends \Google\Model
   public $pscGoogleApiTarget;
   /**
    * URI of the PSC service attachment this forwarding rule targets (if
-   * applicable).
+   * applicable) in format "projects/{project}/regions/{region}/serviceAttachmen
+   * ts/{service_attachment}".
    *
    * @var string
    */
@@ -76,7 +78,10 @@ class ForwardingRuleInfo extends \Google\Model
    */
   public $target;
   /**
-   * URI of the forwarding rule.
+   * URI of the forwarding rule in format
+   * "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+   * "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}"
+   * (regional).
    *
    * @var string
    */
@@ -154,7 +159,8 @@ class ForwardingRuleInfo extends \Google\Model
     return $this->matchedProtocol;
   }
   /**
-   * Network URI.
+   * URI of a VPC network where the forwarding rule is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @param string $networkUri
    */
@@ -187,7 +193,8 @@ class ForwardingRuleInfo extends \Google\Model
   }
   /**
    * URI of the PSC service attachment this forwarding rule targets (if
-   * applicable).
+   * applicable) in format "projects/{project}/regions/{region}/serviceAttachmen
+   * ts/{service_attachment}".
    *
    * @param string $pscServiceAttachmentUri
    */
@@ -235,7 +242,10 @@ class ForwardingRuleInfo extends \Google\Model
     return $this->target;
   }
   /**
-   * URI of the forwarding rule.
+   * URI of the forwarding rule in format
+   * "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+   * "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}"
+   * (regional).
    *
    * @param string $uri
    */
