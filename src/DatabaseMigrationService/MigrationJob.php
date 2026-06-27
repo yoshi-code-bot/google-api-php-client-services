@@ -237,6 +237,8 @@ class MigrationJob extends \Google\Model
    * @var string[]
    */
   public $labels;
+  protected $mysqlHomogeneousConfigType = MySqlHomogeneousConfig::class;
+  protected $mysqlHomogeneousConfigDataType = '';
   /**
    * The name (URI) of this migration job resource, in the form of:
    * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
@@ -572,6 +574,22 @@ class MigrationJob extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * Optional. Configuration for MySQL homogeneous migration.
+   *
+   * @param MySqlHomogeneousConfig $mysqlHomogeneousConfig
+   */
+  public function setMysqlHomogeneousConfig(MySqlHomogeneousConfig $mysqlHomogeneousConfig)
+  {
+    $this->mysqlHomogeneousConfig = $mysqlHomogeneousConfig;
+  }
+  /**
+   * @return MySqlHomogeneousConfig
+   */
+  public function getMysqlHomogeneousConfig()
+  {
+    return $this->mysqlHomogeneousConfig;
   }
   /**
    * The name (URI) of this migration job resource, in the form of:
