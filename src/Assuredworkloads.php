@@ -39,10 +39,13 @@ class Assuredworkloads extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $assuredworkloads;
+  public $folders_locations_dbFindingSummaries;
+  public $organizations_locations_dbFindingSummaries;
   public $organizations_locations_operations;
   public $organizations_locations_workloads;
   public $organizations_locations_workloads_updates;
   public $organizations_locations_workloads_violations;
+  public $projects_locations_dbFindingSummaries;
   public $rootUrlTemplate;
 
   /**
@@ -76,6 +79,70 @@ class Assuredworkloads extends \Google\Service
               'path' => 'v1/assuredworkloads:revertArchivedResourceEvents',
               'httpMethod' => 'POST',
               'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->folders_locations_dbFindingSummaries = new Assuredworkloads\Resource\FoldersLocationsDbFindingSummaries(
+        $this,
+        $this->serviceName,
+        'dbFindingSummaries',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbFindingSummaries',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_dbFindingSummaries = new Assuredworkloads\Resource\OrganizationsLocationsDbFindingSummaries(
+        $this,
+        $this->serviceName,
+        'dbFindingSummaries',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbFindingSummaries',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
@@ -373,6 +440,38 @@ class Assuredworkloads extends \Google\Service
                   'type' => 'string',
                 ],
                 'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dbFindingSummaries = new Assuredworkloads\Resource\ProjectsLocationsDbFindingSummaries(
+        $this,
+        $this->serviceName,
+        'dbFindingSummaries',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbFindingSummaries',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
