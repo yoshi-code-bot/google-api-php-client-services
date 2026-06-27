@@ -20,6 +20,8 @@ namespace Google\Service\PostmasterTools;
 class DomainComplianceData extends \Google\Collection
 {
   protected $collection_key = 'rowData';
+  protected $deliverabilityStatusVerdictType = DeliverabilityStatusVerdict::class;
+  protected $deliverabilityStatusVerdictDataType = '';
   /**
    * Domain that this data is for.
    *
@@ -33,6 +35,22 @@ class DomainComplianceData extends \Google\Collection
   protected $rowDataType = ComplianceRowData::class;
   protected $rowDataDataType = 'array';
 
+  /**
+   * Output only. Deliverability status verdict.
+   *
+   * @param DeliverabilityStatusVerdict $deliverabilityStatusVerdict
+   */
+  public function setDeliverabilityStatusVerdict(DeliverabilityStatusVerdict $deliverabilityStatusVerdict)
+  {
+    $this->deliverabilityStatusVerdict = $deliverabilityStatusVerdict;
+  }
+  /**
+   * @return DeliverabilityStatusVerdict
+   */
+  public function getDeliverabilityStatusVerdict()
+  {
+    return $this->deliverabilityStatusVerdict;
+  }
   /**
    * Domain that this data is for.
    *
