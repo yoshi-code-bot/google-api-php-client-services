@@ -29,6 +29,8 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Collectio
    * @var string
    */
   public $assistToken;
+  protected $connectorAuthErrorsType = GoogleCloudDiscoveryengineV1StreamAssistResponseConnectorAuthError::class;
+  protected $connectorAuthErrorsDataType = 'array';
   /**
    * The tool names of the tools that were invoked.
    *
@@ -80,6 +82,24 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Collectio
   public function getAssistToken()
   {
     return $this->assistToken;
+  }
+  /**
+   * Per-connector authentication errors encountered during the request. Present
+   * when one or more connectors failed authentication but the request proceeded
+   * with the remaining connectors.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistResponseConnectorAuthError[] $connectorAuthErrors
+   */
+  public function setConnectorAuthErrors($connectorAuthErrors)
+  {
+    $this->connectorAuthErrors = $connectorAuthErrors;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1StreamAssistResponseConnectorAuthError[]
+   */
+  public function getConnectorAuthErrors()
+  {
+    return $this->connectorAuthErrors;
   }
   /**
    * The tool names of the tools that were invoked.
