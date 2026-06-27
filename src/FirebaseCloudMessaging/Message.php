@@ -43,7 +43,7 @@ class Message extends \Google\Model
   protected $fcmOptionsType = FcmOptions::class;
   protected $fcmOptionsDataType = '';
   /**
-   * Optional. Firebase Installation ID to send a message to.
+   * Firebase Installation ID to send a message to.
    *
    * @var string
    */
@@ -165,7 +165,7 @@ class Message extends \Google\Model
     return $this->fcmOptions;
   }
   /**
-   * Optional. Firebase Installation ID to send a message to.
+   * Firebase Installation ID to send a message to.
    *
    * @param string $fid
    */
