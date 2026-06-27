@@ -45,10 +45,14 @@ class PostmasterTools extends \Google\Service
   /** Get email traffic metrics for the domains you have registered with Postmaster Tools. */
   const POSTMASTER_TRAFFIC_READONLY =
       "https://www.googleapis.com/auth/postmaster.traffic.readonly";
+  /** View and manage users for the domains you have registered with Postmaster Tools. */
+  const POSTMASTER_USER =
+      "https://www.googleapis.com/auth/postmaster.user";
 
   public $domainStats;
   public $domains;
   public $domains_domainStats;
+  public $domains_users;
   public $rootUrlTemplate;
 
   /**
@@ -88,7 +92,21 @@ class PostmasterTools extends \Google\Service
         'domains',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v2/domains',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -108,6 +126,20 @@ class PostmasterTools extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getVerificationToken' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'verificationMethod' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'list' => [
               'path' => 'v2/domains',
               'httpMethod' => 'GET',
@@ -119,6 +151,16 @@ class PostmasterTools extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'verify' => [
+              'path' => 'v2/{+name}:verify',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -139,6 +181,78 @@ class PostmasterTools extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->domains_users = new PostmasterTools\Resource\DomainsUsers(
+        $this,
+        $this->serviceName,
+        'users',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2/{+parent}/users',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/users',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

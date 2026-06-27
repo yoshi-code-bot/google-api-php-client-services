@@ -28,6 +28,10 @@ class Domain extends \Google\Model
    */
   public const PERMISSION_READER = 'READER';
   /**
+   * User has admin access to the domain.
+   */
+  public const PERMISSION_ADMIN = 'ADMIN';
+  /**
    * User has owner access to the domain.
    */
   public const PERMISSION_OWNER = 'OWNER';
@@ -136,7 +140,7 @@ class Domain extends \Google\Model
   /**
    * Output only. User's permission of this domain.
    *
-   * Accepted values: PERMISSION_UNSPECIFIED, READER, OWNER, NONE
+   * Accepted values: PERMISSION_UNSPECIFIED, READER, ADMIN, OWNER, NONE
    *
    * @param self::PERMISSION_* $permission
    */
