@@ -30,10 +30,10 @@ class SlurmNodeSet extends \Google\Collection
   protected $computeInstanceType = ComputeInstanceSlurmNodeSet::class;
   protected $computeInstanceDataType = '';
   /**
-   * Required. Identifier for the nodeset, which allows it to be referenced by
-   * partitions. Must conform to
-   * [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-   * alphanumeric, and at most 63 characters).
+   * Required. The ID for the nodeset, which allows it to be referenced by
+   * cluster partitions. The nodeset ID must start with a lowercase letter
+   * (`a`-`z`), use only lowercase letters or numbers, and contain up to 15
+   * characters. For example, specify `nodeset001`.
    *
    * @var string
    */
@@ -94,10 +94,10 @@ class SlurmNodeSet extends \Google\Collection
     return $this->computeInstance;
   }
   /**
-   * Required. Identifier for the nodeset, which allows it to be referenced by
-   * partitions. Must conform to
-   * [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-   * alphanumeric, and at most 63 characters).
+   * Required. The ID for the nodeset, which allows it to be referenced by
+   * cluster partitions. The nodeset ID must start with a lowercase letter
+   * (`a`-`z`), use only lowercase letters or numbers, and contain up to 15
+   * characters. For example, specify `nodeset001`.
    *
    * @param string $id
    */
