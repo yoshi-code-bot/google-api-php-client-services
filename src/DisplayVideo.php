@@ -69,6 +69,7 @@ class DisplayVideo extends \Google\Service
   public $advertisers_locationLists_assignedLocations;
   public $advertisers_negativeKeywordLists;
   public $advertisers_negativeKeywordLists_negativeKeywords;
+  public $advertisers_reachForecast;
   public $advertisers_targetingTypes_assignedTargetingOptions;
   public $combinedAudiences;
   public $customBiddingAlgorithms;
@@ -2065,6 +2066,86 @@ class DisplayVideo extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->advertisers_reachForecast = new DisplayVideo\Resource\AdvertisersReachForecast(
+        $this,
+        $this->serviceName,
+        'reachForecast',
+        [
+          'methods' => [
+            'generateReachForecast' => [
+              'path' => 'v4/advertisers/{+advertiserId}/reachForecast:generateReachForecast',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retrievePlannableLocations' => [
+              'path' => 'v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableLocations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retrievePlannableProducts' => [
+              'path' => 'v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableProducts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'plannableLocationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'retrievePlannableUserInterests' => [
+              'path' => 'v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableUserInterests',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productCategory' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'retrievePlannableUserLists' => [
+              'path' => 'v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableUserLists',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
