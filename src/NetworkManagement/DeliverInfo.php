@@ -166,7 +166,9 @@ class DeliverInfo extends \Google\Model
    */
   public $pscGoogleApiTarget;
   /**
-   * URI of the resource that the packet is delivered to.
+   * URI of the resource that the packet is delivered to. For example: *
+   * `"projects/{project}/zones/{zone}/instances/{instance}"` * `"projects/{proj
+   * ect}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
    *
    * @var string
    */
@@ -239,7 +241,9 @@ class DeliverInfo extends \Google\Model
     return $this->pscGoogleApiTarget;
   }
   /**
-   * URI of the resource that the packet is delivered to.
+   * URI of the resource that the packet is delivered to. For example: *
+   * `"projects/{project}/zones/{zone}/instances/{instance}"` * `"projects/{proj
+   * ect}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
    *
    * @param string $resourceUri
    */

@@ -32,7 +32,8 @@ class CloudRunJobInfo extends \Google\Model
    */
   public $location;
   /**
-   * URI of a Cloud Run job.
+   * URI of the Cloud Run job. Format:
+   * `projects/{project_id}/locations/{location}/jobs/{job_id}`
    *
    * @var string
    */
@@ -71,7 +72,8 @@ class CloudRunJobInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * URI of a Cloud Run job.
+   * URI of the Cloud Run job. Format:
+   * `projects/{project_id}/locations/{location}/jobs/{job_id}`
    *
    * @param string $uri
    */

@@ -40,7 +40,8 @@ class InterconnectAttachmentInfo extends \Google\Model
    */
   public const TYPE_L2_DEDICATED = 'L2_DEDICATED';
   /**
-   * URI of the Cloud Router to be used for dynamic routing.
+   * URI of the Cloud Router to be used for dynamic routing. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    *
    * @var string
    */
@@ -52,7 +53,8 @@ class InterconnectAttachmentInfo extends \Google\Model
    */
   public $displayName;
   /**
-   * URI of the Interconnect where the Interconnect attachment is configured.
+   * URI of the Interconnect. Format:
+   * `projects/{project_id}/global/interconnects/{interconnect_id}`
    *
    * @var string
    */
@@ -77,14 +79,16 @@ class InterconnectAttachmentInfo extends \Google\Model
    */
   public $type;
   /**
-   * URI of an Interconnect attachment.
+   * URI of the Interconnect attachment. Format: `projects/{project_id}/regions/
+   * {region}/interconnectAttachments/{attachment_id}`
    *
    * @var string
    */
   public $uri;
 
   /**
-   * URI of the Cloud Router to be used for dynamic routing.
+   * URI of the Cloud Router to be used for dynamic routing. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    *
    * @param string $cloudRouterUri
    */
@@ -116,7 +120,8 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * URI of the Interconnect where the Interconnect attachment is configured.
+   * URI of the Interconnect. Format:
+   * `projects/{project_id}/global/interconnects/{interconnect_id}`
    *
    * @param string $interconnectUri
    */
@@ -184,7 +189,8 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->type;
   }
   /**
-   * URI of an Interconnect attachment.
+   * URI of the Interconnect attachment. Format: `projects/{project_id}/regions/
+   * {region}/interconnectAttachments/{attachment_id}`
    *
    * @param string $uri
    */

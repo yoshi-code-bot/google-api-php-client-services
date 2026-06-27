@@ -32,13 +32,15 @@ class CloudRunRevisionInfo extends \Google\Model
    */
   public $location;
   /**
-   * URI of Cloud Run service this revision belongs to.
+   * URI of Cloud Run service this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/services/{service_id}`
    *
    * @var string
    */
   public $serviceUri;
   /**
-   * URI of a Cloud Run revision.
+   * URI of the Cloud Run revision. Format:
+   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
    *
    * @var string
    */
@@ -77,7 +79,8 @@ class CloudRunRevisionInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * URI of Cloud Run service this revision belongs to.
+   * URI of Cloud Run service this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/services/{service_id}`
    *
    * @param string $serviceUri
    */
@@ -93,7 +96,8 @@ class CloudRunRevisionInfo extends \Google\Model
     return $this->serviceUri;
   }
   /**
-   * URI of a Cloud Run revision.
+   * URI of the Cloud Run revision. Format:
+   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
    *
    * @param string $uri
    */

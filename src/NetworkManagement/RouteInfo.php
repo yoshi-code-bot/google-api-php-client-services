@@ -146,7 +146,8 @@ class RouteInfo extends \Google\Collection
   public $advertisedRouteNextHopUri;
   /**
    * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised
-   * the corresponding IP prefix.
+   * the corresponding IP prefix in format
+   * "projects/{project}/regions/{region}/routers/{router}".
    *
    * @var string
    */
@@ -177,27 +178,34 @@ class RouteInfo extends \Google\Collection
   public $instanceTags;
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC
-   * Hub, the URI of the corresponding route in NCC Hub's routing table.
+   * Hub, the URI of the corresponding route in NCC Hub's routing table. Format:
+   * `projects/{project_id}/locations/global/hubs/{hub_id}/routeTables/{route_ta
+   * ble_id}/routes/{route_id}`
    *
    * @var string
    */
   public $nccHubRouteUri;
   /**
-   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and
+   * URI of the NCC Hub the route is advertised by in format
+   * "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and
    * PEERING_DYNAMIC routes that are advertised by NCC Hub only.
    *
    * @var string
    */
   public $nccHubUri;
   /**
-   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes
-   * that are advertised by NCC Hub only.
+   * URI of the destination NCC Spoke in format
+   * "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+   * "projects/{project}/locations/global/spokes/{spoke}" (global).
+   * PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub
+   * only.
    *
    * @var string
    */
   public $nccSpokeUri;
   /**
-   * URI of a VPC network where route is located.
+   * URI of a VPC network where route is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @var string
    */
@@ -212,7 +220,8 @@ class RouteInfo extends \Google\Collection
    */
   public $nextHop;
   /**
-   * URI of a VPC network where the next hop resource is located.
+   * URI of a VPC network where the next hop resource is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @var string
    */
@@ -238,7 +247,8 @@ class RouteInfo extends \Google\Collection
   public $originatingRouteDisplayName;
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating
-   * SUBNET/STATIC route.
+   * SUBNET/STATIC route. Format:
+   * `projects/{project_id}/global/routes/{route_id}`
    *
    * @var string
    */
@@ -292,8 +302,9 @@ class RouteInfo extends \Google\Collection
    */
   public $srcPortRanges;
   /**
-   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network)
-   * and POLICY_BASED routes only.
+   * URI of a route in format "projects/{project}/global/routes/{route}".
+   * SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
+   * routes only.
    *
    * @var string
    */
@@ -323,7 +334,8 @@ class RouteInfo extends \Google\Collection
   }
   /**
    * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised
-   * the corresponding IP prefix.
+   * the corresponding IP prefix in format
+   * "projects/{project}/regions/{region}/routers/{router}".
    *
    * @param string $advertisedRouteSourceRouterUri
    */
@@ -404,7 +416,9 @@ class RouteInfo extends \Google\Collection
   }
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC
-   * Hub, the URI of the corresponding route in NCC Hub's routing table.
+   * Hub, the URI of the corresponding route in NCC Hub's routing table. Format:
+   * `projects/{project_id}/locations/global/hubs/{hub_id}/routeTables/{route_ta
+   * ble_id}/routes/{route_id}`
    *
    * @param string $nccHubRouteUri
    */
@@ -420,7 +434,8 @@ class RouteInfo extends \Google\Collection
     return $this->nccHubRouteUri;
   }
   /**
-   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and
+   * URI of the NCC Hub the route is advertised by in format
+   * "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and
    * PEERING_DYNAMIC routes that are advertised by NCC Hub only.
    *
    * @param string $nccHubUri
@@ -437,8 +452,11 @@ class RouteInfo extends \Google\Collection
     return $this->nccHubUri;
   }
   /**
-   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes
-   * that are advertised by NCC Hub only.
+   * URI of the destination NCC Spoke in format
+   * "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+   * "projects/{project}/locations/global/spokes/{spoke}" (global).
+   * PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub
+   * only.
    *
    * @param string $nccSpokeUri
    */
@@ -454,7 +472,8 @@ class RouteInfo extends \Google\Collection
     return $this->nccSpokeUri;
   }
   /**
-   * URI of a VPC network where route is located.
+   * URI of a VPC network where route is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @param string $networkUri
    */
@@ -490,7 +509,8 @@ class RouteInfo extends \Google\Collection
     return $this->nextHop;
   }
   /**
-   * URI of a VPC network where the next hop resource is located.
+   * URI of a VPC network where the next hop resource is located in format
+   * "projects/{project}/global/networks/{network}".
    *
    * @param string $nextHopNetworkUri
    */
@@ -562,7 +582,8 @@ class RouteInfo extends \Google\Collection
   }
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating
-   * SUBNET/STATIC route.
+   * SUBNET/STATIC route. Format:
+   * `projects/{project_id}/global/routes/{route_id}`
    *
    * @param string $originatingRouteUri
    */
@@ -702,8 +723,9 @@ class RouteInfo extends \Google\Collection
     return $this->srcPortRanges;
   }
   /**
-   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network)
-   * and POLICY_BASED routes only.
+   * URI of a route in format "projects/{project}/global/routes/{route}".
+   * SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
+   * routes only.
    *
    * @param string $uri
    */
