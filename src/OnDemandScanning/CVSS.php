@@ -134,6 +134,26 @@ class CVSS extends \Google\Model
   /**
    * Unspecified.
    */
+  public const EXPLOIT_MATURITY_EXPLOIT_MATURITY_UNSPECIFIED = 'EXPLOIT_MATURITY_UNSPECIFIED';
+  /**
+   * Exploit maturity: Not defined (E:X). Defined in CVSS v4.
+   */
+  public const EXPLOIT_MATURITY_EXPLOIT_MATURITY_NOT_DEFINED = 'EXPLOIT_MATURITY_NOT_DEFINED';
+  /**
+   * Exploit maturity: Attacked (E:A). Defined in CVSS v4.
+   */
+  public const EXPLOIT_MATURITY_EXPLOIT_MATURITY_ATTACKED = 'EXPLOIT_MATURITY_ATTACKED';
+  /**
+   * Exploit maturity: Proof-of-concept (E:P). Defined in CVSS v4.
+   */
+  public const EXPLOIT_MATURITY_EXPLOIT_MATURITY_POC = 'EXPLOIT_MATURITY_POC';
+  /**
+   * Exploit maturity: Unreported (E:U). Defined in CVSS v4.
+   */
+  public const EXPLOIT_MATURITY_EXPLOIT_MATURITY_UNREPORTED = 'EXPLOIT_MATURITY_UNREPORTED';
+  /**
+   * Unspecified.
+   */
   public const INTEGRITY_IMPACT_IMPACT_UNSPECIFIED = 'IMPACT_UNSPECIFIED';
   /**
    * High impact (H). Defined in CVSS v3, v4.
@@ -390,6 +410,12 @@ class CVSS extends \Google\Model
    */
   public $confidentialityImpact;
   /**
+   * Exploit Maturity (E). Defined in CVSS v4.
+   *
+   * @var string
+   */
+  public $exploitMaturity;
+  /**
    * @var float
    */
   public $exploitabilityScore;
@@ -587,6 +613,26 @@ class CVSS extends \Google\Model
   public function getConfidentialityImpact()
   {
     return $this->confidentialityImpact;
+  }
+  /**
+   * Exploit Maturity (E). Defined in CVSS v4.
+   *
+   * Accepted values: EXPLOIT_MATURITY_UNSPECIFIED,
+   * EXPLOIT_MATURITY_NOT_DEFINED, EXPLOIT_MATURITY_ATTACKED,
+   * EXPLOIT_MATURITY_POC, EXPLOIT_MATURITY_UNREPORTED
+   *
+   * @param self::EXPLOIT_MATURITY_* $exploitMaturity
+   */
+  public function setExploitMaturity($exploitMaturity)
+  {
+    $this->exploitMaturity = $exploitMaturity;
+  }
+  /**
+   * @return self::EXPLOIT_MATURITY_*
+   */
+  public function getExploitMaturity()
+  {
+    return $this->exploitMaturity;
   }
   /**
    * @param float $exploitabilityScore

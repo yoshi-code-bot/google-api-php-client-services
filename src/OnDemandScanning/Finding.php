@@ -32,6 +32,10 @@ class Finding extends \Google\Model
    */
   public const SCANNER_LLM = 'LLM';
   /**
+   * WS_POLICY scanner.
+   */
+  public const SCANNER_WS_POLICY = 'WS_POLICY';
+  /**
    * Unspecified severity.
    */
   public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
@@ -121,7 +125,7 @@ class Finding extends \Google\Model
   /**
    * Scanner determines which engine (e.g. static, llm) emitted the finding.
    *
-   * Accepted values: SCANNER_UNSPECIFIED, STATIC, LLM
+   * Accepted values: SCANNER_UNSPECIFIED, STATIC, LLM, WS_POLICY
    *
    * @param self::SCANNER_* $scanner
    */
