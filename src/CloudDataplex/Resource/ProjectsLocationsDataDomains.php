@@ -17,10 +17,13 @@
 
 namespace Google\Service\CloudDataplex\Resource;
 
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1DataDomain;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListDataDomainsResponse;
 use Google\Service\CloudDataplex\GoogleIamV1Policy;
 use Google\Service\CloudDataplex\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
+use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 
 /**
  * The "dataDomains" collection of methods.
@@ -32,6 +35,60 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
  */
 class ProjectsLocationsDataDomains extends \Google\Service\Resource
 {
+  /**
+   * Creates a DataDomain resource. (dataDomains.create)
+   *
+   * @param string $parent Required. The resource name of the parent location:
+   * projects/{project_id_or_number}/locations/{location_id}
+   * @param GoogleCloudDataplexV1DataDomain $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string dataDomainId Required. DataDomain identifier. * Must
+   * contain only lowercase letters, numbers and hyphens. * Must start with a
+   * letter. * Must be between 1-63 characters. * Must end with a number or a
+   * letter. * Must be unique within the project and location.
+   * @opt_param bool validateOnly Optional. Only validate the request, but do not
+   * perform mutations.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GoogleCloudDataplexV1DataDomain $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Deletes a DataDomain resource (allowed only when there are no bindings).
+   * (dataDomains.delete)
+   *
+   * @param string $name Required. The resource name of the DataDomain: projects/{
+   * project_id_or_number}/locations/{location_id}/dataDomains/{data_domain_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Retrieves a DataDomain resource. (dataDomains.get)
+   *
+   * @param string $name Required. The resource name of the DataDomain: projects/{
+   * project_id_or_number}/locations/{location_id}/dataDomains/{data_domain_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1DataDomain
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDataplexV1DataDomain::class);
+  }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (dataDomains.getIamPolicy)
@@ -61,6 +118,52 @@ class ProjectsLocationsDataDomains extends \Google\Service\Resource
     $params = ['resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
+  }
+  /**
+   * Lists DataDomain resources in a project and location.
+   * (dataDomains.listProjectsLocationsDataDomains)
+   *
+   * @param string $parent Required. The resource name of the parent location:
+   * projects/{project_id_or_number}/locations/{location_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filter request. Supports filter by
+   * parent_data_domain.
+   * @opt_param string orderBy Optional. Order by fields for the result.
+   * @opt_param int pageSize Optional. Maximum number of DataDomains to return.
+   * The service may return fewer. If unspecified, at most 50 domains will be
+   * returned. The maximum value is 100; values above 100 will be coerced to 100.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * ListDataDomains call.
+   * @return GoogleCloudDataplexV1ListDataDomainsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsDataDomains($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDataplexV1ListDataDomainsResponse::class);
+  }
+  /**
+   * Updates a DataDomain resource. (dataDomains.patch)
+   *
+   * @param string $name Identifier. The relative resource name of the DataDomain,
+   * of the form: projects/{project_id_or_number}/locations/{location_id}/dataDoma
+   * ins/{data_domain_id}
+   * @param GoogleCloudDataplexV1DataDomain $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. Mask of fields to update.
+   * @opt_param bool validateOnly Optional. Only validate the request, but do not
+   * perform mutations.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudDataplexV1DataDomain $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

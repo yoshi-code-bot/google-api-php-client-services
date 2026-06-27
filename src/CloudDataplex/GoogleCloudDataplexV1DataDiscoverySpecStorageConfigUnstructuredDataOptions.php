@@ -20,6 +20,12 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions extends \Google\Model
 {
   /**
+   * Optional. Whether to use the global model endpoint.
+   *
+   * @var bool
+   */
+  public $globalEndpointEnabled;
+  /**
    * Optional. Specifies whether deeper semantic inference over the objects'
    * contents using GenAI is enabled.
    *
@@ -27,6 +33,22 @@ class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions
    */
   public $semanticInferenceEnabled;
 
+  /**
+   * Optional. Whether to use the global model endpoint.
+   *
+   * @param bool $globalEndpointEnabled
+   */
+  public function setGlobalEndpointEnabled($globalEndpointEnabled)
+  {
+    $this->globalEndpointEnabled = $globalEndpointEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGlobalEndpointEnabled()
+  {
+    return $this->globalEndpointEnabled;
+  }
   /**
    * Optional. Specifies whether deeper semantic inference over the objects'
    * contents using GenAI is enabled.
