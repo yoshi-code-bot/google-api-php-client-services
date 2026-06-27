@@ -65,6 +65,8 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
    * @var string
    */
   public $exclusionType;
+  protected $fileLabelInfoTypeType = GooglePrivacyDlpV2FileLabelInfoType::class;
+  protected $fileLabelInfoTypeDataType = '';
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
   /**
@@ -139,6 +141,22 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
   public function getExclusionType()
   {
     return $this->exclusionType;
+  }
+  /**
+   * File label to detect.
+   *
+   * @param GooglePrivacyDlpV2FileLabelInfoType $fileLabelInfoType
+   */
+  public function setFileLabelInfoType(GooglePrivacyDlpV2FileLabelInfoType $fileLabelInfoType)
+  {
+    $this->fileLabelInfoType = $fileLabelInfoType;
+  }
+  /**
+   * @return GooglePrivacyDlpV2FileLabelInfoType
+   */
+  public function getFileLabelInfoType()
+  {
+    return $this->fileLabelInfoType;
   }
   /**
    * CustomInfoType can either be a new infoType, or an extension of built-in
