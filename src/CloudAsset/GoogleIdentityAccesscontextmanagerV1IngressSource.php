@@ -32,6 +32,8 @@ class GoogleIdentityAccesscontextmanagerV1IngressSource extends \Google\Model
    * @var string
    */
   public $accessLevel;
+  protected $pscEndpointType = GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint::class;
+  protected $pscEndpointDataType = '';
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests
    * from these resources will be allowed to access perimeter data. Currently
@@ -68,6 +70,22 @@ class GoogleIdentityAccesscontextmanagerV1IngressSource extends \Google\Model
   public function getAccessLevel()
   {
     return $this->accessLevel;
+  }
+  /**
+   * Requests from this PSC will be allowed to access perimeter data.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint $pscEndpoint
+   */
+  public function setPscEndpoint(GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint $pscEndpoint)
+  {
+    $this->pscEndpoint = $pscEndpoint;
+  }
+  /**
+   * @return GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint
+   */
+  public function getPscEndpoint()
+  {
+    return $this->pscEndpoint;
   }
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests
