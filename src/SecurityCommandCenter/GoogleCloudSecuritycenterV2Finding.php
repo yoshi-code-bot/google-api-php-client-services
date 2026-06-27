@@ -134,6 +134,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $groupMembershipsDataType = 'array';
   protected $iamBindingsType = GoogleCloudSecuritycenterV2IamBinding::class;
   protected $iamBindingsDataType = 'array';
+  protected $iamDetailsType = GoogleCloudSecuritycenterV2IamDetails::class;
+  protected $iamDetailsDataType = '';
   protected $indicatorType = GoogleCloudSecuritycenterV2Indicator::class;
   protected $indicatorDataType = '';
   protected $ipRulesType = GoogleCloudSecuritycenterV2IpRules::class;
@@ -740,6 +742,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getIamBindings()
   {
     return $this->iamBindings;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2IamDetails $iamDetails
+   */
+  public function setIamDetails(GoogleCloudSecuritycenterV2IamDetails $iamDetails)
+  {
+    $this->iamDetails = $iamDetails;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2IamDetails
+   */
+  public function getIamDetails()
+  {
+    return $this->iamDetails;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Indicator $indicator

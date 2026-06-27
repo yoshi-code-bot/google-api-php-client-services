@@ -130,6 +130,8 @@ class Finding extends \Google\Collection
   protected $groupMembershipsDataType = 'array';
   protected $iamBindingsType = IamBinding::class;
   protected $iamBindingsDataType = 'array';
+  protected $iamDetailsType = GoogleCloudSecuritycenterV1IamDetails::class;
+  protected $iamDetailsDataType = '';
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
   protected $ipRulesType = IpRules::class;
@@ -722,6 +724,20 @@ class Finding extends \Google\Collection
   public function getIamBindings()
   {
     return $this->iamBindings;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV1IamDetails $iamDetails
+   */
+  public function setIamDetails(GoogleCloudSecuritycenterV1IamDetails $iamDetails)
+  {
+    $this->iamDetails = $iamDetails;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV1IamDetails
+   */
+  public function getIamDetails()
+  {
+    return $this->iamDetails;
   }
   /**
    * @param Indicator $indicator
