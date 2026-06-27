@@ -20,9 +20,27 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ContentMetadata extends \Google\Collection
 {
   protected $collection_key = 'properties';
+  protected $fileLabelsType = GooglePrivacyDlpV2FileLabel::class;
+  protected $fileLabelsDataType = 'array';
   protected $propertiesType = GooglePrivacyDlpV2KeyValueMetadataProperty::class;
   protected $propertiesDataType = 'array';
 
+  /**
+   * Optional. The file labels associated with the content.
+   *
+   * @param GooglePrivacyDlpV2FileLabel[] $fileLabels
+   */
+  public function setFileLabels($fileLabels)
+  {
+    $this->fileLabels = $fileLabels;
+  }
+  /**
+   * @return GooglePrivacyDlpV2FileLabel[]
+   */
+  public function getFileLabels()
+  {
+    return $this->fileLabels;
+  }
   /**
    * User provided key-value pairs of content metadata.
    *
