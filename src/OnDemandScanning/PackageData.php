@@ -94,6 +94,8 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $hashDigest;
+  protected $ingestionSourcesType = IngestionSource::class;
+  protected $ingestionSourcesDataType = 'array';
   protected $layerDetailsType = LayerDetails::class;
   protected $layerDetailsDataType = '';
   /**
@@ -269,6 +271,23 @@ class PackageData extends \Google\Collection
   public function getHashDigest()
   {
     return $this->hashDigest;
+  }
+  /**
+   * The list of sources that were scanned to find this package. This can be a
+   * Docker image, an SBOM attachment, or both, for example.
+   *
+   * @param IngestionSource[] $ingestionSources
+   */
+  public function setIngestionSources($ingestionSources)
+  {
+    $this->ingestionSources = $ingestionSources;
+  }
+  /**
+   * @return IngestionSource[]
+   */
+  public function getIngestionSources()
+  {
+    return $this->ingestionSources;
   }
   /**
    * @param LayerDetails $layerDetails
