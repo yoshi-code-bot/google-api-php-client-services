@@ -263,8 +263,6 @@ class EmissionsProvenanceEntry extends \Google\Model
    * @var string
    */
   public $provenanceEntryType;
-  protected $seatAreaRatioDataType = SeatAreaRatioData::class;
-  protected $seatAreaRatioDataDataType = '';
   /**
    * Output only. Strategy for IATA seat area ratios.
    *
@@ -452,23 +450,6 @@ class EmissionsProvenanceEntry extends \Google\Model
   public function getProvenanceEntryType()
   {
     return $this->provenanceEntryType;
-  }
-  /**
-   * Output only. The seat area ratio value for each seating class. If not set,
-   * the seat area ratio value is not available.
-   *
-   * @param SeatAreaRatioData $seatAreaRatioData
-   */
-  public function setSeatAreaRatioData(SeatAreaRatioData $seatAreaRatioData)
-  {
-    $this->seatAreaRatioData = $seatAreaRatioData;
-  }
-  /**
-   * @return SeatAreaRatioData
-   */
-  public function getSeatAreaRatioData()
-  {
-    return $this->seatAreaRatioData;
   }
   /**
    * Output only. Strategy for IATA seat area ratios.
