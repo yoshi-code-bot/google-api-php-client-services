@@ -20,12 +20,36 @@ namespace Google\Service\HomeGraphService;
 class TraitData extends \Google\Model
 {
   /**
+   * Other metadata for the trait. The time the client update was committed in
+   * the server.
+   *
+   * @var string
+   */
+  public $commitTime;
+  /**
    * The Provider Home API trait payload.
    *
    * @var array[]
    */
   public $trait;
 
+  /**
+   * Other metadata for the trait. The time the client update was committed in
+   * the server.
+   *
+   * @param string $commitTime
+   */
+  public function setCommitTime($commitTime)
+  {
+    $this->commitTime = $commitTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCommitTime()
+  {
+    return $this->commitTime;
+  }
   /**
    * The Provider Home API trait payload.
    *
