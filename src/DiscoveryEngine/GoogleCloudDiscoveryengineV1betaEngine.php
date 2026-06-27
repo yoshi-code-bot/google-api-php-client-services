@@ -115,6 +115,14 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * @var string
    */
   public $appType;
+  /**
+   * Optional. The Agent registry containing the agents, MCP servers and tools
+   * associated with this engine. Field is required if the engine has an Agent
+   * Gateway setting.
+   *
+   * @var string
+   */
+  public $associatedAgentRegistry;
   protected $chatEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig::class;
   protected $chatEngineConfigDataType = '';
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1betaEngineChatEngineMetadata::class;
@@ -181,7 +189,8 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
    * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence`
+   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
+   * research`
    *
    * @var string[]
    */
@@ -284,6 +293,24 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getAppType()
   {
     return $this->appType;
+  }
+  /**
+   * Optional. The Agent registry containing the agents, MCP servers and tools
+   * associated with this engine. Field is required if the engine has an Agent
+   * Gateway setting.
+   *
+   * @param string $associatedAgentRegistry
+   */
+  public function setAssociatedAgentRegistry($associatedAgentRegistry)
+  {
+    $this->associatedAgentRegistry = $associatedAgentRegistry;
+  }
+  /**
+   * @return string
+   */
+  public function getAssociatedAgentRegistry()
+  {
+    return $this->associatedAgentRegistry;
   }
   /**
    * Configurations for the Chat Engine. Only applicable if solution_type is
@@ -472,7 +499,8 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
    * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence`
+   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
+   * research`
    *
    * @param string[] $features
    */
