@@ -802,6 +802,10 @@ class AndroidPublisher extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'aiGeneratedState' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
