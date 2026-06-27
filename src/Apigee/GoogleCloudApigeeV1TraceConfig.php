@@ -40,6 +40,18 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
    */
   public const EXPORTER_OPEN_TELEMETRY_CLOUD_TRACE = 'OPEN_TELEMETRY_CLOUD_TRACE';
   /**
+   * Protocol unspecified. Defaults to OPEN_CENSUS.
+   */
+  public const TRACE_PROTOCOL_TRACE_PROTOCOL_UNSPECIFIED = 'TRACE_PROTOCOL_UNSPECIFIED';
+  /**
+   * Uses OpenCensus protocol.
+   */
+  public const TRACE_PROTOCOL_OPEN_CENSUS = 'OPEN_CENSUS';
+  /**
+   * Uses OpenTelemetry Protocol (OTLP).
+   */
+  public const TRACE_PROTOCOL_OTLP = 'OTLP';
+  /**
    * Required. Endpoint of the exporter.
    *
    * @var string
@@ -56,6 +68,16 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
   public $exporter;
   protected $samplingConfigType = GoogleCloudApigeeV1TraceSamplingConfig::class;
   protected $samplingConfigDataType = '';
+  /**
+   * Optional. The trace protocol to use. Configuration Requirements (if
+   * trace_protocol is OTLP): - Allowed Exporters: CLOUD_TRACE or
+   * OPEN_TELEMETRY_COLLECTOR. - If Exporter is OPEN_TELEMETRY_COLLECTOR: -
+   * endpoint refers to a valid OTLP collector URL. - If Exporter is
+   * CLOUD_TRACE: - endpoint refers to a valid project ID.
+   *
+   * @var string
+   */
+  public $traceProtocol;
 
   /**
    * Required. Endpoint of the exporter.
@@ -112,6 +134,28 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
   public function getSamplingConfig()
   {
     return $this->samplingConfig;
+  }
+  /**
+   * Optional. The trace protocol to use. Configuration Requirements (if
+   * trace_protocol is OTLP): - Allowed Exporters: CLOUD_TRACE or
+   * OPEN_TELEMETRY_COLLECTOR. - If Exporter is OPEN_TELEMETRY_COLLECTOR: -
+   * endpoint refers to a valid OTLP collector URL. - If Exporter is
+   * CLOUD_TRACE: - endpoint refers to a valid project ID.
+   *
+   * Accepted values: TRACE_PROTOCOL_UNSPECIFIED, OPEN_CENSUS, OTLP
+   *
+   * @param self::TRACE_PROTOCOL_* $traceProtocol
+   */
+  public function setTraceProtocol($traceProtocol)
+  {
+    $this->traceProtocol = $traceProtocol;
+  }
+  /**
+   * @return self::TRACE_PROTOCOL_*
+   */
+  public function getTraceProtocol()
+  {
+    return $this->traceProtocol;
   }
 }
 
