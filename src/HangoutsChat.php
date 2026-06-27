@@ -122,6 +122,12 @@ class HangoutsChat extends \Google\Service
   /** View chat and spaces in Google Chat. */
   const CHAT_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.spaces.readonly";
+  /** See and change your availability status in Google Chat.. */
+  const CHAT_USERS_AVAILABILITY =
+      "https://www.googleapis.com/auth/chat.users.availability";
+  /** See your availability status in Google Chat.. */
+  const CHAT_USERS_AVAILABILITY_READONLY =
+      "https://www.googleapis.com/auth/chat.users.availability.readonly";
   /** View and modify last read time for Google Chat conversations. */
   const CHAT_USERS_READSTATE =
       "https://www.googleapis.com/auth/chat.users.readstate";
@@ -146,6 +152,7 @@ class HangoutsChat extends \Google\Service
   public $spaces_messages_attachments;
   public $spaces_messages_reactions;
   public $spaces_spaceEvents;
+  public $users_availability;
   public $users_sections;
   public $users_sections_items;
   public $users_spaces;
@@ -743,6 +750,70 @@ class HangoutsChat extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->users_availability = new HangoutsChat\Resource\UsersAvailability(
+        $this,
+        $this->serviceName,
+        'availability',
+        [
+          'methods' => [
+            'getAvailability' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'markAsActive' => [
+              'path' => 'v1/{+name}:markAsActive',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'markAsAway' => [
+              'path' => 'v1/{+name}:markAsAway',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'markAsDoNotDisturb' => [
+              'path' => 'v1/{+name}:markAsDoNotDisturb',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateAvailability' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
