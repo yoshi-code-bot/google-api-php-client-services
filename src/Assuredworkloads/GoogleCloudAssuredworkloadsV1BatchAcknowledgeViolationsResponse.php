@@ -19,6 +19,29 @@ namespace Google\Service\Assuredworkloads;
 
 class GoogleCloudAssuredworkloadsV1BatchAcknowledgeViolationsResponse extends \Google\Model
 {
+  /**
+   * Count of acknowledged violations.
+   *
+   * @var int
+   */
+  public $acknowledgedViolationsCount;
+
+  /**
+   * Count of acknowledged violations.
+   *
+   * @param int $acknowledgedViolationsCount
+   */
+  public function setAcknowledgedViolationsCount($acknowledgedViolationsCount)
+  {
+    $this->acknowledgedViolationsCount = $acknowledgedViolationsCount;
+  }
+  /**
+   * @return int
+   */
+  public function getAcknowledgedViolationsCount()
+  {
+    return $this->acknowledgedViolationsCount;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
