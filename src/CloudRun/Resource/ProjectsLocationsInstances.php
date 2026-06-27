@@ -40,7 +40,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
   /**
    * Creates an Instance. (instances.create)
    *
-   * @param string $parent
+   * @param string $parent Required. The location and project in which this
+   * Instance should be created.
    * @param GoogleCloudRunV2Instance $postBody
    * @param array $optParams Optional parameters.
    *
@@ -62,9 +63,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a Instance (instances.delete)
+   * Deletes an Instance (instances.delete)
    *
-   * @param string $name
+   * @param string $name Required. The name of the Instance to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string etag Optional. A system-generated fingerprint for this
@@ -82,9 +83,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets a Instance (instances.get)
+   * Gets an Instance (instances.get)
    *
-   * @param string $name
+   * @param string $name Required. The name of the Instance to retrieve.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRunV2Instance
    * @throws \Google\Service\Exception
@@ -132,8 +133,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * (instances.listProjectsLocationsInstances)
    *
    * @param string $parent Required. The location and project to list resources
-   * on. Format: projects/{project}/locations/{location}, where {project} can be
-   * project id or number.
+   * on.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Maximum number of Instances to return in
@@ -155,15 +155,14 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Updates an Instance. (instances.patch)
    *
    * @param string $name The fully qualified name of this Instance. In
-   * CreateInstanceRequest, this field is ignored, and instead composed from
-   * CreateInstanceRequest.parent and CreateInstanceRequest.instance_id. Format:
-   * projects/{project}/locations/{location}/instances/{instance_id}
+   * `CreateInstanceRequest`, this field is ignored, and instead composed from
+   * `CreateInstanceRequest.parent` and `CreateInstanceRequest.instance_id`.
    * @param GoogleCloudRunV2Instance $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing Optional. If set to true, and if the Instance
+   * @opt_param bool allowMissing Optional. If set to `true`, and if the Instance
    * does not exist, it will create a new one. The caller must have
-   * 'run.instances.create' permissions if this is set to true and the Instance
+   * `run.instances.create` permissions if this is set to `true` and the Instance
    * does not exist.
    * @opt_param string updateMask Optional. The list of fields to be updated.
    * @opt_param bool validateOnly Optional. Indicates that the request should be
@@ -200,9 +199,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
   /**
    * Starts an Instance. (instances.start)
    *
-   * @param string $name Required. The name of the Instance to stop. Format:
-   * `projects/{project}/locations/{location}/instances/{instance}`, where
-   * `{project}` can be project id or number.
+   * @param string $name Required. The name of the Instance to start.
    * @param GoogleCloudRunV2StartInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
@@ -217,9 +214,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
   /**
    * Stops an Instance. (instances.stop)
    *
-   * @param string $name Required. The name of the Instance to stop. Format:
-   * `projects/{project}/locations/{location}/instances/{instance}`, where
-   * `{project}` can be project id or number.
+   * @param string $name Required. The name of the Instance to stop.
    * @param GoogleCloudRunV2StopInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation

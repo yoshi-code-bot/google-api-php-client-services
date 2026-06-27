@@ -142,8 +142,6 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
    * @var string
    */
   public $revision;
-  protected $sandboxesType = GoogleCloudRunV2SandboxConfiguration::class;
-  protected $sandboxesDataType = '';
   protected $scalingType = GoogleCloudRunV2RevisionScaling::class;
   protected $scalingDataType = '';
   /**
@@ -425,22 +423,6 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   public function getRevision()
   {
     return $this->revision;
-  }
-  /**
-   * Optional. Configuration for sandboxes.
-   *
-   * @param GoogleCloudRunV2SandboxConfiguration $sandboxes
-   */
-  public function setSandboxes(GoogleCloudRunV2SandboxConfiguration $sandboxes)
-  {
-    $this->sandboxes = $sandboxes;
-  }
-  /**
-   * @return GoogleCloudRunV2SandboxConfiguration
-   */
-  public function getSandboxes()
-  {
-    return $this->sandboxes;
   }
   /**
    * Optional. Scaling settings for this Revision.
