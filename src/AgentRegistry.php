@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for AgentRegistry (v1alpha).
+ * Service definition for AgentRegistry (v1).
  *
  * <p>
  * Agent Registry is a centralized, unified catalog that lets you store,
@@ -72,7 +72,7 @@ class AgentRegistry extends \Google\Service
     $this->rootUrlTemplate = $rootUrl ?: 'https://agentregistry.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1alpha';
+    $this->version = 'v1';
     $this->serviceName = 'agentregistry';
 
     $this->projects_locations = new AgentRegistry\Resource\ProjectsLocations(
@@ -82,7 +82,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -92,7 +92,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -129,7 +129,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -139,7 +139,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/agents',
+              'path' => 'v1/{+parent}/agents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -165,7 +165,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'search' => [
-              'path' => 'v1alpha/{+parent}/agents:search',
+              'path' => 'v1/{+parent}/agents:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -185,7 +185,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1alpha/{+parent}/bindings',
+              'path' => 'v1/{+parent}/bindings',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -203,7 +203,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -217,7 +217,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'fetchAvailable' => [
-              'path' => 'v1alpha/{+parent}/bindings:fetchAvailable',
+              'path' => 'v1/{+parent}/bindings:fetchAvailable',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -243,7 +243,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -253,7 +253,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/bindings',
+              'path' => 'v1/{+parent}/bindings',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -279,7 +279,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -307,7 +307,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -317,7 +317,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/endpoints',
+              'path' => 'v1/{+parent}/endpoints',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -349,7 +349,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -359,7 +359,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/mcpServers',
+              'path' => 'v1/{+parent}/mcpServers',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -385,7 +385,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'search' => [
-              'path' => 'v1alpha/{+parent}/mcpServers:search',
+              'path' => 'v1/{+parent}/mcpServers:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -405,7 +405,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'cancel' => [
-              'path' => 'v1alpha/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -415,7 +415,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -425,7 +425,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -435,7 +435,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -471,7 +471,7 @@ class AgentRegistry extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1alpha/{+parent}/services',
+              'path' => 'v1/{+parent}/services',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -489,7 +489,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -503,7 +503,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -513,7 +513,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/services',
+              'path' => 'v1/{+parent}/services',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -535,7 +535,7 @@ class AgentRegistry extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
