@@ -448,7 +448,8 @@ class Spaces extends \Google\Service\Resource
    * spaces](https://developers.google.com/workspace/chat/search-manage-admin).
    * When `use_admin_access` is set to `false`, the results are limited to spaces
    * where the calling user is a joined member. To search with administrator
-   * privileges, set `use_admin_access` to `true`. Supports the following types of
+   * privileges, set `use_admin_access` to `true`. Setting `use_admin_access` to
+   * `false` is available under Developer Preview. Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize): - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -495,28 +496,29 @@ class Spaces extends \Google\Service\Resource
    * `false`: - `display_name` - `external_user_allowed` `create_time` and
    * `last_active_time` accept a timestamp in [RFC-3339](https://www.rfc-
    * editor.org/rfc/rfc3339) format and the supported comparison operators are:
-   * `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to indicate
-   * which customer to fetch spaces from. `customers/my_customer` is the only
-   * supported value. `display_name` only accepts the `HAS` (`:`) operator. The
-   * text to match is first tokenized into tokens and each token is prefix-matched
-   * case-insensitively and independently as a substring anywhere in the space's
-   * `display_name`. For example, `Fun Eve` matches `Fun event` or `The evening
-   * was fun`, but not `notFun event` or `even`. When `useAdminAccess` is set to
-   * `false`, `display_name` is required to retrieve meaningful results.
-   * Otherwise, the default behavior is to return an empty response.
-   * `external_user_allowed` accepts either `true` or `false`.
+   * `=`, `<`, `>`, `<=`, `>=`. `customer` is required when `useAdminAccess` is
+   * set to `true`, and is used to indicate which customer to fetch spaces from.
+   * `customers/my_customer` is the only supported value. `display_name` only
+   * accepts the `HAS` (`:`) operator. The text to match is first tokenized into
+   * tokens and each token is prefix-matched case-insensitively and independently
+   * as a substring anywhere in the space's `display_name`. For example, `Fun Eve`
+   * matches `Fun event` or `The evening was fun`, but not `notFun event` or
+   * `even`. When `useAdminAccess` is set to `false`, `display_name` is required
+   * to retrieve meaningful results. Otherwise, the default behavior is to return
+   * an empty response. `external_user_allowed` accepts either `true` or `false`.
    * `space_history_state` only accepts values from the [`historyState`] (https://
    * developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.Histo
-   * ryState) field of a `space` resource. `space_type` is required and the only
-   * valid value is `SPACE`. Across different fields, only `AND` operators are
-   * supported. A valid example is `space_type = "SPACE" AND display_name:"Hello"`
-   * and an invalid example is `space_type = "SPACE" OR display_name:"Hello"`.
-   * Among the same field, `space_type` doesn't support `AND` or `OR` operators.
-   * `display_name`, 'space_history_state', and 'external_user_allowed' only
-   * support `OR` operators. `last_active_time` and `create_time` support both
-   * `AND` and `OR` operators. `AND` can only be used to represent an interval,
-   * such as `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time
-   * > "2023-01-01T00:00:00+00:00"`. The following example queries are valid when
+   * ryState) field of a `space` resource. `space_type` is required when
+   * `useAdminAccess` is set to `true`, and the only valid value is `SPACE`.
+   * Across different fields, only `AND` operators are supported. A valid example
+   * is `space_type = "SPACE" AND display_name:"Hello"` and an invalid example is
+   * `space_type = "SPACE" OR display_name:"Hello"`. Among the same field,
+   * `space_type` doesn't support `AND` or `OR` operators. `display_name`,
+   * 'space_history_state', and 'external_user_allowed' only support `OR`
+   * operators. `last_active_time` and `create_time` support both `AND` and `OR`
+   * operators. `AND` can only be used to represent an interval, such as
+   * `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time >
+   * "2023-01-01T00:00:00+00:00"`. The following example queries are valid when
    * `useAdminAccess` is set to `true`: ``` customer = "customers/my_customer" AND
    * space_type = "SPACE" customer = "customers/my_customer" AND space_type =
    * "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND
@@ -532,14 +534,17 @@ class Spaces extends \Google\Service\Resource
    * "HISTORY_OFF") ``` The following example queries are valid when
    * `useAdminAccess` is set to `false`: ``` display_name:"Hello World"
    * (display_name:"Hello" OR display_name:"Fun") (external_user_allowed = "true")
-   * (external_user_allowed = "true" AND display_name:"Hello") ```
+   * // Returns an empty response. (external_user_allowed = "true" AND
+   * display_name:"Hello") ```
    * @opt_param bool useAdminAccess When `true`, the method runs using the user's
    * Google Workspace administrator privileges. The calling user must be a Google
    * Workspace administrator with the [manage chat and spaces conversations
    * privilege](https://support.google.com/a/answer/13369245). Requires either the
    * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
    * scope](https://developers.google.com/workspace/chat/authenticate-
-   * authorize#chat-api-scopes).
+   * authorize#chat-api-scopes). Setting `use_admin_access` to `false` is
+   * available under Developer Preview. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * @return SearchSpacesResponse
    * @throws \Google\Service\Exception
    */
