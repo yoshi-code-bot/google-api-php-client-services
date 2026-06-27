@@ -45,7 +45,7 @@ class GitRemoteSettings extends \Google\Model
    */
   public $authenticationTokenSecretVersion;
   /**
-   * Optional. The Git remote's default branch name. If not set `main` will be
+   * Optional. The Git remote's default branch name. If not set, `main` will be
    * used.
    *
    * @var string
@@ -59,7 +59,7 @@ class GitRemoteSettings extends \Google\Model
    */
   public $effectiveDefaultBranch;
   /**
-   * Optional. Resource name for the GitRepositoryLink used for machine
+   * Optional. Resource name for the `GitRepositoryLink` used for machine
    * credentials. Must be in the format
    * `projects/locations/connections/gitRepositoryLinks`
    *
@@ -102,7 +102,7 @@ class GitRemoteSettings extends \Google\Model
     return $this->authenticationTokenSecretVersion;
   }
   /**
-   * Optional. The Git remote's default branch name. If not set `main` will be
+   * Optional. The Git remote's default branch name. If not set, `main` will be
    * used.
    *
    * @param string $defaultBranch
@@ -136,7 +136,7 @@ class GitRemoteSettings extends \Google\Model
     return $this->effectiveDefaultBranch;
   }
   /**
-   * Optional. Resource name for the GitRepositoryLink used for machine
+   * Optional. Resource name for the `GitRepositoryLink` used for machine
    * credentials. Must be in the format
    * `projects/locations/connections/gitRepositoryLinks`
    *

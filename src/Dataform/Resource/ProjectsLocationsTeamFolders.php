@@ -196,9 +196,9 @@ class ProjectsLocationsTeamFolders extends \Google\Service\Resource
    * Supported keywords: `display_name` (default), `create_time`,
    * `last_modified_time`. Examples: * `orderBy="display_name"` *
    * `orderBy="display_name desc"`
-   * @opt_param int pageSize Optional. Maximum number of TeamFolders to return.
+   * @opt_param int pageSize Optional. Maximum number of `TeamFolders` to return.
    * The server may return fewer items than requested. If unspecified, the server
-   * will pick a default of page_size = 50.
+   * will pick a default of `page_size` = 50.
    * @opt_param string pageToken Optional. Page token received from a previous
    * `SearchTeamFolders` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `SearchTeamFolders`, with the

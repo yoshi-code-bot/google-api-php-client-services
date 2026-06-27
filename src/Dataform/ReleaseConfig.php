@@ -46,8 +46,7 @@ class ReleaseConfig extends \Google\Collection
   /**
    * Output only. All the metadata information that is used internally to serve
    * the resource. For example: timestamps, flags, status fields, etc. The
-   * format of this field is a JSON string. LINT.ThenChange(//depot/google3/goog
-   * le/cloud/dataform/v2main/data_pipelines.proto:ReleaseConfig)
+   * format of this field is a JSON string.
    *
    * @var string
    */
@@ -153,8 +152,7 @@ class ReleaseConfig extends \Google\Collection
   /**
    * Output only. All the metadata information that is used internally to serve
    * the resource. For example: timestamps, flags, status fields, etc. The
-   * format of this field is a JSON string. LINT.ThenChange(//depot/google3/goog
-   * le/cloud/dataform/v2main/data_pipelines.proto:ReleaseConfig)
+   * format of this field is a JSON string.
    *
    * @param string $internalMetadata
    */

@@ -43,8 +43,7 @@ class CompilationError extends \Google\Model
 
   /**
    * Output only. The identifier of the action where this error occurred, if
-   * available. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/dat
-   * a_pipelines.proto:CompilationError)
+   * available.
    *
    * @param Target $actionTarget
    */
