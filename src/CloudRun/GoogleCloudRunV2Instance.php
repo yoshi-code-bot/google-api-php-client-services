@@ -191,7 +191,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    */
   public $encryptionKeyRevocationAction;
   /**
-   * If encryption_key_revocation_action is SHUTDOWN, the duration before
+   * If `encryption_key_revocation_action` is `SHUTDOWN`, the duration before
    * shutting down all instances. The minimum increment is 1 hour.
    *
    * @var string
@@ -213,7 +213,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   public $expireTime;
   /**
    * Output only. A number that monotonically increases every time the user
-   * modifies the desired state. Please note that unlike v1, this is an int64
+   * modifies the desired state. Please note that unlike v1, this is an `int64`
    * value. As with most Google APIs, its JSON representation will be a `string`
    * instead of an `integer`.
    *
@@ -235,13 +235,13 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * Optional. Provides the ingress settings for this Instance. On output,
    * returns the currently observed ingress settings, or
-   * INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * `INGRESS_TRAFFIC_UNSPECIFIED` if no revision is active.
    *
    * @var string
    */
   public $ingress;
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers
+   * Optional. Disables IAM permission check for `run.routes.invoke` for callers
    * of this Instance. For more information, visit
    * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
    *
@@ -261,11 +261,12 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
-   * `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the
-   * launch stage to a preview stage on input to allow use of preview features
-   * in that stage. On read (or output), describes whether the resource uses
-   * preview features. For example, if ALPHA is provided as input, but only BETA
-   * and GA-level features are used, this field will be BETA on output.
+   * `ALPHA`, `BETA`, and `GA`. If no value is specified, `GA` is assumed. Set
+   * the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features. For example, if `ALPHA` is provided as input, but
+   * only `BETA` and `GA`-level features are used, this field will be `BETA` on
+   * output.
    *
    * @var string
    */
@@ -277,10 +278,9 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    */
   public $logUri;
   /**
-   * The fully qualified name of this Instance. In CreateInstanceRequest, this
-   * field is ignored, and instead composed from CreateInstanceRequest.parent
-   * and CreateInstanceRequest.instance_id. Format:
-   * projects/{project}/locations/{location}/instances/{instance_id}
+   * The fully qualified name of this Instance. In `CreateInstanceRequest`, this
+   * field is ignored, and instead composed from `CreateInstanceRequest.parent`
+   * and `CreateInstanceRequest.instance_id`.
    *
    * @var string
    */
@@ -290,7 +290,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * Output only. The generation of this Instance currently serving traffic. See
    * comments in `reconciling` for additional information on reconciliation
-   * process in Cloud Run. Please note that unlike v1, this is an int64 value.
+   * process in Cloud Run. Please note that unlike v1, this is an `int64` value.
    * As with most Google APIs, its JSON representation will be a `string`
    * instead of an `integer`.
    *
@@ -298,14 +298,14 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    */
   public $observedGeneration;
   /**
-   * Output only. Returns true if the Instance is currently being acted upon by
-   * the system to bring it into the desired state. When a new Instance is
+   * Output only. Returns `true` if the Instance is currently being acted upon
+   * by the system to bring it into the desired state. When a new Instance is
    * created, or an existing one is updated, Cloud Run will asynchronously
    * perform all necessary steps to bring the Instance to the desired serving
    * state. This process is called reconciliation. While reconciliation is in
    * process, `observed_generation` will have a transient value that might
    * mismatch the intended state. Once reconciliation is over (and this field is
-   * false), there are two possible outcomes: reconciliation succeeded and the
+   * `false`), there are two possible outcomes: reconciliation succeeded and the
    * serving state matches the Instance, or there was an error, and
    * reconciliation failed. This state can be found in
    * `terminal_condition.state`.
@@ -590,7 +590,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
     return $this->encryptionKeyRevocationAction;
   }
   /**
-   * If encryption_key_revocation_action is SHUTDOWN, the duration before
+   * If `encryption_key_revocation_action` is `SHUTDOWN`, the duration before
    * shutting down all instances. The minimum increment is 1 hour.
    *
    * @param string $encryptionKeyShutdownDuration
@@ -642,7 +642,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   }
   /**
    * Output only. A number that monotonically increases every time the user
-   * modifies the desired state. Please note that unlike v1, this is an int64
+   * modifies the desired state. Please note that unlike v1, this is an `int64`
    * value. As with most Google APIs, its JSON representation will be a `string`
    * instead of an `integer`.
    *
@@ -694,7 +694,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * Optional. Provides the ingress settings for this Instance. On output,
    * returns the currently observed ingress settings, or
-   * INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * `INGRESS_TRAFFIC_UNSPECIFIED` if no revision is active.
    *
    * Accepted values: INGRESS_TRAFFIC_UNSPECIFIED, INGRESS_TRAFFIC_ALL,
    * INGRESS_TRAFFIC_INTERNAL_ONLY, INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER,
@@ -714,7 +714,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
     return $this->ingress;
   }
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers
+   * Optional. Disables IAM permission check for `run.routes.invoke` for callers
    * of this Instance. For more information, visit
    * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
    *
@@ -764,11 +764,12 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
-   * `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the
-   * launch stage to a preview stage on input to allow use of preview features
-   * in that stage. On read (or output), describes whether the resource uses
-   * preview features. For example, if ALPHA is provided as input, but only BETA
-   * and GA-level features are used, this field will be BETA on output.
+   * `ALPHA`, `BETA`, and `GA`. If no value is specified, `GA` is assumed. Set
+   * the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features. For example, if `ALPHA` is provided as input, but
+   * only `BETA` and `GA`-level features are used, this field will be `BETA` on
+   * output.
    *
    * Accepted values: LAUNCH_STAGE_UNSPECIFIED, UNIMPLEMENTED, PRELAUNCH,
    * EARLY_ACCESS, ALPHA, BETA, GA, DEPRECATED
@@ -803,10 +804,9 @@ class GoogleCloudRunV2Instance extends \Google\Collection
     return $this->logUri;
   }
   /**
-   * The fully qualified name of this Instance. In CreateInstanceRequest, this
-   * field is ignored, and instead composed from CreateInstanceRequest.parent
-   * and CreateInstanceRequest.instance_id. Format:
-   * projects/{project}/locations/{location}/instances/{instance_id}
+   * The fully qualified name of this Instance. In `CreateInstanceRequest`, this
+   * field is ignored, and instead composed from `CreateInstanceRequest.parent`
+   * and `CreateInstanceRequest.instance_id`.
    *
    * @param string $name
    */
@@ -840,7 +840,7 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   /**
    * Output only. The generation of this Instance currently serving traffic. See
    * comments in `reconciling` for additional information on reconciliation
-   * process in Cloud Run. Please note that unlike v1, this is an int64 value.
+   * process in Cloud Run. Please note that unlike v1, this is an `int64` value.
    * As with most Google APIs, its JSON representation will be a `string`
    * instead of an `integer`.
    *
@@ -858,14 +858,14 @@ class GoogleCloudRunV2Instance extends \Google\Collection
     return $this->observedGeneration;
   }
   /**
-   * Output only. Returns true if the Instance is currently being acted upon by
-   * the system to bring it into the desired state. When a new Instance is
+   * Output only. Returns `true` if the Instance is currently being acted upon
+   * by the system to bring it into the desired state. When a new Instance is
    * created, or an existing one is updated, Cloud Run will asynchronously
    * perform all necessary steps to bring the Instance to the desired serving
    * state. This process is called reconciliation. While reconciliation is in
    * process, `observed_generation` will have a transient value that might
    * mismatch the intended state. Once reconciliation is over (and this field is
-   * false), there are two possible outcomes: reconciliation succeeded and the
+   * `false`), there are two possible outcomes: reconciliation succeeded and the
    * serving state matches the Instance, or there was an error, and
    * reconciliation failed. This state can be found in
    * `terminal_condition.state`.
