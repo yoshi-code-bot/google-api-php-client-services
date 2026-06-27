@@ -66,9 +66,9 @@ class NodePool extends \Google\Collection
   protected $configType = NodeConfig::class;
   protected $configDataType = '';
   /**
-   * This checksum is computed by the server based on the value of node pool
-   * fields, and may be sent on update requests to ensure the client has an up-
-   * to-date value before proceeding.
+   * Output only. This checksum is computed by the server based on the value of
+   * node pool fields, and may be sent on update requests to ensure the client
+   * has an up-to-date value before proceeding.
    *
    * @var string
    */
@@ -215,7 +215,7 @@ class NodePool extends \Google\Collection
     return $this->bestEffortProvisioning;
   }
   /**
-   * Which conditions caused the current node pool state.
+   * Output only. Which conditions caused the current node pool state.
    *
    * @param StatusCondition[] $conditions
    */
@@ -247,9 +247,9 @@ class NodePool extends \Google\Collection
     return $this->config;
   }
   /**
-   * This checksum is computed by the server based on the value of node pool
-   * fields, and may be sent on update requests to ensure the client has an up-
-   * to-date value before proceeding.
+   * Output only. This checksum is computed by the server based on the value of
+   * node pool fields, and may be sent on update requests to ensure the client
+   * has an up-to-date value before proceeding.
    *
    * @param string $etag
    */
