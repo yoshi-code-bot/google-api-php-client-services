@@ -41,6 +41,16 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
    * @var array[]
    */
   public $customConfigs;
+  /**
+   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention
+   * Marketplace product. If this value is "false" or omitted, the Parallel Web
+   * Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be
+   * used.
+   *
+   * @var bool
+   */
+  public $enableDataRetention;
 
   /**
    * Optional. The API key for ParallelAiSearch. If an API key is not provided,
@@ -83,6 +93,26 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
   public function getCustomConfigs()
   {
     return $this->customConfigs;
+  }
+  /**
+   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention
+   * Marketplace product. If this value is "false" or omitted, the Parallel Web
+   * Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be
+   * used.
+   *
+   * @param bool $enableDataRetention
+   */
+  public function setEnableDataRetention($enableDataRetention)
+  {
+    $this->enableDataRetention = $enableDataRetention;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableDataRetention()
+  {
+    return $this->enableDataRetention;
   }
 }
 

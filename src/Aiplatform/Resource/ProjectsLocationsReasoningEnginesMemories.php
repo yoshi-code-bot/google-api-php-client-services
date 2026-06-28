@@ -18,6 +18,7 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateMemoriesRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1IngestEventsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListMemoriesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1Memory;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PurgeMemoriesRequest;
@@ -107,6 +108,23 @@ class ProjectsLocationsReasoningEnginesMemories extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudAiplatformV1Memory::class);
+  }
+  /**
+   * Ingests events for a Memory Bank. (memories.ingestEvents)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * ingest events to. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1IngestEventsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function ingestEvents($parent, GoogleCloudAiplatformV1IngestEventsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('ingestEvents', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * List Memories. (memories.listProjectsLocationsReasoningEnginesMemories)
