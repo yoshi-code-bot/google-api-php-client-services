@@ -676,6 +676,14 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $privateEndpointLabel;
   /**
+   * Optional. Indicates if the Autonomous Database is a refreshable clone. This
+   * field is used in update flow to connect / disconnect a refreshable clone
+   * from its source database.
+   *
+   * @var bool
+   */
+  public $refreshableClone;
+  /**
    * Output only. The refresh mode of the cloned Autonomous Database.
    *
    * @var string
@@ -1657,6 +1665,24 @@ class AutonomousDatabaseProperties extends \Google\Collection
   public function getPrivateEndpointLabel()
   {
     return $this->privateEndpointLabel;
+  }
+  /**
+   * Optional. Indicates if the Autonomous Database is a refreshable clone. This
+   * field is used in update flow to connect / disconnect a refreshable clone
+   * from its source database.
+   *
+   * @param bool $refreshableClone
+   */
+  public function setRefreshableClone($refreshableClone)
+  {
+    $this->refreshableClone = $refreshableClone;
+  }
+  /**
+   * @return bool
+   */
+  public function getRefreshableClone()
+  {
+    return $this->refreshableClone;
   }
   /**
    * Output only. The refresh mode of the cloned Autonomous Database.
