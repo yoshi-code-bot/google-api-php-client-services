@@ -24,6 +24,10 @@ class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRul
    */
   public const INTEGRATION_INTEGRATION_UNSPECIFIED = 'INTEGRATION_UNSPECIFIED';
   /**
+   * BigQuery
+   */
+  public const INTEGRATION_BIGQUERY = 'BIGQUERY';
+  /**
    * Dataproc
    */
   public const INTEGRATION_DATAPROC = 'DATAPROC';
@@ -31,6 +35,10 @@ class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRul
    * Looker Core
    */
   public const INTEGRATION_LOOKER_CORE = 'LOOKER_CORE';
+  /**
+   * Managed Service for Apache Airflow (formerly known as Cloud Composer)
+   */
+  public const INTEGRATION_MANAGED_AIRFLOW = 'MANAGED_AIRFLOW';
   /**
    * Required. Integration to which the rule applies. This field can be used to
    * specify the integration against which the ingestion rule should be applied.
@@ -43,7 +51,8 @@ class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRul
    * Required. Integration to which the rule applies. This field can be used to
    * specify the integration against which the ingestion rule should be applied.
    *
-   * Accepted values: INTEGRATION_UNSPECIFIED, DATAPROC, LOOKER_CORE
+   * Accepted values: INTEGRATION_UNSPECIFIED, BIGQUERY, DATAPROC, LOOKER_CORE,
+   * MANAGED_AIRFLOW
    *
    * @param self::INTEGRATION_* $integration
    */
