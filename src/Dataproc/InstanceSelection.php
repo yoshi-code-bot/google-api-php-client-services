@@ -20,6 +20,8 @@ namespace Google\Service\Dataproc;
 class InstanceSelection extends \Google\Collection
 {
   protected $collection_key = 'machineTypes';
+  protected $diskConfigType = DiskConfig::class;
+  protected $diskConfigDataType = '';
   /**
    * Optional. Full machine-type names, e.g. "n1-standard-16".
    *
@@ -37,6 +39,25 @@ class InstanceSelection extends \Google\Collection
    */
   public $rank;
 
+  /**
+   * Optional. Disk configuration to apply to the instances in this instance
+   * selection. If specified on any entry in instanceSelectionList, then it must
+   * be specified on every entry in instanceSelectionList and the
+   * instanceGroupConfig must not specify any diskConfig.
+   *
+   * @param DiskConfig $diskConfig
+   */
+  public function setDiskConfig(DiskConfig $diskConfig)
+  {
+    $this->diskConfig = $diskConfig;
+  }
+  /**
+   * @return DiskConfig
+   */
+  public function getDiskConfig()
+  {
+    return $this->diskConfig;
+  }
   /**
    * Optional. Full machine-type names, e.g. "n1-standard-16".
    *
