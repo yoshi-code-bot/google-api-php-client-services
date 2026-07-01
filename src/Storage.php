@@ -2041,56 +2041,6 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'watchAll' => [
-              'path' => 'b/{bucket}/o/watch',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'bucket' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'delimiter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'endOffset' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'includeTrailingDelimiter' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-                'maxResults' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'prefix' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'projection' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'startOffset' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'userProject' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'versions' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-              ],
             ],
           ]
         ]
