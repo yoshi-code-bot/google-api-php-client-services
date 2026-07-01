@@ -52,7 +52,8 @@ class ProjectsSubscribers extends \Google\Service\Resource
    * correctly validates the `Authorization` header. (subscribers.create)
    *
    * @param string $parent Required. The parent resource where this subscriber
-   * will be created. Format: projects/{project} Example: projects/my-project-123
+   * will be created. Format: projects/{project_number} Example:
+   * projects/1234567890
    * @param CreateSubscriberPayload $postBody
    * @param array $optParams Optional parameters.
    *
