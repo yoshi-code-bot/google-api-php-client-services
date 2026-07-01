@@ -47,6 +47,8 @@ class ReservationSubBlock extends \Google\Model
    * @var string
    */
   public $creationTimestamp;
+  protected $healthInfoType = ReservationSubBlockHealthInfo::class;
+  protected $healthInfoDataType = '';
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
    * identifier is defined by the server.
@@ -107,8 +109,6 @@ class ReservationSubBlock extends \Google\Model
    * @var string
    */
   public $status;
-  protected $subBlockHealthInfoType = ReservationSubBlockHealthInfo::class;
-  protected $subBlockHealthInfoDataType = '';
   /**
    * Output only. [Output Only] Zone in which the reservation subBlock resides.
    *
@@ -164,6 +164,22 @@ class ReservationSubBlock extends \Google\Model
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * Output only. [Output Only] Health information for the reservation subBlock.
+   *
+   * @param ReservationSubBlockHealthInfo $healthInfo
+   */
+  public function setHealthInfo(ReservationSubBlockHealthInfo $healthInfo)
+  {
+    $this->healthInfo = $healthInfo;
+  }
+  /**
+   * @return ReservationSubBlockHealthInfo
+   */
+  public function getHealthInfo()
+  {
+    return $this->healthInfo;
   }
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
@@ -335,22 +351,6 @@ class ReservationSubBlock extends \Google\Model
   public function getStatus()
   {
     return $this->status;
-  }
-  /**
-   * Output only. [Output Only] Health information for the reservation subBlock.
-   *
-   * @param ReservationSubBlockHealthInfo $subBlockHealthInfo
-   */
-  public function setSubBlockHealthInfo(ReservationSubBlockHealthInfo $subBlockHealthInfo)
-  {
-    $this->subBlockHealthInfo = $subBlockHealthInfo;
-  }
-  /**
-   * @return ReservationSubBlockHealthInfo
-   */
-  public function getSubBlockHealthInfo()
-  {
-    return $this->subBlockHealthInfo;
   }
   /**
    * Output only. [Output Only] Zone in which the reservation subBlock resides.
