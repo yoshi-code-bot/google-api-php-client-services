@@ -89,6 +89,13 @@ class Instance extends \Google\Model
    */
   public $edition;
   /**
+   * Output only. The region where Knowledge Catalog data is synced to and
+   * stored, including user-created aspects.
+   *
+   * @var string
+   */
+  public $knowledgeCatalogRegion;
+  /**
    * Labels are a flexible and lightweight mechanism for organizing cloud
    * resources into groups that reflect a customer's organizational needs and
    * deployment strategies. They can be used to filter resources and aggregate
@@ -198,6 +205,23 @@ class Instance extends \Google\Model
   public function getEdition()
   {
     return $this->edition;
+  }
+  /**
+   * Output only. The region where Knowledge Catalog data is synced to and
+   * stored, including user-created aspects.
+   *
+   * @param string $knowledgeCatalogRegion
+   */
+  public function setKnowledgeCatalogRegion($knowledgeCatalogRegion)
+  {
+    $this->knowledgeCatalogRegion = $knowledgeCatalogRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getKnowledgeCatalogRegion()
+  {
+    return $this->knowledgeCatalogRegion;
   }
   /**
    * Labels are a flexible and lightweight mechanism for organizing cloud
