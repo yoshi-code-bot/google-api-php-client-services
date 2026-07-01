@@ -34,10 +34,15 @@ use Google\Client;
  */
 class WebContentPublisher extends \Google\Service
 {
+  /** Private Service: https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.manage. */
+  const SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_MANAGE =
+      "https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.manage";
   /** See and review your subscription information. */
   const SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_READONLY =
       "https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.readonly";
 
+  public $organizations_publications;
+  public $organizations_publications_ctas;
   public $publications;
   public $rootUrlTemplate;
 
@@ -58,6 +63,128 @@ class WebContentPublisher extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'webcontentpublisher';
 
+    $this->organizations_publications = new WebContentPublisher\Resource\OrganizationsPublications(
+        $this,
+        $this->serviceName,
+        'publications',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/publications',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'publicationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/publications',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_publications_ctas = new WebContentPublisher\Resource\OrganizationsPublicationsCtas(
+        $this,
+        $this->serviceName,
+        'ctas',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/ctas',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'ctaId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/ctas',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->publications = new WebContentPublisher\Resource\Publications(
         $this,
         $this->serviceName,
