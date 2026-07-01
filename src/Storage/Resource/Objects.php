@@ -18,7 +18,6 @@
 namespace Google\Service\Storage\Resource;
 
 use Google\Service\Storage\BulkRestoreObjectsRequest;
-use Google\Service\Storage\Channel;
 use Google\Service\Storage\ComposeRequest;
 use Google\Service\Storage\GoogleLongrunningOperation;
 use Google\Service\Storage\Objects as ObjectsModel;
@@ -670,52 +669,6 @@ class Objects extends \Google\Service\Resource
     $params = ['bucket' => $bucket, 'object' => $object, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('update', [$params], StorageObject::class);
-  }
-  /**
-   * Watch for changes on all objects in a bucket. (objects.watchAll)
-   *
-   * @param string $bucket Name of the bucket in which to look for objects.
-   * @param Channel $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string delimiter Returns results in a directory-like mode. items
-   * will contain only objects whose names, aside from the prefix, do not contain
-   * delimiter. Objects whose names, aside from the prefix, contain delimiter will
-   * have their name, truncated after the delimiter, returned in prefixes.
-   * Duplicate prefixes are omitted.
-   * @opt_param string endOffset Filter results to objects whose names are
-   * lexicographically before endOffset. If startOffset is also set, the objects
-   * listed will have names between startOffset (inclusive) and endOffset
-   * (exclusive).
-   * @opt_param bool includeTrailingDelimiter If true, objects that end in exactly
-   * one instance of delimiter will have their metadata included in items in
-   * addition to prefixes.
-   * @opt_param string maxResults Maximum number of items plus prefixes to return
-   * in a single page of responses. As duplicate prefixes are omitted, fewer total
-   * results may be returned than requested. The service will use this parameter
-   * or 1,000 items, whichever is smaller.
-   * @opt_param string pageToken A previously-returned page token representing
-   * part of the larger set of results to view.
-   * @opt_param string prefix Filter results to objects whose names begin with
-   * this prefix.
-   * @opt_param string projection Set of properties to return. Defaults to noAcl.
-   * @opt_param string startOffset Filter results to objects whose names are
-   * lexicographically equal to or after startOffset. If endOffset is also set,
-   * the objects listed will have names between startOffset (inclusive) and
-   * endOffset (exclusive).
-   * @opt_param string userProject The project to be billed for this request.
-   * Required for Requester Pays buckets.
-   * @opt_param bool versions If true, lists all versions of an object as distinct
-   * results. The default is false. For more information, see [Object
-   * Versioning](https://cloud.google.com/storage/docs/object-versioning).
-   * @return Channel
-   * @throws \Google\Service\Exception
-   */
-  public function watchAll($bucket, Channel $postBody, $optParams = [])
-  {
-    $params = ['bucket' => $bucket, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('watchAll', [$params], Channel::class);
   }
 }
 
