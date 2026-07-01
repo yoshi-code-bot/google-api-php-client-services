@@ -269,6 +269,16 @@ class OracleDatabase extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getRefreshableClones' => [
+              'path' => 'v1/{+name}:getRefreshableClones',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/autonomousDatabases',
               'httpMethod' => 'GET',
@@ -311,6 +321,16 @@ class OracleDatabase extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'refresh' => [
+              'path' => 'v1/{+name}:refresh',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'restart' => [

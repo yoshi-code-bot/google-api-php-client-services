@@ -18,11 +18,13 @@
 namespace Google\Service\OracleDatabase\Resource;
 
 use Google\Service\OracleDatabase\AutonomousDatabase;
+use Google\Service\OracleDatabase\AutonomousDatabaseRefreshableClones;
 use Google\Service\OracleDatabase\FailoverAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletResponse;
 use Google\Service\OracleDatabase\ListAutonomousDatabasesResponse;
 use Google\Service\OracleDatabase\Operation;
+use Google\Service\OracleDatabase\RefreshAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\RestartAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\RestoreAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\StartAutonomousDatabaseRequest;
@@ -145,6 +147,23 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     return $this->call('get', [$params], AutonomousDatabase::class);
   }
   /**
+   * Gets the refreshable clones for a given Autonomous Database.
+   * (autonomousDatabases.getRefreshableClones)
+   *
+   * @param string $name Required. The Autonomous Database resource whose
+   * refreshable clones are to be listed. Format: projects/{project}/locations/{lo
+   * cation}/autonomousDatabases/{autonomous_database}
+   * @param array $optParams Optional parameters.
+   * @return AutonomousDatabaseRefreshableClones
+   * @throws \Google\Service\Exception
+   */
+  public function getRefreshableClones($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getRefreshableClones', [$params], AutonomousDatabaseRefreshableClones::class);
+  }
+  /**
    * Lists the Autonomous Databases in a given project and location.
    * (autonomousDatabases.listProjectsLocationsAutonomousDatabases)
    *
@@ -200,6 +219,24 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Refreshes the refreshable clone of an Autonomous Database.
+   * (autonomousDatabases.refresh)
+   *
+   * @param string $name Required. The name of the AutonomousDatabase resource.
+   * Format: projects/{project}/location/{location}/autonomousDatabases/{autonomou
+   * s_database}
+   * @param RefreshAutonomousDatabaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function refresh($name, RefreshAutonomousDatabaseRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('refresh', [$params], Operation::class);
   }
   /**
    * Restarts an Autonomous Database. (autonomousDatabases.restart)
