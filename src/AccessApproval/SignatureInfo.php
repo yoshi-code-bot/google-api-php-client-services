@@ -227,6 +227,11 @@ class SignatureInfo extends \Google\Model
    */
   public const GOOGLE_KEY_ALGORITHM_PQ_SIGN_ML_DSA_87_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_87_EXTERNAL_MU';
   /**
+   * AES key wrap with zero padding algorithm (RFC 5649). Can only be used by
+   * keys with purpose AES_WRAPPING.
+   */
+  public const GOOGLE_KEY_ALGORITHM_AES_256_KWP = 'AES_256_KWP';
+  /**
    * The resource name of the customer CryptoKeyVersion used for signing.
    *
    * @var string
@@ -299,7 +304,7 @@ class SignatureInfo extends \Google\Model
    * ML_KEM_768, ML_KEM_1024, KEM_XWING, PQ_SIGN_ML_DSA_44, PQ_SIGN_ML_DSA_65,
    * PQ_SIGN_ML_DSA_87, PQ_SIGN_SLH_DSA_SHA2_128S,
    * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256, PQ_SIGN_ML_DSA_44_EXTERNAL_MU,
-   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU
+   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU, AES_256_KWP
    *
    * @param self::GOOGLE_KEY_ALGORITHM_* $googleKeyAlgorithm
    */
