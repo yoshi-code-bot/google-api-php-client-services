@@ -75,6 +75,12 @@ class DeploymentOperationMetadata extends \Google\Model
   protected $applyResultsType = ApplyResults::class;
   protected $applyResultsDataType = '';
   /**
+   * Output only. Indicating if early apply results are available.
+   *
+   * @var bool
+   */
+  public $applyResultsAvailable;
+  /**
    * Output only. Cloud Build instance UUID associated with this operation.
    *
    * @var string
@@ -109,6 +115,22 @@ class DeploymentOperationMetadata extends \Google\Model
   public function getApplyResults()
   {
     return $this->applyResults;
+  }
+  /**
+   * Output only. Indicating if early apply results are available.
+   *
+   * @param bool $applyResultsAvailable
+   */
+  public function setApplyResultsAvailable($applyResultsAvailable)
+  {
+    $this->applyResultsAvailable = $applyResultsAvailable;
+  }
+  /**
+   * @return bool
+   */
+  public function getApplyResultsAvailable()
+  {
+    return $this->applyResultsAvailable;
   }
   /**
    * Output only. Cloud Build instance UUID associated with this operation.
