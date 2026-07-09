@@ -20,6 +20,18 @@ namespace Google\Service\CloudComposer;
 class SoftwareConfig extends \Google\Model
 {
   /**
+   * The user's choice of logs replication mode is unspecified.
+   */
+  public const AUDIT_LOGS_REPLICATION_MODE_AUDIT_LOGS_REPLICATION_MODE_UNSPECIFIED = 'AUDIT_LOGS_REPLICATION_MODE_UNSPECIFIED';
+  /**
+   * The user opted out of audit logs replication.
+   */
+  public const AUDIT_LOGS_REPLICATION_MODE_AUDIT_LOGS_REPLICATION_DISABLED = 'AUDIT_LOGS_REPLICATION_DISABLED';
+  /**
+   * The user opted in to audit logs replication.
+   */
+  public const AUDIT_LOGS_REPLICATION_MODE_AUDIT_LOGS_REPLICATION_ENABLED = 'AUDIT_LOGS_REPLICATION_ENABLED';
+  /**
    * Default mode.
    */
   public const WEB_SERVER_PLUGINS_MODE_WEB_SERVER_PLUGINS_MODE_UNSPECIFIED = 'WEB_SERVER_PLUGINS_MODE_UNSPECIFIED';
@@ -48,6 +60,14 @@ class SoftwareConfig extends \Google\Model
    * @var string[]
    */
   public $airflowConfigOverrides;
+  /**
+   * Optional. The selected mode of audit logs replication. This field is
+   * supported for Cloud Composer environments in versions
+   * composer-3-airflow-*.*.*-build.* and newer.
+   *
+   * @var string
+   */
+  public $auditLogsReplicationMode;
   protected $cloudDataLineageIntegrationType = CloudDataLineageIntegration::class;
   protected $cloudDataLineageIntegrationDataType = '';
   /**
@@ -153,6 +173,27 @@ class SoftwareConfig extends \Google\Model
   public function getAirflowConfigOverrides()
   {
     return $this->airflowConfigOverrides;
+  }
+  /**
+   * Optional. The selected mode of audit logs replication. This field is
+   * supported for Cloud Composer environments in versions
+   * composer-3-airflow-*.*.*-build.* and newer.
+   *
+   * Accepted values: AUDIT_LOGS_REPLICATION_MODE_UNSPECIFIED,
+   * AUDIT_LOGS_REPLICATION_DISABLED, AUDIT_LOGS_REPLICATION_ENABLED
+   *
+   * @param self::AUDIT_LOGS_REPLICATION_MODE_* $auditLogsReplicationMode
+   */
+  public function setAuditLogsReplicationMode($auditLogsReplicationMode)
+  {
+    $this->auditLogsReplicationMode = $auditLogsReplicationMode;
+  }
+  /**
+   * @return self::AUDIT_LOGS_REPLICATION_MODE_*
+   */
+  public function getAuditLogsReplicationMode()
+  {
+    return $this->auditLogsReplicationMode;
   }
   /**
    * Optional. The configuration for Cloud Data Lineage integration.
