@@ -341,6 +341,16 @@ class CloudSupport extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'expunge' => [
+              'path' => 'v2/{+name}:expunge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',

@@ -17,6 +17,8 @@
 
 namespace Google\Service\CloudSupport\Resource;
 
+use Google\Service\CloudSupport\CloudsupportEmpty;
+use Google\Service\CloudSupport\ExpungeSupportEventSubscriptionRequest;
 use Google\Service\CloudSupport\ListSupportEventSubscriptionsResponse;
 use Google\Service\CloudSupport\SupportEventSubscription;
 use Google\Service\CloudSupport\UndeleteSupportEventSubscriptionRequest;
@@ -32,7 +34,19 @@ use Google\Service\CloudSupport\UndeleteSupportEventSubscriptionRequest;
 class SupportEventSubscriptions extends \Google\Service\Resource
 {
   /**
-   * Creates a support event subscription for an organization.
+   * Creates a support event subscription for an organization. EXAMPLES: cURL:
+   * ```shell parent="organizations/123456789" curl \ --request POST \ --header
+   * "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
+   * 'Content-Type: application/json' \ --data '{ "pub_sub_topic": "projects/my-
+   * project/topics/my-topic" }' \
+   * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions"
+   * ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService.supportEventSubscriptions().create(
+   * parent="organizations/123456789", body={ "pub_sub_topic": "projects/my-
+   * project/topics/my-topic" }, ) print(request.execute()) ```
    * (supportEventSubscriptions.create)
    *
    * @param string $parent Required. The parent resource name where the support
@@ -49,7 +63,18 @@ class SupportEventSubscriptions extends \Google\Service\Resource
     return $this->call('create', [$params], SupportEventSubscription::class);
   }
   /**
-   * Soft deletes a support event subscription. (supportEventSubscriptions.delete)
+   * Soft deletes a support event subscription. EXAMPLES: cURL: ```shell support_e
+   * vent_subscription="organizations/123456789/supportEventSubscriptions/abcdef12
+   * 3456" curl \ --request DELETE \ --header "Authorization: Bearer $(gcloud auth
+   * print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ```
+   * Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService).supportEventSubscriptions().delete(
+   * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+   * print(request.execute()) ``` (supportEventSubscriptions.delete)
    *
    * @param string $name Required. The name of the support event subscription to
    * delete. Format:
@@ -65,7 +90,34 @@ class SupportEventSubscriptions extends \Google\Service\Resource
     return $this->call('delete', [$params], SupportEventSubscription::class);
   }
   /**
-   * Gets a support event subscription. (supportEventSubscriptions.get)
+   * Expunges a support event subscription. (supportEventSubscriptions.expunge)
+   *
+   * @param string $name Required. The name of the support event subscription to
+   * expunge. Format:
+   * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+   * @param ExpungeSupportEventSubscriptionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CloudsupportEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function expunge($name, ExpungeSupportEventSubscriptionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('expunge', [$params], CloudsupportEmpty::class);
+  }
+  /**
+   * Gets a support event subscription. EXAMPLES: cURL: ```shell support_event_sub
+   * scription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+   * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ```
+   * Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService.supportEventSubscriptions().get(
+   * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+   * print(request.execute()) ``` (supportEventSubscriptions.get)
    *
    * @param string $name Required. The name of the support event subscription to
    * retrieve. Format:
@@ -81,7 +133,16 @@ class SupportEventSubscriptions extends \Google\Service\Resource
     return $this->call('get', [$params], SupportEventSubscription::class);
   }
   /**
-   * Lists support event subscriptions.
+   * Lists support event subscriptions. EXAMPLES: cURL: ```shell
+   * parent="organizations/123456789" curl \ --header "Authorization: Bearer
+   * $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions"
+   * ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService.supportEventSubscriptions().list(
+   * parent="organizations/123456789" ) print(request.execute()) ```
    * (supportEventSubscriptions.listSupportEventSubscriptions)
    *
    * @param string $parent Required. The fully qualified name of the Cloud
@@ -112,7 +173,20 @@ class SupportEventSubscriptions extends \Google\Service\Resource
     return $this->call('list', [$params], ListSupportEventSubscriptionsResponse::class);
   }
   /**
-   * Updates a support event subscription. (supportEventSubscriptions.patch)
+   * Updates a support event subscription. EXAMPLES: cURL: ```shell support_event_
+   * subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+   * curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-
+   * access-token)" \ --header "Content-Type: application/json" \ --data '{
+   * "pub_sub_topic": "projects/my-project/topics/new-topic" }' \ "https://cloudsu
+   * pport.googleapis.com/v2/$support_event_subscription?updateMask=pub_sub_topic"
+   * ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService.supportEventSubscriptions().patch(
+   * name="organizations/123456789/supportEventSubscriptions/abcdef123456", body={
+   * "pub_sub_topic": "projects/my-project/topics/new-topic" }, )
+   * print(request.execute()) ``` (supportEventSubscriptions.patch)
    *
    * @param string $name Identifier. The resource name of the support event
    * subscription.
@@ -131,7 +205,19 @@ class SupportEventSubscriptions extends \Google\Service\Resource
     return $this->call('patch', [$params], SupportEventSubscription::class);
   }
   /**
-   * Undeletes a support event subscription. (supportEventSubscriptions.undelete)
+   * Undeletes a support event subscription. EXAMPLES: cURL: ```shell support_even
+   * t_subscription="organizations/123456789/supportEventSubscriptions/abcdef12345
+   * 6" curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth
+   * print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:undelete"
+   * ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+   * supportApiService = googleapiclient.discovery.build(
+   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
+   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
+   * request = supportApiService.supportEventSubscriptions().undelete(
+   * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+   * print(request.execute()) ``` Undeletes a support event subscription.
+   * (supportEventSubscriptions.undelete)
    *
    * @param string $name Required. The name of the support event subscription to
    * undelete. Format:
