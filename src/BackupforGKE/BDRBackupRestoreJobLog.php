@@ -162,6 +162,12 @@ class BDRBackupRestoreJobLog extends \Google\Model
    */
   public $startTime;
   /**
+   * The storage tier associated with the backup.
+   *
+   * @var string
+   */
+  public $storageTier;
+  /**
    * The target resource type for restore jobs.
    *
    * @var string
@@ -531,6 +537,22 @@ class BDRBackupRestoreJobLog extends \Google\Model
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  /**
+   * The storage tier associated with the backup.
+   *
+   * @param string $storageTier
+   */
+  public function setStorageTier($storageTier)
+  {
+    $this->storageTier = $storageTier;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageTier()
+  {
+    return $this->storageTier;
   }
   /**
    * The target resource type for restore jobs.
