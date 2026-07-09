@@ -21,7 +21,11 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
 {
   public const MESSAGE_TYPE_MESSAGE_TYPE_UNSPECIFIED = 'MESSAGE_TYPE_UNSPECIFIED';
   public const MESSAGE_TYPE_TRANSCRIPT = 'TRANSCRIPT';
+  public const MESSAGE_TYPE_DTMF_DIGITS = 'DTMF_DIGITS';
   public const MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE = 'END_OF_SINGLE_UTTERANCE';
+  public const MESSAGE_TYPE_PARTIAL_DTMF_DIGITS = 'PARTIAL_DTMF_DIGITS';
+  public const MESSAGE_TYPE_SPEECH_ACTIVITY_BEGIN = 'SPEECH_ACTIVITY_BEGIN';
+  public const MESSAGE_TYPE_SPEECH_ACTIVITY_END = 'SPEECH_ACTIVITY_END';
   protected $collection_key = 'speechWordInfo';
   /**
    * @var float
