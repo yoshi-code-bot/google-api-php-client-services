@@ -28,6 +28,10 @@ class RuleViolationInfo extends \Google\Collection
    */
   public const AGENT_TYPE_STUDIO = 'STUDIO';
   /**
+   * Work Agent agent type.
+   */
+  public const AGENT_TYPE_WORK_AGENT = 'WORK_AGENT';
+  /**
    * Data source is unspecified.
    */
   public const DATA_SOURCE_DATA_SOURCE_UNSPECIFIED = 'DATA_SOURCE_UNSPECIFIED';
@@ -179,7 +183,7 @@ class RuleViolationInfo extends \Google\Collection
   /**
    * Optional. Agent type that triggered the rule.
    *
-   * Accepted values: AGENT_TYPE_UNSPECIFIED, STUDIO
+   * Accepted values: AGENT_TYPE_UNSPECIFIED, STUDIO, WORK_AGENT
    *
    * @param self::AGENT_TYPE_* $agentType
    */
