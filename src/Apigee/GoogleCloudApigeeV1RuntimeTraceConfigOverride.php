@@ -20,6 +20,18 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends \Google\Model
 {
   /**
+   * Semantics unspecified. Defaults to LEGACY.
+   */
+  public const SPAN_SEMANTICS_SPAN_SEMANTICS_UNSPECIFIED = 'SPAN_SEMANTICS_UNSPECIFIED';
+  /**
+   * Uses Apigee legacy span and attribute names.
+   */
+  public const SPAN_SEMANTICS_LEGACY = 'LEGACY';
+  /**
+   * Uses OpenTelemetry semantic-convention-aligned span and attribute names.
+   */
+  public const SPAN_SEMANTICS_OTEL = 'OTEL';
+  /**
    * Protocol unspecified. Defaults to OPEN_CENSUS.
    */
   public const TRACE_PROTOCOL_TRACE_PROTOCOL_UNSPECIFIED = 'TRACE_PROTOCOL_UNSPECIFIED';
@@ -73,6 +85,13 @@ class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends \Google\Model
   public $revisionId;
   protected $samplingConfigType = GoogleCloudApigeeV1RuntimeTraceSamplingConfig::class;
   protected $samplingConfigDataType = '';
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if
+   * `span_semantics` is `OTEL`): - `trace_protocol` must be `OTLP`.
+   *
+   * @var string
+   */
+  public $spanSemantics;
   /**
    * Optional. The trace protocol to use.
    *
@@ -193,6 +212,25 @@ class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends \Google\Model
   public function getSamplingConfig()
   {
     return $this->samplingConfig;
+  }
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if
+   * `span_semantics` is `OTEL`): - `trace_protocol` must be `OTLP`.
+   *
+   * Accepted values: SPAN_SEMANTICS_UNSPECIFIED, LEGACY, OTEL
+   *
+   * @param self::SPAN_SEMANTICS_* $spanSemantics
+   */
+  public function setSpanSemantics($spanSemantics)
+  {
+    $this->spanSemantics = $spanSemantics;
+  }
+  /**
+   * @return self::SPAN_SEMANTICS_*
+   */
+  public function getSpanSemantics()
+  {
+    return $this->spanSemantics;
   }
   /**
    * Optional. The trace protocol to use.
