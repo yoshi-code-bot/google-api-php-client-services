@@ -36,6 +36,10 @@ class Finding extends \Google\Model
    */
   public const SCANNER_WS_POLICY = 'WS_POLICY';
   /**
+   * Google AntiVirus Service scanner.
+   */
+  public const SCANNER_GOOGLE_ANTIVIRUS = 'GOOGLE_ANTIVIRUS';
+  /**
    * Unspecified severity.
    */
   public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
@@ -125,7 +129,8 @@ class Finding extends \Google\Model
   /**
    * Scanner determines which engine (e.g. static, llm) emitted the finding.
    *
-   * Accepted values: SCANNER_UNSPECIFIED, STATIC, LLM, WS_POLICY
+   * Accepted values: SCANNER_UNSPECIFIED, STATIC, LLM, WS_POLICY,
+   * GOOGLE_ANTIVIRUS
    *
    * @param self::SCANNER_* $scanner
    */
