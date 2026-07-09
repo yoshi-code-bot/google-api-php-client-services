@@ -29,6 +29,14 @@ class ReservationGroup extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Optional. The parent reservation group of the reservation group. Format:
+   * `projects/locations/reservationGroups/team1-prod` for non-root reservation
+   * groups, or `projects/locations` for root reservation groups.
+   *
+   * @var string
+   */
+  public $parentGroup;
 
   /**
    * Identifier. The resource name of the reservation group, e.g.,
@@ -49,6 +57,24 @@ class ReservationGroup extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. The parent reservation group of the reservation group. Format:
+   * `projects/locations/reservationGroups/team1-prod` for non-root reservation
+   * groups, or `projects/locations` for root reservation groups.
+   *
+   * @param string $parentGroup
+   */
+  public function setParentGroup($parentGroup)
+  {
+    $this->parentGroup = $parentGroup;
+  }
+  /**
+   * @return string
+   */
+  public function getParentGroup()
+  {
+    return $this->parentGroup;
   }
 }
 
