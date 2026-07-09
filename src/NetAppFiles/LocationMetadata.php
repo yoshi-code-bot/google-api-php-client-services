@@ -19,7 +19,21 @@ namespace Google\Service\NetAppFiles;
 
 class LocationMetadata extends \Google\Collection
 {
+  /**
+   * Unspecified flex performance tier.
+   */
+  public const FLEX_PERFORMANCE_TIER_FLEX_PERFORMANCE_TIER_UNSPECIFIED = 'FLEX_PERFORMANCE_TIER_UNSPECIFIED';
+  /**
+   * Flex performance tier is limited.
+   */
+  public const FLEX_PERFORMANCE_TIER_LIMITED = 'LIMITED';
   protected $collection_key = 'supportedServiceLevels';
+  /**
+   * Output only. Indicates the flex performance tier of this location.
+   *
+   * @var string
+   */
+  public $flexPerformanceTier;
   /**
    * Output only. Indicates if the location has ONTAP Proxy support.
    *
@@ -45,6 +59,24 @@ class LocationMetadata extends \Google\Collection
    */
   public $supportedServiceLevels;
 
+  /**
+   * Output only. Indicates the flex performance tier of this location.
+   *
+   * Accepted values: FLEX_PERFORMANCE_TIER_UNSPECIFIED, LIMITED
+   *
+   * @param self::FLEX_PERFORMANCE_TIER_* $flexPerformanceTier
+   */
+  public function setFlexPerformanceTier($flexPerformanceTier)
+  {
+    $this->flexPerformanceTier = $flexPerformanceTier;
+  }
+  /**
+   * @return self::FLEX_PERFORMANCE_TIER_*
+   */
+  public function getFlexPerformanceTier()
+  {
+    return $this->flexPerformanceTier;
+  }
   /**
    * Output only. Indicates if the location has ONTAP Proxy support.
    *
