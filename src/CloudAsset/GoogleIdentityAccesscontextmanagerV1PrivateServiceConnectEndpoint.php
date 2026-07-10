@@ -20,18 +20,20 @@ namespace Google\Service\CloudAsset;
 class GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint extends \Google\Model
 {
   /**
-   * The global forwarding rule identifier. Forwarding rule format: `//compute.g
-   * oogleapis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE
-   * _ID}`.
+   * The full resource name of the global forwarding rule that identifies a
+   * Private Service Connect endpoint. Forwarding rule format: `//compute.google
+   * apis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE_ID}`
+   * .
    *
    * @var string
    */
   public $forwardingRule;
 
   /**
-   * The global forwarding rule identifier. Forwarding rule format: `//compute.g
-   * oogleapis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE
-   * _ID}`.
+   * The full resource name of the global forwarding rule that identifies a
+   * Private Service Connect endpoint. Forwarding rule format: `//compute.google
+   * apis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE_ID}`
+   * .
    *
    * @param string $forwardingRule
    */
