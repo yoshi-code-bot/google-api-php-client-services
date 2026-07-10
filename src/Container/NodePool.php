@@ -92,6 +92,8 @@ class NodePool extends \Google\Collection
    * @var string[]
    */
   public $instanceGroupUrls;
+  protected $kubeletCertInfoType = KubeletCertInfo::class;
+  protected $kubeletCertInfoDataType = '';
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
@@ -302,6 +304,22 @@ class NodePool extends \Google\Collection
   public function getInstanceGroupUrls()
   {
     return $this->instanceGroupUrls;
+  }
+  /**
+   * Output only. Contains expiry information about the kubelet certificate.
+   *
+   * @param KubeletCertInfo $kubeletCertInfo
+   */
+  public function setKubeletCertInfo(KubeletCertInfo $kubeletCertInfo)
+  {
+    $this->kubeletCertInfo = $kubeletCertInfo;
+  }
+  /**
+   * @return KubeletCertInfo
+   */
+  public function getKubeletCertInfo()
+  {
+    return $this->kubeletCertInfo;
   }
   /**
    * The list of Google Compute Engine
