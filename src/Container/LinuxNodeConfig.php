@@ -95,10 +95,14 @@ class LinuxNodeConfig extends \Google\Model
   public $cgroupMode;
   protected $customNodeInitType = CustomNodeInit::class;
   protected $customNodeInitDataType = '';
+  protected $diskIoSchedulerType = DiskIoScheduler::class;
+  protected $diskIoSchedulerDataType = '';
   protected $hugepagesType = HugepagesConfig::class;
   protected $hugepagesDataType = '';
   protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
   protected $nodeKernelModuleLoadingDataType = '';
+  protected $nodeVfioConfigType = NodeVfioConfig::class;
+  protected $nodeVfioConfigDataType = '';
   protected $swapConfigType = SwapConfig::class;
   protected $swapConfigDataType = '';
   /**
@@ -117,11 +121,12 @@ class LinuxNodeConfig extends \Google\Model
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established
    * net.netfilter.nf_conntrack_acct kernel.keys.maxkeys kernel.keys.maxbytes
-   * kernel.shmmni kernel.shmmax kernel.shmall kernel.perf_event_paranoid
-   * kernel.sched_rt_runtime_us kernel.softlockup_panic kernel.yama.ptrace_scope
-   * kernel.kptr_restrict kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr
-   * fs.file-max fs.inotify.max_user_instances fs.inotify.max_user_watches
-   * fs.nr_open vm.dirty_background_ratio vm.dirty_background_bytes
+   * kernel.shmmni kernel.shmmax kernel.shmall kernel.core_pattern
+   * kernel.perf_event_paranoid kernel.sched_rt_runtime_us
+   * kernel.softlockup_panic kernel.yama.ptrace_scope kernel.kptr_restrict
+   * kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr fs.file-max
+   * fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open
+   * vm.dirty_background_ratio vm.dirty_background_bytes
    * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_bytes
    * vm.dirty_writeback_centisecs vm.max_map_count vm.overcommit_memory
    * vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
@@ -203,6 +208,22 @@ class LinuxNodeConfig extends \Google\Model
     return $this->customNodeInit;
   }
   /**
+   * Optional. Controls the configuration for the disk IO scheduler.
+   *
+   * @param DiskIoScheduler $diskIoScheduler
+   */
+  public function setDiskIoScheduler(DiskIoScheduler $diskIoScheduler)
+  {
+    $this->diskIoScheduler = $diskIoScheduler;
+  }
+  /**
+   * @return DiskIoScheduler
+   */
+  public function getDiskIoScheduler()
+  {
+    return $this->diskIoScheduler;
+  }
+  /**
    * Optional. Amounts for 2M and 1G hugepages
    *
    * @param HugepagesConfig $hugepages
@@ -237,6 +258,22 @@ class LinuxNodeConfig extends \Google\Model
     return $this->nodeKernelModuleLoading;
   }
   /**
+   * Optional. Contains VFIO-related configurations for this node.
+   *
+   * @param NodeVfioConfig $nodeVfioConfig
+   */
+  public function setNodeVfioConfig(NodeVfioConfig $nodeVfioConfig)
+  {
+    $this->nodeVfioConfig = $nodeVfioConfig;
+  }
+  /**
+   * @return NodeVfioConfig
+   */
+  public function getNodeVfioConfig()
+  {
+    return $this->nodeVfioConfig;
+  }
+  /**
    * Optional. Enables and configures swap space on nodes. If omitted, swap is
    * disabled.
    *
@@ -269,11 +306,12 @@ class LinuxNodeConfig extends \Google\Model
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established
    * net.netfilter.nf_conntrack_acct kernel.keys.maxkeys kernel.keys.maxbytes
-   * kernel.shmmni kernel.shmmax kernel.shmall kernel.perf_event_paranoid
-   * kernel.sched_rt_runtime_us kernel.softlockup_panic kernel.yama.ptrace_scope
-   * kernel.kptr_restrict kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr
-   * fs.file-max fs.inotify.max_user_instances fs.inotify.max_user_watches
-   * fs.nr_open vm.dirty_background_ratio vm.dirty_background_bytes
+   * kernel.shmmni kernel.shmmax kernel.shmall kernel.core_pattern
+   * kernel.perf_event_paranoid kernel.sched_rt_runtime_us
+   * kernel.softlockup_panic kernel.yama.ptrace_scope kernel.kptr_restrict
+   * kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr fs.file-max
+   * fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open
+   * vm.dirty_background_ratio vm.dirty_background_bytes
    * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_bytes
    * vm.dirty_writeback_centisecs vm.max_map_count vm.overcommit_memory
    * vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
