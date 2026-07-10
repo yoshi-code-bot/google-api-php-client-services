@@ -72,7 +72,9 @@ class GoogleIdentityAccesscontextmanagerV1IngressSource extends \Google\Model
     return $this->accessLevel;
   }
   /**
-   * Requests from this PSC will be allowed to access perimeter data.
+   * A PrivateServiceConnectEndpoint that is allowed to access the perimeter.
+   * The Private Service Connect endpoint may be in any organization, not just
+   * the organization that the perimeter is defined in.
    *
    * @param GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint $pscEndpoint
    */
