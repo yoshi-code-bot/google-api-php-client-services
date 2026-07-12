@@ -33,7 +33,7 @@ class GoogleCloudDocumentaiV1beta3DocumentSchema extends \Google\Collection
    */
   public $displayName;
   /**
-   * Optional. Document level prompt provided by the user. This custom text is
+   * Optional. Document-level prompt provided by the user. This custom text is
    * injected into the AI model's prompt to provide extra, document-wide
    * guidance for processing.
    *
@@ -78,7 +78,7 @@ class GoogleCloudDocumentaiV1beta3DocumentSchema extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Optional. Document level prompt provided by the user. This custom text is
+   * Optional. Document-level prompt provided by the user. This custom text is
    * injected into the AI model's prompt to provide extra, document-wide
    * guidance for processing.
    *

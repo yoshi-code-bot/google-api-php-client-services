@@ -28,7 +28,7 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOp
    */
   public $learningRateMultiplier;
   /**
-   * Optional. Resource name of a previously fine tuned version id to copy the
+   * Optional. Resource name of a previously fine tuned version ID to copy the
    * overwritten configs from. The base_processor_version should be newer than
    * the base processor version used to fine tune this provided processor
    * version. Format: `projects/{project}/locations/{location}/processors/{proce
@@ -64,7 +64,7 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOp
     return $this->learningRateMultiplier;
   }
   /**
-   * Optional. Resource name of a previously fine tuned version id to copy the
+   * Optional. Resource name of a previously fine tuned version ID to copy the
    * overwritten configs from. The base_processor_version should be newer than
    * the base processor version used to fine tune this provided processor
    * version. Format: `projects/{project}/locations/{location}/processors/{proce
