@@ -19,6 +19,9 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Google\Model
 {
+  /**
+   * Unspecified availability type.
+   */
   public const AVAILABILITY_TYPE_AVAILABILITY_TYPE_UNSPECIFIED = 'AVAILABILITY_TYPE_UNSPECIFIED';
   /**
    * Zonal available instance.
