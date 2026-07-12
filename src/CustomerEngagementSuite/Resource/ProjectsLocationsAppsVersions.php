@@ -19,6 +19,7 @@ namespace Google\Service\CustomerEngagementSuite\Resource;
 
 use Google\Service\CustomerEngagementSuite\AppVersion;
 use Google\Service\CustomerEngagementSuite\CesEmpty;
+use Google\Service\CustomerEngagementSuite\LfA2aV1AgentCard;
 use Google\Service\CustomerEngagementSuite\ListAppVersionsResponse;
 use Google\Service\CustomerEngagementSuite\Operation;
 use Google\Service\CustomerEngagementSuite\RestoreAppVersionRequest;
@@ -86,6 +87,21 @@ class ProjectsLocationsAppsVersions extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], AppVersion::class);
+  }
+  /**
+   * Gets the extended agent card for the authenticated agent.
+   * (versions.getExtendedAgentCard)
+   *
+   * @param string $tenant Optional. Tenant ID, provided as a path parameter.
+   * @param array $optParams Optional parameters.
+   * @return LfA2aV1AgentCard
+   * @throws \Google\Service\Exception
+   */
+  public function getExtendedAgentCard($tenant, $optParams = [])
+  {
+    $params = ['tenant' => $tenant];
+    $params = array_merge($params, $optParams);
+    return $this->call('getExtendedAgentCard', [$params], LfA2aV1AgentCard::class);
   }
   /**
    * Lists all app versions in the given app.

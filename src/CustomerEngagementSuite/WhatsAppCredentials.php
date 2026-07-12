@@ -32,6 +32,12 @@ class WhatsAppCredentials extends \Google\Model
    */
   public $businessAccountId;
   /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   *
+   * @var string
+   */
+  public $conversationProfileId;
+  /**
    * Required. The phone number to register with WhatsApp.
    *
    * @var string
@@ -43,6 +49,12 @@ class WhatsAppCredentials extends \Google\Model
    * @var string
    */
   public $pin;
+  /**
+   * Required. The WhatsApp Business Account ID.
+   *
+   * @var string
+   */
+  public $wabaId;
 
   /**
    * Required. The Meta auth code provided by the embedded signup flow.
@@ -77,6 +89,22 @@ class WhatsAppCredentials extends \Google\Model
     return $this->businessAccountId;
   }
   /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   *
+   * @param string $conversationProfileId
+   */
+  public function setConversationProfileId($conversationProfileId)
+  {
+    $this->conversationProfileId = $conversationProfileId;
+  }
+  /**
+   * @return string
+   */
+  public function getConversationProfileId()
+  {
+    return $this->conversationProfileId;
+  }
+  /**
    * Required. The phone number to register with WhatsApp.
    *
    * @param string $phoneNumber
@@ -107,6 +135,22 @@ class WhatsAppCredentials extends \Google\Model
   public function getPin()
   {
     return $this->pin;
+  }
+  /**
+   * Required. The WhatsApp Business Account ID.
+   *
+   * @param string $wabaId
+   */
+  public function setWabaId($wabaId)
+  {
+    $this->wabaId = $wabaId;
+  }
+  /**
+   * @return string
+   */
+  public function getWabaId()
+  {
+    return $this->wabaId;
   }
 }
 

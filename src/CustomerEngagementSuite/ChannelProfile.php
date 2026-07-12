@@ -44,6 +44,10 @@ class ChannelProfile extends \Google\Model
    */
   public const CHANNEL_TYPE_CONTACT_CENTER_AS_A_SERVICE = 'CONTACT_CENTER_AS_A_SERVICE';
   /**
+   * Contact Center as a Service (CCaaS Chat) channel.
+   */
+  public const CHANNEL_TYPE_CONTACT_CENTER_AS_A_SERVICE_CHAT = 'CONTACT_CENTER_AS_A_SERVICE_CHAT';
+  /**
    * Five9 channel.
    */
   public const CHANNEL_TYPE_FIVE9 = 'FIVE9';
@@ -106,8 +110,8 @@ class ChannelProfile extends \Google\Model
    * Optional. The type of the channel profile.
    *
    * Accepted values: UNKNOWN, WEB_UI, API, TWILIO, GOOGLE_TELEPHONY_PLATFORM,
-   * CONTACT_CENTER_AS_A_SERVICE, FIVE9, CONTACT_CENTER_INTEGRATION, WHATSAPP,
-   * INSTAGRAM
+   * CONTACT_CENTER_AS_A_SERVICE, CONTACT_CENTER_AS_A_SERVICE_CHAT, FIVE9,
+   * CONTACT_CENTER_INTEGRATION, WHATSAPP, INSTAGRAM
    *
    * @param self::CHANNEL_TYPE_* $channelType
    */

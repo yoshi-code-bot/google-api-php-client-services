@@ -25,6 +25,12 @@ class InstagramCredentials extends \Google\Model
    * @var string
    */
   public $authCode;
+  /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   *
+   * @var string
+   */
+  public $conversationProfileId;
 
   /**
    * Required. The Meta auth code provided by the embedded signup flow.
@@ -41,6 +47,22 @@ class InstagramCredentials extends \Google\Model
   public function getAuthCode()
   {
     return $this->authCode;
+  }
+  /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   *
+   * @param string $conversationProfileId
+   */
+  public function setConversationProfileId($conversationProfileId)
+  {
+    $this->conversationProfileId = $conversationProfileId;
+  }
+  /**
+   * @return string
+   */
+  public function getConversationProfileId()
+  {
+    return $this->conversationProfileId;
   }
 }
 

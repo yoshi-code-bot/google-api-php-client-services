@@ -20,12 +20,62 @@ namespace Google\Service\CustomerEngagementSuite;
 class ChannelProfileInstagramConfig extends \Google\Model
 {
   /**
+   * Output only. The description of the Meta business page or profile.
+   *
+   * @var string
+   */
+  public $description;
+  /**
+   * Output only. The fetched Meta business page name.
+   *
+   * @var string
+   */
+  public $displayName;
+  /**
    * Required. The Instagram Account ID.
    *
    * @var string
    */
   public $instagramAccountId;
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   *
+   * @var string
+   */
+  public $thumbnailUrl;
 
+  /**
+   * Output only. The description of the Meta business page or profile.
+   *
+   * @param string $description
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
+  /**
+   * Output only. The fetched Meta business page name.
+   *
+   * @param string $displayName
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
   /**
    * Required. The Instagram Account ID.
    *
@@ -41,6 +91,22 @@ class ChannelProfileInstagramConfig extends \Google\Model
   public function getInstagramAccountId()
   {
     return $this->instagramAccountId;
+  }
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   *
+   * @param string $thumbnailUrl
+   */
+  public function setThumbnailUrl($thumbnailUrl)
+  {
+    $this->thumbnailUrl = $thumbnailUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getThumbnailUrl()
+  {
+    return $this->thumbnailUrl;
   }
 }
 

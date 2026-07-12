@@ -80,6 +80,14 @@ class Toolset extends \Google\Model
   public $name;
   protected $openApiToolsetType = OpenApiToolset::class;
   protected $openApiToolsetDataType = '';
+  /**
+   * Optional. The timeout for the toolset execution. If not set, the default
+   * timeout is 30 seconds for `SYNCHRONOUS` toolsets and 60 seconds for
+   * `ASYNCHRONOUS` toolsets.
+   *
+   * @var string
+   */
+  public $timeout;
   protected $toolFakeConfigType = ToolFakeConfig::class;
   protected $toolFakeConfigDataType = '';
   /**
@@ -241,6 +249,24 @@ class Toolset extends \Google\Model
   public function getOpenApiToolset()
   {
     return $this->openApiToolset;
+  }
+  /**
+   * Optional. The timeout for the toolset execution. If not set, the default
+   * timeout is 30 seconds for `SYNCHRONOUS` toolsets and 60 seconds for
+   * `ASYNCHRONOUS` toolsets.
+   *
+   * @param string $timeout
+   */
+  public function setTimeout($timeout)
+  {
+    $this->timeout = $timeout;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeout()
+  {
+    return $this->timeout;
   }
   /**
    * Optional. Configuration for tools behavior in fake mode.

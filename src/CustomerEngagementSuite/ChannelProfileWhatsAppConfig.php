@@ -20,11 +20,35 @@ namespace Google\Service\CustomerEngagementSuite;
 class ChannelProfileWhatsAppConfig extends \Google\Model
 {
   /**
+   * Output only. The description of the Meta business page or profile.
+   *
+   * @var string
+   */
+  public $description;
+  /**
+   * Output only. The fetched Meta business page name.
+   *
+   * @var string
+   */
+  public $displayName;
+  /**
+   * Optional. The phone number in E.164 format.
+   *
+   * @var string
+   */
+  public $phoneNumber;
+  /**
    * Required. The Meta phone number ID.
    *
    * @var string
    */
   public $phoneNumberId;
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   *
+   * @var string
+   */
+  public $thumbnailUrl;
   /**
    * Required. The WhatsApp Business Account ID.
    *
@@ -32,6 +56,54 @@ class ChannelProfileWhatsAppConfig extends \Google\Model
    */
   public $wabaId;
 
+  /**
+   * Output only. The description of the Meta business page or profile.
+   *
+   * @param string $description
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
+  /**
+   * Output only. The fetched Meta business page name.
+   *
+   * @param string $displayName
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
+  /**
+   * Optional. The phone number in E.164 format.
+   *
+   * @param string $phoneNumber
+   */
+  public function setPhoneNumber($phoneNumber)
+  {
+    $this->phoneNumber = $phoneNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getPhoneNumber()
+  {
+    return $this->phoneNumber;
+  }
   /**
    * Required. The Meta phone number ID.
    *
@@ -47,6 +119,22 @@ class ChannelProfileWhatsAppConfig extends \Google\Model
   public function getPhoneNumberId()
   {
     return $this->phoneNumberId;
+  }
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   *
+   * @param string $thumbnailUrl
+   */
+  public function setThumbnailUrl($thumbnailUrl)
+  {
+    $this->thumbnailUrl = $thumbnailUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getThumbnailUrl()
+  {
+    return $this->thumbnailUrl;
   }
   /**
    * Required. The WhatsApp Business Account ID.
