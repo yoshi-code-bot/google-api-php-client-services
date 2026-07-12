@@ -19,6 +19,9 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\Model
 {
+  /**
+   * Unspecified feed type. Not expected to be used.
+   */
   public const FEED_TYPE_FEEDTYPE_UNSPECIFIED = 'FEEDTYPE_UNSPECIFIED';
   /**
    * Database resource metadata feed from control plane
@@ -174,6 +177,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
     return $this->feedType;
   }
   /**
+   * Observability metric data.
+   *
    * @param StorageDatabasecenterPartnerapiV1mainObservabilityMetricData $observabilityMetricData
    */
   public function setObservabilityMetricData(StorageDatabasecenterPartnerapiV1mainObservabilityMetricData $observabilityMetricData)
@@ -188,6 +193,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
     return $this->observabilityMetricData;
   }
   /**
+   * Database resource recommendation signal data.
+   *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData $recommendationSignalData
    */
   public function setRecommendationSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData $recommendationSignalData)
@@ -202,6 +209,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
     return $this->recommendationSignalData;
   }
   /**
+   * Database resource health signal data.
+   *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData $resourceHealthSignalData
    */
   public function setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData $resourceHealthSignalData)
@@ -235,6 +244,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
     return $this->resourceId;
   }
   /**
+   * Database resource metadata.
+   *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata $resourceMetadata
    */
   public function setResourceMetadata(StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata $resourceMetadata)

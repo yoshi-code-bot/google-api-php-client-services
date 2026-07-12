@@ -90,6 +90,8 @@ class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata extends \Goo
     return $this->isDeletionProtectionEnabled;
   }
   /**
+   * The product this resource represents.
+   *
    * @param StorageDatabasecenterProtoCommonProduct $product
    */
   public function setProduct(StorageDatabasecenterProtoCommonProduct $product)
