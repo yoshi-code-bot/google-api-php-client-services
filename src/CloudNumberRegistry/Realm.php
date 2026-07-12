@@ -86,7 +86,7 @@ class Realm extends \Google\Model
    */
   public $labels;
   /**
-   * Required. Management type of the Realm.
+   * Optional. Management type of the Realm.
    *
    * @var string
    */
@@ -200,7 +200,7 @@ class Realm extends \Google\Model
     return $this->labels;
   }
   /**
-   * Required. Management type of the Realm.
+   * Optional. Management type of the Realm.
    *
    * Accepted values: MANAGEMENT_TYPE_UNSPECIFIED, CNR, USER
    *
