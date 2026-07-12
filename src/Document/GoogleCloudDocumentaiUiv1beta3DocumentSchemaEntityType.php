@@ -51,7 +51,7 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityType extends \Google\Col
    * - Must start with a letter. - Allowed characters: ASCII letters
    * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and
    * tooling can handle any ASCII character.) - The `/` is sometimes used to
-   * denote a property of a type. For example `line_item/amount`. This
+   * denote a property of a type. For example, `line_item/amount`. This
    * convention is deprecated, but will still be honored for backward
    * compatibility.
    *
@@ -153,7 +153,7 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityType extends \Google\Col
    * - Must start with a letter. - Allowed characters: ASCII letters
    * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and
    * tooling can handle any ASCII character.) - The `/` is sometimes used to
-   * denote a property of a type. For example `line_item/amount`. This
+   * denote a property of a type. For example, `line_item/amount`. This
    * convention is deprecated, but will still be honored for backward
    * compatibility.
    *

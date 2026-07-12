@@ -22,14 +22,14 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImag
   protected $annotationsType = GoogleCloudDocumentaiV1DocumentAnnotations::class;
   protected $annotationsDataType = '';
   /**
-   * Optional. Asset id of the inline image. If set, find the image content in
+   * Optional. Asset ID of the inline image. If set, find the image content in
    * the blob_assets field.
    *
    * @var string
    */
   public $blobAssetId;
   /**
-   * Optional. Data uri of the image. It is composed of four parts: a prefix
+   * Optional. Data URI of the image. It is composed of four parts: a prefix
    * (data:), a MIME type indicating the type of data, an optional base64 token
    * if non-textual, and the data itself: data:,
    *
@@ -37,7 +37,7 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImag
    */
   public $dataUri;
   /**
-   * Optional. Google Cloud Storage uri of the image.
+   * Optional. Google Cloud Storage URI of the image.
    *
    * @var string
    */
@@ -73,7 +73,7 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImag
     return $this->annotations;
   }
   /**
-   * Optional. Asset id of the inline image. If set, find the image content in
+   * Optional. Asset ID of the inline image. If set, find the image content in
    * the blob_assets field.
    *
    * @param string $blobAssetId
@@ -90,7 +90,7 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImag
     return $this->blobAssetId;
   }
   /**
-   * Optional. Data uri of the image. It is composed of four parts: a prefix
+   * Optional. Data URI of the image. It is composed of four parts: a prefix
    * (data:), a MIME type indicating the type of data, an optional base64 token
    * if non-textual, and the data itself: data:,
    *
@@ -108,7 +108,7 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImag
     return $this->dataUri;
   }
   /**
-   * Optional. Google Cloud Storage uri of the image.
+   * Optional. Google Cloud Storage URI of the image.
    *
    * @param string $gcsUri
    */

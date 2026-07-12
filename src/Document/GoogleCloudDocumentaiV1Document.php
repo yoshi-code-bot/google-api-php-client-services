@@ -44,10 +44,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $entitiesDataType = 'array';
   /**
    * The entity revision ID that `document.entities` field is based on. If this
-   * field is set and `entities_revisions` is not empty, the entities in
-   * `document.entities` field are the entities in the entity revision with this
-   * id and `document.entity_validation_output` field is the
-   * `entity_validation_output` field in this entity revision.
+   * field and `entities_revisions` are set, the entities in `document.entities`
+   * are the entities in the entity revision with this ID. The
+   * `document.entity_validation_output` field is the `entity_validation_output`
+   * field in this entity revision.
    *
    * @var string
    */
@@ -97,7 +97,7 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
    * Optional. The blob assets in this document. This is used to store the
    * content of the inline blobs in this document, for example, image bytes,
    * such that it can be referenced by other fields in the document via asset
-   * id.
+   * ID.
    *
    * @param GoogleCloudDocumentaiV1DocumentBlobAsset[] $blobAssets
    */
@@ -197,10 +197,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   }
   /**
    * The entity revision ID that `document.entities` field is based on. If this
-   * field is set and `entities_revisions` is not empty, the entities in
-   * `document.entities` field are the entities in the entity revision with this
-   * id and `document.entity_validation_output` field is the
-   * `entity_validation_output` field in this entity revision.
+   * field and `entities_revisions` are set, the entities in `document.entities`
+   * are the entities in the entity revision with this ID. The
+   * `document.entity_validation_output` field is the `entity_validation_output`
+   * field in this entity revision.
    *
    * @param string $entitiesRevisionId
    */

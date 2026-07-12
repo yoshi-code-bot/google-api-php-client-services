@@ -20,7 +20,7 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentBlobAsset extends \Google\Model
 {
   /**
-   * Optional. The id of the blob asset.
+   * Optional. The ID of the blob asset.
    *
    * @var string
    */
@@ -40,7 +40,7 @@ class GoogleCloudDocumentaiV1DocumentBlobAsset extends \Google\Model
   public $mimeType;
 
   /**
-   * Optional. The id of the blob asset.
+   * Optional. The ID of the blob asset.
    *
    * @param string $assetId
    */
