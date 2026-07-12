@@ -47,6 +47,7 @@ class CustomerEngagementSuite extends \Google\Service
   public $projects_locations_apps_changelogs;
   public $projects_locations_apps_conversations;
   public $projects_locations_apps_deployments;
+  public $projects_locations_apps_deployments_message;
   public $projects_locations_apps_examples;
   public $projects_locations_apps_guardrails;
   public $projects_locations_apps_message;
@@ -54,6 +55,7 @@ class CustomerEngagementSuite extends \Google\Service
   public $projects_locations_apps_tools;
   public $projects_locations_apps_toolsets;
   public $projects_locations_apps_versions;
+  public $projects_locations_apps_versions_message;
   public $projects_locations_operations;
   public $rootUrlTemplate;
 
@@ -521,6 +523,16 @@ class CustomerEngagementSuite extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getExtendedAgentCard' => [
+              'path' => 'v1/{+tenant}/extendedAgentCard',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/deployments',
               'httpMethod' => 'GET',
@@ -555,6 +567,26 @@ class CustomerEngagementSuite extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_apps_deployments_message = new CustomerEngagementSuite\Resource\ProjectsLocationsAppsDeploymentsMessage(
+        $this,
+        $this->serviceName,
+        'message',
+        [
+          'methods' => [
+            'send' => [
+              'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -1039,6 +1071,16 @@ class CustomerEngagementSuite extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getExtendedAgentCard' => [
+              'path' => 'v1/{+tenant}/extendedAgentCard',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/versions',
               'httpMethod' => 'GET',
@@ -1070,6 +1112,26 @@ class CustomerEngagementSuite extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_apps_versions_message = new CustomerEngagementSuite\Resource\ProjectsLocationsAppsVersionsMessage(
+        $this,
+        $this->serviceName,
+        'message',
+        [
+          'methods' => [
+            'send' => [
+              'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

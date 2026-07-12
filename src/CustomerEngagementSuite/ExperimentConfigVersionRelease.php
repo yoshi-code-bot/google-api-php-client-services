@@ -24,7 +24,7 @@ class ExperimentConfigVersionRelease extends \Google\Collection
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * Pending state. Experiment is pending and not valid.
+   * Deprecated: This state is no longer used.
    */
   public const STATE_PENDING = 'PENDING';
   /**
@@ -32,11 +32,11 @@ class ExperimentConfigVersionRelease extends \Google\Collection
    */
   public const STATE_RUNNING = 'RUNNING';
   /**
-   * Done state. Experiment is done and no longer valid.
+   * Deprecated: This state is no longer used.
    */
   public const STATE_DONE = 'DONE';
   /**
-   * Expired state. Experiment is expired and no longer valid.
+   * Deprecated: This state is no longer used.
    */
   public const STATE_EXPIRED = 'EXPIRED';
   protected $collection_key = 'trafficAllocations';
