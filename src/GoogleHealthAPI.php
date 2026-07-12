@@ -86,6 +86,8 @@ class GoogleHealthAPI extends \Google\Service
 
   public $projects_subscribers;
   public $projects_subscribers_subscriptions;
+  public $shl_m;
+  public $shl_r;
   public $users;
   public $users_dataTypes_dataPoints;
   public $users_pairedDevices;
@@ -242,6 +244,51 @@ class GoogleHealthAPI extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->shl_m = new GoogleHealthAPI\Resource\ShlM(
+        $this,
+        $this->serviceName,
+        'm',
+        [
+          'methods' => [
+            'getShlManifest' => [
+              'path' => 'v4/shl/m/{externalShlId}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'externalShlId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->shl_r = new GoogleHealthAPI\Resource\ShlR(
+        $this,
+        $this->serviceName,
+        'r',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v4/shl/r/{externalShlId}/{resourceToken}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'externalShlId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resourceToken' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

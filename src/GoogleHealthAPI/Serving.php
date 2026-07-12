@@ -20,7 +20,7 @@ namespace Google\Service\GoogleHealthAPI;
 class Serving extends \Google\Model
 {
   /**
-   * Optional. Amount of food consumed, fractional values are supported.
+   * Optional. The number of servings.
    *
    * @var 
    */
