@@ -67,8 +67,6 @@ class TransferRun extends \Google\Model
   public $endTime;
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
-  protected $metadataDestinationType = MetadataDestination::class;
-  protected $metadataDestinationDataType = '';
   /**
    * Identifier. The resource name of the transfer run. Transfer run names have
    * the form `projects/{project_id}/locations/{location}/transferConfigs/{confi
@@ -226,22 +224,6 @@ class TransferRun extends \Google\Model
   public function getErrorStatus()
   {
     return $this->errorStatus;
-  }
-  /**
-   * Output only. The metadata destination of the transfer run.
-   *
-   * @param MetadataDestination $metadataDestination
-   */
-  public function setMetadataDestination(MetadataDestination $metadataDestination)
-  {
-    $this->metadataDestination = $metadataDestination;
-  }
-  /**
-   * @return MetadataDestination
-   */
-  public function getMetadataDestination()
-  {
-    return $this->metadataDestination;
   }
   /**
    * Identifier. The resource name of the transfer run. Transfer run names have
