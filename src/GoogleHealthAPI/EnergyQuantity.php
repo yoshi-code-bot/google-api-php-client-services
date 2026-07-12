@@ -44,7 +44,7 @@ class EnergyQuantity extends \Google\Model
    */
   public const USER_PROVIDED_UNIT_CALORIE = 'CALORIE';
   /**
-   * Required. Value representing the energy in kilocalories.
+   * Required. The energy value in kilocalories.
    *
    * @var 
    */

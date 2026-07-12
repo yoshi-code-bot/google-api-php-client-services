@@ -180,7 +180,7 @@ class NutrientQuantity extends \Google\Model
    */
   public const NUTRIENT_FOLATE = 'FOLATE';
   /**
-   * Required. Value representing the nutrient.
+   * Required. The nutrient type.
    *
    * @var string
    */
@@ -189,7 +189,7 @@ class NutrientQuantity extends \Google\Model
   protected $quantityDataType = '';
 
   /**
-   * Required. Value representing the nutrient.
+   * Required. The nutrient type.
    *
    * Accepted values: NUTRIENT_UNSPECIFIED, BIOTIN, CAFFEINE, CALCIUM, CHLORIDE,
    * CARBOHYDRATES, CHOLESTEROL, CHROMIUM, COPPER, DIETARY_FIBER, FOLIC_ACID,
@@ -213,7 +213,7 @@ class NutrientQuantity extends \Google\Model
     return $this->nutrient;
   }
   /**
-   * Required. Value representing the quantity of the nutrient.
+   * Required. The quantity of the nutrient, measured in grams.
    *
    * @param WeightQuantity $quantity
    */

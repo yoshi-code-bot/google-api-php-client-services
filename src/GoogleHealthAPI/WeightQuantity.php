@@ -56,7 +56,7 @@ class WeightQuantity extends \Google\Model
    */
   public const USER_PROVIDED_UNIT_NANOGRAM = 'NANOGRAM';
   /**
-   * Required. Value representing the weight in grams.
+   * Required. The weight value in grams.
    *
    * @var 
    */

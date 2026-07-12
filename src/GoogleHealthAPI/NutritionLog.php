@@ -65,15 +65,16 @@ class NutritionLog extends \Google\Collection
   protected $energyFromFatType = EnergyQuantity::class;
   protected $energyFromFatDataType = '';
   /**
-   * Required. Represents the food ID.
+   * Optional. The resource name of the Food item. Required when creating a
+   * nutrition log from an identified food. For anonymous food logs, use the
+   * `food_display_name` field instead.
    *
    * @var string
    */
   public $food;
   /**
-   * Value representing the display name of the food. For nutrition logs created
-   * from an identified food, this field will be populated based on the
-   * referenced food. For anonymous food, this field will be populated manually.
+   * The display name of the food. For identified food logs, this is populated
+   * automatically from the referenced food.
    *
    * @var string
    */
@@ -81,7 +82,8 @@ class NutritionLog extends \Google\Collection
   protected $intervalType = SessionTimeInterval::class;
   protected $intervalDataType = '';
   /**
-   * Optional. Value representing the meal type of the nutrition log.
+   * Optional. The meal category. One of `BREAKFAST`, `LUNCH`, `DINNER`, or
+   * `SNACK`.
    *
    * @var string
    */
@@ -96,10 +98,7 @@ class NutritionLog extends \Google\Collection
   protected $totalFatDataType = '';
 
   /**
-   * Optional. Value representing the energy of the nutrition log. For nutrition
-   * logs created from an identified food, this field will be populated based on
-   * the referenced food. For anonymous food, this field will be populated
-   * manually.
+   * Optional. The total energy of the food, measured in kilocalories (`kcal`).
    *
    * @param EnergyQuantity $energy
    */
@@ -115,10 +114,7 @@ class NutritionLog extends \Google\Collection
     return $this->energy;
   }
   /**
-   * Optional. Value representing the energy from fat of the nutrition log. For
-   * nutrition logs created from an identified food, this field will be
-   * populated based on the referenced food. For anonymous food, this field will
-   * be populated manually.
+   * Optional. The energy from fat, measured in kilocalories (`kcal`).
    *
    * @param EnergyQuantity $energyFromFat
    */
@@ -134,7 +130,9 @@ class NutritionLog extends \Google\Collection
     return $this->energyFromFat;
   }
   /**
-   * Required. Represents the food ID.
+   * Optional. The resource name of the Food item. Required when creating a
+   * nutrition log from an identified food. For anonymous food logs, use the
+   * `food_display_name` field instead.
    *
    * @param string $food
    */
@@ -150,9 +148,8 @@ class NutritionLog extends \Google\Collection
     return $this->food;
   }
   /**
-   * Value representing the display name of the food. For nutrition logs created
-   * from an identified food, this field will be populated based on the
-   * referenced food. For anonymous food, this field will be populated manually.
+   * The display name of the food. For identified food logs, this is populated
+   * automatically from the referenced food.
    *
    * @param string $foodDisplayName
    */
@@ -168,7 +165,7 @@ class NutritionLog extends \Google\Collection
     return $this->foodDisplayName;
   }
   /**
-   * Required. Observed interval.
+   * Required. The time window when the food was logged.
    *
    * @param SessionTimeInterval $interval
    */
@@ -184,7 +181,8 @@ class NutritionLog extends \Google\Collection
     return $this->interval;
   }
   /**
-   * Optional. Value representing the meal type of the nutrition log.
+   * Optional. The meal category. One of `BREAKFAST`, `LUNCH`, `DINNER`, or
+   * `SNACK`.
    *
    * Accepted values: MEAL_TYPE_UNSPECIFIED, BEFORE_BREAKFAST, BREAKFAST,
    * BEFORE_LUNCH, LUNCH, BEFORE_DINNER, DINNER, AFTER_DINNER, SNACK, ANYTIME
@@ -203,7 +201,7 @@ class NutritionLog extends \Google\Collection
     return $this->mealType;
   }
   /**
-   * Optional. Value representing the nutrients of the nutrition log.
+   * Optional. An array of individual nutrient values for the nutrition log.
    *
    * @param NutrientQuantity[] $nutrients
    */
@@ -219,7 +217,7 @@ class NutritionLog extends \Google\Collection
     return $this->nutrients;
   }
   /**
-   * Optional. Value representing the nutrition log serving.
+   * Optional. The serving information for the logged food.
    *
    * @param Serving $serving
    */
@@ -235,10 +233,7 @@ class NutritionLog extends \Google\Collection
     return $this->serving;
   }
   /**
-   * Optional. Value representing the total carbohydrate of the nutrition log.
-   * For nutrition logs created from an identified food, this field will be
-   * populated based on the referenced food. For anonymous food, this field will
-   * be populated manually.
+   * Optional. The total carbohydrate content, measured in grams.
    *
    * @param WeightQuantity $totalCarbohydrate
    */
@@ -254,10 +249,7 @@ class NutritionLog extends \Google\Collection
     return $this->totalCarbohydrate;
   }
   /**
-   * Optional. Value representing the total fat of the nutrition log. For
-   * nutrition logs created from an identified food, this field will be
-   * populated based on the referenced food. For anonymous food, this field will
-   * be populated manually.
+   * Optional. The total fat content, measured in grams.
    *
    * @param WeightQuantity $totalFat
    */
