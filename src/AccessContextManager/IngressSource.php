@@ -32,6 +32,8 @@ class IngressSource extends \Google\Model
    * @var string
    */
   public $accessLevel;
+  protected $pscEndpointType = PrivateServiceConnectEndpoint::class;
+  protected $pscEndpointDataType = '';
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests
    * from these resources will be allowed to access perimeter data. Currently
@@ -68,6 +70,24 @@ class IngressSource extends \Google\Model
   public function getAccessLevel()
   {
     return $this->accessLevel;
+  }
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access the perimeter.
+   * The Private Service Connect endpoint may be in any organization, not just
+   * the organization that the perimeter is defined in.
+   *
+   * @param PrivateServiceConnectEndpoint $pscEndpoint
+   */
+  public function setPscEndpoint(PrivateServiceConnectEndpoint $pscEndpoint)
+  {
+    $this->pscEndpoint = $pscEndpoint;
+  }
+  /**
+   * @return PrivateServiceConnectEndpoint
+   */
+  public function getPscEndpoint()
+  {
+    return $this->pscEndpoint;
   }
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests

@@ -19,7 +19,9 @@ namespace Google\Service\AccessContextManager;
 
 class VpcAccessibleServices extends \Google\Collection
 {
-  protected $collection_key = 'allowedServices';
+  protected $collection_key = 'servicePatternsEnforcementScopes';
+  protected $allowedServicePatternsType = ServicePattern::class;
+  protected $allowedServicePatternsDataType = 'array';
   /**
    * The list of APIs usable within the Service Perimeter. Must be empty unless
    * 'enable_restriction' is True. You can specify a list of individual
@@ -36,7 +38,30 @@ class VpcAccessibleServices extends \Google\Collection
    * @var bool
    */
   public $enableRestriction;
+  /**
+   * Defines the enforcement scopes of service patterns.
+   *
+   * @var string[]
+   */
+  public $servicePatternsEnforcementScopes;
 
+  /**
+   * Specifies which Google services are allowed to be accessed from VPC
+   * networks in the service perimeter.
+   *
+   * @param ServicePattern[] $allowedServicePatterns
+   */
+  public function setAllowedServicePatterns($allowedServicePatterns)
+  {
+    $this->allowedServicePatterns = $allowedServicePatterns;
+  }
+  /**
+   * @return ServicePattern[]
+   */
+  public function getAllowedServicePatterns()
+  {
+    return $this->allowedServicePatterns;
+  }
   /**
    * The list of APIs usable within the Service Perimeter. Must be empty unless
    * 'enable_restriction' is True. You can specify a list of individual
@@ -72,6 +97,22 @@ class VpcAccessibleServices extends \Google\Collection
   public function getEnableRestriction()
   {
     return $this->enableRestriction;
+  }
+  /**
+   * Defines the enforcement scopes of service patterns.
+   *
+   * @param string[] $servicePatternsEnforcementScopes
+   */
+  public function setServicePatternsEnforcementScopes($servicePatternsEnforcementScopes)
+  {
+    $this->servicePatternsEnforcementScopes = $servicePatternsEnforcementScopes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getServicePatternsEnforcementScopes()
+  {
+    return $this->servicePatternsEnforcementScopes;
   }
 }
 
