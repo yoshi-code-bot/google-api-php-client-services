@@ -33,6 +33,8 @@ class EgressSource extends \Google\Model
    * @var string
    */
   public $accessLevel;
+  protected $pscEndpointType = PrivateServiceConnectEndpoint::class;
+  protected $pscEndpointDataType = '';
   /**
    * A Google Cloud resource from the service perimeter that you want to allow
    * to access data outside the perimeter. This field supports only projects.
@@ -66,6 +68,24 @@ class EgressSource extends \Google\Model
   public function getAccessLevel()
   {
     return $this->accessLevel;
+  }
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the
+   * perimeter. The Private Service Connect endpoint may be in any organization,
+   * not just the organization that the perimeter is defined in.
+   *
+   * @param PrivateServiceConnectEndpoint $pscEndpoint
+   */
+  public function setPscEndpoint(PrivateServiceConnectEndpoint $pscEndpoint)
+  {
+    $this->pscEndpoint = $pscEndpoint;
+  }
+  /**
+   * @return PrivateServiceConnectEndpoint
+   */
+  public function getPscEndpoint()
+  {
+    return $this->pscEndpoint;
   }
   /**
    * A Google Cloud resource from the service perimeter that you want to allow
