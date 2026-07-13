@@ -49,7 +49,9 @@ class AccountTypesAccountsUserListGlobalLicensesUserListGlobalLicenseCustomerInf
    * case](https://en.wikipedia.org/wiki/Camel_case) or all [snake
    * case](https://en.wikipedia.org/wiki/Snake_case). Don't use a combination of
    * camel case and snake case. **Supported Operations:** - `AND` - `=` - `!=` -
-   * `>` - `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get method
+   * `>` - `>=` - `<` - `<=` **Supported Functions:** - `IN(field, value1, value2,
+   * ...)`: returns true if the field matches any of the values. Example:
+   * `IN(user_list_id, 123, 456)` **Unsupported Fields:** - `name` (use get method
    * instead) - `historical_pricings` and all its subfields - `pricing.start_time`
    * - `pricing.end_time`
    * @opt_param int pageSize Optional. The maximum number of licenses to return.

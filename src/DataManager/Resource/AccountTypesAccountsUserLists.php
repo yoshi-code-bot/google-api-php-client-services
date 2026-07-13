@@ -132,9 +132,11 @@ class AccountTypesAccountsUserLists extends \Google\Service\Resource
    * case](https://en.wikipedia.org/wiki/Camel_case) or all [snake
    * case](https://en.wikipedia.org/wiki/Snake_case). Don't use a combination of
    * camel case and snake case. Supported operations: - `AND` - `=` - `!=` - `>` -
-   * `>=` - `<` - `<=` - `:` (has) Supported fields: - `id` - `display_name` -
-   * `description` - `membership_status` - `integration_code` - `access_reason` -
-   * `ingested_user_list_info.upload_key_types`
+   * `>=` - `<` - `<=` - `:` (has) **Supported Functions:** - `IN(field, value1,
+   * value2, ...)`: returns true if the field matches any of the values. Example:
+   * `IN(display_name, "name1", "name2")` Supported fields: - `id` -
+   * `display_name` - `description` - `membership_status` - `integration_code` -
+   * `access_reason` - `ingested_user_list_info.upload_key_types`
    * @opt_param int pageSize Optional. The maximum number of user lists to return.
    * The service may return fewer than this value. If unspecified, at most 50 user
    * lists will be returned. The maximum value is 1000; values above 1000 will be

@@ -205,6 +205,11 @@ class ErrorCount extends \Google\Model
    */
   public const REASON_PROCESSING_ERROR_REASON_CLICK_NOT_FOUND = 'PROCESSING_ERROR_REASON_CLICK_NOT_FOUND';
   /**
+   * External attribution data is missing. Sending events to a destination for
+   * an external attribution conversion action isn't supported.
+   */
+  public const REASON_PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING = 'PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING';
+  /**
    * The error reason of the failed records.
    *
    * @var string
@@ -261,7 +266,8 @@ class ErrorCount extends \Google\Model
    * PROCESSING_ERROR_REASON_TOO_RECENT_CLICK,
    * PROCESSING_ERROR_REASON_INVALID_CLICK,
    * PROCESSING_ERROR_REASON_INVALID_OPERATING_ACCOUNT_FOR_CLICK,
-   * PROCESSING_ERROR_REASON_CLICK_NOT_FOUND
+   * PROCESSING_ERROR_REASON_CLICK_NOT_FOUND,
+   * PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING
    *
    * @param self::REASON_* $reason
    */
