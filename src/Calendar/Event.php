@@ -298,7 +298,13 @@ class Event extends \Google\Collection
    * value.  - "public" - The event is public and event details are visible to
    * all readers of the calendar.  - "private" - The event is private and only
    * event attendees may view event details.  - "confidential" - The event is
-   * private. This value is provided for compatibility reasons.
+   * private. This value is provided for compatibility reasons.   Note on
+   * recurring events: Changing the visibility of a single instance of a
+   * recurring event can affect all instances of the series. If the new setting
+   * is more restrictive (e.g. from public to private), it is applied to all
+   * instances. If the new setting is less restrictive (e.g. from private to
+   * public), the change is ignored. To make a recurring event less restrictive,
+   * you must update the parent recurring event.
    *
    * @var string
    */
@@ -1090,7 +1096,13 @@ class Event extends \Google\Collection
    * value.  - "public" - The event is public and event details are visible to
    * all readers of the calendar.  - "private" - The event is private and only
    * event attendees may view event details.  - "confidential" - The event is
-   * private. This value is provided for compatibility reasons.
+   * private. This value is provided for compatibility reasons.   Note on
+   * recurring events: Changing the visibility of a single instance of a
+   * recurring event can affect all instances of the series. If the new setting
+   * is more restrictive (e.g. from public to private), it is applied to all
+   * instances. If the new setting is less restrictive (e.g. from private to
+   * public), the change is ignored. To make a recurring event less restrictive,
+   * you must update the parent recurring event.
    *
    * @param string $visibility
    */

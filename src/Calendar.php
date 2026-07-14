@@ -316,6 +316,10 @@ class Calendar extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'showOwnOrganizationOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'syncToken' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -370,6 +374,10 @@ class Calendar extends \Google\Service
                   'type' => 'boolean',
                 ],
                 'showHidden' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'showOwnOrganizationOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
