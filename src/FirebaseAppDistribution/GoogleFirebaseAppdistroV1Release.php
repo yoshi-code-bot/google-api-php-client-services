@@ -20,6 +20,28 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1Release extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const ANDROID_PACKAGE_REGISTRATION_STATE_ANDROID_PACKAGE_REGISTRATION_STATE_UNSPECIFIED = 'ANDROID_PACKAGE_REGISTRATION_STATE_UNSPECIFIED';
+  /**
+   * Package is registered with the release binary's certificate fingerprint.
+   */
+  public const ANDROID_PACKAGE_REGISTRATION_STATE_REGISTERED = 'REGISTERED';
+  /**
+   * Package is not registered with any public certificate.
+   */
+  public const ANDROID_PACKAGE_REGISTRATION_STATE_NOT_REGISTERED = 'NOT_REGISTERED';
+  /**
+   * Package is registered with another public certificate fingerprint.
+   */
+  public const ANDROID_PACKAGE_REGISTRATION_STATE_REGISTERED_WITH_ANOTHER_CERTIFICATE_FINGERPRINT = 'REGISTERED_WITH_ANOTHER_CERTIFICATE_FINGERPRINT';
+  /**
+   * Output only. Registration state of the Android package (BinaryType.APK).
+   *
+   * @var string
+   */
+  public $androidPackageRegistrationState;
+  /**
    * Output only. A signed link (which expires in one hour) to directly download
    * the app binary (IPA/APK/AAB) file.
    *
@@ -84,6 +106,25 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * Output only. Registration state of the Android package (BinaryType.APK).
+   *
+   * Accepted values: ANDROID_PACKAGE_REGISTRATION_STATE_UNSPECIFIED,
+   * REGISTERED, NOT_REGISTERED, REGISTERED_WITH_ANOTHER_CERTIFICATE_FINGERPRINT
+   *
+   * @param self::ANDROID_PACKAGE_REGISTRATION_STATE_* $androidPackageRegistrationState
+   */
+  public function setAndroidPackageRegistrationState($androidPackageRegistrationState)
+  {
+    $this->androidPackageRegistrationState = $androidPackageRegistrationState;
+  }
+  /**
+   * @return self::ANDROID_PACKAGE_REGISTRATION_STATE_*
+   */
+  public function getAndroidPackageRegistrationState()
+  {
+    return $this->androidPackageRegistrationState;
+  }
   /**
    * Output only. A signed link (which expires in one hour) to directly download
    * the app binary (IPA/APK/AAB) file.
@@ -203,7 +244,7 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
     return $this->name;
   }
   /**
-   * Notes of the release.
+   * Notes about the release.
    *
    * @param GoogleFirebaseAppdistroV1ReleaseNotes $releaseNotes
    */
