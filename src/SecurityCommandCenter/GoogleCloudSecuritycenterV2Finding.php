@@ -48,8 +48,14 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $accessDataType = '';
   protected $affectedResourcesType = GoogleCloudSecuritycenterV2AffectedResources::class;
   protected $affectedResourcesDataType = '';
+  protected $agentType = GoogleCloudSecuritycenterV2Agent::class;
+  protected $agentDataType = '';
+  protected $agentAnomalyType = GoogleCloudSecuritycenterV2AgentAnomaly::class;
+  protected $agentAnomalyDataType = '';
   protected $agentDataAccessEventsType = GoogleCloudSecuritycenterV2AgentDataAccessEvent::class;
   protected $agentDataAccessEventsDataType = 'array';
+  protected $agentSessionsType = GoogleCloudSecuritycenterV2AgentSession::class;
+  protected $agentSessionsDataType = 'array';
   protected $aiModelType = GoogleCloudSecuritycenterV2AiModel::class;
   protected $aiModelDataType = '';
   protected $applicationType = GoogleCloudSecuritycenterV2Application::class;
@@ -254,6 +260,34 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
     return $this->affectedResources;
   }
   /**
+   * @param GoogleCloudSecuritycenterV2Agent $agent
+   */
+  public function setAgent(GoogleCloudSecuritycenterV2Agent $agent)
+  {
+    $this->agent = $agent;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Agent
+   */
+  public function getAgent()
+  {
+    return $this->agent;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2AgentAnomaly $agentAnomaly
+   */
+  public function setAgentAnomaly(GoogleCloudSecuritycenterV2AgentAnomaly $agentAnomaly)
+  {
+    $this->agentAnomaly = $agentAnomaly;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2AgentAnomaly
+   */
+  public function getAgentAnomaly()
+  {
+    return $this->agentAnomaly;
+  }
+  /**
    * @param GoogleCloudSecuritycenterV2AgentDataAccessEvent[] $agentDataAccessEvents
    */
   public function setAgentDataAccessEvents($agentDataAccessEvents)
@@ -266,6 +300,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getAgentDataAccessEvents()
   {
     return $this->agentDataAccessEvents;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2AgentSession[] $agentSessions
+   */
+  public function setAgentSessions($agentSessions)
+  {
+    $this->agentSessions = $agentSessions;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2AgentSession[]
+   */
+  public function getAgentSessions()
+  {
+    return $this->agentSessions;
   }
   /**
    * @param GoogleCloudSecuritycenterV2AiModel $aiModel

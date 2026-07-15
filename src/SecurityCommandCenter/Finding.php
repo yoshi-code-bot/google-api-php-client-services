@@ -48,8 +48,14 @@ class Finding extends \Google\Collection
   protected $accessDataType = '';
   protected $affectedResourcesType = AffectedResources::class;
   protected $affectedResourcesDataType = '';
+  protected $agentType = Agent::class;
+  protected $agentDataType = '';
+  protected $agentAnomalyType = AgentAnomaly::class;
+  protected $agentAnomalyDataType = '';
   protected $agentDataAccessEventsType = AgentDataAccessEvent::class;
   protected $agentDataAccessEventsDataType = 'array';
+  protected $agentSessionsType = AgentSession::class;
+  protected $agentSessionsDataType = 'array';
   protected $aiModelType = AiModel::class;
   protected $aiModelDataType = '';
   protected $applicationType = Application::class;
@@ -250,6 +256,34 @@ class Finding extends \Google\Collection
     return $this->affectedResources;
   }
   /**
+   * @param Agent $agent
+   */
+  public function setAgent(Agent $agent)
+  {
+    $this->agent = $agent;
+  }
+  /**
+   * @return Agent
+   */
+  public function getAgent()
+  {
+    return $this->agent;
+  }
+  /**
+   * @param AgentAnomaly $agentAnomaly
+   */
+  public function setAgentAnomaly(AgentAnomaly $agentAnomaly)
+  {
+    $this->agentAnomaly = $agentAnomaly;
+  }
+  /**
+   * @return AgentAnomaly
+   */
+  public function getAgentAnomaly()
+  {
+    return $this->agentAnomaly;
+  }
+  /**
    * @param AgentDataAccessEvent[] $agentDataAccessEvents
    */
   public function setAgentDataAccessEvents($agentDataAccessEvents)
@@ -262,6 +296,20 @@ class Finding extends \Google\Collection
   public function getAgentDataAccessEvents()
   {
     return $this->agentDataAccessEvents;
+  }
+  /**
+   * @param AgentSession[] $agentSessions
+   */
+  public function setAgentSessions($agentSessions)
+  {
+    $this->agentSessions = $agentSessions;
+  }
+  /**
+   * @return AgentSession[]
+   */
+  public function getAgentSessions()
+  {
+    return $this->agentSessions;
   }
   /**
    * @param AiModel $aiModel
