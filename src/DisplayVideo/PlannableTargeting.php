@@ -19,22 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class PlannableTargeting extends \Google\Collection
 {
-  /**
-   * Not specified.
-   */
-  public const NETWORK_PLANNABLE_NETWORK_UNSPECIFIED = 'PLANNABLE_NETWORK_UNSPECIFIED';
-  /**
-   * YouTube.
-   */
-  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE = 'PLANNABLE_NETWORK_YOUTUBE';
-  /**
-   * Google Video Partners.
-   */
-  public const NETWORK_PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS';
-  /**
-   * YouTube and Google Video Partners.
-   */
-  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS';
   protected $collection_key = 'youtubeSelectLineups';
   /**
    * Output only. Allowed plannable age ranges for the product. Actual targeting
@@ -58,11 +42,11 @@ class PlannableTargeting extends \Google\Collection
    */
   public $genders;
   /**
-   * Output only. Targetable network for the ad product.
+   * Output only. Targetable networks for the ad product.
    *
-   * @var string
+   * @var string[]
    */
-  public $network;
+  public $networks;
   protected $surfaceTargetingCombinationsType = SurfaceTargetingCombinations::class;
   protected $surfaceTargetingCombinationsDataType = '';
   protected $youtubeSelectLineupsType = YouTubeSelectLineUp::class;
@@ -135,24 +119,20 @@ class PlannableTargeting extends \Google\Collection
     return $this->genders;
   }
   /**
-   * Output only. Targetable network for the ad product.
+   * Output only. Targetable networks for the ad product.
    *
-   * Accepted values: PLANNABLE_NETWORK_UNSPECIFIED, PLANNABLE_NETWORK_YOUTUBE,
-   * PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS,
-   * PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS
-   *
-   * @param self::NETWORK_* $network
+   * @param string[] $networks
    */
-  public function setNetwork($network)
+  public function setNetworks($networks)
   {
-    $this->network = $network;
+    $this->networks = $networks;
   }
   /**
-   * @return self::NETWORK_*
+   * @return string[]
    */
-  public function getNetwork()
+  public function getNetworks()
   {
-    return $this->network;
+    return $this->networks;
   }
   /**
    * Output only. Targetable surface combinations for the ad product.
