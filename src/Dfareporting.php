@@ -96,6 +96,7 @@ class Dfareporting extends \Google\Service
   public $regions;
   public $remarketingListShares;
   public $remarketingLists;
+  public $reportData;
   public $reports;
   public $reports_compatibleFields;
   public $reports_files;
@@ -3866,6 +3867,26 @@ class Dfareporting extends \Google\Service
             ],'update' => [
               'path' => 'userprofiles/{+profileId}/remarketingLists',
               'httpMethod' => 'PUT',
+              'parameters' => [
+                'profileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->reportData = new Dfareporting\Resource\ReportData(
+        $this,
+        $this->serviceName,
+        'reportData',
+        [
+          'methods' => [
+            'query' => [
+              'path' => 'userprofiles/{profileId}/reportdata/query',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'profileId' => [
                   'location' => 'path',
