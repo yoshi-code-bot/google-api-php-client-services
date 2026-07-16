@@ -97,9 +97,9 @@ class DemandGenVideoAd extends \Google\Collection
   public const CALL_TO_ACTION_WATCH_NOW = 'WATCH_NOW';
   protected $collection_key = 'videos';
   /**
-   * Required. The business name shown on the ad. *Warning*: Starting **July 13,
-   * 2026**, this setting will no longer be required if a default value is set
-   * at the advertiser level. If left unset, the default value will be applied.
+   * Optional. The business name shown on the ad. This setting is required
+   * unless a default value is set at the advertiser level. If left unset, the
+   * default value will be applied.
    *
    * @var string
    */
@@ -192,9 +192,9 @@ class DemandGenVideoAd extends \Google\Collection
   protected $videosDataType = 'array';
 
   /**
-   * Required. The business name shown on the ad. *Warning*: Starting **July 13,
-   * 2026**, this setting will no longer be required if a default value is set
-   * at the advertiser level. If left unset, the default value will be applied.
+   * Optional. The business name shown on the ad. This setting is required
+   * unless a default value is set at the advertiser level. If left unset, the
+   * default value will be applied.
    *
    * @param string $businessName
    */
@@ -382,9 +382,9 @@ class DemandGenVideoAd extends \Google\Collection
     return $this->headlines;
   }
   /**
-   * Required. The logo image used by this ad. *Warning*: Starting **July 13,
-   * 2026**, this setting will no longer be required if a default value is set
-   * at the advertiser level. If left unset, the default value will be applied.
+   * Optional. The logo image used by this ad. This setting is required unless a
+   * default value is set at the advertiser level. If left unset, the default
+   * value will be applied.
    *
    * @param ImageAsset $logo
    */
