@@ -35,10 +35,22 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
    * A solution was submitted that was incorrect or otherwise deemed suspicious.
    */
   public const CHALLENGE_FAILED = 'FAILED';
+  /**
+   * Default unspecified type.
+   */
+  public const LAST_CHALLENGE_TYPE_CHALLENGE_TYPE_UNSPECIFIED = 'CHALLENGE_TYPE_UNSPECIFIED';
+  /**
+   * A visual challenge.
+   */
+  public const LAST_CHALLENGE_TYPE_CHALLENGE_TYPE_VISUAL = 'CHALLENGE_TYPE_VISUAL';
+  /**
+   * An audio challenge.
+   */
+  public const LAST_CHALLENGE_TYPE_CHALLENGE_TYPE_AUDIO = 'CHALLENGE_TYPE_AUDIO';
   protected $collection_key = 'verifiedBots';
   /**
-   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE
-   * keys.
+   * Output only. Challenge information for Universal, `POLICY_BASED_CHALLENGE`
+   * and `INVISIBLE` keys.
    *
    * @var string
    */
@@ -51,6 +63,14 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
    * @var string[]
    */
   public $extendedVerdictReasons;
+  /**
+   * Output only. Type of the last challenge presented to the user for
+   * Universal, `POLICY_BASED_CHALLENGE` and `INVISIBLE` keys. The field is only
+   * set when a challenge was presented to the user.
+   *
+   * @var string
+   */
+  public $lastChallengeType;
   /**
    * Output only. Reasons contributing to the risk analysis verdict.
    *
@@ -68,8 +88,8 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
   protected $verifiedBotsDataType = 'array';
 
   /**
-   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE
-   * keys.
+   * Output only. Challenge information for Universal, `POLICY_BASED_CHALLENGE`
+   * and `INVISIBLE` keys.
    *
    * Accepted values: CHALLENGE_UNSPECIFIED, NOCAPTCHA, PASSED, FAILED
    *
@@ -103,6 +123,27 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
   public function getExtendedVerdictReasons()
   {
     return $this->extendedVerdictReasons;
+  }
+  /**
+   * Output only. Type of the last challenge presented to the user for
+   * Universal, `POLICY_BASED_CHALLENGE` and `INVISIBLE` keys. The field is only
+   * set when a challenge was presented to the user.
+   *
+   * Accepted values: CHALLENGE_TYPE_UNSPECIFIED, CHALLENGE_TYPE_VISUAL,
+   * CHALLENGE_TYPE_AUDIO
+   *
+   * @param self::LAST_CHALLENGE_TYPE_* $lastChallengeType
+   */
+  public function setLastChallengeType($lastChallengeType)
+  {
+    $this->lastChallengeType = $lastChallengeType;
+  }
+  /**
+   * @return self::LAST_CHALLENGE_TYPE_*
+   */
+  public function getLastChallengeType()
+  {
+    return $this->lastChallengeType;
   }
   /**
    * Output only. Reasons contributing to the risk analysis verdict.
