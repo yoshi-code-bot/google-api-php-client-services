@@ -57,11 +57,7 @@ class ProjectsServices extends \Google\Service\Resource
    * @param string $name Required. The relative resource name of the Service to
    * retrieve, in the format: ``` projects/{project_number}/services/{service_id}
    * ``` Note that the `service_id` element must be a supported service ID.
-   * Currently, the following service IDs are supported: *
-   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-   * `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com`
-   * (Google Identity for iOS)
+   * Consult the Service.name field for a list of supported service IDs.
    * @param array $optParams Optional parameters.
    * @return GoogleFirebaseAppcheckV1Service
    * @throws \Google\Service\Exception
@@ -107,9 +103,15 @@ class ProjectsServices extends \Google\Service\Resource
    * configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the
    * `service_id` element must be a supported service ID. Currently, the following
-   * service IDs are supported: * `firebasestorage.googleapis.com` (Cloud Storage
-   * for Firebase) * `firebasedatabase.googleapis.com` (Firebase Realtime
-   * Database) * `firestore.googleapis.com` (Cloud Firestore) *
+   * service IDs are supported. Firebase and Google Cloud services: *
+   * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+   * `firestore.googleapis.com` (Cloud Firestore) *
+   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
+   * `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform
+   * services: * `maps-backend.googleapis.com` (Maps JavaScript API) *
+   * `places.googleapis.com` (Places API (New)) Other supported Google services: *
    * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param GoogleFirebaseAppcheckV1Service $postBody
    * @param array $optParams Optional parameters.

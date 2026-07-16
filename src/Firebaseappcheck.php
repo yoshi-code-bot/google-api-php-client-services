@@ -51,7 +51,6 @@ class Firebaseappcheck extends \Google\Service
   public $projects_apps_playIntegrityConfig;
   public $projects_apps_recaptchaEnterpriseConfig;
   public $projects_apps_recaptchaV3Config;
-  public $projects_apps_safetyNetConfig;
   public $projects_services;
   public $projects_services_resourcePolicies;
   public $rootUrlTemplate;
@@ -221,16 +220,6 @@ class Firebaseappcheck extends \Google\Service
               ],
             ],'exchangeRecaptchaV3Token' => [
               'path' => 'v1/{+app}:exchangeRecaptchaV3Token',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'app' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'exchangeSafetyNetToken' => [
-              'path' => 'v1/{+app}:exchangeSafetyNetToken',
               'httpMethod' => 'POST',
               'parameters' => [
                 'app' => [
@@ -543,55 +532,6 @@ class Firebaseappcheck extends \Google\Service
           'methods' => [
             'batchGet' => [
               'path' => 'v1/{+parent}/apps/-/recaptchaV3Config:batchGet',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'names' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_apps_safetyNetConfig = new Firebaseappcheck\Resource\ProjectsAppsSafetyNetConfig(
-        $this,
-        $this->serviceName,
-        'safetyNetConfig',
-        [
-          'methods' => [
-            'batchGet' => [
-              'path' => 'v1/{+parent}/apps/-/safetyNetConfig:batchGet',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [

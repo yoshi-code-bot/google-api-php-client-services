@@ -20,43 +20,45 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1ResourcePolicy extends \Google\Model
 {
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource, nor are App Check metrics collected. Though the relevant App
-   * Check protection is not applied, other applicable protections, such as user
-   * authorization, are still enforced. An unconfigured protection is in this
-   * mode by default.
+   * When a particular protection is set to this mode, that protection is not
+   * applied for the service or resource, nor are metrics related to that
+   * protection collected. Though the relevant App Check protection is not
+   * applied, other applicable protections outside of App Check, such as user
+   * authorization, are still applied. An unconfigured EnforcementMode is in
+   * this mode by default.
    */
   public const ENFORCEMENT_MODE_OFF = 'OFF';
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource. App Check metrics are collected to help you decide when to turn
-   * on enforcement. These metrics will show the portion of traffic that is
-   * deemed invalid by the relevant App Check protection, but that traffic will
-   * not be rejected until you turn on enforcement. Though the relevant App
-   * Check protection is not enforced, other applicable protections, such as
-   * user authorization, are still enforced. Some services require certain
-   * conditions to be met before they will work with App Check, such as
-   * requiring you to upgrade to a specific service tier. Until those
-   * requirements are met for a service, this `UNENFORCED` setting will have no
-   * effect and App Check will not work with that service.
+   * When a particular protection is set to this mode, that protection is not
+   * enforced for the service or resource. Metrics related to that protection
+   * are collected to help you decide when to turn on enforcement. These metrics
+   * will show the portion of traffic that is deemed invalid by that protection,
+   * but that traffic will not be rejected until you turn on enforcement. This
+   * `UNENFORCED` mode is also known as monitoring-only mode. Though the
+   * relevant App Check protection is not enforced, other applicable protections
+   * outside of App Check, such as user authorization, are still applied. Some
+   * services require certain conditions to be met before they will work with
+   * App Check, such as requiring you to upgrade to a specific service tier.
+   * Until those requirements are met for a service, this `UNENFORCED` setting
+   * will have no effect and App Check will not work with that service.
    */
   public const ENFORCEMENT_MODE_UNENFORCED = 'UNENFORCED';
   /**
-   * The relevant App Check protection is enforced for the service or resource.
-   * The service or resource will reject any traffic not accompanied by an App
-   * Check token that is deemded valid by the relevant protection. There are
-   * some exceptions depending on the service; for example, some services will
-   * still allow requests bearing the developer's privileged service account
+   * When a particular protection is set to this mode, that protection is
+   * enforced for the service or resource. It will reject any traffic not
+   * accompanied by an App Check token that it deems valid. There are some
+   * exceptions depending on the service; for example, some services will still
+   * allow requests bearing the developer's privileged service account
    * credentials without an App Check token. App Check metrics continue to be
    * collected to help you detect issues with your App Check integration and
    * monitor the composition of your callers. While the service is protected by
-   * App Check, other applicable protections, such as user authorization,
-   * continue to be enforced at the same time. Use caution when choosing to
-   * enforce App Check protections. If your users have not updated to a version
-   * of your app that meets the requirements of the relevant App Check
-   * protection, their app may stop working. App Check metrics can help you
-   * decide whether to enforce App Check on your services and resources. If your
-   * app has not launched yet, you should enable enforcement as soon as you
+   * App Check, other applicable protections outside of App check, such as user
+   * authorization, continue to be applied at the same time. Use caution when
+   * choosing to enforce App Check protections. If your users have not updated
+   * to a version of your app that meets the requirements of the relevant App
+   * Check protection, their app may stop working. App Check metrics can help
+   * you decide when to enforce App Check on your services and resources. If
+   * your app has not launched yet, you should enable enforcement as soon as you
    * verify that your App Check implementation is correct, since there are no
    * outdated clients in use. Some services require certain conditions to be met
    * before they will work with App Check, such as requiring you to upgrade to a
@@ -66,8 +68,8 @@ class GoogleFirebaseAppcheckV1ResourcePolicy extends \Google\Model
    */
   public const ENFORCEMENT_MODE_ENFORCED = 'ENFORCED';
   /**
-   * Required. The App Check enforcement mode for this resource. This will
-   * override the App Check overall EnforcementMode setting on the service.
+   * Required. The baseline protection EnforcementMode for this resource. This
+   * will override the service-level baseline protection EnforcementMode.
    *
    * @var string
    */
@@ -114,8 +116,8 @@ class GoogleFirebaseAppcheckV1ResourcePolicy extends \Google\Model
   public $updateTime;
 
   /**
-   * Required. The App Check enforcement mode for this resource. This will
-   * override the App Check overall EnforcementMode setting on the service.
+   * Required. The baseline protection EnforcementMode for this resource. This
+   * will override the service-level baseline protection EnforcementMode.
    *
    * Accepted values: OFF, UNENFORCED, ENFORCED
    *
