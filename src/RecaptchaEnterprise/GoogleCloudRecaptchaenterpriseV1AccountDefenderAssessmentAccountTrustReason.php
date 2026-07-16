@@ -34,6 +34,16 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReaso
    */
   public const REASON_ACCOUNT_HISTORY_REPUTABLE = 'ACCOUNT_HISTORY_REPUTABLE';
   /**
+   * The identity shows a global pattern of reputable activity based on
+   * `userInfo` and associated identifiers.
+   */
+  public const REASON_IDENTITY_GLOBAL_ACTIVITY_REPUTABLE = 'IDENTITY_GLOBAL_ACTIVITY_REPUTABLE';
+  /**
+   * The identity shows a long-standing history of reputable activity based on
+   * `userInfo` and associated identifiers.
+   */
+  public const REASON_IDENTITY_HISTORY_REPUTABLE = 'IDENTITY_HISTORY_REPUTABLE';
+  /**
    * Output only. A trust reason associated with this request.
    *
    * @var string
@@ -44,7 +54,8 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReaso
    * Output only. A trust reason associated with this request.
    *
    * Accepted values: TRUST_REASON_UNSPECIFIED, PROFILE_MATCH,
-   * ACCOUNT_HISTORY_REPUTABLE
+   * ACCOUNT_HISTORY_REPUTABLE, IDENTITY_GLOBAL_ACTIVITY_REPUTABLE,
+   * IDENTITY_HISTORY_REPUTABLE
    *
    * @param self::REASON_* $reason
    */

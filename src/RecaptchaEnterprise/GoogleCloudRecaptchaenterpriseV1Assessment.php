@@ -42,6 +42,8 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
   public $name;
   protected $phoneFraudAssessmentType = GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment::class;
   protected $phoneFraudAssessmentDataType = '';
+  protected $policyEvaluationType = GoogleCloudRecaptchaenterpriseV1PolicyEvaluation::class;
+  protected $policyEvaluationDataType = '';
   protected $privatePasswordLeakVerificationType = GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification::class;
   protected $privatePasswordLeakVerificationDataType = '';
   protected $riskAnalysisType = GoogleCloudRecaptchaenterpriseV1RiskAnalysis::class;
@@ -50,7 +52,7 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
   protected $tokenPropertiesDataType = '';
 
   /**
-   * Output only. Assessment returned by account defender when an account
+   * Output only. Assessment returned by Account defense when an account
    * identifier is provided.
    *
    * @param GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment $accountDefenderAssessment
@@ -187,8 +189,7 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
   }
   /**
    * Output only. Assessment returned when a site key, a token, and a phone
-   * number as `user_id` are provided. Account defender and SMS toll fraud
-   * protection need to be enabled.
+   * number as `user_id` are provided. SMS defense needs to be enabled.
    *
    * @param GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment $phoneFraudAssessment
    */
@@ -202,6 +203,23 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
   public function getPhoneFraudAssessment()
   {
     return $this->phoneFraudAssessment;
+  }
+  /**
+   * Output only. Provides information about the policy evaluation for this
+   * assessment.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1PolicyEvaluation $policyEvaluation
+   */
+  public function setPolicyEvaluation(GoogleCloudRecaptchaenterpriseV1PolicyEvaluation $policyEvaluation)
+  {
+    $this->policyEvaluation = $policyEvaluation;
+  }
+  /**
+   * @return GoogleCloudRecaptchaenterpriseV1PolicyEvaluation
+   */
+  public function getPolicyEvaluation()
+  {
+    return $this->policyEvaluation;
   }
   /**
    * Optional. The private password leak verification field contains the
