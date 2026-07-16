@@ -38,7 +38,7 @@ class ActiveDirectory extends \Google\Model
    */
   public $dnsAddress;
   /**
-   * Optional. Human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as `example.com`.
    *
    * @var string
    */
@@ -79,7 +79,7 @@ class ActiveDirectory extends \Google\Model
     return $this->dnsAddress;
   }
   /**
-   * Optional. Human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as `example.com`.
    *
    * @param string $domain
    */
