@@ -20,43 +20,45 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1Service extends \Google\Model
 {
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource, nor are App Check metrics collected. Though the relevant App
-   * Check protection is not applied, other applicable protections, such as user
-   * authorization, are still enforced. An unconfigured protection is in this
-   * mode by default.
+   * When a particular protection is set to this mode, that protection is not
+   * applied for the service or resource, nor are metrics related to that
+   * protection collected. Though the relevant App Check protection is not
+   * applied, other applicable protections outside of App Check, such as user
+   * authorization, are still applied. An unconfigured EnforcementMode is in
+   * this mode by default.
    */
   public const ENFORCEMENT_MODE_OFF = 'OFF';
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource. App Check metrics are collected to help you decide when to turn
-   * on enforcement. These metrics will show the portion of traffic that is
-   * deemed invalid by the relevant App Check protection, but that traffic will
-   * not be rejected until you turn on enforcement. Though the relevant App
-   * Check protection is not enforced, other applicable protections, such as
-   * user authorization, are still enforced. Some services require certain
-   * conditions to be met before they will work with App Check, such as
-   * requiring you to upgrade to a specific service tier. Until those
-   * requirements are met for a service, this `UNENFORCED` setting will have no
-   * effect and App Check will not work with that service.
+   * When a particular protection is set to this mode, that protection is not
+   * enforced for the service or resource. Metrics related to that protection
+   * are collected to help you decide when to turn on enforcement. These metrics
+   * will show the portion of traffic that is deemed invalid by that protection,
+   * but that traffic will not be rejected until you turn on enforcement. This
+   * `UNENFORCED` mode is also known as monitoring-only mode. Though the
+   * relevant App Check protection is not enforced, other applicable protections
+   * outside of App Check, such as user authorization, are still applied. Some
+   * services require certain conditions to be met before they will work with
+   * App Check, such as requiring you to upgrade to a specific service tier.
+   * Until those requirements are met for a service, this `UNENFORCED` setting
+   * will have no effect and App Check will not work with that service.
    */
   public const ENFORCEMENT_MODE_UNENFORCED = 'UNENFORCED';
   /**
-   * The relevant App Check protection is enforced for the service or resource.
-   * The service or resource will reject any traffic not accompanied by an App
-   * Check token that is deemded valid by the relevant protection. There are
-   * some exceptions depending on the service; for example, some services will
-   * still allow requests bearing the developer's privileged service account
+   * When a particular protection is set to this mode, that protection is
+   * enforced for the service or resource. It will reject any traffic not
+   * accompanied by an App Check token that it deems valid. There are some
+   * exceptions depending on the service; for example, some services will still
+   * allow requests bearing the developer's privileged service account
    * credentials without an App Check token. App Check metrics continue to be
    * collected to help you detect issues with your App Check integration and
    * monitor the composition of your callers. While the service is protected by
-   * App Check, other applicable protections, such as user authorization,
-   * continue to be enforced at the same time. Use caution when choosing to
-   * enforce App Check protections. If your users have not updated to a version
-   * of your app that meets the requirements of the relevant App Check
-   * protection, their app may stop working. App Check metrics can help you
-   * decide whether to enforce App Check on your services and resources. If your
-   * app has not launched yet, you should enable enforcement as soon as you
+   * App Check, other applicable protections outside of App check, such as user
+   * authorization, continue to be applied at the same time. Use caution when
+   * choosing to enforce App Check protections. If your users have not updated
+   * to a version of your app that meets the requirements of the relevant App
+   * Check protection, their app may stop working. App Check metrics can help
+   * you decide when to enforce App Check on your services and resources. If
+   * your app has not launched yet, you should enable enforcement as soon as you
    * verify that your App Check implementation is correct, since there are no
    * outdated clients in use. Some services require certain conditions to be met
    * before they will work with App Check, such as requiring you to upgrade to a
@@ -66,43 +68,45 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
    */
   public const ENFORCEMENT_MODE_ENFORCED = 'ENFORCED';
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource, nor are App Check metrics collected. Though the relevant App
-   * Check protection is not applied, other applicable protections, such as user
-   * authorization, are still enforced. An unconfigured protection is in this
-   * mode by default.
+   * When a particular protection is set to this mode, that protection is not
+   * applied for the service or resource, nor are metrics related to that
+   * protection collected. Though the relevant App Check protection is not
+   * applied, other applicable protections outside of App Check, such as user
+   * authorization, are still applied. An unconfigured EnforcementMode is in
+   * this mode by default.
    */
   public const REPLAY_PROTECTION_OFF = 'OFF';
   /**
-   * The relevant App Check protection is not enforced for the service or
-   * resource. App Check metrics are collected to help you decide when to turn
-   * on enforcement. These metrics will show the portion of traffic that is
-   * deemed invalid by the relevant App Check protection, but that traffic will
-   * not be rejected until you turn on enforcement. Though the relevant App
-   * Check protection is not enforced, other applicable protections, such as
-   * user authorization, are still enforced. Some services require certain
-   * conditions to be met before they will work with App Check, such as
-   * requiring you to upgrade to a specific service tier. Until those
-   * requirements are met for a service, this `UNENFORCED` setting will have no
-   * effect and App Check will not work with that service.
+   * When a particular protection is set to this mode, that protection is not
+   * enforced for the service or resource. Metrics related to that protection
+   * are collected to help you decide when to turn on enforcement. These metrics
+   * will show the portion of traffic that is deemed invalid by that protection,
+   * but that traffic will not be rejected until you turn on enforcement. This
+   * `UNENFORCED` mode is also known as monitoring-only mode. Though the
+   * relevant App Check protection is not enforced, other applicable protections
+   * outside of App Check, such as user authorization, are still applied. Some
+   * services require certain conditions to be met before they will work with
+   * App Check, such as requiring you to upgrade to a specific service tier.
+   * Until those requirements are met for a service, this `UNENFORCED` setting
+   * will have no effect and App Check will not work with that service.
    */
   public const REPLAY_PROTECTION_UNENFORCED = 'UNENFORCED';
   /**
-   * The relevant App Check protection is enforced for the service or resource.
-   * The service or resource will reject any traffic not accompanied by an App
-   * Check token that is deemded valid by the relevant protection. There are
-   * some exceptions depending on the service; for example, some services will
-   * still allow requests bearing the developer's privileged service account
+   * When a particular protection is set to this mode, that protection is
+   * enforced for the service or resource. It will reject any traffic not
+   * accompanied by an App Check token that it deems valid. There are some
+   * exceptions depending on the service; for example, some services will still
+   * allow requests bearing the developer's privileged service account
    * credentials without an App Check token. App Check metrics continue to be
    * collected to help you detect issues with your App Check integration and
    * monitor the composition of your callers. While the service is protected by
-   * App Check, other applicable protections, such as user authorization,
-   * continue to be enforced at the same time. Use caution when choosing to
-   * enforce App Check protections. If your users have not updated to a version
-   * of your app that meets the requirements of the relevant App Check
-   * protection, their app may stop working. App Check metrics can help you
-   * decide whether to enforce App Check on your services and resources. If your
-   * app has not launched yet, you should enable enforcement as soon as you
+   * App Check, other applicable protections outside of App check, such as user
+   * authorization, continue to be applied at the same time. Use caution when
+   * choosing to enforce App Check protections. If your users have not updated
+   * to a version of your app that meets the requirements of the relevant App
+   * Check protection, their app may stop working. App Check metrics can help
+   * you decide when to enforce App Check on your services and resources. If
+   * your app has not launched yet, you should enable enforcement as soon as you
    * verify that your App Check implementation is correct, since there are no
    * outdated clients in use. Some services require certain conditions to be met
    * before they will work with App Check, such as requiring you to upgrade to a
@@ -112,7 +116,7 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
    */
   public const REPLAY_PROTECTION_ENFORCED = 'ENFORCED';
   /**
-   * Required. The App Check enforcement mode for this service.
+   * Required. The baseline protection EnforcementMode for this service.
    *
    * @var string
    */
@@ -130,25 +134,32 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
    * Required. The relative resource name of the service configuration object,
    * in the format: ``` projects/{project_number}/services/{service_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently,
-   * the following service IDs are supported: * `firebasestorage.googleapis.com`
-   * (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com` (Firebase
-   * Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
-   * `oauth2.googleapis.com` (Google Identity for iOS)
+   * the following service IDs are supported. Firebase and Google Cloud
+   * services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+   * `firestore.googleapis.com` (Cloud Firestore) *
+   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
+   * `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform
+   * services: * `maps-backend.googleapis.com` (Maps JavaScript API) *
+   * `places.googleapis.com` (Places API (New)) Other supported Google services:
+   * * `oauth2.googleapis.com` (Google Identity for iOS)
    *
    * @var string
    */
   public $name;
   /**
-   * Optional. The replay protection enforcement mode for this service. Note
-   * that this field cannot be set to a level higher than the overall App Check
-   * enforcement mode. For example, if the overall App Check enforcement mode is
+   * Optional. The replay protection EnforcementMode for this service. Note that
+   * this field cannot be set to a level higher than that of baseline
+   * protection. For example, if the enforcement mode for baseline protection is
    * set to `UNENFORCED`, this field cannot be set to `ENFORCED`. In order to
-   * enforce replay protection, you must first enforce App Check. An HTTP 400
-   * error will be returned in this case. By default, this field is set to
-   * `OFF`. Setting this field to `UNENFORCED` or `ENFORCED` is considered
-   * opting into replay protection. Once opted in, requests to your protected
-   * services may experience higher latency. To opt out of replay protection
-   * after opting in, set this field to `OFF`.
+   * enforce replay protection, you must first enforce App Check's baseline
+   * protection. An HTTP 400 error will be returned in this case. By default,
+   * this field is set to `OFF`. Setting this field to `UNENFORCED` or
+   * `ENFORCED` is considered opting into replay protection. Opting in can
+   * impact your requests by adding some latency and sometimes cost (depending
+   * on your attestation provider). To opt out of replay protection after opting
+   * in, set this field to `OFF`.
    *
    * @var string
    */
@@ -162,7 +173,7 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
   public $updateTime;
 
   /**
-   * Required. The App Check enforcement mode for this service.
+   * Required. The baseline protection EnforcementMode for this service.
    *
    * Accepted values: OFF, UNENFORCED, ENFORCED
    *
@@ -202,10 +213,16 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
    * Required. The relative resource name of the service configuration object,
    * in the format: ``` projects/{project_number}/services/{service_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently,
-   * the following service IDs are supported: * `firebasestorage.googleapis.com`
-   * (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com` (Firebase
-   * Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
-   * `oauth2.googleapis.com` (Google Identity for iOS)
+   * the following service IDs are supported. Firebase and Google Cloud
+   * services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+   * `firestore.googleapis.com` (Cloud Firestore) *
+   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
+   * `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform
+   * services: * `maps-backend.googleapis.com` (Maps JavaScript API) *
+   * `places.googleapis.com` (Places API (New)) Other supported Google services:
+   * * `oauth2.googleapis.com` (Google Identity for iOS)
    *
    * @param string $name
    */
@@ -221,16 +238,17 @@ class GoogleFirebaseAppcheckV1Service extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The replay protection enforcement mode for this service. Note
-   * that this field cannot be set to a level higher than the overall App Check
-   * enforcement mode. For example, if the overall App Check enforcement mode is
+   * Optional. The replay protection EnforcementMode for this service. Note that
+   * this field cannot be set to a level higher than that of baseline
+   * protection. For example, if the enforcement mode for baseline protection is
    * set to `UNENFORCED`, this field cannot be set to `ENFORCED`. In order to
-   * enforce replay protection, you must first enforce App Check. An HTTP 400
-   * error will be returned in this case. By default, this field is set to
-   * `OFF`. Setting this field to `UNENFORCED` or `ENFORCED` is considered
-   * opting into replay protection. Once opted in, requests to your protected
-   * services may experience higher latency. To opt out of replay protection
-   * after opting in, set this field to `OFF`.
+   * enforce replay protection, you must first enforce App Check's baseline
+   * protection. An HTTP 400 error will be returned in this case. By default,
+   * this field is set to `OFF`. Setting this field to `UNENFORCED` or
+   * `ENFORCED` is considered opting into replay protection. Opting in can
+   * impact your requests by adding some latency and sometimes cost (depending
+   * on your attestation provider). To opt out of replay protection after opting
+   * in, set this field to `OFF`.
    *
    * Accepted values: OFF, UNENFORCED, ENFORCED
    *

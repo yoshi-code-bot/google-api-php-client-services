@@ -27,7 +27,6 @@ use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1ExchangeDeviceCheckT
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1ExchangePlayIntegrityTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1ExchangeRecaptchaV3TokenRequest;
-use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1ExchangeSafetyNetTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1GenerateAppAttestChallengeRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1GenerateAppAttestChallengeResponse;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1GeneratePlayIntegrityChallengeRequest;
@@ -215,28 +214,6 @@ class ProjectsApps extends \Google\Service\Resource
     $params = ['app' => $app, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('exchangeRecaptchaV3Token', [$params], GoogleFirebaseAppcheckV1AppCheckToken::class);
-  }
-  /**
-   * Validates a [SafetyNet
-   * token](https://developer.android.com/training/safetynet/attestation#request-
-   * attestation-step). If valid, returns an AppCheckToken.
-   * (apps.exchangeSafetyNetToken)
-   *
-   * @param string $app Required. The relative resource name of the Android app,
-   * in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary,
-   * the `project_number` element can be replaced with the project ID of the
-   * Firebase project. Learn more about using project identifiers in Google's [AIP
-   * 2510](https://google.aip.dev/cloud/2510) standard.
-   * @param GoogleFirebaseAppcheckV1ExchangeSafetyNetTokenRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleFirebaseAppcheckV1AppCheckToken
-   * @throws \Google\Service\Exception
-   */
-  public function exchangeSafetyNetToken($app, GoogleFirebaseAppcheckV1ExchangeSafetyNetTokenRequest $postBody, $optParams = [])
-  {
-    $params = ['app' => $app, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('exchangeSafetyNetToken', [$params], GoogleFirebaseAppcheckV1AppCheckToken::class);
   }
   /**
    * Generates a challenge that protects the integrity of an immediately following
