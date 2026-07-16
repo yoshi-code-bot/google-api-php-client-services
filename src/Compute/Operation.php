@@ -19,8 +19,17 @@ namespace Google\Service\Compute;
 
 class Operation extends \Google\Collection
 {
+  /**
+   * The operation has completed processing successfully or with an error.
+   */
   public const STATUS_DONE = 'DONE';
+  /**
+   * The operation is waiting to be processed.
+   */
   public const STATUS_PENDING = 'PENDING';
+  /**
+   * The operation is actively being processed.
+   */
   public const STATUS_RUNNING = 'RUNNING';
   protected $collection_key = 'warnings';
   /**
