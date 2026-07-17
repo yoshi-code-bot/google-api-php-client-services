@@ -17,7 +17,7 @@
 
 namespace Google\Service\ServiceUsage;
 
-class Analysis extends \Google\Model
+class GoogleApiServiceusageV2alphaAnalysis extends \Google\Model
 {
   /**
    * Unspecified analysis type. Do not use.
@@ -31,7 +31,11 @@ class Analysis extends \Google\Model
    * The analysis of service resource usage.
    */
   public const ANALYSIS_TYPE_ANALYSIS_TYPE_RESOURCE_USAGE = 'ANALYSIS_TYPE_RESOURCE_USAGE';
-  protected $analysisResultType = AnalysisResult::class;
+  /**
+   * The analysis of service resource existence.
+   */
+  public const ANALYSIS_TYPE_ANALYSIS_TYPE_RESOURCE_EXISTENCE = 'ANALYSIS_TYPE_RESOURCE_EXISTENCE';
+  protected $analysisResultType = GoogleApiServiceusageV2alphaAnalysisResult::class;
   protected $analysisResultDataType = '';
   /**
    * Output only. The type of analysis.
@@ -57,14 +61,14 @@ class Analysis extends \Google\Model
   /**
    * Output only. Analysis result of updating a policy.
    *
-   * @param AnalysisResult $analysisResult
+   * @param GoogleApiServiceusageV2alphaAnalysisResult $analysisResult
    */
-  public function setAnalysisResult(AnalysisResult $analysisResult)
+  public function setAnalysisResult(GoogleApiServiceusageV2alphaAnalysisResult $analysisResult)
   {
     $this->analysisResult = $analysisResult;
   }
   /**
-   * @return AnalysisResult
+   * @return GoogleApiServiceusageV2alphaAnalysisResult
    */
   public function getAnalysisResult()
   {
@@ -74,7 +78,7 @@ class Analysis extends \Google\Model
    * Output only. The type of analysis.
    *
    * Accepted values: ANALYSIS_TYPE_UNSPECIFIED, ANALYSIS_TYPE_DEPENDENCY,
-   * ANALYSIS_TYPE_RESOURCE_USAGE
+   * ANALYSIS_TYPE_RESOURCE_USAGE, ANALYSIS_TYPE_RESOURCE_EXISTENCE
    *
    * @param self::ANALYSIS_TYPE_* $analysisType
    */
@@ -126,4 +130,4 @@ class Analysis extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Analysis::class, 'Google_Service_ServiceUsage_Analysis');
+class_alias(GoogleApiServiceusageV2alphaAnalysis::class, 'Google_Service_ServiceUsage_GoogleApiServiceusageV2alphaAnalysis');
