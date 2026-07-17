@@ -90,6 +90,8 @@ class QueryDatabaseResourceGroupsRequest extends \Google\Collection
   public $parent;
   protected $signalFiltersType = SignalFilter::class;
   protected $signalFiltersDataType = 'array';
+  protected $signalProductsFiltersType = SignalProductsFilters::class;
+  protected $signalProductsFiltersDataType = 'array';
   protected $signalTypeGroupsType = SignalTypeGroup::class;
   protected $signalTypeGroupsDataType = 'array';
 
@@ -227,6 +229,23 @@ class QueryDatabaseResourceGroupsRequest extends \Google\Collection
   public function getSignalFilters()
   {
     return $this->signalFilters;
+  }
+  /**
+   * Optional. Filters based on signal and product. The filter list will be ORed
+   * across pairs and ANDed within a signal and products pair.
+   *
+   * @param SignalProductsFilters[] $signalProductsFilters
+   */
+  public function setSignalProductsFilters($signalProductsFilters)
+  {
+    $this->signalProductsFilters = $signalProductsFilters;
+  }
+  /**
+   * @return SignalProductsFilters[]
+   */
+  public function getSignalProductsFilters()
+  {
+    return $this->signalProductsFilters;
   }
   /**
    * Optional. Groups of signal types that are requested.
