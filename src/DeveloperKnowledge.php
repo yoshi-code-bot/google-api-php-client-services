@@ -39,6 +39,7 @@ class DeveloperKnowledge extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $documents;
+  public $v1;
   public $rootUrlTemplate;
 
   /**
@@ -113,6 +114,20 @@ class DeveloperKnowledge extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->v1 = new DeveloperKnowledge\Resource\V1(
+        $this,
+        $this->serviceName,
+        'v1',
+        [
+          'methods' => [
+            'answerQuery' => [
+              'path' => 'v1:answerQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]

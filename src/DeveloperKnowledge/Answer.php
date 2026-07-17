@@ -17,17 +17,22 @@
 
 namespace Google\Service\DeveloperKnowledge;
 
-class Answer extends \Google\Model
+class Answer extends \Google\Collection
 {
+  protected $collection_key = 'references';
   /**
-   * The text of the answer.
+   * Contains the text of the answer.
    *
    * @var string
    */
   public $answerText;
+  protected $citationsType = AnswerCitation::class;
+  protected $citationsDataType = 'array';
+  protected $referencesType = AnswerReference::class;
+  protected $referencesDataType = 'array';
 
   /**
-   * The text of the answer.
+   * Contains the text of the answer.
    *
    * @param string $answerText
    */
@@ -41,6 +46,38 @@ class Answer extends \Google\Model
   public function getAnswerText()
   {
     return $this->answerText;
+  }
+  /**
+   * Output only. Contains citations for the answer.
+   *
+   * @param AnswerCitation[] $citations
+   */
+  public function setCitations($citations)
+  {
+    $this->citations = $citations;
+  }
+  /**
+   * @return AnswerCitation[]
+   */
+  public function getCitations()
+  {
+    return $this->citations;
+  }
+  /**
+   * Output only. Contains references for the answer.
+   *
+   * @param AnswerReference[] $references
+   */
+  public function setReferences($references)
+  {
+    $this->references = $references;
+  }
+  /**
+   * @return AnswerReference[]
+   */
+  public function getReferences()
+  {
+    return $this->references;
   }
 }
 
