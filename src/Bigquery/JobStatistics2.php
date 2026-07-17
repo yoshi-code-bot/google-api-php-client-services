@@ -115,6 +115,8 @@ class JobStatistics2 extends \Google\Collection
    * @var string
    */
   public $numDmlAffectedRows;
+  protected $objectStorageStatsType = ObjectStorageStats::class;
+  protected $objectStorageStatsDataType = 'array';
   protected $performanceInsightsType = PerformanceInsights::class;
   protected $performanceInsightsDataType = '';
   protected $queryInfoType = QueryInfo::class;
@@ -764,6 +766,23 @@ class JobStatistics2 extends \Google\Collection
   public function getNumDmlAffectedRows()
   {
     return $this->numDmlAffectedRows;
+  }
+  /**
+   * Output only. Storage and caching statistics per cloud provider for queries
+   * over object storage.
+   *
+   * @param ObjectStorageStats[] $objectStorageStats
+   */
+  public function setObjectStorageStats($objectStorageStats)
+  {
+    $this->objectStorageStats = $objectStorageStats;
+  }
+  /**
+   * @return ObjectStorageStats[]
+   */
+  public function getObjectStorageStats()
+  {
+    return $this->objectStorageStats;
   }
   /**
    * Output only. Performance insights.

@@ -81,6 +81,12 @@ class JobStatistics extends \Google\Collection
    * @var string
    */
   public $finalExecutionDurationMs;
+  /**
+   * Output only. Regions where the global query accesses data.
+   *
+   * @var string[]
+   */
+  public $globalQueryRemoteRegions;
   protected $loadType = JobStatistics3::class;
   protected $loadDataType = '';
   /**
@@ -89,6 +95,8 @@ class JobStatistics extends \Google\Collection
    * @var string
    */
   public $numChildJobs;
+  protected $parentGlobalQueryJobType = JobReference::class;
+  protected $parentGlobalQueryJobDataType = '';
   /**
    * Output only. If this is a child job, specifies the job ID of the parent.
    *
@@ -282,6 +290,22 @@ class JobStatistics extends \Google\Collection
     return $this->finalExecutionDurationMs;
   }
   /**
+   * Output only. Regions where the global query accesses data.
+   *
+   * @param string[] $globalQueryRemoteRegions
+   */
+  public function setGlobalQueryRemoteRegions($globalQueryRemoteRegions)
+  {
+    $this->globalQueryRemoteRegions = $globalQueryRemoteRegions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getGlobalQueryRemoteRegions()
+  {
+    return $this->globalQueryRemoteRegions;
+  }
+  /**
    * Output only. Statistics for a load job.
    *
    * @param JobStatistics3 $load
@@ -312,6 +336,22 @@ class JobStatistics extends \Google\Collection
   public function getNumChildJobs()
   {
     return $this->numChildJobs;
+  }
+  /**
+   * Output only. The global query that created this job.
+   *
+   * @param JobReference $parentGlobalQueryJob
+   */
+  public function setParentGlobalQueryJob(JobReference $parentGlobalQueryJob)
+  {
+    $this->parentGlobalQueryJob = $parentGlobalQueryJob;
+  }
+  /**
+   * @return JobReference
+   */
+  public function getParentGlobalQueryJob()
+  {
+    return $this->parentGlobalQueryJob;
   }
   /**
    * Output only. If this is a child job, specifies the job ID of the parent.
