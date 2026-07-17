@@ -26,8 +26,6 @@ class BatchWriteRequest extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  protected $requestOptionsType = RequestOptions::class;
-  protected $requestOptionsDataType = '';
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
 
@@ -46,22 +44,6 @@ class BatchWriteRequest extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
-  }
-  /**
-   * Optional. The request options for this request.
-   *
-   * @param RequestOptions $requestOptions
-   */
-  public function setRequestOptions(RequestOptions $requestOptions)
-  {
-    $this->requestOptions = $requestOptions;
-  }
-  /**
-   * @return RequestOptions
-   */
-  public function getRequestOptions()
-  {
-    return $this->requestOptions;
   }
   /**
    * The writes to apply. Method does not apply writes atomically and does not
