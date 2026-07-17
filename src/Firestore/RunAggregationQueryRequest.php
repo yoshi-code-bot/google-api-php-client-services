@@ -32,8 +32,6 @@ class RunAggregationQueryRequest extends \Google\Model
    * @var string
    */
   public $readTime;
-  protected $requestOptionsType = RequestOptions::class;
-  protected $requestOptionsDataType = '';
   protected $structuredAggregationQueryType = StructuredAggregationQuery::class;
   protected $structuredAggregationQueryDataType = '';
   /**
@@ -96,22 +94,6 @@ class RunAggregationQueryRequest extends \Google\Model
   public function getReadTime()
   {
     return $this->readTime;
-  }
-  /**
-   * Optional. The request options for the request.
-   *
-   * @param RequestOptions $requestOptions
-   */
-  public function setRequestOptions(RequestOptions $requestOptions)
-  {
-    $this->requestOptions = $requestOptions;
-  }
-  /**
-   * @return RequestOptions
-   */
-  public function getRequestOptions()
-  {
-    return $this->requestOptions;
   }
   /**
    * An aggregation query.
