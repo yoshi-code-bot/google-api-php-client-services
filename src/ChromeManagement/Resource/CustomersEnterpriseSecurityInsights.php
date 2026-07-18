@@ -155,8 +155,9 @@ class CustomersEnterpriseSecurityInsights extends \Google\Service\Resource
     return $this->call('queryContentTransfersBreakdowns', [$params], GoogleChromeManagementVersionsV1QueryContentTransfersBreakdownsResponse::class);
   }
   /**
-   * Returns a high-level summary of URL visits for a given customer.
-   * (securityInsights.queryUrlVisits)
+   * Returns a high-level summary of URL visits for a given customer. Requires a
+   * Chrome Enterprise Premium subscription. If the customer does not have this
+   * subscription, query results will be empty. (securityInsights.queryUrlVisits)
    *
    * @param string $customer Required. The customer ID in the format
    * "customers/{customer_id}".
@@ -181,6 +182,8 @@ class CustomersEnterpriseSecurityInsights extends \Google\Service\Resource
   }
   /**
    * Returns summaries of URL visits for a given metric and breakdown dimension.
+   * Requires a Chrome Enterprise Premium subscription. If the customer does not
+   * have this subscription, query results will be empty.
    * (securityInsights.queryUrlVisitsBreakdowns)
    *
    * @param string $customer Required. The customer ID in the format
