@@ -23,6 +23,13 @@ class GooglePrivacyDlpV2InfoTypeCondition extends \Google\Model
   protected $anyInfoTypeDataType = '';
   protected $infoTypesType = GooglePrivacyDlpV2InfoTypes::class;
   protected $infoTypesDataType = '';
+  /**
+   * Optional. The minimum total number of findings of all matching info types
+   * required for this condition to evaluate to true. Defaults to 1 if unset.
+   *
+   * @var string
+   */
+  public $minCount;
 
   /**
    * match any info types.
@@ -55,6 +62,23 @@ class GooglePrivacyDlpV2InfoTypeCondition extends \Google\Model
   public function getInfoTypes()
   {
     return $this->infoTypes;
+  }
+  /**
+   * Optional. The minimum total number of findings of all matching info types
+   * required for this condition to evaluate to true. Defaults to 1 if unset.
+   *
+   * @param string $minCount
+   */
+  public function setMinCount($minCount)
+  {
+    $this->minCount = $minCount;
+  }
+  /**
+   * @return string
+   */
+  public function getMinCount()
+  {
+    return $this->minCount;
   }
 }
 
