@@ -123,7 +123,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   public $type;
 
   /**
-   * Events that should occur after the job has completed.
+   * Output only. Events that should occur after the job has completed.
    *
    * @param GooglePrivacyDlpV2ActionDetails[] $actionDetails
    */
