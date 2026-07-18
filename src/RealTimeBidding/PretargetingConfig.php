@@ -46,10 +46,12 @@ class PretargetingConfig extends \Google\Collection
   public const STATE_SUSPENDED = 'SUSPENDED';
   protected $collection_key = 'invalidGeoIds';
   /**
-   * Targeting modes included by this config. A bid request must allow all the
-   * specified targeting modes. An unset value allows all bid requests to be
-   * sent, regardless of which targeting modes they allow.
+   * Deprecated: The value of this field no longer has any effect. Targeting
+   * modes included by this config. A bid request must allow all the specified
+   * targeting modes. An unset value allows all bid requests to be sent,
+   * regardless of which targeting modes they allow.
    *
+   * @deprecated
    * @var string[]
    */
   public $allowedUserTargetingModes;
@@ -189,10 +191,12 @@ class PretargetingConfig extends \Google\Collection
   protected $webTargetingDataType = '';
 
   /**
-   * Targeting modes included by this config. A bid request must allow all the
-   * specified targeting modes. An unset value allows all bid requests to be
-   * sent, regardless of which targeting modes they allow.
+   * Deprecated: The value of this field no longer has any effect. Targeting
+   * modes included by this config. A bid request must allow all the specified
+   * targeting modes. An unset value allows all bid requests to be sent,
+   * regardless of which targeting modes they allow.
    *
+   * @deprecated
    * @param string[] $allowedUserTargetingModes
    */
   public function setAllowedUserTargetingModes($allowedUserTargetingModes)
@@ -200,6 +204,7 @@ class PretargetingConfig extends \Google\Collection
     $this->allowedUserTargetingModes = $allowedUserTargetingModes;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getAllowedUserTargetingModes()
