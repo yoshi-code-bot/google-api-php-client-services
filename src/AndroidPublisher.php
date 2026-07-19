@@ -44,6 +44,7 @@ class AndroidPublisher extends \Google\Service
   public $applications_deviceTierConfigs;
   public $applications_tracks_releases;
   public $apprecovery;
+  public $appstoreappsreview;
   public $edits;
   public $edits_apks;
   public $edits_bundles;
@@ -265,6 +266,96 @@ class AndroidPublisher extends \Google\Service
                 'versionCode' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->appstoreappsreview = new AndroidPublisher\Resource\Appstoreappsreview(
+        $this,
+        $this->serviceName,
+        'appstoreappsreview',
+        [
+          'methods' => [
+            'createappstorehostedapp' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps:create',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateappstorehostedapp' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps:update',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateappstorehostedapppublishstatus' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}:updateAppStoreHostedAppPublishStatus',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'uploadapk' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/apks:upload',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'uploadappstoreapppolicydeclarationfile' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/policyDeclarationFiles:upload',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'uploadimage' => [
+              'path' => 'androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/images:upload',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appStorePackageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -2565,66 +2656,6 @@ class AndroidPublisher extends \Google\Service
               ],
             ],'defer' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'packageName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'subscriptionId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'token' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'packageName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'subscriptionId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'token' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'refund' => [
-              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'packageName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'subscriptionId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'token' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'revoke' => [
-              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke',
               'httpMethod' => 'POST',
               'parameters' => [
                 'packageName' => [
