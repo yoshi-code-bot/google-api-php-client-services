@@ -107,18 +107,6 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * Deprecated: Use line_items.latest_successful_order_id instead. The order id
-   * of the latest order associated with the purchase of the subscription. For
-   * autoRenewing subscription, this is the order id of signup order if it is
-   * not renewed yet, or the last recurring order id (success, pending, or
-   * declined order). For prepaid subscription, this is the order id associated
-   * with the queried purchase token.
-   *
-   * @deprecated
-   * @var string
-   */
-  public $latestOrderId;
   protected $lineItemsType = SubscriptionPurchaseLineItem::class;
   protected $lineItemsDataType = 'array';
   /**
@@ -268,29 +256,6 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
-  }
-  /**
-   * Deprecated: Use line_items.latest_successful_order_id instead. The order id
-   * of the latest order associated with the purchase of the subscription. For
-   * autoRenewing subscription, this is the order id of signup order if it is
-   * not renewed yet, or the last recurring order id (success, pending, or
-   * declined order). For prepaid subscription, this is the order id associated
-   * with the queried purchase token.
-   *
-   * @deprecated
-   * @param string $latestOrderId
-   */
-  public function setLatestOrderId($latestOrderId)
-  {
-    $this->latestOrderId = $latestOrderId;
-  }
-  /**
-   * @deprecated
-   * @return string
-   */
-  public function getLatestOrderId()
-  {
-    return $this->latestOrderId;
   }
   /**
    * Item-level info for a subscription purchase. The items in the same purchase
