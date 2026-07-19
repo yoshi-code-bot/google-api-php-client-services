@@ -50,6 +50,7 @@ class Networkconnectivity extends \Google\Service
   public $projects_locations_multicloudDataTransferConfigs_destinations;
   public $projects_locations_multicloudDataTransferSupportedServices;
   public $projects_locations_operations;
+  public $projects_locations_pscAuthorizationPolicies;
   public $projects_locations_regionalEndpoints;
   public $projects_locations_remoteTransportProfiles;
   public $projects_locations_serviceClasses;
@@ -1198,6 +1199,88 @@ class Networkconnectivity extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_pscAuthorizationPolicies = new Networkconnectivity\Resource\ProjectsLocationsPscAuthorizationPolicies(
+        $this,
+        $this->serviceName,
+        'pscAuthorizationPolicies',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/pscAuthorizationPolicies',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pscAuthorizationPolicyId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/pscAuthorizationPolicies',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
