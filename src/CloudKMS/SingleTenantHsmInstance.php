@@ -85,7 +85,7 @@ class SingleTenantHsmInstance extends \Google\Model
   /**
    * Optional. Immutable. Indicates whether key portability is enabled for the
    * SingleTenantHsmInstance. This can only be set at creation time. Key
-   * portability features are disabled by default and not yet available in GA.
+   * portability features are disabled by default.
    *
    * @var bool
    */
@@ -169,7 +169,7 @@ class SingleTenantHsmInstance extends \Google\Model
   /**
    * Optional. Immutable. Indicates whether key portability is enabled for the
    * SingleTenantHsmInstance. This can only be set at creation time. Key
-   * portability features are disabled by default and not yet available in GA.
+   * portability features are disabled by default.
    *
    * @param bool $keyPortabilityEnabled
    */
