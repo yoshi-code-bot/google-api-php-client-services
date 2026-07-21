@@ -17,34 +17,32 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1DeprovisionSemanticGovernancePolicyEngineRequest extends \Google\Model
+class CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig extends \Google\Model
 {
   /**
-   * Optional. If true, the operation bypass checks on current state and force
-   * the deprovisioning operation.
+   * Optional. If true, enable alignment.
    *
    * @var bool
    */
-  public $force;
+  public $enable;
 
   /**
-   * Optional. If true, the operation bypass checks on current state and force
-   * the deprovisioning operation.
+   * Optional. If true, enable alignment.
    *
-   * @param bool $force
+   * @param bool $enable
    */
-  public function setForce($force)
+  public function setEnable($enable)
   {
-    $this->force = $force;
+    $this->enable = $enable;
   }
   /**
    * @return bool
    */
-  public function getForce()
+  public function getEnable()
   {
-    return $this->force;
+    return $this->enable;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1DeprovisionSemanticGovernancePolicyEngineRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DeprovisionSemanticGovernancePolicyEngineRequest');
+class_alias(CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig');
