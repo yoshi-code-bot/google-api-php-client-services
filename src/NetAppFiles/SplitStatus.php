@@ -17,7 +17,7 @@
 
 namespace Google\Service\NetAppFiles;
 
-class CloneDetails extends \Google\Model
+class SplitStatus extends \Google\Model
 {
   /**
    * State is not specified.
@@ -36,85 +36,43 @@ class CloneDetails extends \Google\Model
    */
   public const SPLIT_STATE_SPLIT_STATE_FAILED = 'SPLIT_STATE_FAILED';
   /**
-   * Output only. Shared space in GiB. Determined at volume creation time based
-   * on size of source snapshot.
+   * Output only. The estimated progress percentage of the split operation
+   * (0-100). This is meaningful primarily when split_state is IN_PROGRESS.
    *
-   * @var string
+   * @var int
    */
-  public $sharedSpaceGib;
-  /**
-   * Output only. Specifies the full resource name of the source snapshot from
-   * which this volume was cloned. Format: projects/{project}/locations/{locatio
-   * n}/volumes/{volume}/snapshots/{snapshot}
-   *
-   * @var string
-   */
-  public $sourceSnapshot;
-  /**
-   * Output only. Full name of the source volume resource. Format:
-   * projects/{project}/locations/{location}/volumes/{volume}
-   *
-   * @var string
-   */
-  public $sourceVolume;
+  public $progressPercent;
   /**
    * Output only. The current state of the clone split operation.
    *
    * @var string
    */
   public $splitState;
+  /**
+   * Output only. Human-readable details about the current state. Mostly used
+   * for displaying error messages during split failure Examples: "Split in
+   * progress", "Error: insufficient capacity".
+   *
+   * @var string
+   */
+  public $stateDetails;
 
   /**
-   * Output only. Shared space in GiB. Determined at volume creation time based
-   * on size of source snapshot.
+   * Output only. The estimated progress percentage of the split operation
+   * (0-100). This is meaningful primarily when split_state is IN_PROGRESS.
    *
-   * @param string $sharedSpaceGib
+   * @param int $progressPercent
    */
-  public function setSharedSpaceGib($sharedSpaceGib)
+  public function setProgressPercent($progressPercent)
   {
-    $this->sharedSpaceGib = $sharedSpaceGib;
+    $this->progressPercent = $progressPercent;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getSharedSpaceGib()
+  public function getProgressPercent()
   {
-    return $this->sharedSpaceGib;
-  }
-  /**
-   * Output only. Specifies the full resource name of the source snapshot from
-   * which this volume was cloned. Format: projects/{project}/locations/{locatio
-   * n}/volumes/{volume}/snapshots/{snapshot}
-   *
-   * @param string $sourceSnapshot
-   */
-  public function setSourceSnapshot($sourceSnapshot)
-  {
-    $this->sourceSnapshot = $sourceSnapshot;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceSnapshot()
-  {
-    return $this->sourceSnapshot;
-  }
-  /**
-   * Output only. Full name of the source volume resource. Format:
-   * projects/{project}/locations/{location}/volumes/{volume}
-   *
-   * @param string $sourceVolume
-   */
-  public function setSourceVolume($sourceVolume)
-  {
-    $this->sourceVolume = $sourceVolume;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceVolume()
-  {
-    return $this->sourceVolume;
+    return $this->progressPercent;
   }
   /**
    * Output only. The current state of the clone split operation.
@@ -135,7 +93,25 @@ class CloneDetails extends \Google\Model
   {
     return $this->splitState;
   }
+  /**
+   * Output only. Human-readable details about the current state. Mostly used
+   * for displaying error messages during split failure Examples: "Split in
+   * progress", "Error: insufficient capacity".
+   *
+   * @param string $stateDetails
+   */
+  public function setStateDetails($stateDetails)
+  {
+    $this->stateDetails = $stateDetails;
+  }
+  /**
+   * @return string
+   */
+  public function getStateDetails()
+  {
+    return $this->stateDetails;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloneDetails::class, 'Google_Service_NetAppFiles_CloneDetails');
+class_alias(SplitStatus::class, 'Google_Service_NetAppFiles_SplitStatus');
