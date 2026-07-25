@@ -17,28 +17,34 @@
 
 namespace Google\Service\Dataproc;
 
-class AccessSparkApplicationNativeSqlQueryResponse extends \Google\Model
+class ComputeTuningConfigResponse extends \Google\Model
 {
-  protected $executionDataType = NativeSqlExecutionUiData::class;
-  protected $executionDataDataType = '';
+  /**
+   * Recommended Spark properties for the query (e.g.,
+   * {"spark.sql.shuffle.partitions": "500"}).
+   *
+   * @var string[]
+   */
+  public $recommendedProperties;
 
   /**
-   * Native SQL Execution Data
+   * Recommended Spark properties for the query (e.g.,
+   * {"spark.sql.shuffle.partitions": "500"}).
    *
-   * @param NativeSqlExecutionUiData $executionData
+   * @param string[] $recommendedProperties
    */
-  public function setExecutionData(NativeSqlExecutionUiData $executionData)
+  public function setRecommendedProperties($recommendedProperties)
   {
-    $this->executionData = $executionData;
+    $this->recommendedProperties = $recommendedProperties;
   }
   /**
-   * @return NativeSqlExecutionUiData
+   * @return string[]
    */
-  public function getExecutionData()
+  public function getRecommendedProperties()
   {
-    return $this->executionData;
+    return $this->recommendedProperties;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AccessSparkApplicationNativeSqlQueryResponse::class, 'Google_Service_Dataproc_AccessSparkApplicationNativeSqlQueryResponse');
+class_alias(ComputeTuningConfigResponse::class, 'Google_Service_Dataproc_ComputeTuningConfigResponse');
