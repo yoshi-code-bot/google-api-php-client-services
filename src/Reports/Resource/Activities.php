@@ -65,6 +65,11 @@ class Activities extends \Google\Service\Resource
    * GET...&applicationInfoFilter=oAuthClientId=%22clientId%22 ```
    * @opt_param string customerId The unique ID of the customer to retrieve data
    * for.
+   * @opt_param string deviceFilter Optional. Used to filter on the fields present
+   * in [`UserDeviceInfo`](#userdeviceinfo) message like `deviceId`, `deviceType`,
+   * and `deviceOsVersion`. **Usage** ``` GET...&deviceFilter=deviceId="123"
+   * GET...&deviceFilter=deviceType="ANDROID"
+   * GET...&deviceFilter=deviceOsVersion="14.0" ```
    * @opt_param string endTime Sets the end of the range of time shown in the
    * report. The date is in the RFC 3339 format, for example
    * 2010-10-28T10:26:35.000Z. The default value is the approximate time of the
