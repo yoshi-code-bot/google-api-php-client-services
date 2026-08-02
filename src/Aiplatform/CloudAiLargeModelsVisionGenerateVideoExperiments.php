@@ -54,6 +54,12 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    * @var array[]
    */
   public $customParameters;
+  /**
+   * Optional. Colorspace to be used for all EXR inputs.
+   *
+   * @var string
+   */
+  public $exrColorSpaceOverride;
   protected $humanPoseType = CloudAiLargeModelsVisionHumanPose::class;
   protected $humanPoseDataType = '';
   /**
@@ -220,6 +226,22 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getCustomParameters()
   {
     return $this->customParameters;
+  }
+  /**
+   * Optional. Colorspace to be used for all EXR inputs.
+   *
+   * @param string $exrColorSpaceOverride
+   */
+  public function setExrColorSpaceOverride($exrColorSpaceOverride)
+  {
+    $this->exrColorSpaceOverride = $exrColorSpaceOverride;
+  }
+  /**
+   * @return string
+   */
+  public function getExrColorSpaceOverride()
+  {
+    return $this->exrColorSpaceOverride;
   }
   /**
    * Human pose parameters for Pose Control
