@@ -20,6 +20,23 @@ namespace Google\Service\HangoutsChat;
 class SearchMessagesRequest extends \Google\Model
 {
   /**
+   * Represents the unspecified value.
+   */
+  public const MARKUP_SYNTAX_MARKUP_SYNTAX_UNSPECIFIED = 'MARKUP_SYNTAX_UNSPECIFIED';
+  /**
+   * Uses Google Chat's markup syntax. See
+   * https://developers.google.com/workspace/chat/format-messages#format-texts
+   * for more information.
+   */
+  public const MARKUP_SYNTAX_MARKUP_SYNTAX_CHAT = 'MARKUP_SYNTAX_CHAT';
+  /**
+   * Uses Markdown syntax. This syntax is based on the
+   * [CommonMark](https://commonmark.org/help/) specification, with additional
+   * extensions. See https://developers.google.com/workspace/chat/format-
+   * messages#format-texts for more information.
+   */
+  public const MARKUP_SYNTAX_MARKUP_SYNTAX_MARKDOWN = 'MARKUP_SYNTAX_MARKDOWN';
+  /**
    * The default / unset value. The API will default to the BASIC view.
    */
   public const VIEW_SEARCH_MESSAGES_VIEW_UNSPECIFIED = 'SEARCH_MESSAGES_VIEW_UNSPECIFIED';
@@ -119,6 +136,13 @@ class SearchMessagesRequest extends \Google\Model
    * @var string
    */
   public $filter;
+  /**
+   * Optional. Specifies the desired output syntax for the Chat message
+   * `formatted_text` field.
+   *
+   * @var string
+   */
+  public $markupSyntax;
   /**
    * Optional. How the results list is ordered. Supported attributes to order by
    * are: - `create_time`: Sorts the results by the time of the message
@@ -253,6 +277,26 @@ class SearchMessagesRequest extends \Google\Model
   public function getFilter()
   {
     return $this->filter;
+  }
+  /**
+   * Optional. Specifies the desired output syntax for the Chat message
+   * `formatted_text` field.
+   *
+   * Accepted values: MARKUP_SYNTAX_UNSPECIFIED, MARKUP_SYNTAX_CHAT,
+   * MARKUP_SYNTAX_MARKDOWN
+   *
+   * @param self::MARKUP_SYNTAX_* $markupSyntax
+   */
+  public function setMarkupSyntax($markupSyntax)
+  {
+    $this->markupSyntax = $markupSyntax;
+  }
+  /**
+   * @return self::MARKUP_SYNTAX_*
+   */
+  public function getMarkupSyntax()
+  {
+    return $this->markupSyntax;
   }
   /**
    * Optional. How the results list is ordered. Supported attributes to order by

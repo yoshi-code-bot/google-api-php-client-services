@@ -582,6 +582,10 @@ class HangoutsChat extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'markupSyntax' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/messages',
@@ -593,6 +597,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'markupSyntax' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
