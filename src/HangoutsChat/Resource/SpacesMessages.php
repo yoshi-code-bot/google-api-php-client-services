@@ -178,6 +178,9 @@ class SpacesMessages extends \Google\Service\Resource
    * (https://developers.google.com/workspace/chat/create-
    * messages#name_a_created_message).
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string markupSyntax Optional. Specifies the desired output syntax
+   * for the Chat message `formatted_text` field.
    * @return Message
    * @throws \Google\Service\Exception
    */
@@ -233,6 +236,8 @@ class SpacesMessages extends \Google\Service\Resource
    * "2013-01-01T00:00:00+00:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123
    * thread.name = spaces/AAAAAAAAAAA/threads/123 ``` Invalid queries are rejected
    * by the server with an `INVALID_ARGUMENT` error.
+   * @opt_param string markupSyntax Optional. Specifies the desired output syntax
+   * for the Chat message `formatted_text` field.
    * @opt_param string orderBy Optional. How the list of messages is ordered.
    * Specify a value to order by an ordering operation. Valid ordering operation
    * values are as follows: - `ASC` for ascending. - `DESC` for descending. The
