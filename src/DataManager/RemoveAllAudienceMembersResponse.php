@@ -17,11 +17,8 @@
 
 namespace Google\Service\DataManager;
 
-class IngestEventsResponse extends \Google\Collection
+class RemoveAllAudienceMembersResponse extends \Google\Model
 {
-  protected $collection_key = 'fieldWarnings';
-  protected $fieldWarningsType = FieldWarning::class;
-  protected $fieldWarningsDataType = 'array';
   /**
    * The auto-generated ID of the request.
    *
@@ -29,22 +26,6 @@ class IngestEventsResponse extends \Google\Collection
    */
   public $requestId;
 
-  /**
-   * Detailed row-level warnings with field paths.
-   *
-   * @param FieldWarning[] $fieldWarnings
-   */
-  public function setFieldWarnings($fieldWarnings)
-  {
-    $this->fieldWarnings = $fieldWarnings;
-  }
-  /**
-   * @return FieldWarning[]
-   */
-  public function getFieldWarnings()
-  {
-    return $this->fieldWarnings;
-  }
   /**
    * The auto-generated ID of the request.
    *
@@ -64,4 +45,4 @@ class IngestEventsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IngestEventsResponse::class, 'Google_Service_DataManager_IngestEventsResponse');
+class_alias(RemoveAllAudienceMembersResponse::class, 'Google_Service_DataManager_RemoveAllAudienceMembersResponse');
