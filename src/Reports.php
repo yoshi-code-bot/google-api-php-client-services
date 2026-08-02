@@ -103,6 +103,10 @@ class Reports extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'deviceFilter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'endTime' => [
                   'location' => 'query',
                   'type' => 'string',
