@@ -144,6 +144,8 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * @param V2Key $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string checkExistingUsage Optional. Defines the behavior for
+   * checking existing usage when updating a key.
    * @opt_param string updateMask The field mask specifies which fields to be
    * updated as part of this request. All other fields are ignored. Mutable fields
    * are: `display_name`, `restrictions`, and `annotations`. If an update mask is
