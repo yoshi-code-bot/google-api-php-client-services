@@ -187,6 +187,10 @@ class ApiKeysService extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'checkExistingUsage' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
