@@ -17,28 +17,36 @@
 
 namespace Google\Service\AccessContextManager;
 
-class Modifier extends \Google\Model
+class Project extends \Google\Model
 {
-  protected $addRequestHeaderType = AddRequestHeader::class;
-  protected $addRequestHeaderDataType = '';
+  /**
+   * The GCP project resource name. Format: "projects/{project_number}" (Only
+   * the numeric project name variation is supported). Example:
+   * "projects/1234567890"
+   *
+   * @var string
+   */
+  public $name;
 
   /**
-   * Adds an additional HTTP request header.
+   * The GCP project resource name. Format: "projects/{project_number}" (Only
+   * the numeric project name variation is supported). Example:
+   * "projects/1234567890"
    *
-   * @param AddRequestHeader $addRequestHeader
+   * @param string $name
    */
-  public function setAddRequestHeader(AddRequestHeader $addRequestHeader)
+  public function setName($name)
   {
-    $this->addRequestHeader = $addRequestHeader;
+    $this->name = $name;
   }
   /**
-   * @return AddRequestHeader
+   * @return string
    */
-  public function getAddRequestHeader()
+  public function getName()
   {
-    return $this->addRequestHeader;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Modifier::class, 'Google_Service_AccessContextManager_Modifier');
+class_alias(Project::class, 'Google_Service_AccessContextManager_Project');
