@@ -17,7 +17,7 @@
 
 namespace Google\Service\Playdeveloperreporting;
 
-class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest extends \Google\Collection
+class GooglePlayDeveloperReportingV1beta1QueryAnonRssAndSwapMemoryUsageMetricSetRequest extends \Google\Collection
 {
   /**
    * Unspecified User cohort. This will automatically choose the default value.
@@ -40,7 +40,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
   public const USER_COHORT_APP_TESTERS = 'APP_TESTERS';
   protected $collection_key = 'metrics';
   /**
-   * Optional. Dimensions to slice the data by. **Supported dimensions:** *
+   * Optional. * Dimensions to slice the data by. **Supported dimensions:** *
    * `apiLevel` (string): the API level of Android that was running on the
    * user's device, e.g., 26. * `versionCode` (int64): version of the app that
    * was running on the user's device. * `deviceModel` (string): unique
@@ -52,28 +52,27 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
    * device, e.g., PHONE. * `countryCode` (string): the country or region of the
    * user's device based on their IP address, represented as a 2-letter ISO-3166
    * code (e.g. US for the United States). * `deviceRamBucket` (int64): RAM of
-   * the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096 for 4-6GB). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip,
-   * e.g., Samsung. [Reference](https://developer.android.com/reference/android/
-   * os/Build#SOC_MANUFACTURER) * `deviceSocModel` (string): Model of the
-   * device's primary system-on-chip, e.g., "Exynos 2100". [Reference](https://d
-   * eveloper.android.com/reference/android/os/Build#SOC_MODEL) *
-   * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. *
-   * `deviceCpuModel` (string): Model of the device's CPU, e.g., "Kryo 240". *
-   * `deviceGpuMake` (string): Make of the device's GPU, e.g., ARM. *
-   * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
-   * `deviceGpuVersion` (string): Version of the device's GPU, e.g., T750. *
-   * `deviceVulkanVersion` (string): Vulkan version of the device, e.g.,
+   * the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung. *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip,
+   * e.g., "Exynos 2100". * `deviceCpuMake` (string): Make of the device's CPU,
+   * e.g., Qualcomm. * `deviceCpuModel` (string): Model of the device's CPU,
+   * e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the device's GPU,
+   * e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g.,
+   * Mali. * `deviceGpuVersion` (string): Version of the device's GPU, e.g.,
+   * T750. * `deviceVulkanVersion` (string): Vulkan version of the device, e.g.,
    * "4198400". * `deviceGlEsVersion` (string): OpenGL ES version of the device,
    * e.g., "196610". * `deviceScreenSize` (string): Screen size of the device,
    * e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the
-   * device, e.g., mdpi, hdpi.
+   * device, e.g., mdpi, hdpi. * `processName` (string): the name of the process
+   * that was running, e.g., com.example.app. * `appState` (string): the state
+   * of the app when memory was collected, e.g., FOREGROUND.
    *
    * @var string[]
    */
   public $dimensions;
   /**
-   * Optional. Filters to apply to data. The filtering expression follows
+   * Optional. * Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by
    * equality of all breakdown dimensions.
    *
@@ -81,27 +80,26 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
    */
   public $filter;
   /**
-   * Optional. Metrics to aggregate. **Supported metrics:** * `slowStartRate`
-   * (`google.type.Decimal`): Percentage of distinct users in the aggregation
-   * period that had a slow start. * `slowStartRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `slowStartRate` in the
-   * last 7 days. The daily values are weighted by the count of distinct users
-   * for the day. * `slowStartRate28dUserWeighted` (`google.type.Decimal`):
-   * Rolling average value of `slowStartRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. *
-   * `distinctUsers` (`google.type.Decimal`): Count of distinct users in the
-   * aggregation period that were used as normalization value for the
-   * `slowStartRate` metric. A user is counted in this metric if their app was
-   * launched in the device. Care must be taken not to aggregate this count
-   * further, as it may result in users being counted multiple times. The value
-   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000,
-   * depending on the magnitude of the value.
+   * Optional. * Metrics to aggregate. **Supported metrics:** *
+   * `anonRssAndSwapMemoryUsageP50` (`google.type.Decimal`): 50th percentile of
+   * anon RSS and swap memory usage. * `anonRssAndSwapMemoryUsageP75`
+   * (`google.type.Decimal`): 75th percentile of anon RSS and swap memory usage.
+   * * `anonRssAndSwapMemoryUsageP90` (`google.type.Decimal`): 90th percentile
+   * of anon RSS and swap memory usage. * `anonRssAndSwapMemoryUsageP95`
+   * (`google.type.Decimal`): 95th percentile of anon RSS and swap memory usage.
+   * * `anonRssAndSwapMemoryUsageP99` (`google.type.Decimal`): 99th percentile
+   * of anon RSS and swap memory usage. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users for which memory metrics
+   * were reported during the aggregation period. Care must be taken not to
+   * aggregate this count further, as it may result in users being counted
+   * multiple times. The value is rounded to the nearest multiple of 10, 100,
+   * 1,000 or 1,000,000, depending on the magnitude of the value.
    *
    * @var string[]
    */
   public $metrics;
   /**
-   * Optional. Maximum size of the returned data. If unspecified, at most 1000
+   * Optional. * Maximum size of the returned data. If unspecified, at most 1000
    * rows will be returned. The maximum value is 100000; values above 100000
    * will be coerced to 100000.
    *
@@ -109,7 +107,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
    */
   public $pageSize;
   /**
-   * Optional. A page token, received from a previous call. Provide this to
+   * Optional. * A page token, received from a previous call. Provide this to
    * retrieve the subsequent page. When paginating, all other parameters
    * provided to the request must match the call that provided the page token.
    *
@@ -119,7 +117,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
   /**
-   * Optional. User view to select. The output data will correspond to the
+   * Optional. * User view to select. The output data will correspond to the
    * selected view. The only supported value is `OS_PUBLIC`.
    *
    * @var string
@@ -127,7 +125,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
   public $userCohort;
 
   /**
-   * Optional. Dimensions to slice the data by. **Supported dimensions:** *
+   * Optional. * Dimensions to slice the data by. **Supported dimensions:** *
    * `apiLevel` (string): the API level of Android that was running on the
    * user's device, e.g., 26. * `versionCode` (int64): version of the app that
    * was running on the user's device. * `deviceModel` (string): unique
@@ -139,22 +137,21 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
    * device, e.g., PHONE. * `countryCode` (string): the country or region of the
    * user's device based on their IP address, represented as a 2-letter ISO-3166
    * code (e.g. US for the United States). * `deviceRamBucket` (int64): RAM of
-   * the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096 for 4-6GB). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip,
-   * e.g., Samsung. [Reference](https://developer.android.com/reference/android/
-   * os/Build#SOC_MANUFACTURER) * `deviceSocModel` (string): Model of the
-   * device's primary system-on-chip, e.g., "Exynos 2100". [Reference](https://d
-   * eveloper.android.com/reference/android/os/Build#SOC_MODEL) *
-   * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. *
-   * `deviceCpuModel` (string): Model of the device's CPU, e.g., "Kryo 240". *
-   * `deviceGpuMake` (string): Make of the device's GPU, e.g., ARM. *
-   * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
-   * `deviceGpuVersion` (string): Version of the device's GPU, e.g., T750. *
-   * `deviceVulkanVersion` (string): Vulkan version of the device, e.g.,
+   * the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung. *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip,
+   * e.g., "Exynos 2100". * `deviceCpuMake` (string): Make of the device's CPU,
+   * e.g., Qualcomm. * `deviceCpuModel` (string): Model of the device's CPU,
+   * e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the device's GPU,
+   * e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g.,
+   * Mali. * `deviceGpuVersion` (string): Version of the device's GPU, e.g.,
+   * T750. * `deviceVulkanVersion` (string): Vulkan version of the device, e.g.,
    * "4198400". * `deviceGlEsVersion` (string): OpenGL ES version of the device,
    * e.g., "196610". * `deviceScreenSize` (string): Screen size of the device,
    * e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the
-   * device, e.g., mdpi, hdpi.
+   * device, e.g., mdpi, hdpi. * `processName` (string): the name of the process
+   * that was running, e.g., com.example.app. * `appState` (string): the state
+   * of the app when memory was collected, e.g., FOREGROUND.
    *
    * @param string[] $dimensions
    */
@@ -170,7 +167,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->dimensions;
   }
   /**
-   * Optional. Filters to apply to data. The filtering expression follows
+   * Optional. * Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by
    * equality of all breakdown dimensions.
    *
@@ -188,21 +185,20 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->filter;
   }
   /**
-   * Optional. Metrics to aggregate. **Supported metrics:** * `slowStartRate`
-   * (`google.type.Decimal`): Percentage of distinct users in the aggregation
-   * period that had a slow start. * `slowStartRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `slowStartRate` in the
-   * last 7 days. The daily values are weighted by the count of distinct users
-   * for the day. * `slowStartRate28dUserWeighted` (`google.type.Decimal`):
-   * Rolling average value of `slowStartRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. *
-   * `distinctUsers` (`google.type.Decimal`): Count of distinct users in the
-   * aggregation period that were used as normalization value for the
-   * `slowStartRate` metric. A user is counted in this metric if their app was
-   * launched in the device. Care must be taken not to aggregate this count
-   * further, as it may result in users being counted multiple times. The value
-   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000,
-   * depending on the magnitude of the value.
+   * Optional. * Metrics to aggregate. **Supported metrics:** *
+   * `anonRssAndSwapMemoryUsageP50` (`google.type.Decimal`): 50th percentile of
+   * anon RSS and swap memory usage. * `anonRssAndSwapMemoryUsageP75`
+   * (`google.type.Decimal`): 75th percentile of anon RSS and swap memory usage.
+   * * `anonRssAndSwapMemoryUsageP90` (`google.type.Decimal`): 90th percentile
+   * of anon RSS and swap memory usage. * `anonRssAndSwapMemoryUsageP95`
+   * (`google.type.Decimal`): 95th percentile of anon RSS and swap memory usage.
+   * * `anonRssAndSwapMemoryUsageP99` (`google.type.Decimal`): 99th percentile
+   * of anon RSS and swap memory usage. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users for which memory metrics
+   * were reported during the aggregation period. Care must be taken not to
+   * aggregate this count further, as it may result in users being counted
+   * multiple times. The value is rounded to the nearest multiple of 10, 100,
+   * 1,000 or 1,000,000, depending on the magnitude of the value.
    *
    * @param string[] $metrics
    */
@@ -218,7 +214,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->metrics;
   }
   /**
-   * Optional. Maximum size of the returned data. If unspecified, at most 1000
+   * Optional. * Maximum size of the returned data. If unspecified, at most 1000
    * rows will be returned. The maximum value is 100000; values above 100000
    * will be coerced to 100000.
    *
@@ -236,7 +232,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->pageSize;
   }
   /**
-   * Optional. A page token, received from a previous call. Provide this to
+   * Optional. * A page token, received from a previous call. Provide this to
    * retrieve the subsequent page. When paginating, all other parameters
    * provided to the request must match the call that provided the page token.
    *
@@ -254,10 +250,10 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->pageToken;
   }
   /**
-   * Optional. Specification of the timeline aggregation parameters. **Supported
-   * aggregation periods:** * DAILY: metrics are aggregated in calendar date
-   * intervals. Due to historical constraints, the only supported timezone is
-   * `America/Los_Angeles`.
+   * Optional. * Specification of the timeline aggregation parameters.
+   * **Supported aggregation periods:** * DAILY: metrics are aggregated in
+   * calendar date intervals. Due to historical constraints, the default and
+   * only supported timezone is `America/Los_Angeles`.
    *
    * @param GooglePlayDeveloperReportingV1beta1TimelineSpec $timelineSpec
    */
@@ -273,7 +269,7 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
     return $this->timelineSpec;
   }
   /**
-   * Optional. User view to select. The output data will correspond to the
+   * Optional. * User view to select. The output data will correspond to the
    * selected view. The only supported value is `OS_PUBLIC`.
    *
    * Accepted values: USER_COHORT_UNSPECIFIED, OS_PUBLIC, OS_BETA, APP_TESTERS
@@ -294,4 +290,4 @@ class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest exte
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest');
+class_alias(GooglePlayDeveloperReportingV1beta1QueryAnonRssAndSwapMemoryUsageMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QueryAnonRssAndSwapMemoryUsageMetricSetRequest');
