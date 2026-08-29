@@ -17,32 +17,34 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlInstancesResetReplicaSizeRequest extends \Google\Model
+class RequestedConfig extends \Google\Model
 {
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Optional. The target database major version for the upgrade. For example,
+   * `MYSQL_8_0` or `POSTGRES_15`.
    *
    * @var string
    */
-  public $location;
+  public $databaseVersion;
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Optional. The target database major version for the upgrade. For example,
+   * `MYSQL_8_0` or `POSTGRES_15`.
    *
-   * @param string $location
+   * @param string $databaseVersion
    */
-  public function setLocation($location)
+  public function setDatabaseVersion($databaseVersion)
   {
-    $this->location = $location;
+    $this->databaseVersion = $databaseVersion;
   }
   /**
    * @return string
    */
-  public function getLocation()
+  public function getDatabaseVersion()
   {
-    return $this->location;
+    return $this->databaseVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlInstancesResetReplicaSizeRequest::class, 'Google_Service_SQLAdmin_SqlInstancesResetReplicaSizeRequest');
+class_alias(RequestedConfig::class, 'Google_Service_SQLAdmin_RequestedConfig');
