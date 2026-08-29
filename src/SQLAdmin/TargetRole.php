@@ -17,32 +17,29 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlInstancesResetReplicaSizeRequest extends \Google\Model
+class TargetRole extends \Google\Model
 {
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   *
-   * @var string
-   */
-  public $location;
+  protected $sourceIdType = InstanceReference::class;
+  protected $sourceIdDataType = '';
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Output only. The source instance paired with this target instance in a
+   * blue-green deployment.
    *
-   * @param string $location
+   * @param InstanceReference $sourceId
    */
-  public function setLocation($location)
+  public function setSourceId(InstanceReference $sourceId)
   {
-    $this->location = $location;
+    $this->sourceId = $sourceId;
   }
   /**
-   * @return string
+   * @return InstanceReference
    */
-  public function getLocation()
+  public function getSourceId()
   {
-    return $this->location;
+    return $this->sourceId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlInstancesResetReplicaSizeRequest::class, 'Google_Service_SQLAdmin_SqlInstancesResetReplicaSizeRequest');
+class_alias(TargetRole::class, 'Google_Service_SQLAdmin_TargetRole');

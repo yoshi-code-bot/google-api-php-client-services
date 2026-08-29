@@ -17,32 +17,30 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlInstancesResetReplicaSizeRequest extends \Google\Model
+class DeploymentTasks extends \Google\Collection
 {
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   *
-   * @var string
-   */
-  public $location;
+  protected $collection_key = 'task';
+  protected $taskType = DeploymentTask::class;
+  protected $taskDataType = 'array';
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Output only. Tasks performed or being performed on the paired nodes of the
+   * deployment at a consolidated level.
    *
-   * @param string $location
+   * @param DeploymentTask[] $task
    */
-  public function setLocation($location)
+  public function setTask($task)
   {
-    $this->location = $location;
+    $this->task = $task;
   }
   /**
-   * @return string
+   * @return DeploymentTask[]
    */
-  public function getLocation()
+  public function getTask()
   {
-    return $this->location;
+    return $this->task;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlInstancesResetReplicaSizeRequest::class, 'Google_Service_SQLAdmin_SqlInstancesResetReplicaSizeRequest');
+class_alias(DeploymentTasks::class, 'Google_Service_SQLAdmin_DeploymentTasks');
