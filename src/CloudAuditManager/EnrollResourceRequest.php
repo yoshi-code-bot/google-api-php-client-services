@@ -22,6 +22,20 @@ class EnrollResourceRequest extends \Google\Collection
   protected $collection_key = 'destinations';
   protected $destinationsType = EligibleDestination::class;
   protected $destinationsDataType = 'array';
+  /**
+   * Optional. If `true`, only validates the request and does not enroll the
+   * resource. This executes standard request validation (such as schema, IAM,
+   * and destination checks) and skips the apply phase. Use this field for the
+   * following purposes: * **Infrastructure as Code (IaC)**: Allow tools like
+   * Terraform to run dry-run mutations (e.g., `terraform plan`) without
+   * creating real resources or incurring costs. * **User Interface
+   * Validation**: Enable real-time form and permission validation in custom UIs
+   * before submitting requests. * **CI/CD & Automation**: Test your scripts,
+   * permissions, and parameters safely without consuming resource quotas.
+   *
+   * @var bool
+   */
+  public $validateOnly;
 
   /**
    * Required. Cloud Storage buckets that you can upload your audit reports to
@@ -43,6 +57,30 @@ class EnrollResourceRequest extends \Google\Collection
   public function getDestinations()
   {
     return $this->destinations;
+  }
+  /**
+   * Optional. If `true`, only validates the request and does not enroll the
+   * resource. This executes standard request validation (such as schema, IAM,
+   * and destination checks) and skips the apply phase. Use this field for the
+   * following purposes: * **Infrastructure as Code (IaC)**: Allow tools like
+   * Terraform to run dry-run mutations (e.g., `terraform plan`) without
+   * creating real resources or incurring costs. * **User Interface
+   * Validation**: Enable real-time form and permission validation in custom UIs
+   * before submitting requests. * **CI/CD & Automation**: Test your scripts,
+   * permissions, and parameters safely without consuming resource quotas.
+   *
+   * @param bool $validateOnly
+   */
+  public function setValidateOnly($validateOnly)
+  {
+    $this->validateOnly = $validateOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getValidateOnly()
+  {
+    return $this->validateOnly;
   }
 }
 
