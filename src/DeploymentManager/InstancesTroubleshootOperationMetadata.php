@@ -17,34 +17,34 @@
 
 namespace Google\Service\DeploymentManager;
 
-class FirewallPolicyRuleOperationMetadata extends \Google\Model
+class InstancesTroubleshootOperationMetadata extends \Google\Model
 {
   /**
-   * Output only. [Output Only] The priority allocated for the firewall policy
-   * rule if query parameters specified minPriority/maxPriority.
+   * Output only. [Output Only] Serialized output of the troubleshooting
+   * diagnostic run.
    *
-   * @var int
+   * @var string
    */
-  public $allocatedPriority;
+  public $troubleshootOutput;
 
   /**
-   * Output only. [Output Only] The priority allocated for the firewall policy
-   * rule if query parameters specified minPriority/maxPriority.
+   * Output only. [Output Only] Serialized output of the troubleshooting
+   * diagnostic run.
    *
-   * @param int $allocatedPriority
+   * @param string $troubleshootOutput
    */
-  public function setAllocatedPriority($allocatedPriority)
+  public function setTroubleshootOutput($troubleshootOutput)
   {
-    $this->allocatedPriority = $allocatedPriority;
+    $this->troubleshootOutput = $troubleshootOutput;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getAllocatedPriority()
+  public function getTroubleshootOutput()
   {
-    return $this->allocatedPriority;
+    return $this->troubleshootOutput;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FirewallPolicyRuleOperationMetadata::class, 'Google_Service_DeploymentManager_FirewallPolicyRuleOperationMetadata');
+class_alias(InstancesTroubleshootOperationMetadata::class, 'Google_Service_DeploymentManager_InstancesTroubleshootOperationMetadata');
