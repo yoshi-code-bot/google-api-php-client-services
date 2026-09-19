@@ -34,7 +34,10 @@ use Google\Service\Meet\Member;
 class SpacesMembers extends \Google\Service\Resource
 {
   /**
-   * Updates members of one space within a batch. (members.batchUpdate)
+   * Updates members of one space within a batch. For more information, see
+   * [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). (members.batchUpdate)
    *
    * @param string $parent Required. The parent resource shared by all Members
    * being updated. Format: spaces/{space}
@@ -50,7 +53,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('batchUpdate', [$params], BatchUpdateMembersResponse::class);
   }
   /**
-   * Creates a member. This API supports the `fields` parameter in
+   * Creates a member. For more information, see [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). This API supports the `fields` parameter in
    * [SystemParameterContext](https://cloud.google.com/apis/docs/system-
    * parameters). When the `fields` parameter is omitted, this API response will
    * default to "name,email,role,user". (members.create)
@@ -68,8 +73,10 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('create', [$params], Member::class);
   }
   /**
-   * Deletes the member who was previously assigned roles in the space.
-   * (members.delete)
+   * Deletes the member who was previously assigned roles in the space. For more
+   * information, see [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). (members.delete)
    *
    * @param string $name Required. Format: “spaces/{space}/members/{member}”
    * @param array $optParams Optional parameters.
@@ -83,7 +90,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('delete', [$params], MeetEmpty::class);
   }
   /**
-   * Gets a member. This API supports the `fields` parameter in
+   * Gets a member. For more information, see [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). This API supports the `fields` parameter in
    * [SystemParameterContext](https://cloud.google.com/apis/docs/system-
    * parameters). When the `fields` parameter is omitted, this API response will
    * default to "name,email,role,user". (members.get)
@@ -100,7 +109,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('get', [$params], Member::class);
   }
   /**
-   * Lists members. This API supports the `fields` parameter in
+   * Lists members. For more information, see [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). This API supports the `fields` parameter in
    * [SystemParameterContext](https://cloud.google.com/apis/docs/system-
    * parameters). When the `fields` parameter is omitted this API response will
    * default to "name,email,role,user". (members.listSpacesMembers)
@@ -124,7 +135,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('list', [$params], ListMembersResponse::class);
   }
   /**
-   * Updates a member. (members.patch)
+   * Updates a member. For more information, see [Manage meeting space
+   * members](https://developers.google.com/workspace/meet/api/guides/meeting-
+   * space-members). (members.patch)
    *
    * @param string $name Identifier. Resource name of the member. Format:
    * spaces/{space}/members/{member}
