@@ -1005,7 +1005,8 @@ class Policy extends \Google\Collection
     return $this->adjustVolumeDisabled;
   }
   /**
-   * Advanced security settings. In most cases, setting these is not needed.
+   * Optional. Advanced security settings. In most cases, setting these is not
+   * needed.
    *
    * @param AdvancedSecurityOverrides $advancedSecurityOverrides
    */
@@ -2657,7 +2658,7 @@ class Policy extends \Google\Collection
     return $this->unmuteMicrophoneDisabled;
   }
   /**
-   * Configuration of device activity logging.
+   * Optional. Configuration of device activity logging.
    *
    * @param UsageLog $usageLog
    */
