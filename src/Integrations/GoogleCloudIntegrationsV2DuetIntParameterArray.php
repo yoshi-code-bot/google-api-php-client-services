@@ -15,19 +15,35 @@
  * the License.
  */
 
-namespace Google\Service\Integrations\Resource;
+namespace Google\Service\Integrations;
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $integrationsService = new Google\Service\Integrations(...);
- *   $projects = $integrationsService->projects;
- *  </code>
- */
-class Projects extends \Google\Service\Resource
+class GoogleCloudIntegrationsV2DuetIntParameterArray extends \Google\Collection
 {
+  protected $collection_key = 'intValues';
+  /**
+   * Integer array.
+   *
+   * @var string[]
+   */
+  public $intValues;
+
+  /**
+   * Integer array.
+   *
+   * @param string[] $intValues
+   */
+  public function setIntValues($intValues)
+  {
+    $this->intValues = $intValues;
+  }
+  /**
+   * @return string[]
+   */
+  public function getIntValues()
+  {
+    return $this->intValues;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_Integrations_Resource_Projects');
+class_alias(GoogleCloudIntegrationsV2DuetIntParameterArray::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV2DuetIntParameterArray');

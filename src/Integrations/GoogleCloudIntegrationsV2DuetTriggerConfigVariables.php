@@ -15,19 +15,35 @@
  * the License.
  */
 
-namespace Google\Service\Integrations\Resource;
+namespace Google\Service\Integrations;
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $integrationsService = new Google\Service\Integrations(...);
- *   $projects = $integrationsService->projects;
- *  </code>
- */
-class Projects extends \Google\Service\Resource
+class GoogleCloudIntegrationsV2DuetTriggerConfigVariables extends \Google\Collection
 {
+  protected $collection_key = 'names';
+  /**
+   * Optional. List of variable names.
+   *
+   * @var string[]
+   */
+  public $names;
+
+  /**
+   * Optional. List of variable names.
+   *
+   * @param string[] $names
+   */
+  public function setNames($names)
+  {
+    $this->names = $names;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNames()
+  {
+    return $this->names;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_Integrations_Resource_Projects');
+class_alias(GoogleCloudIntegrationsV2DuetTriggerConfigVariables::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV2DuetTriggerConfigVariables');
