@@ -25,6 +25,8 @@ class DocumentTab extends \Google\Model
   protected $commentAnchorsDataType = 'map';
   protected $documentStyleType = DocumentStyle::class;
   protected $documentStyleDataType = '';
+  protected $dropdownDefinitionsType = DropdownDefinition::class;
+  protected $dropdownDefinitionsDataType = 'map';
   protected $footersType = Footer::class;
   protected $footersDataType = 'map';
   protected $footnotesType = Footnote::class;
@@ -96,6 +98,23 @@ class DocumentTab extends \Google\Model
   public function getDocumentStyle()
   {
     return $this->documentStyle;
+  }
+  /**
+   * The dropdown definitions in a document tab, keyed by dropdown definition
+   * ID.
+   *
+   * @param DropdownDefinition[] $dropdownDefinitions
+   */
+  public function setDropdownDefinitions($dropdownDefinitions)
+  {
+    $this->dropdownDefinitions = $dropdownDefinitions;
+  }
+  /**
+   * @return DropdownDefinition[]
+   */
+  public function getDropdownDefinitions()
+  {
+    return $this->dropdownDefinitions;
   }
   /**
    * The footers in the document tab, keyed by footer ID.

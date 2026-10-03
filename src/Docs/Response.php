@@ -23,6 +23,8 @@ class Response extends \Google\Model
   protected $addCommentReplyDataType = '';
   protected $addDocumentTabType = AddDocumentTabResponse::class;
   protected $addDocumentTabDataType = '';
+  protected $createDropdownDefinitionType = CreateDropdownDefinitionResponse::class;
+  protected $createDropdownDefinitionDataType = '';
   protected $createFooterType = CreateFooterResponse::class;
   protected $createFooterDataType = '';
   protected $createFootnoteType = CreateFootnoteResponse::class;
@@ -33,6 +35,8 @@ class Response extends \Google\Model
   protected $createNamedRangeDataType = '';
   protected $insertCommentType = InsertCommentResponse::class;
   protected $insertCommentDataType = '';
+  protected $insertDropdownType = InsertDropdownResponse::class;
+  protected $insertDropdownDataType = '';
   protected $insertInlineImageType = InsertInlineImageResponse::class;
   protected $insertInlineImageDataType = '';
   protected $insertInlineSheetsChartType = InsertInlineSheetsChartResponse::class;
@@ -72,6 +76,22 @@ class Response extends \Google\Model
   public function getAddDocumentTab()
   {
     return $this->addDocumentTab;
+  }
+  /**
+   * The result of creating a dropdown definition.
+   *
+   * @param CreateDropdownDefinitionResponse $createDropdownDefinition
+   */
+  public function setCreateDropdownDefinition(CreateDropdownDefinitionResponse $createDropdownDefinition)
+  {
+    $this->createDropdownDefinition = $createDropdownDefinition;
+  }
+  /**
+   * @return CreateDropdownDefinitionResponse
+   */
+  public function getCreateDropdownDefinition()
+  {
+    return $this->createDropdownDefinition;
   }
   /**
    * The result of creating a footer.
@@ -153,6 +173,22 @@ class Response extends \Google\Model
   public function getInsertComment()
   {
     return $this->insertComment;
+  }
+  /**
+   * The result of inserting a dropdown.
+   *
+   * @param InsertDropdownResponse $insertDropdown
+   */
+  public function setInsertDropdown(InsertDropdownResponse $insertDropdown)
+  {
+    $this->insertDropdown = $insertDropdown;
+  }
+  /**
+   * @return InsertDropdownResponse
+   */
+  public function getInsertDropdown()
+  {
+    return $this->insertDropdown;
   }
   /**
    * The result of inserting an inline image.
