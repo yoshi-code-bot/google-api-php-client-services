@@ -25,6 +25,8 @@ class Request extends \Google\Model
   protected $addCommentReplyDataType = '';
   protected $addDocumentTabType = AddDocumentTabRequest::class;
   protected $addDocumentTabDataType = '';
+  protected $createDropdownDefinitionType = CreateDropdownDefinitionRequest::class;
+  protected $createDropdownDefinitionDataType = '';
   protected $createFooterType = CreateFooterRequest::class;
   protected $createFooterDataType = '';
   protected $createFootnoteType = CreateFootnoteRequest::class;
@@ -41,6 +43,8 @@ class Request extends \Google\Model
   protected $deleteCommentReplyDataType = '';
   protected $deleteContentRangeType = DeleteContentRangeRequest::class;
   protected $deleteContentRangeDataType = '';
+  protected $deleteDropdownDefinitionType = DeleteDropdownDefinitionRequest::class;
+  protected $deleteDropdownDefinitionDataType = '';
   protected $deleteFooterType = DeleteFooterRequest::class;
   protected $deleteFooterDataType = '';
   protected $deleteHeaderType = DeleteHeaderRequest::class;
@@ -63,6 +67,8 @@ class Request extends \Google\Model
   protected $insertCommentDataType = '';
   protected $insertDateType = InsertDateRequest::class;
   protected $insertDateDataType = '';
+  protected $insertDropdownType = InsertDropdownRequest::class;
+  protected $insertDropdownDataType = '';
   protected $insertInlineImageType = InsertInlineImageRequest::class;
   protected $insertInlineImageDataType = '';
   protected $insertPageBreakType = InsertPageBreakRequest::class;
@@ -101,6 +107,10 @@ class Request extends \Google\Model
   protected $updateDocumentStyleDataType = '';
   protected $updateDocumentTabPropertiesType = UpdateDocumentTabPropertiesRequest::class;
   protected $updateDocumentTabPropertiesDataType = '';
+  protected $updateDropdownDefinitionPropertiesType = UpdateDropdownDefinitionPropertiesRequest::class;
+  protected $updateDropdownDefinitionPropertiesDataType = '';
+  protected $updateDropdownPropertiesType = UpdateDropdownPropertiesRequest::class;
+  protected $updateDropdownPropertiesDataType = '';
   protected $updateNamedStyleType = UpdateNamedStyleRequest::class;
   protected $updateNamedStyleDataType = '';
   protected $updateParagraphStyleType = UpdateParagraphStyleRequest::class;
@@ -165,6 +175,22 @@ class Request extends \Google\Model
   public function getAddDocumentTab()
   {
     return $this->addDocumentTab;
+  }
+  /**
+   * Creates a DropdownDefinition.
+   *
+   * @param CreateDropdownDefinitionRequest $createDropdownDefinition
+   */
+  public function setCreateDropdownDefinition(CreateDropdownDefinitionRequest $createDropdownDefinition)
+  {
+    $this->createDropdownDefinition = $createDropdownDefinition;
+  }
+  /**
+   * @return CreateDropdownDefinitionRequest
+   */
+  public function getCreateDropdownDefinition()
+  {
+    return $this->createDropdownDefinition;
   }
   /**
    * Creates a footer.
@@ -295,6 +321,22 @@ class Request extends \Google\Model
   public function getDeleteContentRange()
   {
     return $this->deleteContentRange;
+  }
+  /**
+   * Deletes a DropdownDefinition.
+   *
+   * @param DeleteDropdownDefinitionRequest $deleteDropdownDefinition
+   */
+  public function setDeleteDropdownDefinition(DeleteDropdownDefinitionRequest $deleteDropdownDefinition)
+  {
+    $this->deleteDropdownDefinition = $deleteDropdownDefinition;
+  }
+  /**
+   * @return DeleteDropdownDefinitionRequest
+   */
+  public function getDeleteDropdownDefinition()
+  {
+    return $this->deleteDropdownDefinition;
   }
   /**
    * Deletes a footer from the document.
@@ -473,6 +515,22 @@ class Request extends \Google\Model
   public function getInsertDate()
   {
     return $this->insertDate;
+  }
+  /**
+   * Inserts a Dropdown at the specified location.
+   *
+   * @param InsertDropdownRequest $insertDropdown
+   */
+  public function setInsertDropdown(InsertDropdownRequest $insertDropdown)
+  {
+    $this->insertDropdown = $insertDropdown;
+  }
+  /**
+   * @return InsertDropdownRequest
+   */
+  public function getInsertDropdown()
+  {
+    return $this->insertDropdown;
   }
   /**
    * Inserts an inline image at the specified location.
@@ -780,6 +838,38 @@ class Request extends \Google\Model
   public function getUpdateDocumentTabProperties()
   {
     return $this->updateDocumentTabProperties;
+  }
+  /**
+   * Updates the properties of a DropdownDefinition.
+   *
+   * @param UpdateDropdownDefinitionPropertiesRequest $updateDropdownDefinitionProperties
+   */
+  public function setUpdateDropdownDefinitionProperties(UpdateDropdownDefinitionPropertiesRequest $updateDropdownDefinitionProperties)
+  {
+    $this->updateDropdownDefinitionProperties = $updateDropdownDefinitionProperties;
+  }
+  /**
+   * @return UpdateDropdownDefinitionPropertiesRequest
+   */
+  public function getUpdateDropdownDefinitionProperties()
+  {
+    return $this->updateDropdownDefinitionProperties;
+  }
+  /**
+   * Updates the properties of a Dropdown.
+   *
+   * @param UpdateDropdownPropertiesRequest $updateDropdownProperties
+   */
+  public function setUpdateDropdownProperties(UpdateDropdownPropertiesRequest $updateDropdownProperties)
+  {
+    $this->updateDropdownProperties = $updateDropdownProperties;
+  }
+  /**
+   * @return UpdateDropdownPropertiesRequest
+   */
+  public function getUpdateDropdownProperties()
+  {
+    return $this->updateDropdownProperties;
   }
   /**
    * Updates a named style.
