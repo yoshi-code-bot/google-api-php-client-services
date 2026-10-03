@@ -23,18 +23,18 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
 
 /**
- * The "dataTaxonomies" collection of methods.
+ * The "agentTasks" collection of methods.
  * Typical usage is:
  *  <code>
  *   $dataplexService = new Google\Service\CloudDataplex(...);
- *   $dataTaxonomies = $dataplexService->projects_locations_dataTaxonomies;
+ *   $agentTasks = $dataplexService->projects_locations_agentTasks;
  *  </code>
  */
-class ProjectsLocationsDataTaxonomies extends \Google\Service\Resource
+class ProjectsLocationsAgentTasks extends \Google\Service\Resource
 {
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
-   * resource exists and does not have a policy set. (dataTaxonomies.getIamPolicy)
+   * resource exists and does not have a policy set. (agentTasks.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See Resource names
@@ -65,7 +65,7 @@ class ProjectsLocationsDataTaxonomies extends \Google\Service\Resource
   /**
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED
-   * errors. (dataTaxonomies.setIamPolicy)
+   * errors. (agentTasks.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See Resource names
@@ -88,7 +88,7 @@ class ProjectsLocationsDataTaxonomies extends \Google\Service\Resource
    * NOT_FOUND error.Note: This operation is designed to be used for building
    * permission-aware UIs and command-line tools, not for authorization checking.
    * This operation may "fail open" without warning.
-   * (dataTaxonomies.testIamPermissions)
+   * (agentTasks.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See Resource names
@@ -108,4 +108,4 @@ class ProjectsLocationsDataTaxonomies extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDataTaxonomies::class, 'Google_Service_CloudDataplex_Resource_ProjectsLocationsDataTaxonomies');
+class_alias(ProjectsLocationsAgentTasks::class, 'Google_Service_CloudDataplex_Resource_ProjectsLocationsAgentTasks');
