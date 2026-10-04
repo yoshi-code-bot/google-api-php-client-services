@@ -360,6 +360,10 @@ class FirebaseCrashlytics extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'metricsMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
