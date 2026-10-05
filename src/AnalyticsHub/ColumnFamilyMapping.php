@@ -44,10 +44,10 @@ class ColumnFamilyMapping extends \Google\Model
   }
   /**
    * Optional. If set, the row key is constructed from the field names of the
-   * table's structured row key
-   * (https://docs.cloud.google.com/bigtable/docs/manage-row-key-schemas). Note
-   * that if the field is nullable in the structured row key, then it need not
-   * be present in the message; null will be used instead.
+   * table's [structured row key](https://cloud.google.com/bigtable/docs/manage-
+   * row-key-schemas). Note that if the field is nullable in the structured row
+   * key, then it need not be present in the message; `null` will be used
+   * instead.
    *
    * @param RowKeySchema $rowKeySchema
    */
