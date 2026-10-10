@@ -17,49 +17,39 @@
 
 namespace Google\Service\AgentRegistry;
 
-class EndpointSpec extends \Google\Model
+class Criticality extends \Google\Model
 {
   /**
    * Unspecified type.
    */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
-   * There is no spec for the Endpoint. The `content` field must be empty.
+   * Mission critical service, application or workload.
    */
-  public const TYPE_NO_SPEC = 'NO_SPEC';
+  public const TYPE_MISSION_CRITICAL = 'MISSION_CRITICAL';
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
-   *
-   * @var array[]
+   * High impact.
    */
-  public $content;
+  public const TYPE_HIGH = 'HIGH';
   /**
-   * Required. Immutable. The type of the endpoint spec content.
+   * Medium impact.
+   */
+  public const TYPE_MEDIUM = 'MEDIUM';
+  /**
+   * Low impact.
+   */
+  public const TYPE_LOW = 'LOW';
+  /**
+   * Required. Criticality Type.
    *
    * @var string
    */
   public $type;
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Required. Criticality Type.
    *
-   * @param array[] $content
-   */
-  public function setContent($content)
-  {
-    $this->content = $content;
-  }
-  /**
-   * @return array[]
-   */
-  public function getContent()
-  {
-    return $this->content;
-  }
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   *
-   * Accepted values: TYPE_UNSPECIFIED, NO_SPEC
+   * Accepted values: TYPE_UNSPECIFIED, MISSION_CRITICAL, HIGH, MEDIUM, LOW
    *
    * @param self::TYPE_* $type
    */
@@ -77,4 +67,4 @@ class EndpointSpec extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EndpointSpec::class, 'Google_Service_AgentRegistry_EndpointSpec');
+class_alias(Criticality::class, 'Google_Service_AgentRegistry_Criticality');

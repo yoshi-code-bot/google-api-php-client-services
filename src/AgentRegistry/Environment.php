@@ -17,49 +17,39 @@
 
 namespace Google\Service\AgentRegistry;
 
-class EndpointSpec extends \Google\Model
+class Environment extends \Google\Model
 {
   /**
    * Unspecified type.
    */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
-   * There is no spec for the Endpoint. The `content` field must be empty.
+   * Production environment.
    */
-  public const TYPE_NO_SPEC = 'NO_SPEC';
+  public const TYPE_PRODUCTION = 'PRODUCTION';
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
-   *
-   * @var array[]
+   * Staging environment.
    */
-  public $content;
+  public const TYPE_STAGING = 'STAGING';
   /**
-   * Required. Immutable. The type of the endpoint spec content.
+   * Test environment.
+   */
+  public const TYPE_TEST = 'TEST';
+  /**
+   * Development environment.
+   */
+  public const TYPE_DEVELOPMENT = 'DEVELOPMENT';
+  /**
+   * Required. Environment Type.
    *
    * @var string
    */
   public $type;
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Required. Environment Type.
    *
-   * @param array[] $content
-   */
-  public function setContent($content)
-  {
-    $this->content = $content;
-  }
-  /**
-   * @return array[]
-   */
-  public function getContent()
-  {
-    return $this->content;
-  }
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   *
-   * Accepted values: TYPE_UNSPECIFIED, NO_SPEC
+   * Accepted values: TYPE_UNSPECIFIED, PRODUCTION, STAGING, TEST, DEVELOPMENT
    *
    * @param self::TYPE_* $type
    */
@@ -77,4 +67,4 @@ class EndpointSpec extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EndpointSpec::class, 'Google_Service_AgentRegistry_EndpointSpec');
+class_alias(Environment::class, 'Google_Service_AgentRegistry_Environment');
