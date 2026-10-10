@@ -93,7 +93,8 @@ class ProjectsAppsReports extends \Google\Service\Resource
    * observed values (mobile and web) or extrapolated values (web only). If
    * omitted, defaults to OBSERVED.
    * @opt_param int pageSize Optional. The maximum number of result groups to
-   * return. If omitted, defaults to 25.
+   * return. The maximum value is 100; values above 100 will be coerced to 100. If
+   * omitted, defaults to 25.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * call. The page token is only valid for the exact same set of filters, which
    * must also be sent in subsequent requests. This token is valid for 10 minutes
