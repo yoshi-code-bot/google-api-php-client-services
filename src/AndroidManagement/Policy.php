@@ -1818,7 +1818,7 @@ class Policy extends \Google\Collection
   /**
    * Optional. Settings controlling the behavior of a device in kiosk mode. To
    * enable kiosk mode, set kioskCustomLauncherEnabled to true or specify an app
-   * in the policy with installType KIOSK.
+   * in the policy with the KIOSK role.
    *
    * @param KioskCustomization $kioskCustomization
    */
