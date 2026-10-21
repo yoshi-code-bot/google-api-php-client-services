@@ -48,7 +48,7 @@ class DailyRollUpDataPointsRequest extends \Google\Model
   public $dataSourceFamily;
   /**
    * Optional. The maximum number of data points to return. If unspecified, at
-   * most 1440 data points will be returned. The maximum page size is 10000;
+   * most 90 data points will be returned. The maximum page size is 10000;
    * values above that will be truncated accordingly.
    *
    * @var int
@@ -114,7 +114,7 @@ class DailyRollUpDataPointsRequest extends \Google\Model
   }
   /**
    * Optional. The maximum number of data points to return. If unspecified, at
-   * most 1440 data points will be returned. The maximum page size is 10000;
+   * most 90 data points will be returned. The maximum page size is 10000;
    * values above that will be truncated accordingly.
    *
    * @param int $pageSize
