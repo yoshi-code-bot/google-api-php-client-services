@@ -180,9 +180,8 @@ class AndroidNotificationV2 extends \Google\Collection
    */
   public $id;
   /**
-   * Contains the URL of an image that is going to be displayed in a
-   * notification. If present, it will override
-   * google.firebase.fcm.v1.Notification.image.
+   * An HTTPS URL of an image to display in the notification. If present, it
+   * overrides google.firebase.fcm.v1.Notification.image.
    *
    * @var string
    */
@@ -541,9 +540,8 @@ class AndroidNotificationV2 extends \Google\Collection
     return $this->id;
   }
   /**
-   * Contains the URL of an image that is going to be displayed in a
-   * notification. If present, it will override
-   * google.firebase.fcm.v1.Notification.image.
+   * An HTTPS URL of an image to display in the notification. If present, it
+   * overrides google.firebase.fcm.v1.Notification.image.
    *
    * @param string $image
    */
