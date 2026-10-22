@@ -44,6 +44,8 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
    */
   public const EXECUTION_ENVIRONMENT_EXECUTION_ENVIRONMENT_GEN2 = 'EXECUTION_ENVIRONMENT_GEN2';
   protected $collection_key = 'volumes';
+  protected $ambientNetworkingType = GoogleCloudRunV2AmbientNetworking::class;
+  protected $ambientNetworkingDataType = '';
   /**
    * Optional. Unstructured key value map that may be set by external tools to
    * store and arbitrary metadata. They are not queryable and should be
@@ -174,6 +176,22 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   protected $workloadIdentityConfigType = GoogleCloudRunV2WorkloadIdentityConfig::class;
   protected $workloadIdentityConfigDataType = '';
 
+  /**
+   * Optional. The ambient networking configuration for this revision.
+   *
+   * @param GoogleCloudRunV2AmbientNetworking $ambientNetworking
+   */
+  public function setAmbientNetworking(GoogleCloudRunV2AmbientNetworking $ambientNetworking)
+  {
+    $this->ambientNetworking = $ambientNetworking;
+  }
+  /**
+   * @return GoogleCloudRunV2AmbientNetworking
+   */
+  public function getAmbientNetworking()
+  {
+    return $this->ambientNetworking;
+  }
   /**
    * Optional. Unstructured key value map that may be set by external tools to
    * store and arbitrary metadata. They are not queryable and should be
