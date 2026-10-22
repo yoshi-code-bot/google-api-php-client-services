@@ -1553,8 +1553,8 @@ class Policy extends \Google\Collection
     return $this->defaultPermissionPolicy;
   }
   /**
-   * Covers controls for device connectivity such as Wi-Fi, USB data access,
-   * keyboard/mouse connections, and more.
+   * Optional. Covers controls for device connectivity such as Wi-Fi, USB data
+   * access, keyboard/mouse connections, and more.
    *
    * @param DeviceConnectivityManagement $deviceConnectivityManagement
    */
@@ -1570,7 +1570,7 @@ class Policy extends \Google\Collection
     return $this->deviceConnectivityManagement;
   }
   /**
-   * The device owner information to be shown on the lock screen.
+   * Optional. The device owner information to be shown on the lock screen.
    *
    * @param UserFacingMessage $deviceOwnerLockScreenInfo
    */
@@ -2587,7 +2587,9 @@ class Policy extends \Google\Collection
    * Mainline updates) are automatically downloaded and require a device reboot
    * to be installed. Refer to the mainline section in Manage system updates
    * (https://developer.android.com/work/dpc/system-updates#mainline) for
-   * further details.
+   * further details.If this policy is set, it takes precedence over
+   * unifiedUpdatePolicy for OEM OS updates. For more information, see
+   * unifiedUpdatePolicy.
    *
    * @param SystemUpdate $systemUpdate
    */
