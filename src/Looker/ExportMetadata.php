@@ -48,6 +48,14 @@ class ExportMetadata extends \Google\Collection
   protected $exportMetricsType = ExportMetrics::class;
   protected $exportMetricsDataType = '';
   /**
+   * A string of digits representing the number of microseconds since the Unix
+   * epoch when the export was created. Used to identify the cloned source Elite
+   * System Activity (ESA) BigQuery dataset for O2C direct dataset migration.
+   *
+   * @var string
+   */
+  public $exportTime;
+  /**
    * List of files created as part of export artifact (excluding the metadata).
    * The paths are relative to the folder containing the metadata.
    *
@@ -136,6 +144,24 @@ class ExportMetadata extends \Google\Collection
   public function getExportMetrics()
   {
     return $this->exportMetrics;
+  }
+  /**
+   * A string of digits representing the number of microseconds since the Unix
+   * epoch when the export was created. Used to identify the cloned source Elite
+   * System Activity (ESA) BigQuery dataset for O2C direct dataset migration.
+   *
+   * @param string $exportTime
+   */
+  public function setExportTime($exportTime)
+  {
+    $this->exportTime = $exportTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExportTime()
+  {
+    return $this->exportTime;
   }
   /**
    * List of files created as part of export artifact (excluding the metadata).
