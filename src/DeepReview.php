@@ -43,6 +43,7 @@ class DeepReview extends \Google\Service
   public $media;
   public $operations;
   public $operations_documents_reviews;
+  public $v1;
   public $rootUrlTemplate;
 
   /**
@@ -281,6 +282,26 @@ class DeepReview extends \Google\Service
         [
           'methods' => [
             'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->v1 = new DeepReview\Resource\V1(
+        $this,
+        $this->serviceName,
+        'v1',
+        [
+          'methods' => [
+            'getUserQuota' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
