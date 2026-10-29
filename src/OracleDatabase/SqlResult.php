@@ -20,35 +20,11 @@ namespace Google\Service\OracleDatabase;
 class SqlResult extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * Optional. The number of rows affected by DML statements (e.g., INSERT,
-   * UPDATE, DELETE, MERGE). Unset or 0 for SELECT / DDL statements.
-   *
-   * @var string
-   */
-  public $affectedRowCount;
   protected $columnsType = Column::class;
   protected $columnsDataType = 'array';
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
 
-  /**
-   * Optional. The number of rows affected by DML statements (e.g., INSERT,
-   * UPDATE, DELETE, MERGE). Unset or 0 for SELECT / DDL statements.
-   *
-   * @param string $affectedRowCount
-   */
-  public function setAffectedRowCount($affectedRowCount)
-  {
-    $this->affectedRowCount = $affectedRowCount;
-  }
-  /**
-   * @return string
-   */
-  public function getAffectedRowCount()
-  {
-    return $this->affectedRowCount;
-  }
   /**
    * List of columns included in the result, including data type.
    *
