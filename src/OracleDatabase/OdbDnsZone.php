@@ -50,7 +50,7 @@ class OdbDnsZone extends \Google\Model
    */
   public $createTime;
   /**
-   * Required. The DNS suffix for the zone. Ex: abc.example.com.
+   * Required. Immutable. The DNS suffix for the zone. Ex: abc.example.com.
    *
    * @var string
    */
@@ -93,7 +93,7 @@ class OdbDnsZone extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The DNS suffix for the zone. Ex: abc.example.com.
+   * Required. Immutable. The DNS suffix for the zone. Ex: abc.example.com.
    *
    * @param string $domain
    */
