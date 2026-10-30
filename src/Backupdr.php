@@ -263,6 +263,10 @@ class Backupdr extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -274,6 +278,10 @@ class Backupdr extends \Google\Service
                   'required' => true,
                 ],
                 'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -323,6 +331,10 @@ class Backupdr extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -348,6 +360,10 @@ class Backupdr extends \Google\Service
                   'required' => true,
                 ],
                 'autoProtectionPolicyBindingId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

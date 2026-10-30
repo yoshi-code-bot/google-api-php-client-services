@@ -44,7 +44,8 @@ class AutoProtectionPolicyBinding extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. A description of the binding.
+   * Optional. A description of the binding. The description must be at most
+   * 2048 characters.
    *
    * @var string
    */
@@ -57,9 +58,9 @@ class AutoProtectionPolicyBinding extends \Google\Model
    */
   public $etag;
   /**
-   * Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `
-   * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protec
-   * tion_policy}/bindings/{binding}`
+   * Output only. Identifier. The resource name of the
+   * AutoProtectionPolicyBinding. Format: `projects/{project}/locations/{locatio
+   * n}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
    *
    * @var string
    */
@@ -118,7 +119,8 @@ class AutoProtectionPolicyBinding extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. A description of the binding.
+   * Optional. A description of the binding. The description must be at most
+   * 2048 characters.
    *
    * @param string $description
    */
@@ -151,9 +153,9 @@ class AutoProtectionPolicyBinding extends \Google\Model
     return $this->etag;
   }
   /**
-   * Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `
-   * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protec
-   * tion_policy}/bindings/{binding}`
+   * Output only. Identifier. The resource name of the
+   * AutoProtectionPolicyBinding. Format: `projects/{project}/locations/{locatio
+   * n}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
    *
    * @param string $name
    */

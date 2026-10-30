@@ -44,7 +44,14 @@ class ProjectsLocationsAutoProtectionPoliciesBindings extends \Google\Service\Re
    *
    * @opt_param string autoProtectionPolicyBindingId Required. The ID to use for
    * the binding. This will become the final component of the binding's resource
-   * name.
+   * name. This value must start with a lowercase letter followed by up to 62
+   * lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
    * @throws \Google\Service\Exception
    */

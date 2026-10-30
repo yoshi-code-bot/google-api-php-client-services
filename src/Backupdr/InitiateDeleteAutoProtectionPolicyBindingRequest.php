@@ -19,6 +19,65 @@ namespace Google\Service\Backupdr;
 
 class InitiateDeleteAutoProtectionPolicyBindingRequest extends \Google\Model
 {
+  /**
+   * Optional. The current etag of the AutoProtectionPolicyBinding. If an etag
+   * is provided and does not match the current etag of the binding, deletion
+   * will be blocked and an ABORTED error will be returned.
+   *
+   * @var string
+   */
+  public $etag;
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes since the first request. The request
+   * ID must be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @var string
+   */
+  public $requestId;
+
+  /**
+   * Optional. The current etag of the AutoProtectionPolicyBinding. If an etag
+   * is provided and does not match the current etag of the binding, deletion
+   * will be blocked and an ABORTED error will be returned.
+   *
+   * @param string $etag
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
+  }
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes since the first request. The request
+   * ID must be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
+   */
+  public function setRequestId($requestId)
+  {
+    $this->requestId = $requestId;
+  }
+  /**
+   * @return string
+   */
+  public function getRequestId()
+  {
+    return $this->requestId;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

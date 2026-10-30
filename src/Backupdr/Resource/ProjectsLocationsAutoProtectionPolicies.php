@@ -42,6 +42,14 @@ class ProjectsLocationsAutoProtectionPolicies extends \Google\Service\Resource
    *
    * @opt_param string autoProtectionPolicyId Required. The ID to use for the
    * policy. This will become the final component of the policy's resource name.
+   * This value must start with a lowercase letter followed by up to 62 lowercase
+   * letters, numbers, or hyphens, and cannot end with a hyphen.
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -62,6 +70,12 @@ class ProjectsLocationsAutoProtectionPolicies extends \Google\Service\Resource
    * @opt_param string etag The current etag of the autoprotectionpolicy. If an
    * etag is provided and does not match the current etag of the connection,
    * deletion will be blocked.
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -118,12 +132,18 @@ class ProjectsLocationsAutoProtectionPolicies extends \Google\Service\Resource
    * Updates the parameters of a single AutoProtectionPolicy.
    * (autoProtectionPolicies.patch)
    *
-   * @param string $name Identifier. The resource name of the
+   * @param string $name Output only. Identifier. The resource name of the
    * AutoProtectionPolicy. Format: `projects/{project}/locations/{location}/autoPr
    * otectionPolicies/{auto_protection_policy}`
    * @param AutoProtectionPolicy $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @opt_param string updateMask Optional. Field mask is used to specify the
    * fields to be overwritten in the AutoProtectionPolicy resource by the update.
    * The fields specified in the update_mask are relative to the resource, not the
