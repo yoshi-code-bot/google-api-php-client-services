@@ -53,7 +53,8 @@ class AutoProtectionPolicy extends \Google\Collection
   protected $criteriaType = Criteria::class;
   protected $criteriaDataType = '';
   /**
-   * Optional. A description of the policy.
+   * Optional. A description of the policy. The description must be at most 2048
+   * characters.
    *
    * @var string
    */
@@ -66,9 +67,9 @@ class AutoProtectionPolicy extends \Google\Collection
    */
   public $etag;
   /**
-   * Identifier. The resource name of the AutoProtectionPolicy. Format: `project
-   * s/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_po
-   * licy}`
+   * Output only. Identifier. The resource name of the AutoProtectionPolicy.
+   * Format: `projects/{project}/locations/{location}/autoProtectionPolicies/{au
+   * to_protection_policy}`
    *
    * @var string
    */
@@ -154,7 +155,8 @@ class AutoProtectionPolicy extends \Google\Collection
     return $this->criteria;
   }
   /**
-   * Optional. A description of the policy.
+   * Optional. A description of the policy. The description must be at most 2048
+   * characters.
    *
    * @param string $description
    */
@@ -187,9 +189,9 @@ class AutoProtectionPolicy extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Identifier. The resource name of the AutoProtectionPolicy. Format: `project
-   * s/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_po
-   * licy}`
+   * Output only. Identifier. The resource name of the AutoProtectionPolicy.
+   * Format: `projects/{project}/locations/{location}/autoProtectionPolicies/{au
+   * to_protection_policy}`
    *
    * @param string $name
    */
