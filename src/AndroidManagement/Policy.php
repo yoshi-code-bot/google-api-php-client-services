@@ -871,6 +871,8 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $tetheringConfigDisabled;
+  protected $unifiedUpdatePolicyType = UnifiedUpdatePolicy::class;
+  protected $unifiedUpdatePolicyDataType = '';
   /**
    * Whether user uninstallation of applications is disabled. This prevents apps
    * from being uninstalled, even those removed using applications
@@ -2623,6 +2625,29 @@ class Policy extends \Google\Collection
   public function getTetheringConfigDisabled()
   {
     return $this->tetheringConfigDisabled;
+  }
+  /**
+   * Optional. The Unified Update Control policy, for controlling updates of
+   * software components on the device. Supported only on company-owned
+   * devices.The targets OS_UPDATE_WITH_API_LEVEL_CHANGE and
+   * OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are supported only on devices where the
+   * OEM has integrated with Unified Update Controls, and are ignored otherwise.
+   * If systemUpdate is set, then that policy takes precedence and the targets
+   * OS_UPDATE_WITH_API_LEVEL_CHANGE and OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are
+   * ignored here.
+   *
+   * @param UnifiedUpdatePolicy $unifiedUpdatePolicy
+   */
+  public function setUnifiedUpdatePolicy(UnifiedUpdatePolicy $unifiedUpdatePolicy)
+  {
+    $this->unifiedUpdatePolicy = $unifiedUpdatePolicy;
+  }
+  /**
+   * @return UnifiedUpdatePolicy
+   */
+  public function getUnifiedUpdatePolicy()
+  {
+    return $this->unifiedUpdatePolicy;
   }
   /**
    * Whether user uninstallation of applications is disabled. This prevents apps
